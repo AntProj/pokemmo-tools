@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  min-height: 100%;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  background: #f1e9d2;
+  color: #1c1917;
+  /* Reserve scrollbar space so locking body overflow when the modal opens
+     does not reflow the 610-card grid. */
+  scrollbar-gutter: stable;
+}
+
+html.dark {
+  background: #0a0908;
+  color: #e7e5e4;
+}
+
+* { -webkit-tap-highlight-color: transparent; }
+
+.pixelated {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
