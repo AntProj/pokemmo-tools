@@ -24,3 +24,6 @@ src/data/pokemmo.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Claude Code agent workspace
+.claude/worktrees/

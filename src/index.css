@@ -22,9 +22,57 @@ html.dark {
 
 * { -webkit-tap-highlight-color: transparent; }
 
+/* Hide the native search-clear "x" so the custom Lucide X in the search box
+   isn't doubled up by the browser-provided one. */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 .pixelated {
   image-rendering: pixelated;
   image-rendering: -moz-crisp-edges;
   image-rendering: crisp-edges;
 }
+
+/* Dual-handle range slider — two <input type="range"> overlap.
+   The track is a styled div behind them; the inputs themselves only
+   participate via their thumbs (pointer-events trick). */
+.dual-range {
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  pointer-events: none;
+  margin: 0;
+}
+.dual-range:focus { outline: none; }
+.dual-range::-webkit-slider-runnable-track { background: transparent; border: none; }
+.dual-range::-moz-range-track { background: transparent; border: none; }
+.dual-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  pointer-events: auto;
+  height: 14px; width: 14px;
+  border-radius: 50%;
+  background: #3b82f6;
+  border: 2px solid #fdf8e9;
+  cursor: pointer;
+  margin-top: -6px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+.dual-range::-moz-range-thumb {
+  pointer-events: auto;
+  height: 14px; width: 14px;
+  border-radius: 50%;
+  background: #3b82f6;
+  border: 2px solid #fdf8e9;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+html.dark .dual-range::-webkit-slider-thumb { border-color: #1c1917; }
+html.dark .dual-range::-moz-range-thumb     { border-color: #1c1917; }
 

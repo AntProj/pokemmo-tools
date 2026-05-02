@@ -3,7 +3,7 @@ import TypeBadge from './TypeBadge.jsx';
 import { displayDex } from '../lib/format.js';
 import { typeColor } from '../lib/types.js';
 
-function PokemonCard({ pokemon, region, onSelect }) {
+function PokemonCard({ pokemon, region, onSelect, footer }) {
   // Warm the HTTP cache on hover so the sprite is ready by the time the modal opens.
   const preload = () => {
     if (pokemon.sprite) { const img = new Image(); img.src = pokemon.sprite; }
@@ -47,6 +47,11 @@ function PokemonCard({ pokemon, region, onSelect }) {
       <div className="mt-1 flex flex-wrap gap-1 justify-center">
         {[...new Set(pokemon.types)].map((t) => <TypeBadge key={t} type={t} />)}
       </div>
+      {footer && (
+        <div className="mt-1.5 flex flex-wrap gap-1 justify-center w-full">
+          {footer}
+        </div>
+      )}
     </button>
   );
 }

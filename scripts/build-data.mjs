@@ -312,10 +312,12 @@ function build() {
       dedupedAbilities.push(a);
     }
 
-    // Process held items: just keep id + drop chance. Look up name/description
-    // from the `items` catalog at runtime.
+    // Process held items: keep id, name, and drop chance directly. Held-item
+    // ids in monster.json don't share an id space with item-data.json, so the
+    // name field on each entry is the only reliable way to display them.
     const heldItems = (m.held_items || []).map(it => ({
       id: it.id,
+      name: it.name || null,
       chance: it.chance || null,
     }));
 

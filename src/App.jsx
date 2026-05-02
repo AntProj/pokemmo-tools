@@ -1,14 +1,18 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import data from './data/pokemmo.json';
-import Toolbar from './components/Toolbar.jsx';
-import PokemonCard from './components/PokemonCard.jsx';
-import PokemonRow from './components/PokemonRow.jsx';
+import NavBar from './components/NavBar.jsx';
 import PokemonModal from './components/PokemonModal.jsx';
-import { statTotal, regionKey } from './lib/format.js';
+import Pokedex from './pages/Pokedex.jsx';
+import Search from './pages/Search.jsx';
+import Locations from './pages/Locations.jsx';
+import LocationDetail from './pages/LocationDetail.jsx';
+import Tracker from './pages/Tracker.jsx';
 
 const LS = {
-  view:  'pokemmo:view',
-  theme: 'pokemmo:theme',
+  view:    'pokemmo:view',
+  theme:   'pokemmo:theme',
+  tracker: 'tracker:state',
 };
 
 function initialView() {
@@ -21,18 +25,58 @@ function initialTheme() {
   if (typeof window === 'undefined') return 'dark';
   const stored = localStorage.getItem(LS.theme);
   if (stored === 'dark' || stored === 'light') return stored;
-  // Default to system preference on first visit.
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) return 'dark';
   return 'light';
 }
 
+const INITIAL_POKEDEX = { search: '', region: 'All', types: [], sort: 'dex' };
+const INITIAL_LOCATIONS = { search: '', region: 'All', sort: 'region' };
+const INITIAL_TRACKER_VIEW = { view: 'plan', planRegion: 'All', planMethods: [], hideSingles: true,
+  markSearch: '', markRegion: 'All', markTypes: [], markStates: [], markSort: 'dex' };
+
+// Read once from localStorage; default to {} so unlisted ids are 'uncaught'.
+function loadTrackerState() {
+  if (typeof window === 'undefined') return {};
+  try {
+    const raw = localStorage.getItem(LS.tracker);
+    if (!raw) return {};
+    const obj = JSON.parse(raw);
+    return obj && typeof obj === 'object' ? obj : {};
+  } catch { return {}; }
+}
+const INITIAL_SEARCH = {
+  search: '',
+  // Advanced type filter — up to 4 types with AND/OR.
+  types: [],
+  typesMode: 'all',
+  // Move filter — up to 4 slots with AND/OR.
+  selectedMoveIds: [null, null, null, null],
+  movesMode: 'all',
+  // Single-select ability id (null = no filter).
+  abilityId: null,
+  // Single-select held-item id (null = no filter).
+  heldItemId: null,
+  // Egg group filter — up to 2 with AND/OR (default OR).
+  eggGroups: [],
+  eggGroupsMode: 'any',
+  // Stat ranges — null = unset; otherwise [min, max] inclusive.
+  stats: { hp: null, attack: null, defense: null, sp_attack: null, sp_defense: null, speed: null, bst: null },
+  sort: 'dex',
+};
+
 export default function App() {
+  // Persisted across tabs
   const [view, setView]   = useState(initialView);
   const [theme, setTheme] = useState(initialTheme);
-  const [search, setSearch] = useState('');
-  const [region, setRegion] = useState('All');
-  const [types, setTypes]   = useState([]);
-  const [sort, setSort]     = useState('dex');
+
+  // Page-specific state lifted here so it survives tab switches.
+  const [pokedexState, setPokedexState]       = useState(INITIAL_POKEDEX);
+  const [searchState, setSearchState]         = useState(INITIAL_SEARCH);
+  const [locationsState, setLocationsState]   = useState(INITIAL_LOCATIONS);
+  const [trackerView, setTrackerView]         = useState(INITIAL_TRACKER_VIEW);
+  const [trackerState, setTrackerStateRaw]    = useState(loadTrackerState);
+
+  // Pokémon detail modal — shared so both pages can open it.
   const [selectedId, setSelectedId] = useState(null);
 
   useEffect(() => { localStorage.setItem(LS.view, view); }, [view]);
@@ -42,95 +86,129 @@ export default function App() {
     if (theme === 'dark') root.classList.add('dark'); else root.classList.remove('dark');
   }, [theme]);
 
-  const filtered = useMemo(() => {
-    const q = search.trim().toLowerCase();
-    // Allow "#150", "150", "0150" → numeric dex match. Matches national id and,
-    // if a region is active, the regional dex number too.
-    let dexQuery = null;
-    if (q) {
-      const m = q.replace(/^#/, '').match(/^\d+$/);
-      if (m) dexQuery = parseInt(m[0], 10);
-    }
-    const rkey = regionKey(region);
+  // Debounce-write tracker state so rapid toggling (e.g. shift-click bulk
+  // marking) doesn't write to disk on every keystroke.
+  useEffect(() => {
+    const id = setTimeout(() => {
+      try { localStorage.setItem(LS.tracker, JSON.stringify(trackerState)); } catch {}
+    }, 200);
+    return () => clearTimeout(id);
+  }, [trackerState]);
 
-    const out = data.pokemon.filter((p) => {
-      if (rkey) {
-        if (!p.dex || !(p.dex[rkey] > 0)) return false;
-      }
-      if (types.length > 0) {
-        for (const t of types) {
-          if (!p.types.some((pt) => pt.toLowerCase() === t.toLowerCase())) return false;
-        }
-      }
-      if (q) {
-        const nameMatch = p.name.toLowerCase().includes(q);
-        const nationalMatch = dexQuery != null && p.id === dexQuery;
-        const regionalMatch = dexQuery != null && rkey && p.dex?.[rkey] === dexQuery;
-        if (!nameMatch && !nationalMatch && !regionalMatch) return false;
-      }
-      return true;
+  // Mutators: setMonState(id, state) for one mon, setManyMonStates(ids, state)
+  // for bulk. We delete keys when state is 'uncaught' to keep storage compact —
+  // unlisted ids default to 'uncaught' on read.
+  const setMonState = useCallback((id, state) => {
+    setTrackerStateRaw((prev) => {
+      const next = { ...prev };
+      if (!state || state === 'uncaught') delete next[id];
+      else next[id] = state;
+      return next;
     });
-
-    if (sort === 'name') out.sort((a, b) => a.name.localeCompare(b.name));
-    else if (sort === 'bst') out.sort((a, b) => statTotal(b.stats) - statTotal(a.stats));
-    else if (rkey) out.sort((a, b) => (a.dex[rkey] || 0) - (b.dex[rkey] || 0));
-    else out.sort((a, b) => a.id - b.id);
-
-    return out;
-  }, [search, region, types, sort]);
+  }, []);
+  const setManyMonStates = useCallback((ids, state) => {
+    setTrackerStateRaw((prev) => {
+      const next = { ...prev };
+      for (const id of ids) {
+        if (!state || state === 'uncaught') delete next[id];
+        else next[id] = state;
+      }
+      return next;
+    });
+  }, []);
+  // Merge an incoming { id: state } object into the existing tracker state.
+  // Used by the JSON import — incoming entries override matching ids; ids
+  // not in `incoming` are preserved.
+  const mergeTrackerState = useCallback((incoming) => {
+    setTrackerStateRaw((prev) => ({ ...prev, ...incoming }));
+  }, []);
 
   const selected = useMemo(
     () => (selectedId != null ? data.pokemon.find((p) => p.id === selectedId) : null),
     [selectedId]
   );
-
   const handleSelect = useCallback((id) => setSelectedId(id), []);
   const handleClose  = useCallback(() => setSelectedId(null), []);
 
   return (
-    <div className="min-h-screen bg-[#f6efdc] dark:bg-stone-950 text-stone-900 dark:text-stone-100">
-      <Toolbar
-        search={search} onSearch={setSearch}
-        region={region} onRegion={setRegion}
-        types={types}   onTypes={setTypes}
-        sort={sort}     onSort={setSort}
-        view={view}     onView={setView}
-        theme={theme}   onTheme={setTheme}
-        resultCount={filtered.length}
-      />
+    <HashRouter>
+      <div className="min-h-screen bg-[#f6efdc] dark:bg-stone-950 text-stone-900 dark:text-stone-100">
+        <NavBar />
 
-      <main className="max-w-7xl mx-auto px-4 py-4">
-        {filtered.length === 0 ? (
-          <div className="py-16 text-center text-stone-500 dark:text-stone-400">
-            No Pokémon match these filters.
-          </div>
-        ) : view === 'grid' ? (
-          <div className="grid gap-3
-                          grid-cols-2 sm:grid-cols-3 md:grid-cols-4
-                          lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8">
-            {filtered.map((p) => (
-              <PokemonCard key={p.id} pokemon={p} region={region} onSelect={handleSelect} />
-            ))}
-          </div>
-        ) : (
-          <div className="rounded-md overflow-hidden border border-[#e6dabf] dark:border-stone-800 bg-[#fdf8e9] dark:bg-stone-900">
-            {filtered.map((p) => (
-              <PokemonRow key={p.id} pokemon={p} region={region} onSelect={handleSelect} />
-            ))}
-          </div>
-        )}
-      </main>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Pokedex
+                data={data}
+                state={pokedexState}
+                setState={setPokedexState}
+                view={view} onView={setView}
+                theme={theme} onTheme={setTheme}
+                onSelect={handleSelect}
+              />
+            }
+          />
+          <Route
+            path="/search"
+            element={
+              <Search
+                data={data}
+                state={searchState}
+                setState={setSearchState}
+                view={view} onView={setView}
+                theme={theme} onTheme={setTheme}
+                onSelect={handleSelect}
+              />
+            }
+          />
+          <Route
+            path="/locations"
+            element={
+              <Locations
+                data={data}
+                state={locationsState}
+                setState={setLocationsState}
+                theme={theme} onTheme={setTheme}
+              />
+            }
+          />
+          <Route
+            path="/locations/:region/:location"
+            element={<LocationDetail data={data} onSelect={handleSelect} />}
+          />
+          <Route
+            path="/tracker"
+            element={
+              <Tracker
+                data={data}
+                trackerState={trackerState}
+                setMonState={setMonState}
+                setManyMonStates={setManyMonStates}
+                mergeTrackerState={mergeTrackerState}
+                view={trackerView}
+                setView={setTrackerView}
+                theme={theme} onTheme={setTheme}
+                onSelect={handleSelect}
+              />
+            }
+          />
+          {/* Old URL kept working for bookmarks. */}
+          <Route path="/moves"  element={<Navigate to="/search" replace />} />
+          <Route path="*"       element={<Navigate to="/" replace />} />
+        </Routes>
 
-      <PokemonModal
-        pokemon={selected}
-        data={data}
-        onClose={handleClose}
-        onSelect={handleSelect}
-      />
+        <PokemonModal
+          pokemon={selected}
+          data={data}
+          onClose={handleClose}
+          onSelect={handleSelect}
+        />
 
-      <footer className="max-w-7xl mx-auto px-4 py-6 text-xs text-stone-400 dark:text-stone-600 text-center">
-        {data.meta.total_pokemon} Pokémon · {data.meta.total_moves} moves · built {new Date(data.meta.built_at).toLocaleDateString()}
-      </footer>
-    </div>
+        <footer className="max-w-7xl mx-auto px-4 py-6 text-xs text-stone-400 dark:text-stone-600 text-center">
+          {data.meta.total_pokemon} Pokémon · {data.meta.total_moves} moves · built {new Date(data.meta.built_at).toLocaleDateString()}
+        </footer>
+      </div>
+    </HashRouter>
   );
 }

@@ -12,11 +12,13 @@ export default function Toolbar({
   search, onSearch,
   region, onRegion,
   types, onTypes,
-  sort, onSort,
+  sort, onSort, sortOptions,
   view, onView,
   theme, onTheme,
   resultCount,
+  searchPlaceholder,
 }) {
+  const sortOpts = sortOptions || SORT_OPTIONS;
   function toggleType(t) {
     if (types.includes(t)) {
       onTypes(types.filter((x) => x !== t));
@@ -33,39 +35,37 @@ export default function Toolbar({
       <div className="max-w-7xl mx-auto px-4 py-3 space-y-3">
         {/* Row 1: title, view toggle, theme toggle */}
         <div className="flex items-center gap-3 flex-wrap">
-          <h1 className="text-lg font-bold text-stone-900 dark:text-stone-100 mr-auto">
-            PokéMMO <span className="text-stone-500 dark:text-stone-400 font-normal">Pokédex</span>
-          </h1>
-
-          <div className="text-xs text-stone-500 dark:text-stone-400 tabular-nums">
+          <div className="text-xs text-stone-500 dark:text-stone-400 tabular-nums mr-auto">
             {resultCount} result{resultCount === 1 ? '' : 's'}
           </div>
 
-          {/* View toggle */}
-          <div className="inline-flex rounded-md border border-[#d6c8a3] dark:border-stone-700 overflow-hidden">
-            <button
-              type="button"
-              onClick={() => onView('grid')}
-              aria-pressed={view === 'grid'}
-              className={`px-2 py-1.5 ${view === 'grid'
-                ? 'bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900'
-                : 'bg-[#fdf8e9] text-stone-700 hover:bg-[#ece2c4] dark:bg-stone-900 dark:text-stone-300 dark:hover:bg-stone-800'}`}
-              title="Grid view"
-            >
-              <LayoutGrid size={16} />
-            </button>
-            <button
-              type="button"
-              onClick={() => onView('list')}
-              aria-pressed={view === 'list'}
-              className={`px-2 py-1.5 ${view === 'list'
-                ? 'bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900'
-                : 'bg-[#fdf8e9] text-stone-700 hover:bg-[#ece2c4] dark:bg-stone-900 dark:text-stone-300 dark:hover:bg-stone-800'}`}
-              title="List view"
-            >
-              <List size={16} />
-            </button>
-          </div>
+          {/* View toggle (only on pages that support multiple views) */}
+          {view !== undefined && onView && (
+            <div className="inline-flex rounded-md border border-[#d6c8a3] dark:border-stone-700 overflow-hidden">
+              <button
+                type="button"
+                onClick={() => onView('grid')}
+                aria-pressed={view === 'grid'}
+                className={`px-2 py-1.5 ${view === 'grid'
+                  ? 'bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900'
+                  : 'bg-[#fdf8e9] text-stone-700 hover:bg-[#ece2c4] dark:bg-stone-900 dark:text-stone-300 dark:hover:bg-stone-800'}`}
+                title="Grid view"
+              >
+                <LayoutGrid size={16} />
+              </button>
+              <button
+                type="button"
+                onClick={() => onView('list')}
+                aria-pressed={view === 'list'}
+                className={`px-2 py-1.5 ${view === 'list'
+                  ? 'bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900'
+                  : 'bg-[#fdf8e9] text-stone-700 hover:bg-[#ece2c4] dark:bg-stone-900 dark:text-stone-300 dark:hover:bg-stone-800'}`}
+                title="List view"
+              >
+                <List size={16} />
+              </button>
+            </div>
+          )}
 
           {/* Theme toggle */}
           <button
@@ -88,7 +88,7 @@ export default function Toolbar({
               type="search"
               value={search}
               onChange={(e) => onSearch(e.target.value)}
-              placeholder="Search by name or dex number (e.g. char, #150, 25)"
+              placeholder={searchPlaceholder || 'Search by name or dex number (e.g. char, #150, 25)'}
               className="w-full pl-8 pr-8 py-1.5 rounded-md border border-[#d6c8a3] dark:border-stone-700
                          bg-[#fdf8e9] dark:bg-stone-900 text-stone-900 dark:text-stone-100
                          placeholder:text-stone-400 dark:placeholder:text-stone-500
@@ -115,32 +115,35 @@ export default function Toolbar({
                          bg-[#fdf8e9] dark:bg-stone-900 text-stone-900 dark:text-stone-100 text-sm
                          focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
-              {SORT_OPTIONS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
+              {sortOpts.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
             </select>
           </div>
         </div>
 
-        {/* Row 3: region toggles */}
-        <div className="flex items-center gap-2 flex-wrap">
-          <span className="text-xs text-stone-500 dark:text-stone-400 mr-1">Region</span>
-          {REGIONS.map((r) => (
-            <button
-              key={r}
-              type="button"
-              onClick={() => onRegion(r)}
-              aria-pressed={region === r}
-              className={`px-2.5 py-1 rounded-md text-sm border transition-colors ${
-                region === r
-                  ? 'bg-stone-900 text-white border-stone-900 dark:bg-stone-100 dark:text-stone-900 dark:border-stone-100'
-                  : 'bg-[#fdf8e9] text-stone-700 border-[#d6c8a3] hover:bg-[#ece2c4] dark:bg-stone-900 dark:text-stone-300 dark:border-stone-700 dark:hover:bg-stone-800'
-              }`}
-            >
-              {r}
-            </button>
-          ))}
-        </div>
+        {/* Row 3: region toggles (only when caller provides region/onRegion) */}
+        {region !== undefined && onRegion && (
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className="text-xs text-stone-500 dark:text-stone-400 mr-1">Region</span>
+            {REGIONS.map((r) => (
+              <button
+                key={r}
+                type="button"
+                onClick={() => onRegion(r)}
+                aria-pressed={region === r}
+                className={`px-2.5 py-1 rounded-md text-sm border transition-colors ${
+                  region === r
+                    ? 'bg-stone-900 text-white border-stone-900 dark:bg-stone-100 dark:text-stone-900 dark:border-stone-100'
+                    : 'bg-[#fdf8e9] text-stone-700 border-[#d6c8a3] hover:bg-[#ece2c4] dark:bg-stone-900 dark:text-stone-300 dark:border-stone-700 dark:hover:bg-stone-800'
+                }`}
+              >
+                {r}
+              </button>
+            ))}
+          </div>
+        )}
 
-        {/* Row 4: type filter chips */}
+        {/* Row 4: simple type chips (only when caller provides types/onTypes) */}
+        {types !== undefined && onTypes && (
         <div className="flex items-start gap-2 flex-wrap">
           <span className="text-xs text-stone-500 dark:text-stone-400 mr-1 mt-1.5">
             Types <span className="text-stone-400 dark:text-stone-500">(pick up to 2)</span>
@@ -176,6 +179,7 @@ export default function Toolbar({
             )}
           </div>
         </div>
+        )}
       </div>
     </div>
   );

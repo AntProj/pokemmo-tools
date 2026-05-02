@@ -509,19 +509,22 @@ function HeldItems({ items, catalog }) {
     <Section title="Wild Held Items">
       <div className="space-y-2">
         {items.map((entry, idx) => {
-          const item = catalog[entry.id];
-          if (!item) return null;
+          // Names live directly on the entry; the catalog uses a different id
+          // space and rarely resolves, so it's a fallback only.
+          const name = entry.name || catalog[entry.id]?.name;
+          if (!name) return null;
+          const description = catalog[entry.id]?.description;
           return (
             <div key={`${entry.id}-${idx}`} className="p-3 rounded border border-[#e6dabf] dark:border-stone-800 bg-[#f1e9d2] dark:bg-stone-950/40">
               <div className="flex items-baseline justify-between gap-3 flex-wrap">
-                <div className="font-semibold text-stone-900 dark:text-stone-100">{item.name}</div>
+                <div className="font-semibold text-stone-900 dark:text-stone-100">{name}</div>
                 <div className="text-xs text-stone-500 dark:text-stone-400">
                   {entry.chance != null ? `${entry.chance}% chance` : 'chance unknown'}
                 </div>
               </div>
-              {item.description && (
+              {description && (
                 <div className="mt-1 text-sm text-stone-600 dark:text-stone-400 whitespace-pre-line">
-                  {String(item.description).replace(/\\n/g, '\n')}
+                  {String(description).replace(/\\n/g, '\n')}
                 </div>
               )}
             </div>
