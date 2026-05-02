@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "homepage": "https://YOUR_GITHUB_USERNAME.github.io/pokemmo-tools/",
+  "homepage": "https://AntProj.github.io/pokemmo-tools/",
   "scripts": {
     "build:data": "node scripts/build-data.mjs",
     "dev": "vite",
