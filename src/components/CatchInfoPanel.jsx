@@ -1,5 +1,6 @@
 import { memo, useEffect } from 'react';
-import { X, Star, Check, Slash, Circle, MapPin } from 'lucide-react';
+import { X, Star, Check, Slash, Circle, MapPin, Calculator } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import TypeBadge from './TypeBadge.jsx';
 import RarityBadge from './RarityBadge.jsx';
 import { typeColor } from '../lib/types.js';
@@ -137,14 +138,22 @@ function CatchInfoPanel({ pokemon, trackerState, onSetState, onOpenFullEntry, on
               {tip} Catch rate <span className="font-mono tabular-nums">{pokemon.catch_rate ?? '—'}/255</span>.
             </div>
 
-            {/* View full entry */}
-            <button
-              type="button"
-              onClick={() => onOpenFullEntry(pokemon.id)}
-              className="w-full text-center px-3 py-1.5 rounded-md text-xs font-medium border border-[#d6c8a3] dark:border-stone-700 bg-[#fdf8e9] dark:bg-stone-800 hover:bg-[#ece2c4] dark:hover:bg-stone-700 text-stone-700 dark:text-stone-200"
-            >
-              View full Pokédex entry
-            </button>
+            <div className="grid grid-cols-2 gap-2">
+              <Link
+                to={`/catch?mon=${encodeURIComponent(pokemon.name)}&hp=1&status=asleep`}
+                onClick={onClose}
+                className="text-center px-3 py-1.5 rounded-md text-xs font-medium border border-[#d6c8a3] dark:border-stone-700 bg-[#fdf8e9] dark:bg-stone-800 hover:bg-[#ece2c4] dark:hover:bg-stone-700 text-stone-700 dark:text-stone-200 inline-flex items-center justify-center gap-1.5"
+              >
+                <Calculator size={12} /> Catch Calc
+              </Link>
+              <button
+                type="button"
+                onClick={() => onOpenFullEntry(pokemon.id)}
+                className="px-3 py-1.5 rounded-md text-xs font-medium border border-[#d6c8a3] dark:border-stone-700 bg-[#fdf8e9] dark:bg-stone-800 hover:bg-[#ece2c4] dark:hover:bg-stone-700 text-stone-700 dark:text-stone-200"
+              >
+                Full Pokédex entry
+              </button>
+            </div>
           </div>
         </div>
       </div>

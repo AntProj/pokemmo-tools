@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
-import { X, Sparkles, ChevronRight } from 'lucide-react';
+import { X, Sparkles, ChevronRight, Calculator } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import TypeBadge from './TypeBadge.jsx';
 import RarityBadge from './RarityBadge.jsx';
 import { typeColor } from '../lib/types.js';
@@ -74,7 +75,7 @@ export default function PokemonModal({ pokemon, data, onClose, onSelect }) {
           <X size={18} />
         </button>
 
-        <Header pokemon={pokemon} sprite={sprite} shiny={shiny} setShiny={setShiny} />
+        <Header pokemon={pokemon} sprite={sprite} shiny={shiny} setShiny={setShiny} onClose={onClose} />
 
         <div className="p-5 sm:p-6 space-y-6 border-t border-[#e6dabf] dark:border-stone-800">
           <Stats stats={pokemon.stats} total={total} />
@@ -102,7 +103,12 @@ export default function PokemonModal({ pokemon, data, onClose, onSelect }) {
 
 /* ─────────────── Header ─────────────── */
 
-function Header({ pokemon, sprite, shiny, setShiny }) {
+function Header({ pokemon, sprite, shiny, setShiny, onClose }) {
+  const navigate = useNavigate();
+  const goCatchCalc = () => {
+    onClose?.();
+    navigate(`/catch?mon=${encodeURIComponent(pokemon.name)}`);
+  };
   const primary = typeColor(pokemon.types[0]);
   return (
     <div
@@ -159,20 +165,33 @@ function Header({ pokemon, sprite, shiny, setShiny }) {
             )}
           </div>
 
-          {pokemon.sprite_shiny && (
+          <div className="mt-3 flex flex-wrap items-center gap-2">
+            {pokemon.sprite_shiny && (
+              <button
+                type="button"
+                onClick={() => setShiny(!shiny)}
+                className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium border transition-colors ${
+                  shiny
+                    ? 'bg-yellow-400 text-stone-900 border-yellow-500'
+                    : 'bg-[#fdf8e9] dark:bg-stone-800 text-stone-700 dark:text-stone-200 border-[#d6c8a3] dark:border-stone-700 hover:bg-[#ece2c4] dark:hover:bg-stone-700'
+                }`}
+              >
+                <Sparkles size={14} />
+                {shiny ? 'Shiny' : 'Show shiny'}
+              </button>
+            )}
             <button
               type="button"
-              onClick={() => setShiny(!shiny)}
-              className={`mt-3 inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium border transition-colors ${
-                shiny
-                  ? 'bg-yellow-400 text-stone-900 border-yellow-500'
-                  : 'bg-[#fdf8e9] dark:bg-stone-800 text-stone-700 dark:text-stone-200 border-[#d6c8a3] dark:border-stone-700 hover:bg-[#ece2c4] dark:hover:bg-stone-700'
-              }`}
+              onClick={goCatchCalc}
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium border transition-colors
+                         bg-[#fdf8e9] dark:bg-stone-800 text-stone-700 dark:text-stone-200
+                         border-[#d6c8a3] dark:border-stone-700
+                         hover:bg-[#ece2c4] dark:hover:bg-stone-700"
+              title="Open in Catch Calc"
             >
-              <Sparkles size={14} />
-              {shiny ? 'Shiny' : 'Show shiny'}
+              <Calculator size={14} /> Catch Calc
             </button>
-          )}
+          </div>
         </div>
       </div>
     </div>

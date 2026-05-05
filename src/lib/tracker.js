@@ -14,21 +14,26 @@ export function cycleClick(state) {
 
 // Rarity → base point value used in the planning algorithm. Rarer encounters
 // score lower because they take longer to find; lures and hordes are easy.
+// Score the difficulty of getting *one* of this species for dex completion.
+// Lure encounters need a consumable item (and the right method/tile), so
+// they rank below hordes for "where should I farm next" — score at 0 so a
+// lure-only location doesn't push itself up the rankings.
 const RARITY_POINTS = {
   'Very Common': 4,
   Common:        3,
   Uncommon:      2,
-  Lure:          4,
-  Horde:         4,
   Rare:          1,
   'Very Rare':   1,
   Special:       1,
+  Horde:         1,   // KO 4 to catch 1 — tedious
+  Lure:          0,   // requires consumable, worst dex-grind option
 };
 
 export function scorePoints(rarity, state) {
+  // Priority no longer doubles the score — that role is handled at the
+  // location level by sorting priority-bearing locations to the top.
   if (state === 'caught' || state === 'skipped') return 0;
-  const base = RARITY_POINTS[rarity] ?? 1;
-  return state === 'priority' ? base * 2 : base;
+  return RARITY_POINTS[rarity] ?? 1;
 }
 
 // Pick the easiest catchable encounter for a Pokémon. The pipeline already
@@ -83,14 +88,15 @@ export const METHOD_OPTIONS = [
   'Headbutt', 'Honey Tree', 'Rocks', 'Dust Cloud', 'Shadow',
 ];
 
-// Tracker-specific rarity order for the Plan modal: Horde comes after Very
-// Rare, and Lure ends up last. The Locations tab keeps its own RARITY_ORDER.
+// Tracker-specific rarity order. Lure sits dead last because it requires a
+// consumable item and a specific method/tile — the worst dex-grind option.
+// Horde comes before it (still tedious — KO 4 to catch 1).
 const TRACKER_RARITY_ORDER = [
   'Very Common', 'Common', 'Uncommon',
   'Rare', 'Very Rare',
-  'Horde',  // group hunts after singles
-  'Lure',   // requires a consumable — last
   'Special',
+  'Horde',
+  'Lure',  // last
 ];
 export function trackerRarityRank(rarity) {
   const i = TRACKER_RARITY_ORDER.indexOf(rarity);

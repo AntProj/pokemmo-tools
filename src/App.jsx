@@ -8,6 +8,8 @@ import Search from './pages/Search.jsx';
 import Locations from './pages/Locations.jsx';
 import LocationDetail from './pages/LocationDetail.jsx';
 import Tracker from './pages/Tracker.jsx';
+import CatchCalc from './pages/CatchCalc.jsx';
+import BreedingPlanner from './pages/BreedingPlanner.jsx';
 
 const LS = {
   view:    'pokemmo:view',
@@ -188,6 +190,25 @@ export default function App() {
                 mergeTrackerState={mergeTrackerState}
                 view={trackerView}
                 setView={setTrackerView}
+                theme={theme} onTheme={setTheme}
+                onSelect={handleSelect}
+              />
+            }
+          />
+          <Route
+            path="/catch"
+            element={
+              <CatchCalc
+                data={data}
+                theme={theme} onTheme={setTheme}
+              />
+            }
+          />
+          <Route
+            path="/breeding"
+            element={
+              <BreedingPlanner
+                data={data}
                 theme={theme} onTheme={setTheme}
                 onSelect={handleSelect}
               />

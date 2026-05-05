@@ -21,9 +21,10 @@ export default function TrackerPlan({
   const [openKey, setOpenKey] = useState(null);
 
   // ─────── Build per-location plan data ───────
-  // For each (region, baseLocation) compute the best uncaught/priority entry
-  // for each unique mon there. Group by base location name (lowercased) so
-  // time/season variants collapse into one card — same as the Locations tab.
+  // For each (region, baseLocation) collect every encounter entry the
+  // Pokémon has there. A single mon can show up under multiple methods or
+  // rarities (e.g. a Horde and a Common spawn) — keep them all so the modal
+  // can render them as multiple strips on the same card.
   const locationPlan = useMemo(() => {
     const groups = new Map(); // `${region}::${baseLower}` → entry
     for (const [key, monRefs] of Object.entries(data.locations)) {
@@ -42,22 +43,40 @@ export default function TrackerPlan({
         g.methodSet.add(ref.method);
         const fullPokemon = pokemonById.get(ref.id);
         if (!fullPokemon) continue;
-        // Find this mon's best entry at this base location across all variants.
+        // Pull every encounter entry for this mon at this base location
+        // (across all time/season variants).
         const entriesHere = (fullPokemon.locations || []).filter(
           (l) => l.region === region && parseLocation(l.location).base.toLowerCase() === base.toLowerCase()
         );
         if (entriesHere.length === 0) continue;
-        // Highest "weight" = best (data is sorted easiest-first).
-        let best = entriesHere[0];
-        for (const e of entriesHere) if ((e.weight ?? 0) > (best.weight ?? 0)) best = e;
-        const existing = g.monMap.get(ref.id);
-        if (!existing || (best.weight ?? 0) > (existing.bestEntry.weight ?? 0)) {
-          g.monMap.set(ref.id, { pokemon: fullPokemon, bestEntry: best });
+        let me = g.monMap.get(ref.id);
+        if (!me) {
+          me = { pokemon: fullPokemon, entries: [], _seen: new Set() };
+          g.monMap.set(ref.id, me);
+        }
+        // Dedupe identical strips (the dataset can record the same entry once
+        // per seasonal variant key even when the visible details collapse).
+        for (const e of entriesHere) {
+          const stripKey = [e.method, e.rarity, e.min_level, e.max_level,
+                            [...(parseLocation(e.location).times || [])].sort().join('|'),
+                            [...(parseLocation(e.location).seasons || [])].sort().join('|')].join('::');
+          if (me._seen.has(stripKey)) continue;
+          me._seen.add(stripKey);
+          me.entries.push(e);
         }
       }
     }
+    // Strip helper fields and sort each mon's entries by tracker rarity rank.
     return [...groups.values()].map(({ _nameUpper, monMap, methodSet, ...rest }) => ({
-      ...rest, monEntries: [...monMap.values()], methods: [...methodSet],
+      ...rest,
+      monEntries: [...monMap.values()].map(({ _seen, entries, ...m }) => ({
+        ...m,
+        entries: entries.slice().sort((a, b) =>
+          trackerRarityRank(a.rarity) - trackerRarityRank(b.rarity)
+          || (a.min_level || 0) - (b.min_level || 0)
+        ),
+      })),
+      methods: [...methodSet],
     }));
   }, [data.locations, pokemonById]);
 
@@ -72,18 +91,34 @@ export default function TrackerPlan({
         : new Set(planMethods);
 
       let score = 0;
+      let priorityScore = 0;
+      let priorityCount = 0;
       const eligible = [];
       for (const me of loc.monEntries) {
         const state = stateOf(trackerState, me.pokemon.id);
         if (state === 'caught' || state === 'skipped') continue;
-        if (methodAllowed && !methodAllowed.has(me.bestEntry.method)) continue;
-        score += scorePoints(me.bestEntry.rarity, state);
-        eligible.push({ ...me, state });
+        // Method filter: drop entries that don't match. A mon stays eligible
+        // if at least one of its entries matches the active method filter.
+        const visibleEntries = methodAllowed
+          ? me.entries.filter((e) => methodAllowed.has(e.method))
+          : me.entries;
+        if (visibleEntries.length === 0) continue;
+        // Score from the best (lowest tracker rank) entry only — don't
+        // double-count a mon listed under both a horde and a common.
+        const bestEntry = visibleEntries.reduce((a, b) =>
+          trackerRarityRank(b.rarity) < trackerRarityRank(a.rarity) ? b : a
+        );
+        const points = scorePoints(bestEntry.rarity, state);
+        score += points;
+        if (state === 'priority') {
+          priorityScore += points;
+          priorityCount += 1;
+        }
+        eligible.push({ pokemon: me.pokemon, entries: visibleEntries, bestEntry, state });
       }
       if (eligible.length === 0) continue;
       if (hideSingles && eligible.length < 2) continue;
-      // Order mons by tracker-specific rarity rank (Horde after Very Rare,
-      // Lure last) with dex-id as tiebreaker.
+      // Order mons by their best (lowest-rank) entry; dex id as tiebreaker.
       eligible.sort((a, b) =>
         trackerRarityRank(a.bestEntry.rarity) - trackerRarityRank(b.bestEntry.rarity)
         || a.pokemon.id - b.pokemon.id
@@ -94,11 +129,33 @@ export default function TrackerPlan({
         methods: loc.methods,
         eligible,
         score,
+        priorityScore,
+        priorityCount,
       });
     }
-    out.sort((a, b) => b.score - a.score
-      || b.eligible.length - a.eligible.length
-      || a.name.localeCompare(b.name, undefined, { numeric: true }));
+    // Sort tiers, highest priority first:
+    //   1. Locations with at least one priority mon, ranked among themselves
+    //      by their priority-only score (using the base scoring algorithm,
+    //      counting only priority mons).
+    //   2. Locations without priority mons, ranked by overall score.
+    //   3. Safari Zones always sink to the bottom regardless — Safari Balls,
+    //      no battling, and mons flee, so they aren't a dependable dex farm.
+    const isSafari = (loc) => /^safari zone$/i.test(loc.name);
+    out.sort((a, b) => {
+      const aS = isSafari(a), bS = isSafari(b);
+      if (aS !== bS) return aS ? 1 : -1;
+      const aP = a.priorityCount > 0, bP = b.priorityCount > 0;
+      if (aP !== bP) return aP ? -1 : 1;
+      if (aP) {
+        return b.priorityScore - a.priorityScore
+          || b.priorityCount - a.priorityCount
+          || b.score - a.score
+          || a.name.localeCompare(b.name, undefined, { numeric: true });
+      }
+      return b.score - a.score
+        || b.eligible.length - a.eligible.length
+        || a.name.localeCompare(b.name, undefined, { numeric: true });
+    });
     return out;
   }, [locationPlan, trackerState, planRegion, planMethods, hideSingles]);
 
@@ -223,20 +280,24 @@ function isAllUpper(s) { return s.length > 0 && s === s.toUpperCase() && s !== s
 // so the modal binds to the live ranked entry by key.
 const PlanLocationCard = memo(function PlanLocationCard({ loc, onOpen }) {
   const key = `${loc.region}::${loc.name}`;
+  const hasPriority = loc.priorityCount > 0;
   return (
     <button
       type="button"
       onClick={() => onOpen(key)}
-      className="w-full flex items-center gap-3 px-3 py-2.5 text-left rounded-lg
-                 border border-[#e6dabf] dark:border-stone-800
-                 bg-[#fdf8e9] dark:bg-stone-900
-                 hover:border-[#c4b486] dark:hover:border-stone-600 hover:shadow-md
-                 transition-all duration-150
-                 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+      className={`w-full flex items-center gap-3 px-3 py-2.5 text-left rounded-lg
+                 border transition-all duration-150 hover:shadow-md
+                 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500
+                 ${hasPriority
+                   ? 'border-amber-400 dark:border-amber-700 bg-amber-50/70 dark:bg-amber-950/20 hover:border-amber-500 dark:hover:border-amber-600'
+                   : 'border-[#e6dabf] dark:border-stone-800 bg-[#fdf8e9] dark:bg-stone-900 hover:border-[#c4b486] dark:hover:border-stone-600'}`}
     >
       <div className="flex-1 min-w-0">
         <div className="text-[11px] font-semibold uppercase tracking-wider text-stone-500 dark:text-stone-400">{loc.region}</div>
-        <div className="font-semibold text-stone-900 dark:text-stone-100 truncate">{loc.name}</div>
+        <div className="font-semibold text-stone-900 dark:text-stone-100 truncate flex items-center gap-1.5">
+          {hasPriority && <Star size={12} fill="currentColor" className="text-amber-500 shrink-0" />}
+          {loc.name}
+        </div>
       </div>
       <div className="hidden sm:flex flex-wrap gap-x-2 gap-y-0.5 text-[11px] text-stone-600 dark:text-stone-400 max-w-[260px] justify-end">
         {loc.methods.map((m) => (
@@ -246,7 +307,10 @@ const PlanLocationCard = memo(function PlanLocationCard({ loc, onOpen }) {
       <div className="shrink-0 flex flex-col items-end ml-2">
         <div className="text-[10px] text-stone-500 dark:text-stone-400">Score</div>
         <div className="font-bold text-stone-900 dark:text-stone-100 tabular-nums text-lg leading-none">{loc.score}</div>
-        <div className="text-[10px] text-stone-500 dark:text-stone-400 tabular-nums">{loc.eligible.length} mon{loc.eligible.length === 1 ? '' : 's'}</div>
+        <div className="text-[10px] text-stone-500 dark:text-stone-400 tabular-nums">
+          {hasPriority && <span className="text-amber-600 dark:text-amber-400">★{loc.priorityCount} · </span>}
+          {loc.eligible.length} mon{loc.eligible.length === 1 ? '' : 's'}
+        </div>
       </div>
       <ChevronRight size={16} className="shrink-0 text-stone-400 ml-1" />
     </button>
@@ -314,9 +378,8 @@ function PlanLocationModal({ loc, trackerState, setMonState, openPanel, onClose 
                 <PlanMonRow
                   key={m.pokemon.id}
                   pokemon={m.pokemon}
-                  entry={m.bestEntry}
+                  entries={m.entries}
                   state={m.state}
-                  trackerState={trackerState}
                   setMonState={setMonState}
                   openPanel={openPanel}
                 />
@@ -331,13 +394,12 @@ function PlanLocationModal({ loc, trackerState, setMonState, openPanel, onClose 
 
 /* ─────────────── Plan mon row (interactive) ─────────────── */
 
-const PlanMonRow = memo(function PlanMonRow({ pokemon: p, entry, state, setMonState, openPanel }) {
+const PlanMonRow = memo(function PlanMonRow({ pokemon: p, entries, state, setMonState, openPanel }) {
   const primary = typeColor(p.types[0]).bg;
   const longPress = useLongPress(() => openPanel(p.id));
 
   function onClick(e) {
-    // Right-click already handled by onContextMenu. Plain click → cycle.
-    if (e.shiftKey) return; // ignore — Plan view doesn't have bulk select
+    if (e.shiftKey) return;
     setMonState(p.id, cycleClick(state));
   }
   function onContextMenu(e) {
@@ -345,9 +407,7 @@ const PlanMonRow = memo(function PlanMonRow({ pokemon: p, entry, state, setMonSt
     openPanel(p.id);
   }
 
-  const lvl = entry.min_level === entry.max_level ? `Lv ${entry.min_level}` : `Lv ${entry.min_level}–${entry.max_level}`;
   const isPriority = state === 'priority';
-  const parsed = parseLocation(entry.location);
 
   return (
     <div
@@ -357,7 +417,7 @@ const PlanMonRow = memo(function PlanMonRow({ pokemon: p, entry, state, setMonSt
       onContextMenu={onContextMenu}
       onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onClick(e); } }}
       {...longPress}
-      className={`group flex items-center gap-3 px-2 py-1.5 rounded cursor-pointer
+      className={`group flex items-start gap-3 px-2 py-1.5 rounded cursor-pointer
                   border ${isPriority ? 'border-amber-300 bg-amber-50/60 dark:border-amber-900/40 dark:bg-amber-950/20' : 'border-transparent hover:bg-[#ece2c4]/60 dark:hover:bg-stone-800/30'}
                   focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500`}
     >
@@ -379,25 +439,39 @@ const PlanMonRow = memo(function PlanMonRow({ pokemon: p, entry, state, setMonSt
             {[...new Set(p.types)].map((t) => <TypeBadge key={t} type={t} />)}
           </div>
         </div>
-        <div className="mt-0.5 flex flex-wrap items-center gap-1.5 text-xs">
-          <span className="inline-flex items-center gap-1 text-stone-700 dark:text-stone-300">
-            <span aria-hidden>{methodIcon(entry.method)}</span>{entry.method}
-          </span>
-          <RarityBadge rarity={entry.rarity} />
-          <span className="font-mono tabular-nums text-stone-700 dark:text-stone-300">{lvl}</span>
-          {parsed.times.length > 0 && (
-            <span className="text-stone-500 dark:text-stone-400">{parsed.times.join(' · ')}</span>
-          )}
+        <div className="mt-1 space-y-0.5">
+          {entries.map((entry, i) => <PlanEncounterStrip key={i} entry={entry} />)}
         </div>
       </div>
 
-      {/* Single-click affordance */}
-      <span className="hidden sm:inline-flex items-center gap-1 text-[10px] text-stone-400 dark:text-stone-500 shrink-0 opacity-0 group-hover:opacity-100">
+      <span className="hidden sm:inline-flex items-center gap-1 text-[10px] text-stone-400 dark:text-stone-500 shrink-0 opacity-0 group-hover:opacity-100 mt-1">
         <Check size={10} /> click = caught
       </span>
     </div>
   );
 });
+
+function PlanEncounterStrip({ entry }) {
+  const lvl = entry.min_level === entry.max_level
+    ? `Lv ${entry.min_level}`
+    : `Lv ${entry.min_level}–${entry.max_level}`;
+  const parsed = parseLocation(entry.location);
+  return (
+    <div className="flex flex-wrap items-center gap-1.5 text-xs">
+      <span className="inline-flex items-center gap-1 text-stone-700 dark:text-stone-300">
+        <span aria-hidden>{methodIcon(entry.method)}</span>{entry.method}
+      </span>
+      <RarityBadge rarity={entry.rarity} />
+      <span className="font-mono tabular-nums text-stone-700 dark:text-stone-300">{lvl}</span>
+      {parsed.times.length > 0 && (
+        <span className="text-stone-500 dark:text-stone-400">{parsed.times.join(' · ')}</span>
+      )}
+      {parsed.seasons.length > 0 && (
+        <span className="text-stone-500 dark:text-stone-400">S{parsed.seasons.join(',')}</span>
+      )}
+    </div>
+  );
+}
 
 // Long-press helper for touch devices. Returns props you spread on the element.
 function useLongPress(onLongPress, ms = 500) {

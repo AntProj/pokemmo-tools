@@ -1,10 +1,12 @@
 import { NavLink } from 'react-router-dom';
 
 const TABS = [
-  { to: '/',          label: 'Pokédex'   },
-  { to: '/search',    label: 'Search'    },
-  { to: '/locations', label: 'Locations' },
-  { to: '/tracker',   label: 'Tracker'   },
+  { to: '/',          label: 'Pokédex'           },
+  { to: '/search',    label: 'Search'            },
+  { to: '/locations', label: 'Locations'         },
+  { to: '/tracker',   label: 'Tracker'           },
+  { to: '/catch',     label: 'Catch Calc'        },
+  { to: '/breeding',  label: 'Breeding Planner'  },
 ];
 
 export default function NavBar() {
