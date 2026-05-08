@@ -311,11 +311,20 @@ function Abilities({ abilities, catalog }) {
 /* ─────────────── Evolutions ─────────────── */
 
 function Evolutions({ pokemon, data, onSelect }) {
-  // Build tree of {pokemon, method, children:[...]} by following each pokémon's
-  // own evolutions array. Track visited ids to avoid infinite loops on data quirks.
-  const tree = useMemo(() => buildEvolutionTree(pokemon, data), [pokemon, data]);
+  // Walk UP the pre_evolution chain to find the family's root, then build the
+  // forward tree from there. This way every stage of an evolution family
+  // (including the final stage with no forward evolutions) renders the full
+  // tree with the active mon highlighted.
+  const tree = useMemo(() => {
+    const root = chainRoot(pokemon, data);
+    return buildEvolutionTree(root, data);
+  }, [pokemon, data]);
 
-  if (!tree || (tree.children.length === 0 && !pokemon.evolutions?.length)) {
+  // No forward evolutions AND no pre-evolution → truly a singleton (Tauros, etc.).
+  const isSingleton =
+    (!pokemon.evolutions || pokemon.evolutions.length === 0) &&
+    !pokemon.pre_evolution;
+  if (isSingleton || !tree) {
     return (
       <Section title="Evolutions">
         <div className="text-sm text-stone-500 dark:text-stone-400">Does not evolve.</div>
@@ -328,6 +337,20 @@ function Evolutions({ pokemon, data, onSelect }) {
       <EvolutionNode node={tree} currentId={pokemon.id} onSelect={onSelect} />
     </Section>
   );
+}
+
+// Walk pre_evolution pointers up to the chain's root (e.g., Venusaur → Ivysaur
+// → Bulbasaur). Defensive against missing data and self-referential cycles.
+function chainRoot(pokemon, data) {
+  let cur = pokemon;
+  const seen = new Set();
+  while (cur?.pre_evolution && !seen.has(cur.id)) {
+    seen.add(cur.id);
+    const parent = data.pokemon.find((p) => p.id === cur.pre_evolution.id);
+    if (!parent) break;
+    cur = parent;
+  }
+  return cur;
 }
 
 function buildEvolutionTree(pokemon, data, visited = new Set()) {

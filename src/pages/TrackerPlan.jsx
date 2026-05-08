@@ -8,6 +8,10 @@ import { methodIcon, parseLocation, regionRank } from '../lib/locations.js';
 import { stateOf, scorePoints, cycleClick, trackerRarityRank, METHOD_OPTIONS } from '../lib/tracker.js';
 
 const REGIONS = ['All', 'Kanto', 'Johto', 'Hoenn', 'Sinnoh', 'Unova'];
+// Tracker-specific rarity order — same as TRACKER_RARITY_ORDER in tracker.js,
+// duplicated here so the filter chips render in the right order without an
+// extra export.
+const RARITY_OPTIONS = ['Very Common', 'Common', 'Uncommon', 'Rare', 'Very Rare', 'Special', 'Horde', 'Lure'];
 
 export default function TrackerPlan({
   data, pokemonById,
@@ -15,7 +19,7 @@ export default function TrackerPlan({
   view, updateView,
   openPanel,
 }) {
-  const { planRegion, planMethods, hideSingles } = view;
+  const { planRegion, planMethods, planRarities = [], hideSingles } = view;
   // Track the open modal by key so it stays bound to the *current* state of
   // the location (eligible mons / score update live as you click in the modal).
   const [openKey, setOpenKey] = useState(null);
@@ -89,6 +93,9 @@ export default function TrackerPlan({
       const methodAllowed = planMethods.length === 0
         ? null
         : new Set(planMethods);
+      const rarityAllowed = planRarities.length === 0
+        ? null
+        : new Set(planRarities);
 
       let score = 0;
       let priorityScore = 0;
@@ -97,11 +104,11 @@ export default function TrackerPlan({
       for (const me of loc.monEntries) {
         const state = stateOf(trackerState, me.pokemon.id);
         if (state === 'caught' || state === 'skipped') continue;
-        // Method filter: drop entries that don't match. A mon stays eligible
-        // if at least one of its entries matches the active method filter.
-        const visibleEntries = methodAllowed
-          ? me.entries.filter((e) => methodAllowed.has(e.method))
-          : me.entries;
+        // Method + rarity filters: drop entries that don't match. A mon stays
+        // eligible if at least one of its entries passes both filters.
+        let visibleEntries = me.entries;
+        if (methodAllowed) visibleEntries = visibleEntries.filter((e) => methodAllowed.has(e.method));
+        if (rarityAllowed) visibleEntries = visibleEntries.filter((e) => rarityAllowed.has(e.rarity));
         if (visibleEntries.length === 0) continue;
         // Score from the best (lowest tracker rank) entry only — don't
         // double-count a mon listed under both a horde and a common.
@@ -157,15 +164,18 @@ export default function TrackerPlan({
         || a.name.localeCompare(b.name, undefined, { numeric: true });
     });
     return out;
-  }, [locationPlan, trackerState, planRegion, planMethods, hideSingles]);
+  }, [locationPlan, trackerState, planRegion, planMethods, planRarities, hideSingles]);
 
   // ─────── Filter row handlers ───────
   const setRegion = useCallback((r) => updateView({ planRegion: r }), [updateView]);
   const toggleMethod = useCallback((m) => {
     updateView({ planMethods: planMethods.includes(m) ? planMethods.filter((x) => x !== m) : [...planMethods, m] });
   }, [planMethods, updateView]);
+  const toggleRarity = useCallback((r) => {
+    updateView({ planRarities: planRarities.includes(r) ? planRarities.filter((x) => x !== r) : [...planRarities, r] });
+  }, [planRarities, updateView]);
   const toggleHideSingles = useCallback(() => updateView({ hideSingles: !hideSingles }), [hideSingles, updateView]);
-  const resetFilters = useCallback(() => updateView({ planRegion: 'All', planMethods: [], hideSingles: true }), [updateView]);
+  const resetFilters = useCallback(() => updateView({ planRegion: 'All', planMethods: [], planRarities: [], hideSingles: true }), [updateView]);
 
   return (
     <main className="max-w-7xl mx-auto px-4 py-4 space-y-4">
@@ -208,6 +218,31 @@ export default function TrackerPlan({
                   }`}
                 >
                   <span aria-hidden>{methodIcon(m)}</span>{m}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="flex items-start gap-2 flex-wrap">
+          <span className="text-xs text-stone-500 dark:text-stone-400 mr-1 mt-1">Rarity</span>
+          <div className="flex flex-wrap gap-1.5">
+            {RARITY_OPTIONS.map((r) => {
+              const sel = planRarities.includes(r);
+              return (
+                <button
+                  key={r}
+                  type="button"
+                  onClick={() => toggleRarity(r)}
+                  aria-pressed={sel}
+                  title={sel ? `Hide ${r} encounters` : `Show only ${r} (toggle others to combine)`}
+                  className={`px-2 py-0.5 rounded text-xs border transition-colors inline-flex items-center ${
+                    sel
+                      ? 'bg-blue-100 text-blue-800 border-blue-300 dark:bg-blue-950/50 dark:text-blue-300 dark:border-blue-900'
+                      : 'bg-[#fdf8e9] dark:bg-stone-900 text-stone-700 dark:text-stone-300 border-[#d6c8a3] dark:border-stone-700 hover:bg-[#ece2c4] dark:hover:bg-stone-800'
+                  }`}
+                >
+                  {r}
                 </button>
               );
             })}

@@ -33,7 +33,7 @@ function initialTheme() {
 
 const INITIAL_POKEDEX = { search: '', region: 'All', types: [], sort: 'dex' };
 const INITIAL_LOCATIONS = { search: '', region: 'All', sort: 'region' };
-const INITIAL_TRACKER_VIEW = { view: 'plan', planRegion: 'All', planMethods: [], hideSingles: true,
+const INITIAL_TRACKER_VIEW = { view: 'plan', planRegion: 'All', planMethods: [], planRarities: [], hideSingles: true,
   markSearch: '', markRegion: 'All', markTypes: [], markStates: [], markSort: 'dex' };
 
 // Read once from localStorage; default to {} so unlisted ids are 'uncaught'.
