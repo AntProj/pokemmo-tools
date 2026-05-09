@@ -42,23 +42,29 @@ const OUT_DIR = path.join(ROOT, 'src', 'data');
 const OUT_FILE = path.join(OUT_DIR, 'pokemmo.json');
 
 // ---------- Rarity weights for "easiest to find" ranking ----------
+// Higher = easier. Order: Very Common > Common > Uncommon > Horde > Rare >
+// Very Rare > Special > Lure. Hordes sit between Uncommon and Rare — better
+// than the rare tier (you get 5 mons per battle and Hordes are common spawns
+// where they exist), but worse than a normal Uncommon encounter you can just
+// run grass for. Lure is dead last because it requires a consumable item +
+// the right tile/method.
 const RARITY_WEIGHT = {
   'Very Common': 0.40,
   'Common':      0.20,
   'Uncommon':    0.10,
+  'Horde':       0.08,  // between Uncommon and Rare
   'Rare':        0.05,
-  'Very Rare':   0.01,
-  'Horde':       0.30,
-  'Lure':        0.50,
-  'Special':     0.02,
+  'Very Rare':   0.02,
+  'Special':     0.01,
+  'Lure':        0.005, // worst — needs consumable + specific tile
 };
 
 function rarityTier(rarity) {
   if (rarity === 'Very Common') return 'very-common';
-  if (rarity === 'Common' || rarity === 'Lure' || rarity === 'Horde') return 'common';
+  if (rarity === 'Common' || rarity === 'Horde') return 'common';
   if (rarity === 'Uncommon') return 'uncommon';
   if (rarity === 'Rare') return 'rare';
-  return 'very-rare';
+  return 'very-rare'; // Very Rare, Special, Lure all share the worst tier
 }
 
 // ---------- Location name normalization ----------

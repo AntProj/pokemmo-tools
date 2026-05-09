@@ -103,6 +103,19 @@ export function trackerRarityRank(rarity) {
   return i === -1 ? TRACKER_RARITY_ORDER.length : i;
 }
 
+// Locations that exist in-game but are gated behind dex completion. Showing
+// them in the Tracker is circular — the Tracker is meant to *get you to* dex
+// completion, so a "go grind there" suggestion that requires a complete dex
+// is useless. Compared case-insensitively against the location's base name.
+export const TRACKER_EXCLUDED_LOCATIONS = [
+  'mt. silver cave',
+];
+
+export function isExcludedFromTracker(locationName) {
+  if (!locationName) return false;
+  return TRACKER_EXCLUDED_LOCATIONS.includes(String(locationName).toLowerCase());
+}
+
 /* ─────────── Export / Import ─────────── */
 
 const VALID_STATES = new Set(['caught', 'priority', 'skipped']);

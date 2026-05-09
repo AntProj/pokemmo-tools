@@ -5,7 +5,7 @@ import RarityBadge from '../components/RarityBadge.jsx';
 import { typeColor } from '../lib/types.js';
 import { dexNum } from '../lib/format.js';
 import { methodIcon, parseLocation, regionRank } from '../lib/locations.js';
-import { stateOf, scorePoints, cycleClick, trackerRarityRank, METHOD_OPTIONS } from '../lib/tracker.js';
+import { stateOf, scorePoints, cycleClick, trackerRarityRank, METHOD_OPTIONS, isExcludedFromTracker } from '../lib/tracker.js';
 
 const REGIONS = ['All', 'Kanto', 'Johto', 'Hoenn', 'Sinnoh', 'Unova'];
 // Tracker-specific rarity order — same as TRACKER_RARITY_ORDER in tracker.js,
@@ -34,6 +34,7 @@ export default function TrackerPlan({
     for (const [key, monRefs] of Object.entries(data.locations)) {
       const [region, rawName] = key.split('::');
       const { base } = parseLocation(rawName);
+      if (isExcludedFromTracker(base)) continue; // dex-gated locations
       const groupKey = `${region}::${base.toLowerCase()}`;
       let g = groups.get(groupKey);
       if (!g) {
@@ -417,6 +418,8 @@ function PlanLocationModal({ loc, trackerState, setMonState, openPanel, onClose 
                   state={m.state}
                   setMonState={setMonState}
                   openPanel={openPanel}
+                  currentRegion={loc.region}
+                  currentLocation={loc.name}
                 />
               ))
             )}
@@ -429,9 +432,10 @@ function PlanLocationModal({ loc, trackerState, setMonState, openPanel, onClose 
 
 /* ─────────────── Plan mon row (interactive) ─────────────── */
 
-const PlanMonRow = memo(function PlanMonRow({ pokemon: p, entries, state, setMonState, openPanel }) {
+const PlanMonRow = memo(function PlanMonRow({ pokemon: p, entries, state, setMonState, openPanel, currentRegion, currentLocation }) {
   const primary = typeColor(p.types[0]).bg;
   const longPress = useLongPress(() => openPanel(p.id));
+  const better = findBetterLocation(p, currentRegion, currentLocation);
 
   function onClick(e) {
     if (e.shiftKey) return;
@@ -477,6 +481,12 @@ const PlanMonRow = memo(function PlanMonRow({ pokemon: p, entries, state, setMon
         <div className="mt-1 space-y-0.5">
           {entries.map((entry, i) => <PlanEncounterStrip key={i} entry={entry} />)}
         </div>
+        {better && (
+          <div className="mt-1 inline-flex items-center gap-1 text-[11px] text-amber-700 dark:text-amber-400" title={`Best rate for ${p.name} is at ${better.base} (${better.region}) — ${better.rarity}.`}>
+            <ChevronRight size={11} className="shrink-0" />
+            <span>Better at <span className="font-semibold">{better.base}</span> <span className="text-stone-500 dark:text-stone-400">({better.region})</span> · {better.rarity}</span>
+          </div>
+        )}
       </div>
 
       <span className="hidden sm:inline-flex items-center gap-1 text-[10px] text-stone-400 dark:text-stone-500 shrink-0 opacity-0 group-hover:opacity-100 mt-1">
@@ -485,6 +495,38 @@ const PlanMonRow = memo(function PlanMonRow({ pokemon: p, entries, state, setMon
     </div>
   );
 });
+
+// For a Pokémon listed at (currentRegion, currentLocation): does it have a
+// HIGHER-weight (easier) encounter at any OTHER location? If yes, return the
+// best such alternative; if the current location is already its best (or only)
+// spot, return null.
+function findBetterLocation(pokemon, currentRegion, currentLocation) {
+  const all = pokemon.locations || [];
+  if (all.length <= 1) return null;
+  const curBase = (currentLocation || '').toLowerCase();
+  let bestHere = 0;
+  let bestElsewhere = null;
+  for (const loc of all) {
+    const base = parseLocation(loc.location).base;
+    const isHere = loc.region === currentRegion && base.toLowerCase() === curBase;
+    if (isHere) {
+      if ((loc.weight || 0) > bestHere) bestHere = loc.weight || 0;
+    } else {
+      // Don't suggest dex-gated locations as alternatives.
+      if (isExcludedFromTracker(base)) continue;
+      if (!bestElsewhere || (loc.weight || 0) > bestElsewhere.weight) {
+        bestElsewhere = {
+          weight: loc.weight || 0,
+          region: loc.region,
+          base,
+          rarity: loc.rarity,
+        };
+      }
+    }
+  }
+  if (!bestElsewhere || bestElsewhere.weight <= bestHere) return null;
+  return bestElsewhere;
+}
 
 function PlanEncounterStrip({ entry }) {
   const lvl = entry.min_level === entry.max_level
