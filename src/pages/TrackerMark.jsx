@@ -1,6 +1,7 @@
 import { memo, useCallback, useDeferredValue, useMemo, useRef, useState } from 'react';
 import { Search, Check, Slash, Star, X } from 'lucide-react';
 import TypeBadge from '../components/TypeBadge.jsx';
+import PokemonSprite from '../components/PokemonSprite.jsx';
 import { ALL_POKEMON_TYPES, typeColor } from '../lib/types.js';
 import { displayDex, regionKey, statTotal } from '../lib/format.js';
 import { stateOf, cycleClick, STATES } from '../lib/tracker.js';
@@ -318,12 +319,11 @@ const TrackerCard = memo(function TrackerCard({ pokemon: p, region, state, isSel
           className="absolute inset-0 hidden dark:block pointer-events-none"
           style={{ background: `radial-gradient(circle at 50% 50%, ${primary}3d 0%, ${primary}1f 70%, ${primary}0f 100%)` }}
         />
-        <img
-          src={p.sprite}
-          alt={p.name}
+        <PokemonSprite
+          pokemon={p}
+          variant="animated"
           loading="lazy"
-          decoding="async"
-          className={`pixelated w-20 h-20 object-contain relative transition ${dimmed ? 'grayscale opacity-40' : ''}`}
+          className={`w-20 h-20 object-contain relative transition ${dimmed ? 'grayscale opacity-40' : ''}`}
         />
         {/* State badge overlays */}
         {caught && (

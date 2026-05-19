@@ -3,6 +3,7 @@ import { Link, Navigate, useParams } from 'react-router-dom';
 import { ArrowLeft, Sun, Moon } from 'lucide-react';
 import TypeBadge from '../components/TypeBadge.jsx';
 import RarityBadge from '../components/RarityBadge.jsx';
+import PokemonSprite from '../components/PokemonSprite.jsx';
 import { typeColor } from '../lib/types.js';
 import { dexNum } from '../lib/format.js';
 import { methodIcon, rarityRank, parseLocation } from '../lib/locations.js';
@@ -345,12 +346,11 @@ const PokemonEncounterCard = memo(function PokemonEncounterCard({ pokemon: p, en
           className="absolute inset-0 hidden dark:block pointer-events-none"
           style={{ background: `radial-gradient(circle at 50% 50%, ${primaryColor}3d 0%, ${primaryColor}1f 70%, ${primaryColor}0f 100%)` }}
         />
-        <img
-          src={p.sprite}
-          alt={p.name}
+        <PokemonSprite
+          pokemon={p}
+          variant="animated"
           loading="lazy"
-          decoding="async"
-          className="pixelated w-12 h-12 object-contain relative"
+          className="w-12 h-12 object-contain relative"
         />
       </div>
 

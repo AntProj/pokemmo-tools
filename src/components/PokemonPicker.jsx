@@ -1,6 +1,7 @@
 import { memo, useDeferredValue, useEffect, useMemo, useState } from 'react';
 import { Search, X, Plus } from 'lucide-react';
 import TypeBadge from './TypeBadge.jsx';
+import PokemonSprite from './PokemonSprite.jsx';
 import { typeColor } from '../lib/types.js';
 import { dexNum } from '../lib/format.js';
 
@@ -59,7 +60,7 @@ function CurrentMon({ pokemon: p }) {
         className="relative shrink-0 w-10 h-10 rounded-md overflow-hidden flex items-center justify-center"
         style={{ background: `radial-gradient(circle at 50% 50%, ${primary}26 0%, ${primary}14 70%, ${primary}0a 100%)` }}
       >
-        <img src={p.sprite} alt={p.name} loading="lazy" decoding="async" className="pixelated w-9 h-9 object-contain" />
+        <PokemonSprite pokemon={p} variant="animated" loading="lazy" className="w-9 h-9 object-contain" />
       </div>
       <div className="flex-1 min-w-0">
         <div className="flex items-baseline gap-1.5">
@@ -169,7 +170,7 @@ const PickRow = memo(function PickRow({ pokemon: p, active, onPick }) {
           className="relative shrink-0 w-10 h-10 rounded overflow-hidden flex items-center justify-center"
           style={{ background: `radial-gradient(circle at 50% 50%, ${primary}26 0%, ${primary}14 70%, ${primary}0a 100%)` }}
         >
-          <img src={p.sprite} alt={p.name} loading="lazy" decoding="async" className="pixelated w-9 h-9 object-contain" />
+          <PokemonSprite pokemon={p} variant="animated" loading="lazy" className="w-9 h-9 object-contain" />
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-baseline gap-1.5">

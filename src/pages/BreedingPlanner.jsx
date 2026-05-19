@@ -1,6 +1,7 @@
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Sun, Moon, RotateCcw, Save, Trash2, Copy, FolderOpen, Info, X, Check, ShoppingCart } from 'lucide-react';
 import PokemonPicker from '../components/PokemonPicker.jsx';
+import PokemonSprite from '../components/PokemonSprite.jsx';
 import TypeBadge from '../components/TypeBadge.jsx';
 import { typeColor } from '../lib/types.js';
 import { dexNum } from '../lib/format.js';
@@ -410,7 +411,7 @@ function SpeciesSummary({ pokemon }) {
     <div className="flex items-start gap-2">
       <div className="relative shrink-0 w-12 h-12 rounded-md overflow-hidden flex items-center justify-center"
            style={{ background: `radial-gradient(circle at 50% 50%, ${primary}26 0%, ${primary}14 70%, ${primary}0a 100%)` }}>
-        <img src={pokemon.sprite} alt={pokemon.name} loading="lazy" decoding="async" className="pixelated w-11 h-11 object-contain" />
+        <PokemonSprite pokemon={pokemon} variant="animated" loading="lazy" className="w-11 h-11 object-contain" />
       </div>
       <div className="flex-1 min-w-0">
         <div className="flex items-baseline gap-1.5"><span className="font-mono text-[11px] text-stone-500">{dexNum(pokemon.id)}</span><span className="font-semibold text-stone-900 dark:text-stone-100">{pokemon.name}</span></div>
@@ -1286,7 +1287,7 @@ function SavedProjectsTab({ data, projects, onOpen, onDuplicate, onDelete }) {
         const date = p.createdAt || p.savedAt;
         return (
           <div key={p.id} className="rounded-md border border-[#e6dabf] dark:border-stone-800 bg-[#fdf8e9] dark:bg-stone-900 p-3 flex items-center gap-3">
-            {target && <img src={target.sprite} alt={target.name} className="pixelated w-10 h-10 object-contain" />}
+            {target && <PokemonSprite pokemon={target} variant="animated" className="w-10 h-10 object-contain" />}
             <div className="flex-1 min-w-0">
               <div className="font-semibold text-stone-900 dark:text-stone-100 truncate">{p.name}</div>
               <div className="text-xs text-stone-500 dark:text-stone-400">

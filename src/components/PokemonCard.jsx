@@ -1,13 +1,17 @@
 import { memo } from 'react';
 import TypeBadge from './TypeBadge.jsx';
+import PokemonSprite from './PokemonSprite.jsx';
 import { displayDex } from '../lib/format.js';
 import { typeColor } from '../lib/types.js';
 
 function PokemonCard({ pokemon, region, onSelect, footer }) {
-  // Warm the HTTP cache on hover so the sprite is ready by the time the modal opens.
+  // Warm the HTTP cache on hover so the modal's 3D render is ready by the
+  // time the user clicks. Also warm the animated GIF in case it hasn't loaded
+  // yet in the card itself.
   const preload = () => {
-    if (pokemon.sprite) { const img = new Image(); img.src = pokemon.sprite; }
-    if (pokemon.sprite_shiny) { const img = new Image(); img.src = pokemon.sprite_shiny; }
+    for (const url of [pokemon.sprite_3d, pokemon.sprite_animated, pokemon.sprite]) {
+      if (url) { const img = new Image(); img.src = url; }
+    }
   };
   // Subtle radial tint matching the primary type. Two opacity levels via
   // overlapping divs (light vs dark) so each theme gets the right strength.
@@ -34,12 +38,11 @@ function PokemonCard({ pokemon, region, onSelect, footer }) {
           className="absolute inset-0 hidden dark:block pointer-events-none"
           style={{ background: `radial-gradient(circle at 50% 50%, ${primaryColor}3d 0%, ${primaryColor}1f 70%, ${primaryColor}0f 100%)` }}
         />
-        <img
-          src={pokemon.sprite}
-          alt={pokemon.name}
+        <PokemonSprite
+          pokemon={pokemon}
+          variant="animated"
           loading="lazy"
-          decoding="async"
-          className="pixelated w-20 h-20 object-contain group-hover:scale-110 transition-transform relative"
+          className="w-20 h-20 object-contain group-hover:scale-110 transition-transform relative"
         />
       </div>
       <div className="mt-2 font-mono text-xs text-stone-500 dark:text-stone-500">{displayDex(pokemon, region)}</div>

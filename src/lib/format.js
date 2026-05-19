@@ -111,13 +111,6 @@ export function formatGrowthRate(rate) {
   return GROWTH_RATE_LABELS[key] || rate;
 }
 
-// Hatch counter is "steps until hatch" where 1 cycle ≈ 256 steps in PokéMMO.
-export function formatHatchCounter(counter) {
-  if (counter == null) return '—';
-  const steps = counter * 256;
-  return `${counter} cycles (~${steps.toLocaleString()} steps)`;
-}
-
 // Catch rate goes 3 (hardest) to 255 (easiest).
 export function formatCatchRate(rate) {
   if (rate == null) return '—';

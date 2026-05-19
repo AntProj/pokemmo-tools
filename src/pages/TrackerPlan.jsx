@@ -2,6 +2,7 @@ import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { ChevronRight, Star, Check, X } from 'lucide-react';
 import TypeBadge from '../components/TypeBadge.jsx';
 import RarityBadge from '../components/RarityBadge.jsx';
+import PokemonSprite from '../components/PokemonSprite.jsx';
 import { typeColor } from '../lib/types.js';
 import { dexNum } from '../lib/format.js';
 import { methodIcon, parseLocation, regionRank } from '../lib/locations.js';
@@ -464,7 +465,7 @@ const PlanMonRow = memo(function PlanMonRow({ pokemon: p, entries, state, setMon
         className="relative shrink-0 w-10 h-10 rounded overflow-hidden flex items-center justify-center"
         style={{ background: `radial-gradient(circle at 50% 50%, ${primary}26 0%, ${primary}14 70%, ${primary}0a 100%)` }}
       >
-        <img src={p.sprite} alt={p.name} loading="lazy" decoding="async" className="pixelated w-9 h-9 object-contain" />
+        <PokemonSprite pokemon={p} variant="animated" loading="lazy" className="w-9 h-9 object-contain" />
         {isPriority && (
           <Star size={10} fill="currentColor" className="absolute top-0 right-0 text-amber-500 drop-shadow" />
         )}

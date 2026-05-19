@@ -1,13 +1,15 @@
 import { memo } from 'react';
 import TypeBadge from './TypeBadge.jsx';
+import PokemonSprite from './PokemonSprite.jsx';
 import { displayDex, statTotal } from '../lib/format.js';
 
 function PokemonRow({ pokemon, region, onSelect }) {
   const total = statTotal(pokemon.stats);
   const encounters = pokemon.locations?.length || 0;
   const preload = () => {
-    if (pokemon.sprite) { const img = new Image(); img.src = pokemon.sprite; }
-    if (pokemon.sprite_shiny) { const img = new Image(); img.src = pokemon.sprite_shiny; }
+    for (const url of [pokemon.sprite_3d, pokemon.sprite_animated, pokemon.sprite]) {
+      if (url) { const img = new Image(); img.src = url; }
+    }
   };
   return (
     <button
@@ -20,12 +22,11 @@ function PokemonRow({ pokemon, region, onSelect }) {
                  hover:bg-[#ece2c4] dark:hover:bg-stone-800/60
                  focus:outline-none focus:bg-[#ece2c4] dark:focus:bg-stone-800/80 transition-colors"
     >
-      <img
-        src={pokemon.sprite}
-        alt={pokemon.name}
+      <PokemonSprite
+        pokemon={pokemon}
+        variant="animated"
         loading="lazy"
-        decoding="async"
-        className="pixelated w-10 h-10 object-contain"
+        className="w-10 h-10 object-contain"
       />
       <span className="font-mono text-xs text-stone-500 dark:text-stone-500">{displayDex(pokemon, region)}</span>
       <span className="font-semibold text-stone-900 dark:text-stone-100 truncate">{pokemon.name}</span>

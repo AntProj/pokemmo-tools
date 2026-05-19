@@ -3,6 +3,7 @@ import { X, Star, Check, Slash, Circle, MapPin, Calculator } from 'lucide-react'
 import { Link } from 'react-router-dom';
 import TypeBadge from './TypeBadge.jsx';
 import RarityBadge from './RarityBadge.jsx';
+import PokemonSprite from './PokemonSprite.jsx';
 import { typeColor } from '../lib/types.js';
 import { dexNum } from '../lib/format.js';
 import { methodIcon } from '../lib/locations.js';
@@ -52,7 +53,7 @@ function CatchInfoPanel({ pokemon, trackerState, onSetState, onOpenFullEntry, on
               className="relative shrink-0 w-14 h-14 rounded-md overflow-hidden flex items-center justify-center bg-white/40 dark:bg-stone-950/50"
               style={{ background: `radial-gradient(circle at 50% 50%, ${primary}33 0%, ${primary}14 70%, ${primary}0a 100%)` }}
             >
-              <img src={pokemon.sprite} alt={pokemon.name} className="pixelated w-12 h-12 object-contain" decoding="async" />
+              <PokemonSprite pokemon={pokemon} variant="animated" className="w-12 h-12 object-contain" />
             </div>
             <div className="flex-1 min-w-0">
               <div className="flex items-baseline gap-2 flex-wrap">

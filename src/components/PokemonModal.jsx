@@ -3,10 +3,11 @@ import { X, Sparkles, ChevronRight, Calculator } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import TypeBadge from './TypeBadge.jsx';
 import RarityBadge from './RarityBadge.jsx';
+import PokemonSprite from './PokemonSprite.jsx';
 import { typeColor } from '../lib/types.js';
 import {
   dexNum, formatHeight, formatWeight, formatGenderRatio, genderSplit,
-  formatGrowthRate, formatHatchCounter, formatCatchRate,
+  formatGrowthRate, formatCatchRate,
   formatEvolutionMethod, damageClassIcon, damageClassLabel,
   STAT_ORDER, statLabel, statTotal, statBarPct, statBarColor,
 } from '../lib/format.js';
@@ -46,7 +47,9 @@ export default function PokemonModal({ pokemon, data, onClose, onSelect }) {
   if (!pokemon) return null;
 
   const total = statTotal(pokemon.stats);
-  const sprite = shiny && pokemon.sprite_shiny ? pokemon.sprite_shiny : pokemon.sprite;
+  // Shiny toggle should only render if any shiny variant exists across the
+  // sprite chain (the 3D HOME render, the animated GIF, or the still PNG).
+  const hasShinyVariant = !!(pokemon.sprite_3d_shiny || pokemon.sprite_animated_shiny || pokemon.sprite_shiny);
 
   return (
     <div
@@ -75,7 +78,7 @@ export default function PokemonModal({ pokemon, data, onClose, onSelect }) {
           <X size={18} />
         </button>
 
-        <Header pokemon={pokemon} sprite={sprite} shiny={shiny} setShiny={setShiny} onClose={onClose} />
+        <Header pokemon={pokemon} shiny={shiny} setShiny={setShiny} hasShinyVariant={hasShinyVariant} onClose={onClose} />
 
         <div className="p-5 sm:p-6 space-y-6 border-t border-[#e6dabf] dark:border-stone-800">
           <Stats stats={pokemon.stats} total={total} />
@@ -103,7 +106,7 @@ export default function PokemonModal({ pokemon, data, onClose, onSelect }) {
 
 /* ─────────────── Header ─────────────── */
 
-function Header({ pokemon, sprite, shiny, setShiny, onClose }) {
+function Header({ pokemon, shiny, setShiny, hasShinyVariant, onClose }) {
   const navigate = useNavigate();
   const goCatchCalc = () => {
     onClose?.();
@@ -121,12 +124,12 @@ function Header({ pokemon, sprite, shiny, setShiny, onClose }) {
         <div className="flex items-center justify-center sm:justify-start">
           <div className="w-32 h-32 sm:w-40 sm:h-40 flex items-center justify-center
                           bg-[#fdf8e9]/60 dark:bg-stone-950/50 rounded-lg ring-1 ring-black/5 dark:ring-white/5">
-            <img
-              src={sprite}
-              alt={pokemon.name}
-              decoding="async"
-              fetchpriority="high"
-              className="pixelated w-28 h-28 sm:w-36 sm:h-36 object-contain"
+            <PokemonSprite
+              pokemon={pokemon}
+              variant="3d"
+              shiny={shiny}
+              fetchPriority="high"
+              className="w-28 h-28 sm:w-36 sm:h-36 object-contain"
             />
           </div>
         </div>
@@ -166,7 +169,7 @@ function Header({ pokemon, sprite, shiny, setShiny, onClose }) {
           </div>
 
           <div className="mt-3 flex flex-wrap items-center gap-2">
-            {pokemon.sprite_shiny && (
+            {hasShinyVariant && (
               <button
                 type="button"
                 onClick={() => setShiny(!shiny)}
@@ -250,7 +253,6 @@ function Profile({ pokemon }) {
         <Field label="Weight" value={formatWeight(pokemon.weight)} />
         <Field label="Catch Rate" value={formatCatchRate(pokemon.catch_rate)} />
         <Field label="Growth Rate" value={formatGrowthRate(pokemon.growth_rate || pokemon.exp_type)} />
-        <Field label="Hatch Counter" value={formatHatchCounter(pokemon.hatch_counter)} />
         <Field
           label="Egg Groups"
           value={pokemon.egg_groups?.length
@@ -398,8 +400,8 @@ function EvolutionStage({ poke, isCurrent, onSelect }) {
           : 'border-[#e6dabf] dark:border-stone-800 bg-[#f1e9d2] dark:bg-stone-950/40 hover:border-[#c4b486] dark:hover:border-stone-600'
       }`}
     >
-      {poke.sprite
-        ? <img src={poke.sprite} alt={poke.name} decoding="async" loading="lazy" className="pixelated w-16 h-16 object-contain" />
+      {poke.sprite_animated || poke.sprite
+        ? <PokemonSprite pokemon={poke} variant="animated" loading="lazy" className="w-16 h-16 object-contain" />
         : <div className="w-16 h-16 flex items-center justify-center text-stone-400 text-xs">?</div>}
       <div className="font-mono text-[10px] text-stone-500 dark:text-stone-500">{dexNum(poke.id)}</div>
       <div className="text-xs font-semibold text-stone-900 dark:text-stone-100">{poke.name}</div>
