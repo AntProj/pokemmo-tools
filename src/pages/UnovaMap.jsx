@@ -1,7 +1,7 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useNavigate, useParams, Link } from 'react-router-dom';
-import { Sun, Moon, ArrowLeft, X, MapPin, User, Package, Users, ExternalLink } from 'lucide-react';
-import { MapContainer, ImageOverlay, Marker, CircleMarker, useMap, Tooltip } from 'react-leaflet';
+import { Sun, Moon, ArrowLeft, X, User, Package, Users, ExternalLink } from 'lucide-react';
+import { MapContainer, ImageOverlay, Marker, useMap, Tooltip } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
@@ -125,6 +125,14 @@ export default function UnovaMap({ theme, onTheme }) {
       )}
 
       {mapsIndex && (
+        <MapPicker
+          mapsIndex={mapsIndex}
+          mapId={mapId}
+          onChange={(id) => navigate(id === 'world' ? '/map' : `/map/${id}`)}
+        />
+      )}
+
+      {mapsIndex && (
         <MapView
           mapId={mapId}
           mapsIndex={mapsIndex}
@@ -133,6 +141,49 @@ export default function UnovaMap({ theme, onTheme }) {
         />
       )}
     </main>
+  );
+}
+
+/* ─────────────── Map picker dropdown ─────────────── */
+
+function MapPicker({ mapsIndex, mapId, onChange }) {
+  // Build a sorted list once per mapsIndex change. World overview always first;
+  // the rest sorted alphabetically by display name. Zone id surfaced in the
+  // option label so users can disambiguate same-named places (e.g. two "Cave
+  // Interior" zones).
+  const options = useMemo(() => {
+    const detail = Object.entries(mapsIndex)
+      .filter(([k]) => k !== 'world')
+      .map(([id, m]) => ({ id, label: m.displayName || `Zone ${id}` }))
+      .sort((a, b) => a.label.localeCompare(b.label));
+    return [{ id: 'world', label: 'Unova Region (overview)' }, ...detail];
+  }, [mapsIndex]);
+
+  return (
+    <div className="flex items-center gap-2 flex-wrap">
+      <label className="text-xs uppercase tracking-wider text-stone-500 dark:text-stone-400">
+        Jump to map
+      </label>
+      <select
+        value={mapId}
+        onChange={(e) => onChange(e.target.value)}
+        className="px-2 py-1.5 rounded-md border text-sm
+                   border-[#d6c8a3] dark:border-stone-700
+                   bg-[#fdf8e9] dark:bg-stone-900
+                   text-stone-700 dark:text-stone-300
+                   hover:bg-[#ece2c4] dark:hover:bg-stone-800
+                   focus:outline-none focus:ring-2 focus:ring-blue-500"
+      >
+        {options.map(o => (
+          <option key={o.id} value={o.id}>
+            {o.id === 'world' ? o.label : `${o.id} — ${o.label}`}
+          </option>
+        ))}
+      </select>
+      <span className="text-[11px] text-stone-500 dark:text-stone-400">
+        {options.length - 1} detail maps
+      </span>
+    </div>
   );
 }
 
@@ -242,16 +293,29 @@ function MapView({ mapId, mapsIndex, worldRegions, onNavigateToMap }) {
               "Off-map links" panel instead of as map markers. */}
           {entry.type === 'detail' && events && (
             <>
-              {visible.warps && events.warps.filter(onMap).map(w => (
-                <Marker
-                  key={w.id}
-                  position={toLatLng(w.pixelX, w.pixelY)}
-                  icon={ICONS.warp}
-                  eventHandlers={{ click: () => setSelected({ kind: 'warp', data: w }) }}
-                >
-                  <Tooltip direction="top" offset={[0, -10]}>Warp → {w.destinationLabel || w.destinationMapId}</Tooltip>
-                </Marker>
-              ))}
+              {visible.warps && events.warps.filter(onMap).map(w => {
+                const destEntry = w.destinationMapId ? mapsIndex[w.destinationMapId] : null;
+                const destName = destEntry?.displayName || w.destinationLabel || `Zone ${w.destinationMapId}`;
+                const canNavigate = !!destEntry;
+                return (
+                  <Marker
+                    key={w.id}
+                    position={toLatLng(w.pixelX, w.pixelY)}
+                    icon={ICONS.warp}
+                    eventHandlers={{
+                      // Click warps to jump straight to the destination. If the
+                      // destination isn't in the dataset (e.g. overworld exit
+                      // 65535), the click is a no-op — the tooltip still names
+                      // the target so the user knows it leads off-data.
+                      click: () => canNavigate && onNavigateToMap(w.destinationMapId),
+                    }}
+                  >
+                    <Tooltip direction="top" offset={[0, -10]}>
+                      {canNavigate ? `→ ${destName}` : `${destName} (not in dataset)`}
+                    </Tooltip>
+                  </Marker>
+                );
+              })}
               {visible.trainers && events.trainers.filter(onMap).map(t => (
                 <Marker
                   key={t.id}
@@ -292,9 +356,7 @@ function MapView({ mapId, mapsIndex, worldRegions, onNavigateToMap }) {
           <FormCard title="Layers">
             <div className="space-y-1.5">
               {MARKER_KINDS.map(({ key, label, Icon }) => {
-                const total = events?.[key]?.length ?? 0;
                 const mapped = events?.[key]?.filter(onMap).length ?? 0;
-                const off = total - mapped;
                 return (
                   <label key={key} className="flex items-center gap-2 text-sm text-stone-700 dark:text-stone-300 cursor-pointer">
                     <input
@@ -305,8 +367,8 @@ function MapView({ mapId, mapsIndex, worldRegions, onNavigateToMap }) {
                     />
                     <Icon size={14} className="text-stone-500 dark:text-stone-400" />
                     <span className="flex-1">{label}</span>
-                    <span className="tabular-nums text-xs text-stone-500 dark:text-stone-400" title={off ? `${mapped} on map · ${off} off map` : ''}>
-                      {mapped}{off ? ` (+${off} off-map)` : ''}
+                    <span className="tabular-nums text-xs text-stone-500 dark:text-stone-400">
+                      {mapped}
                     </span>
                   </label>
                 );
@@ -314,43 +376,6 @@ function MapView({ mapId, mapsIndex, worldRegions, onNavigateToMap }) {
             </div>
           </FormCard>
         )}
-
-        {entry.type === 'detail' && events && (() => {
-          const offWarps = (events.warps || []).filter(w => !onMap(w));
-          if (offWarps.length === 0) return null;
-          return (
-            <FormCard title="Off-map warps">
-              <div className="text-[11px] text-stone-500 dark:text-stone-400 mb-1">
-                Rail-system / off-grid links without map positions. Click to navigate.
-              </div>
-              <ul className="space-y-1 text-sm">
-                {offWarps.map(w => {
-                  const dest = mapsIndex[w.destinationMapId];
-                  return (
-                    <li key={w.id}>
-                      <button
-                        type="button"
-                        onClick={() => dest && onNavigateToMap(w.destinationMapId)}
-                        disabled={!dest}
-                        className={`w-full text-left px-2 py-1 rounded inline-flex items-center gap-1.5 ${
-                          dest
-                            ? 'hover:bg-[#ece2c4] dark:hover:bg-stone-800 text-stone-700 dark:text-stone-300 cursor-pointer'
-                            : 'text-stone-400 dark:text-stone-600 cursor-default'
-                        }`}
-                      >
-                        <ExternalLink size={11} />
-                        <span className="flex-1 truncate">{dest?.displayName || `Zone ${w.destinationMapId}`}</span>
-                        {w.faceDirection && (
-                          <span className="text-[10px] text-stone-500 dark:text-stone-500 uppercase tracking-wider">{w.faceDirection}</span>
-                        )}
-                      </button>
-                    </li>
-                  );
-                })}
-              </ul>
-            </FormCard>
-          );
-        })()}
 
         {entry.type === 'overview' && (
           <FormCard title="Unova">
@@ -364,8 +389,6 @@ function MapView({ mapId, mapsIndex, worldRegions, onNavigateToMap }) {
           <InfoPanel
             selection={selected}
             onClose={() => setSelected(null)}
-            mapsIndex={mapsIndex}
-            onNavigateToMap={onNavigateToMap}
           />
         )}
 
@@ -402,9 +425,9 @@ function FormCard({ title, children, action }) {
   );
 }
 
-function InfoPanel({ selection, onClose, mapsIndex, onNavigateToMap }) {
+function InfoPanel({ selection, onClose }) {
   const { kind, data } = selection;
-  const titles = { warp: 'Warp', trainer: 'Trainer', item: 'Item', npc: 'NPC' };
+  const titles = { trainer: 'Trainer', item: 'Item', npc: 'NPC' };
   return (
     <FormCard
       title={titles[kind] || 'Selection'}
@@ -419,7 +442,6 @@ function InfoPanel({ selection, onClose, mapsIndex, onNavigateToMap }) {
         </button>
       }
     >
-      {kind === 'warp'    && <WarpBody data={data} mapsIndex={mapsIndex} onNavigateToMap={onNavigateToMap} />}
       {kind === 'trainer' && <TrainerBody data={data} />}
       {kind === 'item'    && <ItemBody    data={data} />}
       {kind === 'npc'     && <NpcBody     data={data} />}
@@ -431,40 +453,6 @@ function PositionLine({ data }) {
   return (
     <div className="text-[11px] text-stone-500 dark:text-stone-400 font-mono tabular-nums">
       world ({Math.round(data.worldX)}, {Math.round(data.worldZ)}) · pixel ({Math.round(data.pixelX)}, {Math.round(data.pixelY)})
-    </div>
-  );
-}
-
-function WarpBody({ data, mapsIndex, onNavigateToMap }) {
-  const dest = mapsIndex[data.destinationMapId];
-  const destLabel = dest?.displayName || data.destinationLabel || `Zone ${data.destinationMapId}`;
-  const canNavigate = !!dest;
-  return (
-    <div className="space-y-2 text-sm">
-      <div className="flex items-center gap-2 text-stone-900 dark:text-stone-100">
-        <ExternalLink size={14} className="text-blue-500" />
-        <span>To <span className="font-semibold">{destLabel}</span></span>
-      </div>
-      {data.faceDirection && (
-        <div className="text-xs text-stone-600 dark:text-stone-400">Facing {data.faceDirection.toLowerCase()}</div>
-      )}
-      <PositionLine data={data} />
-      {canNavigate ? (
-        <button
-          type="button"
-          onClick={() => onNavigateToMap(data.destinationMapId)}
-          className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium border
-                     bg-[#fdf8e9] dark:bg-stone-800 text-stone-700 dark:text-stone-200
-                     border-[#d6c8a3] dark:border-stone-700
-                     hover:bg-[#ece2c4] dark:hover:bg-stone-700"
-        >
-          <ExternalLink size={12} /> Go to {destLabel}
-        </button>
-      ) : (
-        <div className="text-[11px] text-amber-700 dark:text-amber-400">
-          Destination map not in dataset (zone {data.destinationMapId}).
-        </div>
-      )}
     </div>
   );
 }
