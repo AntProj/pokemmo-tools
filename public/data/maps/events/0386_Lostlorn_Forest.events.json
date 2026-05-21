@@ -1,0 +1,32 @@
+{
+  "mapId": "386",
+  "displayName": "Lostlorn Forest",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 72,
+      "worldZ": 88,
+      "pixelX": 72,
+      "pixelY": 80,
+      "destinationMapId": "385",
+      "destinationLabel": "Zone 385",
+      "faceDirection": "NORTH",
+      "transitionType": 1
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 120,
+      "worldZ": 56,
+      "pixelX": 120,
+      "pixelY": 48,
+      "spriteId": 23,
+      "spritePath": "data/trainers/sprites/0023.png",
+      "faceDirection": "SOUTH"
+    }
+  ]
+}

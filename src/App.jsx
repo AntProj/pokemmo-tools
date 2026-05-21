@@ -10,6 +10,7 @@ import LocationDetail from './pages/LocationDetail.jsx';
 import Tracker from './pages/Tracker.jsx';
 import CatchCalc from './pages/CatchCalc.jsx';
 import BreedingPlanner from './pages/BreedingPlanner.jsx';
+import UnovaMap from './pages/UnovaMap.jsx';
 
 const LS = {
   view:    'pokemmo:view',
@@ -213,6 +214,14 @@ export default function App() {
                 onSelect={handleSelect}
               />
             }
+          />
+          <Route
+            path="/map"
+            element={<UnovaMap theme={theme} onTheme={setTheme} />}
+          />
+          <Route
+            path="/map/:mapId"
+            element={<UnovaMap theme={theme} onTheme={setTheme} />}
           />
           {/* Old URL kept working for bookmarks. */}
           <Route path="/moves"  element={<Navigate to="/search" replace />} />

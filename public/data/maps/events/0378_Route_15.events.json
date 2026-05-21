@@ -1,0 +1,201 @@
+{
+  "mapId": "378",
+  "displayName": "Route 15",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 10136,
+      "worldZ": 6824,
+      "pixelX": 936,
+      "pixelY": 168,
+      "destinationMapId": "379",
+      "destinationLabel": "Zone 379",
+      "faceDirection": "WEST",
+      "transitionType": 4
+    },
+    {
+      "id": "w1",
+      "worldX": 9336,
+      "worldZ": 6968,
+      "pixelX": 136,
+      "pixelY": 312,
+      "destinationMapId": "380",
+      "destinationLabel": "Zone 380",
+      "faceDirection": "EAST",
+      "transitionType": 4
+    },
+    {
+      "id": "w2",
+      "worldX": 9736,
+      "worldZ": 6808,
+      "pixelX": 536,
+      "pixelY": 152,
+      "destinationMapId": "381",
+      "destinationLabel": "Zone 381",
+      "faceDirection": "SOUTH",
+      "transitionType": 24
+    },
+    {
+      "id": "w3",
+      "worldX": 9464,
+      "worldZ": 6904,
+      "pixelX": 264,
+      "pixelY": 248,
+      "destinationMapId": "382",
+      "destinationLabel": "Zone 382",
+      "faceDirection": "SOUTH",
+      "transitionType": 4
+    }
+  ],
+  "trainers": [],
+  "items": [
+    {
+      "id": "i0",
+      "worldX": 9928,
+      "worldZ": 7000,
+      "pixelX": 728,
+      "pixelY": 344,
+      "spriteId": 8195,
+      "itemId": null,
+      "isHidden": false
+    },
+    {
+      "id": "i1",
+      "worldX": 10056,
+      "worldZ": 7048,
+      "pixelX": 856,
+      "pixelY": 392,
+      "spriteId": 8195,
+      "itemId": null,
+      "isHidden": false
+    }
+  ],
+  "signs": [
+    {
+      "id": "s0",
+      "worldX": 10064,
+      "worldZ": 6800,
+      "pixelX": 864,
+      "pixelY": 144,
+      "signType": 6,
+      "textContent": null
+    },
+    {
+      "id": "s1",
+      "worldX": 9488,
+      "worldZ": 6928,
+      "pixelX": 288,
+      "pixelY": 272,
+      "signType": 6,
+      "textContent": null
+    },
+    {
+      "id": "s2",
+      "worldX": 9664,
+      "worldZ": 6800,
+      "pixelX": 464,
+      "pixelY": 144,
+      "signType": 0,
+      "textContent": null
+    },
+    {
+      "id": "s3",
+      "worldX": 9360,
+      "worldZ": 6928,
+      "pixelX": 160,
+      "pixelY": 272,
+      "signType": 0,
+      "textContent": null
+    },
+    {
+      "id": "s4",
+      "worldX": 9584,
+      "worldZ": 6720,
+      "pixelX": 384,
+      "pixelY": 64,
+      "signType": 4,
+      "textContent": null
+    },
+    {
+      "id": "s5",
+      "worldX": 9712,
+      "worldZ": 7056,
+      "pixelX": 512,
+      "pixelY": 400,
+      "signType": 4,
+      "textContent": null
+    }
+  ],
+  "npcs": [
+    {
+      "id": "n2",
+      "worldX": 9640,
+      "worldZ": 7064,
+      "pixelX": 440,
+      "pixelY": 408,
+      "spriteId": 37,
+      "spritePath": "data/trainers/sprites/0037.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n3",
+      "worldX": 9784,
+      "worldZ": 7032,
+      "pixelX": 584,
+      "pixelY": 376,
+      "spriteId": 47,
+      "spritePath": "data/trainers/sprites/0047.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n4",
+      "worldX": 10008,
+      "worldZ": 7048,
+      "pixelX": 808,
+      "pixelY": 392,
+      "spriteId": 36,
+      "spritePath": "data/trainers/sprites/0036.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n5",
+      "worldX": 9880,
+      "worldZ": 6824,
+      "pixelX": 680,
+      "pixelY": 168,
+      "spriteId": 64,
+      "spritePath": "data/trainers/sprites/0064.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n6",
+      "worldX": 9448,
+      "worldZ": 7048,
+      "pixelX": 248,
+      "pixelY": 392,
+      "spriteId": 24,
+      "spritePath": "data/trainers/sprites/0024.png",
+      "faceDirection": "WEST"
+    },
+    {
+      "id": "n7",
+      "worldX": 10120,
+      "worldZ": 7112,
+      "pixelX": 920,
+      "pixelY": 456,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n8",
+      "worldX": 9912,
+      "worldZ": 6744,
+      "pixelX": 712,
+      "pixelY": 88,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}

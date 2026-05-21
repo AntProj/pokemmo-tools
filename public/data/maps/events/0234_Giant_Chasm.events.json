@@ -1,0 +1,43 @@
+{
+  "mapId": "234",
+  "displayName": "Giant Chasm",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 264,
+      "worldZ": 504,
+      "pixelX": 200,
+      "pixelY": 520,
+      "destinationMapId": "232",
+      "destinationLabel": "Zone 232",
+      "faceDirection": "NORTH",
+      "transitionType": 4
+    },
+    {
+      "id": "w1",
+      "worldX": 264,
+      "worldZ": 488,
+      "pixelX": 200,
+      "pixelY": 504,
+      "destinationMapId": "233",
+      "destinationLabel": "Zone 233",
+      "faceDirection": "NORTH",
+      "transitionType": 4
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 248,
+      "worldZ": 200,
+      "pixelX": 184,
+      "pixelY": 216,
+      "spriteId": 121,
+      "spritePath": "data/trainers/sprites/0121.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "mapId": "184",
+  "displayName": "Relic Castle",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 168,
+      "worldZ": 312,
+      "pixelX": 91,
+      "pixelY": 143.87,
+      "destinationMapId": "185",
+      "destinationLabel": "Zone 185",
+      "faceDirection": "WEST",
+      "transitionType": 2
+    },
+    {
+      "id": "w1",
+      "worldX": 216,
+      "worldZ": 424,
+      "pixelX": 139,
+      "pixelY": 255.87,
+      "destinationMapId": "183",
+      "destinationLabel": "Zone 183",
+      "faceDirection": "NORTH",
+      "transitionType": 4
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": []
+}

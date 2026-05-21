@@ -1,0 +1,1136 @@
+{
+  "6": {
+    "displayName": "Striaton City",
+    "imageUrl": "data/maps/images/0006_Striaton_City.png",
+    "boundsUrl": "data/maps/bounds/0006_Striaton_City.json",
+    "type": "detail",
+    "zoneId": 6,
+    "eventsUrl": "data/maps/events/0006_Striaton_City.events.json"
+  },
+  "16": {
+    "displayName": "Nacrene City",
+    "imageUrl": "data/maps/images/0016_Nacrene_City.png",
+    "boundsUrl": "data/maps/bounds/0016_Nacrene_City.json",
+    "type": "detail",
+    "zoneId": 16,
+    "eventsUrl": "data/maps/events/0016_Nacrene_City.events.json"
+  },
+  "62": {
+    "displayName": "Nimbasa City",
+    "imageUrl": "data/maps/images/0062_Nimbasa_City.png",
+    "boundsUrl": "data/maps/bounds/0062_Nimbasa_City.json",
+    "type": "detail",
+    "zoneId": 62,
+    "eventsUrl": "data/maps/events/0062_Nimbasa_City.events.json"
+  },
+  "96": {
+    "displayName": "Driftveil City",
+    "imageUrl": "data/maps/images/0096_Driftveil_City.png",
+    "boundsUrl": "data/maps/bounds/0096_Driftveil_City.json",
+    "type": "detail",
+    "zoneId": 96,
+    "eventsUrl": "data/maps/events/0096_Driftveil_City.events.json"
+  },
+  "107": {
+    "displayName": "Mistralton City",
+    "imageUrl": "data/maps/images/0107_Mistralton_City.png",
+    "boundsUrl": "data/maps/bounds/0107_Mistralton_City.json",
+    "type": "detail",
+    "zoneId": 107,
+    "eventsUrl": "data/maps/events/0107_Mistralton_City.events.json"
+  },
+  "113": {
+    "displayName": "Icirrus City",
+    "imageUrl": "data/maps/images/0113_Icirrus_City.png",
+    "boundsUrl": "data/maps/bounds/0113_Icirrus_City.json",
+    "type": "detail",
+    "zoneId": 113,
+    "eventsUrl": "data/maps/events/0113_Icirrus_City.events.json"
+  },
+  "120": {
+    "displayName": "Opelucid City",
+    "imageUrl": "data/maps/images/0120_Opelucid_City.png",
+    "boundsUrl": "data/maps/bounds/0120_Opelucid_City.json",
+    "type": "detail",
+    "zoneId": 120,
+    "eventsUrl": "data/maps/events/0120_Opelucid_City.events.json"
+  },
+  "147": {
+    "displayName": "Unity Tower",
+    "imageUrl": "data/maps/images/0147_Unity_Tower.png",
+    "boundsUrl": "data/maps/bounds/0147_Unity_Tower.json",
+    "type": "detail",
+    "zoneId": 147,
+    "eventsUrl": "data/maps/events/0147_Unity_Tower.events.json"
+  },
+  "152": {
+    "displayName": "Dreamyard",
+    "imageUrl": "data/maps/images/0152_Dreamyard.png",
+    "boundsUrl": "data/maps/bounds/0152_Dreamyard.json",
+    "type": "detail",
+    "zoneId": 152,
+    "eventsUrl": "data/maps/events/0152_Dreamyard.events.json"
+  },
+  "153": {
+    "displayName": "Dreamyard",
+    "imageUrl": "data/maps/images/0153_Dreamyard.png",
+    "boundsUrl": "data/maps/bounds/0153_Dreamyard.json",
+    "type": "detail",
+    "zoneId": 153,
+    "eventsUrl": "data/maps/events/0153_Dreamyard.events.json"
+  },
+  "154": {
+    "displayName": "Pinwheel Forest",
+    "imageUrl": "data/maps/images/0154_Pinwheel_Forest.png",
+    "boundsUrl": "data/maps/bounds/0154_Pinwheel_Forest.json",
+    "type": "detail",
+    "zoneId": 154,
+    "eventsUrl": "data/maps/events/0154_Pinwheel_Forest.events.json"
+  },
+  "155": {
+    "displayName": "Pinwheel Forest",
+    "imageUrl": "data/maps/images/0155_Pinwheel_Forest.png",
+    "boundsUrl": "data/maps/bounds/0155_Pinwheel_Forest.json",
+    "type": "detail",
+    "zoneId": 155,
+    "eventsUrl": "data/maps/events/0155_Pinwheel_Forest.events.json"
+  },
+  "156": {
+    "displayName": "Rumination Field",
+    "imageUrl": "data/maps/images/0156_Rumination_Field.png",
+    "boundsUrl": "data/maps/bounds/0156_Rumination_Field.json",
+    "type": "detail",
+    "zoneId": 156,
+    "eventsUrl": "data/maps/events/0156_Rumination_Field.events.json"
+  },
+  "157": {
+    "displayName": "Desert Resort",
+    "imageUrl": "data/maps/images/0157_Desert_Resort.png",
+    "boundsUrl": "data/maps/bounds/0157_Desert_Resort.json",
+    "type": "detail",
+    "zoneId": 157,
+    "eventsUrl": "data/maps/events/0157_Desert_Resort.events.json"
+  },
+  "158": {
+    "displayName": "Desert Resort",
+    "imageUrl": "data/maps/images/0158_Desert_Resort.png",
+    "boundsUrl": "data/maps/bounds/0158_Desert_Resort.json",
+    "type": "detail",
+    "zoneId": 158,
+    "eventsUrl": "data/maps/events/0158_Desert_Resort.events.json"
+  },
+  "160": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0160_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0160_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 160,
+    "eventsUrl": "data/maps/events/0160_Relic_Castle.events.json"
+  },
+  "161": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0161_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0161_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 161,
+    "eventsUrl": "data/maps/events/0161_Relic_Castle.events.json"
+  },
+  "162": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0162_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0162_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 162,
+    "eventsUrl": "data/maps/events/0162_Relic_Castle.events.json"
+  },
+  "163": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0163_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0163_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 163,
+    "eventsUrl": "data/maps/events/0163_Relic_Castle.events.json"
+  },
+  "164": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0164_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0164_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 164,
+    "eventsUrl": "data/maps/events/0164_Relic_Castle.events.json"
+  },
+  "165": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0165_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0165_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 165,
+    "eventsUrl": "data/maps/events/0165_Relic_Castle.events.json"
+  },
+  "166": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0166_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0166_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 166,
+    "eventsUrl": "data/maps/events/0166_Relic_Castle.events.json"
+  },
+  "167": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0167_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0167_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 167,
+    "eventsUrl": "data/maps/events/0167_Relic_Castle.events.json"
+  },
+  "168": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0168_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0168_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 168,
+    "eventsUrl": "data/maps/events/0168_Relic_Castle.events.json"
+  },
+  "169": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0169_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0169_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 169,
+    "eventsUrl": "data/maps/events/0169_Relic_Castle.events.json"
+  },
+  "170": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0170_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0170_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 170,
+    "eventsUrl": "data/maps/events/0170_Relic_Castle.events.json"
+  },
+  "171": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0171_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0171_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 171,
+    "eventsUrl": "data/maps/events/0171_Relic_Castle.events.json"
+  },
+  "172": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0172_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0172_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 172,
+    "eventsUrl": "data/maps/events/0172_Relic_Castle.events.json"
+  },
+  "173": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0173_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0173_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 173,
+    "eventsUrl": "data/maps/events/0173_Relic_Castle.events.json"
+  },
+  "174": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0174_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0174_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 174,
+    "eventsUrl": "data/maps/events/0174_Relic_Castle.events.json"
+  },
+  "175": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0175_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0175_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 175,
+    "eventsUrl": "data/maps/events/0175_Relic_Castle.events.json"
+  },
+  "176": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0176_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0176_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 176,
+    "eventsUrl": "data/maps/events/0176_Relic_Castle.events.json"
+  },
+  "177": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0177_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0177_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 177,
+    "eventsUrl": "data/maps/events/0177_Relic_Castle.events.json"
+  },
+  "178": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0178_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0178_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 178,
+    "eventsUrl": "data/maps/events/0178_Relic_Castle.events.json"
+  },
+  "179": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0179_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0179_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 179,
+    "eventsUrl": "data/maps/events/0179_Relic_Castle.events.json"
+  },
+  "180": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0180_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0180_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 180,
+    "eventsUrl": "data/maps/events/0180_Relic_Castle.events.json"
+  },
+  "181": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0181_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0181_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 181,
+    "eventsUrl": "data/maps/events/0181_Relic_Castle.events.json"
+  },
+  "182": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0182_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0182_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 182,
+    "eventsUrl": "data/maps/events/0182_Relic_Castle.events.json"
+  },
+  "183": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0183_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0183_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 183,
+    "eventsUrl": "data/maps/events/0183_Relic_Castle.events.json"
+  },
+  "184": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0184_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0184_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 184,
+    "eventsUrl": "data/maps/events/0184_Relic_Castle.events.json"
+  },
+  "185": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0185_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0185_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 185,
+    "eventsUrl": "data/maps/events/0185_Relic_Castle.events.json"
+  },
+  "186": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0186_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0186_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 186,
+    "eventsUrl": "data/maps/events/0186_Relic_Castle.events.json"
+  },
+  "187": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0187_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0187_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 187,
+    "eventsUrl": "data/maps/events/0187_Relic_Castle.events.json"
+  },
+  "188": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0188_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0188_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 188,
+    "eventsUrl": "data/maps/events/0188_Relic_Castle.events.json"
+  },
+  "189": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0189_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0189_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 189,
+    "eventsUrl": "data/maps/events/0189_Relic_Castle.events.json"
+  },
+  "190": {
+    "displayName": "Relic Castle",
+    "imageUrl": "data/maps/images/0190_Relic_Castle.png",
+    "boundsUrl": "data/maps/bounds/0190_Relic_Castle.json",
+    "type": "detail",
+    "zoneId": 190,
+    "eventsUrl": "data/maps/events/0190_Relic_Castle.events.json"
+  },
+  "191": {
+    "displayName": "Cold Storage",
+    "imageUrl": "data/maps/images/0191_Cold_Storage.png",
+    "boundsUrl": "data/maps/bounds/0191_Cold_Storage.json",
+    "type": "detail",
+    "zoneId": 191,
+    "eventsUrl": "data/maps/events/0191_Cold_Storage.events.json"
+  },
+  "194": {
+    "displayName": "Chargestone Cave",
+    "imageUrl": "data/maps/images/0194_Chargestone_Cave.png",
+    "boundsUrl": "data/maps/bounds/0194_Chargestone_Cave.json",
+    "type": "detail",
+    "zoneId": 194,
+    "eventsUrl": "data/maps/events/0194_Chargestone_Cave.events.json"
+  },
+  "195": {
+    "displayName": "Chargestone Cave",
+    "imageUrl": "data/maps/images/0195_Chargestone_Cave.png",
+    "boundsUrl": "data/maps/bounds/0195_Chargestone_Cave.json",
+    "type": "detail",
+    "zoneId": 195,
+    "eventsUrl": "data/maps/events/0195_Chargestone_Cave.events.json"
+  },
+  "196": {
+    "displayName": "Chargestone Cave",
+    "imageUrl": "data/maps/images/0196_Chargestone_Cave.png",
+    "boundsUrl": "data/maps/bounds/0196_Chargestone_Cave.json",
+    "type": "detail",
+    "zoneId": 196,
+    "eventsUrl": "data/maps/events/0196_Chargestone_Cave.events.json"
+  },
+  "197": {
+    "displayName": "Chargestone Cave",
+    "imageUrl": "data/maps/images/0197_Chargestone_Cave.png",
+    "boundsUrl": "data/maps/bounds/0197_Chargestone_Cave.json",
+    "type": "detail",
+    "zoneId": 197,
+    "eventsUrl": "data/maps/events/0197_Chargestone_Cave.events.json"
+  },
+  "198": {
+    "displayName": "Twist Mountain",
+    "imageUrl": "data/maps/images/0198_Twist_Mountain.png",
+    "boundsUrl": "data/maps/bounds/0198_Twist_Mountain.json",
+    "type": "detail",
+    "zoneId": 198,
+    "eventsUrl": "data/maps/events/0198_Twist_Mountain.events.json"
+  },
+  "199": {
+    "displayName": "Twist Mountain",
+    "imageUrl": "data/maps/images/0199_Twist_Mountain.png",
+    "boundsUrl": "data/maps/bounds/0199_Twist_Mountain.json",
+    "type": "detail",
+    "zoneId": 199,
+    "eventsUrl": "data/maps/events/0199_Twist_Mountain.events.json"
+  },
+  "200": {
+    "displayName": "Twist Mountain",
+    "imageUrl": "data/maps/images/0200_Twist_Mountain.png",
+    "boundsUrl": "data/maps/bounds/0200_Twist_Mountain.json",
+    "type": "detail",
+    "zoneId": 200,
+    "eventsUrl": "data/maps/events/0200_Twist_Mountain.events.json"
+  },
+  "201": {
+    "displayName": "Twist Mountain",
+    "imageUrl": "data/maps/images/0201_Twist_Mountain.png",
+    "boundsUrl": "data/maps/bounds/0201_Twist_Mountain.json",
+    "type": "detail",
+    "zoneId": 201,
+    "eventsUrl": "data/maps/events/0201_Twist_Mountain.events.json"
+  },
+  "202": {
+    "displayName": "Twist Mountain",
+    "imageUrl": "data/maps/images/0202_Twist_Mountain.png",
+    "boundsUrl": "data/maps/bounds/0202_Twist_Mountain.json",
+    "type": "detail",
+    "zoneId": 202,
+    "eventsUrl": "data/maps/events/0202_Twist_Mountain.events.json"
+  },
+  "203": {
+    "displayName": "Twist Mountain",
+    "imageUrl": "data/maps/images/0203_Twist_Mountain.png",
+    "boundsUrl": "data/maps/bounds/0203_Twist_Mountain.json",
+    "type": "detail",
+    "zoneId": 203,
+    "eventsUrl": "data/maps/events/0203_Twist_Mountain.events.json"
+  },
+  "204": {
+    "displayName": "Twist Mountain",
+    "imageUrl": "data/maps/images/0204_Twist_Mountain.png",
+    "boundsUrl": "data/maps/bounds/0204_Twist_Mountain.json",
+    "type": "detail",
+    "zoneId": 204,
+    "eventsUrl": "data/maps/events/0204_Twist_Mountain.events.json"
+  },
+  "205": {
+    "displayName": "Dragonspiral Tower",
+    "imageUrl": "data/maps/images/0205_Dragonspiral_Tower.png",
+    "boundsUrl": "data/maps/bounds/0205_Dragonspiral_Tower.json",
+    "type": "detail",
+    "zoneId": 205,
+    "eventsUrl": "data/maps/events/0205_Dragonspiral_Tower.events.json"
+  },
+  "214": {
+    "displayName": "Victory Road",
+    "imageUrl": "data/maps/images/0214_Victory_Road.png",
+    "boundsUrl": "data/maps/bounds/0214_Victory_Road.json",
+    "type": "detail",
+    "zoneId": 214,
+    "eventsUrl": "data/maps/events/0214_Victory_Road.events.json"
+  },
+  "215": {
+    "displayName": "Victory Road",
+    "imageUrl": "data/maps/images/0215_Victory_Road.png",
+    "boundsUrl": "data/maps/bounds/0215_Victory_Road.json",
+    "type": "detail",
+    "zoneId": 215,
+    "eventsUrl": "data/maps/events/0215_Victory_Road.events.json"
+  },
+  "216": {
+    "displayName": "Victory Road",
+    "imageUrl": "data/maps/images/0216_Victory_Road.png",
+    "boundsUrl": "data/maps/bounds/0216_Victory_Road.json",
+    "type": "detail",
+    "zoneId": 216,
+    "eventsUrl": "data/maps/events/0216_Victory_Road.events.json"
+  },
+  "217": {
+    "displayName": "Victory Road",
+    "imageUrl": "data/maps/images/0217_Victory_Road.png",
+    "boundsUrl": "data/maps/bounds/0217_Victory_Road.json",
+    "type": "detail",
+    "zoneId": 217,
+    "eventsUrl": "data/maps/events/0217_Victory_Road.events.json"
+  },
+  "218": {
+    "displayName": "Victory Road",
+    "imageUrl": "data/maps/images/0218_Victory_Road.png",
+    "boundsUrl": "data/maps/bounds/0218_Victory_Road.json",
+    "type": "detail",
+    "zoneId": 218,
+    "eventsUrl": "data/maps/events/0218_Victory_Road.events.json"
+  },
+  "219": {
+    "displayName": "Victory Road",
+    "imageUrl": "data/maps/images/0219_Victory_Road.png",
+    "boundsUrl": "data/maps/bounds/0219_Victory_Road.json",
+    "type": "detail",
+    "zoneId": 219,
+    "eventsUrl": "data/maps/events/0219_Victory_Road.events.json"
+  },
+  "220": {
+    "displayName": "Victory Road",
+    "imageUrl": "data/maps/images/0220_Victory_Road.png",
+    "boundsUrl": "data/maps/bounds/0220_Victory_Road.json",
+    "type": "detail",
+    "zoneId": 220,
+    "eventsUrl": "data/maps/events/0220_Victory_Road.events.json"
+  },
+  "221": {
+    "displayName": "Victory Road",
+    "imageUrl": "data/maps/images/0221_Victory_Road.png",
+    "boundsUrl": "data/maps/bounds/0221_Victory_Road.json",
+    "type": "detail",
+    "zoneId": 221,
+    "eventsUrl": "data/maps/events/0221_Victory_Road.events.json"
+  },
+  "222": {
+    "displayName": "Victory Road",
+    "imageUrl": "data/maps/images/0222_Victory_Road.png",
+    "boundsUrl": "data/maps/bounds/0222_Victory_Road.json",
+    "type": "detail",
+    "zoneId": 222,
+    "eventsUrl": "data/maps/events/0222_Victory_Road.events.json"
+  },
+  "223": {
+    "displayName": "Victory Road",
+    "imageUrl": "data/maps/images/0223_Victory_Road.png",
+    "boundsUrl": "data/maps/bounds/0223_Victory_Road.json",
+    "type": "detail",
+    "zoneId": 223,
+    "eventsUrl": "data/maps/events/0223_Victory_Road.events.json"
+  },
+  "224": {
+    "displayName": "Victory Road",
+    "imageUrl": "data/maps/images/0224_Victory_Road.png",
+    "boundsUrl": "data/maps/bounds/0224_Victory_Road.json",
+    "type": "detail",
+    "zoneId": 224,
+    "eventsUrl": "data/maps/events/0224_Victory_Road.events.json"
+  },
+  "225": {
+    "displayName": "Victory Road",
+    "imageUrl": "data/maps/images/0225_Victory_Road.png",
+    "boundsUrl": "data/maps/bounds/0225_Victory_Road.json",
+    "type": "detail",
+    "zoneId": 225,
+    "eventsUrl": "data/maps/events/0225_Victory_Road.events.json"
+  },
+  "226": {
+    "displayName": "Victory Road",
+    "imageUrl": "data/maps/images/0226_Victory_Road.png",
+    "boundsUrl": "data/maps/bounds/0226_Victory_Road.json",
+    "type": "detail",
+    "zoneId": 226,
+    "eventsUrl": "data/maps/events/0226_Victory_Road.events.json"
+  },
+  "227": {
+    "displayName": "Victory Road",
+    "imageUrl": "data/maps/images/0227_Victory_Road.png",
+    "boundsUrl": "data/maps/bounds/0227_Victory_Road.json",
+    "type": "detail",
+    "zoneId": 227,
+    "eventsUrl": "data/maps/events/0227_Victory_Road.events.json"
+  },
+  "228": {
+    "displayName": "Victory Road",
+    "imageUrl": "data/maps/images/0228_Victory_Road.png",
+    "boundsUrl": "data/maps/bounds/0228_Victory_Road.json",
+    "type": "detail",
+    "zoneId": 228,
+    "eventsUrl": "data/maps/events/0228_Victory_Road.events.json"
+  },
+  "230": {
+    "displayName": "Giant Chasm",
+    "imageUrl": "data/maps/images/0230_Giant_Chasm.png",
+    "boundsUrl": "data/maps/bounds/0230_Giant_Chasm.json",
+    "type": "detail",
+    "zoneId": 230,
+    "eventsUrl": "data/maps/events/0230_Giant_Chasm.events.json"
+  },
+  "231": {
+    "displayName": "Giant Chasm",
+    "imageUrl": "data/maps/images/0231_Giant_Chasm.png",
+    "boundsUrl": "data/maps/bounds/0231_Giant_Chasm.json",
+    "type": "detail",
+    "zoneId": 231,
+    "eventsUrl": "data/maps/events/0231_Giant_Chasm.events.json"
+  },
+  "232": {
+    "displayName": "Giant Chasm",
+    "imageUrl": "data/maps/images/0232_Giant_Chasm.png",
+    "boundsUrl": "data/maps/bounds/0232_Giant_Chasm.json",
+    "type": "detail",
+    "zoneId": 232,
+    "eventsUrl": "data/maps/events/0232_Giant_Chasm.events.json"
+  },
+  "233": {
+    "displayName": "Giant Chasm",
+    "imageUrl": "data/maps/images/0233_Giant_Chasm.png",
+    "boundsUrl": "data/maps/bounds/0233_Giant_Chasm.json",
+    "type": "detail",
+    "zoneId": 233,
+    "eventsUrl": "data/maps/events/0233_Giant_Chasm.events.json"
+  },
+  "234": {
+    "displayName": "Giant Chasm",
+    "imageUrl": "data/maps/images/0234_Giant_Chasm.png",
+    "boundsUrl": "data/maps/bounds/0234_Giant_Chasm.json",
+    "type": "detail",
+    "zoneId": 234,
+    "eventsUrl": "data/maps/events/0234_Giant_Chasm.events.json"
+  },
+  "235": {
+    "displayName": "Liberty Garden",
+    "imageUrl": "data/maps/images/0235_Liberty_Garden.png",
+    "boundsUrl": "data/maps/bounds/0235_Liberty_Garden.json",
+    "type": "detail",
+    "zoneId": 235,
+    "eventsUrl": "data/maps/events/0235_Liberty_Garden.events.json"
+  },
+  "236": {
+    "displayName": "Liberty Garden",
+    "imageUrl": "data/maps/images/0236_Liberty_Garden.png",
+    "boundsUrl": "data/maps/bounds/0236_Liberty_Garden.json",
+    "type": "detail",
+    "zoneId": 236,
+    "eventsUrl": "data/maps/events/0236_Liberty_Garden.events.json"
+  },
+  "237": {
+    "displayName": "Liberty Garden",
+    "imageUrl": "data/maps/images/0237_Liberty_Garden.png",
+    "boundsUrl": "data/maps/bounds/0237_Liberty_Garden.json",
+    "type": "detail",
+    "zoneId": 237,
+    "eventsUrl": "data/maps/events/0237_Liberty_Garden.events.json"
+  },
+  "238": {
+    "displayName": "P2 Laboratory",
+    "imageUrl": "data/maps/images/0238_P2_Laboratory.png",
+    "boundsUrl": "data/maps/bounds/0238_P2_Laboratory.json",
+    "type": "detail",
+    "zoneId": 238,
+    "eventsUrl": "data/maps/events/0238_P2_Laboratory.events.json"
+  },
+  "240": {
+    "displayName": "Undella Bay",
+    "imageUrl": "data/maps/images/0240_Undella_Bay.png",
+    "boundsUrl": "data/maps/bounds/0240_Undella_Bay.json",
+    "type": "detail",
+    "zoneId": 240,
+    "eventsUrl": "data/maps/events/0240_Undella_Bay.events.json"
+  },
+  "241": {
+    "displayName": "Abyssal Ruins",
+    "imageUrl": "data/maps/images/0241_Abyssal_Ruins.png",
+    "boundsUrl": "data/maps/bounds/0241_Abyssal_Ruins.json",
+    "type": "detail",
+    "zoneId": 241,
+    "eventsUrl": "data/maps/events/0241_Abyssal_Ruins.events.json"
+  },
+  "242": {
+    "displayName": "Abyssal Ruins",
+    "imageUrl": "data/maps/images/0242_Abyssal_Ruins.png",
+    "boundsUrl": "data/maps/bounds/0242_Abyssal_Ruins.json",
+    "type": "detail",
+    "zoneId": 242,
+    "eventsUrl": "data/maps/events/0242_Abyssal_Ruins.events.json"
+  },
+  "243": {
+    "displayName": "Abyssal Ruins",
+    "imageUrl": "data/maps/images/0243_Abyssal_Ruins.png",
+    "boundsUrl": "data/maps/bounds/0243_Abyssal_Ruins.json",
+    "type": "detail",
+    "zoneId": 243,
+    "eventsUrl": "data/maps/events/0243_Abyssal_Ruins.events.json"
+  },
+  "244": {
+    "displayName": "Abyssal Ruins",
+    "imageUrl": "data/maps/images/0244_Abyssal_Ruins.png",
+    "boundsUrl": "data/maps/bounds/0244_Abyssal_Ruins.json",
+    "type": "detail",
+    "zoneId": 244,
+    "eventsUrl": "data/maps/events/0244_Abyssal_Ruins.events.json"
+  },
+  "245": {
+    "displayName": "Abyssal Ruins",
+    "imageUrl": "data/maps/images/0245_Abyssal_Ruins.png",
+    "boundsUrl": "data/maps/bounds/0245_Abyssal_Ruins.json",
+    "type": "detail",
+    "zoneId": 245,
+    "eventsUrl": "data/maps/events/0245_Abyssal_Ruins.events.json"
+  },
+  "246": {
+    "displayName": "Abyssal Ruins",
+    "imageUrl": "data/maps/images/0246_Abyssal_Ruins.png",
+    "boundsUrl": "data/maps/bounds/0246_Abyssal_Ruins.json",
+    "type": "detail",
+    "zoneId": 246,
+    "eventsUrl": "data/maps/events/0246_Abyssal_Ruins.events.json"
+  },
+  "247": {
+    "displayName": "Abyssal Ruins",
+    "imageUrl": "data/maps/images/0247_Abyssal_Ruins.png",
+    "boundsUrl": "data/maps/bounds/0247_Abyssal_Ruins.json",
+    "type": "detail",
+    "zoneId": 247,
+    "eventsUrl": "data/maps/events/0247_Abyssal_Ruins.events.json"
+  },
+  "248": {
+    "displayName": "Abyssal Ruins",
+    "imageUrl": "data/maps/images/0248_Abyssal_Ruins.png",
+    "boundsUrl": "data/maps/bounds/0248_Abyssal_Ruins.json",
+    "type": "detail",
+    "zoneId": 248,
+    "eventsUrl": "data/maps/events/0248_Abyssal_Ruins.events.json"
+  },
+  "280": {
+    "displayName": "Entree Forest",
+    "imageUrl": "data/maps/images/0280_Entree_Forest.png",
+    "boundsUrl": "data/maps/bounds/0280_Entree_Forest.json",
+    "type": "detail",
+    "zoneId": 280,
+    "eventsUrl": "data/maps/events/0280_Entree_Forest.events.json"
+  },
+  "281": {
+    "displayName": "Entree Forest",
+    "imageUrl": "data/maps/images/0281_Entree_Forest.png",
+    "boundsUrl": "data/maps/bounds/0281_Entree_Forest.json",
+    "type": "detail",
+    "zoneId": 281,
+    "eventsUrl": "data/maps/events/0281_Entree_Forest.events.json"
+  },
+  "282": {
+    "displayName": "Entree Forest",
+    "imageUrl": "data/maps/images/0282_Entree_Forest.png",
+    "boundsUrl": "data/maps/bounds/0282_Entree_Forest.json",
+    "type": "detail",
+    "zoneId": 282,
+    "eventsUrl": "data/maps/events/0282_Entree_Forest.events.json"
+  },
+  "283": {
+    "displayName": "Entree Forest",
+    "imageUrl": "data/maps/images/0283_Entree_Forest.png",
+    "boundsUrl": "data/maps/bounds/0283_Entree_Forest.json",
+    "type": "detail",
+    "zoneId": 283,
+    "eventsUrl": "data/maps/events/0283_Entree_Forest.events.json"
+  },
+  "284": {
+    "displayName": "Entree Forest",
+    "imageUrl": "data/maps/images/0284_Entree_Forest.png",
+    "boundsUrl": "data/maps/bounds/0284_Entree_Forest.json",
+    "type": "detail",
+    "zoneId": 284,
+    "eventsUrl": "data/maps/events/0284_Entree_Forest.events.json"
+  },
+  "285": {
+    "displayName": "Entree Forest",
+    "imageUrl": "data/maps/images/0285_Entree_Forest.png",
+    "boundsUrl": "data/maps/bounds/0285_Entree_Forest.json",
+    "type": "detail",
+    "zoneId": 285,
+    "eventsUrl": "data/maps/events/0285_Entree_Forest.events.json"
+  },
+  "286": {
+    "displayName": "Entree Forest",
+    "imageUrl": "data/maps/images/0286_Entree_Forest.png",
+    "boundsUrl": "data/maps/bounds/0286_Entree_Forest.json",
+    "type": "detail",
+    "zoneId": 286,
+    "eventsUrl": "data/maps/events/0286_Entree_Forest.events.json"
+  },
+  "287": {
+    "displayName": "Entree Forest",
+    "imageUrl": "data/maps/images/0287_Entree_Forest.png",
+    "boundsUrl": "data/maps/bounds/0287_Entree_Forest.json",
+    "type": "detail",
+    "zoneId": 287,
+    "eventsUrl": "data/maps/events/0287_Entree_Forest.events.json"
+  },
+  "288": {
+    "displayName": "Entree Forest",
+    "imageUrl": "data/maps/images/0288_Entree_Forest.png",
+    "boundsUrl": "data/maps/bounds/0288_Entree_Forest.json",
+    "type": "detail",
+    "zoneId": 288,
+    "eventsUrl": "data/maps/events/0288_Entree_Forest.events.json"
+  },
+  "295": {
+    "displayName": "White Forest",
+    "imageUrl": "data/maps/images/0295_White_Forest.png",
+    "boundsUrl": "data/maps/bounds/0295_White_Forest.json",
+    "type": "detail",
+    "zoneId": 295,
+    "eventsUrl": "data/maps/events/0295_White_Forest.events.json"
+  },
+  "297": {
+    "displayName": "Chargestone Cave",
+    "imageUrl": "data/maps/images/0297_Chargestone_Cave.png",
+    "boundsUrl": "data/maps/bounds/0297_Chargestone_Cave.json",
+    "type": "detail",
+    "zoneId": 297,
+    "eventsUrl": "data/maps/events/0297_Chargestone_Cave.events.json"
+  },
+  "298": {
+    "displayName": "Twist Mountain",
+    "imageUrl": "data/maps/images/0298_Twist_Mountain.png",
+    "boundsUrl": "data/maps/bounds/0298_Twist_Mountain.json",
+    "type": "detail",
+    "zoneId": 298,
+    "eventsUrl": "data/maps/events/0298_Twist_Mountain.events.json"
+  },
+  "317": {
+    "displayName": "Route 1",
+    "imageUrl": "data/maps/images/0317_Route_1.png",
+    "boundsUrl": "data/maps/bounds/0317_Route_1.json",
+    "type": "detail",
+    "zoneId": 317,
+    "eventsUrl": "data/maps/events/0317_Route_1.events.json"
+  },
+  "319": {
+    "displayName": "Route 2",
+    "imageUrl": "data/maps/images/0319_Route_2.png",
+    "boundsUrl": "data/maps/bounds/0319_Route_2.json",
+    "type": "detail",
+    "zoneId": 319,
+    "eventsUrl": "data/maps/events/0319_Route_2.events.json"
+  },
+  "321": {
+    "displayName": "Route 3",
+    "imageUrl": "data/maps/images/0321_Route_3.png",
+    "boundsUrl": "data/maps/bounds/0321_Route_3.json",
+    "type": "detail",
+    "zoneId": 321,
+    "eventsUrl": "data/maps/events/0321_Route_3.events.json"
+  },
+  "324": {
+    "displayName": "Wellspring Cave",
+    "imageUrl": "data/maps/images/0324_Wellspring_Cave.png",
+    "boundsUrl": "data/maps/bounds/0324_Wellspring_Cave.json",
+    "type": "detail",
+    "zoneId": 324,
+    "eventsUrl": "data/maps/events/0324_Wellspring_Cave.events.json"
+  },
+  "325": {
+    "displayName": "Wellspring Cave",
+    "imageUrl": "data/maps/images/0325_Wellspring_Cave.png",
+    "boundsUrl": "data/maps/bounds/0325_Wellspring_Cave.json",
+    "type": "detail",
+    "zoneId": 325,
+    "eventsUrl": "data/maps/events/0325_Wellspring_Cave.events.json"
+  },
+  "326": {
+    "displayName": "Route 4",
+    "imageUrl": "data/maps/images/0326_Route_4.png",
+    "boundsUrl": "data/maps/bounds/0326_Route_4.json",
+    "type": "detail",
+    "zoneId": 326,
+    "eventsUrl": "data/maps/events/0326_Route_4.events.json"
+  },
+  "329": {
+    "displayName": "Route 5",
+    "imageUrl": "data/maps/images/0329_Route_5.png",
+    "boundsUrl": "data/maps/bounds/0329_Route_5.json",
+    "type": "detail",
+    "zoneId": 329,
+    "eventsUrl": "data/maps/events/0329_Route_5.events.json"
+  },
+  "331": {
+    "displayName": "Route 6",
+    "imageUrl": "data/maps/images/0331_Route_6.png",
+    "boundsUrl": "data/maps/bounds/0331_Route_6.json",
+    "type": "detail",
+    "zoneId": 331,
+    "eventsUrl": "data/maps/events/0331_Route_6.events.json"
+  },
+  "333": {
+    "displayName": "Mistralton Cave",
+    "imageUrl": "data/maps/images/0333_Mistralton_Cave.png",
+    "boundsUrl": "data/maps/bounds/0333_Mistralton_Cave.json",
+    "type": "detail",
+    "zoneId": 333,
+    "eventsUrl": "data/maps/events/0333_Mistralton_Cave.events.json"
+  },
+  "334": {
+    "displayName": "Mistralton Cave",
+    "imageUrl": "data/maps/images/0334_Mistralton_Cave.png",
+    "boundsUrl": "data/maps/bounds/0334_Mistralton_Cave.json",
+    "type": "detail",
+    "zoneId": 334,
+    "eventsUrl": "data/maps/events/0334_Mistralton_Cave.events.json"
+  },
+  "337": {
+    "displayName": "Route 7",
+    "imageUrl": "data/maps/images/0337_Route_7.png",
+    "boundsUrl": "data/maps/bounds/0337_Route_7.json",
+    "type": "detail",
+    "zoneId": 337,
+    "eventsUrl": "data/maps/events/0337_Route_7.events.json"
+  },
+  "345": {
+    "displayName": "Route 8",
+    "imageUrl": "data/maps/images/0345_Route_8.png",
+    "boundsUrl": "data/maps/bounds/0345_Route_8.json",
+    "type": "detail",
+    "zoneId": 345,
+    "eventsUrl": "data/maps/events/0345_Route_8.events.json"
+  },
+  "346": {
+    "displayName": "Moor of Icirrus",
+    "imageUrl": "data/maps/images/0346_Moor_of_Icirrus.png",
+    "boundsUrl": "data/maps/bounds/0346_Moor_of_Icirrus.json",
+    "type": "detail",
+    "zoneId": 346,
+    "eventsUrl": "data/maps/events/0346_Moor_of_Icirrus.events.json"
+  },
+  "348": {
+    "displayName": "Route 9",
+    "imageUrl": "data/maps/images/0348_Route_9.png",
+    "boundsUrl": "data/maps/bounds/0348_Route_9.json",
+    "type": "detail",
+    "zoneId": 348,
+    "eventsUrl": "data/maps/events/0348_Route_9.events.json"
+  },
+  "352": {
+    "displayName": "Challenger's Cave",
+    "imageUrl": "data/maps/images/0352_Challenger's_Cave.png",
+    "boundsUrl": "data/maps/bounds/0352_Challenger's_Cave.json",
+    "type": "detail",
+    "zoneId": 352,
+    "eventsUrl": "data/maps/events/0352_Challenger's_Cave.events.json"
+  },
+  "353": {
+    "displayName": "Challenger's Cave",
+    "imageUrl": "data/maps/images/0353_Challenger's_Cave.png",
+    "boundsUrl": "data/maps/bounds/0353_Challenger's_Cave.json",
+    "type": "detail",
+    "zoneId": 353,
+    "eventsUrl": "data/maps/events/0353_Challenger's_Cave.events.json"
+  },
+  "354": {
+    "displayName": "Challenger's Cave",
+    "imageUrl": "data/maps/images/0354_Challenger's_Cave.png",
+    "boundsUrl": "data/maps/bounds/0354_Challenger's_Cave.json",
+    "type": "detail",
+    "zoneId": 354,
+    "eventsUrl": "data/maps/events/0354_Challenger's_Cave.events.json"
+  },
+  "355": {
+    "displayName": "Route 10",
+    "imageUrl": "data/maps/images/0355_Route_10.png",
+    "boundsUrl": "data/maps/bounds/0355_Route_10.json",
+    "type": "detail",
+    "zoneId": 355,
+    "eventsUrl": "data/maps/events/0355_Route_10.events.json"
+  },
+  "365": {
+    "displayName": "Route 11",
+    "imageUrl": "data/maps/images/0365_Route_11.png",
+    "boundsUrl": "data/maps/bounds/0365_Route_11.json",
+    "type": "detail",
+    "zoneId": 365,
+    "eventsUrl": "data/maps/events/0365_Route_11.events.json"
+  },
+  "368": {
+    "displayName": "Route 12",
+    "imageUrl": "data/maps/images/0368_Route_12.png",
+    "boundsUrl": "data/maps/bounds/0368_Route_12.json",
+    "type": "detail",
+    "zoneId": 368,
+    "eventsUrl": "data/maps/events/0368_Route_12.events.json"
+  },
+  "370": {
+    "displayName": "Route 13",
+    "imageUrl": "data/maps/images/0370_Route_13.png",
+    "boundsUrl": "data/maps/bounds/0370_Route_13.json",
+    "type": "detail",
+    "zoneId": 370,
+    "eventsUrl": "data/maps/events/0370_Route_13.events.json"
+  },
+  "374": {
+    "displayName": "Route 14",
+    "imageUrl": "data/maps/images/0374_Route_14.png",
+    "boundsUrl": "data/maps/bounds/0374_Route_14.json",
+    "type": "detail",
+    "zoneId": 374,
+    "eventsUrl": "data/maps/events/0374_Route_14.events.json"
+  },
+  "376": {
+    "displayName": "Abundant Shrine",
+    "imageUrl": "data/maps/images/0376_Abundant_Shrine.png",
+    "boundsUrl": "data/maps/bounds/0376_Abundant_Shrine.json",
+    "type": "detail",
+    "zoneId": 376,
+    "eventsUrl": "data/maps/events/0376_Abundant_Shrine.events.json"
+  },
+  "377": {
+    "displayName": "Abundant Shrine",
+    "imageUrl": "data/maps/images/0377_Abundant_Shrine.png",
+    "boundsUrl": "data/maps/bounds/0377_Abundant_Shrine.json",
+    "type": "detail",
+    "zoneId": 377,
+    "eventsUrl": "data/maps/events/0377_Abundant_Shrine.events.json"
+  },
+  "378": {
+    "displayName": "Route 15",
+    "imageUrl": "data/maps/images/0378_Route_15.png",
+    "boundsUrl": "data/maps/bounds/0378_Route_15.json",
+    "type": "detail",
+    "zoneId": 378,
+    "eventsUrl": "data/maps/events/0378_Route_15.events.json"
+  },
+  "383": {
+    "displayName": "Route 16",
+    "imageUrl": "data/maps/images/0383_Route_16.png",
+    "boundsUrl": "data/maps/bounds/0383_Route_16.json",
+    "type": "detail",
+    "zoneId": 383,
+    "eventsUrl": "data/maps/events/0383_Route_16.events.json"
+  },
+  "385": {
+    "displayName": "Lostlorn Forest",
+    "imageUrl": "data/maps/images/0385_Lostlorn_Forest.png",
+    "boundsUrl": "data/maps/bounds/0385_Lostlorn_Forest.json",
+    "type": "detail",
+    "zoneId": 385,
+    "eventsUrl": "data/maps/events/0385_Lostlorn_Forest.events.json"
+  },
+  "386": {
+    "displayName": "Lostlorn Forest",
+    "imageUrl": "data/maps/images/0386_Lostlorn_Forest.png",
+    "boundsUrl": "data/maps/bounds/0386_Lostlorn_Forest.json",
+    "type": "detail",
+    "zoneId": 386,
+    "eventsUrl": "data/maps/events/0386_Lostlorn_Forest.events.json"
+  },
+  "387": {
+    "displayName": "Route 18",
+    "imageUrl": "data/maps/images/0387_Route_18.png",
+    "boundsUrl": "data/maps/bounds/0387_Route_18.json",
+    "type": "detail",
+    "zoneId": 387,
+    "eventsUrl": "data/maps/events/0387_Route_18.events.json"
+  },
+  "389": {
+    "displayName": "Nuvema Town",
+    "imageUrl": "data/maps/images/0389_Nuvema_Town.png",
+    "boundsUrl": "data/maps/bounds/0389_Nuvema_Town.json",
+    "type": "detail",
+    "zoneId": 389,
+    "eventsUrl": "data/maps/events/0389_Nuvema_Town.events.json"
+  },
+  "397": {
+    "displayName": "Accumula Town",
+    "imageUrl": "data/maps/images/0397_Accumula_Town.png",
+    "boundsUrl": "data/maps/bounds/0397_Accumula_Town.json",
+    "type": "detail",
+    "zoneId": 397,
+    "eventsUrl": "data/maps/events/0397_Accumula_Town.events.json"
+  },
+  "406": {
+    "displayName": "Lacunosa Town",
+    "imageUrl": "data/maps/images/0406_Lacunosa_Town.png",
+    "boundsUrl": "data/maps/bounds/0406_Lacunosa_Town.json",
+    "type": "detail",
+    "zoneId": 406,
+    "eventsUrl": "data/maps/events/0406_Lacunosa_Town.events.json"
+  },
+  "412": {
+    "displayName": "Undella Town",
+    "imageUrl": "data/maps/images/0412_Undella_Town.png",
+    "boundsUrl": "data/maps/bounds/0412_Undella_Town.json",
+    "type": "detail",
+    "zoneId": 412,
+    "eventsUrl": "data/maps/events/0412_Undella_Town.events.json"
+  },
+  "423": {
+    "displayName": "Route 17",
+    "imageUrl": "data/maps/images/0423_Route_17.png",
+    "boundsUrl": "data/maps/bounds/0423_Route_17.json",
+    "type": "detail",
+    "zoneId": 423,
+    "eventsUrl": "data/maps/events/0423_Route_17.events.json"
+  },
+  "424": {
+    "displayName": "White Forest",
+    "imageUrl": "data/maps/images/0424_White_Forest.png",
+    "boundsUrl": "data/maps/bounds/0424_White_Forest.json",
+    "type": "detail",
+    "zoneId": 424,
+    "eventsUrl": "data/maps/events/0424_White_Forest.events.json"
+  },
+  "425": {
+    "displayName": "White Forest",
+    "imageUrl": "data/maps/images/0425_White_Forest.png",
+    "boundsUrl": "data/maps/bounds/0425_White_Forest.json",
+    "type": "detail",
+    "zoneId": 425,
+    "eventsUrl": "data/maps/events/0425_White_Forest.events.json"
+  },
+  "426": {
+    "displayName": "White Forest",
+    "imageUrl": "data/maps/images/0426_White_Forest.png",
+    "boundsUrl": "data/maps/bounds/0426_White_Forest.json",
+    "type": "detail",
+    "zoneId": 426,
+    "eventsUrl": "data/maps/events/0426_White_Forest.events.json"
+  },
+  "world": {
+    "displayName": "Unova Region",
+    "imageUrl": "data/maps/images/unova_world.png",
+    "boundsUrl": "data/maps/bounds/unova_world.json",
+    "type": "overview"
+  }
+}

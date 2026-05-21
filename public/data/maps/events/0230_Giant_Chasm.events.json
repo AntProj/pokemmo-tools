@@ -1,0 +1,21 @@
+{
+  "mapId": "230",
+  "displayName": "Giant Chasm",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 10952,
+      "worldZ": 2440,
+      "pixelX": 200,
+      "pixelY": 552,
+      "destinationMapId": "231",
+      "destinationLabel": "Zone 231",
+      "faceDirection": "SOUTH",
+      "transitionType": 4
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": []
+}

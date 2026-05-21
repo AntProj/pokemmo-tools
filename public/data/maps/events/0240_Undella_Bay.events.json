@@ -1,0 +1,107 @@
+{
+  "mapId": "240",
+  "displayName": "Undella Bay",
+  "warps": [],
+  "trainers": [],
+  "items": [],
+  "signs": [
+    {
+      "id": "s0",
+      "worldX": 12352,
+      "worldZ": 4704,
+      "pixelX": 112,
+      "pixelY": 608,
+      "signType": 4,
+      "textContent": null
+    },
+    {
+      "id": "s1",
+      "worldX": 12368,
+      "worldZ": 4784,
+      "pixelX": 128,
+      "pixelY": 688,
+      "signType": 4,
+      "textContent": null
+    },
+    {
+      "id": "s2",
+      "worldX": 12672,
+      "worldZ": 4352,
+      "pixelX": 432,
+      "pixelY": 256,
+      "signType": 4,
+      "textContent": null
+    },
+    {
+      "id": "s3",
+      "worldX": 12368,
+      "worldZ": 4784,
+      "pixelX": 128,
+      "pixelY": 688,
+      "signType": 4,
+      "textContent": null
+    }
+  ],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 12728,
+      "worldZ": 4664,
+      "pixelX": 488,
+      "pixelY": 568,
+      "spriteId": 41,
+      "spritePath": "data/trainers/sprites/0041.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n1",
+      "worldX": 12824,
+      "worldZ": 4552,
+      "pixelX": 584,
+      "pixelY": 456,
+      "spriteId": 40,
+      "spritePath": "data/trainers/sprites/0040.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n2",
+      "worldX": 12632,
+      "worldZ": 4424,
+      "pixelX": 392,
+      "pixelY": 328,
+      "spriteId": 41,
+      "spritePath": "data/trainers/sprites/0041.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n3",
+      "worldX": 12728,
+      "worldZ": 4888,
+      "pixelX": 488,
+      "pixelY": 792,
+      "spriteId": 40,
+      "spritePath": "data/trainers/sprites/0040.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n4",
+      "worldX": 13096,
+      "worldZ": 4568,
+      "pixelX": 856,
+      "pixelY": 472,
+      "spriteId": 41,
+      "spritePath": "data/trainers/sprites/0041.png",
+      "faceDirection": "WEST"
+    },
+    {
+      "id": "n5",
+      "worldX": 12872,
+      "worldZ": 4776,
+      "pixelX": 632,
+      "pixelY": 680,
+      "spriteId": 40,
+      "spritePath": "data/trainers/sprites/0040.png",
+      "faceDirection": "EAST"
+    }
+  ]
+}

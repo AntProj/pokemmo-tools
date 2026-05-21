@@ -1,0 +1,21 @@
+{
+  "mapId": "204",
+  "displayName": "Twist Mountain",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 56,
+      "worldZ": 168,
+      "pixelX": 59,
+      "pixelY": 160,
+      "destinationMapId": "199",
+      "destinationLabel": "Zone 199",
+      "faceDirection": "NORTH",
+      "transitionType": 1
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": []
+}

@@ -1,0 +1,210 @@
+{
+  "mapId": "346",
+  "displayName": "Moor of Icirrus",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 472,
+      "worldZ": 792,
+      "pixelX": 600,
+      "pixelY": 792,
+      "destinationMapId": "345",
+      "destinationLabel": "Zone 345",
+      "faceDirection": "NORTH",
+      "transitionType": 4
+    }
+  ],
+  "trainers": [],
+  "items": [
+    {
+      "id": "i5",
+      "worldX": 264,
+      "worldZ": 600,
+      "pixelX": 392,
+      "pixelY": 600,
+      "spriteId": 8195,
+      "itemId": null,
+      "isHidden": false
+    }
+  ],
+  "signs": [
+    {
+      "id": "s0",
+      "worldX": 272,
+      "worldZ": 816,
+      "pixelX": 400,
+      "pixelY": 816,
+      "signType": 4,
+      "textContent": null
+    },
+    {
+      "id": "s1",
+      "worldX": 672,
+      "worldZ": 640,
+      "pixelX": 800,
+      "pixelY": 640,
+      "signType": 4,
+      "textContent": null
+    },
+    {
+      "id": "s2",
+      "worldX": 608,
+      "worldZ": 448,
+      "pixelX": 736,
+      "pixelY": 448,
+      "signType": 4,
+      "textContent": null
+    },
+    {
+      "id": "s3",
+      "worldX": 320,
+      "worldZ": 192,
+      "pixelX": 448,
+      "pixelY": 192,
+      "signType": 4,
+      "textContent": null
+    }
+  ],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 392,
+      "worldZ": 616,
+      "pixelX": 520,
+      "pixelY": 616,
+      "spriteId": 122,
+      "spritePath": "data/trainers/sprites/0122.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n1",
+      "worldX": 392,
+      "worldZ": 584,
+      "pixelX": 520,
+      "pixelY": 584,
+      "spriteId": 115,
+      "spritePath": "data/trainers/sprites/0115.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n2",
+      "worldX": 360,
+      "worldZ": 616,
+      "pixelX": 488,
+      "pixelY": 616,
+      "spriteId": 116,
+      "spritePath": "data/trainers/sprites/0116.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n3",
+      "worldX": 424,
+      "worldZ": 616,
+      "pixelX": 552,
+      "pixelY": 616,
+      "spriteId": 117,
+      "spritePath": "data/trainers/sprites/0117.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n4",
+      "worldX": 408,
+      "worldZ": 648,
+      "pixelX": 536,
+      "pixelY": 648,
+      "spriteId": 28,
+      "spritePath": "data/trainers/sprites/0028.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n6",
+      "worldX": 664,
+      "worldZ": 840,
+      "pixelX": 792,
+      "pixelY": 840,
+      "spriteId": 63,
+      "spritePath": "data/trainers/sprites/0063.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n7",
+      "worldX": 536,
+      "worldZ": 328,
+      "pixelX": 664,
+      "pixelY": 328,
+      "spriteId": 36,
+      "spritePath": "data/trainers/sprites/0036.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n8",
+      "worldX": 328,
+      "worldZ": 856,
+      "pixelX": 456,
+      "pixelY": 856,
+      "spriteId": 84,
+      "spritePath": "data/trainers/sprites/0084.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n9",
+      "worldX": 888,
+      "worldZ": 664,
+      "pixelX": 1016,
+      "pixelY": 664,
+      "spriteId": 37,
+      "spritePath": "data/trainers/sprites/0037.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n10",
+      "worldX": 728,
+      "worldZ": 664,
+      "pixelX": 856,
+      "pixelY": 664,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n11",
+      "worldX": 248,
+      "worldZ": 856,
+      "pixelX": 376,
+      "pixelY": 856,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n12",
+      "worldX": 504,
+      "worldZ": 264,
+      "pixelX": 632,
+      "pixelY": 264,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n13",
+      "worldX": 680,
+      "worldZ": 184,
+      "pixelX": 808,
+      "pixelY": 184,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n14",
+      "worldX": 104,
+      "worldZ": 712,
+      "pixelX": 232,
+      "pixelY": 712,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}

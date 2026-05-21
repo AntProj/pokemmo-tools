@@ -1,0 +1,54 @@
+{
+  "mapId": "228",
+  "displayName": "Victory Road",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 152,
+      "worldZ": 168,
+      "pixelX": 152,
+      "pixelY": 168,
+      "destinationMapId": "214",
+      "destinationLabel": "Zone 214",
+      "faceDirection": "NORTH",
+      "transitionType": 4
+    },
+    {
+      "id": "w1",
+      "worldX": 88,
+      "worldZ": 72,
+      "pixelX": 88,
+      "pixelY": 72,
+      "destinationMapId": "226",
+      "destinationLabel": "Zone 226",
+      "faceDirection": "EAST",
+      "transitionType": 2
+    },
+    {
+      "id": "w2",
+      "worldX": 216,
+      "worldZ": 72,
+      "pixelX": 216,
+      "pixelY": 72,
+      "destinationMapId": "227",
+      "destinationLabel": "Zone 227",
+      "faceDirection": "WEST",
+      "transitionType": 2
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 152,
+      "worldZ": 56,
+      "pixelX": 152,
+      "pixelY": 56,
+      "spriteId": 7,
+      "spritePath": "data/trainers/sprites/0007.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}

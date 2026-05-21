@@ -1,0 +1,282 @@
+{
+  "mapId": "107",
+  "displayName": "Mistralton City",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 1736,
+      "worldZ": 4872,
+      "pixelX": 713.77,
+      "pixelY": 776,
+      "destinationMapId": "109",
+      "destinationLabel": "Zone 109",
+      "faceDirection": "SOUTH",
+      "transitionType": 3
+    },
+    {
+      "id": "w1",
+      "worldX": 1896,
+      "worldZ": 4920,
+      "pixelX": 873.77,
+      "pixelY": 824,
+      "destinationMapId": "112",
+      "destinationLabel": "Zone 112",
+      "faceDirection": "SOUTH",
+      "transitionType": 3
+    },
+    {
+      "id": "w2",
+      "worldX": 1256,
+      "worldZ": 4296,
+      "pixelX": 233.77,
+      "pixelY": 200,
+      "destinationMapId": "108",
+      "destinationLabel": "Zone 108",
+      "faceDirection": "SOUTH",
+      "transitionType": 3
+    },
+    {
+      "id": "w3",
+      "worldX": 1480,
+      "worldZ": 4728,
+      "pixelX": 457.77,
+      "pixelY": 632,
+      "destinationMapId": "111",
+      "destinationLabel": "Zone 111",
+      "faceDirection": "SOUTH",
+      "transitionType": 15
+    },
+    {
+      "id": "w4",
+      "worldX": 1672,
+      "worldZ": 4728,
+      "pixelX": 649.77,
+      "pixelY": 632,
+      "destinationMapId": "110",
+      "destinationLabel": "Zone 110",
+      "faceDirection": "SOUTH",
+      "transitionType": 3
+    },
+    {
+      "id": "w5",
+      "worldX": 1656,
+      "worldZ": 4984,
+      "pixelX": 633.77,
+      "pixelY": 888,
+      "destinationMapId": "195",
+      "destinationLabel": "Zone 195",
+      "faceDirection": "NORTH",
+      "transitionType": 4
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [
+    {
+      "id": "s0",
+      "worldX": 1600,
+      "worldZ": 4720,
+      "pixelX": 577.77,
+      "pixelY": 624,
+      "signType": 6,
+      "textContent": null
+    },
+    {
+      "id": "s1",
+      "worldX": 1408,
+      "worldZ": 4720,
+      "pixelX": 385.77,
+      "pixelY": 624,
+      "signType": 0,
+      "textContent": null
+    },
+    {
+      "id": "s2",
+      "worldX": 1296,
+      "worldZ": 4304,
+      "pixelX": 273.77,
+      "pixelY": 208,
+      "signType": 0,
+      "textContent": null
+    },
+    {
+      "id": "s3",
+      "worldX": 1152,
+      "worldZ": 5392,
+      "pixelX": 129.77,
+      "pixelY": 1296,
+      "signType": 4,
+      "textContent": null
+    },
+    {
+      "id": "s4",
+      "worldX": 1376,
+      "worldZ": 5424,
+      "pixelX": 353.77,
+      "pixelY": 1328,
+      "signType": 4,
+      "textContent": null
+    },
+    {
+      "id": "s5",
+      "worldX": 1312,
+      "worldZ": 5520,
+      "pixelX": 289.77,
+      "pixelY": 1424,
+      "signType": 4,
+      "textContent": null
+    }
+  ],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 1800,
+      "worldZ": 4888,
+      "pixelX": 777.77,
+      "pixelY": 792,
+      "spriteId": 15,
+      "spritePath": "data/trainers/sprites/0015.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n1",
+      "worldX": 1448,
+      "worldZ": 4968,
+      "pixelX": 425.77,
+      "pixelY": 872,
+      "spriteId": 12,
+      "spritePath": "data/trainers/sprites/0012.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n2",
+      "worldX": 1448,
+      "worldZ": 4744,
+      "pixelX": 425.77,
+      "pixelY": 648,
+      "spriteId": 71,
+      "spritePath": "data/trainers/sprites/0071.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n3",
+      "worldX": 1304,
+      "worldZ": 4872,
+      "pixelX": 281.77,
+      "pixelY": 776,
+      "spriteId": 67,
+      "spritePath": "data/trainers/sprites/0067.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n4",
+      "worldX": 1848,
+      "worldZ": 4744,
+      "pixelX": 825.77,
+      "pixelY": 648,
+      "spriteId": 21,
+      "spritePath": "data/trainers/sprites/0021.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n5",
+      "worldX": 1160,
+      "worldZ": 4584,
+      "pixelX": 137.77,
+      "pixelY": 488,
+      "spriteId": 37,
+      "spritePath": "data/trainers/sprites/0037.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n6",
+      "worldX": 1432,
+      "worldZ": 4760,
+      "pixelX": 409.77,
+      "pixelY": 664,
+      "spriteId": 90,
+      "spritePath": "data/trainers/sprites/0090.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n7",
+      "worldX": 1432,
+      "worldZ": 4776,
+      "pixelX": 409.77,
+      "pixelY": 680,
+      "spriteId": 104,
+      "spritePath": "data/trainers/sprites/0104.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n8",
+      "worldX": 1112,
+      "worldZ": 5272,
+      "pixelX": 89.77,
+      "pixelY": 1176,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n9",
+      "worldX": 1272,
+      "worldZ": 5256,
+      "pixelX": 249.77,
+      "pixelY": 1160,
+      "spriteId": 11,
+      "spritePath": "data/trainers/sprites/0011.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n10",
+      "worldX": 1272,
+      "worldZ": 5272,
+      "pixelX": 249.77,
+      "pixelY": 1176,
+      "spriteId": 9,
+      "spritePath": "data/trainers/sprites/0009.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n11",
+      "worldX": 1256,
+      "worldZ": 4312,
+      "pixelX": 233.77,
+      "pixelY": 216,
+      "spriteId": 187,
+      "spritePath": "data/trainers/sprites/0187.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n12",
+      "worldX": 1528,
+      "worldZ": 4936,
+      "pixelX": 505.77,
+      "pixelY": 840,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n13",
+      "worldX": 1224,
+      "worldZ": 4312,
+      "pixelX": 201.77,
+      "pixelY": 216,
+      "spriteId": 103,
+      "spritePath": "data/trainers/sprites/0103.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n14",
+      "worldX": 1256,
+      "worldZ": 5288,
+      "pixelX": 233.77,
+      "pixelY": 1192,
+      "spriteId": 28,
+      "spritePath": "data/trainers/sprites/0028.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}

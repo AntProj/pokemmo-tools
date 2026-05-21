@@ -1,0 +1,320 @@
+{
+  "mapId": "214",
+  "displayName": "Victory Road",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 613.54,
+      "pixelY": 640.03,
+      "destinationMapId": "219",
+      "destinationLabel": "Zone 219",
+      "faceDirection": "SOUTH",
+      "transitionType": 4
+    },
+    {
+      "id": "w1",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 613.54,
+      "pixelY": 640.03,
+      "destinationMapId": "226",
+      "destinationLabel": "Zone 226",
+      "faceDirection": "SOUTH",
+      "transitionType": 4
+    },
+    {
+      "id": "w2",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 613.54,
+      "pixelY": 640.03,
+      "destinationMapId": "224",
+      "destinationLabel": "Zone 224",
+      "faceDirection": "SOUTH",
+      "transitionType": 4
+    },
+    {
+      "id": "w3",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 613.54,
+      "pixelY": 640.03,
+      "destinationMapId": "223",
+      "destinationLabel": "Zone 223",
+      "faceDirection": "SOUTH",
+      "transitionType": 4
+    },
+    {
+      "id": "w4",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 613.54,
+      "pixelY": 640.03,
+      "destinationMapId": "225",
+      "destinationLabel": "Zone 225",
+      "faceDirection": "SOUTH",
+      "transitionType": 4
+    },
+    {
+      "id": "w5",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 613.54,
+      "pixelY": 640.03,
+      "destinationMapId": "226",
+      "destinationLabel": "Zone 226",
+      "faceDirection": "SOUTH",
+      "transitionType": 4
+    },
+    {
+      "id": "w6",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 613.54,
+      "pixelY": 640.03,
+      "destinationMapId": "220",
+      "destinationLabel": "Zone 220",
+      "faceDirection": "SOUTH",
+      "transitionType": 4
+    },
+    {
+      "id": "w7",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 613.54,
+      "pixelY": 640.03,
+      "destinationMapId": "217",
+      "destinationLabel": "Zone 217",
+      "faceDirection": "SOUTH",
+      "transitionType": 4
+    },
+    {
+      "id": "w8",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 613.54,
+      "pixelY": 640.03,
+      "destinationMapId": "218",
+      "destinationLabel": "Zone 218",
+      "faceDirection": "SOUTH",
+      "transitionType": 4
+    },
+    {
+      "id": "w9",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 613.54,
+      "pixelY": 640.03,
+      "destinationMapId": "227",
+      "destinationLabel": "Zone 227",
+      "faceDirection": "SOUTH",
+      "transitionType": 4
+    },
+    {
+      "id": "w10",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 613.54,
+      "pixelY": 640.03,
+      "destinationMapId": "65535",
+      "destinationLabel": "Zone 65535",
+      "faceDirection": "SOUTH",
+      "transitionType": 4
+    },
+    {
+      "id": "w11",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 613.54,
+      "pixelY": 640.03,
+      "destinationMapId": "226",
+      "destinationLabel": "Zone 226",
+      "faceDirection": "SOUTH",
+      "transitionType": 4
+    },
+    {
+      "id": "w12",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 613.54,
+      "pixelY": 640.03,
+      "destinationMapId": "222",
+      "destinationLabel": "Zone 222",
+      "faceDirection": "SOUTH",
+      "transitionType": 4
+    },
+    {
+      "id": "w13",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 613.54,
+      "pixelY": 640.03,
+      "destinationMapId": "221",
+      "destinationLabel": "Zone 221",
+      "faceDirection": "SOUTH",
+      "transitionType": 4
+    },
+    {
+      "id": "w14",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 613.54,
+      "pixelY": 640.03,
+      "destinationMapId": "364",
+      "destinationLabel": "Zone 364",
+      "faceDirection": "NORTH",
+      "transitionType": 4
+    },
+    {
+      "id": "w15",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 613.54,
+      "pixelY": 640.03,
+      "destinationMapId": "215",
+      "destinationLabel": "Zone 215",
+      "faceDirection": "SOUTH",
+      "transitionType": 4
+    },
+    {
+      "id": "w16",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 613.54,
+      "pixelY": 640.03,
+      "destinationMapId": "216",
+      "destinationLabel": "Zone 216",
+      "faceDirection": "SOUTH",
+      "transitionType": 4
+    },
+    {
+      "id": "w17",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 613.54,
+      "pixelY": 640.03,
+      "destinationMapId": "226",
+      "destinationLabel": "Zone 226",
+      "faceDirection": "SOUTH",
+      "transitionType": 4
+    },
+    {
+      "id": "w18",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 613.54,
+      "pixelY": 640.03,
+      "destinationMapId": "228",
+      "destinationLabel": "Zone 228",
+      "faceDirection": "SOUTH",
+      "transitionType": 4
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 613.54,
+      "pixelY": 640.03,
+      "spriteId": 32,
+      "spritePath": "data/trainers/sprites/0032.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n1",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 613.54,
+      "pixelY": 640.03,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n2",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 613.54,
+      "pixelY": 640.03,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n3",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 613.54,
+      "pixelY": 640.03,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n4",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 613.54,
+      "pixelY": 640.03,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n5",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 613.54,
+      "pixelY": 640.03,
+      "spriteId": 32,
+      "spritePath": "data/trainers/sprites/0032.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n6",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 613.54,
+      "pixelY": 640.03,
+      "spriteId": 30,
+      "spritePath": "data/trainers/sprites/0030.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n7",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 613.54,
+      "pixelY": 640.03,
+      "spriteId": 36,
+      "spritePath": "data/trainers/sprites/0036.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n8",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 613.54,
+      "pixelY": 640.03,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n9",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 613.54,
+      "pixelY": 640.03,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}

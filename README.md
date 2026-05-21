@@ -25,11 +25,12 @@ pokemmo-tools/
 
 ```bash
 npm install              # install dependencies
-npm run build:data       # process raw data → src/data/pokemmo.json
+npm run build:data       # process raw Pokémon data → src/data/pokemmo.json
+npm run build:map-data   # process raw Unova-map data → public/data/maps/...   (optional)
 npm run dev              # start dev server (usually http://localhost:5173)
 ```
 
-The `build:data` step is required at least once before the dev server will work, because `App.jsx` imports `./data/pokemmo.json` which is generated and gitignored.
+The `build:data` step is required at least once before the dev server will work, because `App.jsx` imports `./data/pokemmo.json` which is generated and gitignored. The `build:map-data` step is optional — the Unova Map tab simply won't have any data until it runs (see [MAP_INTEGRATION_PLAN.md](MAP_INTEGRATION_PLAN.md) for the raw-input locations and the per-file output shape).
 
 ## What's in the processed data
 

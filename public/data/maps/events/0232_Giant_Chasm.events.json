@@ -1,0 +1,113 @@
+{
+  "mapId": "232",
+  "displayName": "Giant Chasm",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 424,
+      "worldZ": 1272,
+      "pixelX": 424,
+      "pixelY": 1272,
+      "destinationMapId": "231",
+      "destinationLabel": "Zone 231",
+      "faceDirection": "NORTH",
+      "transitionType": 4
+    },
+    {
+      "id": "w1",
+      "worldX": 1000,
+      "worldZ": 344,
+      "pixelX": 1000,
+      "pixelY": 344,
+      "destinationMapId": "234",
+      "destinationLabel": "Zone 234",
+      "faceDirection": "SOUTH",
+      "transitionType": 4
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 504,
+      "worldZ": 392,
+      "pixelX": 504,
+      "pixelY": 392,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n1",
+      "worldX": 632,
+      "worldZ": 584,
+      "pixelX": 632,
+      "pixelY": 584,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n2",
+      "worldX": 872,
+      "worldZ": 520,
+      "pixelX": 872,
+      "pixelY": 520,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n3",
+      "worldX": 984,
+      "worldZ": 664,
+      "pixelX": 984,
+      "pixelY": 664,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n4",
+      "worldX": 456,
+      "worldZ": 776,
+      "pixelX": 456,
+      "pixelY": 776,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n5",
+      "worldX": 776,
+      "worldZ": 984,
+      "pixelX": 776,
+      "pixelY": 984,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n6",
+      "worldX": 312,
+      "worldZ": 1144,
+      "pixelX": 312,
+      "pixelY": 1144,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n7",
+      "worldX": 1160,
+      "worldZ": 1160,
+      "pixelX": 1160,
+      "pixelY": 1160,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}

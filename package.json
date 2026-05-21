@@ -3,9 +3,10 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "homepage": "https://AntProj.github.io/pokemmo-tools/",
+  "homepage": "https://YOUR_GITHUB_USERNAME.github.io/pokemmo-tools/",
   "scripts": {
     "build:data": "node scripts/build-data.mjs",
+    "build:map-data": "node scripts/build-map-data.mjs",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
@@ -13,9 +14,11 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "leaflet": "^1.9.4",
     "lucide-react": "^0.383.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-leaflet": "^4.2.1",
     "react-router-dom": "^7.14.2"
   },
   "devDependencies": {

@@ -1,0 +1,21 @@
+{
+  "mapId": "243",
+  "displayName": "Abyssal Ruins",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 472.51,
+      "pixelY": 472.51,
+      "destinationMapId": "245",
+      "destinationLabel": "Zone 245",
+      "faceDirection": "SOUTH",
+      "transitionType": 36
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": []
+}
