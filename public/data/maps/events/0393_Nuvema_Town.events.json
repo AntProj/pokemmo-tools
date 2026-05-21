@@ -8,6 +8,7 @@
       "worldZ": 40,
       "pixelX": 40,
       "pixelY": 34.21,
+      "offMap": false,
       "destinationMapId": "392",
       "destinationLabel": "Zone 392",
       "faceDirection": "EAST",
@@ -23,6 +24,7 @@
       "worldZ": 128,
       "pixelX": 16,
       "pixelY": 122.21,
+      "offMap": false,
       "signType": 4,
       "textContent": null
     }

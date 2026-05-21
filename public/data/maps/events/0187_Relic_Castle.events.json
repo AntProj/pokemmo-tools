@@ -8,6 +8,7 @@
       "worldZ": 232,
       "pixelX": 90,
       "pixelY": 128,
+      "offMap": false,
       "destinationMapId": "188",
       "destinationLabel": "Zone 188",
       "faceDirection": "WEST",
@@ -19,6 +20,7 @@
       "worldZ": 232,
       "pixelX": 170,
       "pixelY": 128,
+      "offMap": false,
       "destinationMapId": "186",
       "destinationLabel": "Zone 186",
       "faceDirection": "EAST",
@@ -34,6 +36,7 @@
       "worldZ": 272,
       "pixelX": 114,
       "pixelY": 168,
+      "offMap": false,
       "signType": 4,
       "textContent": null
     }

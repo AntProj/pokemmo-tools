@@ -8,6 +8,7 @@
       "worldZ": 232,
       "pixelX": 200,
       "pixelY": 264,
+      "offMap": false,
       "destinationMapId": "220",
       "destinationLabel": "Zone 220",
       "faceDirection": "WEST",
@@ -19,6 +20,7 @@
       "worldZ": 264,
       "pixelX": 104,
       "pixelY": 296,
+      "offMap": false,
       "destinationMapId": "214",
       "destinationLabel": "Zone 214",
       "faceDirection": "NORTH",
@@ -30,6 +32,7 @@
       "worldZ": 72,
       "pixelX": 136,
       "pixelY": 104,
+      "offMap": false,
       "destinationMapId": "221",
       "destinationLabel": "Zone 221",
       "faceDirection": "EAST",
@@ -45,6 +48,7 @@
       "worldZ": 144,
       "pixelX": 64,
       "pixelY": 176,
+      "offMap": false,
       "signType": 4,
       "textContent": null
     }

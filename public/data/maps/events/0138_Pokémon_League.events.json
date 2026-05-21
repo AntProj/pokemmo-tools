@@ -8,6 +8,7 @@
       "worldZ": 40,
       "pixelX": 824,
       "pixelY": 166.78,
+      "offMap": false,
       "destinationMapId": "144",
       "destinationLabel": "Zone 144",
       "faceDirection": "SOUTH",
@@ -23,6 +24,7 @@
       "worldZ": 1312,
       "pixelX": 800,
       "pixelY": 1438.52,
+      "offMap": false,
       "signType": 0,
       "textContent": null
     }

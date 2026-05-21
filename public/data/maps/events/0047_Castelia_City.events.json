@@ -8,6 +8,7 @@
       "worldZ": 200,
       "pixelX": 113.99,
       "pixelY": 203.04,
+      "offMap": false,
       "destinationMapId": "34",
       "destinationLabel": "Zone 34",
       "faceDirection": "NORTH",
@@ -23,6 +24,7 @@
       "worldZ": 16,
       "pixelX": 105.99,
       "pixelY": 18.97,
+      "offMap": false,
       "signType": 0,
       "textContent": null
     },
@@ -32,6 +34,7 @@
       "worldZ": 16,
       "pixelX": 122,
       "pixelY": 18.97,
+      "offMap": false,
       "signType": 0,
       "textContent": null
     }
@@ -43,6 +46,7 @@
       "worldZ": 104,
       "pixelX": 81.98,
       "pixelY": 107,
+      "offMap": false,
       "spriteId": 10,
       "spritePath": "data/trainers/sprites/0010.png",
       "faceDirection": "EAST"
@@ -53,6 +57,7 @@
       "worldZ": 104,
       "pixelX": 97.99,
       "pixelY": 107,
+      "offMap": false,
       "spriteId": 14,
       "spritePath": "data/trainers/sprites/0014.png",
       "faceDirection": "WEST"
@@ -63,6 +68,7 @@
       "worldZ": 104,
       "pixelX": 81.98,
       "pixelY": 107,
+      "offMap": false,
       "spriteId": 195,
       "spritePath": "data/trainers/sprites/0195.png",
       "faceDirection": "NORTH"

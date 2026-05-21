@@ -8,6 +8,7 @@
       "worldZ": 648,
       "pixelX": 224,
       "pixelY": 669,
+      "offMap": false,
       "destinationMapId": "107",
       "destinationLabel": "Zone 107",
       "faceDirection": "NORTH",
@@ -23,6 +24,7 @@
       "worldZ": 560,
       "pixelX": 200,
       "pixelY": 581,
+      "offMap": false,
       "signType": 0,
       "textContent": null
     },
@@ -32,6 +34,7 @@
       "worldZ": 560,
       "pixelX": 264,
       "pixelY": 581,
+      "offMap": false,
       "signType": 0,
       "textContent": null
     }
@@ -43,6 +46,7 @@
       "worldZ": 600,
       "pixelX": 272,
       "pixelY": 621,
+      "offMap": false,
       "spriteId": 187,
       "spritePath": "data/trainers/sprites/0187.png",
       "faceDirection": "NORTH"
@@ -53,6 +57,7 @@
       "worldZ": 88,
       "pixelX": 240,
       "pixelY": 109,
+      "offMap": false,
       "spriteId": 90,
       "spritePath": "data/trainers/sprites/0090.png",
       "faceDirection": "NORTH"
@@ -63,6 +68,7 @@
       "worldZ": 456,
       "pixelX": 32,
       "pixelY": 477,
+      "offMap": false,
       "spriteId": 71,
       "spritePath": "data/trainers/sprites/0071.png",
       "faceDirection": "EAST"
@@ -73,6 +79,7 @@
       "worldZ": 184,
       "pixelX": 304,
       "pixelY": 205,
+      "offMap": false,
       "spriteId": 71,
       "spritePath": "data/trainers/sprites/0071.png",
       "faceDirection": "NORTH"
@@ -83,6 +90,7 @@
       "worldZ": 296,
       "pixelX": 320,
       "pixelY": 317,
+      "offMap": false,
       "spriteId": 155,
       "spritePath": "data/trainers/sprites/0155.png",
       "faceDirection": "EAST"
@@ -93,6 +101,7 @@
       "worldZ": 408,
       "pixelX": 352,
       "pixelY": 429,
+      "offMap": false,
       "spriteId": 155,
       "spritePath": "data/trainers/sprites/0155.png",
       "faceDirection": "WEST"
@@ -103,6 +112,7 @@
       "worldZ": 72,
       "pixelX": 32,
       "pixelY": 93,
+      "offMap": false,
       "spriteId": 155,
       "spritePath": "data/trainers/sprites/0155.png",
       "faceDirection": "NORTH"

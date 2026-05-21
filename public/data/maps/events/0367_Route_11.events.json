@@ -8,6 +8,7 @@
       "worldZ": 88,
       "pixelX": 72,
       "pixelY": 80,
+      "offMap": false,
       "destinationMapId": "365",
       "destinationLabel": "Zone 365",
       "faceDirection": "NORTH",
@@ -24,6 +25,7 @@
       "worldZ": 56,
       "pixelX": 120,
       "pixelY": 48,
+      "offMap": false,
       "spriteId": 37,
       "spritePath": "data/trainers/sprites/0037.png",
       "faceDirection": "EAST"

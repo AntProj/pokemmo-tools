@@ -8,6 +8,7 @@
       "worldZ": 168,
       "pixelX": 59,
       "pixelY": 160,
+      "offMap": false,
       "destinationMapId": "199",
       "destinationLabel": "Zone 199",
       "faceDirection": "NORTH",

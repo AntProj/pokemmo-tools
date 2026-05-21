@@ -11,6 +11,7 @@
       "worldZ": 16,
       "pixelX": 104.2,
       "pixelY": 19,
+      "offMap": false,
       "signType": 0,
       "textContent": null
     },
@@ -20,6 +21,7 @@
       "worldZ": 16,
       "pixelX": 120.23,
       "pixelY": 19,
+      "offMap": false,
       "signType": 0,
       "textContent": null
     }

@@ -1,0 +1,31 @@
+{
+  "_comment": "Hand-curated pixel positions for warps whose raw data lacks world coords (e.g. rail-system warps with worldX/Y/Z = null). Two shapes: (a) `<eventIndex>: [pixelX, pixelY]` — reposition an existing raw warp; (b) `_extraWarps: [{destinationMapId, pixelX, pixelY, label?, faceDirection?}]` — inject synthetic warps that don't exist in the raw event data (used to patch asymmetric warp gaps from the ROM extract). The generator applies positions AFTER worldToPixel.",
+  "214": {
+    "_comment": "Victory Road outer view. 19 rail warps + 1 synthetic Pokémon League warp (zone 136). Arch positions detected by PNG scan, then paired to warp eventIndex by matching the user's hand-labeled destination IDs on each visible arch (228, 226, 226, 225, 227, 224, 218, 222, 223, 217, 221, 216, 219, 220, 215, 364). 16 of 19 raw warps placed; the remaining 3 (event indexes 10, 11, 17 — overworld exit + redundant 226 hub links) have no visible arch and stay in the off-map sidebar. The Pokémon League warp is synthetic because the raw event data has 136→214 but not the reverse.",
+    "0":  [1297, 1298],
+    "1":  [1064, 750],
+    "2":  [1125, 1074],
+    "3":  [985,  1142],
+    "4":  [1125, 916],
+    "5":  [1186, 750],
+    "6":  [1524, 1395],
+    "7":  [1125, 1156],
+    "8":  [1249, 1062],
+    "9":  [1433, 900],
+    "12": [880,  1112],
+    "13": [1265, 1142],
+    "14": [1128, 1640],
+    "15": [1125, 1476],
+    "16": [1125, 1316],
+    "18": [1195, 578],
+    "_extraWarps": [
+      {
+        "destinationMapId": "136",
+        "pixelX": 1125,
+        "pixelY": 470,
+        "label": "To Pokémon League",
+        "faceDirection": "NORTH"
+      }
+    ]
+  }
+}

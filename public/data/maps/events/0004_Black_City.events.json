@@ -8,6 +8,7 @@
       "worldZ": 200,
       "pixelX": 88,
       "pixelY": 152,
+      "offMap": false,
       "destinationMapId": "0",
       "destinationLabel": "Zone 0",
       "faceDirection": "NORTH",
@@ -24,6 +25,7 @@
       "worldZ": 104,
       "pixelX": 184,
       "pixelY": 56,
+      "offMap": false,
       "spriteId": 18,
       "spritePath": "data/trainers/sprites/0018.png",
       "faceDirection": "SOUTH"
@@ -34,6 +36,7 @@
       "worldZ": 120,
       "pixelX": 136,
       "pixelY": 72,
+      "offMap": false,
       "spriteId": 20,
       "spritePath": "data/trainers/sprites/0020.png",
       "faceDirection": "EAST"

@@ -8,6 +8,7 @@
       "worldZ": 312,
       "pixelX": 72,
       "pixelY": 304.08,
+      "offMap": false,
       "destinationMapId": "18",
       "destinationLabel": "Zone 18",
       "faceDirection": "EAST",
@@ -23,6 +24,7 @@
       "worldZ": 224,
       "pixelX": 32,
       "pixelY": 216.08,
+      "offMap": false,
       "signType": 4,
       "textContent": null
     },
@@ -32,6 +34,7 @@
       "worldZ": 224,
       "pixelX": 48,
       "pixelY": 216.08,
+      "offMap": false,
       "signType": 4,
       "textContent": null
     },
@@ -41,6 +44,7 @@
       "worldZ": 208,
       "pixelX": 32,
       "pixelY": 200.08,
+      "offMap": false,
       "signType": 4,
       "textContent": null
     },
@@ -50,6 +54,7 @@
       "worldZ": 208,
       "pixelX": 48,
       "pixelY": 200.08,
+      "offMap": false,
       "signType": 4,
       "textContent": null
     },
@@ -59,6 +64,7 @@
       "worldZ": 224,
       "pixelX": 112,
       "pixelY": 216.08,
+      "offMap": false,
       "signType": 4,
       "textContent": null
     },
@@ -68,6 +74,7 @@
       "worldZ": 208,
       "pixelX": 112,
       "pixelY": 200.08,
+      "offMap": false,
       "signType": 4,
       "textContent": null
     },
@@ -77,6 +84,7 @@
       "worldZ": 208,
       "pixelX": 128,
       "pixelY": 200.08,
+      "offMap": false,
       "signType": 4,
       "textContent": null
     },
@@ -86,6 +94,7 @@
       "worldZ": 224,
       "pixelX": 128,
       "pixelY": 216.08,
+      "offMap": false,
       "signType": 4,
       "textContent": null
     },
@@ -95,6 +104,7 @@
       "worldZ": 96,
       "pixelX": 16,
       "pixelY": 88.08,
+      "offMap": false,
       "signType": 2,
       "textContent": null
     },
@@ -104,6 +114,7 @@
       "worldZ": 80,
       "pixelX": 16,
       "pixelY": 72.08,
+      "offMap": false,
       "signType": 2,
       "textContent": null
     },
@@ -113,6 +124,7 @@
       "worldZ": 64,
       "pixelX": 16,
       "pixelY": 56.08,
+      "offMap": false,
       "signType": 2,
       "textContent": null
     },
@@ -122,6 +134,7 @@
       "worldZ": 48,
       "pixelX": 16,
       "pixelY": 40.08,
+      "offMap": false,
       "signType": 2,
       "textContent": null
     },
@@ -131,6 +144,7 @@
       "worldZ": 32,
       "pixelX": 32,
       "pixelY": 24.08,
+      "offMap": false,
       "signType": 0,
       "textContent": null
     },
@@ -140,6 +154,7 @@
       "worldZ": 32,
       "pixelX": 48,
       "pixelY": 24.08,
+      "offMap": false,
       "signType": 0,
       "textContent": null
     },
@@ -149,6 +164,7 @@
       "worldZ": 32,
       "pixelX": 112,
       "pixelY": 24.08,
+      "offMap": false,
       "signType": 0,
       "textContent": null
     },
@@ -158,6 +174,7 @@
       "worldZ": 32,
       "pixelX": 128,
       "pixelY": 24.08,
+      "offMap": false,
       "signType": 0,
       "textContent": null
     },
@@ -167,6 +184,7 @@
       "worldZ": 48,
       "pixelX": 144,
       "pixelY": 40.08,
+      "offMap": false,
       "signType": 1,
       "textContent": null
     },
@@ -176,6 +194,7 @@
       "worldZ": 64,
       "pixelX": 144,
       "pixelY": 56.08,
+      "offMap": false,
       "signType": 1,
       "textContent": null
     },
@@ -185,6 +204,7 @@
       "worldZ": 80,
       "pixelX": 144,
       "pixelY": 72.08,
+      "offMap": false,
       "signType": 1,
       "textContent": null
     },
@@ -194,6 +214,7 @@
       "worldZ": 96,
       "pixelX": 144,
       "pixelY": 88.08,
+      "offMap": false,
       "signType": 1,
       "textContent": null
     }
@@ -205,6 +226,7 @@
       "worldZ": 168,
       "pixelX": 88,
       "pixelY": 160.08,
+      "offMap": false,
       "spriteId": 86,
       "spritePath": "data/trainers/sprites/0086.png",
       "faceDirection": "NORTH"

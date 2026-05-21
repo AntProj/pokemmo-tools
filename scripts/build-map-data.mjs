@@ -99,12 +99,20 @@ function parseStem(filename) {
 
 // Convert world (X, worldZ) → pixel (px, py) using the zone's bounds sidecar.
 // See the file-level comment for the formula derivation.
+//
+// IMPORTANT: rail-system warps and a handful of other entities in the raw data
+// carry null world coords (the entity lives on the train graph or on an
+// off-grid actor system, not a map tile). For those we return null pixels so
+// the consumer can skip them as markers and surface them in a separate list.
 function worldToPixel({ worldX, worldZ }, bounds) {
+  if (!Number.isFinite(worldX) || !Number.isFinite(worldZ)) {
+    return { pixelX: null, pixelY: null, offMap: true };
+  }
   const { minX, maxX, minY, maxY } = bounds.worldBounds;
   const flippedY = -worldZ;
   const px = (worldX  - minX) / (maxX - minX) * bounds.imageWidth;
   const py = bounds.imageHeight - (flippedY - minY) / (maxY - minY) * bounds.imageHeight;
-  return { pixelX: Math.round(px * 100) / 100, pixelY: Math.round(py * 100) / 100 };
+  return { pixelX: Math.round(px * 100) / 100, pixelY: Math.round(py * 100) / 100, offMap: false };
 }
 
 // ---------- Index raw inputs ----------
@@ -140,6 +148,32 @@ for (const folder of zoneFolders) {
   } catch (e) {
     console.warn(`  ✗ failed to parse ${folder}/${jsonName}: ${e.message}`);
   }
+}
+
+// Hand-curated warp position overrides. Used for rail-system warps whose raw
+// data has null world coords (Victory Road, etc.) AND for synthesizing warps
+// that don't exist in the raw event data due to asymmetric warp recording
+// in the ROM (e.g. zone 136→214 exists but zone 214→136 is missing). Shape:
+//
+//   {
+//     "<zoneId>": {
+//       "<eventIndex>": [pixelX, pixelY],     // reposition an existing warp
+//       ...
+//       "_extraWarps": [                       // inject synthetic warps
+//         { "destinationMapId": "136", "pixelX": 1195, "pixelY": 480,
+//           "label": "To Pokémon League", "faceDirection": "NORTH" },
+//         ...
+//       ]
+//     }
+//   }
+//
+// Synthetic warps get ids `wEx0`, `wEx1`, ... and `synthetic: true` so the UI
+// can label/style them differently if desired. Optional file — generator
+// works without it.
+const OVERRIDES_PATH = path.join(ROOT, 'data', 'raw', 'maps', 'warp-position-overrides.json');
+let warpOverrides = {};
+if (fs.existsSync(OVERRIDES_PATH)) {
+  warpOverrides = readJson(OVERRIDES_PATH);
 }
 
 // unova_world.txt is a newline-separated list of zone IDs that participate
@@ -225,6 +259,9 @@ for (const stem of detailStems) {
 
   // Build per-zone events file (if zone JSON exists)
   if (events) {
+    // Pull this zone's override block once. Each entry maps eventIndex → [px, py].
+    const zoneOverrides = warpOverrides[String(zoneId)] || {};
+
     const xform = (raw, idPrefix) => ({
       id: `${idPrefix}${raw.eventIndex ?? raw.uid ?? 0}`,
       worldX: raw.worldX,
@@ -232,13 +269,45 @@ for (const stem of detailStems) {
       ...worldToPixel({ worldX: raw.worldX, worldZ: raw.worldZ }, bounds),
     });
 
+    // Apply hand-curated overrides to warps. Other entity types could be
+    // overridden too, but rail-system entities are warp-only in the current
+    // dataset — keep the scope tight until that changes.
+    const applyOverride = (entity, raw) => {
+      const key = String(raw.eventIndex);
+      if (Object.prototype.hasOwnProperty.call(zoneOverrides, key)) {
+        const [px, py] = zoneOverrides[key];
+        return { ...entity, pixelX: px, pixelY: py, offMap: false, overridden: true };
+      }
+      return entity;
+    };
+
     const warps = (events.warps || []).map(w => ({
-      ...xform(w, 'w'),
+      ...applyOverride(xform(w, 'w'), w),
       destinationMapId: w.destinationZoneId != null ? String(w.destinationZoneId) : null,
       destinationLabel: w.destinationZoneId != null ? `Zone ${w.destinationZoneId}` : null,
       faceDirection: w.faceDirection || null,
       transitionType: w.transitionType ?? null,
     }));
+
+    // Synthetic warps: inject any "_extraWarps" entries from the override file.
+    // Used to patch asymmetric warp gaps in the raw event data (e.g. zone
+    // 214 → 136 is missing from the ROM extract even though 136 → 214 exists).
+    const extraWarps = Array.isArray(zoneOverrides._extraWarps) ? zoneOverrides._extraWarps : [];
+    extraWarps.forEach((extra, i) => {
+      warps.push({
+        id: `wEx${i}`,
+        worldX: null,
+        worldZ: null,
+        pixelX: extra.pixelX,
+        pixelY: extra.pixelY,
+        offMap: false,
+        synthetic: true,
+        destinationMapId: extra.destinationMapId != null ? String(extra.destinationMapId) : null,
+        destinationLabel: extra.label || (extra.destinationMapId != null ? `Zone ${extra.destinationMapId}` : null),
+        faceDirection: extra.faceDirection || null,
+        transitionType: extra.transitionType ?? null,
+      });
+    });
 
     const trainers = (events.trainers || []).map(t => ({
       ...xform(t, 't'),

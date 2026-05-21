@@ -8,6 +8,7 @@
       "worldZ": 3256,
       "pixelX": 208,
       "pixelY": 184,
+      "offMap": false,
       "destinationMapId": "292",
       "destinationLabel": "Zone 292",
       "faceDirection": "ANY",

@@ -8,6 +8,7 @@
       "worldZ": 328,
       "pixelX": 232,
       "pixelY": 504,
+      "offMap": false,
       "destinationMapId": "333",
       "destinationLabel": "Zone 333",
       "faceDirection": "EAST",
@@ -19,6 +20,7 @@
       "worldZ": 200,
       "pixelX": 440,
       "pixelY": 376,
+      "offMap": false,
       "destinationMapId": "335",
       "destinationLabel": "Zone 335",
       "faceDirection": "SOUTH",
@@ -33,6 +35,7 @@
       "worldZ": 392,
       "pixelX": 312,
       "pixelY": 568,
+      "offMap": false,
       "spriteId": 8197,
       "itemId": null,
       "isHidden": false
@@ -43,6 +46,7 @@
       "worldZ": 280,
       "pixelX": 392,
       "pixelY": 456,
+      "offMap": false,
       "spriteId": 8197,
       "itemId": null,
       "isHidden": false
@@ -53,6 +57,7 @@
       "worldZ": 248,
       "pixelX": 568,
       "pixelY": 424,
+      "offMap": false,
       "spriteId": 8197,
       "itemId": null,
       "isHidden": false
@@ -65,6 +70,7 @@
       "worldZ": 448,
       "pixelX": 272,
       "pixelY": 624,
+      "offMap": false,
       "signType": 4,
       "textContent": null
     },
@@ -74,6 +80,7 @@
       "worldZ": 432,
       "pixelX": 464,
       "pixelY": 608,
+      "offMap": false,
       "signType": 4,
       "textContent": null
     },
@@ -83,6 +90,7 @@
       "worldZ": 144,
       "pixelX": 240,
       "pixelY": 320,
+      "offMap": false,
       "signType": 4,
       "textContent": null
     }
@@ -94,6 +102,7 @@
       "worldZ": 56,
       "pixelX": 232,
       "pixelY": 232,
+      "offMap": false,
       "spriteId": 110,
       "spritePath": "data/trainers/sprites/0110.png",
       "faceDirection": "NORTH"
@@ -104,6 +113,7 @@
       "worldZ": 424,
       "pixelX": 360,
       "pixelY": 600,
+      "offMap": false,
       "spriteId": 110,
       "spritePath": "data/trainers/sprites/0110.png",
       "faceDirection": "NORTH"
@@ -114,6 +124,7 @@
       "worldZ": 152,
       "pixelX": 360,
       "pixelY": 328,
+      "offMap": false,
       "spriteId": 110,
       "spritePath": "data/trainers/sprites/0110.png",
       "faceDirection": "NORTH"

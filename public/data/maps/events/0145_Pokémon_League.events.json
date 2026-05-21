@@ -12,6 +12,7 @@
       "worldZ": 232,
       "pixelX": 135.89,
       "pixelY": 220,
+      "offMap": false,
       "spriteId": 97,
       "spritePath": "data/trainers/sprites/0097.png",
       "faceDirection": "NORTH"

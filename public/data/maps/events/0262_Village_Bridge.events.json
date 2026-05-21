@@ -8,6 +8,7 @@
       "worldZ": 88,
       "pixelX": 72,
       "pixelY": 80,
+      "offMap": false,
       "destinationMapId": "255",
       "destinationLabel": "Zone 255",
       "faceDirection": "NORTH",

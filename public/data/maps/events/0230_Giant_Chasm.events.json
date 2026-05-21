@@ -8,6 +8,7 @@
       "worldZ": 2440,
       "pixelX": 200,
       "pixelY": 552,
+      "offMap": false,
       "destinationMapId": "231",
       "destinationLabel": "Zone 231",
       "faceDirection": "SOUTH",

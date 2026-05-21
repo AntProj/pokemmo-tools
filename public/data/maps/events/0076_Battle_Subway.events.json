@@ -11,6 +11,7 @@
       "worldZ": 240,
       "pixelX": 880,
       "pixelY": 176,
+      "offMap": false,
       "signType": 6,
       "textContent": null
     }
@@ -22,6 +23,7 @@
       "worldZ": 216,
       "pixelX": 328,
       "pixelY": 152,
+      "offMap": false,
       "spriteId": 68,
       "spritePath": "data/trainers/sprites/0068.png",
       "faceDirection": "NORTH"
@@ -32,6 +34,7 @@
       "worldZ": 216,
       "pixelX": 536,
       "pixelY": 152,
+      "offMap": false,
       "spriteId": 68,
       "spritePath": "data/trainers/sprites/0068.png",
       "faceDirection": "NORTH"
@@ -42,6 +45,7 @@
       "worldZ": 248,
       "pixelX": 456,
       "pixelY": 184,
+      "offMap": false,
       "spriteId": 162,
       "spritePath": "data/trainers/sprites/0162.png",
       "faceDirection": "NORTH"

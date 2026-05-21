@@ -21,6 +21,10 @@ const MARKER_KINDS = [
   { key: 'npcs',     label: 'NPCs',     Icon: User },
 ];
 
+// Entities with finite pixel coords get rendered as markers; null-coord
+// entries (rail warps, off-grid actors) live in the sidebar instead.
+const onMap = (e) => Number.isFinite(e.pixelX) && Number.isFinite(e.pixelY);
+
 // Custom Leaflet icons. Built as plain SVG → divIcon so we can color/size
 // without shipping extra image files.
 function makeDivIcon({ html, size, anchor }) {
@@ -232,10 +236,13 @@ function MapView({ mapId, mapsIndex, worldRegions, onNavigateToMap }) {
             );
           })}
 
-          {/* Detail view: event markers */}
+          {/* Detail view: event markers. Skip any entity flagged offMap —
+              rail-system warps and a handful of off-grid actors have null
+              world coords in the raw data; they're listed in the sidebar's
+              "Off-map links" panel instead of as map markers. */}
           {entry.type === 'detail' && events && (
             <>
-              {visible.warps && events.warps.map(w => (
+              {visible.warps && events.warps.filter(onMap).map(w => (
                 <Marker
                   key={w.id}
                   position={toLatLng(w.pixelX, w.pixelY)}
@@ -245,7 +252,7 @@ function MapView({ mapId, mapsIndex, worldRegions, onNavigateToMap }) {
                   <Tooltip direction="top" offset={[0, -10]}>Warp → {w.destinationLabel || w.destinationMapId}</Tooltip>
                 </Marker>
               ))}
-              {visible.trainers && events.trainers.map(t => (
+              {visible.trainers && events.trainers.filter(onMap).map(t => (
                 <Marker
                   key={t.id}
                   position={toLatLng(t.pixelX, t.pixelY)}
@@ -255,7 +262,7 @@ function MapView({ mapId, mapsIndex, worldRegions, onNavigateToMap }) {
                   <Tooltip direction="top" offset={[0, -8]}>Trainer #{t.spriteId}</Tooltip>
                 </Marker>
               ))}
-              {visible.items && events.items.map(i => (
+              {visible.items && events.items.filter(onMap).map(i => (
                 <Marker
                   key={i.id}
                   position={toLatLng(i.pixelX, i.pixelY)}
@@ -265,7 +272,7 @@ function MapView({ mapId, mapsIndex, worldRegions, onNavigateToMap }) {
                   <Tooltip direction="top" offset={[0, -6]}>{i.isHidden ? 'Hidden item' : 'Item'}</Tooltip>
                 </Marker>
               ))}
-              {visible.npcs && events.npcs.map(n => (
+              {visible.npcs && events.npcs.filter(onMap).map(n => (
                 <Marker
                   key={n.id}
                   position={toLatLng(n.pixelX, n.pixelY)}
@@ -284,24 +291,66 @@ function MapView({ mapId, mapsIndex, worldRegions, onNavigateToMap }) {
         {entry.type === 'detail' && (
           <FormCard title="Layers">
             <div className="space-y-1.5">
-              {MARKER_KINDS.map(({ key, label, Icon }) => (
-                <label key={key} className="flex items-center gap-2 text-sm text-stone-700 dark:text-stone-300 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    checked={visible[key]}
-                    onChange={(e) => setVisible(v => ({ ...v, [key]: e.target.checked }))}
-                    className="accent-blue-500"
-                  />
-                  <Icon size={14} className="text-stone-500 dark:text-stone-400" />
-                  <span className="flex-1">{label}</span>
-                  <span className="tabular-nums text-xs text-stone-500 dark:text-stone-400">
-                    {events?.[key]?.length ?? 0}
-                  </span>
-                </label>
-              ))}
+              {MARKER_KINDS.map(({ key, label, Icon }) => {
+                const total = events?.[key]?.length ?? 0;
+                const mapped = events?.[key]?.filter(onMap).length ?? 0;
+                const off = total - mapped;
+                return (
+                  <label key={key} className="flex items-center gap-2 text-sm text-stone-700 dark:text-stone-300 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={visible[key]}
+                      onChange={(e) => setVisible(v => ({ ...v, [key]: e.target.checked }))}
+                      className="accent-blue-500"
+                    />
+                    <Icon size={14} className="text-stone-500 dark:text-stone-400" />
+                    <span className="flex-1">{label}</span>
+                    <span className="tabular-nums text-xs text-stone-500 dark:text-stone-400" title={off ? `${mapped} on map · ${off} off map` : ''}>
+                      {mapped}{off ? ` (+${off} off-map)` : ''}
+                    </span>
+                  </label>
+                );
+              })}
             </div>
           </FormCard>
         )}
+
+        {entry.type === 'detail' && events && (() => {
+          const offWarps = (events.warps || []).filter(w => !onMap(w));
+          if (offWarps.length === 0) return null;
+          return (
+            <FormCard title="Off-map warps">
+              <div className="text-[11px] text-stone-500 dark:text-stone-400 mb-1">
+                Rail-system / off-grid links without map positions. Click to navigate.
+              </div>
+              <ul className="space-y-1 text-sm">
+                {offWarps.map(w => {
+                  const dest = mapsIndex[w.destinationMapId];
+                  return (
+                    <li key={w.id}>
+                      <button
+                        type="button"
+                        onClick={() => dest && onNavigateToMap(w.destinationMapId)}
+                        disabled={!dest}
+                        className={`w-full text-left px-2 py-1 rounded inline-flex items-center gap-1.5 ${
+                          dest
+                            ? 'hover:bg-[#ece2c4] dark:hover:bg-stone-800 text-stone-700 dark:text-stone-300 cursor-pointer'
+                            : 'text-stone-400 dark:text-stone-600 cursor-default'
+                        }`}
+                      >
+                        <ExternalLink size={11} />
+                        <span className="flex-1 truncate">{dest?.displayName || `Zone ${w.destinationMapId}`}</span>
+                        {w.faceDirection && (
+                          <span className="text-[10px] text-stone-500 dark:text-stone-500 uppercase tracking-wider">{w.faceDirection}</span>
+                        )}
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            </FormCard>
+          );
+        })()}
 
         {entry.type === 'overview' && (
           <FormCard title="Unova">
