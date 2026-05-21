@@ -1,0 +1,21 @@
+{
+  "mapId": "262",
+  "displayName": "Village Bridge",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 72,
+      "worldZ": 88,
+      "pixelX": 72,
+      "pixelY": 80,
+      "destinationMapId": "255",
+      "destinationLabel": "Zone 255",
+      "faceDirection": "NORTH",
+      "transitionType": 1
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": []
+}

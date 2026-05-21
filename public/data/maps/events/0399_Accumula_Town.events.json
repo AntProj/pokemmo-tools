@@ -1,0 +1,63 @@
+{
+  "mapId": "399",
+  "displayName": "Accumula Town",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 104,
+      "worldZ": 168,
+      "pixelX": 120,
+      "pixelY": 178,
+      "destinationMapId": "397",
+      "destinationLabel": "Zone 397",
+      "faceDirection": "NORTH",
+      "transitionType": 1
+    },
+    {
+      "id": "w1",
+      "worldX": 136,
+      "worldZ": 40,
+      "pixelX": 152,
+      "pixelY": 50,
+      "destinationMapId": "400",
+      "destinationLabel": "Zone 400",
+      "faceDirection": "WEST",
+      "transitionType": 2
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 152,
+      "worldZ": 88,
+      "pixelX": 168,
+      "pixelY": 98,
+      "spriteId": 26,
+      "spritePath": "data/trainers/sprites/0026.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n1",
+      "worldX": 72,
+      "worldZ": 72,
+      "pixelX": 88,
+      "pixelY": 82,
+      "spriteId": 21,
+      "spritePath": "data/trainers/sprites/0021.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n2",
+      "worldX": 56,
+      "worldZ": 120,
+      "pixelX": 72,
+      "pixelY": 130,
+      "spriteId": 8,
+      "spritePath": "data/trainers/sprites/0008.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}

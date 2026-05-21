@@ -1,0 +1,124 @@
+{
+  "mapId": "84",
+  "displayName": "Nimbasa City",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 168,
+      "worldZ": 312,
+      "pixelX": 123.98,
+      "pixelY": 318.99,
+      "destinationMapId": "62",
+      "destinationLabel": "Zone 62",
+      "faceDirection": "NORTH",
+      "transitionType": 1
+    },
+    {
+      "id": "w1",
+      "worldX": 184,
+      "worldZ": 24,
+      "pixelX": 140,
+      "pixelY": 30.63,
+      "destinationMapId": "85",
+      "destinationLabel": "Zone 85",
+      "faceDirection": "SOUTH",
+      "transitionType": 4
+    },
+    {
+      "id": "w2",
+      "worldX": 184,
+      "worldZ": 136,
+      "pixelX": 140,
+      "pixelY": 142.77,
+      "destinationMapId": "65535",
+      "destinationLabel": "Zone 65535",
+      "faceDirection": "SOUTH",
+      "transitionType": 5
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 280,
+      "worldZ": 264,
+      "pixelX": 236.12,
+      "pixelY": 270.93,
+      "spriteId": 61,
+      "spritePath": "data/trainers/sprites/0061.png",
+      "faceDirection": "WEST"
+    },
+    {
+      "id": "n1",
+      "worldX": 280,
+      "worldZ": 248,
+      "pixelX": 236.12,
+      "pixelY": 254.91,
+      "spriteId": 22,
+      "spritePath": "data/trainers/sprites/0022.png",
+      "faceDirection": "WEST"
+    },
+    {
+      "id": "n2",
+      "worldX": 120,
+      "worldZ": 216,
+      "pixelX": 75.92,
+      "pixelY": 222.87,
+      "spriteId": 83,
+      "spritePath": "data/trainers/sprites/0083.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n3",
+      "worldX": 216,
+      "worldZ": 152,
+      "pixelX": 172.04,
+      "pixelY": 158.79,
+      "spriteId": 162,
+      "spritePath": "data/trainers/sprites/0162.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n4",
+      "worldX": 168,
+      "worldZ": 152,
+      "pixelX": 123.98,
+      "pixelY": 158.79,
+      "spriteId": 72,
+      "spritePath": "data/trainers/sprites/0072.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n5",
+      "worldX": 184,
+      "worldZ": 152,
+      "pixelX": 140,
+      "pixelY": 158.79,
+      "spriteId": 72,
+      "spritePath": "data/trainers/sprites/0072.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n6",
+      "worldX": 200,
+      "worldZ": 152,
+      "pixelX": 156.02,
+      "pixelY": 158.79,
+      "spriteId": 72,
+      "spritePath": "data/trainers/sprites/0072.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n7",
+      "worldX": 184,
+      "worldZ": 232,
+      "pixelX": 140,
+      "pixelY": 238.89,
+      "spriteId": 76,
+      "spritePath": "data/trainers/sprites/0076.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "mapId": "76",
+  "displayName": "Battle Subway",
+  "warps": [],
+  "trainers": [],
+  "items": [],
+  "signs": [
+    {
+      "id": "s0",
+      "worldX": 752,
+      "worldZ": 240,
+      "pixelX": 880,
+      "pixelY": 176,
+      "signType": 6,
+      "textContent": null
+    }
+  ],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 200,
+      "worldZ": 216,
+      "pixelX": 328,
+      "pixelY": 152,
+      "spriteId": 68,
+      "spritePath": "data/trainers/sprites/0068.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n1",
+      "worldX": 408,
+      "worldZ": 216,
+      "pixelX": 536,
+      "pixelY": 152,
+      "spriteId": 68,
+      "spritePath": "data/trainers/sprites/0068.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n2",
+      "worldX": 328,
+      "worldZ": 248,
+      "pixelX": 456,
+      "pixelY": 184,
+      "spriteId": 162,
+      "spritePath": "data/trainers/sprites/0162.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}

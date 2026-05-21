@@ -57,20 +57,6 @@
       "worldRadius": 566.325927734375
     },
     {
-      "mapId": "152",
-      "displayName": "Dreamyard",
-      "centerWorldX": 540,
-      "centerWorldY": -424,
-      "worldRadius": 680
-    },
-    {
-      "mapId": "153",
-      "displayName": "Dreamyard",
-      "centerWorldX": 238,
-      "centerWorldY": -270,
-      "worldRadius": 334
-    },
-    {
       "mapId": "154",
       "displayName": "Pinwheel Forest",
       "centerWorldX": 9728,
@@ -78,249 +64,11 @@
       "worldRadius": 512
     },
     {
-      "mapId": "155",
-      "displayName": "Pinwheel Forest",
-      "centerWorldX": 1056,
-      "centerWorldY": -768,
-      "worldRadius": 1056
-    },
-    {
-      "mapId": "156",
-      "displayName": "Rumination Field",
-      "centerWorldX": 256,
-      "centerWorldY": -224,
-      "worldRadius": 288
-    },
-    {
       "mapId": "157",
       "displayName": "Desert Resort",
       "centerWorldX": 6144,
       "centerWorldY": -7972,
       "worldRadius": 512
-    },
-    {
-      "mapId": "158",
-      "displayName": "Desert Resort",
-      "centerWorldX": 768,
-      "centerWorldY": -768,
-      "worldRadius": 768
-    },
-    {
-      "mapId": "160",
-      "displayName": "Relic Castle",
-      "centerWorldX": 255,
-      "centerWorldY": -252,
-      "worldRadius": 196
-    },
-    {
-      "mapId": "161",
-      "displayName": "Relic Castle",
-      "centerWorldX": 296,
-      "centerWorldY": -204,
-      "worldRadius": 186
-    },
-    {
-      "mapId": "162",
-      "displayName": "Relic Castle",
-      "centerWorldX": 248,
-      "centerWorldY": -252,
-      "worldRadius": 180
-    },
-    {
-      "mapId": "163",
-      "displayName": "Relic Castle",
-      "centerWorldX": 257,
-      "centerWorldY": -252,
-      "worldRadius": 241
-    },
-    {
-      "mapId": "164",
-      "displayName": "Relic Castle",
-      "centerWorldX": 264,
-      "centerWorldY": -260,
-      "worldRadius": 220
-    },
-    {
-      "mapId": "165",
-      "displayName": "Relic Castle",
-      "centerWorldX": 240,
-      "centerWorldY": -277,
-      "worldRadius": 205
-    },
-    {
-      "mapId": "166",
-      "displayName": "Relic Castle",
-      "centerWorldX": 302.25,
-      "centerWorldY": -228,
-      "worldRadius": 172
-    },
-    {
-      "mapId": "167",
-      "displayName": "Relic Castle",
-      "centerWorldX": 104,
-      "centerWorldY": -136.5,
-      "worldRadius": 171
-    },
-    {
-      "mapId": "168",
-      "displayName": "Relic Castle",
-      "centerWorldX": 104,
-      "centerWorldY": -136.5,
-      "worldRadius": 171
-    },
-    {
-      "mapId": "169",
-      "displayName": "Relic Castle",
-      "centerWorldX": 104,
-      "centerWorldY": -136.5,
-      "worldRadius": 171
-    },
-    {
-      "mapId": "170",
-      "displayName": "Relic Castle",
-      "centerWorldX": 104,
-      "centerWorldY": -136.5,
-      "worldRadius": 171
-    },
-    {
-      "mapId": "171",
-      "displayName": "Relic Castle",
-      "centerWorldX": 104,
-      "centerWorldY": -136.5,
-      "worldRadius": 171
-    },
-    {
-      "mapId": "172",
-      "displayName": "Relic Castle",
-      "centerWorldX": 104,
-      "centerWorldY": -136.5,
-      "worldRadius": 171
-    },
-    {
-      "mapId": "173",
-      "displayName": "Relic Castle",
-      "centerWorldX": 104,
-      "centerWorldY": -136.5,
-      "worldRadius": 171
-    },
-    {
-      "mapId": "174",
-      "displayName": "Relic Castle",
-      "centerWorldX": 104,
-      "centerWorldY": -136.5,
-      "worldRadius": 171
-    },
-    {
-      "mapId": "175",
-      "displayName": "Relic Castle",
-      "centerWorldX": 104,
-      "centerWorldY": -136.5,
-      "worldRadius": 171
-    },
-    {
-      "mapId": "176",
-      "displayName": "Relic Castle",
-      "centerWorldX": 104,
-      "centerWorldY": -136.5,
-      "worldRadius": 171
-    },
-    {
-      "mapId": "177",
-      "displayName": "Relic Castle",
-      "centerWorldX": 104,
-      "centerWorldY": -136,
-      "worldRadius": 171
-    },
-    {
-      "mapId": "178",
-      "displayName": "Relic Castle",
-      "centerWorldX": 104,
-      "centerWorldY": -136,
-      "worldRadius": 171
-    },
-    {
-      "mapId": "179",
-      "displayName": "Relic Castle",
-      "centerWorldX": 104.5,
-      "centerWorldY": -136,
-      "worldRadius": 170.5
-    },
-    {
-      "mapId": "180",
-      "displayName": "Relic Castle",
-      "centerWorldX": 104.5,
-      "centerWorldY": -136,
-      "worldRadius": 170.5
-    },
-    {
-      "mapId": "181",
-      "displayName": "Relic Castle",
-      "centerWorldX": 104,
-      "centerWorldY": -136,
-      "worldRadius": 171
-    },
-    {
-      "mapId": "182",
-      "displayName": "Relic Castle",
-      "centerWorldX": 264.5,
-      "centerWorldY": -244,
-      "worldRadius": 276
-    },
-    {
-      "mapId": "183",
-      "displayName": "Relic Castle",
-      "centerWorldX": 265.76171875,
-      "centerWorldY": -275,
-      "worldRadius": 173
-    },
-    {
-      "mapId": "184",
-      "displayName": "Relic Castle",
-      "centerWorldX": 216,
-      "centerWorldY": -301.62890625,
-      "worldRadius": 139
-    },
-    {
-      "mapId": "185",
-      "displayName": "Relic Castle",
-      "centerWorldX": 216,
-      "centerWorldY": -300,
-      "worldRadius": 138
-    },
-    {
-      "mapId": "186",
-      "displayName": "Relic Castle",
-      "centerWorldX": 216,
-      "centerWorldY": -300,
-      "worldRadius": 138
-    },
-    {
-      "mapId": "187",
-      "displayName": "Relic Castle",
-      "centerWorldX": 248,
-      "centerWorldY": -228,
-      "worldRadius": 138
-    },
-    {
-      "mapId": "188",
-      "displayName": "Relic Castle",
-      "centerWorldX": 248,
-      "centerWorldY": -228,
-      "worldRadius": 138
-    },
-    {
-      "mapId": "189",
-      "displayName": "Relic Castle",
-      "centerWorldX": 248,
-      "centerWorldY": -228,
-      "worldRadius": 138
-    },
-    {
-      "mapId": "190",
-      "displayName": "Relic Castle",
-      "centerWorldX": 248,
-      "centerWorldY": -264,
-      "worldRadius": 160
     },
     {
       "mapId": "191",
@@ -337,74 +85,11 @@
       "worldRadius": 257.75
     },
     {
-      "mapId": "195",
-      "displayName": "Chargestone Cave",
-      "centerWorldX": 680,
-      "centerWorldY": -548,
-      "worldRadius": 648
-    },
-    {
-      "mapId": "196",
-      "displayName": "Chargestone Cave",
-      "centerWorldX": 640.0078125,
-      "centerWorldY": -522,
-      "worldRadius": 522
-    },
-    {
-      "mapId": "197",
-      "displayName": "Chargestone Cave",
-      "centerWorldX": 264,
-      "centerWorldY": -488,
-      "worldRadius": 504
-    },
-    {
       "mapId": "198",
       "displayName": "Twist Mountain",
       "centerWorldX": 2300,
       "centerWorldY": -3332,
       "worldRadius": 260
-    },
-    {
-      "mapId": "199",
-      "displayName": "Twist Mountain",
-      "centerWorldX": 512,
-      "centerWorldY": -528,
-      "worldRadius": 512
-    },
-    {
-      "mapId": "200",
-      "displayName": "Twist Mountain",
-      "centerWorldX": 490,
-      "centerWorldY": -536,
-      "worldRadius": 630
-    },
-    {
-      "mapId": "201",
-      "displayName": "Twist Mountain",
-      "centerWorldX": 478,
-      "centerWorldY": -514,
-      "worldRadius": 598
-    },
-    {
-      "mapId": "202",
-      "displayName": "Twist Mountain",
-      "centerWorldX": 480,
-      "centerWorldY": -484,
-      "worldRadius": 660
-    },
-    {
-      "mapId": "203",
-      "displayName": "Twist Mountain",
-      "centerWorldX": 256,
-      "centerWorldY": -216,
-      "worldRadius": 360
-    },
-    {
-      "mapId": "204",
-      "displayName": "Twist Mountain",
-      "centerWorldX": 72,
-      "centerWorldY": -92,
-      "worldRadius": 84
     },
     {
       "mapId": "205",
@@ -414,111 +99,6 @@
       "worldRadius": 256
     },
     {
-      "mapId": "214",
-      "displayName": "Victory Road",
-      "centerWorldX": 528.53125,
-      "centerWorldY": -239.99996948242193,
-      "worldRadius": 1142.15625
-    },
-    {
-      "mapId": "215",
-      "displayName": "Victory Road",
-      "centerWorldX": 184,
-      "centerWorldY": -368,
-      "worldRadius": 368
-    },
-    {
-      "mapId": "216",
-      "displayName": "Victory Road",
-      "centerWorldX": 184,
-      "centerWorldY": -184,
-      "worldRadius": 200
-    },
-    {
-      "mapId": "217",
-      "displayName": "Victory Road",
-      "centerWorldX": 152,
-      "centerWorldY": -168,
-      "worldRadius": 184
-    },
-    {
-      "mapId": "218",
-      "displayName": "Victory Road",
-      "centerWorldX": 120,
-      "centerWorldY": -144,
-      "worldRadius": 144
-    },
-    {
-      "mapId": "219",
-      "displayName": "Victory Road",
-      "centerWorldX": 128,
-      "centerWorldY": -160,
-      "worldRadius": 192
-    },
-    {
-      "mapId": "220",
-      "displayName": "Victory Road",
-      "centerWorldX": 124,
-      "centerWorldY": -248,
-      "worldRadius": 248
-    },
-    {
-      "mapId": "221",
-      "displayName": "Victory Road",
-      "centerWorldX": 120,
-      "centerWorldY": -128,
-      "worldRadius": 128
-    },
-    {
-      "mapId": "222",
-      "displayName": "Victory Road",
-      "centerWorldX": 256,
-      "centerWorldY": -143.99998474121094,
-      "worldRadius": 464
-    },
-    {
-      "mapId": "223",
-      "displayName": "Victory Road",
-      "centerWorldX": 160,
-      "centerWorldY": -216,
-      "worldRadius": 216
-    },
-    {
-      "mapId": "224",
-      "displayName": "Victory Road",
-      "centerWorldX": 176,
-      "centerWorldY": -208,
-      "worldRadius": 208
-    },
-    {
-      "mapId": "225",
-      "displayName": "Victory Road",
-      "centerWorldX": 96,
-      "centerWorldY": -176,
-      "worldRadius": 208
-    },
-    {
-      "mapId": "226",
-      "displayName": "Victory Road",
-      "centerWorldX": 232,
-      "centerWorldY": -240,
-      "worldRadius": 232
-    },
-    {
-      "mapId": "227",
-      "displayName": "Victory Road",
-      "centerWorldX": 232,
-      "centerWorldY": -488,
-      "worldRadius": 360
-    },
-    {
-      "mapId": "228",
-      "displayName": "Victory Road",
-      "centerWorldX": 152,
-      "centerWorldY": -128,
-      "worldRadius": 152
-    },
-    {
       "mapId": "230",
       "displayName": "Giant Chasm",
       "centerWorldX": 11008,
@@ -526,53 +106,11 @@
       "worldRadius": 337
     },
     {
-      "mapId": "231",
-      "displayName": "Giant Chasm",
-      "centerWorldX": 512,
-      "centerWorldY": -536,
-      "worldRadius": 552
-    },
-    {
-      "mapId": "232",
-      "displayName": "Giant Chasm",
-      "centerWorldX": 768,
-      "centerWorldY": -768,
-      "worldRadius": 768
-    },
-    {
-      "mapId": "233",
-      "displayName": "Giant Chasm",
-      "centerWorldX": 768,
-      "centerWorldY": -768,
-      "worldRadius": 768
-    },
-    {
-      "mapId": "234",
-      "displayName": "Giant Chasm",
-      "centerWorldX": 280,
-      "centerWorldY": -280,
-      "worldRadius": 296
-    },
-    {
       "mapId": "235",
       "displayName": "Liberty Garden",
       "centerWorldX": 4896,
       "centerWorldY": -11872,
       "worldRadius": 736
-    },
-    {
-      "mapId": "236",
-      "displayName": "Liberty Garden",
-      "centerWorldX": 136,
-      "centerWorldY": -201.72654724121094,
-      "worldRadius": 206.22657775878906
-    },
-    {
-      "mapId": "237",
-      "displayName": "Liberty Garden",
-      "centerWorldX": 65.2578125,
-      "centerWorldY": -110.64842987060547,
-      "worldRadius": 114.46094512939453
     },
     {
       "mapId": "238",
@@ -587,146 +125,6 @@
       "centerWorldX": 12776,
       "centerWorldY": -4608,
       "worldRadius": 536
-    },
-    {
-      "mapId": "241",
-      "displayName": "Abyssal Ruins",
-      "centerWorldX": 256,
-      "centerWorldY": -255.99998474121094,
-      "worldRadius": 728.53125
-    },
-    {
-      "mapId": "242",
-      "displayName": "Abyssal Ruins",
-      "centerWorldX": 256,
-      "centerWorldY": -255.99998474121094,
-      "worldRadius": 728.53125
-    },
-    {
-      "mapId": "243",
-      "displayName": "Abyssal Ruins",
-      "centerWorldX": 256,
-      "centerWorldY": -255.99998474121094,
-      "worldRadius": 728.53125
-    },
-    {
-      "mapId": "244",
-      "displayName": "Abyssal Ruins",
-      "centerWorldX": 256,
-      "centerWorldY": -255.99998474121094,
-      "worldRadius": 728.53125
-    },
-    {
-      "mapId": "245",
-      "displayName": "Abyssal Ruins",
-      "centerWorldX": 1192,
-      "centerWorldY": -1376,
-      "worldRadius": 1280
-    },
-    {
-      "mapId": "246",
-      "displayName": "Abyssal Ruins",
-      "centerWorldX": 536,
-      "centerWorldY": -528,
-      "worldRadius": 584
-    },
-    {
-      "mapId": "247",
-      "displayName": "Abyssal Ruins",
-      "centerWorldX": 440,
-      "centerWorldY": -432,
-      "worldRadius": 488
-    },
-    {
-      "mapId": "248",
-      "displayName": "Abyssal Ruins",
-      "centerWorldX": 216,
-      "centerWorldY": -224,
-      "worldRadius": 344
-    },
-    {
-      "mapId": "280",
-      "displayName": "Entree Forest",
-      "centerWorldX": 256,
-      "centerWorldY": -272,
-      "worldRadius": 336
-    },
-    {
-      "mapId": "281",
-      "displayName": "Entree Forest",
-      "centerWorldX": 256,
-      "centerWorldY": -272,
-      "worldRadius": 336
-    },
-    {
-      "mapId": "282",
-      "displayName": "Entree Forest",
-      "centerWorldX": 256,
-      "centerWorldY": -272,
-      "worldRadius": 336
-    },
-    {
-      "mapId": "283",
-      "displayName": "Entree Forest",
-      "centerWorldX": 256,
-      "centerWorldY": -272,
-      "worldRadius": 336
-    },
-    {
-      "mapId": "284",
-      "displayName": "Entree Forest",
-      "centerWorldX": 256,
-      "centerWorldY": -272,
-      "worldRadius": 336
-    },
-    {
-      "mapId": "285",
-      "displayName": "Entree Forest",
-      "centerWorldX": 256,
-      "centerWorldY": -272,
-      "worldRadius": 336
-    },
-    {
-      "mapId": "286",
-      "displayName": "Entree Forest",
-      "centerWorldX": 256,
-      "centerWorldY": -272,
-      "worldRadius": 336
-    },
-    {
-      "mapId": "287",
-      "displayName": "Entree Forest",
-      "centerWorldX": 256,
-      "centerWorldY": -272,
-      "worldRadius": 336
-    },
-    {
-      "mapId": "288",
-      "displayName": "Entree Forest",
-      "centerWorldX": 256,
-      "centerWorldY": -272,
-      "worldRadius": 336
-    },
-    {
-      "mapId": "295",
-      "displayName": "White Forest",
-      "centerWorldX": 512,
-      "centerWorldY": -455.71875,
-      "worldRadius": 832
-    },
-    {
-      "mapId": "297",
-      "displayName": "Chargestone Cave",
-      "centerWorldX": 1792,
-      "centerWorldY": -5377.75,
-      "worldRadius": 257.75
-    },
-    {
-      "mapId": "298",
-      "displayName": "Twist Mountain",
-      "centerWorldX": 2300,
-      "centerWorldY": -3332,
-      "worldRadius": 260
     },
     {
       "mapId": "317",
@@ -750,20 +148,6 @@
       "worldRadius": 788
     },
     {
-      "mapId": "324",
-      "displayName": "Wellspring Cave",
-      "centerWorldX": 336,
-      "centerWorldY": -216,
-      "worldRadius": 360
-    },
-    {
-      "mapId": "325",
-      "displayName": "Wellspring Cave",
-      "centerWorldX": 256,
-      "centerWorldY": -536,
-      "worldRadius": 552
-    },
-    {
       "mapId": "326",
       "displayName": "Route 4",
       "centerWorldX": 6672,
@@ -785,20 +169,6 @@
       "worldRadius": 520
     },
     {
-      "mapId": "333",
-      "displayName": "Mistralton Cave",
-      "centerWorldX": 248,
-      "centerWorldY": -264,
-      "worldRadius": 392
-    },
-    {
-      "mapId": "334",
-      "displayName": "Mistralton Cave",
-      "centerWorldX": 264,
-      "centerWorldY": -240,
-      "worldRadius": 424
-    },
-    {
       "mapId": "337",
       "displayName": "Route 7",
       "centerWorldX": 2021.5,
@@ -813,39 +183,11 @@
       "worldRadius": 528
     },
     {
-      "mapId": "346",
-      "displayName": "Moor of Icirrus",
-      "centerWorldX": 448,
-      "centerWorldY": -512,
-      "worldRadius": 576
-    },
-    {
       "mapId": "348",
       "displayName": "Route 9",
       "centerWorldX": 5652,
       "centerWorldY": -2752,
       "worldRadius": 532
-    },
-    {
-      "mapId": "352",
-      "displayName": "Challenger's Cave",
-      "centerWorldX": 224,
-      "centerWorldY": -336,
-      "worldRadius": 240
-    },
-    {
-      "mapId": "353",
-      "displayName": "Challenger's Cave",
-      "centerWorldX": 272,
-      "centerWorldY": -240,
-      "worldRadius": 400
-    },
-    {
-      "mapId": "354",
-      "displayName": "Challenger's Cave",
-      "centerWorldX": 496,
-      "centerWorldY": -544,
-      "worldRadius": 560
     },
     {
       "mapId": "355",
@@ -883,20 +225,6 @@
       "worldRadius": 772
     },
     {
-      "mapId": "376",
-      "displayName": "Abundant Shrine",
-      "centerWorldX": 464,
-      "centerWorldY": -512,
-      "worldRadius": 560
-    },
-    {
-      "mapId": "377",
-      "displayName": "Abundant Shrine",
-      "centerWorldX": 88,
-      "centerWorldY": -84,
-      "worldRadius": 91
-    },
-    {
       "mapId": "378",
       "displayName": "Route 15",
       "centerWorldX": 9752,
@@ -909,20 +237,6 @@
       "centerWorldX": 7660,
       "centerWorldY": -6904,
       "worldRadius": 532
-    },
-    {
-      "mapId": "385",
-      "displayName": "Lostlorn Forest",
-      "centerWorldX": 352,
-      "centerWorldY": -512,
-      "worldRadius": 512
-    },
-    {
-      "mapId": "386",
-      "displayName": "Lostlorn Forest",
-      "centerWorldX": 81.5,
-      "centerWorldY": -58,
-      "worldRadius": 81.5
     },
     {
       "mapId": "387",
@@ -965,27 +279,6 @@
       "centerWorldX": 11260,
       "centerWorldY": -11768,
       "worldRadius": 524
-    },
-    {
-      "mapId": "424",
-      "displayName": "White Forest",
-      "centerWorldX": 512,
-      "centerWorldY": -455.71875,
-      "worldRadius": 832
-    },
-    {
-      "mapId": "425",
-      "displayName": "White Forest",
-      "centerWorldX": 120,
-      "centerWorldY": -158,
-      "worldRadius": 178
-    },
-    {
-      "mapId": "426",
-      "displayName": "White Forest",
-      "centerWorldX": 104,
-      "centerWorldY": -83,
-      "worldRadius": 107
     }
   ]
 }

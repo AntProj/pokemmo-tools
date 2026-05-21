@@ -1,0 +1,43 @@
+{
+  "mapId": "356",
+  "displayName": "Route 10",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 232,
+      "worldZ": 408,
+      "pixelX": 240,
+      "pixelY": 608.68,
+      "destinationMapId": "355",
+      "destinationLabel": "Zone 355",
+      "faceDirection": "NORTH",
+      "transitionType": 4
+    },
+    {
+      "id": "w1",
+      "worldX": 216,
+      "worldZ": 120,
+      "pixelX": 224.01,
+      "pixelY": 320.73,
+      "destinationMapId": "357",
+      "destinationLabel": "Zone 357",
+      "faceDirection": "SOUTH",
+      "transitionType": 4
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 312,
+      "worldZ": 136,
+      "pixelX": 319.99,
+      "pixelY": 336.73,
+      "spriteId": 32,
+      "spritePath": "data/trainers/sprites/0032.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}

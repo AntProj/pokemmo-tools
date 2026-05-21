@@ -1,0 +1,143 @@
+{
+  "mapId": "263",
+  "displayName": "Marvelous Bridge",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 232,
+      "worldZ": 504,
+      "pixelX": 420,
+      "pixelY": 1016,
+      "destinationMapId": "384",
+      "destinationLabel": "Zone 384",
+      "faceDirection": "SOUTH",
+      "transitionType": 3
+    },
+    {
+      "id": "w1",
+      "worldX": 2584,
+      "worldZ": 504,
+      "pixelX": 2772,
+      "pixelY": 1016,
+      "destinationMapId": "380",
+      "destinationLabel": "Zone 380",
+      "faceDirection": "SOUTH",
+      "transitionType": 3
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 1016,
+      "worldZ": 504,
+      "pixelX": 1204,
+      "pixelY": 1016,
+      "spriteId": 182,
+      "spritePath": "data/trainers/sprites/0182.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n1",
+      "worldX": 1016,
+      "worldZ": 520,
+      "pixelX": 1204,
+      "pixelY": 1032,
+      "spriteId": 182,
+      "spritePath": "data/trainers/sprites/0182.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n2",
+      "worldX": 1016,
+      "worldZ": 536,
+      "pixelX": 1204,
+      "pixelY": 1048,
+      "spriteId": 182,
+      "spritePath": "data/trainers/sprites/0182.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n3",
+      "worldX": 2376,
+      "worldZ": 584,
+      "pixelX": 2564,
+      "pixelY": 1096,
+      "spriteId": 15,
+      "spritePath": "data/trainers/sprites/0015.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n4",
+      "worldX": 2344,
+      "worldZ": 584,
+      "pixelX": 2532,
+      "pixelY": 1096,
+      "spriteId": 20,
+      "spritePath": "data/trainers/sprites/0020.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n5",
+      "worldX": 616,
+      "worldZ": 504,
+      "pixelX": 804,
+      "pixelY": 1016,
+      "spriteId": 24,
+      "spritePath": "data/trainers/sprites/0024.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n6",
+      "worldX": 1672,
+      "worldZ": 504,
+      "pixelX": 1860,
+      "pixelY": 1016,
+      "spriteId": 22,
+      "spritePath": "data/trainers/sprites/0022.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n7",
+      "worldX": 1688,
+      "worldZ": 504,
+      "pixelX": 1876,
+      "pixelY": 1016,
+      "spriteId": 128,
+      "spritePath": "data/trainers/sprites/0128.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n8",
+      "worldX": 1704,
+      "worldZ": 504,
+      "pixelX": 1892,
+      "pixelY": 1016,
+      "spriteId": 128,
+      "spritePath": "data/trainers/sprites/0128.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n9",
+      "worldX": 1720,
+      "worldZ": 504,
+      "pixelX": 1908,
+      "pixelY": 1016,
+      "spriteId": 128,
+      "spritePath": "data/trainers/sprites/0128.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n10",
+      "worldX": 1736,
+      "worldZ": 504,
+      "pixelX": 1924,
+      "pixelY": 1016,
+      "spriteId": 128,
+      "spritePath": "data/trainers/sprites/0128.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}

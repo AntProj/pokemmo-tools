@@ -1,0 +1,24 @@
+{
+  "imageWidth": 368,
+  "imageHeight": 471,
+  "pixelsPerUnit": 1,
+  "cameraX": 248,
+  "cameraY": -228.5,
+  "cameraZ": 1663,
+  "orthoScaleNative": 471,
+  "worldBounds": {
+    "minX": 64,
+    "maxX": 432,
+    "minY": -464,
+    "maxY": 7
+  },
+  "geometryBounds": {
+    "minX": 64,
+    "maxX": 432,
+    "minY": -464,
+    "maxY": 7.000014305114746,
+    "minZ": -20,
+    "maxZ": 192.00003051757812
+  },
+  "note": "Convert world (X,Y) to PNG pixel: px = (X - worldBounds.minX) / (worldBounds.maxX - worldBounds.minX) * imageWidth; py = imageHeight - (Y - worldBounds.minY) / (worldBounds.maxY - worldBounds.minY) * imageHeight"
+}

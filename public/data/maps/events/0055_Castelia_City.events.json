@@ -1,0 +1,49 @@
+{
+  "mapId": "55",
+  "displayName": "Castelia City",
+  "warps": [],
+  "trainers": [],
+  "items": [],
+  "signs": [
+    {
+      "id": "s0",
+      "worldX": 96,
+      "worldZ": 16,
+      "pixelX": 104.2,
+      "pixelY": 19,
+      "signType": 0,
+      "textContent": null
+    },
+    {
+      "id": "s1",
+      "worldX": 112,
+      "worldZ": 16,
+      "pixelX": 120.23,
+      "pixelY": 19,
+      "signType": 0,
+      "textContent": null
+    }
+  ],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 120,
+      "worldZ": 200,
+      "pixelX": 128.25,
+      "pixelY": 203.36,
+      "spriteId": 20,
+      "spritePath": "data/trainers/sprites/0020.png",
+      "faceDirection": "WEST"
+    },
+    {
+      "id": "n1",
+      "worldX": 104,
+      "worldZ": 216,
+      "pixelX": 112.22,
+      "pixelY": 219.39,
+      "spriteId": 64,
+      "spritePath": "data/trainers/sprites/0064.png",
+      "faceDirection": "SOUTH"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "mapId": "360",
+  "displayName": "Route 10",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 216,
+      "worldZ": 344,
+      "pixelX": 224.02,
+      "pixelY": 544.07,
+      "destinationMapId": "359",
+      "destinationLabel": "Zone 359",
+      "faceDirection": "NORTH",
+      "transitionType": 4
+    },
+    {
+      "id": "w1",
+      "worldX": 216,
+      "worldZ": 120,
+      "pixelX": 224.02,
+      "pixelY": 320.19,
+      "destinationMapId": "361",
+      "destinationLabel": "Zone 361",
+      "faceDirection": "SOUTH",
+      "transitionType": 4
+    },
+    {
+      "id": "w2",
+      "worldX": 264,
+      "worldZ": 120,
+      "pixelX": 271.99,
+      "pixelY": 320.19,
+      "destinationMapId": "361",
+      "destinationLabel": "Zone 361",
+      "faceDirection": "SOUTH",
+      "transitionType": 4
+    },
+    {
+      "id": "w3",
+      "worldX": 280,
+      "worldZ": 120,
+      "pixelX": 287.98,
+      "pixelY": 320.19,
+      "destinationMapId": "361",
+      "destinationLabel": "Zone 361",
+      "faceDirection": "SOUTH",
+      "transitionType": 4
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 312,
+      "worldZ": 136,
+      "pixelX": 319.97,
+      "pixelY": 336.18,
+      "spriteId": 32,
+      "spritePath": "data/trainers/sprites/0032.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n1",
+      "worldX": 232,
+      "worldZ": 168,
+      "pixelX": 240.01,
+      "pixelY": 368.16,
+      "spriteId": 30,
+      "spritePath": "data/trainers/sprites/0030.png",
+      "faceDirection": "SOUTH"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "mapId": "249",
+  "displayName": "Skyarrow Bridge",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 1804,
+      "pixelY": 720,
+      "destinationMapId": "251",
+      "destinationLabel": "Zone 251",
+      "faceDirection": "NORTH",
+      "transitionType": 4
+    },
+    {
+      "id": "w1",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 1804,
+      "pixelY": 720,
+      "destinationMapId": "252",
+      "destinationLabel": "Zone 252",
+      "faceDirection": "SOUTH",
+      "transitionType": 4
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 1804,
+      "pixelY": 720,
+      "spriteId": 15,
+      "spritePath": "data/trainers/sprites/0015.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n1",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 1804,
+      "pixelY": 720,
+      "spriteId": 30,
+      "spritePath": "data/trainers/sprites/0030.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n2",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 1804,
+      "pixelY": 720,
+      "spriteId": 31,
+      "spritePath": "data/trainers/sprites/0031.png",
+      "faceDirection": "SOUTH"
+    }
+  ]
+}

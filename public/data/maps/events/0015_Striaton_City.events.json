@@ -1,0 +1,155 @@
+{
+  "mapId": "15",
+  "displayName": "Striaton City",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 120,
+      "worldZ": 248,
+      "pixelX": 120,
+      "pixelY": 256,
+      "destinationMapId": "6",
+      "destinationLabel": "Zone 6",
+      "faceDirection": "NORTH",
+      "transitionType": 1
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [
+    {
+      "id": "s0",
+      "worldX": 48,
+      "worldZ": 16,
+      "pixelX": 48,
+      "pixelY": 24,
+      "signType": 0,
+      "textContent": null
+    },
+    {
+      "id": "s1",
+      "worldX": 96,
+      "worldZ": 16,
+      "pixelX": 96,
+      "pixelY": 24,
+      "signType": 0,
+      "textContent": null
+    },
+    {
+      "id": "s2",
+      "worldX": 80,
+      "worldZ": 16,
+      "pixelX": 80,
+      "pixelY": 24,
+      "signType": 0,
+      "textContent": null
+    },
+    {
+      "id": "s3",
+      "worldX": 64,
+      "worldZ": 16,
+      "pixelX": 64,
+      "pixelY": 24,
+      "signType": 0,
+      "textContent": null
+    },
+    {
+      "id": "s4",
+      "worldX": 112,
+      "worldZ": 16,
+      "pixelX": 112,
+      "pixelY": 24,
+      "signType": 0,
+      "textContent": null
+    },
+    {
+      "id": "s5",
+      "worldX": 128,
+      "worldZ": 16,
+      "pixelX": 128,
+      "pixelY": 24,
+      "signType": 0,
+      "textContent": null
+    },
+    {
+      "id": "s6",
+      "worldX": 160,
+      "worldZ": 16,
+      "pixelX": 160,
+      "pixelY": 24,
+      "signType": 0,
+      "textContent": null
+    },
+    {
+      "id": "s7",
+      "worldX": 144,
+      "worldZ": 16,
+      "pixelX": 144,
+      "pixelY": 24,
+      "signType": 0,
+      "textContent": null
+    }
+  ],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 104,
+      "worldZ": 200,
+      "pixelX": 104,
+      "pixelY": 208,
+      "spriteId": 44,
+      "spritePath": "data/trainers/sprites/0044.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n1",
+      "worldX": 88,
+      "worldZ": 120,
+      "pixelX": 88,
+      "pixelY": 128,
+      "spriteId": 30,
+      "spritePath": "data/trainers/sprites/0030.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n2",
+      "worldX": 184,
+      "worldZ": 88,
+      "pixelX": 184,
+      "pixelY": 96,
+      "spriteId": 12,
+      "spritePath": "data/trainers/sprites/0012.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n3",
+      "worldX": 168,
+      "worldZ": 168,
+      "pixelX": 168,
+      "pixelY": 176,
+      "spriteId": 14,
+      "spritePath": "data/trainers/sprites/0014.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n4",
+      "worldX": 200,
+      "worldZ": 136,
+      "pixelX": 200,
+      "pixelY": 144,
+      "spriteId": 11,
+      "spritePath": "data/trainers/sprites/0011.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n5",
+      "worldX": 152,
+      "worldZ": 40,
+      "pixelX": 152,
+      "pixelY": 48,
+      "spriteId": 7,
+      "spritePath": "data/trainers/sprites/0007.png",
+      "faceDirection": "SOUTH"
+    }
+  ]
+}

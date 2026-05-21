@@ -1,0 +1,149 @@
+{
+  "mapId": "61",
+  "displayName": "Castelia City",
+  "warps": [],
+  "trainers": [],
+  "items": [],
+  "signs": [
+    {
+      "id": "s0",
+      "worldX": 96,
+      "worldZ": 16,
+      "pixelX": 104.2,
+      "pixelY": 19,
+      "signType": 0,
+      "textContent": null
+    },
+    {
+      "id": "s1",
+      "worldX": 112,
+      "worldZ": 16,
+      "pixelX": 120.23,
+      "pixelY": 19,
+      "signType": 0,
+      "textContent": null
+    }
+  ],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 104,
+      "worldZ": 56,
+      "pixelX": 112.22,
+      "pixelY": 59.08,
+      "spriteId": 44,
+      "spritePath": "data/trainers/sprites/0044.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n1",
+      "worldX": 56,
+      "worldZ": 72,
+      "pixelX": 64.13,
+      "pixelY": 75.11,
+      "spriteId": 20,
+      "spritePath": "data/trainers/sprites/0020.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n2",
+      "worldX": 56,
+      "worldZ": 88,
+      "pixelX": 64.13,
+      "pixelY": 91.14,
+      "spriteId": 25,
+      "spritePath": "data/trainers/sprites/0025.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n3",
+      "worldX": 200,
+      "worldZ": 56,
+      "pixelX": 208.41,
+      "pixelY": 59.08,
+      "spriteId": 55,
+      "spritePath": "data/trainers/sprites/0055.png",
+      "faceDirection": "WEST"
+    },
+    {
+      "id": "n4",
+      "worldX": 136,
+      "worldZ": 184,
+      "pixelX": 144.28,
+      "pixelY": 187.33,
+      "spriteId": 16,
+      "spritePath": "data/trainers/sprites/0016.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n5",
+      "worldX": 40,
+      "worldZ": 136,
+      "pixelX": 48.09,
+      "pixelY": 139.24,
+      "spriteId": 22,
+      "spritePath": "data/trainers/sprites/0022.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n6",
+      "worldX": 56,
+      "worldZ": 136,
+      "pixelX": 64.13,
+      "pixelY": 139.24,
+      "spriteId": 22,
+      "spritePath": "data/trainers/sprites/0022.png",
+      "faceDirection": "WEST"
+    },
+    {
+      "id": "n7",
+      "worldX": 56,
+      "worldZ": 184,
+      "pixelX": 64.13,
+      "pixelY": 187.33,
+      "spriteId": 37,
+      "spritePath": "data/trainers/sprites/0037.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n8",
+      "worldX": 184,
+      "worldZ": 184,
+      "pixelX": 192.38,
+      "pixelY": 187.33,
+      "spriteId": 30,
+      "spritePath": "data/trainers/sprites/0030.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n9",
+      "worldX": 216,
+      "worldZ": 184,
+      "pixelX": 224.44,
+      "pixelY": 187.33,
+      "spriteId": 47,
+      "spritePath": "data/trainers/sprites/0047.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n10",
+      "worldX": 168,
+      "worldZ": 216,
+      "pixelX": 176.34,
+      "pixelY": 219.39,
+      "spriteId": 36,
+      "spritePath": "data/trainers/sprites/0036.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n11",
+      "worldX": 200,
+      "worldZ": 216,
+      "pixelX": 208.41,
+      "pixelY": 219.39,
+      "spriteId": 13,
+      "spritePath": "data/trainers/sprites/0013.png",
+      "faceDirection": "WEST"
+    }
+  ]
+}

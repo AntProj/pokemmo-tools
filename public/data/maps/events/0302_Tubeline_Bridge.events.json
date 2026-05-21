@@ -1,0 +1,32 @@
+{
+  "mapId": "302",
+  "displayName": "Tubeline Bridge",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 248,
+      "worldZ": 2536,
+      "pixelX": 1272,
+      "pixelY": 2952,
+      "destinationMapId": "307",
+      "destinationLabel": "Zone 307",
+      "faceDirection": "NORTH",
+      "transitionType": 6
+    },
+    {
+      "id": "w1",
+      "worldX": 248,
+      "worldZ": 536,
+      "pixelX": 1272,
+      "pixelY": 952,
+      "destinationMapId": "308",
+      "destinationLabel": "Zone 308",
+      "faceDirection": "ANY",
+      "transitionType": 6
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": []
+}

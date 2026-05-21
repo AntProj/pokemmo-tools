@@ -1,0 +1,19 @@
+{
+  "mapId": "305",
+  "displayName": "Route 6",
+  "warps": [],
+  "trainers": [],
+  "items": [],
+  "signs": [
+    {
+      "id": "s0",
+      "worldX": 2512,
+      "worldZ": 6464,
+      "pixelX": 984,
+      "pixelY": 832,
+      "signType": 4,
+      "textContent": null
+    }
+  ],
+  "npcs": []
+}

@@ -1,0 +1,109 @@
+{
+  "mapId": "45",
+  "displayName": "Castelia City",
+  "warps": [],
+  "trainers": [],
+  "items": [],
+  "signs": [
+    {
+      "id": "s0",
+      "worldX": 96,
+      "worldZ": 16,
+      "pixelX": 104.2,
+      "pixelY": 19,
+      "signType": 0,
+      "textContent": null
+    },
+    {
+      "id": "s1",
+      "worldX": 112,
+      "worldZ": 16,
+      "pixelX": 120.23,
+      "pixelY": 19,
+      "signType": 0,
+      "textContent": null
+    }
+  ],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 88,
+      "worldZ": 120,
+      "pixelX": 96.19,
+      "pixelY": 123.21,
+      "spriteId": 52,
+      "spritePath": "data/trainers/sprites/0052.png",
+      "faceDirection": "WEST"
+    },
+    {
+      "id": "n1",
+      "worldX": 40,
+      "worldZ": 184,
+      "pixelX": 48.09,
+      "pixelY": 187.33,
+      "spriteId": 53,
+      "spritePath": "data/trainers/sprites/0053.png",
+      "faceDirection": "WEST"
+    },
+    {
+      "id": "n2",
+      "worldX": 152,
+      "worldZ": 88,
+      "pixelX": 160.31,
+      "pixelY": 91.14,
+      "spriteId": 53,
+      "spritePath": "data/trainers/sprites/0053.png",
+      "faceDirection": "WEST"
+    },
+    {
+      "id": "n3",
+      "worldX": 168,
+      "worldZ": 216,
+      "pixelX": 176.34,
+      "pixelY": 219.39,
+      "spriteId": 52,
+      "spritePath": "data/trainers/sprites/0052.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n4",
+      "worldX": 104,
+      "worldZ": 168,
+      "pixelX": 112.22,
+      "pixelY": 171.3,
+      "spriteId": 73,
+      "spritePath": "data/trainers/sprites/0073.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n5",
+      "worldX": 216,
+      "worldZ": 184,
+      "pixelX": 224.44,
+      "pixelY": 187.33,
+      "spriteId": 73,
+      "spritePath": "data/trainers/sprites/0073.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n6",
+      "worldX": 216,
+      "worldZ": 120,
+      "pixelX": 224.44,
+      "pixelY": 123.21,
+      "spriteId": 52,
+      "spritePath": "data/trainers/sprites/0052.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n7",
+      "worldX": 40,
+      "worldZ": 232,
+      "pixelX": 48.09,
+      "pixelY": 235.43,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}

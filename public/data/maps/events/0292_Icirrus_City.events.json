@@ -1,0 +1,91 @@
+{
+  "mapId": "292",
+  "displayName": "Icirrus City",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 2744,
+      "worldZ": 3336,
+      "pixelX": 184,
+      "pixelY": 792,
+      "destinationMapId": "298",
+      "destinationLabel": "Zone 298",
+      "faceDirection": "ANY",
+      "transitionType": 6
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [
+    {
+      "id": "s0",
+      "worldX": 2944,
+      "worldZ": 3136,
+      "pixelX": 384,
+      "pixelY": 592,
+      "signType": 4,
+      "textContent": null
+    },
+    {
+      "id": "s1",
+      "worldX": 2784,
+      "worldZ": 3296,
+      "pixelX": 224,
+      "pixelY": 752,
+      "signType": 4,
+      "textContent": null
+    }
+  ],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 2904,
+      "worldZ": 2712,
+      "pixelX": 344,
+      "pixelY": 168,
+      "spriteId": 27,
+      "spritePath": "data/trainers/sprites/0027.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n1",
+      "worldX": 2856,
+      "worldZ": 2984,
+      "pixelX": 296,
+      "pixelY": 440,
+      "spriteId": 43,
+      "spritePath": "data/trainers/sprites/0043.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n2",
+      "worldX": 2744,
+      "worldZ": 2696,
+      "pixelX": 184,
+      "pixelY": 152,
+      "spriteId": 185,
+      "spritePath": "data/trainers/sprites/0185.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n3",
+      "worldX": 2840,
+      "worldZ": 2680,
+      "pixelX": 280,
+      "pixelY": 136,
+      "spriteId": 185,
+      "spritePath": "data/trainers/sprites/0185.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n4",
+      "worldX": 2952,
+      "worldZ": 3144,
+      "pixelX": 392,
+      "pixelY": 600,
+      "spriteId": 185,
+      "spritePath": "data/trainers/sprites/0185.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}

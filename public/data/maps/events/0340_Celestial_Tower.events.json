@@ -1,0 +1,93 @@
+{
+  "mapId": "340",
+  "displayName": "Celestial Tower",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 248,
+      "worldZ": 136,
+      "pixelX": 134.51,
+      "pixelY": 22.67,
+      "destinationMapId": "339",
+      "destinationLabel": "Zone 339",
+      "faceDirection": "EAST",
+      "transitionType": 2
+    },
+    {
+      "id": "w1",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": -113.14,
+      "pixelY": -113.14,
+      "destinationMapId": "341",
+      "destinationLabel": "Zone 341",
+      "faceDirection": "EAST",
+      "transitionType": 4
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 376,
+      "worldZ": 216,
+      "pixelX": 262.33,
+      "pixelY": 102.56,
+      "spriteId": 184,
+      "spritePath": "data/trainers/sprites/0184.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n1",
+      "worldX": 264,
+      "worldZ": 248,
+      "pixelX": 150.49,
+      "pixelY": 134.51,
+      "spriteId": 183,
+      "spritePath": "data/trainers/sprites/0183.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n2",
+      "worldX": 184,
+      "worldZ": 216,
+      "pixelX": 70.6,
+      "pixelY": 102.56,
+      "spriteId": 184,
+      "spritePath": "data/trainers/sprites/0184.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n3",
+      "worldX": 328,
+      "worldZ": 280,
+      "pixelX": 214.4,
+      "pixelY": 166.47,
+      "spriteId": 183,
+      "spritePath": "data/trainers/sprites/0183.png",
+      "faceDirection": "WEST"
+    },
+    {
+      "id": "n4",
+      "worldX": 280,
+      "worldZ": 344,
+      "pixelX": 166.47,
+      "pixelY": 230.37,
+      "spriteId": 51,
+      "spritePath": "data/trainers/sprites/0051.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n5",
+      "worldX": 376,
+      "worldZ": 248,
+      "pixelX": 262.33,
+      "pixelY": 134.51,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}

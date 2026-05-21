@@ -1,0 +1,62 @@
+{
+  "mapId": "408",
+  "displayName": "Lacunosa Town",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 88,
+      "worldZ": 152,
+      "pixelX": 91,
+      "pixelY": 152,
+      "destinationMapId": "406",
+      "destinationLabel": "Zone 406",
+      "faceDirection": "NORTH",
+      "transitionType": 1
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 152,
+      "worldZ": 56,
+      "pixelX": 155,
+      "pixelY": 56,
+      "spriteId": 25,
+      "spritePath": "data/trainers/sprites/0025.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n1",
+      "worldX": 152,
+      "worldZ": 72,
+      "pixelX": 155,
+      "pixelY": 72,
+      "spriteId": 130,
+      "spritePath": "data/trainers/sprites/0130.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n2",
+      "worldX": 56,
+      "worldZ": 136,
+      "pixelX": 59,
+      "pixelY": 136,
+      "spriteId": 26,
+      "spritePath": "data/trainers/sprites/0026.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n3",
+      "worldX": 88,
+      "worldZ": 88,
+      "pixelX": 91,
+      "pixelY": 88,
+      "spriteId": 153,
+      "spritePath": "data/trainers/sprites/0153.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}

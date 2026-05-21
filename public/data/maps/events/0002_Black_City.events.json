@@ -1,0 +1,42 @@
+{
+  "mapId": "2",
+  "displayName": "Black City",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 104,
+      "worldZ": 200,
+      "pixelX": 88,
+      "pixelY": 152,
+      "destinationMapId": "0",
+      "destinationLabel": "Zone 0",
+      "faceDirection": "NORTH",
+      "transitionType": 1
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 104,
+      "worldZ": 88,
+      "pixelX": 88,
+      "pixelY": 40,
+      "spriteId": 19,
+      "spritePath": "data/trainers/sprites/0019.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n1",
+      "worldX": 152,
+      "worldZ": 168,
+      "pixelX": 136,
+      "pixelY": 120,
+      "spriteId": 21,
+      "spritePath": "data/trainers/sprites/0021.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}

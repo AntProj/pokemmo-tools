@@ -1,0 +1,63 @@
+{
+  "mapId": "129",
+  "displayName": "Opelucid City",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 136,
+      "worldZ": 232,
+      "pixelX": 72,
+      "pixelY": 192,
+      "destinationMapId": "120",
+      "destinationLabel": "Zone 120",
+      "faceDirection": "NORTH",
+      "transitionType": 1
+    },
+    {
+      "id": "w1",
+      "worldX": 168,
+      "worldZ": 72,
+      "pixelX": 104,
+      "pixelY": 32,
+      "destinationMapId": "130",
+      "destinationLabel": "Zone 130",
+      "faceDirection": "WEST",
+      "transitionType": 2
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 184,
+      "worldZ": 152,
+      "pixelX": 120,
+      "pixelY": 112,
+      "spriteId": 11,
+      "spritePath": "data/trainers/sprites/0011.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n1",
+      "worldX": 216,
+      "worldZ": 152,
+      "pixelX": 152,
+      "pixelY": 112,
+      "spriteId": 28,
+      "spritePath": "data/trainers/sprites/0028.png",
+      "faceDirection": "WEST"
+    },
+    {
+      "id": "n2",
+      "worldX": 136,
+      "worldZ": 168,
+      "pixelX": 72,
+      "pixelY": 128,
+      "spriteId": 17,
+      "spritePath": "data/trainers/sprites/0017.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}

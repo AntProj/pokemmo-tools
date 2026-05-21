@@ -1,0 +1,183 @@
+{
+  "mapId": "210",
+  "displayName": "Dragonspiral Tower",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 504,
+      "worldZ": 248,
+      "pixelX": 485.49,
+      "pixelY": 252.53,
+      "destinationMapId": "209",
+      "destinationLabel": "Zone 209",
+      "faceDirection": "WEST",
+      "transitionType": 4
+    },
+    {
+      "id": "w1",
+      "worldX": 248,
+      "worldZ": 24,
+      "pixelX": 229.35,
+      "pixelY": 28.41,
+      "destinationMapId": "211",
+      "destinationLabel": "Zone 211",
+      "faceDirection": "SOUTH",
+      "transitionType": 4
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 312,
+      "worldZ": 264,
+      "pixelX": 293.38,
+      "pixelY": 268.54,
+      "spriteId": 7,
+      "spritePath": "data/trainers/sprites/0007.png",
+      "faceDirection": "WEST"
+    },
+    {
+      "id": "n1",
+      "worldX": 312,
+      "worldZ": 216,
+      "pixelX": 293.38,
+      "pixelY": 220.52,
+      "spriteId": 91,
+      "spritePath": "data/trainers/sprites/0091.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n2",
+      "worldX": 312,
+      "worldZ": 200,
+      "pixelX": 293.38,
+      "pixelY": 204.51,
+      "spriteId": 99,
+      "spritePath": "data/trainers/sprites/0099.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n3",
+      "worldX": 296,
+      "worldZ": 264,
+      "pixelX": 277.38,
+      "pixelY": 268.54,
+      "spriteId": 98,
+      "spritePath": "data/trainers/sprites/0098.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n4",
+      "worldX": 296,
+      "worldZ": 216,
+      "pixelX": 277.38,
+      "pixelY": 220.52,
+      "spriteId": 98,
+      "spritePath": "data/trainers/sprites/0098.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n5",
+      "worldX": 328,
+      "worldZ": 200,
+      "pixelX": 309.39,
+      "pixelY": 204.51,
+      "spriteId": 98,
+      "spritePath": "data/trainers/sprites/0098.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n6",
+      "worldX": 232,
+      "worldZ": 280,
+      "pixelX": 213.34,
+      "pixelY": 284.55,
+      "spriteId": 99,
+      "spritePath": "data/trainers/sprites/0099.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n7",
+      "worldX": 248,
+      "worldZ": 248,
+      "pixelX": 229.35,
+      "pixelY": 252.53,
+      "spriteId": 98,
+      "spritePath": "data/trainers/sprites/0098.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n8",
+      "worldX": 296,
+      "worldZ": 280,
+      "pixelX": 277.38,
+      "pixelY": 284.55,
+      "spriteId": 99,
+      "spritePath": "data/trainers/sprites/0099.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n9",
+      "worldX": 360,
+      "worldZ": 344,
+      "pixelX": 341.41,
+      "pixelY": 348.59,
+      "spriteId": 98,
+      "spritePath": "data/trainers/sprites/0098.png",
+      "faceDirection": "WEST"
+    },
+    {
+      "id": "n10",
+      "worldX": 168,
+      "worldZ": 392,
+      "pixelX": 149.3,
+      "pixelY": 396.61,
+      "spriteId": 98,
+      "spritePath": "data/trainers/sprites/0098.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n11",
+      "worldX": 72,
+      "worldZ": 280,
+      "pixelX": 53.25,
+      "pixelY": 284.55,
+      "spriteId": 99,
+      "spritePath": "data/trainers/sprites/0099.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n12",
+      "worldX": 168,
+      "worldZ": 136,
+      "pixelX": 149.3,
+      "pixelY": 140.47,
+      "spriteId": 98,
+      "spritePath": "data/trainers/sprites/0098.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n13",
+      "worldX": 376,
+      "worldZ": 120,
+      "pixelX": 357.42,
+      "pixelY": 124.46,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n14",
+      "worldX": 312,
+      "worldZ": 392,
+      "pixelX": 293.38,
+      "pixelY": 396.61,
+      "spriteId": 99,
+      "spritePath": "data/trainers/sprites/0099.png",
+      "faceDirection": "EAST"
+    }
+  ]
+}

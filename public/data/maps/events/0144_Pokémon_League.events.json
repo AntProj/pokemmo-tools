@@ -1,0 +1,73 @@
+{
+  "mapId": "144",
+  "displayName": "Pokémon League",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 248,
+      "worldZ": 472,
+      "pixelX": 224,
+      "pixelY": 496.02,
+      "destinationMapId": "138",
+      "destinationLabel": "Zone 138",
+      "faceDirection": "NORTH",
+      "transitionType": 1
+    },
+    {
+      "id": "w1",
+      "worldX": 232,
+      "worldZ": 8,
+      "pixelX": 208,
+      "pixelY": 32,
+      "destinationMapId": "139",
+      "destinationLabel": "Zone 139",
+      "faceDirection": "SOUTH",
+      "transitionType": 4
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 248,
+      "worldZ": 136,
+      "pixelX": 224,
+      "pixelY": 160,
+      "spriteId": 103,
+      "spritePath": "data/trainers/sprites/0103.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n1",
+      "worldX": 280,
+      "worldZ": 136,
+      "pixelX": 256,
+      "pixelY": 160,
+      "spriteId": 97,
+      "spritePath": "data/trainers/sprites/0097.png",
+      "faceDirection": "WEST"
+    },
+    {
+      "id": "n2",
+      "worldX": 264,
+      "worldZ": 136,
+      "pixelX": 240,
+      "pixelY": 160,
+      "spriteId": 97,
+      "spritePath": "data/trainers/sprites/0097.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n3",
+      "worldX": 280,
+      "worldZ": 312,
+      "pixelX": 256,
+      "pixelY": 336.01,
+      "spriteId": 7,
+      "spritePath": "data/trainers/sprites/0007.png",
+      "faceDirection": "SOUTH"
+    }
+  ]
+}

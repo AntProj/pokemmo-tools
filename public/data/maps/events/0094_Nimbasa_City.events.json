@@ -1,0 +1,63 @@
+{
+  "mapId": "94",
+  "displayName": "Nimbasa City",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 136,
+      "worldZ": 40,
+      "pixelX": 152,
+      "pixelY": 50,
+      "destinationMapId": "95",
+      "destinationLabel": "Zone 95",
+      "faceDirection": "WEST",
+      "transitionType": 2
+    },
+    {
+      "id": "w1",
+      "worldX": 104,
+      "worldZ": 168,
+      "pixelX": 120,
+      "pixelY": 178,
+      "destinationMapId": "62",
+      "destinationLabel": "Zone 62",
+      "faceDirection": "NORTH",
+      "transitionType": 1
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 72,
+      "worldZ": 56,
+      "pixelX": 88,
+      "pixelY": 66,
+      "spriteId": 30,
+      "spritePath": "data/trainers/sprites/0030.png",
+      "faceDirection": "WEST"
+    },
+    {
+      "id": "n1",
+      "worldX": 24,
+      "worldZ": 40,
+      "pixelX": 40,
+      "pixelY": 50,
+      "spriteId": 131,
+      "spritePath": "data/trainers/sprites/0131.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n2",
+      "worldX": 168,
+      "worldZ": 88,
+      "pixelX": 184,
+      "pixelY": 98,
+      "spriteId": 31,
+      "spritePath": "data/trainers/sprites/0031.png",
+      "faceDirection": "EAST"
+    }
+  ]
+}

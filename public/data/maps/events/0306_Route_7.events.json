@@ -1,0 +1,110 @@
+{
+  "mapId": "306",
+  "displayName": "Route 7",
+  "warps": [],
+  "trainers": [],
+  "items": [],
+  "signs": [
+    {
+      "id": "s0",
+      "worldX": 1920,
+      "worldZ": 4496,
+      "pixelX": 437,
+      "pixelY": 960,
+      "signType": 4,
+      "textContent": null
+    }
+  ],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 1848,
+      "worldZ": 4440,
+      "pixelX": 365,
+      "pixelY": 904,
+      "spriteId": 185,
+      "spritePath": "data/trainers/sprites/0185.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n1",
+      "worldX": 1688,
+      "worldZ": 4184,
+      "pixelX": 205,
+      "pixelY": 648,
+      "spriteId": 185,
+      "spritePath": "data/trainers/sprites/0185.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n2",
+      "worldX": 1832,
+      "worldZ": 4152,
+      "pixelX": 349,
+      "pixelY": 616,
+      "spriteId": 185,
+      "spritePath": "data/trainers/sprites/0185.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n3",
+      "worldX": 1864,
+      "worldZ": 4024,
+      "pixelX": 381,
+      "pixelY": 488,
+      "spriteId": 185,
+      "spritePath": "data/trainers/sprites/0185.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n4",
+      "worldX": 2024,
+      "worldZ": 3928,
+      "pixelX": 541,
+      "pixelY": 392,
+      "spriteId": 185,
+      "spritePath": "data/trainers/sprites/0185.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n5",
+      "worldX": 2264,
+      "worldZ": 3944,
+      "pixelX": 781,
+      "pixelY": 408,
+      "spriteId": 185,
+      "spritePath": "data/trainers/sprites/0185.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n6",
+      "worldX": 2456,
+      "worldZ": 3944,
+      "pixelX": 973,
+      "pixelY": 408,
+      "spriteId": 185,
+      "spritePath": "data/trainers/sprites/0185.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n7",
+      "worldX": 2200,
+      "worldZ": 3816,
+      "pixelX": 717,
+      "pixelY": 280,
+      "spriteId": 185,
+      "spritePath": "data/trainers/sprites/0185.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n8",
+      "worldX": 2312,
+      "worldZ": 3608,
+      "pixelX": 829,
+      "pixelY": 72,
+      "spriteId": 185,
+      "spritePath": "data/trainers/sprites/0185.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}

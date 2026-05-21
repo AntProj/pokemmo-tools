@@ -1,0 +1,85 @@
+{
+  "mapId": "347",
+  "displayName": "Bridge Gate",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 24,
+      "worldZ": 120,
+      "pixelX": 40,
+      "pixelY": 136,
+      "destinationMapId": "345",
+      "destinationLabel": "Zone 345",
+      "faceDirection": "EAST",
+      "transitionType": 1
+    },
+    {
+      "id": "w1",
+      "worldX": 248,
+      "worldZ": 136,
+      "pixelX": 264,
+      "pixelY": 152,
+      "destinationMapId": "254",
+      "destinationLabel": "Zone 254",
+      "faceDirection": "WEST",
+      "transitionType": 33
+    },
+    {
+      "id": "w2",
+      "worldX": 248,
+      "worldZ": 120,
+      "pixelX": 264,
+      "pixelY": 136,
+      "destinationMapId": "254",
+      "destinationLabel": "Zone 254",
+      "faceDirection": "WEST",
+      "transitionType": 33
+    },
+    {
+      "id": "w3",
+      "worldX": 248,
+      "worldZ": 152,
+      "pixelX": 264,
+      "pixelY": 168,
+      "destinationMapId": "254",
+      "destinationLabel": "Zone 254",
+      "faceDirection": "WEST",
+      "transitionType": 33
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 88,
+      "worldZ": 216,
+      "pixelX": 104,
+      "pixelY": 232,
+      "spriteId": 61,
+      "spritePath": "data/trainers/sprites/0061.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n1",
+      "worldX": 136,
+      "worldZ": 56,
+      "pixelX": 152,
+      "pixelY": 72,
+      "spriteId": 73,
+      "spritePath": "data/trainers/sprites/0073.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n2",
+      "worldX": 120,
+      "worldZ": 56,
+      "pixelX": 136,
+      "pixelY": 72,
+      "spriteId": 48,
+      "spritePath": "data/trainers/sprites/0048.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "mapId": "341",
+  "displayName": "Celestial Tower",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 264,
+      "worldZ": 328,
+      "pixelX": 138.99,
+      "pixelY": 199.91,
+      "destinationMapId": "340",
+      "destinationLabel": "Zone 340",
+      "faceDirection": "WEST",
+      "transitionType": 2
+    },
+    {
+      "id": "w1",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": -124.66,
+      "pixelY": -127.66,
+      "destinationMapId": "342",
+      "destinationLabel": "Zone 342",
+      "faceDirection": "WEST",
+      "transitionType": 4
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 312,
+      "worldZ": 296,
+      "pixelX": 186.93,
+      "pixelY": 167.95,
+      "spriteId": 30,
+      "spritePath": "data/trainers/sprites/0030.png",
+      "faceDirection": "WEST"
+    },
+    {
+      "id": "n1",
+      "worldX": 216,
+      "worldZ": 264,
+      "pixelX": 91.05,
+      "pixelY": 135.99,
+      "spriteId": 31,
+      "spritePath": "data/trainers/sprites/0031.png",
+      "faceDirection": "WEST"
+    },
+    {
+      "id": "n2",
+      "worldX": 136,
+      "worldZ": 264,
+      "pixelX": 11.16,
+      "pixelY": 135.99,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n3",
+      "worldX": 360,
+      "worldZ": 264,
+      "pixelX": 234.86,
+      "pixelY": 135.99,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}

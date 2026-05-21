@@ -1,0 +1,182 @@
+{
+  "mapId": "5",
+  "displayName": "Black City",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 200,
+      "worldZ": 392,
+      "pixelX": 200,
+      "pixelY": 328,
+      "destinationMapId": "0",
+      "destinationLabel": "Zone 0",
+      "faceDirection": "NORTH",
+      "transitionType": 1
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 184,
+      "worldZ": 328,
+      "pixelX": 184,
+      "pixelY": 264,
+      "spriteId": 13,
+      "spritePath": "data/trainers/sprites/0013.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n1",
+      "worldX": 408,
+      "worldZ": 216,
+      "pixelX": 408,
+      "pixelY": 152,
+      "spriteId": 25,
+      "spritePath": "data/trainers/sprites/0025.png",
+      "faceDirection": "WEST"
+    },
+    {
+      "id": "n2",
+      "worldX": 296,
+      "worldZ": 216,
+      "pixelX": 296,
+      "pixelY": 152,
+      "spriteId": 20,
+      "spritePath": "data/trainers/sprites/0020.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n3",
+      "worldX": 24,
+      "worldZ": 200,
+      "pixelX": 24,
+      "pixelY": 136,
+      "spriteId": 26,
+      "spritePath": "data/trainers/sprites/0026.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n4",
+      "worldX": 264,
+      "worldZ": 88,
+      "pixelX": 264,
+      "pixelY": 24,
+      "spriteId": 24,
+      "spritePath": "data/trainers/sprites/0024.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n5",
+      "worldX": 280,
+      "worldZ": 88,
+      "pixelX": 280,
+      "pixelY": 24,
+      "spriteId": 61,
+      "spritePath": "data/trainers/sprites/0061.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n6",
+      "worldX": 120,
+      "worldZ": 344,
+      "pixelX": 120,
+      "pixelY": 280,
+      "spriteId": 23,
+      "spritePath": "data/trainers/sprites/0023.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n7",
+      "worldX": 296,
+      "worldZ": 360,
+      "pixelX": 296,
+      "pixelY": 296,
+      "spriteId": 28,
+      "spritePath": "data/trainers/sprites/0028.png",
+      "faceDirection": "WEST"
+    },
+    {
+      "id": "n8",
+      "worldX": 136,
+      "worldZ": 88,
+      "pixelX": 136,
+      "pixelY": 24,
+      "spriteId": 44,
+      "spritePath": "data/trainers/sprites/0044.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n9",
+      "worldX": 216,
+      "worldZ": 296,
+      "pixelX": 216,
+      "pixelY": 232,
+      "spriteId": 77,
+      "spritePath": "data/trainers/sprites/0077.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n10",
+      "worldX": 360,
+      "worldZ": 104,
+      "pixelX": 360,
+      "pixelY": 40,
+      "spriteId": 77,
+      "spritePath": "data/trainers/sprites/0077.png",
+      "faceDirection": "WEST"
+    },
+    {
+      "id": "n11",
+      "worldX": 360,
+      "worldZ": 344,
+      "pixelX": 360,
+      "pixelY": 280,
+      "spriteId": 77,
+      "spritePath": "data/trainers/sprites/0077.png",
+      "faceDirection": "WEST"
+    },
+    {
+      "id": "n12",
+      "worldX": 72,
+      "worldZ": 104,
+      "pixelX": 72,
+      "pixelY": 40,
+      "spriteId": 77,
+      "spritePath": "data/trainers/sprites/0077.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n13",
+      "worldX": 72,
+      "worldZ": 344,
+      "pixelX": 72,
+      "pixelY": 280,
+      "spriteId": 77,
+      "spritePath": "data/trainers/sprites/0077.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n14",
+      "worldX": 72,
+      "worldZ": 248,
+      "pixelX": 72,
+      "pixelY": 184,
+      "spriteId": 61,
+      "spritePath": "data/trainers/sprites/0061.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n15",
+      "worldX": 360,
+      "worldZ": 248,
+      "pixelX": 360,
+      "pixelY": 184,
+      "spriteId": 48,
+      "spritePath": "data/trainers/sprites/0048.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}

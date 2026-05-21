@@ -1,0 +1,32 @@
+{
+  "mapId": "303",
+  "displayName": "Marvelous Bridge",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 232,
+      "worldZ": 536,
+      "pixelX": 420,
+      "pixelY": 1048,
+      "destinationMapId": "314",
+      "destinationLabel": "Zone 314",
+      "faceDirection": "ANY",
+      "transitionType": 6
+    },
+    {
+      "id": "w1",
+      "worldX": 2584,
+      "worldZ": 536,
+      "pixelX": 2772,
+      "pixelY": 1048,
+      "destinationMapId": "313",
+      "destinationLabel": "Zone 313",
+      "faceDirection": "ANY",
+      "transitionType": 6
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": []
+}

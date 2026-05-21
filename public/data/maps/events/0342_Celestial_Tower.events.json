@@ -1,0 +1,52 @@
+{
+  "mapId": "342",
+  "displayName": "Celestial Tower",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 344,
+      "worldZ": 232,
+      "pixelX": 834.8,
+      "pixelY": 862.54,
+      "destinationMapId": "341",
+      "destinationLabel": "Zone 341",
+      "faceDirection": "EAST",
+      "transitionType": 2
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [
+    {
+      "id": "s0",
+      "worldX": 256,
+      "worldZ": 160,
+      "pixelX": 746.81,
+      "pixelY": 790.55,
+      "signType": 0,
+      "textContent": null
+    }
+  ],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 264,
+      "worldZ": 232,
+      "pixelX": 754.81,
+      "pixelY": 862.54,
+      "spriteId": 90,
+      "spritePath": "data/trainers/sprites/0090.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n1",
+      "worldX": 264,
+      "worldZ": 184,
+      "pixelX": 754.81,
+      "pixelY": 814.55,
+      "spriteId": 97,
+      "spritePath": "data/trainers/sprites/0097.png",
+      "faceDirection": "SOUTH"
+    }
+  ]
+}

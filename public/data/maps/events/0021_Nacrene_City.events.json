@@ -1,0 +1,32 @@
+{
+  "mapId": "21",
+  "displayName": "Nacrene City",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 88,
+      "worldZ": 168,
+      "pixelX": 91,
+      "pixelY": 162,
+      "destinationMapId": "16",
+      "destinationLabel": "Zone 16",
+      "faceDirection": "NORTH",
+      "transitionType": 1
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 104,
+      "worldZ": 104,
+      "pixelX": 107,
+      "pixelY": 98,
+      "spriteId": 22,
+      "spritePath": "data/trainers/sprites/0022.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "mapId": "265",
+  "displayName": "N's Castle",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 104,
+      "worldZ": 232,
+      "pixelX": 208,
+      "pixelY": 156,
+      "destinationMapId": "264",
+      "destinationLabel": "Zone 264",
+      "faceDirection": "EAST",
+      "transitionType": 2
+    },
+    {
+      "id": "w1",
+      "worldX": 680,
+      "worldZ": 136,
+      "pixelX": 784,
+      "pixelY": 60,
+      "destinationMapId": "269",
+      "destinationLabel": "Zone 269",
+      "faceDirection": "EAST",
+      "transitionType": 2
+    },
+    {
+      "id": "w2",
+      "worldX": 168,
+      "worldZ": 136,
+      "pixelX": 272,
+      "pixelY": 60,
+      "destinationMapId": "266",
+      "destinationLabel": "Zone 266",
+      "faceDirection": "SOUTH",
+      "transitionType": 3
+    },
+    {
+      "id": "w3",
+      "worldX": 360,
+      "worldZ": 136,
+      "pixelX": 464,
+      "pixelY": 60,
+      "destinationMapId": "267",
+      "destinationLabel": "Zone 267",
+      "faceDirection": "SOUTH",
+      "transitionType": 3
+    },
+    {
+      "id": "w4",
+      "worldX": 552,
+      "worldZ": 136,
+      "pixelX": 656,
+      "pixelY": 60,
+      "destinationMapId": "268",
+      "destinationLabel": "Zone 268",
+      "faceDirection": "SOUTH",
+      "transitionType": 3
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": []
+}

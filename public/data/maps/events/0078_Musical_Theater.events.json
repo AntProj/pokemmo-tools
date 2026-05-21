@@ -1,0 +1,60 @@
+{
+  "mapId": "78",
+  "displayName": "Musical Theater",
+  "warps": [],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 136,
+      "worldZ": 200,
+      "pixelX": 144,
+      "pixelY": 200,
+      "spriteId": 163,
+      "spritePath": "data/trainers/sprites/0163.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n1",
+      "worldX": 168,
+      "worldZ": 200,
+      "pixelX": 176,
+      "pixelY": 200,
+      "spriteId": 164,
+      "spritePath": "data/trainers/sprites/0164.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n2",
+      "worldX": 200,
+      "worldZ": 200,
+      "pixelX": 208,
+      "pixelY": 200,
+      "spriteId": 165,
+      "spritePath": "data/trainers/sprites/0165.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n3",
+      "worldX": 184,
+      "worldZ": 152,
+      "pixelX": 192,
+      "pixelY": 152,
+      "spriteId": 44,
+      "spritePath": "data/trainers/sprites/0044.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n4",
+      "worldX": 232,
+      "worldZ": 200,
+      "pixelX": 240,
+      "pixelY": 200,
+      "spriteId": 166,
+      "spritePath": "data/trainers/sprites/0166.png",
+      "faceDirection": "SOUTH"
+    }
+  ]
+}

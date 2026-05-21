@@ -1,0 +1,32 @@
+{
+  "mapId": "250",
+  "displayName": "Bridge Gate",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 248,
+      "worldZ": 488,
+      "pixelX": 376,
+      "pixelY": 728,
+      "destinationMapId": "155",
+      "destinationLabel": "Zone 155",
+      "faceDirection": "NORTH",
+      "transitionType": 4
+    },
+    {
+      "id": "w1",
+      "worldX": 328,
+      "worldZ": 408,
+      "pixelX": 456,
+      "pixelY": 648,
+      "destinationMapId": "251",
+      "destinationLabel": "Zone 251",
+      "faceDirection": "WEST",
+      "transitionType": 4
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": []
+}

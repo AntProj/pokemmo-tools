@@ -1,0 +1,20 @@
+{
+  "mapId": "145",
+  "displayName": "Pokémon League",
+  "warps": [],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 136,
+      "worldZ": 232,
+      "pixelX": 135.89,
+      "pixelY": 220,
+      "spriteId": 97,
+      "spritePath": "data/trainers/sprites/0097.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}

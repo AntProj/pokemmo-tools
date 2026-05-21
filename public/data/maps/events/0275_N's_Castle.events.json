@@ -1,0 +1,42 @@
+{
+  "mapId": "275",
+  "displayName": "N's Castle",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 136,
+      "worldZ": 328,
+      "pixelX": 120,
+      "pixelY": 256,
+      "destinationMapId": "273",
+      "destinationLabel": "Zone 273",
+      "faceDirection": "NORTH",
+      "transitionType": 1
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 104,
+      "worldZ": 264,
+      "pixelX": 88,
+      "pixelY": 192,
+      "spriteId": 98,
+      "spritePath": "data/trainers/sprites/0098.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n1",
+      "worldX": 248,
+      "worldZ": 232,
+      "pixelX": 232,
+      "pixelY": 160,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}

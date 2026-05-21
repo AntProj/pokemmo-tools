@@ -1,0 +1,81 @@
+{
+  "mapId": "54",
+  "displayName": "Castelia City",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 104,
+      "worldZ": 200,
+      "pixelX": 113.99,
+      "pixelY": 203.04,
+      "destinationMapId": "34",
+      "destinationLabel": "Zone 34",
+      "faceDirection": "NORTH",
+      "transitionType": 1
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [
+    {
+      "id": "s0",
+      "worldX": 96,
+      "worldZ": 16,
+      "pixelX": 105.99,
+      "pixelY": 18.97,
+      "signType": 0,
+      "textContent": null
+    },
+    {
+      "id": "s1",
+      "worldX": 112,
+      "worldZ": 16,
+      "pixelX": 122,
+      "pixelY": 18.97,
+      "signType": 0,
+      "textContent": null
+    }
+  ],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 168,
+      "worldZ": 120,
+      "pixelX": 178.02,
+      "pixelY": 123.01,
+      "spriteId": 23,
+      "spritePath": "data/trainers/sprites/0023.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n1",
+      "worldX": 184,
+      "worldZ": 88,
+      "pixelX": 194.02,
+      "pixelY": 90.99,
+      "spriteId": 64,
+      "spritePath": "data/trainers/sprites/0064.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n2",
+      "worldX": 200,
+      "worldZ": 88,
+      "pixelX": 210.03,
+      "pixelY": 90.99,
+      "spriteId": 130,
+      "spritePath": "data/trainers/sprites/0130.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n3",
+      "worldX": 56,
+      "worldZ": 56,
+      "pixelX": 65.98,
+      "pixelY": 58.98,
+      "spriteId": 20,
+      "spritePath": "data/trainers/sprites/0020.png",
+      "faceDirection": "EAST"
+    }
+  ]
+}

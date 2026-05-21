@@ -4,11 +4,17 @@
  *
  * Generates the Unova map feature's static data from three raw sources:
  *
- *   PICTURES_DIR — rendered PNG maps + per-zone bounds JSON sidecars
- *                  Naming: 0006_Striaton_City.png + 0006_Striaton_City.json
- *                  Plus the world overview: unova_world.png + unova_world.json
+ *   PICTURES_DIR — rendered PNG maps + per-zone bounds JSON sidecars. The
+ *                  Blender script renders every zone folder, so this is the
+ *                  source of truth for "which detail maps exist". Naming:
+ *                  0006_Striaton_City.png + 0006_Striaton_City.json. Plus the
+ *                  world overview: unova_world.png + unova_world.json.
  *   ZONES_DIR    — one folder per zone, each containing a <Name>.json with
- *                  the zone's event lists (warps, trainers, items, signs, npcs)
+ *                  the zone's event lists (warps, trainers, items, signs, npcs).
+ *                  Also holds unova_world.txt — newline-separated zone IDs
+ *                  that participate in the assembled world overview render.
+ *                  We use it ONLY to decide which zones get a clickable region
+ *                  marker on the overview map. Detail maps come from Pictures.
  *   TRAINERS_DIR — trainers.json (master catalog) + sprites/0042.png style files
  *
  * Outputs (deterministic, idempotent):
@@ -136,9 +142,26 @@ for (const folder of zoneFolders) {
   }
 }
 
+// unova_world.txt is a newline-separated list of zone IDs that participate
+// in the assembled world overview render. Optional — if missing, every detail
+// map gets a clickable region (legacy behaviour).
+const worldListPath = path.join(ZONES_DIR, 'unova_world.txt');
+let worldZoneIdSet = null;
+if (fs.existsSync(worldListPath)) {
+  const lines = fs.readFileSync(worldListPath, 'utf-8').split(/\r?\n/);
+  worldZoneIdSet = new Set();
+  for (const line of lines) {
+    const trimmed = line.trim();
+    if (!trimmed) continue;
+    const id = Number(trimmed);
+    if (Number.isFinite(id)) worldZoneIdSet.add(id);
+  }
+}
+
 console.log(`  found ${Object.keys(pngByStem).length} rendered PNGs`);
 console.log(`  found ${Object.keys(boundsByStem).length} bounds JSONs`);
 console.log(`  found ${Object.keys(eventsByStem).length} zone event JSONs`);
+console.log(`  unova_world.txt:    ${worldZoneIdSet ? `${worldZoneIdSet.size} zones in world overview` : 'missing — every detail map gets a region'}`);
 
 // ---------- Build outputs ----------
 ensureDir(PUBLIC_IMAGES_DIR);
@@ -261,20 +284,22 @@ for (const stem of detailStems) {
 
   mapsIndex[String(zoneId)] = entry;
 
-  // World region marker — center + radius from this map's bounds
-  const { minX, maxX, minY, maxY } = bounds.worldBounds;
-  const centerWorldX = (minX + maxX) / 2;
-  const centerWorldY = (minY + maxY) / 2;
-  const widthW  = maxX - minX;
-  const heightW = maxY - minY;
-  const worldRadius = Math.max(widthW, heightW) / 2;
-  worldRegions.push({
-    mapId: String(zoneId),
-    displayName: entry.displayName,
-    centerWorldX,
-    centerWorldY,
-    worldRadius,
-  });
+  // World region marker — only emit for zones the world overview actually
+  // assembled (per unova_world.txt). Detail maps not in that list are still
+  // reachable via warps from other maps, just not clickable on the overview.
+  if (!worldZoneIdSet || worldZoneIdSet.has(zoneId)) {
+    const { minX, maxX, minY, maxY } = bounds.worldBounds;
+    const centerWorldX = (minX + maxX) / 2;
+    const centerWorldY = (minY + maxY) / 2;
+    const worldRadius  = Math.max(maxX - minX, maxY - minY) / 2;
+    worldRegions.push({
+      mapId: String(zoneId),
+      displayName: entry.displayName,
+      centerWorldX,
+      centerWorldY,
+      worldRadius,
+    });
+  }
 }
 
 // ---------- Trainer catalog + sprite copy ----------

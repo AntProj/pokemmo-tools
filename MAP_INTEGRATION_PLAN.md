@@ -96,7 +96,7 @@ Sign-flip on `worldZ`: the raw zone JSONs report `worldZ` in positive units (e.g
 - Only **4 trainers and 48 items** across all 427 zone JSONs have an entry to surface — the rest are NPCs / signs / warps. The map will still render trainer/item layers; they'll just be sparse
 - `trainers.json` keys by `spriteId` (not by trainer instance). The catalog's 174 entries describe **sprite categories**, not individual trainers. When a zone has a trainer at spriteId=74, the panel can show "Trainer sprite #74 — appears in N zones" plus the sprite image
 - Item entities have a `spriteId` (8000-range = item-shaped placeholder) and `isHidden`, but no `itemId` mapping yet. Panel says "Item identity not available"
-- Many zones in raw data don't have a matching PNG in `Pictures/` (e.g., dozens of `Black_City` zone variants). The generator skips zones without bounds and logs them; only the ~285 zones that have rendered maps appear in `maps-index.json`
+- The Blender renderer now produces a PNG + bounds JSON for **every** zone folder, so every detail map exists in `Pictures/`. `unova_world.txt` is a separate, smaller list of zones that participate in the assembled world overview — used only to decide which zones get a clickable region marker on the overview. Detail maps not in that list are still in `maps-index.json` and reachable via warps from neighbouring maps; they just don't show a green marker on the world view.
 
 ## Acceptance checklist (from prompt)
 

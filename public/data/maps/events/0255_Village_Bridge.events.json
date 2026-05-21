@@ -1,0 +1,365 @@
+{
+  "mapId": "255",
+  "displayName": "Village Bridge",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 40,
+      "worldZ": 504,
+      "pixelX": 144,
+      "pixelY": 600,
+      "destinationMapId": "366",
+      "destinationLabel": "Zone 366",
+      "faceDirection": "EAST",
+      "transitionType": 4
+    },
+    {
+      "id": "w1",
+      "worldX": 1496,
+      "worldZ": 504,
+      "pixelX": 1600,
+      "pixelY": 600,
+      "destinationMapId": "369",
+      "destinationLabel": "Zone 369",
+      "faceDirection": "WEST",
+      "transitionType": 4
+    },
+    {
+      "id": "w2",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 104,
+      "pixelY": 96,
+      "destinationMapId": "256",
+      "destinationLabel": "Zone 256",
+      "faceDirection": "SOUTH",
+      "transitionType": 3
+    },
+    {
+      "id": "w3",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 104,
+      "pixelY": 96,
+      "destinationMapId": "258",
+      "destinationLabel": "Zone 258",
+      "faceDirection": "SOUTH",
+      "transitionType": 3
+    },
+    {
+      "id": "w4",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 104,
+      "pixelY": 96,
+      "destinationMapId": "259",
+      "destinationLabel": "Zone 259",
+      "faceDirection": "SOUTH",
+      "transitionType": 3
+    },
+    {
+      "id": "w5",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 104,
+      "pixelY": 96,
+      "destinationMapId": "261",
+      "destinationLabel": "Zone 261",
+      "faceDirection": "SOUTH",
+      "transitionType": 3
+    },
+    {
+      "id": "w6",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 104,
+      "pixelY": 96,
+      "destinationMapId": "260",
+      "destinationLabel": "Zone 260",
+      "faceDirection": "SOUTH",
+      "transitionType": 3
+    },
+    {
+      "id": "w7",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 104,
+      "pixelY": 96,
+      "destinationMapId": "257",
+      "destinationLabel": "Zone 257",
+      "faceDirection": "SOUTH",
+      "transitionType": 3
+    },
+    {
+      "id": "w8",
+      "worldX": 1240,
+      "worldZ": 744,
+      "pixelX": 1344,
+      "pixelY": 840,
+      "destinationMapId": "262",
+      "destinationLabel": "Zone 262",
+      "faceDirection": "SOUTH",
+      "transitionType": 4
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [
+    {
+      "id": "s0",
+      "worldX": 1360,
+      "worldZ": 720,
+      "pixelX": 1464,
+      "pixelY": 816,
+      "signType": 0,
+      "textContent": null
+    },
+    {
+      "id": "s1",
+      "worldX": 128,
+      "worldZ": 176,
+      "pixelX": 232,
+      "pixelY": 272,
+      "signType": 6,
+      "textContent": null
+    },
+    {
+      "id": "s2",
+      "worldX": 512,
+      "worldZ": 720,
+      "pixelX": 616,
+      "pixelY": 816,
+      "signType": 4,
+      "textContent": null
+    },
+    {
+      "id": "s3",
+      "worldX": 1328,
+      "worldZ": 208,
+      "pixelX": 1432,
+      "pixelY": 304,
+      "signType": 4,
+      "textContent": null
+    },
+    {
+      "id": "s4",
+      "worldX": 1360,
+      "worldZ": 128,
+      "pixelX": 1464,
+      "pixelY": 224,
+      "signType": 4,
+      "textContent": null
+    },
+    {
+      "id": "s5",
+      "worldX": 1440,
+      "worldZ": 416,
+      "pixelX": 1544,
+      "pixelY": 512,
+      "signType": 6,
+      "textContent": null
+    }
+  ],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 1224,
+      "worldZ": 808,
+      "pixelX": 1328,
+      "pixelY": 904,
+      "spriteId": 18,
+      "spritePath": "data/trainers/sprites/0018.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n1",
+      "worldX": 1336,
+      "worldZ": 808,
+      "pixelX": 1440,
+      "pixelY": 904,
+      "spriteId": 128,
+      "spritePath": "data/trainers/sprites/0128.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n2",
+      "worldX": 1336,
+      "worldZ": 856,
+      "pixelX": 1440,
+      "pixelY": 952,
+      "spriteId": 131,
+      "spritePath": "data/trainers/sprites/0131.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n3",
+      "worldX": 1240,
+      "worldZ": 856,
+      "pixelX": 1344,
+      "pixelY": 952,
+      "spriteId": 130,
+      "spritePath": "data/trainers/sprites/0130.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n4",
+      "worldX": 1240,
+      "worldZ": 808,
+      "pixelX": 1344,
+      "pixelY": 904,
+      "spriteId": 111,
+      "spritePath": "data/trainers/sprites/0111.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n5",
+      "worldX": 1224,
+      "worldZ": 856,
+      "pixelX": 1328,
+      "pixelY": 952,
+      "spriteId": 15,
+      "spritePath": "data/trainers/sprites/0015.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n6",
+      "worldX": 1320,
+      "worldZ": 808,
+      "pixelX": 1424,
+      "pixelY": 904,
+      "spriteId": 21,
+      "spritePath": "data/trainers/sprites/0021.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n7",
+      "worldX": 1320,
+      "worldZ": 856,
+      "pixelX": 1424,
+      "pixelY": 952,
+      "spriteId": 20,
+      "spritePath": "data/trainers/sprites/0020.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n8",
+      "worldX": 360,
+      "worldZ": 216,
+      "pixelX": 464,
+      "pixelY": 312,
+      "spriteId": 28,
+      "spritePath": "data/trainers/sprites/0028.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n9",
+      "worldX": 1016,
+      "worldZ": 760,
+      "pixelX": 1120,
+      "pixelY": 856,
+      "spriteId": 10,
+      "spritePath": "data/trainers/sprites/0010.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n10",
+      "worldX": 648,
+      "worldZ": 200,
+      "pixelX": 752,
+      "pixelY": 296,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n11",
+      "worldX": 712,
+      "worldZ": 696,
+      "pixelX": 816,
+      "pixelY": 792,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n12",
+      "worldX": 248,
+      "worldZ": 760,
+      "pixelX": 352,
+      "pixelY": 856,
+      "spriteId": 16,
+      "spritePath": "data/trainers/sprites/0016.png",
+      "faceDirection": "WEST"
+    },
+    {
+      "id": "n13",
+      "worldX": 1000,
+      "worldZ": 648,
+      "pixelX": 1104,
+      "pixelY": 744,
+      "spriteId": 74,
+      "spritePath": "data/trainers/sprites/0074.png",
+      "faceDirection": "WEST"
+    },
+    {
+      "id": "n14",
+      "worldX": 1240,
+      "worldZ": 760,
+      "pixelX": 1344,
+      "pixelY": 856,
+      "spriteId": 66,
+      "spritePath": "data/trainers/sprites/0066.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n15",
+      "worldX": 520,
+      "worldZ": 696,
+      "pixelX": 624,
+      "pixelY": 792,
+      "spriteId": 24,
+      "spritePath": "data/trainers/sprites/0024.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n16",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 104,
+      "pixelY": 96,
+      "spriteId": 49,
+      "spritePath": "data/trainers/sprites/0049.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n17",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": 104,
+      "pixelY": 96,
+      "spriteId": 25,
+      "spritePath": "data/trainers/sprites/0025.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n18",
+      "worldX": 232,
+      "worldZ": 184,
+      "pixelX": 336,
+      "pixelY": 280,
+      "spriteId": 152,
+      "spritePath": "data/trainers/sprites/0152.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n19",
+      "worldX": 1256,
+      "worldZ": 168,
+      "pixelX": 1360,
+      "pixelY": 264,
+      "spriteId": 150,
+      "spritePath": "data/trainers/sprites/0150.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "mapId": "229",
+  "displayName": "Trial Chamber",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 88,
+      "worldZ": 152,
+      "pixelX": 88,
+      "pixelY": 152,
+      "destinationMapId": "226",
+      "destinationLabel": "Zone 226",
+      "faceDirection": "NORTH",
+      "transitionType": 4
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 88,
+      "worldZ": 72,
+      "pixelX": 88,
+      "pixelY": 72,
+      "spriteId": 116,
+      "spritePath": "data/trainers/sprites/0116.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}

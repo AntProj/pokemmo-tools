@@ -1,0 +1,142 @@
+{
+  "mapId": "87",
+  "displayName": "Nimbasa City",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 104,
+      "worldZ": 408,
+      "pixelX": 167.93,
+      "pixelY": 409.07,
+      "destinationMapId": "84",
+      "destinationLabel": "Zone 84",
+      "faceDirection": "ANY",
+      "transitionType": 5
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 136,
+      "worldZ": 328,
+      "pixelX": 199.94,
+      "pixelY": 329.04,
+      "spriteId": 133,
+      "spritePath": "data/trainers/sprites/0133.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n1",
+      "worldX": 216,
+      "worldZ": 264,
+      "pixelX": 279.98,
+      "pixelY": 265,
+      "spriteId": 133,
+      "spritePath": "data/trainers/sprites/0133.png",
+      "faceDirection": "WEST"
+    },
+    {
+      "id": "n2",
+      "worldX": 136,
+      "worldZ": 200,
+      "pixelX": 199.94,
+      "pixelY": 200.97,
+      "spriteId": 133,
+      "spritePath": "data/trainers/sprites/0133.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n3",
+      "worldX": 184,
+      "worldZ": 328,
+      "pixelX": 247.96,
+      "pixelY": 329.04,
+      "spriteId": 20,
+      "spritePath": "data/trainers/sprites/0020.png",
+      "faceDirection": "WEST"
+    },
+    {
+      "id": "n4",
+      "worldX": 136,
+      "worldZ": 248,
+      "pixelX": 199.94,
+      "pixelY": 249,
+      "spriteId": 22,
+      "spritePath": "data/trainers/sprites/0022.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n5",
+      "worldX": 216,
+      "worldZ": 200,
+      "pixelX": 279.98,
+      "pixelY": 200.97,
+      "spriteId": 163,
+      "spritePath": "data/trainers/sprites/0163.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n6",
+      "worldX": 184,
+      "worldZ": 232,
+      "pixelX": 247.96,
+      "pixelY": 232.99,
+      "spriteId": 164,
+      "spritePath": "data/trainers/sprites/0164.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n7",
+      "worldX": 120,
+      "worldZ": 280,
+      "pixelX": 183.93,
+      "pixelY": 281.01,
+      "spriteId": 165,
+      "spritePath": "data/trainers/sprites/0165.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n8",
+      "worldX": 312,
+      "worldZ": 264,
+      "pixelX": 376.03,
+      "pixelY": 265,
+      "spriteId": 133,
+      "spritePath": "data/trainers/sprites/0133.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n9",
+      "worldX": 376,
+      "worldZ": 232,
+      "pixelX": 440.06,
+      "pixelY": 232.99,
+      "spriteId": 133,
+      "spritePath": "data/trainers/sprites/0133.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n10",
+      "worldX": 184,
+      "worldZ": 344,
+      "pixelX": 247.96,
+      "pixelY": 345.04,
+      "spriteId": 20,
+      "spritePath": "data/trainers/sprites/0020.png",
+      "faceDirection": "WEST"
+    },
+    {
+      "id": "n11",
+      "worldX": 152,
+      "worldZ": 248,
+      "pixelX": 215.95,
+      "pixelY": 249,
+      "spriteId": 22,
+      "spritePath": "data/trainers/sprites/0022.png",
+      "faceDirection": "SOUTH"
+    }
+  ]
+}

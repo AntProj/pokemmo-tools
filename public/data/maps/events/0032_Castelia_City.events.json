@@ -1,0 +1,96 @@
+{
+  "mapId": "32",
+  "displayName": "Castelia City",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 216,
+      "worldZ": 264,
+      "pixelX": 232,
+      "pixelY": 71.97,
+      "destinationMapId": "51",
+      "destinationLabel": "Zone 51",
+      "faceDirection": "SOUTH",
+      "transitionType": 36
+    },
+    {
+      "id": "w1",
+      "worldX": 168,
+      "worldZ": 680,
+      "pixelX": 184,
+      "pixelY": 487.98,
+      "destinationMapId": "49",
+      "destinationLabel": "Zone 49",
+      "faceDirection": "EAST",
+      "transitionType": 3
+    },
+    {
+      "id": "w2",
+      "worldX": 344,
+      "worldZ": 584,
+      "pixelX": 360,
+      "pixelY": 391.98,
+      "destinationMapId": "58",
+      "destinationLabel": "Zone 58",
+      "faceDirection": "WEST",
+      "transitionType": 3
+    },
+    {
+      "id": "w3",
+      "worldX": 344,
+      "worldZ": 696,
+      "pixelX": 360,
+      "pixelY": 503.99,
+      "destinationMapId": "60",
+      "destinationLabel": "Zone 60",
+      "faceDirection": "WEST",
+      "transitionType": 3
+    },
+    {
+      "id": "w4",
+      "worldX": 200,
+      "worldZ": 1016,
+      "pixelX": 216,
+      "pixelY": 824,
+      "destinationMapId": "30",
+      "destinationLabel": "Zone 30",
+      "faceDirection": "NORTH",
+      "transitionType": 36
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [
+    {
+      "id": "s0",
+      "worldX": 336,
+      "worldZ": 272,
+      "pixelX": 352,
+      "pixelY": 79.97,
+      "signType": 6,
+      "textContent": null
+    }
+  ],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 216,
+      "worldZ": 568,
+      "pixelX": 232,
+      "pixelY": 375.98,
+      "spriteId": 52,
+      "spritePath": "data/trainers/sprites/0052.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n1",
+      "worldX": 296,
+      "worldZ": 424,
+      "pixelX": 312,
+      "pixelY": 231.98,
+      "spriteId": 31,
+      "spritePath": "data/trainers/sprites/0031.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}

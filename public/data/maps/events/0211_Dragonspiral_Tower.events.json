@@ -1,0 +1,63 @@
+{
+  "mapId": "211",
+  "displayName": "Dragonspiral Tower",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": -17.73,
+      "pixelY": -17.47,
+      "destinationMapId": "210",
+      "destinationLabel": "Zone 210",
+      "faceDirection": "NORTH",
+      "transitionType": 4
+    },
+    {
+      "id": "w1",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": -17.73,
+      "pixelY": -17.47,
+      "destinationMapId": "212",
+      "destinationLabel": "Zone 212",
+      "faceDirection": "EAST",
+      "transitionType": 4
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": -17.73,
+      "pixelY": -17.47,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n1",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": -17.73,
+      "pixelY": -17.47,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n2",
+      "worldX": null,
+      "worldZ": null,
+      "pixelX": -17.73,
+      "pixelY": -17.47,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}

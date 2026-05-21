@@ -1,0 +1,52 @@
+{
+  "mapId": "12",
+  "displayName": "Striaton City",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 168,
+      "worldZ": 40,
+      "pixelX": 171,
+      "pixelY": 48.21,
+      "destinationMapId": "11",
+      "destinationLabel": "Zone 11",
+      "faceDirection": "EAST",
+      "transitionType": 2
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 168,
+      "worldZ": 120,
+      "pixelX": 171,
+      "pixelY": 128.21,
+      "spriteId": 18,
+      "spritePath": "data/trainers/sprites/0018.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n1",
+      "worldX": 120,
+      "worldZ": 120,
+      "pixelX": 123,
+      "pixelY": 128.21,
+      "spriteId": 44,
+      "spritePath": "data/trainers/sprites/0044.png",
+      "faceDirection": "WEST"
+    },
+    {
+      "id": "n2",
+      "worldX": 200,
+      "worldZ": 88,
+      "pixelX": 203,
+      "pixelY": 96.21,
+      "spriteId": 23,
+      "spritePath": "data/trainers/sprites/0023.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}

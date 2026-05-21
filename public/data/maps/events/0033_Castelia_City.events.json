@@ -1,0 +1,174 @@
+{
+  "mapId": "33",
+  "displayName": "Castelia City",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 200,
+      "worldZ": 1016,
+      "pixelX": 202.01,
+      "pixelY": 1096.01,
+      "destinationMapId": "28",
+      "destinationLabel": "Zone 28",
+      "faceDirection": "NORTH",
+      "transitionType": 36
+    },
+    {
+      "id": "w1",
+      "worldX": 360,
+      "worldZ": 648,
+      "pixelX": 361.99,
+      "pixelY": 728.05,
+      "destinationMapId": "43",
+      "destinationLabel": "Zone 43",
+      "faceDirection": "WEST",
+      "transitionType": 3
+    },
+    {
+      "id": "w2",
+      "worldX": 200,
+      "worldZ": 264,
+      "pixelX": 202.01,
+      "pixelY": 344.09,
+      "destinationMapId": "30",
+      "destinationLabel": "Zone 30",
+      "faceDirection": "SOUTH",
+      "transitionType": 36
+    },
+    {
+      "id": "w3",
+      "worldX": 264,
+      "worldZ": 1016,
+      "pixelX": 266,
+      "pixelY": 1096.01,
+      "destinationMapId": "28",
+      "destinationLabel": "Zone 28",
+      "faceDirection": "NORTH",
+      "transitionType": 36
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [
+    {
+      "id": "s0",
+      "worldX": 320,
+      "worldZ": 688,
+      "pixelX": 321.99,
+      "pixelY": 768.05,
+      "signType": 5,
+      "textContent": null
+    },
+    {
+      "id": "s1",
+      "worldX": 176,
+      "worldZ": 608,
+      "pixelX": 178.01,
+      "pixelY": 688.06,
+      "signType": 6,
+      "textContent": null
+    }
+  ],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 168,
+      "worldZ": 568,
+      "pixelX": 170.01,
+      "pixelY": 648.06,
+      "spriteId": 43,
+      "spritePath": "data/trainers/sprites/0043.png",
+      "faceDirection": "EAST"
+    },
+    {
+      "id": "n1",
+      "worldX": 200,
+      "worldZ": 568,
+      "pixelX": 202.01,
+      "pixelY": 648.06,
+      "spriteId": 52,
+      "spritePath": "data/trainers/sprites/0052.png",
+      "faceDirection": "WEST"
+    },
+    {
+      "id": "n2",
+      "worldX": 200,
+      "worldZ": 584,
+      "pixelX": 202.01,
+      "pixelY": 664.06,
+      "spriteId": 22,
+      "spritePath": "data/trainers/sprites/0022.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n3",
+      "worldX": 200,
+      "worldZ": 600,
+      "pixelX": 202.01,
+      "pixelY": 680.06,
+      "spriteId": 53,
+      "spritePath": "data/trainers/sprites/0053.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n4",
+      "worldX": 200,
+      "worldZ": 616,
+      "pixelX": 202.01,
+      "pixelY": 696.05,
+      "spriteId": 53,
+      "spritePath": "data/trainers/sprites/0053.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n5",
+      "worldX": 200,
+      "worldZ": 632,
+      "pixelX": 202.01,
+      "pixelY": 712.05,
+      "spriteId": 52,
+      "spritePath": "data/trainers/sprites/0052.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n6",
+      "worldX": 216,
+      "worldZ": 776,
+      "pixelX": 218,
+      "pixelY": 856.04,
+      "spriteId": 22,
+      "spritePath": "data/trainers/sprites/0022.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n7",
+      "worldX": 216,
+      "worldZ": 776,
+      "pixelX": 218,
+      "pixelY": 856.04,
+      "spriteId": 53,
+      "spritePath": "data/trainers/sprites/0053.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n8",
+      "worldX": 216,
+      "worldZ": 776,
+      "pixelX": 218,
+      "pixelY": 856.04,
+      "spriteId": 52,
+      "spritePath": "data/trainers/sprites/0052.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n9",
+      "worldX": 168,
+      "worldZ": 584,
+      "pixelX": 170.01,
+      "pixelY": 664.06,
+      "spriteId": 0,
+      "spritePath": "data/trainers/sprites/0000.png",
+      "faceDirection": "EAST"
+    }
+  ]
+}

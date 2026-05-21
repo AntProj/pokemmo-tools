@@ -1,0 +1,93 @@
+{
+  "mapId": "212",
+  "displayName": "Dragonspiral Tower",
+  "warps": [
+    {
+      "id": "w0",
+      "worldX": 280,
+      "worldZ": 456,
+      "pixelX": 284.99,
+      "pixelY": 460.93,
+      "destinationMapId": "211",
+      "destinationLabel": "Zone 211",
+      "faceDirection": "WEST",
+      "transitionType": 2
+    },
+    {
+      "id": "w1",
+      "worldX": 152,
+      "worldZ": 392,
+      "pixelX": 157.04,
+      "pixelY": 396.95,
+      "destinationMapId": "213",
+      "destinationLabel": "Zone 213",
+      "faceDirection": "WEST",
+      "transitionType": 2
+    }
+  ],
+  "trainers": [],
+  "items": [],
+  "signs": [],
+  "npcs": [
+    {
+      "id": "n0",
+      "worldX": 136,
+      "worldZ": 264,
+      "pixelX": 141.04,
+      "pixelY": 269,
+      "spriteId": 98,
+      "spritePath": "data/trainers/sprites/0098.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n1",
+      "worldX": 168,
+      "worldZ": 200,
+      "pixelX": 173.03,
+      "pixelY": 205.02,
+      "spriteId": 101,
+      "spritePath": "data/trainers/sprites/0101.png",
+      "faceDirection": "NORTH"
+    },
+    {
+      "id": "n2",
+      "worldX": 200,
+      "worldZ": 232,
+      "pixelX": 205.02,
+      "pixelY": 237.01,
+      "spriteId": 98,
+      "spritePath": "data/trainers/sprites/0098.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n3",
+      "worldX": 200,
+      "worldZ": 264,
+      "pixelX": 205.02,
+      "pixelY": 269,
+      "spriteId": 99,
+      "spritePath": "data/trainers/sprites/0099.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n4",
+      "worldX": 136,
+      "worldZ": 232,
+      "pixelX": 141.04,
+      "pixelY": 237.01,
+      "spriteId": 98,
+      "spritePath": "data/trainers/sprites/0098.png",
+      "faceDirection": "SOUTH"
+    },
+    {
+      "id": "n5",
+      "worldX": 376,
+      "worldZ": 120,
+      "pixelX": 380.96,
+      "pixelY": 125.05,
+      "spriteId": 110,
+      "spritePath": "data/trainers/sprites/0110.png",
+      "faceDirection": "NORTH"
+    }
+  ]
+}
