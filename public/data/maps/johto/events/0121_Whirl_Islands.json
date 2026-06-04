@@ -1,0 +1,127 @@
+{
+  "zoneId": 121,
+  "displayName": "Whirl Islands",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 632,
+      "pixelY": 408,
+      "worldX": 592,
+      "worldZ": 400,
+      "destinationZoneId": 95,
+      "destinationName": "Route 41",
+      "destinationPixelX": 728,
+      "destinationPixelY": 328,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 856,
+      "pixelY": 360,
+      "worldX": 816,
+      "worldZ": 352,
+      "destinationZoneId": 242,
+      "destinationName": "Whirl Islands",
+      "destinationPixelX": 1032,
+      "destinationPixelY": 280,
+      "anchor": 5
+    },
+    {
+      "id": "w2",
+      "pixelX": 936,
+      "pixelY": 152,
+      "worldX": 896,
+      "worldZ": 144,
+      "destinationZoneId": 242,
+      "destinationName": "Whirl Islands",
+      "destinationPixelX": 1176,
+      "destinationPixelY": 152,
+      "anchor": 7
+    },
+    {
+      "id": "w3",
+      "pixelX": 216,
+      "pixelY": 328,
+      "worldX": 176,
+      "worldZ": 320,
+      "destinationZoneId": 95,
+      "destinationName": "Route 41",
+      "destinationPixelX": 264,
+      "destinationPixelY": 344,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 168,
+      "pixelY": 264,
+      "worldX": 128,
+      "worldZ": 256,
+      "destinationZoneId": 242,
+      "destinationName": "Whirl Islands",
+      "destinationPixelX": 376,
+      "destinationPixelY": 200,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 168,
+      "pixelY": 872,
+      "worldX": 128,
+      "worldZ": 864,
+      "destinationZoneId": 95,
+      "destinationName": "Route 41",
+      "destinationPixelX": 312,
+      "destinationPixelY": 808,
+      "anchor": 1
+    },
+    {
+      "id": "w6",
+      "pixelX": 136,
+      "pixelY": 792,
+      "worldX": 96,
+      "worldZ": 784,
+      "destinationZoneId": 242,
+      "destinationName": "Whirl Islands",
+      "destinationPixelX": 472,
+      "destinationPixelY": 888,
+      "anchor": 2
+    },
+    {
+      "id": "w7",
+      "pixelX": 472,
+      "pixelY": 792,
+      "worldX": 432,
+      "worldZ": 784,
+      "destinationZoneId": 242,
+      "destinationName": "Whirl Islands",
+      "destinationPixelX": 744,
+      "destinationPixelY": 888,
+      "anchor": 9
+    },
+    {
+      "id": "w8",
+      "pixelX": 872,
+      "pixelY": 792,
+      "worldX": 832,
+      "worldZ": 784,
+      "destinationZoneId": 242,
+      "destinationName": "Whirl Islands",
+      "destinationPixelX": 1064,
+      "destinationPixelY": 840,
+      "anchor": 12
+    },
+    {
+      "id": "w9",
+      "pixelX": 872,
+      "pixelY": 952,
+      "worldX": 832,
+      "worldZ": 944,
+      "destinationZoneId": 95,
+      "destinationName": "Route 41",
+      "destinationPixelX": 792,
+      "destinationPixelY": 840,
+      "anchor": 3
+    }
+  ],
+  "trainers": []
+}

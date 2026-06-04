@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 425,
+    "name": "Route 11",
+    "mapName": "0425 - Route 11",
+    "matrixId": 70
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0193_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 96,
+        "y": 80,
+        "targetPng": "0425 - Route 11.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

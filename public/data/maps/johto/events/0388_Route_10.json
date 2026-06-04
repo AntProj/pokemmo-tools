@@ -1,0 +1,46 @@
+{
+  "zoneId": 388,
+  "displayName": "Route 10",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 600,
+      "pixelY": 136,
+      "worldX": 22608,
+      "worldZ": 3200,
+      "destinationZoneId": 108,
+      "destinationName": "Rock Tunnel",
+      "destinationPixelX": 376,
+      "destinationPixelY": 584,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 373,
+      "pixelX": 648,
+      "pixelY": 160,
+      "trainerId": 359,
+      "trainerName": "Jim",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3358,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 374,
+      "pixelX": 872,
+      "pixelY": 224,
+      "trainerId": 348,
+      "trainerName": "Robert",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3347,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

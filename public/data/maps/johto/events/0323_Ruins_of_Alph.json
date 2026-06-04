@@ -1,0 +1,55 @@
+{
+  "zoneId": 323,
+  "displayName": "Ruins of Alph",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 104,
+      "pixelY": 216,
+      "worldX": 96,
+      "worldZ": 208,
+      "destinationZoneId": 113,
+      "destinationName": "Ruins of Alph",
+      "destinationPixelX": 264,
+      "destinationPixelY": 484,
+      "anchor": 8
+    },
+    {
+      "id": "w1",
+      "pixelX": 104,
+      "pixelY": 120,
+      "worldX": 96,
+      "worldZ": 112,
+      "destinationZoneId": 315,
+      "destinationName": "Ruins of Alph",
+      "destinationPixelX": 328,
+      "destinationPixelY": 392,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 408,
+      "pixelY": 488,
+      "worldX": 400,
+      "worldZ": 480,
+      "destinationZoneId": 113,
+      "destinationName": "Ruins of Alph",
+      "destinationPixelX": 264,
+      "destinationPixelY": 484,
+      "anchor": 11
+    },
+    {
+      "id": "w3",
+      "pixelX": 408,
+      "pixelY": 392,
+      "worldX": 400,
+      "worldZ": 384,
+      "destinationZoneId": 490,
+      "destinationName": "Ruins of Alph",
+      "destinationPixelX": 328,
+      "destinationPixelY": 392,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

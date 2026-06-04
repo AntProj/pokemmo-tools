@@ -1,0 +1,200 @@
+{
+  "header": {
+    "id": 19,
+    "name": "Route 11",
+    "mapName": "0019 - Route 11",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 1,
+      "orientation": "Right",
+      "spriteFile": "ow_0145_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 328,
+        "y": 224,
+        "targetPng": "0019 - Route 11.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 42,
+        "yMatrix": 9,
+        "xMap": 19,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 1,
+      "orientation": "Down",
+      "spriteFile": "ow_0145_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 600,
+        "y": 240,
+        "targetPng": "0019 - Route 11.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 43,
+        "yMatrix": 9,
+        "xMap": 4,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 1,
+      "orientation": "Up",
+      "spriteFile": "ow_0115_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 472,
+        "y": 256,
+        "targetPng": "0019 - Route 11.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 42,
+        "yMatrix": 9,
+        "xMap": 28,
+        "yMap": 14,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 1,
+      "orientation": "Right",
+      "spriteFile": "ow_0115_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 472,
+        "y": 144,
+        "targetPng": "0019 - Route 11.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 42,
+        "yMatrix": 9,
+        "xMap": 28,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0194_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 184,
+        "y": 288,
+        "targetPng": "0019 - Route 11.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 42,
+        "yMatrix": 9,
+        "xMap": 10,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0251_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 568,
+        "y": 304,
+        "targetPng": "0019 - Route 11.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 43,
+        "yMatrix": 9,
+        "xMap": 2,
+        "yMap": 17,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 808,
+        "y": 96,
+        "targetPng": "0019 - Route 11.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 43,
+        "yMatrix": 9,
+        "xMap": 17,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0113_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 200,
+        "y": 272,
+        "targetPng": "0019 - Route 11.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 42,
+        "yMatrix": 9,
+        "xMap": 11,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0113_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 184,
+        "y": 272,
+        "targetPng": "0019 - Route 11.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 42,
+        "yMatrix": 9,
+        "xMap": 10,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0113_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 200,
+        "y": 288,
+        "targetPng": "0019 - Route 11.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 42,
+        "yMatrix": 9,
+        "xMap": 11,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "header": {
+    "id": 480,
+    "name": "Fuchsia City",
+    "mapName": "0480 - Fuchsia City",
+    "matrixId": 259
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0142_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 320,
+        "y": 192,
+        "targetPng": "0480 - Fuchsia City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 12,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0117_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 176,
+        "y": 400,
+        "targetPng": "0480 - Fuchsia City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0166_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 240,
+        "y": 368,
+        "targetPng": "0480 - Fuchsia City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 7,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0057_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 288,
+        "y": 480,
+        "targetPng": "0480 - Fuchsia City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 10,
+        "yMap": 23,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0117_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 272,
+        "y": 288,
+        "targetPng": "0480 - Fuchsia City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 9,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0141_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 176,
+        "y": 272,
+        "targetPng": "0480 - Fuchsia City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0166_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 320,
+        "y": 192,
+        "targetPng": "0480 - Fuchsia City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 12,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0166_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 176,
+        "y": 272,
+        "targetPng": "0480 - Fuchsia City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0166_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 176,
+        "y": 400,
+        "targetPng": "0480 - Fuchsia City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0166_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 272,
+        "y": 288,
+        "targetPng": "0480 - Fuchsia City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 9,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

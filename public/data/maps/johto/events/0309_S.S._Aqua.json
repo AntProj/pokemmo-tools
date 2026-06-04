@@ -1,0 +1,58 @@
+{
+  "zoneId": 309,
+  "displayName": "S.S. Aqua",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 272,
+      "pixelY": 136,
+      "worldX": 144,
+      "worldZ": 32,
+      "destinationZoneId": 307,
+      "destinationName": "S.S. Aqua",
+      "destinationPixelX": 608,
+      "destinationPixelY": 328,
+      "anchor": 3
+    },
+    {
+      "id": "w1",
+      "pixelX": 496,
+      "pixelY": 136,
+      "worldX": 368,
+      "worldZ": 32,
+      "destinationZoneId": 307,
+      "destinationName": "S.S. Aqua",
+      "destinationPixelX": 704,
+      "destinationPixelY": 328,
+      "anchor": 4
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t1",
+      "trainerInstanceId": 343,
+      "pixelX": 144,
+      "pixelY": 256,
+      "trainerId": 231,
+      "trainerName": "Edward",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3230,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 344,
+      "pixelX": 272,
+      "pixelY": 224,
+      "trainerId": 284,
+      "trainerName": "Corey",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3283,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

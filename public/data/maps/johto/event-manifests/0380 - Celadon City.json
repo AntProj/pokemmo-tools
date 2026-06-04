@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 380,
+    "name": "Celadon City",
+    "mapName": "0380 - Celadon City",
+    "matrixId": 225
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0057_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 216,
+        "y": 208,
+        "targetPng": "0380 - Celadon City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

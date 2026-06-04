@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 424,
+    "name": "Route 19",
+    "mapName": "0424 - Route 19",
+    "matrixId": 69
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0193_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 56,
+        "y": 184,
+        "targetPng": "0424 - Route 19.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 1,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

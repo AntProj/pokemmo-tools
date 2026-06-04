@@ -1,0 +1,31 @@
+{
+  "zoneId": 100,
+  "displayName": "Azalea Town",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 176,
+      "pixelY": 120,
+      "worldX": 160,
+      "worldZ": 112,
+      "destinationZoneId": 74,
+      "destinationName": "Azalea Town",
+      "destinationPixelX": 152,
+      "destinationPixelY": 248,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 32,
+      "pixelY": 120,
+      "worldX": 16,
+      "worldZ": 112,
+      "destinationZoneId": 117,
+      "destinationName": "Ilex Forest",
+      "destinationPixelX": 248,
+      "destinationPixelY": 1304,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

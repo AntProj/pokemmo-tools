@@ -1,0 +1,31 @@
+{
+  "zoneId": 390,
+  "displayName": "Route 8",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 32,
+      "pixelY": 120,
+      "worldX": 16,
+      "worldZ": 112,
+      "destinationZoneId": 59,
+      "destinationName": "Saffron City",
+      "destinationPixelX": 936,
+      "destinationPixelY": 796,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 176,
+      "pixelY": 120,
+      "worldX": 160,
+      "worldZ": 112,
+      "destinationZoneId": 16,
+      "destinationName": "Route 8",
+      "destinationPixelX": 24,
+      "destinationPixelY": 279,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

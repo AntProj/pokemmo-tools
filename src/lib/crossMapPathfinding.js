@@ -29,7 +29,7 @@ const manhattan = (a, b) => Math.abs(a.tx - b.tx) + Math.abs(a.ty - b.ty);
 const stateKey = (zoneId, tile) => `${zoneId}|${tile.tx},${tile.ty}`;
 
 // HM-clearable obstacles are sprite events (REACT_WALKABILITY.md §4).
-// Same OW filename → semantic mapping as SinnohMap.jsx's eventHmSemantic.
+// Same OW filename → semantic mapping as RegionMap.jsx's eventHmSemantic.
 function eventHmSemantic(spriteFile) {
   if (typeof spriteFile !== 'string') return null;
   const m = spriteFile.match(/^ow_(\d{4})/);
@@ -43,7 +43,7 @@ function eventHmSemantic(spriteFile) {
 }
 
 // Build the per-zone blocked-tile set + Strength boulder list from a
-// loaded events manifest. Mirrors the logic in SinnohMap.jsx's
+// loaded events manifest. Mirrors the logic in RegionMap.jsx's
 // `blockedTileSet` + `eventBoulders` useMemos, kept identical so
 // cross-zone segments respect the same HM toggles + event-blocking
 // behavior as single-zone pathfinding.

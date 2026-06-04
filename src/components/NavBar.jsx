@@ -3,13 +3,16 @@ import { Box, Image } from 'lucide-react';
 import { useSpriteMode, setSpriteMode } from '../lib/spriteMode.js';
 
 const TABS = [
-  { to: '/',          label: 'Pokédex'           },
-  { to: '/search',    label: 'Search'            },
-  { to: '/locations', label: 'Locations'         },
-  { to: '/tracker',   label: 'Tracker'           },
-  { to: '/catch',     label: 'Catch Calc'        },
-  { to: '/breeding',  label: 'Breeding Planner'  },
-  { to: '/map',       label: 'Sinnoh Map'        },
+  { to: '/',            label: 'Pokédex'           },
+  { to: '/search',      label: 'Search'            },
+  { to: '/locations',   label: 'Locations'         },
+  { to: '/tracker',     label: 'Tracker'           },
+  { to: '/catch',       label: 'Catch Calc'        },
+  { to: '/breeding',    label: 'Breeding Planner'  },
+  // Region map tabs. NavLink prefix-matches by default (no `end` flag), so
+  // navigating to e.g. /map/sinnoh/0285 still highlights the Sinnoh tab.
+  { to: '/map/sinnoh',  label: 'Sinnoh Map'        },
+  { to: '/map/johto',   label: 'Johto Map'         },
 ];
 
 export default function NavBar() {

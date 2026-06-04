@@ -1,0 +1,95 @@
+{
+  "zoneId": 188,
+  "displayName": "Radio Tower",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 240,
+      "pixelY": 120,
+      "worldX": 192,
+      "worldZ": 80,
+      "destinationZoneId": 187,
+      "destinationName": "Radio Tower",
+      "destinationPixelX": 240,
+      "destinationPixelY": 104,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 96,
+      "pixelY": 120,
+      "worldX": 48,
+      "worldZ": 80,
+      "destinationZoneId": 189,
+      "destinationName": "Radio Tower",
+      "destinationPixelX": 96,
+      "destinationPixelY": 96,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 352,
+      "pixelY": 120,
+      "worldX": 304,
+      "worldZ": 80,
+      "destinationZoneId": 187,
+      "destinationName": "Radio Tower",
+      "destinationPixelX": 352,
+      "destinationPixelY": 104,
+      "anchor": 2
+    },
+    {
+      "id": "w3",
+      "pixelX": 416,
+      "pixelY": 120,
+      "worldX": 368,
+      "worldZ": 80,
+      "destinationZoneId": 189,
+      "destinationName": "Radio Tower",
+      "destinationPixelX": 352,
+      "destinationPixelY": 96,
+      "anchor": 2
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 301,
+      "pixelX": 112,
+      "pixelY": 192,
+      "trainerId": 472,
+      "trainerName": "Trenton",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3471,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 302,
+      "pixelX": 176,
+      "pixelY": 128,
+      "trainerId": 192,
+      "trainerName": "Grunt",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3191,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 303,
+      "pixelX": 416,
+      "pixelY": 176,
+      "trainerId": 706,
+      "trainerName": "Proton",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3705,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

@@ -1,33 +1,42 @@
 #!/usr/bin/env node
 /**
- * upload-maps-to-r2.mjs — Sinnoh map asset sync for Cloudflare R2
+ * upload-maps-to-r2.mjs — region-parameterized map-asset sync for Cloudflare R2
  *
- * Modes:
- *   npm run upload:maps                    — push new/changed PNGs (default)
- *   npm run upload:maps -- --dry-run       — list what would upload, no writes
- *   npm run upload:maps -- --force         — re-upload everything ignoring size
- *   npm run upload:maps -- --prune-stale   — after upload, delete R2 objects
- *                                            not present in local images/
- *   npm run purge:r2                       — wipe all sinnoh/* AND sprites/* objects
+ * Usage:
+ *   node scripts/upload-maps-to-r2.mjs [region] [flags]
+ *
+ * Examples:
+ *   node scripts/upload-maps-to-r2.mjs sinnoh           — push Sinnoh new/changed
+ *   node scripts/upload-maps-to-r2.mjs johto            — push Johto new/changed
+ *   node scripts/upload-maps-to-r2.mjs sinnoh --dry-run — preview without writing
+ *   node scripts/upload-maps-to-r2.mjs sinnoh --force   — re-upload everything
+ *   node scripts/upload-maps-to-r2.mjs johto --prune-stale
+ *                                                       — after upload, delete R2 objects
+ *                                                         not present in local images/
+ *   node scripts/upload-maps-to-r2.mjs --purge          — wipe ALL regions + sprites
+ *
+ * --purge always operates across every region; the per-region scoping only
+ * applies to the upload / prune-stale paths. (Bucket-wide reset shouldn't be
+ * region-aware — if you need to nuke just one region, do it manually with the
+ * AWS CLI or extend this to a per-region purge.)
  *
  * Required env vars (see .env.example):
  *   R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY
  *   R2_BUCKET (default: pokemmo-maps)
  *
- * What gets synced:
- *   public/data/maps/sinnoh/images/  →  s3://<bucket>/sinnoh/images/
- *   public/data/sprites/             →  s3://<bucket>/sprites/
+ * Optional positional arg / env var:
+ *   REGION  — sinnoh | johto (default: sinnoh). Determines which
+ *             public/data/maps/<region>/images/ dir gets pushed and which
+ *             R2 prefix it goes under (s3://<bucket>/<region>/images/).
  *
  * About --prune-stale:
  *   Filenames are content-hashed (e.g. `0344 - Route 203.05ae12bbef.webp`).
  *   Each data regeneration changes the hash for any PNG whose content
- *   changed, so old hashes become orphans in R2 — they're not referenced
- *   by the current `maps-index.json`, but they linger in the bucket and
- *   accumulate. --prune-stale lists everything in R2 under sinnoh/images/
- *   and deletes whatever doesn't exist in the local images/ directory.
- *   Safe because the local dir is the source of truth (the build script
- *   already prunes its own orphans before upload). Combine with regular
- *   upload to push current + clean leftovers in one shot.
+ *   changed, so old hashes become orphans in R2. --prune-stale lists every
+ *   object in R2 under <region>/images/ and deletes whatever doesn't exist
+ *   in the local images/ directory. Scoped per region — pruning Johto won't
+ *   touch Sinnoh objects and vice versa. Local dir is the source of truth
+ *   (the build script prunes its own orphans before upload).
  */
 
 import fs from 'node:fs';
@@ -42,11 +51,24 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 
 // ---------- args ----------
-const args = process.argv.slice(2);
-const dryRun     = args.includes('--dry-run');
-const force      = args.includes('--force');
-const purge      = args.includes('--purge');
-const pruneStale = args.includes('--prune-stale');
+// Filter flags out first so the positional region arg can sit anywhere
+// relative to flags — `upload-maps-to-r2.mjs johto --dry-run` and
+// `--dry-run johto` are both valid.
+const rawArgs    = process.argv.slice(2);
+const dryRun     = rawArgs.includes('--dry-run');
+const force      = rawArgs.includes('--force');
+const purge      = rawArgs.includes('--purge');
+const pruneStale = rawArgs.includes('--prune-stale');
+const positional = rawArgs.filter(a => !a.startsWith('--'));
+
+// ---------- region ----------
+const REGION = (positional[0] || process.env.REGION || 'sinnoh').toLowerCase();
+const VALID_REGIONS = ['sinnoh', 'johto'];
+if (!VALID_REGIONS.includes(REGION)) {
+  console.error(`\n  Unknown region "${REGION}". Valid: ${VALID_REGIONS.join(', ')}.\n`);
+  process.exit(1);
+}
+console.log(`► Region: ${REGION}`);
 
 // ---------- env ----------
 const {
@@ -96,8 +118,11 @@ async function listAllKeys(prefix) {
 
 // ---------- purge mode ----------
 if (purge) {
-  console.log('► PURGE: deleting every object under sinnoh/, sprites/, unova/, maps/');
-  const prefixes = ['sinnoh/', 'sprites/', 'unova/', 'maps/']; // include legacy prefixes
+  // Purge is intentionally cross-region — it's the nuke-from-orbit option
+  // for a clean rebuild. Includes every known region prefix + sprites + the
+  // legacy unscoped `maps/` prefix from before the per-region layout.
+  console.log('► PURGE: deleting every object under sinnoh/, johto/, sprites/, unova/, maps/');
+  const prefixes = ['sinnoh/', 'johto/', 'sprites/', 'unova/', 'maps/'];
   let totalDeleted = 0;
   for (const prefix of prefixes) {
     const keys = [...(await listAllKeys(prefix)).keys()];
@@ -121,15 +146,20 @@ if (purge) {
 }
 
 // ---------- upload mode ----------
-// Sinnoh map images are the only large asset we host on R2. They're served
+// Region map images are the only large asset we host on R2. They're served
 // as WebP — build-map-data.mjs converts the Blender PNG output via sharp
-// before placing them in public/data/maps/sinnoh/images/. WebP is ~25-50%
+// before placing them in public/data/maps/<region>/images/. WebP is ~25-50%
 // smaller than the PNG source AND decodes faster in modern browsers.
 // Trainer / NPC / item / sign sprites are baked INTO each map image by
 // build_world.py's composite step (REACT_INTEGRATION.md §3.1) — there's no
 // separate sprite upload.
+//
+// TARGETS is per-region: one entry per region we're syncing this run. Adding
+// more regions = appending here, but the per-invocation REGION arg means we
+// only push one region at a time. Run the script twice (once per region) to
+// sync both.
 const TARGETS = [
-  { local: path.join(ROOT, 'public', 'data', 'maps', 'sinnoh', 'images'), prefix: 'sinnoh/images/', ext: '.webp', mime: 'image/webp' },
+  { local: path.join(ROOT, 'public', 'data', 'maps', REGION, 'images'), prefix: `${REGION}/images/`, ext: '.webp', mime: 'image/webp' },
 ];
 
 let totalUp = 0, totalSkip = 0, totalBytes = 0;
@@ -188,9 +218,10 @@ for (const target of TARGETS) {
 
 // ---------- prune stale R2 objects (opt-in via --prune-stale) ----------
 // Local images/ directory is the source of truth after the build script
-// runs its own orphan-pruning step. Any object in R2 under sinnoh/images/
-// whose filename isn't in local images/ is by definition an orphan from
-// a previous content-hash version. Delete those.
+// runs its own orphan-pruning step. Any object in R2 under <region>/images/
+// whose filename isn't in local images/ is by definition an orphan from a
+// previous content-hash version. Delete those. SCOPED per region — pruning
+// during a `johto` run can't accidentally delete Sinnoh objects.
 let totalPruned = 0;
 if (pruneStale) {
   for (const target of TARGETS) {
@@ -229,4 +260,4 @@ console.log(`\n► Done. ${totalUp} uploaded · ${totalSkip} skipped · ${(total
 if (pruneStale) {
   console.log(`  ${totalPruned} stale R2 object(s) pruned${dryRun ? ' (dry-run)' : ''}.`);
 }
-console.log(`  Public URL pattern: https://pub-5fa7446d73c34538ae0c670b480e58a2.r2.dev/sinnoh/images/<file>.png`);
+console.log(`  Public URL pattern: https://pub-5fa7446d73c34538ae0c670b480e58a2.r2.dev/${REGION}/images/<file>.webp`);

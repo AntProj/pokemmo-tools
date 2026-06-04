@@ -1,0 +1,409 @@
+{
+  "header": {
+    "id": 88,
+    "name": "Lake of Rage",
+    "mapName": "0088 - Lake of Rage",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0128_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 792,
+        "y": 800,
+        "targetPng": "0088 - Lake of Rage.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 16,
+        "yMatrix": 2,
+        "xMap": 16,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0123_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 872,
+        "y": 880,
+        "targetPng": "0088 - Lake of Rage.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 16,
+        "yMatrix": 2,
+        "xMap": 21,
+        "yMap": 21,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0120_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1144,
+        "y": 544,
+        "targetPng": "0088 - Lake of Rage.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 17,
+        "yMatrix": 2,
+        "xMap": 6,
+        "yMap": 0,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0183_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 744,
+        "y": 656,
+        "targetPng": "0088 - Lake of Rage.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 16,
+        "yMatrix": 2,
+        "xMap": 13,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 1,
+      "orientation": "Up",
+      "spriteFile": "ow_0143_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 904,
+        "y": 800,
+        "targetPng": "0088 - Lake of Rage.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 16,
+        "yMatrix": 2,
+        "xMap": 23,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 1,
+      "orientation": "Left",
+      "spriteFile": "ow_0143_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1032,
+        "y": 720,
+        "targetPng": "0088 - Lake of Rage.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 16,
+        "yMatrix": 2,
+        "xMap": 31,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 1,
+      "orientation": "Right",
+      "spriteFile": "ow_0122_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 280,
+        "y": 640,
+        "targetPng": "0088 - Lake of Rage.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 2,
+        "xMap": 16,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 1,
+      "orientation": "Left",
+      "spriteFile": "ow_0125_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1144,
+        "y": 400,
+        "targetPng": "0088 - Lake of Rage.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 17,
+        "yMatrix": 1,
+        "xMap": 6,
+        "yMap": 23,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0158_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 792,
+        "y": 848,
+        "targetPng": "0088 - Lake of Rage.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 16,
+        "yMatrix": 2,
+        "xMap": 16,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0120_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 264,
+        "y": 288,
+        "targetPng": "0088 - Lake of Rage.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 1,
+        "xMap": 15,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0447_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 808,
+        "y": 848,
+        "targetPng": "0088 - Lake of Rage.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 16,
+        "yMatrix": 2,
+        "xMap": 17,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 344,
+        "y": 464,
+        "targetPng": "0088 - Lake of Rage.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 1,
+        "xMap": 20,
+        "yMap": 27,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 12,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1000,
+        "y": 272,
+        "targetPng": "0088 - Lake of Rage.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 16,
+        "yMatrix": 1,
+        "xMap": 29,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 13,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 712,
+        "y": 784,
+        "targetPng": "0088 - Lake of Rage.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 16,
+        "yMatrix": 2,
+        "xMap": 11,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 14,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 440,
+        "y": 64,
+        "targetPng": "0088 - Lake of Rage.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 1,
+        "xMap": 26,
+        "yMap": 2,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 15,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 168,
+        "y": 688,
+        "targetPng": "0088 - Lake of Rage.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 2,
+        "xMap": 9,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 16,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0093_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 312,
+        "y": 624,
+        "targetPng": "0088 - Lake of Rage.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 2,
+        "xMap": 18,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 17,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0093_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 584,
+        "y": 384,
+        "targetPng": "0088 - Lake of Rage.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 16,
+        "yMatrix": 1,
+        "xMap": 3,
+        "yMap": 22,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 18,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0093_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 696,
+        "y": 320,
+        "targetPng": "0088 - Lake of Rage.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 16,
+        "yMatrix": 1,
+        "xMap": 10,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 19,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 984,
+        "y": 112,
+        "targetPng": "0088 - Lake of Rage.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 16,
+        "yMatrix": 1,
+        "xMap": 28,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 20,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0152_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 392,
+        "y": 800,
+        "targetPng": "0088 - Lake of Rage.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 2,
+        "xMap": 23,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

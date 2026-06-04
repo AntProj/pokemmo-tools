@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 314,
+    "name": "Ruins of Alph",
+    "mapName": "0314 - Ruins of Alph",
+    "matrixId": 34
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0000_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 104,
+        "y": 48,
+        "targetPng": "0314 - Ruins of Alph.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 2,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0000_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 88,
+        "y": 128,
+        "targetPng": "0314 - Ruins of Alph.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

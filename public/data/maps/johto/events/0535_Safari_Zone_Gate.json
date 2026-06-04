@@ -1,0 +1,19 @@
+{
+  "zoneId": 535,
+  "displayName": "Safari Zone Gate",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 248,
+      "pixelY": 168,
+      "worldX": 224,
+      "worldZ": 160,
+      "destinationZoneId": 534,
+      "destinationName": "Safari Zone Gate",
+      "destinationPixelX": 248,
+      "destinationPixelY": 280,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

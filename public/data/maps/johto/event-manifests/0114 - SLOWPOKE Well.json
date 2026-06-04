@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 114,
+    "name": "SLOWPOKE Well",
+    "mapName": "0114 - SLOWPOKE Well",
+    "matrixId": 45
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0223_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 280,
+        "y": 144,
+        "targetPng": "0114 - SLOWPOKE Well.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 17,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0126_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 264,
+        "y": 176,
+        "targetPng": "0114 - SLOWPOKE Well.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 16,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

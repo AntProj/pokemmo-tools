@@ -1,0 +1,84 @@
+{
+  "zoneId": 43,
+  "displayName": "Route 39",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 168,
+      "pixelY": 89,
+      "worldX": 4240,
+      "worldZ": 2624,
+      "destinationZoneId": 214,
+      "destinationName": "Route 39",
+      "destinationPixelX": 104,
+      "destinationPixelY": 168,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 88,
+      "pixelY": 89,
+      "worldX": 4160,
+      "worldZ": 2624,
+      "destinationZoneId": 215,
+      "destinationName": "Route 39",
+      "destinationPixelX": 120,
+      "destinationPixelY": 152,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 155,
+      "pixelX": 296,
+      "pixelY": 673,
+      "trainerId": 39,
+      "trainerName": "Eugene",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3038,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 156,
+      "pixelX": 376,
+      "pixelY": 721,
+      "trainerId": 44,
+      "trainerName": "Derek",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3043,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 157,
+      "pixelX": 232,
+      "pixelY": 769,
+      "trainerId": 45,
+      "trainerName": "Ruth",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3044,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 158,
+      "pixelX": 360,
+      "pixelY": 305,
+      "trainerId": 389,
+      "trainerName": "Nelson",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3388,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

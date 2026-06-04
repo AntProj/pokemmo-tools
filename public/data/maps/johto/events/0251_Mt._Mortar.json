@@ -1,0 +1,45 @@
+{
+  "zoneId": 251,
+  "displayName": "Mt. Mortar",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 440,
+      "pixelY": 888,
+      "worldX": 432,
+      "worldZ": 880,
+      "destinationZoneId": 119,
+      "destinationName": "Mt. Mortar",
+      "destinationPixelX": 728,
+      "destinationPixelY": 56,
+      "anchor": 9
+    },
+    {
+      "id": "w1",
+      "pixelX": 152,
+      "pixelY": 264,
+      "worldX": 144,
+      "worldZ": 256,
+      "destinationZoneId": 250,
+      "destinationName": "Mt. Mortar",
+      "destinationPixelX": 456,
+      "destinationPixelY": 216,
+      "anchor": 8
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t6",
+      "trainerInstanceId": 338,
+      "pixelX": 312,
+      "pixelY": 752,
+      "trainerId": 538,
+      "trainerName": "Hugh",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3537,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

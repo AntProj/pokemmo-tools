@@ -1,0 +1,71 @@
+{
+  "zoneId": 202,
+  "displayName": "Goldenrod City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 96,
+      "pixelY": 328,
+      "worldX": 48,
+      "worldZ": 288,
+      "destinationZoneId": 201,
+      "destinationName": "Goldenrod City",
+      "destinationPixelX": 464,
+      "destinationPixelY": 240,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 496,
+      "pixelY": 104,
+      "worldX": 448,
+      "worldZ": 64,
+      "destinationZoneId": 200,
+      "destinationName": "Goldenrod City",
+      "destinationPixelX": 448,
+      "destinationPixelY": 112,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 315,
+      "pixelX": 304,
+      "pixelY": 368,
+      "trainerId": 196,
+      "trainerName": "Grunt",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3195,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 316,
+      "pixelX": 432,
+      "pixelY": 224,
+      "trainerId": 197,
+      "trainerName": "Grunt",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3196,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 317,
+      "pixelX": 320,
+      "pixelY": 128,
+      "trainerId": 227,
+      "trainerName": "Grunt",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3226,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

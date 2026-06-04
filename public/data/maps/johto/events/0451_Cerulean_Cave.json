@@ -1,0 +1,55 @@
+{
+  "zoneId": 451,
+  "displayName": "Cerulean Cave",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 234,
+      "pixelY": 280,
+      "worldX": 112,
+      "worldZ": 272,
+      "destinationZoneId": 145,
+      "destinationName": "Cerulean Cave",
+      "destinationPixelX": 122,
+      "destinationPixelY": 312,
+      "anchor": 7
+    },
+    {
+      "id": "w1",
+      "pixelX": 1018,
+      "pixelY": 328,
+      "worldX": 896,
+      "worldZ": 320,
+      "destinationZoneId": 145,
+      "destinationName": "Cerulean Cave",
+      "destinationPixelX": 906,
+      "destinationPixelY": 360,
+      "anchor": 2
+    },
+    {
+      "id": "w2",
+      "pixelX": 1018,
+      "pixelY": 312,
+      "worldX": 896,
+      "worldZ": 304,
+      "destinationZoneId": 145,
+      "destinationName": "Cerulean Cave",
+      "destinationPixelX": 906,
+      "destinationPixelY": 360,
+      "anchor": 2
+    },
+    {
+      "id": "w3",
+      "pixelX": 234,
+      "pixelY": 264,
+      "worldX": 112,
+      "worldZ": 256,
+      "destinationZoneId": 145,
+      "destinationName": "Cerulean Cave",
+      "destinationPixelX": 122,
+      "destinationPixelY": 312,
+      "anchor": 7
+    }
+  ],
+  "trainers": []
+}

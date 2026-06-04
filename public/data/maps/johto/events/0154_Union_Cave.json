@@ -1,0 +1,107 @@
+{
+  "zoneId": 154,
+  "displayName": "Union Cave",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 56,
+      "pixelY": 712,
+      "worldX": 32,
+      "worldZ": 688,
+      "destinationZoneId": 153,
+      "destinationName": "Union Cave",
+      "destinationPixelX": 584,
+      "destinationPixelY": 936,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 456,
+      "pixelY": 264,
+      "worldX": 432,
+      "worldZ": 240,
+      "destinationZoneId": 153,
+      "destinationName": "Union Cave",
+      "destinationPixelX": 184,
+      "destinationPixelY": 72,
+      "anchor": 3
+    },
+    {
+      "id": "w2",
+      "pixelX": 168,
+      "pixelY": 456,
+      "worldX": 144,
+      "worldZ": 432,
+      "destinationZoneId": 153,
+      "destinationName": "Union Cave",
+      "destinationPixelX": 184,
+      "destinationPixelY": 216,
+      "anchor": 4
+    },
+    {
+      "id": "w3",
+      "pixelX": 344,
+      "pixelY": 72,
+      "worldX": 320,
+      "worldZ": 48,
+      "destinationZoneId": 99,
+      "destinationName": "Union Cave",
+      "destinationPixelX": 456,
+      "destinationPixelY": 72,
+      "anchor": 5
+    },
+    {
+      "id": "w4",
+      "pixelX": 56,
+      "pixelY": 328,
+      "worldX": 32,
+      "worldZ": 304,
+      "destinationZoneId": 99,
+      "destinationName": "Union Cave",
+      "destinationPixelX": 104,
+      "destinationPixelY": 72,
+      "anchor": 4
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 277,
+      "pixelX": 408,
+      "pixelY": 1264,
+      "trainerId": 205,
+      "trainerName": "Nick",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3204,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 278,
+      "pixelX": 120,
+      "pixelY": 1024,
+      "trainerId": 206,
+      "trainerName": "Gwen",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3205,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 279,
+      "pixelX": 88,
+      "pixelY": 1360,
+      "trainerId": 363,
+      "trainerName": "Emma",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3362,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

@@ -5,13 +5,30 @@
   "type": "module",
   "homepage": "https://YOUR_GITHUB_USERNAME.github.io/pokemmo-tools/",
   "scripts": {
+    "_comment_env": "Scripts that need POKEMMO_MAPS_DIR or R2 creds use Node's built-in --env-file-if-exists flag (Node >= 20.6). '.env.local' is loaded if present, otherwise the existing process env wins. Vite's dev/build don't need this because Vite has its own .env loader.",
+
     "build:data": "node scripts/build-data.mjs",
-    "build:map-data":   "node scripts/build-map-data.mjs",
-    "upload:maps":      "node scripts/upload-maps-to-r2.mjs",
-    "upload:maps:dry":  "node scripts/upload-maps-to-r2.mjs --dry-run",
-    "upload:maps:sync": "node scripts/upload-maps-to-r2.mjs --prune-stale",
-    "regen-and-sync":   "npm run build:map-data && npm run upload:maps:sync",
-    "purge:r2":         "node scripts/upload-maps-to-r2.mjs --purge",
+
+    "build:map-data":        "node --env-file-if-exists=.env.local scripts/build-map-data.mjs sinnoh",
+    "build:map-data:sinnoh": "node --env-file-if-exists=.env.local scripts/build-map-data.mjs sinnoh",
+    "build:map-data:johto":  "node --env-file-if-exists=.env.local scripts/build-map-data.mjs johto",
+
+    "upload:maps":             "node --env-file-if-exists=.env.local scripts/upload-maps-to-r2.mjs sinnoh",
+    "upload:maps:sinnoh":      "node --env-file-if-exists=.env.local scripts/upload-maps-to-r2.mjs sinnoh",
+    "upload:maps:johto":       "node --env-file-if-exists=.env.local scripts/upload-maps-to-r2.mjs johto",
+    "upload:maps:dry":         "node --env-file-if-exists=.env.local scripts/upload-maps-to-r2.mjs sinnoh --dry-run",
+    "upload:maps:dry:sinnoh":  "node --env-file-if-exists=.env.local scripts/upload-maps-to-r2.mjs sinnoh --dry-run",
+    "upload:maps:dry:johto":   "node --env-file-if-exists=.env.local scripts/upload-maps-to-r2.mjs johto --dry-run",
+    "upload:maps:sync":        "node --env-file-if-exists=.env.local scripts/upload-maps-to-r2.mjs sinnoh --prune-stale",
+    "upload:maps:sync:sinnoh": "node --env-file-if-exists=.env.local scripts/upload-maps-to-r2.mjs sinnoh --prune-stale",
+    "upload:maps:sync:johto":  "node --env-file-if-exists=.env.local scripts/upload-maps-to-r2.mjs johto --prune-stale",
+
+    "regen-and-sync":        "npm run build:map-data:sinnoh && npm run upload:maps:sync:sinnoh",
+    "regen-and-sync:sinnoh": "npm run build:map-data:sinnoh && npm run upload:maps:sync:sinnoh",
+    "regen-and-sync:johto":  "npm run build:map-data:johto && npm run upload:maps:sync:johto",
+
+    "purge:r2": "node --env-file-if-exists=.env.local scripts/upload-maps-to-r2.mjs --purge",
+
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",

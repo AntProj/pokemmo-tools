@@ -1,0 +1,19 @@
+{
+  "zoneId": 308,
+  "displayName": "S.S. Aqua",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 272,
+      "pixelY": 280,
+      "worldX": 144,
+      "worldZ": 176,
+      "destinationZoneId": 307,
+      "destinationName": "S.S. Aqua",
+      "destinationPixelX": 912,
+      "destinationPixelY": 344,
+      "anchor": 11
+    }
+  ],
+  "trainers": []
+}

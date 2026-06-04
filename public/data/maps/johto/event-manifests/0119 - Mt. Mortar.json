@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 119,
+    "name": "Mt. Mortar",
+    "mapName": "0119 - Mt. Mortar",
+    "matrixId": 62
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 552,
+        "y": 352,
+        "targetPng": "0119 - Mt. Mortar.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 2,
+        "yMap": 20,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1080,
+        "y": 512,
+        "targetPng": "0119 - Mt. Mortar.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 2,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 30,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

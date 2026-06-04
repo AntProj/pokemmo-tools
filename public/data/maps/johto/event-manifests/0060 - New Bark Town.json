@@ -1,0 +1,200 @@
+{
+  "header": {
+    "id": 60,
+    "name": "New Bark Town",
+    "mapName": "0060 - New Bark Town",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0058_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 291,
+        "y": 144,
+        "targetPng": "0060 - New Bark Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 21,
+        "yMatrix": 12,
+        "xMap": 10,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0123_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 307,
+        "y": 272,
+        "targetPng": "0060 - New Bark Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 21,
+        "yMatrix": 12,
+        "xMap": 11,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0130_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 339,
+        "y": 416,
+        "targetPng": "0060 - New Bark Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 21,
+        "yMatrix": 12,
+        "xMap": 13,
+        "yMap": 24,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0483_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 499,
+        "y": 384,
+        "targetPng": "0060 - New Bark Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 21,
+        "yMatrix": 12,
+        "xMap": 23,
+        "yMap": 22,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_3d_dawn_platinum.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 387,
+        "y": 144,
+        "targetPng": "0060 - New Bark Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 21,
+        "yMatrix": 12,
+        "xMap": 16,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0054_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 627,
+        "y": 32,
+        "targetPng": "0060 - New Bark Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 21,
+        "yMatrix": 12,
+        "xMap": 31,
+        "yMap": 0,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0126_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 499,
+        "y": 336,
+        "targetPng": "0060 - New Bark Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 21,
+        "yMatrix": 12,
+        "xMap": 23,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0159_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 499,
+        "y": 224,
+        "targetPng": "0060 - New Bark Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 21,
+        "yMatrix": 12,
+        "xMap": 23,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_3d_dawn_platinum.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 483,
+        "y": 272,
+        "targetPng": "0060 - New Bark Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 21,
+        "yMatrix": 12,
+        "xMap": 22,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0483_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 467,
+        "y": 288,
+        "targetPng": "0060 - New Bark Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 21,
+        "yMatrix": 12,
+        "xMap": 21,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

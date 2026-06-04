@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 15,
+    "name": "Route 7",
+    "mapName": "0015 - Route 7",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 264,
+        "y": 64,
+        "targetPng": "0015 - Route 7.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 39,
+        "yMatrix": 7,
+        "xMap": 15,
+        "yMap": 2,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

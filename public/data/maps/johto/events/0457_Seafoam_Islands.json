@@ -1,0 +1,19 @@
+{
+  "zoneId": 457,
+  "displayName": "Seafoam Islands",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 232,
+      "pixelY": 408,
+      "worldX": 224,
+      "worldZ": 400,
+      "destinationZoneId": 146,
+      "destinationName": "Seafoam Islands",
+      "destinationPixelX": 888,
+      "destinationPixelY": 392,
+      "anchor": 4
+    }
+  ],
+  "trainers": []
+}

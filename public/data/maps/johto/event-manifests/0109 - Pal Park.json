@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 109,
+    "name": "Pal Park",
+    "mapName": "0109 - Pal Park",
+    "matrixId": 8
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0131_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 472,
+        "y": 784,
+        "targetPng": "0109 - Pal Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 28,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

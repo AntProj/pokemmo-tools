@@ -1,0 +1,31 @@
+{
+  "zoneId": 424,
+  "displayName": "Route 19",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 120,
+      "pixelY": 96,
+      "worldX": 80,
+      "worldZ": 32,
+      "destinationZoneId": 56,
+      "destinationName": "Fuchsia City",
+      "destinationPixelX": 328,
+      "destinationPixelY": 1000,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 120,
+      "pixelY": 256,
+      "worldX": 80,
+      "worldZ": 192,
+      "destinationZoneId": 91,
+      "destinationName": "Route 19",
+      "destinationPixelX": 456,
+      "destinationPixelY": 108,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

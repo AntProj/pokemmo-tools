@@ -1,0 +1,162 @@
+{
+  "header": {
+    "id": 112,
+    "name": "Radio Tower",
+    "mapName": "0112 - Radio Tower",
+    "matrixId": 28
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0212_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 132,
+        "y": 224,
+        "targetPng": "0112 - Radio Tower.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0212_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 180,
+        "y": 224,
+        "targetPng": "0112 - Radio Tower.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 8,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0212_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 260,
+        "y": 224,
+        "targetPng": "0112 - Radio Tower.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 13,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0120_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 340,
+        "y": 160,
+        "targetPng": "0112 - Radio Tower.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 18,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0118_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 388,
+        "y": 160,
+        "targetPng": "0112 - Radio Tower.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 21,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0058_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 468,
+        "y": 432,
+        "targetPng": "0112 - Radio Tower.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 26,
+        "yMap": 25,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0174_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 420,
+        "y": 112,
+        "targetPng": "0112 - Radio Tower.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 23,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0148_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 292,
+        "y": 224,
+        "targetPng": "0112 - Radio Tower.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 15,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

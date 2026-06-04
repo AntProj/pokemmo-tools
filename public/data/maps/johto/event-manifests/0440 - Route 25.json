@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 440,
+    "name": "Route 25",
+    "mapName": "0440 - Route 25",
+    "matrixId": 254
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0128_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 232,
+        "y": 224,
+        "targetPng": "0440 - Route 25.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 7,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

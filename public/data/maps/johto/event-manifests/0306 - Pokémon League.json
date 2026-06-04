@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 306,
+    "name": "Pok\u00E9mon League",
+    "mapName": "0306 - Pok\u00E9mon League",
+    "matrixId": 170
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0158_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 104,
+        "y": 376,
+        "targetPng": "0306 - Pok\u00E9mon League.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 20,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

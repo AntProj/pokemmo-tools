@@ -1,0 +1,79 @@
+{
+  "zoneId": 146,
+  "displayName": "Seafoam Islands",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 888,
+      "pixelY": 456,
+      "worldX": 880,
+      "worldZ": 448,
+      "destinationZoneId": 92,
+      "destinationName": "Route 20",
+      "destinationPixelX": 1144,
+      "destinationPixelY": 465,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 136,
+      "pixelY": 200,
+      "worldX": 128,
+      "worldZ": 192,
+      "destinationZoneId": 92,
+      "destinationName": "Route 20",
+      "destinationPixelX": 920,
+      "destinationPixelY": 369,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 840,
+      "pixelY": 328,
+      "worldX": 832,
+      "worldZ": 320,
+      "destinationZoneId": 453,
+      "destinationName": "Seafoam Islands",
+      "destinationPixelX": 824,
+      "destinationPixelY": 360,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 184,
+      "pixelY": 72,
+      "worldX": 176,
+      "worldZ": 64,
+      "destinationZoneId": 453,
+      "destinationName": "Seafoam Islands",
+      "destinationPixelX": 136,
+      "destinationPixelY": 152,
+      "anchor": 1
+    },
+    {
+      "id": "w4",
+      "pixelX": 888,
+      "pixelY": 392,
+      "worldX": 880,
+      "worldZ": 384,
+      "destinationZoneId": 457,
+      "destinationName": "Seafoam Islands",
+      "destinationPixelX": 232,
+      "destinationPixelY": 408,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 888,
+      "pixelY": 376,
+      "worldX": 880,
+      "worldZ": 368,
+      "destinationZoneId": 457,
+      "destinationName": "Seafoam Islands",
+      "destinationPixelX": 232,
+      "destinationPixelY": 408,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

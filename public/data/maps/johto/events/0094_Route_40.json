@@ -1,0 +1,84 @@
+{
+  "zoneId": 94,
+  "displayName": "Route 40",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 216,
+      "pixelY": 180,
+      "worldX": 3792,
+      "worldZ": 4256,
+      "destinationZoneId": 366,
+      "destinationName": "Route 40",
+      "destinationPixelX": 120,
+      "destinationPixelY": 256,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 232,
+      "pixelY": 180,
+      "worldX": 3808,
+      "worldZ": 4256,
+      "destinationZoneId": 366,
+      "destinationName": "Route 40",
+      "destinationPixelX": 120,
+      "destinationPixelY": 256,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 219,
+      "pixelX": 280,
+      "pixelY": 460,
+      "trainerId": 16,
+      "trainerName": "Simon",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3015,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 220,
+      "pixelX": 376,
+      "pixelY": 604,
+      "trainerId": 9,
+      "trainerName": "Elaine",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3008,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 221,
+      "pixelX": 248,
+      "pixelY": 812,
+      "trainerId": 86,
+      "trainerName": "Randall",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3085,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 222,
+      "pixelX": 200,
+      "pixelY": 876,
+      "trainerId": 85,
+      "trainerName": "Paula",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3084,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

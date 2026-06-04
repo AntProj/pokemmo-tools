@@ -1,0 +1,19 @@
+{
+  "zoneId": 57,
+  "displayName": "Cinnabar Island",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 264,
+      "pixelY": 360,
+      "worldX": 16624,
+      "worldZ": 8032,
+      "destinationZoneId": 508,
+      "destinationName": "Cinnabar Island",
+      "destinationPixelX": 152,
+      "destinationPixelY": 312,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,31 @@
+{
+  "zoneId": 466,
+  "displayName": "Route 10",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 152,
+      "pixelY": 312,
+      "worldX": 128,
+      "worldZ": 304,
+      "destinationZoneId": 18,
+      "destinationName": "Route 10",
+      "destinationPixelX": 296,
+      "destinationPixelY": 56,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 248,
+      "pixelY": 280,
+      "worldX": 224,
+      "worldZ": 272,
+      "destinationZoneId": 484,
+      "destinationName": "Route 10",
+      "destinationPixelX": 248,
+      "destinationPixelY": 168,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

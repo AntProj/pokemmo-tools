@@ -1,0 +1,67 @@
+{
+  "header": {
+    "id": 57,
+    "name": "Cinnabar Island",
+    "mapName": "0057 - Cinnabar Island",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0169_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 216,
+        "y": 240,
+        "targetPng": "0057 - Cinnabar Island.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 32,
+        "yMatrix": 15,
+        "xMap": 12,
+        "yMap": 14,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0168_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 200,
+        "y": 416,
+        "targetPng": "0057 - Cinnabar Island.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 32,
+        "yMatrix": 15,
+        "xMap": 11,
+        "yMap": 25,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 360,
+        "y": 288,
+        "targetPng": "0057 - Cinnabar Island.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 32,
+        "yMatrix": 15,
+        "xMap": 21,
+        "yMap": 17,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "header": {
+    "id": 87,
+    "name": "Mahogany Town",
+    "mapName": "0087 - Mahogany Town",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0126_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 552,
+        "y": 276,
+        "targetPng": "0087 - Mahogany Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 16,
+        "yMatrix": 5,
+        "xMap": 28,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0128_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 280,
+        "y": 276,
+        "targetPng": "0087 - Mahogany Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 16,
+        "yMatrix": 5,
+        "xMap": 11,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0130_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 280,
+        "y": 420,
+        "targetPng": "0087 - Mahogany Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 16,
+        "yMatrix": 5,
+        "xMap": 11,
+        "yMap": 24,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0117_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 392,
+        "y": 276,
+        "targetPng": "0087 - Mahogany Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 16,
+        "yMatrix": 5,
+        "xMap": 18,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

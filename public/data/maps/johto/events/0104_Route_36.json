@@ -1,0 +1,31 @@
+{
+  "zoneId": 104,
+  "displayName": "Route 36",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 32,
+      "pixelY": 120,
+      "worldX": 16,
+      "worldZ": 112,
+      "destinationZoneId": 96,
+      "destinationName": "National Park",
+      "destinationPixelX": 1208,
+      "destinationPixelY": 648,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 176,
+      "pixelY": 120,
+      "worldX": 160,
+      "worldZ": 112,
+      "destinationZoneId": 40,
+      "destinationName": "Route 36",
+      "destinationPixelX": 360,
+      "destinationPixelY": 232,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

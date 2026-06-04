@@ -1,0 +1,31 @@
+{
+  "zoneId": 97,
+  "displayName": "Route 31",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 32,
+      "pixelY": 120,
+      "worldX": 16,
+      "worldZ": 112,
+      "destinationZoneId": 73,
+      "destinationName": "Violet City",
+      "destinationPixelX": 1028,
+      "destinationPixelY": 999,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 176,
+      "pixelY": 120,
+      "worldX": 160,
+      "worldZ": 112,
+      "destinationZoneId": 35,
+      "destinationName": "Route 31",
+      "destinationPixelX": 116,
+      "destinationPixelY": 232,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

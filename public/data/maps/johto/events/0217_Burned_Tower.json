@@ -1,0 +1,31 @@
+{
+  "zoneId": 217,
+  "displayName": "Burned Tower",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 376,
+      "pixelY": 264,
+      "worldX": 368,
+      "worldZ": 256,
+      "destinationZoneId": 7,
+      "destinationName": "Burned Tower",
+      "destinationPixelX": 360,
+      "destinationPixelY": 264,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 376,
+      "pixelY": 248,
+      "worldX": 368,
+      "worldZ": 240,
+      "destinationZoneId": 7,
+      "destinationName": "Burned Tower",
+      "destinationPixelX": 360,
+      "destinationPixelY": 264,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

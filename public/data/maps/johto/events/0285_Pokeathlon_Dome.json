@@ -1,0 +1,31 @@
+{
+  "zoneId": 285,
+  "displayName": "Pokéathlon Dome",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 71,
+      "pixelY": 40,
+      "worldX": 48,
+      "worldZ": 32,
+      "destinationZoneId": 286,
+      "destinationName": "Pokéathlon Dome",
+      "destinationPixelX": 71,
+      "destinationPixelY": 232,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 71,
+      "pixelY": 200,
+      "worldX": 48,
+      "worldZ": 192,
+      "destinationZoneId": 284,
+      "destinationName": "Pokéathlon Dome",
+      "destinationPixelX": 72,
+      "destinationPixelY": 40,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

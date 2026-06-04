@@ -1,0 +1,31 @@
+{
+  "zoneId": 136,
+  "displayName": "Azalea Town",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 136,
+      "pixelY": 184,
+      "worldX": 112,
+      "worldZ": 176,
+      "destinationZoneId": 74,
+      "destinationName": "Azalea Town",
+      "destinationPixelX": 360,
+      "destinationPixelY": 392,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 136,
+      "pixelY": 56,
+      "worldX": 112,
+      "worldZ": 48,
+      "destinationZoneId": 180,
+      "destinationName": "Azalea Town",
+      "destinationPixelX": 192,
+      "destinationPixelY": 624,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

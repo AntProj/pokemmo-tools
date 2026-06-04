@@ -1,0 +1,67 @@
+{
+  "zoneId": 67,
+  "displayName": "Cherrygrove City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 856,
+      "pixelY": 224,
+      "worldX": 9024,
+      "worldZ": 6256,
+      "destinationZoneId": 69,
+      "destinationName": "Cherrygrove City",
+      "destinationPixelX": 152,
+      "destinationPixelY": 312,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 712,
+      "pixelY": 224,
+      "worldX": 8880,
+      "worldZ": 6256,
+      "destinationZoneId": 68,
+      "destinationName": "Cherrygrove City",
+      "destinationPixelX": 88,
+      "destinationPixelY": 184,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 584,
+      "pixelY": 352,
+      "worldX": 8752,
+      "worldZ": 6384,
+      "destinationZoneId": 70,
+      "destinationName": "Cherrygrove City",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 760,
+      "pixelY": 384,
+      "worldX": 8928,
+      "worldZ": 6416,
+      "destinationZoneId": 71,
+      "destinationName": "Cherrygrove City",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 904,
+      "pixelY": 448,
+      "worldX": 9072,
+      "worldZ": 6480,
+      "destinationZoneId": 72,
+      "destinationName": "Cherrygrove City",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

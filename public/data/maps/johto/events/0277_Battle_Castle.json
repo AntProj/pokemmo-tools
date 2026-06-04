@@ -1,0 +1,43 @@
+{
+  "zoneId": 277,
+  "displayName": "Battle Castle",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 360,
+      "pixelY": 152,
+      "worldX": 336,
+      "worldZ": 144,
+      "destinationZoneId": 272,
+      "destinationName": "Battle Frontier",
+      "destinationPixelX": 584,
+      "destinationPixelY": 1008,
+      "anchor": 15
+    },
+    {
+      "id": "w1",
+      "pixelX": 360,
+      "pixelY": 136,
+      "worldX": 336,
+      "worldZ": 128,
+      "destinationZoneId": 272,
+      "destinationName": "Battle Frontier",
+      "destinationPixelX": 584,
+      "destinationPixelY": 1008,
+      "anchor": 15
+    },
+    {
+      "id": "w2",
+      "pixelX": 360,
+      "pixelY": 168,
+      "worldX": 336,
+      "worldZ": 160,
+      "destinationZoneId": 272,
+      "destinationName": "Battle Frontier",
+      "destinationPixelX": 584,
+      "destinationPixelY": 1008,
+      "anchor": 15
+    }
+  ],
+  "trainers": []
+}

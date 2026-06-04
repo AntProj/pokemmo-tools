@@ -1,0 +1,200 @@
+{
+  "header": {
+    "id": 95,
+    "name": "Route 41",
+    "mapName": "0095 - Route 41",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 1,
+      "orientation": "Right",
+      "spriteFile": "ow_0138_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 920,
+        "y": 240,
+        "targetPng": "0095 - Route 41.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 7,
+        "yMatrix": 10,
+        "xMap": 25,
+        "yMap": 14,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 1,
+      "orientation": "Right",
+      "spriteFile": "ow_0138_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 440,
+        "y": 144,
+        "targetPng": "0095 - Route 41.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 6,
+        "yMatrix": 10,
+        "xMap": 27,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 1,
+      "orientation": "Up",
+      "spriteFile": "ow_0138_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 488,
+        "y": 512,
+        "targetPng": "0095 - Route 41.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 6,
+        "yMatrix": 10,
+        "xMap": 30,
+        "yMap": 31,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 1,
+      "orientation": "Down",
+      "spriteFile": "ow_0138_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 792,
+        "y": 512,
+        "targetPng": "0095 - Route 41.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 7,
+        "yMatrix": 10,
+        "xMap": 17,
+        "yMap": 31,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 1,
+      "orientation": "Left",
+      "spriteFile": "ow_0138_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 520,
+        "y": 928,
+        "targetPng": "0095 - Route 41.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 7,
+        "yMatrix": 11,
+        "xMap": 0,
+        "yMap": 25,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 1,
+      "orientation": "Up",
+      "spriteFile": "ow_0139_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 936,
+        "y": 560,
+        "targetPng": "0095 - Route 41.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 7,
+        "yMatrix": 11,
+        "xMap": 26,
+        "yMap": 2,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 1,
+      "orientation": "Down",
+      "spriteFile": "ow_0139_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 248,
+        "y": 112,
+        "targetPng": "0095 - Route 41.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 6,
+        "yMatrix": 10,
+        "xMap": 15,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 1,
+      "orientation": "Down",
+      "spriteFile": "ow_0139_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 264,
+        "y": 928,
+        "targetPng": "0095 - Route 41.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 6,
+        "yMatrix": 11,
+        "xMap": 16,
+        "yMap": 25,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 1,
+      "orientation": "Left",
+      "spriteFile": "ow_0139_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 552,
+        "y": 672,
+        "targetPng": "0095 - Route 41.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 7,
+        "yMatrix": 11,
+        "xMap": 2,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 1,
+      "orientation": "Right",
+      "spriteFile": "ow_0139_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 440,
+        "y": 352,
+        "targetPng": "0095 - Route 41.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 6,
+        "yMatrix": 10,
+        "xMap": 27,
+        "yMap": 21,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

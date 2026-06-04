@@ -1,0 +1,106 @@
+{
+  "zoneId": 40,
+  "displayName": "Route 36",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 360,
+      "pixelY": 248,
+      "worldX": 5984,
+      "worldZ": 3808,
+      "destinationZoneId": 104,
+      "destinationName": "Route 36",
+      "destinationPixelX": 176,
+      "destinationPixelY": 120,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 360,
+      "pixelY": 232,
+      "worldX": 5984,
+      "worldZ": 3792,
+      "destinationZoneId": 104,
+      "destinationName": "Route 36",
+      "destinationPixelX": 176,
+      "destinationPixelY": 120,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 1256,
+      "pixelY": 472,
+      "worldX": 6880,
+      "worldZ": 4032,
+      "destinationZoneId": 103,
+      "destinationName": "Route 36",
+      "destinationPixelX": 120,
+      "destinationPixelY": 96,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 1272,
+      "pixelY": 472,
+      "worldX": 6896,
+      "worldZ": 4032,
+      "destinationZoneId": 103,
+      "destinationName": "Route 36",
+      "destinationPixelX": 120,
+      "destinationPixelY": 96,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 1528,
+      "pixelY": 376,
+      "worldX": 7152,
+      "worldZ": 3936,
+      "destinationZoneId": 149,
+      "destinationName": "Route 36",
+      "destinationPixelX": 32,
+      "destinationPixelY": 120,
+      "anchor": 1
+    },
+    {
+      "id": "w5",
+      "pixelX": 1528,
+      "pixelY": 392,
+      "worldX": 7152,
+      "worldZ": 3952,
+      "destinationZoneId": 149,
+      "destinationName": "Route 36",
+      "destinationPixelX": 32,
+      "destinationPixelY": 120,
+      "anchor": 1
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t2",
+      "trainerInstanceId": 143,
+      "pixelX": 456,
+      "pixelY": 352,
+      "trainerId": 395,
+      "trainerName": "Mark",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3394,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 144,
+      "pixelX": 792,
+      "pixelY": 416,
+      "trainerId": 24,
+      "trainerName": "Alan",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3023,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

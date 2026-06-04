@@ -1,0 +1,144 @@
+{
+  "zoneId": 199,
+  "displayName": "Goldenrod Tunnel",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 168,
+      "pixelY": 128,
+      "worldX": 64,
+      "worldZ": 48,
+      "destinationZoneId": 118,
+      "destinationName": "Goldenrod Tunnel",
+      "destinationPixelX": 144,
+      "destinationPixelY": 72,
+      "anchor": 6
+    },
+    {
+      "id": "w1",
+      "pixelX": 168,
+      "pixelY": 640,
+      "worldX": 64,
+      "worldZ": 560,
+      "destinationZoneId": 118,
+      "destinationName": "Goldenrod Tunnel",
+      "destinationPixelX": 144,
+      "destinationPixelY": 408,
+      "anchor": 8
+    },
+    {
+      "id": "w2",
+      "pixelX": 424,
+      "pixelY": 144,
+      "worldX": 320,
+      "worldZ": 64,
+      "destinationZoneId": 199,
+      "destinationName": "Goldenrod Tunnel",
+      "destinationPixelX": 136,
+      "destinationPixelY": 992,
+      "anchor": 3
+    },
+    {
+      "id": "w3",
+      "pixelX": 136,
+      "pixelY": 992,
+      "worldX": 32,
+      "worldZ": 912,
+      "destinationZoneId": 199,
+      "destinationName": "Goldenrod Tunnel",
+      "destinationPixelX": 424,
+      "destinationPixelY": 144,
+      "anchor": 2
+    },
+    {
+      "id": "w4",
+      "pixelX": 504,
+      "pixelY": 560,
+      "worldX": 400,
+      "worldZ": 480,
+      "destinationZoneId": 118,
+      "destinationName": "Goldenrod Tunnel",
+      "destinationPixelX": 416,
+      "destinationPixelY": 152,
+      "anchor": 4
+    },
+    {
+      "id": "w5",
+      "pixelX": 168,
+      "pixelY": 144,
+      "worldX": 64,
+      "worldZ": 64,
+      "destinationZoneId": 118,
+      "destinationName": "Goldenrod Tunnel",
+      "destinationPixelX": 144,
+      "destinationPixelY": 72,
+      "anchor": 6
+    },
+    {
+      "id": "w6",
+      "pixelX": 168,
+      "pixelY": 656,
+      "worldX": 64,
+      "worldZ": 576,
+      "destinationZoneId": 118,
+      "destinationName": "Goldenrod Tunnel",
+      "destinationPixelX": 144,
+      "destinationPixelY": 408,
+      "anchor": 8
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t4",
+      "trainerInstanceId": 305,
+      "pixelX": 168,
+      "pixelY": 200,
+      "trainerId": 392,
+      "trainerName": "Donald",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3391,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 306,
+      "pixelX": 280,
+      "pixelY": 232,
+      "trainerId": 393,
+      "trainerName": "Teru",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3392,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t6",
+      "trainerInstanceId": 307,
+      "pixelX": 168,
+      "pixelY": 568,
+      "trainerId": 391,
+      "trainerName": "Issac",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3390,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t7",
+      "trainerInstanceId": 308,
+      "pixelX": 264,
+      "pixelY": 632,
+      "trainerId": 233,
+      "trainerName": "Eric",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3232,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

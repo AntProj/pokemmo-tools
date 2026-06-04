@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 221,
+    "name": "Lighthouse",
+    "mapName": "0221 - Lighthouse",
+    "matrixId": 49
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 60,
+        "y": 112,
+        "targetPng": "0221 - Lighthouse.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 2,
+        "yMap": 2,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

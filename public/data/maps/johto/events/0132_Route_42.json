@@ -1,0 +1,31 @@
+{
+  "zoneId": 132,
+  "displayName": "Route 42",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 32,
+      "pixelY": 120,
+      "worldX": 16,
+      "worldZ": 112,
+      "destinationZoneId": 78,
+      "destinationName": "Ecruteak City",
+      "destinationPixelX": 1032,
+      "destinationPixelY": 776,
+      "anchor": 10
+    },
+    {
+      "id": "w1",
+      "pixelX": 176,
+      "pixelY": 120,
+      "worldX": 160,
+      "worldZ": 112,
+      "destinationZoneId": 44,
+      "destinationName": "Route 42",
+      "destinationPixelX": 116,
+      "destinationPixelY": 264,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

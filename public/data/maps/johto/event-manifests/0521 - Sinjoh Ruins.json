@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 521,
+    "name": "Sinjoh Ruins",
+    "mapName": "0521 - Sinjoh Ruins",
+    "matrixId": 277
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0131_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 264,
+        "y": 264,
+        "targetPng": "0521 - Sinjoh Ruins.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 14,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "zoneId": 126,
+  "displayName": "Tohjo Falls",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 488,
+      "pixelY": 360,
+      "worldX": 480,
+      "worldZ": 352,
+      "destinationZoneId": 31,
+      "destinationName": "Route 27",
+      "destinationPixelX": 600,
+      "destinationPixelY": 296,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 728,
+      "pixelY": 328,
+      "worldX": 720,
+      "worldZ": 320,
+      "destinationZoneId": 31,
+      "destinationName": "Route 27",
+      "destinationPixelX": 840,
+      "destinationPixelY": 264,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 440,
+      "pixelY": 184,
+      "worldX": 432,
+      "worldZ": 176,
+      "destinationZoneId": 298,
+      "destinationName": "Tohjo Falls",
+      "destinationPixelX": 104,
+      "destinationPixelY": 168,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

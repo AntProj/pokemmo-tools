@@ -1,0 +1,31 @@
+{
+  "zoneId": 215,
+  "displayName": "Route 39",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 120,
+      "pixelY": 152,
+      "worldX": 112,
+      "worldZ": 144,
+      "destinationZoneId": 43,
+      "destinationName": "Route 39",
+      "destinationPixelX": 88,
+      "destinationPixelY": 89,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 312,
+      "pixelY": 120,
+      "worldX": 304,
+      "worldZ": 112,
+      "destinationZoneId": 214,
+      "destinationName": "Route 39",
+      "destinationPixelX": 24,
+      "destinationPixelY": 136,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

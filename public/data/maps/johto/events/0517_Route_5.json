@@ -1,0 +1,19 @@
+{
+  "zoneId": 517,
+  "displayName": "Route 5",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 104,
+      "pixelY": 136,
+      "worldX": 64,
+      "worldZ": 128,
+      "destinationZoneId": 13,
+      "destinationName": "Route 5",
+      "destinationPixelX": 296,
+      "destinationPixelY": 215,
+      "anchor": 3
+    }
+  ],
+  "trainers": []
+}

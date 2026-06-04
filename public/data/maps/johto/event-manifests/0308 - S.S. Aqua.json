@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 308,
+    "name": "S.S. Aqua",
+    "mapName": "0308 - S.S. Aqua",
+    "matrixId": 172
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0182_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 272,
+        "y": 176,
+        "targetPng": "0308 - S.S. Aqua.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 9,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0114_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 288,
+        "y": 176,
+        "targetPng": "0308 - S.S. Aqua.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 10,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

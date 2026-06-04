@@ -1,0 +1,31 @@
+{
+  "zoneId": 513,
+  "displayName": "Mt. Moon",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 584,
+      "pixelY": 256,
+      "worldX": 448,
+      "worldZ": 128,
+      "destinationZoneId": 448,
+      "destinationName": "Mt. Moon",
+      "destinationPixelX": 104,
+      "destinationPixelY": 120,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 648,
+      "pixelY": 448,
+      "worldX": 512,
+      "worldZ": 320,
+      "destinationZoneId": 448,
+      "destinationName": "Mt. Moon",
+      "destinationPixelX": 104,
+      "destinationPixelY": 424,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,79 @@
+{
+  "zoneId": 237,
+  "displayName": "Ice Path",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 136,
+      "pixelY": 360,
+      "worldX": 96,
+      "worldZ": 336,
+      "destinationZoneId": 120,
+      "destinationName": "Ice Path",
+      "destinationPixelX": 888,
+      "destinationPixelY": 152,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 136,
+      "pixelY": 344,
+      "worldX": 96,
+      "worldZ": 320,
+      "destinationZoneId": 120,
+      "destinationName": "Ice Path",
+      "destinationPixelX": 888,
+      "destinationPixelY": 152,
+      "anchor": 2
+    },
+    {
+      "id": "w2",
+      "pixelX": 440,
+      "pixelY": 152,
+      "worldX": 400,
+      "worldZ": 128,
+      "destinationZoneId": 238,
+      "destinationName": "Ice Path",
+      "destinationPixelX": 440,
+      "destinationPixelY": 200,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 472,
+      "pixelY": 664,
+      "worldX": 432,
+      "worldZ": 640,
+      "destinationZoneId": 238,
+      "destinationName": "Ice Path",
+      "destinationPixelX": 712,
+      "destinationPixelY": 376,
+      "anchor": 4
+    },
+    {
+      "id": "w4",
+      "pixelX": 136,
+      "pixelY": 696,
+      "worldX": 96,
+      "worldZ": 672,
+      "destinationZoneId": 120,
+      "destinationName": "Ice Path",
+      "destinationPixelX": 888,
+      "destinationPixelY": 360,
+      "anchor": 3
+    },
+    {
+      "id": "w5",
+      "pixelX": 136,
+      "pixelY": 680,
+      "worldX": 96,
+      "worldZ": 656,
+      "destinationZoneId": 120,
+      "destinationName": "Ice Path",
+      "destinationPixelX": 888,
+      "destinationPixelY": 360,
+      "anchor": 3
+    }
+  ],
+  "trainers": []
+}

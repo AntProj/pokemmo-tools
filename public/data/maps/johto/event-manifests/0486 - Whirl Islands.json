@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 486,
+    "name": "Whirl Islands",
+    "mapName": "0486 - Whirl Islands",
+    "matrixId": 275
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 280,
+        "y": 587,
+        "targetPng": "0486 - Whirl Islands.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 14,
+        "yMap": 27,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

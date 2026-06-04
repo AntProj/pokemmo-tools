@@ -1,0 +1,31 @@
+{
+  "zoneId": 33,
+  "displayName": "Route 29",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 808,
+      "pixelY": 108,
+      "worldX": 10016,
+      "worldZ": 6224,
+      "destinationZoneId": 134,
+      "destinationName": "Route 29",
+      "destinationPixelX": 120,
+      "destinationPixelY": 256,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 824,
+      "pixelY": 108,
+      "worldX": 10032,
+      "worldZ": 6224,
+      "destinationZoneId": 134,
+      "destinationName": "Route 29",
+      "destinationPixelX": 120,
+      "destinationPixelY": 256,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

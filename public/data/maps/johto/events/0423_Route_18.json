@@ -1,0 +1,31 @@
+{
+  "zoneId": 423,
+  "displayName": "Route 18",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 32,
+      "pixelY": 120,
+      "worldX": 16,
+      "worldZ": 112,
+      "destinationZoneId": 26,
+      "destinationName": "Route 18",
+      "destinationPixelX": 568,
+      "destinationPixelY": 184,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 176,
+      "pixelY": 120,
+      "worldX": 160,
+      "worldZ": 112,
+      "destinationZoneId": 26,
+      "destinationName": "Route 18",
+      "destinationPixelX": 680,
+      "destinationPixelY": 184,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

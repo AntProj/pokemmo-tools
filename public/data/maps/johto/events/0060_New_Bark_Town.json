@@ -1,0 +1,67 @@
+{
+  "zoneId": 60,
+  "displayName": "New Bark Town",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 323,
+      "pixelY": 168,
+      "worldX": 10944,
+      "worldZ": 6288,
+      "destinationZoneId": 61,
+      "destinationName": "New Bark Town",
+      "destinationPixelX": 88,
+      "destinationPixelY": 232,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 499,
+      "pixelY": 216,
+      "worldX": 11120,
+      "worldZ": 6336,
+      "destinationZoneId": 63,
+      "destinationName": "New Bark Town",
+      "destinationPixelX": 88,
+      "destinationPixelY": 168,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 243,
+      "pixelY": 360,
+      "worldX": 10864,
+      "worldZ": 6480,
+      "destinationZoneId": 65,
+      "destinationName": "New Bark Town",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 419,
+      "pixelY": 392,
+      "worldX": 11040,
+      "worldZ": 6512,
+      "destinationZoneId": 66,
+      "destinationName": "New Bark Town",
+      "destinationPixelX": 88,
+      "destinationPixelY": 168,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 387,
+      "pixelY": 152,
+      "worldX": 11008,
+      "worldZ": 6272,
+      "destinationZoneId": 62,
+      "destinationName": "New Bark Town",
+      "destinationPixelX": 200,
+      "destinationPixelY": 112,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

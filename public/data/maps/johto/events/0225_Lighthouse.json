@@ -1,0 +1,31 @@
+{
+  "zoneId": 225,
+  "displayName": "Lighthouse",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 323,
+      "pixelY": 274,
+      "worldX": 144,
+      "worldZ": 160,
+      "destinationZoneId": 224,
+      "destinationName": "Lighthouse",
+      "destinationPixelX": 215,
+      "destinationPixelY": 183,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 307,
+      "pixelY": 178,
+      "worldX": 128,
+      "worldZ": 64,
+      "destinationZoneId": 446,
+      "destinationName": "Lighthouse",
+      "destinationPixelX": 88,
+      "destinationPixelY": 104,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,19 @@
+{
+  "zoneId": 282,
+  "displayName": "Pokéathlon Dome",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 376,
+      "pixelY": 368,
+      "worldX": 368,
+      "worldZ": 224,
+      "destinationZoneId": 283,
+      "destinationName": "Pokéathlon Dome",
+      "destinationPixelX": 56,
+      "destinationPixelY": 40,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

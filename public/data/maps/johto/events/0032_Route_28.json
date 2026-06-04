@@ -1,0 +1,43 @@
+{
+  "zoneId": 32,
+  "displayName": "Route 28",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 888,
+      "pixelY": 168,
+      "worldX": 14192,
+      "worldZ": 4256,
+      "destinationZoneId": 299,
+      "destinationName": "Route 26",
+      "destinationPixelX": 24,
+      "destinationPixelY": 136,
+      "anchor": 3
+    },
+    {
+      "id": "w1",
+      "pixelX": 888,
+      "pixelY": 184,
+      "worldX": 14192,
+      "worldZ": 4272,
+      "destinationZoneId": 299,
+      "destinationName": "Route 26",
+      "destinationPixelX": 24,
+      "destinationPixelY": 136,
+      "anchor": 3
+    },
+    {
+      "id": "w2",
+      "pixelX": 312,
+      "pixelY": 120,
+      "worldX": 13616,
+      "worldZ": 4208,
+      "destinationZoneId": 510,
+      "destinationName": "Route 28",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

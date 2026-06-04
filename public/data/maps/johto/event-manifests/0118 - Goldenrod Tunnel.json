@@ -1,0 +1,86 @@
+{
+  "header": {
+    "id": 118,
+    "name": "Goldenrod Tunnel",
+    "mapName": "0118 - Goldenrod Tunnel",
+    "matrixId": 57
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0123_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 64,
+        "y": 416,
+        "targetPng": "0118 - Goldenrod Tunnel.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 25,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0120_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 160,
+        "y": 144,
+        "targetPng": "0118 - Goldenrod Tunnel.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 9,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_3d_dawn_platinum.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 160,
+        "y": 64,
+        "targetPng": "0118 - Goldenrod Tunnel.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 9,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0483_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 160,
+        "y": 80,
+        "targetPng": "0118 - Goldenrod Tunnel.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 9,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "zoneId": 298,
+  "displayName": "Tohjo Falls",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 104,
+      "pixelY": 168,
+      "worldX": 96,
+      "worldZ": 160,
+      "destinationZoneId": 126,
+      "destinationName": "Tohjo Falls",
+      "destinationPixelX": 440,
+      "destinationPixelY": 184,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

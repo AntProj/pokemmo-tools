@@ -1,0 +1,46 @@
+{
+  "zoneId": 135,
+  "displayName": "Violet City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 288,
+      "pixelY": 490,
+      "worldX": 240,
+      "worldZ": 448,
+      "destinationZoneId": 73,
+      "destinationName": "Violet City",
+      "destinationPixelX": 516,
+      "destinationPixelY": 807,
+      "anchor": 2
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t1",
+      "trainerInstanceId": 244,
+      "pixelX": 240,
+      "pixelY": 290,
+      "trainerId": 50,
+      "trainerName": "Abe",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3049,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 245,
+      "pixelX": 336,
+      "pixelY": 226,
+      "trainerId": 29,
+      "trainerName": "Rod",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3028,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

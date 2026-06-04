@@ -1,17 +1,25 @@
 #!/usr/bin/env node
 /**
- * build-map-data.mjs — Sinnoh interactive-map data pipeline
+ * build-map-data.mjs — region-parameterized interactive-map data pipeline
  *
  * Reads the Pokémon Maps dump (REACT_INTEGRATION.md §4) and emits the
- * trimmed JSON files the React app consumes.
+ * trimmed JSON files the React app consumes for ONE region per invocation.
  *
- * Output layout:
- *   public/data/maps/sinnoh/maps-index.json           master zone registry
- *   public/data/maps/sinnoh/overworld-locations.json  clickable overworld regions
- *   public/data/maps/sinnoh/events/<id>_<name>.json   per-zone warps + trainers
- *                                                     (pixel coords baked in)
- *   public/data/maps/sinnoh/images/*.png              local PNG copies
- *                                                     (gitignored, uploaded to R2)
+ * Usage:
+ *   node scripts/build-map-data.mjs           → defaults to "sinnoh"
+ *   node scripts/build-map-data.mjs sinnoh    → Sinnoh (Platinum)
+ *   node scripts/build-map-data.mjs johto     → Johto (HeartGold/SoulSilver)
+ *   REGION=johto node scripts/build-map-data.mjs   → same, via env var
+ *
+ * Output layout (per-region subdirs keep regions isolated):
+ *   public/data/maps/<region>/maps-index.json           master zone registry
+ *   public/data/maps/<region>/overworld-locations.json  clickable overworld regions
+ *   public/data/maps/<region>/events/<id>_<name>.json   per-zone warps + trainers
+ *                                                       (pixel coords baked in)
+ *   public/data/maps/<region>/images/*.webp             content-hashed image copies
+ *                                                       (gitignored, uploaded to R2)
+ *   public/data/maps/<region>/walkable/*.{json,raw.bin,png}  pathfinding sidecars
+ *   public/data/maps/<region>/event-manifests/*.json    full per-header event lists
  *
  * Coordinate model (REACT_INTEGRATION.md §5): every entity carries a
  * pre-computed `pixelCoord {x, y, targetPng}` that's directly drawable on
@@ -22,9 +30,18 @@
  * Trainer JSONs are scoped to battle trainers only (`Overworld.type == 1`)
  * — items / NPCs / signs are baked into the PNG but not clickable.
  *
+ * The in-place-swap workflow: POKEMMO_MAPS_DIR points at a single working
+ * dump that gets overwritten when you re-export DSPRE for a different
+ * region. Run this script with the matching REGION arg and the per-region
+ * output dir gets refreshed; the OTHER region's output sits untouched in
+ * its own subdir until you re-export and run with that REGION.
+ *
  * Required env vars:
  *   POKEMMO_MAPS_DIR   — root of the Pokémon Maps dump
  *   MAPS_IMAGE_HOST    — optional; base URL for image fetches (defaults to R2)
+ *
+ * Optional positional arg / env var:
+ *   REGION             — sinnoh | johto (default: sinnoh)
  */
 
 import fs from 'node:fs';
@@ -35,6 +52,23 @@ import sharp from 'sharp';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
+
+// ---------- region ----------
+// Positional CLI arg first, then env var, then default. Positional is preferred
+// because npm scripts on Windows can't easily set env vars without cross-env, and
+// adding cross-env would be one more dep — `node script.mjs johto` is the cleanest
+// cross-platform pattern.
+const REGION = (process.argv[2] || process.env.REGION || 'sinnoh').toLowerCase();
+const REGION_DISPLAY = ({
+  sinnoh: 'Sinnoh',
+  johto:  'Johto',
+})[REGION] || (REGION.charAt(0).toUpperCase() + REGION.slice(1));
+const VALID_REGIONS = ['sinnoh', 'johto'];
+if (!VALID_REGIONS.includes(REGION)) {
+  console.error(`\n  Unknown region "${REGION}". Valid: ${VALID_REGIONS.join(', ')}.\n`);
+  process.exit(1);
+}
+console.log(`► Region: ${REGION_DISPLAY} (${REGION})`);
 
 // ---------- input ----------
 const SOURCE_ROOT = process.env.POKEMMO_MAPS_DIR;
@@ -56,7 +90,7 @@ const TRAINERS_DIR    = path.join(SOURCE_ROOT, 'trainer_data', 'data');
 const EVENTS_MANIFEST_DIR = path.join(SOURCE_ROOT, 'trainer_data', 'events');
 
 // ---------- output ----------
-const PUBLIC_REGION_DIR    = path.join(ROOT, 'public', 'data', 'maps', 'sinnoh');
+const PUBLIC_REGION_DIR    = path.join(ROOT, 'public', 'data', 'maps', REGION);
 const PUBLIC_IMAGES_DIR    = path.join(PUBLIC_REGION_DIR, 'images');
 const PUBLIC_EVENTS_DIR    = path.join(PUBLIC_REGION_DIR, 'events');
 const PUBLIC_WALKABLE_DIR  = path.join(PUBLIC_REGION_DIR, 'walkable');
@@ -64,8 +98,8 @@ const PUBLIC_EVENT_MANIFESTS_DIR = path.join(PUBLIC_REGION_DIR, 'event-manifests
 
 const IMAGE_HOST = process.env.MAPS_IMAGE_HOST ?? 'https://pub-5fa7446d73c34538ae0c670b480e58a2.r2.dev';
 const IMAGE_PREFIX = IMAGE_HOST
-  ? `${IMAGE_HOST.replace(/\/+$/, '')}/sinnoh/images/`
-  : 'data/maps/sinnoh/images/';
+  ? `${IMAGE_HOST.replace(/\/+$/, '')}/${REGION}/images/`
+  : `data/maps/${REGION}/images/`;
 
 // ---------- helpers ----------
 function ensureDir(p) { fs.mkdirSync(p, { recursive: true }); }
@@ -144,7 +178,7 @@ function findCurrentHashedWebp(baseName, outDir) {
 function parseZoneFilename(name) {
   const m = name.match(/^(\d+)\s*-\s*(.+?)\.(png|json)$/i);
   if (m) return { id: Number(m[1]), name: m[2].trim(), stem: name.replace(/\.(png|json)$/i, '') };
-  if (/^overworld\.(png|json)$/i.test(name)) return { id: 'world', name: 'Sinnoh Overworld', stem: 'overworld' };
+  if (/^overworld\.(png|json)$/i.test(name)) return { id: 'world', name: `${REGION_DISPLAY} Overworld`, stem: 'overworld' };
   return null;
 }
 
@@ -295,7 +329,7 @@ for (const png of pngFiles.sort()) {
   // World overview gets a special entry.
   if (parsed.id === 'world') {
     mapsIndex.world = {
-      displayName: 'Sinnoh Overworld',
+      displayName: `${REGION_DISPLAY} Overworld`,
       imageUrl: `${IMAGE_PREFIX}${webpName}`,
       imageWidth: sidecar.imageWidth,
       imageHeight: sidecar.imageHeight,
@@ -420,11 +454,11 @@ for (const png of pngFiles.sort()) {
     ensureDir(PUBLIC_WALKABLE_DIR);
     copyIfDifferent(walkJsonSrc, path.join(PUBLIC_WALKABLE_DIR, `${walkBase}.json`));
     copyIfDifferent(walkRawSrc,  path.join(PUBLIC_WALKABLE_DIR, `${walkBase}.raw.bin`));
-    walkableJsonUrl = `data/maps/sinnoh/walkable/${walkBase}.json`;
-    walkableRawUrl  = `data/maps/sinnoh/walkable/${walkBase}.raw.bin`;
+    walkableJsonUrl = `data/maps/${REGION}/walkable/${walkBase}.json`;
+    walkableRawUrl  = `data/maps/${REGION}/walkable/${walkBase}.raw.bin`;
     if (fs.existsSync(walkPngSrc)) {
       copyIfDifferent(walkPngSrc, path.join(PUBLIC_WALKABLE_DIR, `${walkBase}.png`));
-      walkableUrl = `data/maps/sinnoh/walkable/${walkBase}.png`;
+      walkableUrl = `data/maps/${REGION}/walkable/${walkBase}.png`;
     }
 
   }
@@ -439,7 +473,7 @@ for (const png of pngFiles.sort()) {
   if (fs.existsSync(manifestSrc)) {
     ensureDir(PUBLIC_EVENT_MANIFESTS_DIR);
     copyIfDifferent(manifestSrc, path.join(PUBLIC_EVENT_MANIFESTS_DIR, `${walkBase}.json`));
-    eventsManifestUrl = `data/maps/sinnoh/event-manifests/${walkBase}.json`;
+    eventsManifestUrl = `data/maps/${REGION}/event-manifests/${walkBase}.json`;
   }
 
   mapsIndex[String(parsed.id)] = {
@@ -459,7 +493,7 @@ for (const png of pngFiles.sort()) {
       maxY: sidecar.worldBounds?.maxY ?? sidecar.imageHeight,
     },
     type: isOverworld ? 'overworld' : 'interior',
-    eventsUrl: `data/maps/sinnoh/events/${eventsFile}`,
+    eventsUrl: `data/maps/${REGION}/events/${eventsFile}`,
     // walkableRawUrl + walkableJsonUrl are the PRIMARY data path for the
     // React A* (REACT_WALKABILITY.md §3, 2026-05). walkableUrl is the
     // optional debug PNG and may be null even when raw + json are present.

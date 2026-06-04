@@ -1,0 +1,19 @@
+{
+  "zoneId": 324,
+  "displayName": "Ruins of Alph",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 104,
+      "pixelY": 280,
+      "worldX": 96,
+      "worldZ": 272,
+      "destinationZoneId": 312,
+      "destinationName": "Ruins of Alph",
+      "destinationPixelX": 104,
+      "destinationPixelY": 40,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

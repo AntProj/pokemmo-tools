@@ -1,0 +1,43 @@
+{
+  "zoneId": 176,
+  "displayName": "Dark Cave",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 104,
+      "pixelY": 440,
+      "worldX": 80,
+      "worldZ": 416,
+      "destinationZoneId": 35,
+      "destinationName": "Route 31",
+      "destinationPixelX": 868,
+      "destinationPixelY": 232,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 440,
+      "pixelY": 88,
+      "worldX": 416,
+      "worldZ": 64,
+      "destinationZoneId": 123,
+      "destinationName": "Dark Cave",
+      "destinationPixelX": 128,
+      "destinationPixelY": 944,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 904,
+      "pixelY": 920,
+      "worldX": 880,
+      "worldZ": 896,
+      "destinationZoneId": 48,
+      "destinationName": "Route 46",
+      "destinationPixelX": 344,
+      "destinationPixelY": 152,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

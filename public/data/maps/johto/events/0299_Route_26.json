@@ -1,0 +1,55 @@
+{
+  "zoneId": 299,
+  "displayName": "Route 26",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 184,
+      "pixelY": 376,
+      "worldX": 176,
+      "worldZ": 368,
+      "destinationZoneId": 30,
+      "destinationName": "Route 26",
+      "destinationPixelX": 216,
+      "destinationPixelY": 136,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 184,
+      "pixelY": 40,
+      "worldX": 176,
+      "worldZ": 32,
+      "destinationZoneId": 124,
+      "destinationName": "Victory Road",
+      "destinationPixelX": 744,
+      "destinationPixelY": 952,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 344,
+      "pixelY": 136,
+      "worldX": 336,
+      "worldZ": 128,
+      "destinationZoneId": 27,
+      "destinationName": "Route 22",
+      "destinationPixelX": 142,
+      "destinationPixelY": 168,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 24,
+      "pixelY": 136,
+      "worldX": 16,
+      "worldZ": 128,
+      "destinationZoneId": 32,
+      "destinationName": "Route 28",
+      "destinationPixelX": 888,
+      "destinationPixelY": 168,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

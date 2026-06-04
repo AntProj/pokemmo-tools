@@ -1,0 +1,105 @@
+{
+  "header": {
+    "id": 400,
+    "name": "Saffron City",
+    "mapName": "0400 - Saffron City",
+    "matrixId": 187
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0037_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 275,
+        "y": 160,
+        "targetPng": "0400 - Saffron City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 14,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0130_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 307,
+        "y": 256,
+        "targetPng": "0400 - Saffron City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 16,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0123_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 179,
+        "y": 304,
+        "targetPng": "0400 - Saffron City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 8,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0117_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 243,
+        "y": 224,
+        "targetPng": "0400 - Saffron City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 12,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0162_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 355,
+        "y": 176,
+        "targetPng": "0400 - Saffron City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 19,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

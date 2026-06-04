@@ -10,7 +10,7 @@ import LocationDetail from './pages/LocationDetail.jsx';
 import Tracker from './pages/Tracker.jsx';
 import CatchCalc from './pages/CatchCalc.jsx';
 import BreedingPlanner from './pages/BreedingPlanner.jsx';
-import SinnohMap from './pages/SinnohMap.jsx';
+import RegionMap from './pages/RegionMap.jsx';
 
 const LS = {
   view:    'pokemmo:view',
@@ -215,10 +215,24 @@ export default function App() {
               />
             }
           />
-          {/* Sinnoh interactive map. /map shows the overworld; /map/:zoneId
-              opens a specific zone's detail view. */}
-          <Route path="/map"             element={<SinnohMap theme={theme} onTheme={setTheme} />} />
-          <Route path="/map/:zoneId"     element={<SinnohMap theme={theme} onTheme={setTheme} />} />
+          {/* Region interactive maps. One <RegionMap> component drives both
+              regions — the `region` prop selects which data folder it reads
+              and how it builds internal links. Each region gets two routes:
+              the overworld view and a zone-detail view. */}
+          <Route path="/map/sinnoh"           element={<RegionMap region="sinnoh" theme={theme} onTheme={setTheme} />} />
+          <Route path="/map/sinnoh/:zoneId"   element={<RegionMap region="sinnoh" theme={theme} onTheme={setTheme} />} />
+          <Route path="/map/johto"            element={<RegionMap region="johto"  theme={theme} onTheme={setTheme} />} />
+          <Route path="/map/johto/:zoneId"    element={<RegionMap region="johto"  theme={theme} onTheme={setTheme} />} />
+          {/* Backwards compatibility for old single-region bookmarks. The
+              literal /map/sinnoh and /map/johto routes are matched first
+              (Router 7 ranks literals above dynamic params), so /map/:zoneId
+              here only catches numeric zone ids from the pre-Johto URL scheme.
+              We render Sinnoh directly (component reads zoneId from useParams,
+              not from any region-aware path) — the user's URL stays /map/XXXX
+              until they click a zone, at which point internal links push them
+              onto the new /map/sinnoh/XXXX scheme. */}
+          <Route path="/map"             element={<Navigate to="/map/sinnoh" replace />} />
+          <Route path="/map/:zoneId"     element={<RegionMap region="sinnoh" theme={theme} onTheme={setTheme} />} />
           {/* Old URL kept working for bookmarks. */}
           <Route path="/moves"  element={<Navigate to="/search" replace />} />
           <Route path="*"       element={<Navigate to="/" replace />} />
