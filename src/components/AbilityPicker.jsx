@@ -1,4 +1,5 @@
 import { memo, useDeferredValue, useEffect, useMemo, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Search, X, Plus } from 'lucide-react';
 
 // A button → modal pair. The button shows the current selection; clicking it
@@ -79,7 +80,13 @@ function AbilityPickerModal({ abilities, currentId, onPick, onClose }) {
     );
   }, [abilities, deferredQuery]);
 
-  return (
+  // Render via Portal at <body> so the fixed-positioned overlay escapes
+  // the picker button's parent stacking context. Without this the modal
+  // ends up trapped inside the Search page's <aside> and renders behind
+  // the surrounding sidebar / transparent against the page (MovePicker
+  // doesn't hit this because Search.jsx mounts it at the page top
+  // level, not inside the filters column).
+  return createPortal(
     <div className="fixed inset-0 z-50 overflow-y-auto bg-black/70" onClick={onClose}>
       <div className="min-h-full flex items-start sm:items-center justify-center p-3 sm:p-6">
         <div
@@ -143,6 +150,7 @@ function AbilityPickerModal({ abilities, currentId, onPick, onClose }) {
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

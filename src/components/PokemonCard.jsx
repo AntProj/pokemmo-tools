@@ -5,11 +5,11 @@ import { displayDex } from '../lib/format.js';
 import { typeColor } from '../lib/types.js';
 
 function PokemonCard({ pokemon, region, onSelect, footer }) {
-  // Warm the HTTP cache on hover so the modal's 3D render is ready by the
-  // time the user clicks. Also warm the animated GIF in case it hasn't loaded
-  // yet in the card itself.
+  // Warm the HTTP cache on hover so the modal's 3D render is ready by
+  // the time the user clicks. Still PNG fallback too for the global
+  // sprite-mode toggle.
   const preload = () => {
-    for (const url of [pokemon.sprite_3d, pokemon.sprite_animated, pokemon.sprite]) {
+    for (const url of [pokemon.sprite_3d, pokemon.sprite]) {
       if (url) { const img = new Image(); img.src = url; }
     }
   };

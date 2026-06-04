@@ -1,4 +1,6 @@
 import { NavLink } from 'react-router-dom';
+import { Box, Image } from 'lucide-react';
+import { useSpriteMode, setSpriteMode } from '../lib/spriteMode.js';
 
 const TABS = [
   { to: '/',          label: 'Pokédex'           },
@@ -11,6 +13,7 @@ const TABS = [
 ];
 
 export default function NavBar() {
+  const mode = useSpriteMode();
   return (
     <nav className="bg-[#fdf8e9] dark:bg-stone-900 border-b border-[#e6dabf] dark:border-stone-800">
       <div className="max-w-7xl mx-auto px-4 flex items-center gap-1">
@@ -32,6 +35,25 @@ export default function NavBar() {
             {tab.label}
           </NavLink>
         ))}
+
+        {/* Sprite mode toggle — flips every <PokemonSprite> between
+            Pokémon HOME 3D renders and classic Gen 5 still PNGs.
+            Persisted via localStorage. */}
+        <button
+          type="button"
+          onClick={() => setSpriteMode(mode === '3d' ? 'still' : '3d')}
+          className="ml-auto inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md
+                     border border-[#d6c8a3] dark:border-stone-700
+                     bg-[#fdf8e9] dark:bg-stone-900
+                     hover:bg-[#ece2c4] dark:hover:bg-stone-800
+                     text-xs font-medium text-stone-700 dark:text-stone-200"
+          title={mode === '3d'
+            ? 'Showing 3D renders — click to switch to classic still sprites'
+            : 'Showing still sprites — click to switch to 3D renders'}
+        >
+          {mode === '3d' ? <Box size={14} /> : <Image size={14} />}
+          <span className="hidden sm:inline">{mode === '3d' ? '3D' : 'Still'}</span>
+        </button>
       </div>
     </nav>
   );

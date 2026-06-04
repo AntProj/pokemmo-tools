@@ -7,7 +7,7 @@ function PokemonRow({ pokemon, region, onSelect }) {
   const total = statTotal(pokemon.stats);
   const encounters = pokemon.locations?.length || 0;
   const preload = () => {
-    for (const url of [pokemon.sprite_3d, pokemon.sprite_animated, pokemon.sprite]) {
+    for (const url of [pokemon.sprite_3d, pokemon.sprite]) {
       if (url) { const img = new Image(); img.src = url; }
     }
   };

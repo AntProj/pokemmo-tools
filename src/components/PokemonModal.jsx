@@ -47,9 +47,11 @@ export default function PokemonModal({ pokemon, data, onClose, onSelect }) {
   if (!pokemon) return null;
 
   const total = statTotal(pokemon.stats);
-  // Shiny toggle should only render if any shiny variant exists across the
-  // sprite chain (the 3D HOME render, the animated GIF, or the still PNG).
-  const hasShinyVariant = !!(pokemon.sprite_3d_shiny || pokemon.sprite_animated_shiny || pokemon.sprite_shiny);
+  // Shiny toggle only renders if a shiny variant exists in either the
+  // 3D HOME render or the still PNG (the two sprite sources we support
+  // since the animated-GIF chain was retired in favor of the global
+  // sprite-mode toggle — see src/lib/spriteMode.js).
+  const hasShinyVariant = !!(pokemon.sprite_3d_shiny || pokemon.sprite_shiny);
 
   return (
     <div
@@ -400,8 +402,8 @@ function EvolutionStage({ poke, isCurrent, onSelect }) {
           : 'border-[#e6dabf] dark:border-stone-800 bg-[#f1e9d2] dark:bg-stone-950/40 hover:border-[#c4b486] dark:hover:border-stone-600'
       }`}
     >
-      {poke.sprite_animated || poke.sprite
-        ? <PokemonSprite pokemon={poke} variant="animated" loading="lazy" className="w-16 h-16 object-contain" />
+      {poke.sprite_3d || poke.sprite
+        ? <PokemonSprite pokemon={poke} loading="lazy" className="w-16 h-16 object-contain" />
         : <div className="w-16 h-16 flex items-center justify-center text-stone-400 text-xs">?</div>}
       <div className="font-mono text-[10px] text-stone-500 dark:text-stone-500">{dexNum(poke.id)}</div>
       <div className="text-xs font-semibold text-stone-900 dark:text-stone-100">{poke.name}</div>

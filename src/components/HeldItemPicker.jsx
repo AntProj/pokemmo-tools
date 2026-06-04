@@ -1,4 +1,5 @@
 import { memo, useDeferredValue, useEffect, useMemo, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Search, X, Plus } from 'lucide-react';
 
 // Single-select held-item picker. `options` is a deduped list of
@@ -73,7 +74,10 @@ function HeldItemPickerModal({ options, currentId, onPick, onClose }) {
     return arr.filter((o) => o.name.toLowerCase().includes(q));
   }, [options, deferredQuery]);
 
-  return (
+  // Render via Portal at <body> so the fixed-positioned overlay escapes
+  // the picker button's parent stacking context. See AbilityPicker for
+  // the full explanation.
+  return createPortal(
     <div className="fixed inset-0 z-50 overflow-y-auto bg-black/70" onClick={onClose}>
       <div className="min-h-full flex items-start sm:items-center justify-center p-3 sm:p-6">
         <div
@@ -134,6 +138,7 @@ function HeldItemPickerModal({ options, currentId, onPick, onClose }) {
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
