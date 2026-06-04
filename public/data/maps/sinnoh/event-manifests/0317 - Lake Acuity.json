@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 317,
+    "name": "Lake Acuity",
+    "mapName": "0317 - Lake Acuity",
+    "matrixId": 107
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0127_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 264,
+        "y": 754,
+        "targetPng": "0317 - Lake Acuity.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 16,
+        "yMap": 14,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 616,
+        "y": 146,
+        "targetPng": "0317 - Lake Acuity.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

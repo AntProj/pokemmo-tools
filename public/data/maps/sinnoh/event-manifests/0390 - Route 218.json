@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 390,
+    "name": "Route 218",
+    "mapName": "0390 - Route 218",
+    "matrixId": 258
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0032_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 44,
+        "y": 96,
+        "targetPng": "0390 - Route 218.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 2,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0027_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 92,
+        "y": 128,
+        "targetPng": "0390 - Route 218.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

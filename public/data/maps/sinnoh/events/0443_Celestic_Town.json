@@ -1,0 +1,43 @@
+{
+  "zoneId": 443,
+  "displayName": "Celestic Town",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 136,
+      "pixelY": 200,
+      "worldX": 128,
+      "worldZ": 192,
+      "destinationZoneId": 442,
+      "destinationName": "Celestic Town",
+      "destinationPixelX": 392,
+      "destinationPixelY": 440,
+      "anchor": 5
+    },
+    {
+      "id": "w1",
+      "pixelX": 40,
+      "pixelY": 168,
+      "worldX": 32,
+      "worldZ": 160,
+      "destinationZoneId": 444,
+      "destinationName": "Celestic Town",
+      "destinationPixelX": 40,
+      "destinationPixelY": 168,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 232,
+      "pixelY": 168,
+      "worldX": 224,
+      "worldZ": 160,
+      "destinationZoneId": 488,
+      "destinationName": "Celestic Town",
+      "destinationPixelX": 232,
+      "destinationPixelY": 168,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

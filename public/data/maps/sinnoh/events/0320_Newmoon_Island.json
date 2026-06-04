@@ -1,0 +1,31 @@
+{
+  "zoneId": 320,
+  "displayName": "Newmoon Island",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 152,
+      "pixelY": 200,
+      "worldX": 2192,
+      "worldZ": 4288,
+      "destinationZoneId": 321,
+      "destinationName": "Newmoon Island",
+      "destinationPixelX": 264,
+      "destinationPixelY": 346,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 168,
+      "pixelY": 200,
+      "worldX": 2208,
+      "worldZ": 4288,
+      "destinationZoneId": 321,
+      "destinationName": "Newmoon Island",
+      "destinationPixelX": 280,
+      "destinationPixelY": 346,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

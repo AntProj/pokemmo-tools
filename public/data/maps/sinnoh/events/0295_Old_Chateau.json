@@ -1,0 +1,67 @@
+{
+  "zoneId": 295,
+  "displayName": "Old Chateau",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 24,
+      "pixelY": 112,
+      "worldX": 16,
+      "worldZ": 96,
+      "destinationZoneId": 297,
+      "destinationName": "Old Chateau",
+      "destinationPixelX": 120,
+      "destinationPixelY": 88,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 280,
+      "pixelY": 112,
+      "worldX": 272,
+      "worldZ": 96,
+      "destinationZoneId": 297,
+      "destinationName": "Old Chateau",
+      "destinationPixelX": 392,
+      "destinationPixelY": 88,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 152,
+      "pixelY": 96,
+      "worldX": 144,
+      "worldZ": 80,
+      "destinationZoneId": 296,
+      "destinationName": "Old Chateau",
+      "destinationPixelX": 312,
+      "destinationPixelY": 184,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 152,
+      "pixelY": 48,
+      "worldX": 144,
+      "worldZ": 32,
+      "destinationZoneId": 298,
+      "destinationName": "Old Chateau",
+      "destinationPixelX": 312,
+      "destinationPixelY": 112,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 152,
+      "pixelY": 256,
+      "worldX": 144,
+      "worldZ": 240,
+      "destinationZoneId": 203,
+      "destinationName": "Eterna Forest",
+      "destinationPixelX": 1192,
+      "destinationPixelY": 250,
+      "anchor": 4
+    }
+  ],
+  "trainers": []
+}

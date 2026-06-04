@@ -1,0 +1,105 @@
+{
+  "header": {
+    "id": 157,
+    "name": "Sunyshore Market",
+    "mapName": "0157 - Sunyshore Market",
+    "matrixId": 203
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0011_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 40,
+        "y": 160,
+        "targetPng": "0157 - Sunyshore Market.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 2,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0014_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 88,
+        "y": 144,
+        "targetPng": "0157 - Sunyshore Market.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0054_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 136,
+        "y": 160,
+        "targetPng": "0157 - Sunyshore Market.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 8,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0147_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 24,
+        "y": 96,
+        "targetPng": "0157 - Sunyshore Market.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 1,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0006_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 104,
+        "y": 80,
+        "targetPng": "0157 - Sunyshore Market.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

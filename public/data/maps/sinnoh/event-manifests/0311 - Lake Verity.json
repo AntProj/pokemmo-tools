@@ -1,0 +1,143 @@
+{
+  "header": {
+    "id": 311,
+    "name": "Lake Verity",
+    "mapName": "0311 - Lake Verity",
+    "matrixId": 101
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 780,
+        "y": 706,
+        "targetPng": "0311 - Lake Verity.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 16,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_dawn_platinum.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 796,
+        "y": 690,
+        "targetPng": "0311 - Lake Verity.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 17,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0152_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 924,
+        "y": 706,
+        "targetPng": "0311 - Lake Verity.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 25,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0152_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 780,
+        "y": 834,
+        "targetPng": "0311 - Lake Verity.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 16,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0099_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 780,
+        "y": 706,
+        "targetPng": "0311 - Lake Verity.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 16,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0127_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 764,
+        "y": 882,
+        "targetPng": "0311 - Lake Verity.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 15,
+        "yMap": 22,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 412,
+        "y": 882,
+        "targetPng": "0311 - Lake Verity.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 25,
+        "yMap": 22,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

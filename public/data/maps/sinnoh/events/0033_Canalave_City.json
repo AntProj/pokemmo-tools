@@ -1,0 +1,139 @@
+{
+  "zoneId": 33,
+  "displayName": "Canalave City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 124,
+      "pixelY": 442,
+      "worldX": 624,
+      "worldZ": 11696,
+      "destinationZoneId": 35,
+      "destinationName": "Canalave City",
+      "destinationPixelX": 264,
+      "destinationPixelY": 440,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 428,
+      "pixelY": 298,
+      "worldX": 928,
+      "worldZ": 11552,
+      "destinationZoneId": 36,
+      "destinationName": "Canalave City",
+      "destinationPixelX": 136,
+      "destinationPixelY": 200,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 348,
+      "pixelY": 586,
+      "worldX": 848,
+      "worldZ": 11840,
+      "destinationZoneId": 34,
+      "destinationName": "Canalave City",
+      "destinationPixelX": 56,
+      "destinationPixelY": 184,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 92,
+      "pixelY": 234,
+      "worldX": 592,
+      "worldZ": 11488,
+      "destinationZoneId": 38,
+      "destinationName": "Canalave Library",
+      "destinationPixelX": 184,
+      "destinationPixelY": 184,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 364,
+      "pixelY": 714,
+      "worldX": 864,
+      "worldZ": 11968,
+      "destinationZoneId": 41,
+      "destinationName": "Canalave City",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 428,
+      "pixelY": 154,
+      "worldX": 928,
+      "worldZ": 11408,
+      "destinationZoneId": 43,
+      "destinationName": "Canalave City",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w6",
+      "pixelX": 124,
+      "pixelY": 714,
+      "worldX": 624,
+      "worldZ": 11968,
+      "destinationZoneId": 44,
+      "destinationName": "Canalave City",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w7",
+      "pixelX": 508,
+      "pixelY": 810,
+      "worldX": 1008,
+      "worldZ": 12064,
+      "destinationZoneId": 390,
+      "destinationName": "Route 218",
+      "destinationPixelX": 28,
+      "destinationPixelY": 120,
+      "anchor": 0
+    },
+    {
+      "id": "w8",
+      "pixelX": 508,
+      "pixelY": 826,
+      "worldX": 1008,
+      "worldZ": 12080,
+      "destinationZoneId": 390,
+      "destinationName": "Route 218",
+      "destinationPixelX": 28,
+      "destinationPixelY": 120,
+      "anchor": 0
+    },
+    {
+      "id": "w9",
+      "pixelX": 348,
+      "pixelY": 458,
+      "worldX": 848,
+      "worldZ": 11712,
+      "destinationZoneId": 42,
+      "destinationName": "Canalave City",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w10",
+      "pixelX": 108,
+      "pixelY": 586,
+      "worldX": 608,
+      "worldZ": 11840,
+      "destinationZoneId": 491,
+      "destinationName": "Canalave City",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

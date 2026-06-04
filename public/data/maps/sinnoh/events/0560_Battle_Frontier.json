@@ -1,0 +1,79 @@
+{
+  "zoneId": 560,
+  "displayName": "Battle Frontier",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 120,
+      "pixelY": 40,
+      "worldX": 112,
+      "worldZ": 32,
+      "destinationZoneId": 559,
+      "destinationName": "Battle Frontier",
+      "destinationPixelX": 776,
+      "destinationPixelY": 848,
+      "anchor": 10
+    },
+    {
+      "id": "w1",
+      "pixelX": 104,
+      "pixelY": 40,
+      "worldX": 96,
+      "worldZ": 32,
+      "destinationZoneId": 559,
+      "destinationName": "Battle Frontier",
+      "destinationPixelX": 776,
+      "destinationPixelY": 848,
+      "anchor": 10
+    },
+    {
+      "id": "w2",
+      "pixelX": 136,
+      "pixelY": 40,
+      "worldX": 128,
+      "worldZ": 32,
+      "destinationZoneId": 559,
+      "destinationName": "Battle Frontier",
+      "destinationPixelX": 776,
+      "destinationPixelY": 848,
+      "anchor": 10
+    },
+    {
+      "id": "w3",
+      "pixelX": 120,
+      "pixelY": 328,
+      "worldX": 112,
+      "worldZ": 320,
+      "destinationZoneId": 188,
+      "destinationName": "Fight Area",
+      "destinationPixelX": 744,
+      "destinationPixelY": 159,
+      "anchor": 2
+    },
+    {
+      "id": "w4",
+      "pixelX": 104,
+      "pixelY": 328,
+      "worldX": 96,
+      "worldZ": 320,
+      "destinationZoneId": 188,
+      "destinationName": "Fight Area",
+      "destinationPixelX": 744,
+      "destinationPixelY": 159,
+      "anchor": 2
+    },
+    {
+      "id": "w5",
+      "pixelX": 136,
+      "pixelY": 328,
+      "worldX": 128,
+      "worldZ": 320,
+      "destinationZoneId": 188,
+      "destinationName": "Fight Area",
+      "destinationPixelX": 744,
+      "destinationPixelY": 159,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

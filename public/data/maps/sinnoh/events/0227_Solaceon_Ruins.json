@@ -1,0 +1,19 @@
+{
+  "zoneId": 227,
+  "displayName": "Solaceon Ruins",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 72,
+      "pixelY": 56,
+      "worldX": 64,
+      "worldZ": 48,
+      "destinationZoneId": 229,
+      "destinationName": "Solaceon Ruins",
+      "destinationPixelX": 104,
+      "destinationPixelY": 56,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

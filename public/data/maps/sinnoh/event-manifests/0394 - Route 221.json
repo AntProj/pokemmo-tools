@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 394,
+    "name": "Route 221",
+    "mapName": "0394 - Route 221",
+    "matrixId": 244
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0016_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 40,
+        "y": 96,
+        "targetPng": "0394 - Route 221.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 2,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

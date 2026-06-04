@@ -1,0 +1,19 @@
+{
+  "zoneId": 147,
+  "displayName": "Veilstone City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 72,
+      "pixelY": 136,
+      "worldX": 64,
+      "worldZ": 128,
+      "destinationZoneId": 132,
+      "destinationName": "Veilstone City",
+      "destinationPixelX": 744,
+      "destinationPixelY": 432,
+      "anchor": 9
+    }
+  ],
+  "trainers": []
+}

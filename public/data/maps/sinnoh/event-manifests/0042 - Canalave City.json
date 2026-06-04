@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 42,
+    "name": "Canalave City",
+    "mapName": "0042 - Canalave City",
+    "matrixId": 123
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0143_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 40,
+        "y": 112,
+        "targetPng": "0042 - Canalave City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 2,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

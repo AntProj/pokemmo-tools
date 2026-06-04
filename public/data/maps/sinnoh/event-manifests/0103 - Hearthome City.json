@@ -1,0 +1,86 @@
+{
+  "header": {
+    "id": 103,
+    "name": "Hearthome City",
+    "mapName": "0103 - Hearthome City",
+    "matrixId": 209
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0080_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 200,
+        "y": 160,
+        "targetPng": "0103 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 12,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0061_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 72,
+        "y": 176,
+        "targetPng": "0103 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 4,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0372_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 328,
+        "y": 128,
+        "targetPng": "0103 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 20,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0001_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 312,
+        "y": 128,
+        "targetPng": "0103 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 19,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

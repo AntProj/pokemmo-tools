@@ -1,0 +1,67 @@
+{
+  "zoneId": 88,
+  "displayName": "Hearthome City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 378,
+      "pixelY": 120,
+      "worldX": 176,
+      "worldZ": 112,
+      "destinationZoneId": 90,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 264,
+      "destinationPixelY": 360,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 266,
+      "pixelY": 40,
+      "worldX": 64,
+      "worldZ": 32,
+      "destinationZoneId": 89,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 168,
+      "destinationPixelY": 168,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 394,
+      "pixelY": 120,
+      "worldX": 192,
+      "worldZ": 112,
+      "destinationZoneId": 91,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 72,
+      "destinationPixelY": 216,
+      "anchor": 3
+    },
+    {
+      "id": "w3",
+      "pixelX": 266,
+      "pixelY": 136,
+      "worldX": 64,
+      "worldZ": 128,
+      "destinationZoneId": 86,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 840,
+      "destinationPixelY": 410,
+      "anchor": 8
+    },
+    {
+      "id": "w4",
+      "pixelX": 378,
+      "pixelY": 56,
+      "worldX": 176,
+      "worldZ": 48,
+      "destinationZoneId": 91,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 232,
+      "destinationPixelY": 56,
+      "anchor": 4
+    }
+  ],
+  "trainers": []
+}

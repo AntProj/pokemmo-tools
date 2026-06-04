@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 361,
+    "name": "Route 209",
+    "mapName": "0361 - Route 209",
+    "matrixId": 216
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0144_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 160,
+        "targetPng": "0361 - Route 209.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 7,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0144_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 136,
+        "y": 160,
+        "targetPng": "0361 - Route 209.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 8,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

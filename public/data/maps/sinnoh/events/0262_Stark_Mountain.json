@@ -1,0 +1,33 @@
+{
+  "zoneId": 262,
+  "displayName": "Stark Mountain",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 232,
+      "pixelY": 239,
+      "worldX": 12000,
+      "worldZ": 3696,
+      "destinationZoneId": 263,
+      "destinationName": "Stark Mountain",
+      "destinationPixelX": 328,
+      "destinationPixelY": 472,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t2",
+      "trainerInstanceId": 107,
+      "pixelX": 216,
+      "pixelY": 519,
+      "trainerId": 558,
+      "trainerName": "Darien",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3557,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

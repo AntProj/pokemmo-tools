@@ -1,0 +1,55 @@
+{
+  "zoneId": 253,
+  "displayName": "Amity Square",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 172,
+      "pixelY": 824,
+      "worldX": 160,
+      "worldZ": 816,
+      "destinationZoneId": 107,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 88,
+      "destinationPixelY": 40,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 188,
+      "pixelY": 824,
+      "worldX": 176,
+      "worldZ": 816,
+      "destinationZoneId": 107,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 88,
+      "destinationPixelY": 40,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 844,
+      "pixelY": 824,
+      "worldX": 832,
+      "worldZ": 816,
+      "destinationZoneId": 108,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 88,
+      "destinationPixelY": 40,
+      "anchor": 1
+    },
+    {
+      "id": "w3",
+      "pixelX": 860,
+      "pixelY": 824,
+      "worldX": 848,
+      "worldZ": 816,
+      "destinationZoneId": 108,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 88,
+      "destinationPixelY": 40,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

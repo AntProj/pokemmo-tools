@@ -36,6 +36,51 @@ input[type="search"]::-webkit-search-decoration {
   image-rendering: crisp-edges;
 }
 
+/* Map images on the Sinnoh map are pixel art baked at 1:1. Keep them crisp
+   when zoomed in by the leaflet container. */
+.leaflet-image-layer {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* Trainer click zones on detail maps. The trainer sprite itself is already
+   baked into the map PNG by build_world.py's composite step (REACT_INTEGRATION
+   §3.1) — these are SVG Rectangles, anchored in map coordinates so they scale
+   with zoom and stay aligned to the baked-in 16×32 sprite extent. Visible
+   by default (subtle dashed blue outline + faint fill) so trainers are
+   distinguishable from decorative NPCs at a glance. Hover brightens both. */
+.leaflet-interactive.trainer-hit {
+  cursor: pointer;
+  transition: fill-opacity 120ms, stroke-width 120ms, filter 120ms;
+}
+.leaflet-interactive.trainer-hit:hover {
+  fill-opacity: 0.5 !important;
+  stroke-width: 3 !important;
+  /* Red glow on hover so the active trainer pops even more. */
+  filter: drop-shadow(0 0 4px rgba(220, 38, 38, 0.7));
+}
+
+/* Overworld region rectangles. Light fill, brighter on hover. */
+.leaflet-interactive.overworld-region {
+  cursor: pointer;
+  transition: fill-opacity 120ms;
+}
+.leaflet-interactive.overworld-region:hover {
+  fill-opacity: 0.35 !important;
+}
+
+/* Pathfinding mode visual feedback. Crosshair cursor over the map signals
+   that clicks set tiles instead of opening info panels. */
+.leaflet-container.pathfinding-active {
+  cursor: crosshair;
+}
+
+/* Walkability debug overlay tiles. Rendered as SVG <rect> primitives via
+   Leaflet's Rectangle — same styling applies as for other path-style
+   overlays. No special rules needed; per-tile fillColor/fillOpacity is
+   set in the JSX. */
+
 /* Dual-handle range slider — two <input type="range"> overlap.
    The track is a styled div behind them; the inputs themselves only
    participate via their thumbs (pointer-events trick). */

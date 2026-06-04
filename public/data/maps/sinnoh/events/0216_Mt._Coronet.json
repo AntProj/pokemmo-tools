@@ -1,0 +1,58 @@
+{
+  "zoneId": 216,
+  "displayName": "Mt. Coronet",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 40,
+      "pixelY": 936,
+      "worldX": 32,
+      "worldZ": 928,
+      "destinationZoneId": 210,
+      "destinationName": "Mt. Coronet",
+      "destinationPixelX": 792,
+      "destinationPixelY": 520,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 264,
+      "pixelY": 216,
+      "worldX": 256,
+      "worldZ": 208,
+      "destinationZoneId": 218,
+      "destinationName": "Mt. Coronet",
+      "destinationPixelX": 344,
+      "destinationPixelY": 984,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t13",
+      "trainerInstanceId": 72,
+      "pixelX": 328,
+      "pixelY": 128,
+      "trainerId": 518,
+      "trainerName": "Grunt",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3517,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t14",
+      "trainerInstanceId": 73,
+      "pixelX": 56,
+      "pixelY": 784,
+      "trainerId": 519,
+      "trainerName": "Grunt",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3518,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

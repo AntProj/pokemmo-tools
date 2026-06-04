@@ -1,0 +1,33 @@
+{
+  "zoneId": 94,
+  "displayName": "Hearthome City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 152,
+      "pixelY": 168,
+      "worldX": 112,
+      "worldZ": 160,
+      "destinationZoneId": 91,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 88,
+      "destinationPixelY": 280,
+      "anchor": 2
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 23,
+      "pixelX": 152,
+      "pixelY": 112,
+      "trainerId": 330,
+      "trainerName": "Cheyenne",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3329,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

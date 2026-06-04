@@ -1,0 +1,57 @@
+{
+  "zoneId": 291,
+  "displayName": "Iron Island",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 104,
+      "pixelY": 424,
+      "worldX": 96,
+      "worldZ": 416,
+      "destinationZoneId": 293,
+      "destinationName": "Iron Island",
+      "destinationPixelX": 616,
+      "destinationPixelY": 56,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 264,
+      "pixelY": 424,
+      "worldX": 256,
+      "worldZ": 416,
+      "destinationZoneId": 292,
+      "destinationName": "Iron Island",
+      "destinationPixelX": 40,
+      "destinationPixelY": 56,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 40,
+      "pixelY": 56,
+      "worldX": 32,
+      "worldZ": 48,
+      "destinationZoneId": 289,
+      "destinationName": "Iron Island",
+      "destinationPixelX": 136,
+      "destinationPixelY": 56,
+      "anchor": 2
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t2",
+      "trainerInstanceId": 135,
+      "pixelX": 280,
+      "pixelY": 272,
+      "trainerId": 457,
+      "trainerName": "Summer",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3456,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

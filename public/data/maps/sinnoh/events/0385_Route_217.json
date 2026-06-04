@@ -1,0 +1,97 @@
+{
+  "zoneId": 385,
+  "displayName": "Route 217",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 92,
+      "pixelY": 890,
+      "worldX": 4688,
+      "worldZ": 4976,
+      "destinationZoneId": 386,
+      "destinationName": "Route 217",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 460,
+      "pixelY": 474,
+      "worldX": 5056,
+      "worldZ": 4560,
+      "destinationZoneId": 387,
+      "destinationName": "Route 217",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 299,
+      "pixelX": 492,
+      "pixelY": 1426,
+      "trainerId": 142,
+      "trainerName": "Shawn",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3141,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 300,
+      "pixelX": 108,
+      "pixelY": 658,
+      "trainerId": 144,
+      "trainerName": "Lexie",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3143,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 301,
+      "pixelX": 60,
+      "pixelY": 1426,
+      "trainerId": 145,
+      "trainerName": "Madison",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3144,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t7",
+      "trainerInstanceId": 302,
+      "pixelX": 316,
+      "pixelY": 1826,
+      "trainerId": 140,
+      "trainerName": "Dalton",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3139,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t8",
+      "trainerInstanceId": 303,
+      "pixelX": 236,
+      "pixelY": 194,
+      "trainerId": 141,
+      "trainerName": "Olivia",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3140,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

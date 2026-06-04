@@ -1,0 +1,257 @@
+{
+  "header": {
+    "id": 426,
+    "name": "Floaroma Town",
+    "mapName": "0426 - Floaroma Town",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0011_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 316,
+        "y": 866,
+        "targetPng": "0426 - Floaroma Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 20,
+        "xMap": 19,
+        "yMap": 21,
+        "zPositionRaw": 327680
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0005_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 172,
+        "y": 610,
+        "targetPng": "0426 - Floaroma Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 20,
+        "xMap": 10,
+        "yMap": 5,
+        "zPositionRaw": 327680
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0002_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 268,
+        "y": 786,
+        "targetPng": "0426 - Floaroma Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 20,
+        "xMap": 16,
+        "yMap": 16,
+        "zPositionRaw": 327680
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0012_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 172,
+        "y": 834,
+        "targetPng": "0426 - Floaroma Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 20,
+        "xMap": 10,
+        "yMap": 19,
+        "zPositionRaw": 327680
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0005_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 380,
+        "y": 706,
+        "targetPng": "0426 - Floaroma Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 20,
+        "xMap": 23,
+        "yMap": 11,
+        "zPositionRaw": 327680
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": null,
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 300,
+        "y": 706,
+        "targetPng": "0426 - Floaroma Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 20,
+        "xMap": 18,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": null,
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 364,
+        "y": 706,
+        "targetPng": "0426 - Floaroma Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 20,
+        "xMap": 22,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0103_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 44,
+        "y": 546,
+        "targetPng": "0426 - Floaroma Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 20,
+        "xMap": 2,
+        "yMap": 1,
+        "zPositionRaw": 327680
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0103_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 60,
+        "y": 546,
+        "targetPng": "0426 - Floaroma Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 20,
+        "xMap": 3,
+        "yMap": 1,
+        "zPositionRaw": 327680
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_brown_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 220,
+        "y": 818,
+        "targetPng": "0426 - Floaroma Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 20,
+        "xMap": 13,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 284,
+        "y": 690,
+        "targetPng": "0426 - Floaroma Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 20,
+        "xMap": 17,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 476,
+        "y": 754,
+        "targetPng": "0426 - Floaroma Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 20,
+        "xMap": 29,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 12,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0050_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 108,
+        "y": 690,
+        "targetPng": "0426 - Floaroma Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 20,
+        "xMap": 6,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

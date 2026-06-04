@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 115,
+    "name": "Hearthome City",
+    "mapName": "0115 - Hearthome City",
+    "matrixId": 245
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0006_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 88,
+        "y": 96,
+        "targetPng": "0115 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

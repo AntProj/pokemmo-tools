@@ -1,0 +1,105 @@
+{
+  "header": {
+    "id": 11,
+    "name": "Jubilife TV",
+    "mapName": "0011 - Jubilife TV",
+    "matrixId": 148
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0012_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 216,
+        "y": 224,
+        "targetPng": "0011 - Jubilife TV.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 13,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0147_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 216,
+        "y": 128,
+        "targetPng": "0011 - Jubilife TV.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 13,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0080_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 56,
+        "y": 192,
+        "targetPng": "0011 - Jubilife TV.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0067_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 152,
+        "y": 128,
+        "targetPng": "0011 - Jubilife TV.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 9,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0010_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 176,
+        "targetPng": "0011 - Jubilife TV.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 7,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

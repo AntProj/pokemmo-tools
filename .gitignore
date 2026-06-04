@@ -8,6 +8,13 @@ dist-ssr/
 # Generated data (rebuild with: npm run build:data)
 src/data/pokemmo.json
 
+# Map image PNGs — hosted on Cloudflare R2 instead of committed to the repo
+# (the full Sinnoh image set is hundreds of MB; sprites are baked into the
+# PNGs by build_world.py's composite step, so there's no separate sprite set).
+# Regenerate locally with `npm run build:map-data`, then push to R2 with
+# `npm run upload:maps`.
+public/data/maps/sinnoh/images/
+
 # Editor
 .vscode/
 .idea/
@@ -24,6 +31,3 @@ src/data/pokemmo.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# Claude Code agent workspace
-.claude/worktrees/

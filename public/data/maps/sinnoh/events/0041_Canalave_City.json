@@ -1,0 +1,19 @@
+{
+  "zoneId": 41,
+  "displayName": "Canalave City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 72,
+      "pixelY": 136,
+      "worldX": 64,
+      "worldZ": 128,
+      "destinationZoneId": 33,
+      "destinationName": "Canalave City",
+      "destinationPixelX": 364,
+      "destinationPixelY": 714,
+      "anchor": 4
+    }
+  ],
+  "trainers": []
+}

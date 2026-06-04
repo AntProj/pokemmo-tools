@@ -1,0 +1,19 @@
+{
+  "zoneId": 427,
+  "displayName": "Floaroma Town",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 56,
+      "pixelY": 184,
+      "worldX": 48,
+      "worldZ": 176,
+      "destinationZoneId": 426,
+      "destinationName": "Floaroma Town",
+      "destinationPixelX": 396,
+      "destinationPixelY": 794,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

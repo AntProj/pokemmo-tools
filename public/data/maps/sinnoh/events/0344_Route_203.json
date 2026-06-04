@@ -1,0 +1,85 @@
+{
+  "zoneId": 344,
+  "displayName": "Route 203",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 888,
+      "pixelY": 234,
+      "worldX": 3936,
+      "worldZ": 11984,
+      "destinationZoneId": 258,
+      "destinationName": "Oreburgh Gate",
+      "destinationPixelX": 168,
+      "destinationPixelY": 360,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 167,
+      "pixelX": 696,
+      "pixelY": 370,
+      "trainerId": 356,
+      "trainerName": "Sebastian",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3355,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 168,
+      "pixelX": 216,
+      "pixelY": 258,
+      "trainerId": 4,
+      "trainerName": "Michael",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3003,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 169,
+      "pixelX": 840,
+      "pixelY": 370,
+      "trainerId": 323,
+      "trainerName": "Kaitlin",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3322,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 170,
+      "pixelX": 504,
+      "pixelY": 354,
+      "trainerId": 355,
+      "trainerName": "Dallas",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3354,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 171,
+      "pixelX": 792,
+      "pixelY": 226,
+      "trainerId": 322,
+      "trainerName": "Madeline",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3321,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

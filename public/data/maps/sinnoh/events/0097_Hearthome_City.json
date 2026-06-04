@@ -1,0 +1,33 @@
+{
+  "zoneId": 97,
+  "displayName": "Hearthome City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 152,
+      "pixelY": 168,
+      "worldX": 112,
+      "worldZ": 160,
+      "destinationZoneId": 93,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 264,
+      "destinationPixelY": 40,
+      "anchor": 2
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 25,
+      "pixelX": 152,
+      "pixelY": 112,
+      "trainerId": 343,
+      "trainerName": "Mackenzie",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3342,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "zoneId": 589,
+  "displayName": "Mt. Coronet",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 168,
+      "pixelY": 248,
+      "worldX": 112,
+      "worldZ": 192,
+      "destinationZoneId": 217,
+      "destinationName": "Mt. Coronet",
+      "destinationPixelX": 248,
+      "destinationPixelY": 264,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,43 @@
+{
+  "zoneId": 267,
+  "displayName": "Sendoff Spring",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 204,
+      "pixelY": 938,
+      "worldX": 192,
+      "worldZ": 896,
+      "destinationZoneId": 341,
+      "destinationName": "Spring Path",
+      "destinationPixelX": 428,
+      "destinationPixelY": 666,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 220,
+      "pixelY": 938,
+      "worldX": 208,
+      "worldZ": 896,
+      "destinationZoneId": 341,
+      "destinationName": "Spring Path",
+      "destinationPixelX": 444,
+      "destinationPixelY": 666,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 508,
+      "pixelY": 298,
+      "worldX": 496,
+      "worldZ": 256,
+      "destinationZoneId": 268,
+      "destinationName": "Turnback Cave",
+      "destinationPixelX": 184,
+      "destinationPixelY": 264,
+      "anchor": 4
+    }
+  ],
+  "trainers": []
+}

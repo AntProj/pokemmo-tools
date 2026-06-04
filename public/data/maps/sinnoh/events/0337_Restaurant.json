@@ -1,0 +1,19 @@
+{
+  "zoneId": 337,
+  "displayName": "Restaurant",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 152,
+      "pixelY": 200,
+      "worldX": 144,
+      "worldZ": 192,
+      "destinationZoneId": 336,
+      "destinationName": "Valor Lakefront",
+      "destinationPixelX": 556,
+      "destinationPixelY": 874,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

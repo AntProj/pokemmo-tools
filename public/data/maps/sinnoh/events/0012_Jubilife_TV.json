@@ -1,0 +1,55 @@
+{
+  "zoneId": 12,
+  "displayName": "Jubilife TV",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 120,
+      "pixelY": 56,
+      "worldX": 112,
+      "worldZ": 48,
+      "destinationZoneId": 11,
+      "destinationName": "Jubilife TV",
+      "destinationPixelX": 232,
+      "destinationPixelY": 72,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 232,
+      "pixelY": 56,
+      "worldX": 224,
+      "worldZ": 48,
+      "destinationZoneId": 13,
+      "destinationName": "Jubilife TV",
+      "destinationPixelX": 120,
+      "destinationPixelY": 56,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 56,
+      "pixelY": 40,
+      "worldX": 48,
+      "worldZ": 32,
+      "destinationZoneId": 15,
+      "destinationName": "Jubilife TV",
+      "destinationPixelX": 56,
+      "destinationPixelY": 216,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 296,
+      "pixelY": 40,
+      "worldX": 288,
+      "worldZ": 32,
+      "destinationZoneId": 18,
+      "destinationName": "Jubilife TV",
+      "destinationPixelX": 56,
+      "destinationPixelY": 104,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

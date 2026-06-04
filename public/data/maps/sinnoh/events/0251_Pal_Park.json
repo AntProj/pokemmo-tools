@@ -1,0 +1,31 @@
+{
+  "zoneId": 251,
+  "displayName": "Pal Park",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 396,
+      "pixelY": 840,
+      "worldX": 384,
+      "worldZ": 832,
+      "destinationZoneId": 393,
+      "destinationName": "Pal Park",
+      "destinationPixelX": 120,
+      "destinationPixelY": 120,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 412,
+      "pixelY": 840,
+      "worldX": 400,
+      "worldZ": 832,
+      "destinationZoneId": 393,
+      "destinationName": "Pal Park",
+      "destinationPixelX": 120,
+      "destinationPixelY": 120,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

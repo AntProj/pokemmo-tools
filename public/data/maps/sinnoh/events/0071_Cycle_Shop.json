@@ -1,0 +1,19 @@
+{
+  "zoneId": 71,
+  "displayName": "Cycle Shop",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 120,
+      "pixelY": 184,
+      "worldX": 112,
+      "worldZ": 176,
+      "destinationZoneId": 65,
+      "destinationName": "Eterna City",
+      "destinationPixelX": 360,
+      "destinationPixelY": 440,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 149,
+    "name": "Route 215",
+    "mapName": "0149 - Route 215",
+    "matrixId": 258
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0048_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 124,
+        "y": 144,
+        "targetPng": "0149 - Route 215.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 7,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

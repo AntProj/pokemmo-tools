@@ -1,0 +1,55 @@
+{
+  "zoneId": 334,
+  "displayName": "Verity Lakefront",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 792,
+      "pixelY": 698,
+      "worldX": 1296,
+      "worldZ": 13488,
+      "destinationZoneId": 311,
+      "destinationName": "Lake Verity",
+      "destinationPixelX": 764,
+      "destinationPixelY": 874,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 776,
+      "pixelY": 698,
+      "worldX": 1280,
+      "worldZ": 13488,
+      "destinationZoneId": 311,
+      "destinationName": "Lake Verity",
+      "destinationPixelX": 748,
+      "destinationPixelY": 874,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 776,
+      "pixelY": 698,
+      "worldX": 1280,
+      "worldZ": 13488,
+      "destinationZoneId": 312,
+      "destinationName": "Lake Verity",
+      "destinationPixelX": 748,
+      "destinationPixelY": 874,
+      "anchor": 1
+    },
+    {
+      "id": "w3",
+      "pixelX": 792,
+      "pixelY": 698,
+      "worldX": 1296,
+      "worldZ": 13488,
+      "destinationZoneId": 312,
+      "destinationName": "Lake Verity",
+      "destinationPixelX": 764,
+      "destinationPixelY": 874,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

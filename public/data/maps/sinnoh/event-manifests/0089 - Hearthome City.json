@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 89,
+    "name": "Hearthome City",
+    "mapName": "0089 - Hearthome City",
+    "matrixId": 223
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 1,
+      "orientation": "Left",
+      "spriteFile": "ow_0003_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 232,
+        "y": 128,
+        "targetPng": "0089 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 12,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 1,
+      "orientation": "Right",
+      "spriteFile": "ow_0005_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 104,
+        "y": 128,
+        "targetPng": "0089 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 4,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,618 @@
+{
+  "header": {
+    "id": 188,
+    "name": "Fight Area",
+    "mapName": "0188 - Fight Area",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_brown_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 408,
+        "y": 311,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 19,
+        "yMatrix": 13,
+        "xMap": 25,
+        "yMap": 17,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_route_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 376,
+        "y": 263,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 19,
+        "yMatrix": 13,
+        "xMap": 23,
+        "yMap": 14,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_route_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 712,
+        "y": 199,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 13,
+        "xMap": 12,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0161_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 648,
+        "y": 407,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 13,
+        "xMap": 8,
+        "yMap": 22,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0161_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 648,
+        "y": 391,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 13,
+        "xMap": 8,
+        "yMap": 21,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0054_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 424,
+        "y": 471,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 19,
+        "yMatrix": 13,
+        "xMap": 26,
+        "yMap": 26,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0052_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 328,
+        "y": 167,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 19,
+        "yMatrix": 13,
+        "xMap": 20,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0127_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 328,
+        "y": 343,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 19,
+        "yMatrix": 13,
+        "xMap": 20,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0123_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 792,
+        "y": 215,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 13,
+        "xMap": 17,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": null,
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 504,
+        "y": 263,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 19,
+        "yMatrix": 13,
+        "xMap": 31,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": null,
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 520,
+        "y": 263,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 13,
+        "xMap": 0,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": null,
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 536,
+        "y": 263,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 13,
+        "xMap": 1,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 12,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": null,
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 552,
+        "y": 263,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 13,
+        "xMap": 2,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 13,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0008_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 712,
+        "y": 439,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 13,
+        "xMap": 12,
+        "yMap": 24,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 14,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0010_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 808,
+        "y": 247,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 13,
+        "xMap": 18,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 15,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0013_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 792,
+        "y": 327,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 13,
+        "xMap": 17,
+        "yMap": 17,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 16,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0001_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 680,
+        "y": 295,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 13,
+        "xMap": 10,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 17,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0006_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 552,
+        "y": 311,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 13,
+        "xMap": 2,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 18,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0054_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 184,
+        "y": 359,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 19,
+        "yMatrix": 13,
+        "xMap": 11,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 19,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0049_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 648,
+        "y": 343,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 13,
+        "xMap": 8,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 20,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0170_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 152,
+        "y": 343,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 19,
+        "yMatrix": 13,
+        "xMap": 9,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 21,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0170_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 152,
+        "y": 359,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 19,
+        "yMatrix": 13,
+        "xMap": 9,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 22,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0010_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 344,
+        "y": 263,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 19,
+        "yMatrix": 13,
+        "xMap": 21,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 23,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0049_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 360,
+        "y": 263,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 19,
+        "yMatrix": 13,
+        "xMap": 22,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 24,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0112_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 760,
+        "y": 183,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 13,
+        "xMap": 15,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 25,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0115_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 744,
+        "y": 183,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 13,
+        "xMap": 14,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 26,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0148_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 760,
+        "y": 167,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 13,
+        "xMap": 15,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 27,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0049_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 712,
+        "y": 263,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 13,
+        "xMap": 12,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 28,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0013_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 696,
+        "y": 247,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 13,
+        "xMap": 11,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 29,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0010_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 696,
+        "y": 231,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 13,
+        "xMap": 11,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 30,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0006_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 792,
+        "y": 247,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 13,
+        "xMap": 17,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 31,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0054_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 792,
+        "y": 231,
+        "targetPng": "0188 - Fight Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 13,
+        "xMap": 17,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "zoneId": 380,
+  "displayName": "Route 214",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 232,
+      "pixelY": 100,
+      "worldX": 11488,
+      "worldZ": 10320,
+      "destinationZoneId": 381,
+      "destinationName": "Route 214",
+      "destinationPixelX": 88,
+      "destinationPixelY": 200,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 248,
+      "pixelY": 100,
+      "worldX": 11504,
+      "worldZ": 10320,
+      "destinationZoneId": 381,
+      "destinationName": "Route 214",
+      "destinationPixelX": 88,
+      "destinationPixelY": 200,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 152,
+      "pixelY": 500,
+      "worldX": 11408,
+      "worldZ": 10720,
+      "destinationZoneId": 286,
+      "destinationName": "Ruin Maniac Cave",
+      "destinationPixelX": 104,
+      "destinationPixelY": 120,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 152,
+      "pixelY": 500,
+      "worldX": 11408,
+      "worldZ": 10720,
+      "destinationZoneId": 512,
+      "destinationName": "Ruin Maniac Cave",
+      "destinationPixelX": 968,
+      "destinationPixelY": 120,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 152,
+      "pixelY": 500,
+      "worldX": 11408,
+      "worldZ": 10720,
+      "destinationZoneId": 513,
+      "destinationName": "Maniac Tunnel",
+      "destinationPixelX": 1480,
+      "destinationPixelY": 120,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 277,
+      "pixelX": 360,
+      "pixelY": 604,
+      "trainerId": 121,
+      "trainerName": "Carlos",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3120,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 278,
+      "pixelX": 440,
+      "pixelY": 1292,
+      "trainerId": 272,
+      "trainerName": "Douglas",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3271,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 279,
+      "pixelX": 168,
+      "pixelY": 844,
+      "trainerId": 113,
+      "trainerName": "Bryan",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3112,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 280,
+      "pixelX": 280,
+      "pixelY": 1132,
+      "trainerId": 114,
+      "trainerName": "Ronald",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3113,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 281,
+      "pixelX": 248,
+      "pixelY": 1004,
+      "trainerId": 382,
+      "trainerName": "Jamal",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3381,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t6",
+      "trainerInstanceId": 282,
+      "pixelX": 440,
+      "pixelY": 796,
+      "trainerId": 491,
+      "trainerName": "Devon",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3490,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

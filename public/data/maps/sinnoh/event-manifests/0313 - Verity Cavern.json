@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 313,
+    "name": "Verity Cavern",
+    "mapName": "0313 - Verity Cavern",
+    "matrixId": 103
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0131_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 212,
+        "y": 224,
+        "targetPng": "0313 - Verity Cavern.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 12,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 212,
+        "y": 368,
+        "targetPng": "0313 - Verity Cavern.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 12,
+        "yMap": 22,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

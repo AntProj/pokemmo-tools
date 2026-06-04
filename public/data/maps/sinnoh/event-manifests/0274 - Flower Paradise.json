@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 274,
+    "name": "Flower Paradise",
+    "mapName": "0274 - Flower Paradise",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0137_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 248,
+        "y": 192,
+        "targetPng": "0274 - Flower Paradise.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 28,
+        "yMatrix": 6,
+        "xMap": 15,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

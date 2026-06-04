@@ -1,0 +1,43 @@
+{
+  "zoneId": 435,
+  "displayName": "Solaceon Town",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 136,
+      "pixelY": 200,
+      "worldX": 128,
+      "worldZ": 192,
+      "destinationZoneId": 433,
+      "destinationName": "Solaceon Town",
+      "destinationPixelX": 360,
+      "destinationPixelY": 266,
+      "anchor": 5
+    },
+    {
+      "id": "w1",
+      "pixelX": 40,
+      "pixelY": 168,
+      "worldX": 32,
+      "worldZ": 160,
+      "destinationZoneId": 436,
+      "destinationName": "Solaceon Town",
+      "destinationPixelX": 40,
+      "destinationPixelY": 168,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 232,
+      "pixelY": 168,
+      "worldX": 224,
+      "worldZ": 160,
+      "destinationZoneId": 487,
+      "destinationName": "Solaceon Town",
+      "destinationPixelX": 232,
+      "destinationPixelY": 168,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

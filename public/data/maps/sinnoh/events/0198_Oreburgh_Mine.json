@@ -1,0 +1,79 @@
+{
+  "zoneId": 198,
+  "displayName": "Oreburgh Mine",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 184,
+      "pixelY": 37,
+      "worldX": 176,
+      "worldZ": 16,
+      "destinationZoneId": 45,
+      "destinationName": "Oreburgh City",
+      "destinationPixelX": 728,
+      "destinationPixelY": 952,
+      "anchor": 12
+    },
+    {
+      "id": "w1",
+      "pixelX": 200,
+      "pixelY": 37,
+      "worldX": 192,
+      "worldZ": 16,
+      "destinationZoneId": 45,
+      "destinationName": "Oreburgh City",
+      "destinationPixelX": 744,
+      "destinationPixelY": 952,
+      "anchor": 13
+    },
+    {
+      "id": "w2",
+      "pixelX": 216,
+      "pixelY": 37,
+      "worldX": 208,
+      "worldZ": 16,
+      "destinationZoneId": 45,
+      "destinationName": "Oreburgh City",
+      "destinationPixelX": 760,
+      "destinationPixelY": 952,
+      "anchor": 14
+    },
+    {
+      "id": "w3",
+      "pixelX": 200,
+      "pixelY": 357,
+      "worldX": 192,
+      "worldZ": 336,
+      "destinationZoneId": 199,
+      "destinationName": "Oreburgh Mine",
+      "destinationPixelX": 253,
+      "destinationPixelY": 30,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 184,
+      "pixelY": 357,
+      "worldX": 176,
+      "worldZ": 336,
+      "destinationZoneId": 199,
+      "destinationName": "Oreburgh Mine",
+      "destinationPixelX": 253,
+      "destinationPixelY": 30,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 216,
+      "pixelY": 357,
+      "worldX": 208,
+      "worldZ": 336,
+      "destinationZoneId": 199,
+      "destinationName": "Oreburgh Mine",
+      "destinationPixelX": 253,
+      "destinationPixelY": 30,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

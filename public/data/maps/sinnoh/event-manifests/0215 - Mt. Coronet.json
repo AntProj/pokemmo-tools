@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 215,
+    "name": "Mt. Coronet",
+    "mapName": "0215 - Mt. Coronet",
+    "matrixId": 17
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 1,
+      "orientation": "Left",
+      "spriteFile": "ow_0104_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 168,
+        "y": 256,
+        "targetPng": "0215 - Mt. Coronet.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 10,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

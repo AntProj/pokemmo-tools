@@ -1,0 +1,55 @@
+{
+  "zoneId": 322,
+  "displayName": "Battle Park",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 332,
+      "pixelY": 545,
+      "worldX": 320,
+      "worldZ": 528,
+      "destinationZoneId": 323,
+      "destinationName": "Battle Park",
+      "destinationPixelX": 88,
+      "destinationPixelY": 280,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 476,
+      "pixelY": 545,
+      "worldX": 464,
+      "worldZ": 528,
+      "destinationZoneId": 323,
+      "destinationName": "Battle Park",
+      "destinationPixelX": 344,
+      "destinationPixelY": 280,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 396,
+      "pixelY": 865,
+      "worldX": 384,
+      "worldZ": 848,
+      "destinationZoneId": 192,
+      "destinationName": "Battle Park",
+      "destinationPixelX": 88,
+      "destinationPixelY": 40,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 412,
+      "pixelY": 865,
+      "worldX": 400,
+      "worldZ": 848,
+      "destinationZoneId": 192,
+      "destinationName": "Battle Park",
+      "destinationPixelX": 88,
+      "destinationPixelY": 40,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 423,
+    "name": "Sandgem Town",
+    "mapName": "0423 - Sandgem Town",
+    "matrixId": 130
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0016_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 56,
+        "y": 160,
+        "targetPng": "0423 - Sandgem Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0001_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 88,
+        "y": 128,
+        "targetPng": "0423 - Sandgem Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

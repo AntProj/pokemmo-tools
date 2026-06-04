@@ -1,0 +1,371 @@
+{
+  "header": {
+    "id": 33,
+    "name": "Canalave City",
+    "mapName": "0033 - Canalave City",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0018_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 428,
+        "y": 738,
+        "targetPng": "0033 - Canalave City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 23,
+        "xMap": 26,
+        "yMap": 13,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0005_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 332,
+        "y": 226,
+        "targetPng": "0033 - Canalave City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 22,
+        "xMap": 20,
+        "yMap": 13,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0008_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 444,
+        "y": 402,
+        "targetPng": "0033 - Canalave City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 22,
+        "xMap": 27,
+        "yMap": 24,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0013_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 28,
+        "y": 434,
+        "targetPng": "0033 - Canalave City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 22,
+        "xMap": 1,
+        "yMap": 26,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 60,
+        "y": 290,
+        "targetPng": "0033 - Canalave City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 22,
+        "xMap": 3,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_blue_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 76,
+        "y": 450,
+        "targetPng": "0033 - Canalave City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 22,
+        "xMap": 4,
+        "yMap": 28,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 156,
+        "y": 770,
+        "targetPng": "0033 - Canalave City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 23,
+        "xMap": 9,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_brown_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 364,
+        "y": 802,
+        "targetPng": "0033 - Canalave City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 23,
+        "xMap": 22,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 92,
+        "y": 706,
+        "targetPng": "0033 - Canalave City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 23,
+        "xMap": 5,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0072_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 332,
+        "y": 242,
+        "targetPng": "0033 - Canalave City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 22,
+        "xMap": 20,
+        "yMap": 14,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0143_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 156,
+        "y": 514,
+        "targetPng": "0033 - Canalave City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 22,
+        "xMap": 9,
+        "yMap": 31,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0127_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 92,
+        "y": 322,
+        "targetPng": "0033 - Canalave City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 22,
+        "xMap": 5,
+        "yMap": 19,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 12,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_3d_dawn_platinum.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 124,
+        "y": 258,
+        "targetPng": "0033 - Canalave City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 22,
+        "xMap": 7,
+        "yMap": 16,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 13,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0094_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 108,
+        "y": 274,
+        "targetPng": "0033 - Canalave City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 22,
+        "xMap": 6,
+        "yMap": 16,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 14,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0054_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 188,
+        "y": 354,
+        "targetPng": "0033 - Canalave City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 22,
+        "xMap": 11,
+        "yMap": 21,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 15,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 44,
+        "y": 946,
+        "targetPng": "0033 - Canalave City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 23,
+        "xMap": 2,
+        "yMap": 26,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 16,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0054_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 220,
+        "y": 754,
+        "targetPng": "0033 - Canalave City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 23,
+        "xMap": 13,
+        "yMap": 14,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 17,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 396,
+        "y": 162,
+        "targetPng": "0033 - Canalave City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 22,
+        "xMap": 24,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 18,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0127_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 92,
+        "y": 258,
+        "targetPng": "0033 - Canalave City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 22,
+        "xMap": 5,
+        "yMap": 15,
+        "zPositionRaw": 65536
+      }
+    }
+  ]
+}

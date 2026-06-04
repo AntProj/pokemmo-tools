@@ -10,7 +10,7 @@ import LocationDetail from './pages/LocationDetail.jsx';
 import Tracker from './pages/Tracker.jsx';
 import CatchCalc from './pages/CatchCalc.jsx';
 import BreedingPlanner from './pages/BreedingPlanner.jsx';
-import UnovaMap from './pages/UnovaMap.jsx';
+import SinnohMap from './pages/SinnohMap.jsx';
 
 const LS = {
   view:    'pokemmo:view',
@@ -215,14 +215,10 @@ export default function App() {
               />
             }
           />
-          <Route
-            path="/map"
-            element={<UnovaMap theme={theme} onTheme={setTheme} />}
-          />
-          <Route
-            path="/map/:mapId"
-            element={<UnovaMap theme={theme} onTheme={setTheme} />}
-          />
+          {/* Sinnoh interactive map. /map shows the overworld; /map/:zoneId
+              opens a specific zone's detail view. */}
+          <Route path="/map"             element={<SinnohMap theme={theme} onTheme={setTheme} />} />
+          <Route path="/map/:zoneId"     element={<SinnohMap theme={theme} onTheme={setTheme} />} />
           {/* Old URL kept working for bookmarks. */}
           <Route path="/moves"  element={<Navigate to="/search" replace />} />
           <Route path="*"       element={<Navigate to="/" replace />} />

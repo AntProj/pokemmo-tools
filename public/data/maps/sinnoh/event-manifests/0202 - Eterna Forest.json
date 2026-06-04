@@ -1,0 +1,219 @@
+{
+  "header": {
+    "id": 202,
+    "name": "Eterna Forest",
+    "mapName": "0202 - Eterna Forest",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": null,
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 632,
+        "y": 690,
+        "targetPng": "0202 - Eterna Forest.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 7,
+        "yMatrix": 17,
+        "xMap": 7,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": null,
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 616,
+        "y": 690,
+        "targetPng": "0202 - Eterna Forest.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 7,
+        "yMatrix": 17,
+        "xMap": 6,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": null,
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 648,
+        "y": 690,
+        "targetPng": "0202 - Eterna Forest.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 7,
+        "yMatrix": 17,
+        "xMap": 8,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": null,
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 664,
+        "y": 690,
+        "targetPng": "0202 - Eterna Forest.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 7,
+        "yMatrix": 17,
+        "xMap": 9,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0084_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 872,
+        "y": 466,
+        "targetPng": "0202 - Eterna Forest.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 7,
+        "yMatrix": 16,
+        "xMap": 22,
+        "yMap": 28,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0084_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 888,
+        "y": 466,
+        "targetPng": "0202 - Eterna Forest.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 7,
+        "yMatrix": 16,
+        "xMap": 23,
+        "yMap": 28,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0084_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 392,
+        "y": 882,
+        "targetPng": "0202 - Eterna Forest.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 6,
+        "yMatrix": 17,
+        "xMap": 24,
+        "yMap": 22,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0084_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 392,
+        "y": 898,
+        "targetPng": "0202 - Eterna Forest.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 6,
+        "yMatrix": 17,
+        "xMap": 24,
+        "yMap": 23,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 824,
+        "y": 930,
+        "targetPng": "0202 - Eterna Forest.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 7,
+        "yMatrix": 17,
+        "xMap": 19,
+        "yMap": 25,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 584,
+        "y": 962,
+        "targetPng": "0202 - Eterna Forest.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 7,
+        "yMatrix": 17,
+        "xMap": 4,
+        "yMap": 27,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0011_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 648,
+        "y": 786,
+        "targetPng": "0202 - Eterna Forest.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 7,
+        "yMatrix": 17,
+        "xMap": 8,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

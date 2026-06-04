@@ -1,0 +1,31 @@
+{
+  "zoneId": 513,
+  "displayName": "Maniac Tunnel",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 1480,
+      "pixelY": 120,
+      "worldX": 1472,
+      "worldZ": 112,
+      "destinationZoneId": 380,
+      "destinationName": "Route 214",
+      "destinationPixelX": 152,
+      "destinationPixelY": 500,
+      "anchor": 4
+    },
+    {
+      "id": "w1",
+      "pixelX": 40,
+      "pixelY": 120,
+      "worldX": 32,
+      "worldZ": 112,
+      "destinationZoneId": 225,
+      "destinationName": "Solaceon Ruins",
+      "destinationPixelX": 136,
+      "destinationPixelY": 56,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

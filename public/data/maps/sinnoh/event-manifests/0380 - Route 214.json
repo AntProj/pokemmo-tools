@@ -1,0 +1,542 @@
+{
+  "header": {
+    "id": 380,
+    "name": "Route 214",
+    "mapName": "0380 - Route 214",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 1,
+      "orientation": "Up",
+      "spriteFile": "ow_0060_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 360,
+        "y": 604,
+        "targetPng": "0380 - Route 214.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 21,
+        "xMap": 22,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 1,
+      "orientation": "Up",
+      "spriteFile": "ow_0018_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 440,
+        "y": 1292,
+        "targetPng": "0380 - Route 214.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 22,
+        "xMap": 27,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 4,
+      "orientation": "Up",
+      "spriteFile": "ow_0018_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 408,
+        "y": 748,
+        "targetPng": "0380 - Route 214.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 21,
+        "xMap": 25,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 1,
+      "orientation": "Right",
+      "spriteFile": "ow_0048_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 168,
+        "y": 844,
+        "targetPng": "0380 - Route 214.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 21,
+        "xMap": 10,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 1,
+      "orientation": "Up",
+      "spriteFile": "ow_0048_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 280,
+        "y": 1132,
+        "targetPng": "0380 - Route 214.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 22,
+        "xMap": 17,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 1,
+      "orientation": "Up",
+      "spriteFile": "ow_0018_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 248,
+        "y": 1004,
+        "targetPng": "0380 - Route 214.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 21,
+        "xMap": 15,
+        "yMap": 29,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 1,
+      "orientation": "Right",
+      "spriteFile": "ow_0012_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 440,
+        "y": 796,
+        "targetPng": "0380 - Route 214.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 21,
+        "xMap": 27,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 5,
+      "orientation": "Down",
+      "spriteFile": "ow_0068_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 440,
+        "y": 892,
+        "targetPng": "0380 - Route 214.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 21,
+        "xMap": 27,
+        "yMap": 22,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 4,
+      "orientation": "Left",
+      "spriteFile": "ow_0068_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 280,
+        "y": 348,
+        "targetPng": "0380 - Route 214.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 20,
+        "xMap": 17,
+        "yMap": 20,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0083_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 136,
+        "y": 684,
+        "targetPng": "0380 - Route 214.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 21,
+        "xMap": 8,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0083_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 700,
+        "targetPng": "0380 - Route 214.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 21,
+        "xMap": 7,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_route_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 200,
+        "y": 268,
+        "targetPng": "0380 - Route 214.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 20,
+        "xMap": 12,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 12,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_route_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 360,
+        "y": 1244,
+        "targetPng": "0380 - Route 214.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 22,
+        "xMap": 22,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 13,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": null,
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 392,
+        "y": 348,
+        "targetPng": "0380 - Route 214.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 20,
+        "xMap": 24,
+        "yMap": 20,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 14,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": null,
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 408,
+        "y": 348,
+        "targetPng": "0380 - Route 214.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 20,
+        "xMap": 25,
+        "yMap": 20,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 15,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": null,
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 424,
+        "y": 348,
+        "targetPng": "0380 - Route 214.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 20,
+        "xMap": 26,
+        "yMap": 20,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 16,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": null,
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 440,
+        "y": 348,
+        "targetPng": "0380 - Route 214.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 20,
+        "xMap": 27,
+        "yMap": 20,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 17,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 440,
+        "y": 156,
+        "targetPng": "0380 - Route 214.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 20,
+        "xMap": 27,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 18,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 344,
+        "y": 636,
+        "targetPng": "0380 - Route 214.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 21,
+        "xMap": 21,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 19,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 296,
+        "y": 1420,
+        "targetPng": "0380 - Route 214.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 22,
+        "xMap": 18,
+        "yMap": 23,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 20,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 328,
+        "y": 1004,
+        "targetPng": "0380 - Route 214.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 21,
+        "xMap": 20,
+        "yMap": 29,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 21,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0161_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 1100,
+        "targetPng": "0380 - Route 214.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 22,
+        "xMap": 7,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 22,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0161_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 1084,
+        "targetPng": "0380 - Route 214.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 22,
+        "xMap": 7,
+        "yMap": 2,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 23,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0161_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 1068,
+        "targetPng": "0380 - Route 214.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 22,
+        "xMap": 7,
+        "yMap": 1,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 24,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0161_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 604,
+        "targetPng": "0380 - Route 214.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 21,
+        "xMap": 7,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 25,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0161_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 620,
+        "targetPng": "0380 - Route 214.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 21,
+        "xMap": 7,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 26,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0161_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 636,
+        "targetPng": "0380 - Route 214.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 21,
+        "xMap": 7,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 27,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 780,
+        "targetPng": "0380 - Route 214.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 21,
+        "xMap": 7,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

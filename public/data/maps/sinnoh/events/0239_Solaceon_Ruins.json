@@ -1,0 +1,55 @@
+{
+  "zoneId": 239,
+  "displayName": "Solaceon Ruins",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 40,
+      "pixelY": 56,
+      "worldX": 32,
+      "worldZ": 48,
+      "destinationZoneId": 238,
+      "destinationName": "Solaceon Ruins",
+      "destinationPixelX": 104,
+      "destinationPixelY": 56,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 104,
+      "pixelY": 56,
+      "worldX": 96,
+      "worldZ": 48,
+      "destinationZoneId": 237,
+      "destinationName": "Solaceon Ruins",
+      "destinationPixelX": 72,
+      "destinationPixelY": 56,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 40,
+      "pixelY": 168,
+      "worldX": 32,
+      "worldZ": 160,
+      "destinationZoneId": 234,
+      "destinationName": "Solaceon Ruins",
+      "destinationPixelX": 104,
+      "destinationPixelY": 56,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 104,
+      "pixelY": 168,
+      "worldX": 96,
+      "worldZ": 160,
+      "destinationZoneId": 515,
+      "destinationName": "Solaceon Ruins",
+      "destinationPixelX": 40,
+      "destinationPixelY": 56,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

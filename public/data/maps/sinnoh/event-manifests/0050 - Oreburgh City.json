@@ -1,0 +1,67 @@
+{
+  "header": {
+    "id": 50,
+    "name": "Oreburgh City",
+    "mapName": "0050 - Oreburgh City",
+    "matrixId": 132
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0008_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 232,
+        "y": 144,
+        "targetPng": "0050 - Oreburgh City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 14,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0003_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 88,
+        "y": 96,
+        "targetPng": "0050 - Oreburgh City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0015_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 136,
+        "y": 176,
+        "targetPng": "0050 - Oreburgh City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 8,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

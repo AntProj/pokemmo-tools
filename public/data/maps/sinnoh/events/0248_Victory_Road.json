@@ -1,0 +1,31 @@
+{
+  "zoneId": 248,
+  "displayName": "Victory Road",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 88,
+      "pixelY": 328,
+      "worldX": 80,
+      "worldZ": 320,
+      "destinationZoneId": 244,
+      "destinationName": "Victory Road",
+      "destinationPixelX": 728,
+      "destinationPixelY": 536,
+      "anchor": 6
+    },
+    {
+      "id": "w1",
+      "pixelX": 344,
+      "pixelY": 168,
+      "worldX": 336,
+      "worldZ": 160,
+      "destinationZoneId": 247,
+      "destinationName": "Victory Road",
+      "destinationPixelX": 184,
+      "destinationPixelY": 1128,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

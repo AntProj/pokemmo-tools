@@ -1,0 +1,86 @@
+{
+  "header": {
+    "id": 78,
+    "name": "Eterna City",
+    "mapName": "0078 - Eterna City",
+    "matrixId": 208
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0014_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 88,
+        "y": 160,
+        "targetPng": "0078 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 9,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0002_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 264,
+        "y": 128,
+        "targetPng": "0078 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 16,
+        "yMap": 7,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0004_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 168,
+        "y": 128,
+        "targetPng": "0078 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 10,
+        "yMap": 7,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0000_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 216,
+        "y": 176,
+        "targetPng": "0078 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 13,
+        "yMap": 10,
+        "zPositionRaw": 65536
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "zoneId": 532,
+  "displayName": "Turnback Cave",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 184,
+      "pixelY": 24,
+      "worldX": 176,
+      "worldZ": 16,
+      "destinationZoneId": 268,
+      "destinationName": "Turnback Cave",
+      "destinationPixelX": 184,
+      "destinationPixelY": 328,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 328,
+      "pixelY": 184,
+      "worldX": 320,
+      "worldZ": 176,
+      "destinationZoneId": 268,
+      "destinationName": "Turnback Cave",
+      "destinationPixelX": 40,
+      "destinationPixelY": 184,
+      "anchor": 3
+    },
+    {
+      "id": "w2",
+      "pixelX": 184,
+      "pixelY": 328,
+      "worldX": 176,
+      "worldZ": 320,
+      "destinationZoneId": 268,
+      "destinationName": "Turnback Cave",
+      "destinationPixelX": 184,
+      "destinationPixelY": 24,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 40,
+      "pixelY": 184,
+      "worldX": 32,
+      "worldZ": 176,
+      "destinationZoneId": 268,
+      "destinationName": "Turnback Cave",
+      "destinationPixelX": 328,
+      "destinationPixelY": 184,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

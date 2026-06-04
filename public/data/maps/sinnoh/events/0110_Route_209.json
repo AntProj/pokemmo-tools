@@ -1,0 +1,31 @@
+{
+  "zoneId": 110,
+  "displayName": "Route 209",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 28,
+      "pixelY": 120,
+      "worldX": 16,
+      "worldZ": 112,
+      "destinationZoneId": 86,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 936,
+      "destinationPixelY": 874,
+      "anchor": 19
+    },
+    {
+      "id": "w1",
+      "pixelX": 172,
+      "pixelY": 120,
+      "worldX": 160,
+      "worldZ": 112,
+      "destinationZoneId": 356,
+      "destinationName": "Route 209",
+      "destinationPixelX": 12,
+      "destinationPixelY": 874,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

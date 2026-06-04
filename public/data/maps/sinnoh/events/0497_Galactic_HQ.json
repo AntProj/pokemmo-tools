@@ -1,0 +1,31 @@
+{
+  "zoneId": 497,
+  "displayName": "Galactic HQ",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 24,
+      "pixelY": 184,
+      "worldX": 16,
+      "worldZ": 176,
+      "destinationZoneId": 308,
+      "destinationName": "Galactic HQ",
+      "destinationPixelX": 360,
+      "destinationPixelY": 56,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 584,
+      "pixelY": 40,
+      "worldX": 576,
+      "worldZ": 32,
+      "destinationZoneId": 494,
+      "destinationName": "Galactic HQ",
+      "destinationPixelX": 136,
+      "destinationPixelY": 216,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

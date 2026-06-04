@@ -1,0 +1,19 @@
+{
+  "zoneId": 571,
+  "displayName": "ROTOM’s Room",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 120,
+      "pixelY": 184,
+      "worldX": 112,
+      "worldZ": 176,
+      "destinationZoneId": 72,
+      "destinationName": "T.G. Eterna Bldg",
+      "destinationPixelX": 40,
+      "destinationPixelY": 40,
+      "anchor": 3
+    }
+  ],
+  "trainers": []
+}

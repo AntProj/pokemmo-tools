@@ -1,0 +1,31 @@
+{
+  "zoneId": 389,
+  "displayName": "Route 218",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 28,
+      "pixelY": 120,
+      "worldX": 16,
+      "worldZ": 112,
+      "destinationZoneId": 388,
+      "destinationName": "Route 218",
+      "destinationPixelX": 936,
+      "destinationPixelY": 362,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 172,
+      "pixelY": 120,
+      "worldX": 160,
+      "worldZ": 112,
+      "destinationZoneId": 3,
+      "destinationName": "Jubilife City",
+      "destinationPixelX": 16,
+      "destinationPixelY": 362,
+      "anchor": 12
+    }
+  ],
+  "trainers": []
+}

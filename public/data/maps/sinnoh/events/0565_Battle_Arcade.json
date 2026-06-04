@@ -1,0 +1,43 @@
+{
+  "zoneId": 565,
+  "displayName": "Battle Arcade",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 24,
+      "pixelY": 104,
+      "worldX": 16,
+      "worldZ": 96,
+      "destinationZoneId": 559,
+      "destinationName": "Battle Frontier",
+      "destinationPixelX": 968,
+      "destinationPixelY": 1008,
+      "anchor": 14
+    },
+    {
+      "id": "w1",
+      "pixelX": 24,
+      "pixelY": 88,
+      "worldX": 16,
+      "worldZ": 80,
+      "destinationZoneId": 559,
+      "destinationName": "Battle Frontier",
+      "destinationPixelX": 968,
+      "destinationPixelY": 1008,
+      "anchor": 14
+    },
+    {
+      "id": "w2",
+      "pixelX": 24,
+      "pixelY": 120,
+      "worldX": 16,
+      "worldZ": 112,
+      "destinationZoneId": 559,
+      "destinationName": "Battle Frontier",
+      "destinationPixelX": 968,
+      "destinationPixelY": 1008,
+      "anchor": 14
+    }
+  ],
+  "trainers": []
+}

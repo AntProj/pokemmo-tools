@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 185,
+    "name": "Pok\u00E9mon League",
+    "mapName": "0185 - Pok\u00E9mon League",
+    "matrixId": 190
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0117_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 136,
+        "y": 192,
+        "targetPng": "0185 - Pok\u00E9mon League.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 8,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

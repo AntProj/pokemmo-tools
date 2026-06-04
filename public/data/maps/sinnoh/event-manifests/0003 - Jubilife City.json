@@ -1,0 +1,637 @@
+{
+  "header": {
+    "id": 3,
+    "name": "Jubilife City",
+    "mapName": "0003 - Jubilife City",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0013_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 288,
+        "y": 418,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 4,
+        "yMatrix": 23,
+        "xMap": 17,
+        "yMap": 25,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0010_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 752,
+        "y": 354,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 23,
+        "xMap": 14,
+        "yMap": 21,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0002_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 288,
+        "y": 898,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 4,
+        "yMatrix": 24,
+        "xMap": 17,
+        "yMap": 23,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0001_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 544,
+        "y": 306,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 23,
+        "xMap": 1,
+        "yMap": 18,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0016_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 720,
+        "y": 722,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 24,
+        "xMap": 12,
+        "yMap": 12,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0002_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 832,
+        "y": 562,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 24,
+        "xMap": 19,
+        "yMap": 2,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0016_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 672,
+        "y": 498,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 23,
+        "xMap": 9,
+        "yMap": 30,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_3d_dawn_platinum.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 752,
+        "y": 834,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 24,
+        "xMap": 14,
+        "yMap": 20,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_brown_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 784,
+        "y": 130,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 23,
+        "xMap": 16,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_brown_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 960,
+        "y": 322,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 23,
+        "xMap": 27,
+        "yMap": 20,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_brown_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 80,
+        "y": 322,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 4,
+        "yMatrix": 23,
+        "xMap": 4,
+        "yMap": 20,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_brown_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 688,
+        "y": 882,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 24,
+        "xMap": 10,
+        "yMap": 23,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 12,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 800,
+        "y": 306,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 23,
+        "xMap": 17,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 13,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 224,
+        "y": 306,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 4,
+        "yMatrix": 23,
+        "xMap": 13,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 14,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 640,
+        "y": 306,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 23,
+        "xMap": 7,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 15,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 592,
+        "y": 642,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 24,
+        "xMap": 4,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 16,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0094_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 768,
+        "y": 82,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 23,
+        "xMap": 15,
+        "yMap": 4,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 17,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0103_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 752,
+        "y": 66,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 23,
+        "xMap": 14,
+        "yMap": 3,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 18,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0103_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 752,
+        "y": 82,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 23,
+        "xMap": 14,
+        "yMap": 4,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 19,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_route_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 784,
+        "y": 1090,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 25,
+        "xMap": 16,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 20,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_route_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 1136,
+        "y": 322,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 6,
+        "yMatrix": 23,
+        "xMap": 6,
+        "yMap": 20,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 21,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0010_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 592,
+        "y": 418,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 23,
+        "xMap": 4,
+        "yMap": 25,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 22,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 320,
+        "y": 706,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 4,
+        "yMatrix": 24,
+        "xMap": 19,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 23,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0080_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 752,
+        "y": 578,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 24,
+        "xMap": 14,
+        "yMap": 3,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 24,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0041_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 896,
+        "y": 546,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 24,
+        "xMap": 23,
+        "yMap": 1,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 25,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0041_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 256,
+        "y": 306,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 4,
+        "yMatrix": 23,
+        "xMap": 15,
+        "yMap": 18,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 26,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0010_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 432,
+        "y": 690,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 4,
+        "yMatrix": 24,
+        "xMap": 26,
+        "yMap": 10,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 27,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0041_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 592,
+        "y": 274,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 23,
+        "xMap": 4,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 28,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0360_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 848,
+        "y": 754,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 24,
+        "xMap": 20,
+        "yMap": 14,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 29,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0360_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 880,
+        "y": 754,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 24,
+        "xMap": 22,
+        "yMap": 14,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 30,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0018_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 736,
+        "y": 290,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 23,
+        "xMap": 13,
+        "yMap": 17,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 31,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0376_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 944,
+        "y": 338,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 23,
+        "xMap": 26,
+        "yMap": 20,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 32,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 240,
+        "y": 498,
+        "targetPng": "0003 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 4,
+        "yMatrix": 23,
+        "xMap": 14,
+        "yMap": 30,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "zoneId": 352,
+  "displayName": "Mystery Zone",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 88,
+      "pixelY": 40,
+      "worldX": 80,
+      "worldZ": 32,
+      "destinationZoneId": 65,
+      "destinationName": "Eterna City",
+      "destinationPixelX": 264,
+      "destinationPixelY": 920,
+      "anchor": 8
+    },
+    {
+      "id": "w1",
+      "pixelX": 88,
+      "pixelY": 200,
+      "worldX": 80,
+      "worldZ": 192,
+      "destinationZoneId": 350,
+      "destinationName": "Route 206",
+      "destinationPixelX": 264,
+      "destinationPixelY": 120,
+      "anchor": 4
+    }
+  ],
+  "trainers": []
+}

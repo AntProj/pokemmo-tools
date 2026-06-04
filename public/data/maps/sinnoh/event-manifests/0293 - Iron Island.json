@@ -1,0 +1,333 @@
+{
+  "header": {
+    "id": 293,
+    "name": "Iron Island",
+    "mapName": "0293 - Iron Island",
+    "matrixId": 84
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 616,
+        "y": 256,
+        "targetPng": "0293 - Iron Island.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 152,
+        "y": 64,
+        "targetPng": "0293 - Iron Island.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 9,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 88,
+        "y": 272,
+        "targetPng": "0293 - Iron Island.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 344,
+        "y": 624,
+        "targetPng": "0293 - Iron Island.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 21,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0121_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 552,
+        "y": 64,
+        "targetPng": "0293 - Iron Island.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 2,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0103_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 312,
+        "y": 656,
+        "targetPng": "0293 - Iron Island.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 19,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0103_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 312,
+        "y": 672,
+        "targetPng": "0293 - Iron Island.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 19,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 1,
+      "orientation": "Down",
+      "spriteFile": "ow_0019_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 424,
+        "y": 48,
+        "targetPng": "0293 - Iron Island.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 26,
+        "yMap": 2,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 1,
+      "orientation": "Right",
+      "spriteFile": "ow_0019_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 344,
+        "y": 80,
+        "targetPng": "0293 - Iron Island.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 21,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 1,
+      "orientation": "Down",
+      "spriteFile": "ow_0049_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 584,
+        "y": 304,
+        "targetPng": "0293 - Iron Island.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 4,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 1,
+      "orientation": "Up",
+      "spriteFile": "ow_0006_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 584,
+        "y": 352,
+        "targetPng": "0293 - Iron Island.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 4,
+        "yMap": 21,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 1,
+      "orientation": "Left",
+      "spriteFile": "ow_0038_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 248,
+        "y": 416,
+        "targetPng": "0293 - Iron Island.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 15,
+        "yMap": 25,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 12,
+      "type": 1,
+      "orientation": "Up",
+      "spriteFile": "ow_0038_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 232,
+        "y": 464,
+        "targetPng": "0293 - Iron Island.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 14,
+        "yMap": 28,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 13,
+      "type": 1,
+      "orientation": "Right",
+      "spriteFile": "ow_0010_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 376,
+        "y": 512,
+        "targetPng": "0293 - Iron Island.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 23,
+        "yMap": 31,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 14,
+      "type": 1,
+      "orientation": "Left",
+      "spriteFile": "ow_0013_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 440,
+        "y": 512,
+        "targetPng": "0293 - Iron Island.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 27,
+        "yMap": 31,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 15,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 280,
+        "y": 320,
+        "targetPng": "0293 - Iron Island.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 17,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 16,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 24,
+        "y": 384,
+        "targetPng": "0293 - Iron Island.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 1,
+        "yMap": 23,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

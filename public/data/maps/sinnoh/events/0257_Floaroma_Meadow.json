@@ -1,0 +1,19 @@
+{
+  "zoneId": 257,
+  "displayName": "Floaroma Meadow",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 72,
+      "pixelY": 136,
+      "worldX": 64,
+      "worldZ": 128,
+      "destinationZoneId": 256,
+      "destinationName": "Floaroma Meadow",
+      "destinationPixelX": 636,
+      "destinationPixelY": 730,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

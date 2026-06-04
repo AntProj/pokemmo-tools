@@ -1,0 +1,181 @@
+{
+  "header": {
+    "id": 562,
+    "name": "Battle Factory",
+    "mapName": "0562 - Battle Factory",
+    "matrixId": 252
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0394_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 344,
+        "y": 112,
+        "targetPng": "0562 - Battle Factory.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 21,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0395_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 376,
+        "y": 112,
+        "targetPng": "0562 - Battle Factory.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 23,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0003_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 264,
+        "y": 96,
+        "targetPng": "0562 - Battle Factory.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 16,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0012_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 248,
+        "y": 208,
+        "targetPng": "0562 - Battle Factory.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 15,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0032_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 408,
+        "y": 160,
+        "targetPng": "0562 - Battle Factory.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 25,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0054_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 24,
+        "y": 208,
+        "targetPng": "0562 - Battle Factory.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 1,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0011_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 24,
+        "y": 192,
+        "targetPng": "0562 - Battle Factory.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 1,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0041_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 296,
+        "y": 160,
+        "targetPng": "0562 - Battle Factory.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 18,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0061_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 360,
+        "y": 192,
+        "targetPng": "0562 - Battle Factory.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 22,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

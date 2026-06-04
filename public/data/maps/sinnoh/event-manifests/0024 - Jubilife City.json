@@ -1,0 +1,86 @@
+{
+  "header": {
+    "id": 24,
+    "name": "Jubilife City",
+    "mapName": "0024 - Jubilife City",
+    "matrixId": 132
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 1,
+      "orientation": "Left",
+      "spriteFile": "ow_0017_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 248,
+        "y": 144,
+        "targetPng": "0024 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 15,
+        "yMap": 8,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 1,
+      "orientation": "Down",
+      "spriteFile": "ow_0371_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 152,
+        "y": 112,
+        "targetPng": "0024 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 9,
+        "yMap": 6,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 1,
+      "orientation": "Left",
+      "spriteFile": "ow_0069_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 168,
+        "y": 112,
+        "targetPng": "0024 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 10,
+        "yMap": 6,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 1,
+      "orientation": "Down",
+      "spriteFile": "ow_0012_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 136,
+        "y": 112,
+        "targetPng": "0024 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 8,
+        "yMap": 6,
+        "zPositionRaw": 65536
+      }
+    }
+  ]
+}

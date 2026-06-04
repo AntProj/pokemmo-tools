@@ -1,0 +1,82 @@
+{
+  "zoneId": 89,
+  "displayName": "Hearthome City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 168,
+      "pixelY": 168,
+      "worldX": 128,
+      "worldZ": 160,
+      "destinationZoneId": 88,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 266,
+      "destinationPixelY": 40,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 104,
+      "pixelY": 40,
+      "worldX": 64,
+      "worldZ": 32,
+      "destinationZoneId": 90,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 264,
+      "destinationPixelY": 360,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 168,
+      "pixelY": 40,
+      "worldX": 128,
+      "worldZ": 32,
+      "destinationZoneId": 90,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 264,
+      "destinationPixelY": 360,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 232,
+      "pixelY": 40,
+      "worldX": 192,
+      "worldZ": 32,
+      "destinationZoneId": 90,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 264,
+      "destinationPixelY": 360,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 16,
+      "pixelX": 232,
+      "pixelY": 128,
+      "trainerId": 357,
+      "trainerName": "Donny",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3356,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 17,
+      "pixelX": 104,
+      "pixelY": 128,
+      "trainerId": 325,
+      "trainerName": "Molly",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3324,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

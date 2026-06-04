@@ -1,0 +1,79 @@
+{
+  "zoneId": 442,
+  "displayName": "Celestic Town",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 248,
+      "pixelY": 72,
+      "worldX": 7408,
+      "worldZ": 8240,
+      "destinationZoneId": 445,
+      "destinationName": "Celestic Town",
+      "destinationPixelX": 88,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 40,
+      "pixelY": 72,
+      "worldX": 7200,
+      "worldZ": 8240,
+      "destinationZoneId": 446,
+      "destinationName": "Celestic Town",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 408,
+      "pixelY": 72,
+      "worldX": 7568,
+      "worldZ": 8240,
+      "destinationZoneId": 447,
+      "destinationName": "Celestic Town",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 104,
+      "pixelY": 440,
+      "worldX": 7264,
+      "worldZ": 8608,
+      "destinationZoneId": 448,
+      "destinationName": "Celestic Town",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 248,
+      "pixelY": 168,
+      "worldX": 7408,
+      "worldZ": 8336,
+      "destinationZoneId": 449,
+      "destinationName": "Celestic Town",
+      "destinationPixelX": 168,
+      "destinationPixelY": 328,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 392,
+      "pixelY": 440,
+      "worldX": 7552,
+      "worldZ": 8608,
+      "destinationZoneId": 443,
+      "destinationName": "Celestic Town",
+      "destinationPixelX": 136,
+      "destinationPixelY": 200,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

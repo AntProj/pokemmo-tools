@@ -1,0 +1,55 @@
+{
+  "zoneId": 95,
+  "displayName": "Hearthome City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 184,
+      "pixelY": 40,
+      "worldX": 144,
+      "worldZ": 32,
+      "destinationZoneId": 99,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 152,
+      "destinationPixelY": 168,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 104,
+      "pixelY": 40,
+      "worldX": 64,
+      "worldZ": 32,
+      "destinationZoneId": 98,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 152,
+      "destinationPixelY": 168,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 264,
+      "pixelY": 40,
+      "worldX": 224,
+      "worldZ": 32,
+      "destinationZoneId": 100,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 152,
+      "destinationPixelY": 200,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 184,
+      "pixelY": 360,
+      "worldX": 144,
+      "worldZ": 352,
+      "destinationZoneId": 93,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 104,
+      "destinationPixelY": 40,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

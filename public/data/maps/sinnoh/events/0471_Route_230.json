@@ -1,0 +1,72 @@
+{
+  "zoneId": 471,
+  "displayName": "Route 230",
+  "warps": [],
+  "trainers": [
+    {
+      "id": "t9",
+      "trainerInstanceId": 378,
+      "pixelX": 956,
+      "pixelY": 402,
+      "trainerId": 597,
+      "trainerName": "Glenn",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3596,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t10",
+      "trainerInstanceId": 379,
+      "pixelX": 1004,
+      "pixelY": 290,
+      "trainerId": 601,
+      "trainerName": "Joanna",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3600,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t11",
+      "trainerInstanceId": 380,
+      "pixelX": 1260,
+      "pixelY": 242,
+      "trainerId": 598,
+      "trainerName": "Kurt",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3597,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t12",
+      "trainerInstanceId": 381,
+      "pixelX": 444,
+      "pixelY": 370,
+      "trainerId": 602,
+      "trainerName": "Sophia",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3601,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t13",
+      "trainerInstanceId": 382,
+      "pixelX": 444,
+      "pixelY": 290,
+      "trainerId": 599,
+      "trainerName": "Sam",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3598,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

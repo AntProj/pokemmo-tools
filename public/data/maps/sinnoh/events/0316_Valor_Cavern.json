@@ -1,0 +1,31 @@
+{
+  "zoneId": 316,
+  "displayName": "Valor Cavern",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 244,
+      "pixelY": 480,
+      "worldX": 224,
+      "worldZ": 464,
+      "destinationZoneId": 314,
+      "destinationName": "Lake Valor",
+      "destinationPixelX": 552,
+      "destinationPixelY": 552,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 244,
+      "pixelY": 480,
+      "worldX": 224,
+      "worldZ": 464,
+      "destinationZoneId": 315,
+      "destinationName": "Lake Valor",
+      "destinationPixelX": 520,
+      "destinationPixelY": 522,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

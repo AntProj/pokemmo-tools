@@ -1,0 +1,67 @@
+{
+  "header": {
+    "id": 369,
+    "name": "Pok\u00E9mon Mansion",
+    "mapName": "0369 - Pok\u00E9mon Mansion",
+    "matrixId": 179
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 72,
+        "y": 64,
+        "targetPng": "0369 - Pok\u00E9mon Mansion.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 4,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0154_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 184,
+        "y": 112,
+        "targetPng": "0369 - Pok\u00E9mon Mansion.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 11,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0154_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 328,
+        "y": 128,
+        "targetPng": "0369 - Pok\u00E9mon Mansion.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 20,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

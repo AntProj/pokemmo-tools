@@ -1,0 +1,694 @@
+{
+  "header": {
+    "id": 86,
+    "name": "Hearthome City",
+    "mapName": "0086 - Hearthome City",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0052_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 648,
+        "y": 690,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 22,
+        "xMap": 7,
+        "yMap": 10,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0014_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 488,
+        "y": 834,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 22,
+        "xMap": 29,
+        "yMap": 19,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0011_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 840,
+        "y": 626,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 22,
+        "xMap": 19,
+        "yMap": 6,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0079_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 856,
+        "y": 626,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 22,
+        "xMap": 20,
+        "yMap": 6,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0008_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 712,
+        "y": 370,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 21,
+        "xMap": 11,
+        "yMap": 22,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0015_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 712,
+        "y": 530,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 22,
+        "xMap": 11,
+        "yMap": 0,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0042_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 376,
+        "y": 546,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 22,
+        "xMap": 22,
+        "yMap": 1,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0006_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 472,
+        "y": 530,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 22,
+        "xMap": 28,
+        "yMap": 0,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0006_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 264,
+        "y": 690,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 22,
+        "xMap": 15,
+        "yMap": 10,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0019_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 184,
+        "y": 370,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 21,
+        "xMap": 10,
+        "yMap": 22,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0371_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 184,
+        "y": 386,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 21,
+        "xMap": 10,
+        "yMap": 23,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_route_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 232,
+        "y": 834,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 22,
+        "xMap": 13,
+        "yMap": 20,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 12,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_route_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 824,
+        "y": 850,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 22,
+        "xMap": 18,
+        "yMap": 21,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 13,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 232,
+        "y": 242,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 21,
+        "xMap": 13,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 14,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 472,
+        "y": 338,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 21,
+        "xMap": 28,
+        "yMap": 21,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 15,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 824,
+        "y": 242,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 21,
+        "xMap": 18,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 16,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 632,
+        "y": 610,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 22,
+        "xMap": 6,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 17,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_blue_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 776,
+        "y": 402,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 21,
+        "xMap": 15,
+        "yMap": 25,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 18,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_brown_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 552,
+        "y": 818,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 22,
+        "xMap": 1,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 19,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0014_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 936,
+        "y": 882,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 22,
+        "xMap": 25,
+        "yMap": 22,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 20,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0019_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 936,
+        "y": 898,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 22,
+        "xMap": 25,
+        "yMap": 23,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 21,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0019_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 872,
+        "y": 866,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 22,
+        "xMap": 21,
+        "yMap": 21,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 22,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0170_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 408,
+        "y": 258,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 21,
+        "xMap": 24,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 23,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0170_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 424,
+        "y": 258,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 21,
+        "xMap": 25,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 24,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0170_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 616,
+        "y": 258,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 21,
+        "xMap": 5,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 25,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0170_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 632,
+        "y": 258,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 21,
+        "xMap": 6,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 26,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0011_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 264,
+        "y": 482,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 21,
+        "xMap": 15,
+        "yMap": 29,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 27,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0049_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 408,
+        "y": 290,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 21,
+        "xMap": 24,
+        "yMap": 17,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 28,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0079_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 424,
+        "y": 706,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 22,
+        "xMap": 25,
+        "yMap": 11,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 29,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0008_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 440,
+        "y": 706,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 22,
+        "xMap": 26,
+        "yMap": 11,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 30,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 376,
+        "y": 626,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 22,
+        "xMap": 22,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 31,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0373_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 376,
+        "y": 866,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 22,
+        "xMap": 22,
+        "yMap": 21,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 32,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0033_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 376,
+        "y": 866,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 22,
+        "xMap": 22,
+        "yMap": 21,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 33,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0147_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 840,
+        "y": 434,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 21,
+        "xMap": 19,
+        "yMap": 26,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 34,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0042_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 584,
+        "y": 594,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 22,
+        "xMap": 3,
+        "yMap": 4,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 35,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0049_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 888,
+        "y": 450,
+        "targetPng": "0086 - Hearthome City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 21,
+        "xMap": 22,
+        "yMap": 27,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

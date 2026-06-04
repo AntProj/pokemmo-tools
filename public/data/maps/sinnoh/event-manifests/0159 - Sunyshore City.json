@@ -1,0 +1,143 @@
+{
+  "header": {
+    "id": 159,
+    "name": "Sunyshore City",
+    "mapName": "0159 - Sunyshore City",
+    "matrixId": 248
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0006_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 104,
+        "y": 112,
+        "targetPng": "0159 - Sunyshore City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0041_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 88,
+        "y": 64,
+        "targetPng": "0159 - Sunyshore City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0147_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 40,
+        "y": 96,
+        "targetPng": "0159 - Sunyshore City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 2,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0011_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 40,
+        "y": 128,
+        "targetPng": "0159 - Sunyshore City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 2,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0003_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 152,
+        "y": 96,
+        "targetPng": "0159 - Sunyshore City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 9,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0003_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 152,
+        "y": 112,
+        "targetPng": "0159 - Sunyshore City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 9,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0003_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 136,
+        "y": 128,
+        "targetPng": "0159 - Sunyshore City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 8,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

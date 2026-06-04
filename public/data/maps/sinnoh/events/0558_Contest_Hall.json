@@ -1,0 +1,19 @@
+{
+  "zoneId": 558,
+  "displayName": "Contest Hall",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 472,
+      "pixelY": 232,
+      "worldX": 464,
+      "worldZ": 224,
+      "destinationZoneId": 117,
+      "destinationName": "Contest Hall",
+      "destinationPixelX": 376,
+      "destinationPixelY": 40,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

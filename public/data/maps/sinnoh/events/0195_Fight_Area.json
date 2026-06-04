@@ -1,0 +1,19 @@
+{
+  "zoneId": 195,
+  "displayName": "Fight Area",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 72,
+      "pixelY": 136,
+      "worldX": 64,
+      "worldZ": 128,
+      "destinationZoneId": 188,
+      "destinationName": "Fight Area",
+      "destinationPixelX": 744,
+      "destinationPixelY": 495,
+      "anchor": 5
+    }
+  ],
+  "trainers": []
+}

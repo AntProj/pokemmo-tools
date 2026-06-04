@@ -1,0 +1,96 @@
+{
+  "zoneId": 312,
+  "displayName": "Lake Verity",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 524,
+      "pixelY": 522,
+      "worldX": 512,
+      "worldZ": 512,
+      "destinationZoneId": 313,
+      "destinationName": "Verity Cavern",
+      "destinationPixelX": 244,
+      "destinationPixelY": 472,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 748,
+      "pixelY": 874,
+      "worldX": 736,
+      "worldZ": 864,
+      "destinationZoneId": 334,
+      "destinationName": "Verity Lakefront",
+      "destinationPixelX": 776,
+      "destinationPixelY": 698,
+      "anchor": 2
+    },
+    {
+      "id": "w2",
+      "pixelX": 764,
+      "pixelY": 874,
+      "worldX": 752,
+      "worldZ": 864,
+      "destinationZoneId": 334,
+      "destinationName": "Verity Lakefront",
+      "destinationPixelX": 792,
+      "destinationPixelY": 698,
+      "anchor": 3
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 157,
+      "pixelX": 700,
+      "pixelY": 802,
+      "trainerId": 419,
+      "trainerName": "Grunt",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3418,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 158,
+      "pixelX": 780,
+      "pixelY": 706,
+      "trainerId": 420,
+      "trainerName": "Grunt",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3419,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 159,
+      "pixelX": 812,
+      "pixelY": 802,
+      "trainerId": 426,
+      "trainerName": "Grunt",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3425,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 160,
+      "pixelX": 860,
+      "pixelY": 706,
+      "trainerId": 427,
+      "trainerName": "Grunt",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3426,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

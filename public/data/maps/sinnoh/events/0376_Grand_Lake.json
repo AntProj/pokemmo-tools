@@ -1,0 +1,31 @@
+{
+  "zoneId": 376,
+  "displayName": "Grand Lake",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 136,
+      "pixelY": 40,
+      "worldX": 128,
+      "worldZ": 32,
+      "destinationZoneId": 373,
+      "destinationName": "Route 213",
+      "destinationPixelX": 1080,
+      "destinationPixelY": 248,
+      "anchor": 4
+    },
+    {
+      "id": "w1",
+      "pixelX": 136,
+      "pixelY": 184,
+      "worldX": 128,
+      "worldZ": 176,
+      "destinationZoneId": 373,
+      "destinationName": "Route 213",
+      "destinationPixelX": 1080,
+      "destinationPixelY": 328,
+      "anchor": 3
+    }
+  ],
+  "trainers": []
+}

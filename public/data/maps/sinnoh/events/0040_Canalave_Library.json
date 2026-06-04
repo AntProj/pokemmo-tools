@@ -1,0 +1,19 @@
+{
+  "zoneId": 40,
+  "displayName": "Canalave Library",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 72,
+      "pixelY": 56,
+      "worldX": 64,
+      "worldZ": 48,
+      "destinationZoneId": 39,
+      "destinationName": "Canalave Library",
+      "destinationPixelX": 184,
+      "destinationPixelY": 72,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

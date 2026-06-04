@@ -1,0 +1,19 @@
+{
+  "zoneId": 437,
+  "displayName": "Pokémon Day Care",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 152,
+      "pixelY": 184,
+      "worldX": 144,
+      "worldZ": 176,
+      "destinationZoneId": 433,
+      "destinationName": "Solaceon Town",
+      "destinationPixelX": 152,
+      "destinationPixelY": 90,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

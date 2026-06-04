@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 270,
+    "name": "Turnback Cave",
+    "mapName": "0270 - Turnback Cave",
+    "matrixId": 63
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0139_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 328,
+        "y": 368,
+        "targetPng": "0270 - Turnback Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 11,
+        "yMap": 14,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 328,
+        "y": 352,
+        "targetPng": "0270 - Turnback Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 11,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

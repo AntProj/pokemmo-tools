@@ -1,0 +1,105 @@
+{
+  "header": {
+    "id": 73,
+    "name": "T.G. Eterna Bldg",
+    "mapName": "0073 - T.G. Eterna Bldg",
+    "matrixId": 162
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0103_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 262,
+        "targetPng": "0073 - T.G. Eterna Bldg.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 7,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0104_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 312,
+        "y": 294,
+        "targetPng": "0073 - T.G. Eterna Bldg.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 19,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 1,
+      "orientation": "Left",
+      "spriteFile": "ow_0104_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 216,
+        "y": 294,
+        "targetPng": "0073 - T.G. Eterna Bldg.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 13,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 1,
+      "orientation": "Up",
+      "spriteFile": "ow_0103_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 56,
+        "y": 262,
+        "targetPng": "0073 - T.G. Eterna Bldg.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 56,
+        "y": 358,
+        "targetPng": "0073 - T.G. Eterna Bldg.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "zoneId": 119,
+  "displayName": "Foreign Building",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 136,
+      "pixelY": 328,
+      "worldX": 128,
+      "worldZ": 320,
+      "destinationZoneId": 86,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 216,
+      "destinationPixelY": 602,
+      "anchor": 9
+    }
+  ],
+  "trainers": []
+}

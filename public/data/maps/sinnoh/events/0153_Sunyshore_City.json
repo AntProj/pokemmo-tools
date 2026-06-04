@@ -1,0 +1,19 @@
+{
+  "zoneId": 153,
+  "displayName": "Sunyshore City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 56,
+      "pixelY": 184,
+      "worldX": 48,
+      "worldZ": 176,
+      "destinationZoneId": 150,
+      "destinationName": "Sunyshore City",
+      "destinationPixelX": 348,
+      "destinationPixelY": 520,
+      "anchor": 5
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,33 @@
+{
+  "zoneId": 259,
+  "displayName": "Oreburgh Gate",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 776,
+      "pixelY": 72,
+      "worldX": 768,
+      "worldZ": 64,
+      "destinationZoneId": 258,
+      "destinationName": "Oreburgh Gate",
+      "destinationPixelX": 424,
+      "destinationPixelY": 88,
+      "anchor": 2
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 106,
+      "pixelX": 216,
+      "pixelY": 288,
+      "trainerId": 240,
+      "trainerName": "Grant",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3239,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

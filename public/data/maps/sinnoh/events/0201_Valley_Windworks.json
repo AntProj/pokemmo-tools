@@ -1,0 +1,46 @@
+{
+  "zoneId": 201,
+  "displayName": "Valley Windworks",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 200,
+      "pixelY": 264,
+      "worldX": 192,
+      "worldZ": 256,
+      "destinationZoneId": 200,
+      "destinationName": "Valley Windworks",
+      "destinationPixelX": 312,
+      "destinationPixelY": 232,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t3",
+      "trainerInstanceId": 54,
+      "pixelX": 56,
+      "pixelY": 144,
+      "trainerId": 298,
+      "trainerName": "Grunt",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3297,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 55,
+      "pixelX": 200,
+      "pixelY": 64,
+      "trainerId": 299,
+      "trainerName": "Grunt",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3298,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

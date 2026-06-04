@@ -1,0 +1,86 @@
+{
+  "header": {
+    "id": 320,
+    "name": "Newmoon Island",
+    "mapName": "0320 - Newmoon Island",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0054_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 376,
+        "y": 352,
+        "targetPng": "0320 - Newmoon Island.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 4,
+        "yMatrix": 8,
+        "xMap": 23,
+        "yMap": 21,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0170_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 376,
+        "y": 368,
+        "targetPng": "0320 - Newmoon Island.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 4,
+        "yMatrix": 8,
+        "xMap": 23,
+        "yMap": 22,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0170_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 376,
+        "y": 336,
+        "targetPng": "0320 - Newmoon Island.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 4,
+        "yMatrix": 8,
+        "xMap": 23,
+        "yMap": 20,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0170_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 376,
+        "y": 320,
+        "targetPng": "0320 - Newmoon Island.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 4,
+        "yMatrix": 8,
+        "xMap": 23,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 437,
+    "name": "Pok\u00E9mon Day Care",
+    "mapName": "0437 - Pok\u00E9mon Day Care",
+    "matrixId": 137
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0017_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 152,
+        "y": 80,
+        "targetPng": "0437 - Pok\u00E9mon Day Care.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 9,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0147_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 72,
+        "y": 160,
+        "targetPng": "0437 - Pok\u00E9mon Day Care.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 4,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "zoneId": 494,
+  "displayName": "Galactic HQ",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 136,
+      "pixelY": 216,
+      "worldX": 128,
+      "worldZ": 208,
+      "destinationZoneId": 497,
+      "destinationName": "Galactic HQ",
+      "destinationPixelX": 584,
+      "destinationPixelY": 40,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

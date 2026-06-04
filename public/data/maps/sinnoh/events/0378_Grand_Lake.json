@@ -1,0 +1,19 @@
+{
+  "zoneId": 378,
+  "displayName": "Grand Lake",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 104,
+      "pixelY": 136,
+      "worldX": 96,
+      "worldZ": 128,
+      "destinationZoneId": 373,
+      "destinationName": "Route 213",
+      "destinationPixelX": 1000,
+      "destinationPixelY": 120,
+      "anchor": 6
+    }
+  ],
+  "trainers": []
+}

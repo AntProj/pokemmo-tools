@@ -1,0 +1,43 @@
+{
+  "zoneId": 28,
+  "displayName": "Global Terminal",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 224,
+      "pixelY": 296,
+      "worldX": 208,
+      "worldZ": 288,
+      "destinationZoneId": 3,
+      "destinationName": "Jubilife City",
+      "destinationPixelX": 352,
+      "destinationPixelY": 682,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 272,
+      "pixelY": 72,
+      "worldX": 256,
+      "worldZ": 64,
+      "destinationZoneId": 567,
+      "destinationName": "Global Terminal",
+      "destinationPixelX": 264,
+      "destinationPixelY": 88,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 336,
+      "pixelY": 72,
+      "worldX": 320,
+      "worldZ": 64,
+      "destinationZoneId": 568,
+      "destinationName": "Global Terminal",
+      "destinationPixelX": 216,
+      "destinationPixelY": 72,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

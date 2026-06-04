@@ -1,0 +1,46 @@
+{
+  "zoneId": 47,
+  "displayName": "Oreburgh City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 120,
+      "pixelY": 435,
+      "worldX": 80,
+      "worldZ": 384,
+      "destinationZoneId": 45,
+      "destinationName": "Oreburgh City",
+      "destinationPixelX": 424,
+      "destinationPixelY": 328,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t2",
+      "trainerInstanceId": 8,
+      "pixelX": 104,
+      "pixelY": 347,
+      "trainerId": 244,
+      "trainerName": "Jonathon",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3243,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 9,
+      "pixelX": 152,
+      "pixelY": 235,
+      "trainerId": 245,
+      "trainerName": "Darius",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3244,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

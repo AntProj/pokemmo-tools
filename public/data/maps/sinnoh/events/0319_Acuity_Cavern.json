@@ -1,0 +1,19 @@
+{
+  "zoneId": 319,
+  "displayName": "Acuity Cavern",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 232,
+      "pixelY": 472,
+      "worldX": 224,
+      "worldZ": 464,
+      "destinationZoneId": 318,
+      "destinationName": "Lake Acuity",
+      "destinationPixelX": 520,
+      "destinationPixelY": 522,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

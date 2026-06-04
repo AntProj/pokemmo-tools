@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 463,
+    "name": "Resort Area",
+    "mapName": "0463 - Resort Area",
+    "matrixId": 207
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0142_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 24,
+        "y": 112,
+        "targetPng": "0463 - Resort Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 1,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "zoneId": 454,
+  "displayName": "Battleground",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 120,
+      "pixelY": 184,
+      "worldX": 112,
+      "worldZ": 176,
+      "destinationZoneId": 450,
+      "destinationName": "Survival Area",
+      "destinationPixelX": 204,
+      "destinationPixelY": 296,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

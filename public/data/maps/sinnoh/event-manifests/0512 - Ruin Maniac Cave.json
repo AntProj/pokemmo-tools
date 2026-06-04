@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 512,
+    "name": "Ruin Maniac Cave",
+    "mapName": "0512 - Ruin Maniac Cave",
+    "matrixId": 77
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0018_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 56,
+        "y": 128,
+        "targetPng": "0512 - Ruin Maniac Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 936,
+        "y": 64,
+        "targetPng": "0512 - Ruin Maniac Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 26,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

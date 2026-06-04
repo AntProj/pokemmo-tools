@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 79,
+    "name": "Eterna City",
+    "mapName": "0079 - Eterna City",
+    "matrixId": 208
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0017_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 296,
+        "y": 144,
+        "targetPng": "0079 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 18,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

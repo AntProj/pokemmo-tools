@@ -1,0 +1,55 @@
+{
+  "zoneId": 175,
+  "displayName": "Pokémon League",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 184,
+      "pixelY": 89,
+      "worldX": 176,
+      "worldZ": 32,
+      "destinationZoneId": 176,
+      "destinationName": "Pokémon League",
+      "destinationPixelX": 72,
+      "destinationPixelY": 248,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 184,
+      "pixelY": 233,
+      "worldX": 176,
+      "worldZ": 176,
+      "destinationZoneId": 172,
+      "destinationName": "Pokémon League",
+      "destinationPixelX": 248,
+      "destinationPixelY": 248,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 40,
+      "pixelY": 249,
+      "worldX": 32,
+      "worldZ": 192,
+      "destinationZoneId": 495,
+      "destinationName": "Pokémon League",
+      "destinationPixelX": 40,
+      "destinationPixelY": 168,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 104,
+      "pixelY": 281,
+      "worldX": 96,
+      "worldZ": 224,
+      "destinationZoneId": 496,
+      "destinationName": "Pokémon League",
+      "destinationPixelX": 232,
+      "destinationPixelY": 168,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

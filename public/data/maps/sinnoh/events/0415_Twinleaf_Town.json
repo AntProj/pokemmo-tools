@@ -1,0 +1,19 @@
+{
+  "zoneId": 415,
+  "displayName": "Twinleaf Town",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 136,
+      "pixelY": 72,
+      "worldX": 128,
+      "worldZ": 64,
+      "destinationZoneId": 414,
+      "destinationName": "Twinleaf Town",
+      "destinationPixelX": 168,
+      "destinationPixelY": 56,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

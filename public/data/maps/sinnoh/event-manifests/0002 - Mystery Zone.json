@@ -1,0 +1,409 @@
+{
+  "header": {
+    "id": 2,
+    "name": "Mystery Zone",
+    "mapName": "0002 - Mystery Zone",
+    "matrixId": 2
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0019_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 4984,
+        "y": 5744,
+        "targetPng": "0002 - Mystery Zone.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 9,
+        "yMatrix": 11,
+        "xMap": 23,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0019_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 6280,
+        "y": 1952,
+        "targetPng": "0002 - Mystery Zone.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 12,
+        "yMatrix": 3,
+        "xMap": 8,
+        "yMap": 25,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0019_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1176,
+        "y": 2144,
+        "targetPng": "0002 - Mystery Zone.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 2,
+        "yMatrix": 4,
+        "xMap": 9,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0019_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 5496,
+        "y": 2432,
+        "targetPng": "0002 - Mystery Zone.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 10,
+        "yMatrix": 4,
+        "xMap": 23,
+        "yMap": 23,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0019_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 3208,
+        "y": 2976,
+        "targetPng": "0002 - Mystery Zone.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 6,
+        "yMatrix": 5,
+        "xMap": 8,
+        "yMap": 25,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0019_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 2680,
+        "y": 6288,
+        "targetPng": "0002 - Mystery Zone.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 12,
+        "xMap": 7,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0019_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 7000,
+        "y": 6416,
+        "targetPng": "0002 - Mystery Zone.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 13,
+        "yMatrix": 12,
+        "xMap": 21,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0019_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1912,
+        "y": 6768,
+        "targetPng": "0002 - Mystery Zone.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 3,
+        "yMatrix": 13,
+        "xMap": 23,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0019_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 3960,
+        "y": 4000,
+        "targetPng": "0002 - Mystery Zone.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 7,
+        "yMatrix": 7,
+        "xMap": 23,
+        "yMap": 25,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0019_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 2424,
+        "y": 4240,
+        "targetPng": "0002 - Mystery Zone.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 4,
+        "yMatrix": 8,
+        "xMap": 23,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0019_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 5768,
+        "y": 4480,
+        "targetPng": "0002 - Mystery Zone.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 11,
+        "yMatrix": 8,
+        "xMap": 8,
+        "yMap": 23,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0019_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 4232,
+        "y": 4720,
+        "targetPng": "0002 - Mystery Zone.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 8,
+        "yMatrix": 9,
+        "xMap": 8,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 12,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0019_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 3960,
+        "y": 4240,
+        "targetPng": "0002 - Mystery Zone.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 7,
+        "yMatrix": 8,
+        "xMap": 23,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 13,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0019_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 4472,
+        "y": 7312,
+        "targetPng": "0002 - Mystery Zone.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 8,
+        "yMatrix": 14,
+        "xMap": 23,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 14,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0019_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 3720,
+        "y": 1408,
+        "targetPng": "0002 - Mystery Zone.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 7,
+        "yMatrix": 2,
+        "xMap": 8,
+        "yMap": 23,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 15,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0019_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 4232,
+        "y": 4480,
+        "targetPng": "0002 - Mystery Zone.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 8,
+        "yMatrix": 8,
+        "xMap": 8,
+        "yMap": 23,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 16,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0105_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 24,
+        "y": 32,
+        "targetPng": "0002 - Mystery Zone.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 1,
+        "yMap": 1,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 17,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0019_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 72,
+        "y": 32,
+        "targetPng": "0002 - Mystery Zone.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 4,
+        "yMap": 1,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 18,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0019_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 72,
+        "y": 48,
+        "targetPng": "0002 - Mystery Zone.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 4,
+        "yMap": 2,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 19,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0019_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 72,
+        "y": 64,
+        "targetPng": "0002 - Mystery Zone.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 4,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 20,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0019_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 72,
+        "y": 80,
+        "targetPng": "0002 - Mystery Zone.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 4,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "header": {
+    "id": 204,
+    "name": "Fuego Ironworks",
+    "mapName": "0204 - Fuego Ironworks",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": null,
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 140,
+        "y": 306,
+        "targetPng": "0204 - Fuego Ironworks.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 18,
+        "xMap": 8,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": null,
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 156,
+        "y": 306,
+        "targetPng": "0204 - Fuego Ironworks.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 18,
+        "xMap": 9,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": null,
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 172,
+        "y": 306,
+        "targetPng": "0204 - Fuego Ironworks.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 18,
+        "xMap": 10,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": null,
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 188,
+        "y": 306,
+        "targetPng": "0204 - Fuego Ironworks.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 18,
+        "xMap": 11,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 204,
+        "y": 194,
+        "targetPng": "0204 - Fuego Ironworks.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 18,
+        "xMap": 12,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

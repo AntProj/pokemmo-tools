@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 160,
+    "name": "Sunyshore City",
+    "mapName": "0160 - Sunyshore City",
+    "matrixId": 243
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0143_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 56,
+        "y": 96,
+        "targetPng": "0160 - Sunyshore City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0144_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 24,
+        "y": 96,
+        "targetPng": "0160 - Sunyshore City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 1,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "header": {
+    "id": 38,
+    "name": "Canalave Library",
+    "mapName": "0038 - Canalave Library",
+    "matrixId": 217
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0142_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 232,
+        "y": 160,
+        "targetPng": "0038 - Canalave Library.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 14,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0005_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 40,
+        "y": 96,
+        "targetPng": "0038 - Canalave Library.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 2,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0116_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 264,
+        "y": 96,
+        "targetPng": "0038 - Canalave Library.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 16,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

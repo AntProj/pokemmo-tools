@@ -1,0 +1,155 @@
+{
+  "zoneId": 307,
+  "displayName": "Galactic HQ",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 248,
+      "pixelY": 56,
+      "worldX": 240,
+      "worldZ": 48,
+      "destinationZoneId": 306,
+      "destinationName": "Galactic HQ",
+      "destinationPixelX": 200,
+      "destinationPixelY": 56,
+      "anchor": 3
+    },
+    {
+      "id": "w1",
+      "pixelX": 760,
+      "pixelY": 56,
+      "worldX": 752,
+      "worldZ": 48,
+      "destinationZoneId": 306,
+      "destinationName": "Galactic HQ",
+      "destinationPixelX": 808,
+      "destinationPixelY": 56,
+      "anchor": 4
+    },
+    {
+      "id": "w2",
+      "pixelX": 168,
+      "pixelY": 184,
+      "worldX": 160,
+      "worldZ": 176,
+      "destinationZoneId": 308,
+      "destinationName": "Galactic HQ",
+      "destinationPixelX": 56,
+      "destinationPixelY": 248,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 104,
+      "pixelY": 232,
+      "worldX": 96,
+      "worldZ": 224,
+      "destinationZoneId": 307,
+      "destinationName": "Galactic HQ",
+      "destinationPixelX": 248,
+      "destinationPixelY": 216,
+      "anchor": 4
+    },
+    {
+      "id": "w4",
+      "pixelX": 248,
+      "pixelY": 216,
+      "worldX": 240,
+      "worldZ": 208,
+      "destinationZoneId": 307,
+      "destinationName": "Galactic HQ",
+      "destinationPixelX": 104,
+      "destinationPixelY": 232,
+      "anchor": 3
+    },
+    {
+      "id": "w5",
+      "pixelX": 280,
+      "pixelY": 184,
+      "worldX": 272,
+      "worldZ": 176,
+      "destinationZoneId": 307,
+      "destinationName": "Galactic HQ",
+      "destinationPixelX": 840,
+      "destinationPixelY": 200,
+      "anchor": 6
+    },
+    {
+      "id": "w6",
+      "pixelX": 840,
+      "pixelY": 200,
+      "worldX": 832,
+      "worldZ": 192,
+      "destinationZoneId": 307,
+      "destinationName": "Galactic HQ",
+      "destinationPixelX": 280,
+      "destinationPixelY": 184,
+      "anchor": 5
+    },
+    {
+      "id": "w7",
+      "pixelX": 312,
+      "pixelY": 184,
+      "worldX": 304,
+      "worldZ": 176,
+      "destinationZoneId": 307,
+      "destinationName": "Galactic HQ",
+      "destinationPixelX": 520,
+      "destinationPixelY": 360,
+      "anchor": 8
+    },
+    {
+      "id": "w8",
+      "pixelX": 520,
+      "pixelY": 360,
+      "worldX": 512,
+      "worldZ": 352,
+      "destinationZoneId": 307,
+      "destinationName": "Galactic HQ",
+      "destinationPixelX": 312,
+      "destinationPixelY": 184,
+      "anchor": 7
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t3",
+      "trainerInstanceId": 152,
+      "pixelX": 680,
+      "pixelY": 128,
+      "trainerId": 514,
+      "trainerName": "Grunt",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3513,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 153,
+      "pixelX": 680,
+      "pixelY": 64,
+      "trainerId": 522,
+      "trainerName": "Grunt",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3521,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t7",
+      "trainerInstanceId": 154,
+      "pixelX": 72,
+      "pixelY": 112,
+      "trainerId": 509,
+      "trainerName": "Grunt",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3508,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

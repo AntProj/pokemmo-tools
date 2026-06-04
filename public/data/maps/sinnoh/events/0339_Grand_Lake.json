@@ -1,0 +1,19 @@
+{
+  "zoneId": 339,
+  "displayName": "Grand Lake",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 104,
+      "pixelY": 136,
+      "worldX": 96,
+      "worldZ": 128,
+      "destinationZoneId": 336,
+      "destinationName": "Valor Lakefront",
+      "destinationPixelX": 300,
+      "destinationPixelY": 890,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

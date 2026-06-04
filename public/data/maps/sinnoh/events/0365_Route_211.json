@@ -1,0 +1,46 @@
+{
+  "zoneId": 365,
+  "displayName": "Route 211",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 456,
+      "pixelY": 376,
+      "worldX": 6080,
+      "worldZ": 8512,
+      "destinationZoneId": 218,
+      "destinationName": "Mt. Coronet",
+      "destinationPixelX": 40,
+      "destinationPixelY": 664,
+      "anchor": 2
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 245,
+      "pixelX": 248,
+      "pixelY": 240,
+      "trainerId": 76,
+      "trainerName": "Alexandra",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3075,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 246,
+      "pixelX": 408,
+      "pixelY": 336,
+      "trainerId": 326,
+      "trainerName": "Louis",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3325,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

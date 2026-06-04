@@ -1,0 +1,19 @@
+{
+  "zoneId": 485,
+  "displayName": "Sandgem Town",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 232,
+      "pixelY": 168,
+      "worldX": 224,
+      "worldZ": 160,
+      "destinationZoneId": 420,
+      "destinationName": "Sandgem Town",
+      "destinationPixelX": 232,
+      "destinationPixelY": 168,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

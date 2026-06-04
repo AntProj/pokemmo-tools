@@ -1,0 +1,19 @@
+{
+  "zoneId": 29,
+  "displayName": "Trainers’ School",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 120,
+      "pixelY": 184,
+      "worldX": 112,
+      "worldZ": 176,
+      "destinationZoneId": 3,
+      "destinationName": "Jubilife City",
+      "destinationPixelX": 656,
+      "destinationPixelY": 650,
+      "anchor": 7
+    }
+  ],
+  "trainers": []
+}

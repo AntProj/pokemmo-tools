@@ -1,0 +1,33 @@
+{
+  "zoneId": 391,
+  "displayName": "Route 219",
+  "warps": [],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 308,
+      "pixelX": 184,
+      "pixelY": 386,
+      "trainerId": 358,
+      "trainerName": "Trenton",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3357,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 309,
+      "pixelX": 264,
+      "pixelY": 386,
+      "trainerId": 360,
+      "trainerName": "Mariel",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3359,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

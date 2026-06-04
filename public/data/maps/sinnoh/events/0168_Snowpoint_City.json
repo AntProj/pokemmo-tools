@@ -1,0 +1,43 @@
+{
+  "zoneId": 168,
+  "displayName": "Snowpoint City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 136,
+      "pixelY": 200,
+      "worldX": 128,
+      "worldZ": 192,
+      "destinationZoneId": 165,
+      "destinationName": "Snowpoint City",
+      "destinationPixelX": 444,
+      "destinationPixelY": 668,
+      "anchor": 4
+    },
+    {
+      "id": "w1",
+      "pixelX": 40,
+      "pixelY": 168,
+      "worldX": 32,
+      "worldZ": 160,
+      "destinationZoneId": 169,
+      "destinationName": "Snowpoint City",
+      "destinationPixelX": 40,
+      "destinationPixelY": 168,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 232,
+      "pixelY": 168,
+      "worldX": 224,
+      "worldZ": 160,
+      "destinationZoneId": 482,
+      "destinationName": "Snowpoint City",
+      "destinationPixelX": 232,
+      "destinationPixelY": 168,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

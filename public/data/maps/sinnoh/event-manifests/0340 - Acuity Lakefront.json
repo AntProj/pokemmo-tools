@@ -1,0 +1,86 @@
+{
+  "header": {
+    "id": 340,
+    "name": "Acuity Lakefront",
+    "mapName": "0340 - Acuity Lakefront",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 844,
+        "y": 626,
+        "targetPng": "0340 - Acuity Lakefront.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 10,
+        "yMatrix": 7,
+        "xMap": 20,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_route_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 348,
+        "y": 802,
+        "targetPng": "0340 - Acuity Lakefront.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 9,
+        "yMatrix": 7,
+        "xMap": 21,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0127_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 364,
+        "y": 738,
+        "targetPng": "0340 - Acuity Lakefront.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 9,
+        "yMatrix": 7,
+        "xMap": 22,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 572,
+        "y": 706,
+        "targetPng": "0340 - Acuity Lakefront.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 10,
+        "yMatrix": 7,
+        "xMap": 3,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

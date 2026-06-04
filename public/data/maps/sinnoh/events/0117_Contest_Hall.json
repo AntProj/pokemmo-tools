@@ -1,0 +1,31 @@
+{
+  "zoneId": 117,
+  "displayName": "Contest Hall",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 264,
+      "pixelY": 216,
+      "worldX": 256,
+      "worldZ": 208,
+      "destinationZoneId": 86,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 520,
+      "destinationPixelY": 314,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 376,
+      "pixelY": 40,
+      "worldX": 368,
+      "worldZ": 32,
+      "destinationZoneId": 558,
+      "destinationName": "Contest Hall",
+      "destinationPixelX": 472,
+      "destinationPixelY": 232,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

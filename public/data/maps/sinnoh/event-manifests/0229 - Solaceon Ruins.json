@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 229,
+    "name": "Solaceon Ruins",
+    "mapName": "0229 - Solaceon Ruins",
+    "matrixId": 39
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0019_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 72,
+        "y": 112,
+        "targetPng": "0229 - Solaceon Ruins.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 4,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

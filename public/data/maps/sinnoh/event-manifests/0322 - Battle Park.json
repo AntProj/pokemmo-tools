@@ -1,0 +1,276 @@
+{
+  "header": {
+    "id": 322,
+    "name": "Battle Park",
+    "mapName": "0322 - Battle Park",
+    "matrixId": 229
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0014_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 556,
+        "y": 649,
+        "targetPng": "0322 - Battle Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 2,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 364,
+        "y": 569,
+        "targetPng": "0322 - Battle Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 22,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0079_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 572,
+        "y": 649,
+        "targetPng": "0322 - Battle Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 3,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 364,
+        "y": 217,
+        "targetPng": "0322 - Battle Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 22,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0012_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 476,
+        "y": 265,
+        "targetPng": "0322 - Battle Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 29,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0017_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 476,
+        "y": 617,
+        "targetPng": "0322 - Battle Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 29,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0002_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 460,
+        "y": 265,
+        "targetPng": "0322 - Battle Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 28,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0080_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 252,
+        "y": 665,
+        "targetPng": "0322 - Battle Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 15,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0049_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 236,
+        "y": 777,
+        "targetPng": "0322 - Battle Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 14,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0010_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 428,
+        "y": 777,
+        "targetPng": "0322 - Battle Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 26,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 172,
+        "y": 857,
+        "targetPng": "0322 - Battle Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 10,
+        "yMap": 20,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0148_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 380,
+        "y": 665,
+        "targetPng": "0322 - Battle Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 23,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 12,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0127_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 396,
+        "y": 665,
+        "targetPng": "0322 - Battle Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 24,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 13,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 444,
+        "y": 569,
+        "targetPng": "0322 - Battle Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 27,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

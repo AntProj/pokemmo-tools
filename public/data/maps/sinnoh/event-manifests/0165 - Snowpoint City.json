@@ -1,0 +1,238 @@
+{
+  "header": {
+    "id": 165,
+    "name": "Snowpoint City",
+    "mapName": "0165 - Snowpoint City",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0067_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 220,
+        "y": 836,
+        "targetPng": "0165 - Snowpoint City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 11,
+        "yMatrix": 7,
+        "xMap": 13,
+        "yMap": 19,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_brown_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 140,
+        "y": 772,
+        "targetPng": "0165 - Snowpoint City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 11,
+        "yMatrix": 7,
+        "xMap": 8,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_blue_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 188,
+        "y": 484,
+        "targetPng": "0165 - Snowpoint City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 11,
+        "yMatrix": 6,
+        "xMap": 11,
+        "yMap": 30,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0062_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 156,
+        "y": 404,
+        "targetPng": "0165 - Snowpoint City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 11,
+        "yMatrix": 6,
+        "xMap": 9,
+        "yMap": 24,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0063_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 396,
+        "y": 324,
+        "targetPng": "0165 - Snowpoint City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 11,
+        "yMatrix": 6,
+        "xMap": 24,
+        "yMap": 19,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0054_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 348,
+        "y": 596,
+        "targetPng": "0165 - Snowpoint City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 11,
+        "yMatrix": 7,
+        "xMap": 21,
+        "yMap": 4,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0067_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 252,
+        "y": 116,
+        "targetPng": "0165 - Snowpoint City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 11,
+        "yMatrix": 6,
+        "xMap": 15,
+        "yMap": 6,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0110_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 236,
+        "y": 276,
+        "targetPng": "0165 - Snowpoint City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 11,
+        "yMatrix": 6,
+        "xMap": 14,
+        "yMap": 16,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0054_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 76,
+        "y": 900,
+        "targetPng": "0165 - Snowpoint City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 11,
+        "yMatrix": 7,
+        "xMap": 4,
+        "yMap": 23,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0063_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 60,
+        "y": 484,
+        "targetPng": "0165 - Snowpoint City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 11,
+        "yMatrix": 6,
+        "xMap": 3,
+        "yMap": 29,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0117_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 236,
+        "y": 804,
+        "targetPng": "0165 - Snowpoint City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 11,
+        "yMatrix": 7,
+        "xMap": 14,
+        "yMap": 17,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 332,
+        "y": 868,
+        "targetPng": "0165 - Snowpoint City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 11,
+        "yMatrix": 7,
+        "xMap": 20,
+        "yMap": 21,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

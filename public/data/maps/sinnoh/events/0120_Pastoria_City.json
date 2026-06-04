@@ -1,0 +1,151 @@
+{
+  "zoneId": 120,
+  "displayName": "Pastoria City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 220,
+      "pixelY": 442,
+      "worldX": 9424,
+      "worldZ": 13232,
+      "destinationZoneId": 122,
+      "destinationName": "Pastoria City",
+      "destinationPixelX": 216,
+      "destinationPixelY": 680,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 412,
+      "pixelY": 570,
+      "worldX": 9616,
+      "worldZ": 13360,
+      "destinationZoneId": 128,
+      "destinationName": "Pastoria City",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 412,
+      "pixelY": 714,
+      "worldX": 9616,
+      "worldZ": 13504,
+      "destinationZoneId": 121,
+      "destinationName": "Pastoria City",
+      "destinationPixelX": 56,
+      "destinationPixelY": 184,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 396,
+      "pixelY": 394,
+      "worldX": 9600,
+      "worldZ": 13184,
+      "destinationZoneId": 130,
+      "destinationName": "Pastoria City",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 572,
+      "pixelY": 570,
+      "worldX": 9776,
+      "worldZ": 13360,
+      "destinationZoneId": 129,
+      "destinationName": "Pastoria City",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 780,
+      "pixelY": 314,
+      "worldX": 9984,
+      "worldZ": 13104,
+      "destinationZoneId": 131,
+      "destinationName": "Pastoria City",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w6",
+      "pixelX": 220,
+      "pixelY": 714,
+      "worldX": 9424,
+      "worldZ": 13504,
+      "destinationZoneId": 127,
+      "destinationName": "Pastoria City",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w7",
+      "pixelX": 556,
+      "pixelY": 154,
+      "worldX": 9760,
+      "worldZ": 12944,
+      "destinationZoneId": 125,
+      "destinationName": "Pastoria City",
+      "destinationPixelX": 88,
+      "destinationPixelY": 184,
+      "anchor": 0
+    },
+    {
+      "id": "w8",
+      "pixelX": 572,
+      "pixelY": 154,
+      "worldX": 9776,
+      "worldZ": 12944,
+      "destinationZoneId": 125,
+      "destinationName": "Pastoria City",
+      "destinationPixelX": 88,
+      "destinationPixelY": 184,
+      "anchor": 0
+    },
+    {
+      "id": "w9",
+      "pixelX": 396,
+      "pixelY": 250,
+      "worldX": 9600,
+      "worldZ": 13040,
+      "destinationZoneId": 123,
+      "destinationName": "Pastoria City",
+      "destinationPixelX": 136,
+      "destinationPixelY": 200,
+      "anchor": 0
+    },
+    {
+      "id": "w10",
+      "pixelX": 1020,
+      "pixelY": 202,
+      "worldX": 10224,
+      "worldZ": 12992,
+      "destinationZoneId": 374,
+      "destinationName": "Route 213",
+      "destinationPixelX": 28,
+      "destinationPixelY": 120,
+      "anchor": 1
+    },
+    {
+      "id": "w11",
+      "pixelX": 1020,
+      "pixelY": 218,
+      "worldX": 10224,
+      "worldZ": 13008,
+      "destinationZoneId": 374,
+      "destinationName": "Route 213",
+      "destinationPixelX": 28,
+      "destinationPixelY": 120,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

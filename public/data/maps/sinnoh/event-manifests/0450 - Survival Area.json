@@ -1,0 +1,238 @@
+{
+  "header": {
+    "id": 450,
+    "name": "Survival Area",
+    "mapName": "0450 - Survival Area",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_brown_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 108,
+        "y": 288,
+        "targetPng": "0450 - Survival Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 10,
+        "xMap": 6,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0161_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 332,
+        "y": 128,
+        "targetPng": "0450 - Survival Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 10,
+        "xMap": 20,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0161_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 204,
+        "y": 128,
+        "targetPng": "0450 - Survival Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 10,
+        "xMap": 12,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0048_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 316,
+        "y": 496,
+        "targetPng": "0450 - Survival Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 10,
+        "xMap": 19,
+        "yMap": 30,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0006_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 204,
+        "y": 352,
+        "targetPng": "0450 - Survival Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 10,
+        "xMap": 12,
+        "yMap": 21,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0003_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 444,
+        "y": 304,
+        "targetPng": "0450 - Survival Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 10,
+        "xMap": 27,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_route_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 636,
+        "y": 320,
+        "targetPng": "0450 - Survival Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 21,
+        "yMatrix": 10,
+        "xMap": 7,
+        "yMap": 20,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0021_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 188,
+        "y": 464,
+        "targetPng": "0450 - Survival Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 10,
+        "xMap": 11,
+        "yMap": 28,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0123_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 204,
+        "y": 320,
+        "targetPng": "0450 - Survival Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 10,
+        "xMap": 12,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 364,
+        "y": 256,
+        "targetPng": "0450 - Survival Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 10,
+        "xMap": 22,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 156,
+        "y": 80,
+        "targetPng": "0450 - Survival Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 10,
+        "xMap": 9,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0127_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 188,
+        "y": 320,
+        "targetPng": "0450 - Survival Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 20,
+        "yMatrix": 10,
+        "xMap": 11,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

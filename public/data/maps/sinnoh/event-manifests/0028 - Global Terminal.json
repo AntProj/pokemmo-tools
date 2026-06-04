@@ -1,0 +1,276 @@
+{
+  "header": {
+    "id": 28,
+    "name": "Global Terminal",
+    "mapName": "0028 - Global Terminal",
+    "matrixId": 205
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0142_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 128,
+        "y": 64,
+        "targetPng": "0028 - Global Terminal.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 7,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0018_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 64,
+        "y": 160,
+        "targetPng": "0028 - Global Terminal.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0004_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 112,
+        "y": 128,
+        "targetPng": "0028 - Global Terminal.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0009_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 64,
+        "y": 224,
+        "targetPng": "0028 - Global Terminal.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0016_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 400,
+        "y": 128,
+        "targetPng": "0028 - Global Terminal.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 24,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0010_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 112,
+        "y": 208,
+        "targetPng": "0028 - Global Terminal.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0012_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 208,
+        "y": 128,
+        "targetPng": "0028 - Global Terminal.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 12,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0142_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 160,
+        "y": 256,
+        "targetPng": "0028 - Global Terminal.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 9,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0142_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 160,
+        "y": 272,
+        "targetPng": "0028 - Global Terminal.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 9,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0051_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 416,
+        "y": 208,
+        "targetPng": "0028 - Global Terminal.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 25,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0003_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 272,
+        "y": 272,
+        "targetPng": "0028 - Global Terminal.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 16,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0011_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 224,
+        "y": 64,
+        "targetPng": "0028 - Global Terminal.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 13,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 12,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0008_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 208,
+        "y": 224,
+        "targetPng": "0028 - Global Terminal.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 12,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 13,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0012_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 256,
+        "y": 176,
+        "targetPng": "0028 - Global Terminal.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 15,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

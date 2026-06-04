@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 25,
+    "name": "Jubilife City",
+    "mapName": "0025 - Jubilife City",
+    "matrixId": 208
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0004_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 184,
+        "y": 192,
+        "targetPng": "0025 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 11,
+        "yMap": 11,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0008_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 136,
+        "y": 144,
+        "targetPng": "0025 - Jubilife City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 8,
+        "yMap": 8,
+        "zPositionRaw": 65536
+      }
+    }
+  ]
+}

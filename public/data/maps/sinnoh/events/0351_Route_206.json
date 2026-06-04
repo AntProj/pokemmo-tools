@@ -1,0 +1,79 @@
+{
+  "zoneId": 351,
+  "displayName": "Route 206",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 104,
+      "pixelY": 40,
+      "worldX": 96,
+      "worldZ": 32,
+      "destinationZoneId": 350,
+      "destinationName": "Route 206",
+      "destinationPixelX": 216,
+      "destinationPixelY": 1800,
+      "anchor": 7
+    },
+    {
+      "id": "w1",
+      "pixelX": 104,
+      "pixelY": 200,
+      "worldX": 96,
+      "worldZ": 192,
+      "destinationZoneId": 350,
+      "destinationName": "Route 206",
+      "destinationPixelX": 232,
+      "destinationPixelY": 1912,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 120,
+      "pixelY": 40,
+      "worldX": 112,
+      "worldZ": 32,
+      "destinationZoneId": 350,
+      "destinationName": "Route 206",
+      "destinationPixelX": 232,
+      "destinationPixelY": 1800,
+      "anchor": 2
+    },
+    {
+      "id": "w3",
+      "pixelX": 136,
+      "pixelY": 40,
+      "worldX": 128,
+      "worldZ": 32,
+      "destinationZoneId": 350,
+      "destinationName": "Route 206",
+      "destinationPixelX": 264,
+      "destinationPixelY": 1800,
+      "anchor": 8
+    },
+    {
+      "id": "w4",
+      "pixelX": 120,
+      "pixelY": 200,
+      "worldX": 112,
+      "worldZ": 192,
+      "destinationZoneId": 350,
+      "destinationName": "Route 206",
+      "destinationPixelX": 232,
+      "destinationPixelY": 1912,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 136,
+      "pixelY": 200,
+      "worldX": 128,
+      "worldZ": 192,
+      "destinationZoneId": 350,
+      "destinationName": "Route 206",
+      "destinationPixelX": 248,
+      "destinationPixelY": 1912,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

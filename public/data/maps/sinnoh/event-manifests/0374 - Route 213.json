@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 374,
+    "name": "Route 213",
+    "mapName": "0374 - Route 213",
+    "matrixId": 258
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0014_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 140,
+        "y": 96,
+        "targetPng": "0374 - Route 213.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 8,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0007_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 92,
+        "y": 144,
+        "targetPng": "0374 - Route 213.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "zoneId": 75,
+  "displayName": "T.G. Eterna Bldg",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 136,
+      "pixelY": 56,
+      "worldX": 128,
+      "worldZ": 48,
+      "destinationZoneId": 74,
+      "destinationName": "T.G. Eterna Bldg",
+      "destinationPixelX": 328,
+      "destinationPixelY": 56,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 56,
+      "pixelY": 56,
+      "worldX": 48,
+      "worldZ": 48,
+      "destinationZoneId": 74,
+      "destinationName": "T.G. Eterna Bldg",
+      "destinationPixelX": 232,
+      "destinationPixelY": 56,
+      "anchor": 3
+    }
+  ],
+  "trainers": []
+}

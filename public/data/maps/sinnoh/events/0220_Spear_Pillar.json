@@ -1,0 +1,19 @@
+{
+  "zoneId": 220,
+  "displayName": "Spear Pillar",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 504,
+      "pixelY": 856,
+      "worldX": 496,
+      "worldZ": 848,
+      "destinationZoneId": 215,
+      "destinationName": "Mt. Coronet",
+      "destinationPixelX": 120,
+      "destinationPixelY": 88,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

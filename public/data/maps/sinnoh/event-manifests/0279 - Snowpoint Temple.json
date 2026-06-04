@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 279,
+    "name": "Snowpoint Temple",
+    "mapName": "0279 - Snowpoint Temple",
+    "matrixId": 69
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 200,
+        "y": 224,
+        "targetPng": "0279 - Snowpoint Temple.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 12,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

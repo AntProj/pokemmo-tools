@@ -1,0 +1,72 @@
+{
+  "zoneId": 156,
+  "displayName": "Sunyshore City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 184,
+      "pixelY": 408,
+      "worldX": 176,
+      "worldZ": 400,
+      "destinationZoneId": 155,
+      "destinationName": "Sunyshore City",
+      "destinationPixelX": 152,
+      "destinationPixelY": 40,
+      "anchor": 1
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t1",
+      "trainerInstanceId": 42,
+      "pixelX": 72,
+      "pixelY": 384,
+      "trainerId": 285,
+      "trainerName": "Destiny",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3284,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 43,
+      "pixelX": 56,
+      "pixelY": 64,
+      "trainerId": 302,
+      "trainerName": "Preston",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3301,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 44,
+      "pixelX": 264,
+      "pixelY": 384,
+      "trainerId": 303,
+      "trainerName": "Lonnie",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3302,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 45,
+      "pixelX": 344,
+      "pixelY": 176,
+      "trainerId": 281,
+      "trainerName": "Zachery",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3280,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

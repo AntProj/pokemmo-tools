@@ -1,0 +1,19 @@
+{
+  "zoneId": 482,
+  "displayName": "Snowpoint City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 232,
+      "pixelY": 168,
+      "worldX": 224,
+      "worldZ": 160,
+      "destinationZoneId": 168,
+      "destinationName": "Snowpoint City",
+      "destinationPixelX": 232,
+      "destinationPixelY": 168,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

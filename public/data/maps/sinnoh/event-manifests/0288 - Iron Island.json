@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 288,
+    "name": "Iron Island",
+    "mapName": "0288 - Iron Island",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0054_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 77,
+        "y": 432,
+        "targetPng": "0288 - Iron Island.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 3,
+        "yMatrix": 15,
+        "xMap": 3,
+        "yMap": 22,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0121_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 365,
+        "y": 240,
+        "targetPng": "0288 - Iron Island.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 3,
+        "yMatrix": 15,
+        "xMap": 21,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

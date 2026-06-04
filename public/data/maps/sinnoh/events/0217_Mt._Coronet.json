@@ -1,0 +1,55 @@
+{
+  "zoneId": 217,
+  "displayName": "Mt. Coronet",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 168,
+      "pixelY": 440,
+      "worldX": 160,
+      "worldZ": 432,
+      "destinationZoneId": 219,
+      "destinationName": "Mt. Coronet",
+      "destinationPixelX": 264,
+      "destinationPixelY": 152,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 40,
+      "pixelY": 296,
+      "worldX": 32,
+      "worldZ": 288,
+      "destinationZoneId": 383,
+      "destinationName": "Route 216",
+      "destinationPixelX": 1404,
+      "destinationPixelY": 440,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 248,
+      "pixelY": 264,
+      "worldX": 240,
+      "worldZ": 256,
+      "destinationZoneId": 589,
+      "destinationName": "Mt. Coronet",
+      "destinationPixelX": 168,
+      "destinationPixelY": 248,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 248,
+      "pixelY": 264,
+      "worldX": 240,
+      "worldZ": 256,
+      "destinationZoneId": 590,
+      "destinationName": "Iceberg Ruins",
+      "destinationPixelX": 168,
+      "destinationPixelY": 248,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

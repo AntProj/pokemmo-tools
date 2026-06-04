@@ -1,0 +1,124 @@
+{
+  "zoneId": 399,
+  "displayName": "Route 224",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 236,
+      "pixelY": 1288,
+      "worldX": 14048,
+      "worldZ": 8960,
+      "destinationZoneId": 249,
+      "destinationName": "Victory Road",
+      "destinationPixelX": 472,
+      "destinationPixelY": 264,
+      "anchor": 1
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t8",
+      "trainerInstanceId": 327,
+      "pixelX": 316,
+      "pixelY": 1088,
+      "trainerId": 282,
+      "trainerName": "Ruben",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3281,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t9",
+      "trainerInstanceId": 328,
+      "pixelX": 188,
+      "pixelY": 800,
+      "trainerId": 288,
+      "trainerName": "Maxwell",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3287,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t10",
+      "trainerInstanceId": 329,
+      "pixelX": 604,
+      "pixelY": 848,
+      "trainerId": 313,
+      "trainerName": "Carl",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3312,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t11",
+      "trainerInstanceId": 330,
+      "pixelX": 348,
+      "pixelY": 864,
+      "trainerId": 362,
+      "trainerName": "Armando",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3361,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t12",
+      "trainerInstanceId": 331,
+      "pixelX": 92,
+      "pixelY": 912,
+      "trainerId": 289,
+      "trainerName": "Brittney",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3288,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t13",
+      "trainerInstanceId": 332,
+      "pixelX": 828,
+      "pixelY": 624,
+      "trainerId": 286,
+      "trainerName": "Jamie",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3285,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t14",
+      "trainerInstanceId": 333,
+      "pixelX": 796,
+      "pixelY": 688,
+      "trainerId": 305,
+      "trainerName": "Larry",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3304,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t15",
+      "trainerInstanceId": 334,
+      "pixelX": 652,
+      "pixelY": 512,
+      "trainerId": 277,
+      "trainerName": "Hayden",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3276,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

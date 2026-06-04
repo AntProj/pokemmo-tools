@@ -1,0 +1,43 @@
+{
+  "zoneId": 459,
+  "displayName": "Resort Area",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 136,
+      "pixelY": 200,
+      "worldX": 128,
+      "worldZ": 192,
+      "destinationZoneId": 457,
+      "destinationName": "Resort Area",
+      "destinationPixelX": 56,
+      "destinationPixelY": 394,
+      "anchor": 3
+    },
+    {
+      "id": "w1",
+      "pixelX": 40,
+      "pixelY": 168,
+      "worldX": 32,
+      "worldZ": 160,
+      "destinationZoneId": 460,
+      "destinationName": "Resort Area",
+      "destinationPixelX": 40,
+      "destinationPixelY": 168,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 232,
+      "pixelY": 168,
+      "worldX": 224,
+      "worldZ": 160,
+      "destinationZoneId": 490,
+      "destinationName": "Resort Area",
+      "destinationPixelX": 232,
+      "destinationPixelY": 168,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,43 @@
+{
+  "zoneId": 8,
+  "displayName": "Pokétch Co",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 56,
+      "pixelY": 200,
+      "worldX": 48,
+      "worldZ": 192,
+      "destinationZoneId": 3,
+      "destinationName": "Jubilife City",
+      "destinationPixelX": 224,
+      "destinationPixelY": 250,
+      "anchor": 8
+    },
+    {
+      "id": "w1",
+      "pixelX": 264,
+      "pixelY": 200,
+      "worldX": 256,
+      "worldZ": 192,
+      "destinationZoneId": 3,
+      "destinationName": "Jubilife City",
+      "destinationPixelX": 288,
+      "destinationPixelY": 250,
+      "anchor": 5
+    },
+    {
+      "id": "w2",
+      "pixelX": 104,
+      "pixelY": 56,
+      "worldX": 96,
+      "worldZ": 48,
+      "destinationZoneId": 9,
+      "destinationName": "Pokétch Co.",
+      "destinationPixelX": 248,
+      "destinationPixelY": 56,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

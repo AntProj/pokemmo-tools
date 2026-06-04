@@ -1,0 +1,19 @@
+{
+  "zoneId": 300,
+  "displayName": "Old Chateau",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 184,
+      "pixelY": 120,
+      "worldX": 176,
+      "worldZ": 112,
+      "destinationZoneId": 298,
+      "destinationName": "Old Chateau",
+      "destinationPixelX": 184,
+      "destinationPixelY": 64,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

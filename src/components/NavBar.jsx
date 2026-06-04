@@ -7,7 +7,7 @@ const TABS = [
   { to: '/tracker',   label: 'Tracker'           },
   { to: '/catch',     label: 'Catch Calc'        },
   { to: '/breeding',  label: 'Breeding Planner'  },
-  { to: '/map',       label: 'Unova Map'         },
+  { to: '/map',       label: 'Sinnoh Map'        },
 ];
 
 export default function NavBar() {

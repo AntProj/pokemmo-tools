@@ -1,0 +1,19 @@
+{
+  "zoneId": 164,
+  "displayName": "Vista Lighthouse",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 104,
+      "pixelY": 152,
+      "worldX": 96,
+      "worldZ": 144,
+      "destinationZoneId": 516,
+      "destinationName": "Vista Lighthouse",
+      "destinationPixelX": 56,
+      "destinationPixelY": 104,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,19 @@
+{
+  "zoneId": 355,
+  "displayName": "Route 208",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 72,
+      "pixelY": 136,
+      "worldX": 64,
+      "worldZ": 128,
+      "destinationZoneId": 354,
+      "destinationName": "Route 208",
+      "destinationPixelX": 920,
+      "destinationPixelY": 202,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

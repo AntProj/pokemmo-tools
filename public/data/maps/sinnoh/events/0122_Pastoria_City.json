@@ -1,0 +1,98 @@
+{
+  "zoneId": 122,
+  "displayName": "Pastoria City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 216,
+      "pixelY": 680,
+      "worldX": 208,
+      "worldZ": 672,
+      "destinationZoneId": 120,
+      "destinationName": "Pastoria City",
+      "destinationPixelX": 220,
+      "destinationPixelY": 442,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t2",
+      "trainerInstanceId": 28,
+      "pixelX": 184,
+      "pixelY": 544,
+      "trainerId": 497,
+      "trainerName": "Jacky",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3496,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 29,
+      "pixelX": 120,
+      "pixelY": 368,
+      "trainerId": 339,
+      "trainerName": "Damian",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3338,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 30,
+      "pixelX": 344,
+      "pixelY": 544,
+      "trainerId": 498,
+      "trainerName": "Caitlyn",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3497,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 31,
+      "pixelX": 88,
+      "pixelY": 144,
+      "trainerId": 483,
+      "trainerName": "Samson",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3482,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t6",
+      "trainerInstanceId": 32,
+      "pixelX": 312,
+      "pixelY": 304,
+      "trainerId": 293,
+      "trainerName": "Erick",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3292,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t7",
+      "trainerInstanceId": 33,
+      "pixelX": 152,
+      "pixelY": 192,
+      "trainerId": 401,
+      "trainerName": "Walter",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3400,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "zoneId": 260,
+  "displayName": "Fullmoon Island",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 344,
+      "pixelY": 200,
+      "worldX": 848,
+      "worldZ": 4288,
+      "destinationZoneId": 261,
+      "destinationName": "Fullmoon Island",
+      "destinationPixelX": 264,
+      "destinationPixelY": 346,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 360,
+      "pixelY": 200,
+      "worldX": 864,
+      "worldZ": 4288,
+      "destinationZoneId": 261,
+      "destinationName": "Fullmoon Island",
+      "destinationPixelX": 280,
+      "destinationPixelY": 346,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

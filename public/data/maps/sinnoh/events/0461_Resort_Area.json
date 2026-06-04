@@ -1,0 +1,31 @@
+{
+  "zoneId": 461,
+  "displayName": "Resort Area",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 248,
+      "pixelY": 248,
+      "worldX": 240,
+      "worldZ": 240,
+      "destinationZoneId": 457,
+      "destinationName": "Resort Area",
+      "destinationPixelX": 408,
+      "destinationPixelY": 90,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 88,
+      "pixelY": 40,
+      "worldX": 80,
+      "worldZ": 32,
+      "destinationZoneId": 463,
+      "destinationName": "Resort Area",
+      "destinationPixelX": 56,
+      "destinationPixelY": 104,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

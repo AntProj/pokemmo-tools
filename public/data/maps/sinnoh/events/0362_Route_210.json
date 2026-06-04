@@ -1,0 +1,124 @@
+{
+  "zoneId": 362,
+  "displayName": "Route 210",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 376,
+      "pixelY": 762,
+      "worldX": 9056,
+      "worldZ": 9456,
+      "destinationZoneId": 492,
+      "destinationName": "Café",
+      "destinationPixelX": 88,
+      "destinationPixelY": 136,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t2",
+      "trainerInstanceId": 230,
+      "pixelX": 248,
+      "pixelY": 1058,
+      "trainerId": 65,
+      "trainerName": "Teri & Tia",
+      "orientation": "Down",
+      "isDoubleBattlePartner": true,
+      "scriptNumber": 5064,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 231,
+      "pixelX": 232,
+      "pixelY": 1058,
+      "trainerId": 65,
+      "trainerName": "Teri & Tia",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3064,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 232,
+      "pixelX": 456,
+      "pixelY": 1298,
+      "trainerId": 306,
+      "trainerName": "Wyatt",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3305,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t6",
+      "trainerInstanceId": 233,
+      "pixelX": 184,
+      "pixelY": 978,
+      "trainerId": 56,
+      "trainerName": "Kahlil",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3055,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t7",
+      "trainerInstanceId": 234,
+      "pixelX": 328,
+      "pixelY": 930,
+      "trainerId": 57,
+      "trainerName": "Amber",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3056,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t8",
+      "trainerInstanceId": 235,
+      "pixelX": 328,
+      "pixelY": 1170,
+      "trainerId": 290,
+      "trainerName": "Ava & Matt",
+      "orientation": "Left",
+      "isDoubleBattlePartner": true,
+      "scriptNumber": 5289,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t9",
+      "trainerInstanceId": 236,
+      "pixelX": 328,
+      "pixelY": 1154,
+      "trainerId": 290,
+      "trainerName": "Ava & Matt",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3289,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t24",
+      "trainerInstanceId": 237,
+      "pixelX": 200,
+      "pixelY": 1346,
+      "trainerId": 292,
+      "trainerName": "Marco",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3291,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

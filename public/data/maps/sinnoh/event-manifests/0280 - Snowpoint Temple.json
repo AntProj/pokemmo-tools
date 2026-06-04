@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 280,
+    "name": "Snowpoint Temple",
+    "mapName": "0280 - Snowpoint Temple",
+    "matrixId": 70
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0083_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 72,
+        "y": 160,
+        "targetPng": "0280 - Snowpoint Temple.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 4,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0083_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 152,
+        "y": 208,
+        "targetPng": "0280 - Snowpoint Temple.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 9,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

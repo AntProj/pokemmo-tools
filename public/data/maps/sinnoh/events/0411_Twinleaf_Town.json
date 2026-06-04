@@ -1,0 +1,55 @@
+{
+  "zoneId": 411,
+  "displayName": "Twinleaf Town",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 156,
+      "pixelY": 200,
+      "worldX": 1680,
+      "worldZ": 14000,
+      "destinationZoneId": 412,
+      "destinationName": "Twinleaf Town",
+      "destinationPixelX": 104,
+      "destinationPixelY": 168,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 332,
+      "pixelY": 360,
+      "worldX": 1856,
+      "worldZ": 14160,
+      "destinationZoneId": 414,
+      "destinationName": "Twinleaf Town",
+      "destinationPixelX": 104,
+      "destinationPixelY": 168,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 332,
+      "pixelY": 200,
+      "worldX": 1856,
+      "worldZ": 14000,
+      "destinationZoneId": 416,
+      "destinationName": "Twinleaf Town",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 172,
+      "pixelY": 360,
+      "worldX": 1696,
+      "worldZ": 14160,
+      "destinationZoneId": 417,
+      "destinationName": "Twinleaf Town",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

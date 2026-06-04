@@ -1,0 +1,124 @@
+{
+  "header": {
+    "id": 509,
+    "name": "Great Marsh",
+    "mapName": "0509 - Great Marsh",
+    "matrixId": 240
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1468,
+        "y": 1698,
+        "targetPng": "0509 - Great Marsh.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 2,
+        "yMatrix": 3,
+        "xMap": 27,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 1164,
+        "y": 1810,
+        "targetPng": "0509 - Great Marsh.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 2,
+        "yMatrix": 3,
+        "xMap": 8,
+        "yMap": 17,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0010_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1196,
+        "y": 1858,
+        "targetPng": "0509 - Great Marsh.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 2,
+        "yMatrix": 3,
+        "xMap": 10,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0003_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1004,
+        "y": 1858,
+        "targetPng": "0509 - Great Marsh.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 3,
+        "xMap": 30,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 1020,
+        "y": 1810,
+        "targetPng": "0509 - Great Marsh.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 3,
+        "xMap": 31,
+        "yMap": 17,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 1164,
+        "y": 1378,
+        "targetPng": "0509 - Great Marsh.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 2,
+        "yMatrix": 2,
+        "xMap": 8,
+        "yMap": 22,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}
