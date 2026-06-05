@@ -41,6 +41,49 @@ export default function TrackerMark({
     updateView({ markStates: markStates.includes(s) ? markStates.filter((x) => x !== s) : [...markStates, s] });
   }, [markStates, updateView]);
 
+  // ─────── Evolution-family index ───────
+  // Map<pokemonId, Set<pokemonId>> — for every Pokémon, the set of every
+  // member of its evolution family (pre-evolutions, post-evolutions, and all
+  // branches). Handles linear chains (Bulbasaur → Ivysaur → Venusaur),
+  // branching post-evolutions (Eevee → 8 eeveelutions), and mid-chain
+  // branches (Wurmple → Silcoon/Cascoon → Beautifly/Dustox).
+  //
+  // Why this exists: searching by name in the Mark grid surfaces only the
+  // typed mon, which hides the fact that completing a regional dex often
+  // requires breeding or evolving from a different listed mon. Expanding the
+  // result to the whole family lets the user see at a glance whether they
+  // already have the relevant pre-/post-evos marked.
+  //
+  // Built once per data.pokemon load via BFS over `evolutions[].id` and
+  // `pre_evolution.id`. Connected components share their Set instance so
+  // membership lookup is O(1) per filter iteration.
+  const familyMap = useMemo(() => {
+    const byId = new Map(data.pokemon.map((p) => [p.id, p]));
+    const families = new Map();
+    const visited = new Set();
+    for (const root of data.pokemon) {
+      if (visited.has(root.id)) continue;
+      const family = new Set();
+      const stack = [root.id];
+      while (stack.length) {
+        const cur = stack.pop();
+        if (family.has(cur)) continue;
+        family.add(cur);
+        const mon = byId.get(cur);
+        if (!mon) continue;
+        if (mon.pre_evolution?.id != null) stack.push(mon.pre_evolution.id);
+        for (const ev of (mon.evolutions || [])) {
+          if (ev?.id != null) stack.push(ev.id);
+        }
+      }
+      for (const id of family) {
+        families.set(id, family);
+        visited.add(id);
+      }
+    }
+    return families;
+  }, [data.pokemon]);
+
   // ─────── Filter pipeline ───────
   const filtered = useMemo(() => {
     const q = deferredSearch.trim().toLowerCase();
@@ -52,6 +95,28 @@ export default function TrackerMark({
     const rkey = regionKey(markRegion);
     const stateSet = markStates.length > 0 ? new Set(markStates) : null;
 
+    // When the user typed a search, first find every mon that matches it
+    // DIRECTLY, then expand to those mons' evolution families. The family
+    // expansion is the user-visible behavior change — it makes the Mark
+    // grid show e.g. Bulbasaur + Ivysaur + Venusaur when you search "bulb",
+    // so the user can see at a glance whether the evolved forms are already
+    // tracked. Region / type / state filters still apply on top.
+    //
+    // searchFamilyIds === null means "no search active, skip this check".
+    let searchFamilyIds = null;
+    if (q) {
+      searchFamilyIds = new Set();
+      for (const p of data.pokemon) {
+        const nameMatch = p.name.toLowerCase().includes(q);
+        const nationalMatch = dexQuery != null && p.id === dexQuery;
+        const regionalMatch = dexQuery != null && rkey && p.dex?.[rkey] === dexQuery;
+        if (!nameMatch && !nationalMatch && !regionalMatch) continue;
+        const fam = familyMap.get(p.id);
+        if (fam) for (const id of fam) searchFamilyIds.add(id);
+        else searchFamilyIds.add(p.id);
+      }
+    }
+
     const out = data.pokemon.filter((p) => {
       if (rkey) {
         if (!p.dex || !(p.dex[rkey] > 0)) return false;
@@ -61,12 +126,7 @@ export default function TrackerMark({
           if (!p.types.some((pt) => pt.toLowerCase() === t.toLowerCase())) return false;
         }
       }
-      if (q) {
-        const nameMatch = p.name.toLowerCase().includes(q);
-        const nationalMatch = dexQuery != null && p.id === dexQuery;
-        const regionalMatch = dexQuery != null && rkey && p.dex?.[rkey] === dexQuery;
-        if (!nameMatch && !nationalMatch && !regionalMatch) return false;
-      }
+      if (searchFamilyIds && !searchFamilyIds.has(p.id)) return false;
       if (stateSet) {
         const s = stateOf(trackerState, p.id);
         if (!stateSet.has(s)) return false;
@@ -79,7 +139,7 @@ export default function TrackerMark({
     else if (rkey)              out.sort((a, b) => (a.dex[rkey] || 0) - (b.dex[rkey] || 0));
     else                        out.sort((a, b) => a.id - b.id);
     return out;
-  }, [data.pokemon, deferredSearch, markRegion, markTypes, markStates, markSort, trackerState]);
+  }, [data.pokemon, deferredSearch, markRegion, markTypes, markStates, markSort, trackerState, familyMap]);
 
   // ─────── Selection (for bulk actions) ───────
   // Set<pokemonId>. Lives locally — selection is ephemeral and tab-scoped.
