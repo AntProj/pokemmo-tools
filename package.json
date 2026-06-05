@@ -32,7 +32,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "predeploy": "npm run build:data && npm run build",
+    "_comment_predeploy": "After vite build, prune dist/data/maps/<region>/{images,tiles}/ — both are hosted on R2 (absolute URLs in maps-index.json), so they're dead weight in the gh-pages branch. The pyramid added ~5000 tiles per region; their file list blows past Windows' command-line cap inside gh-pages' internal git rm, throwing ENAMETOOLONG. Pruning fixes that AND keeps the deploy ~165 MB lighter.",
+    "predeploy": "npm run build:data && npm run build && node scripts/prune-dist-for-gh-pages.mjs",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
