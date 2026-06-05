@@ -19,6 +19,12 @@ src/data/pokemmo.json
 public/data/maps/*/images/
 public/data/maps/*/tiles/
 
+# Temporary worktree used by scripts/deploy-gh-pages.mjs. The deploy script
+# creates this dir, populates it with dist/ contents, pushes, then removes
+# it. If a deploy is interrupted, the dir may persist — gitignored so it
+# doesn't pollute `git status` on main.
+.gh-pages-tmp/
+
 # Editor
 .vscode/
 .idea/
