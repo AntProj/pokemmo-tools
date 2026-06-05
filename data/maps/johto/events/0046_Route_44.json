@@ -1,0 +1,111 @@
+{
+  "zoneId": 46,
+  "displayName": "Route 44",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 1448,
+      "pixelY": 195,
+      "worldX": 10128,
+      "worldZ": 2704,
+      "destinationZoneId": 120,
+      "destinationName": "Ice Path",
+      "destinationPixelX": 184,
+      "destinationPixelY": 968,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 168,
+      "pixelX": 248,
+      "pixelY": 331,
+      "trainerId": 405,
+      "trainerName": "Phil",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3404,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 169,
+      "pixelX": 536,
+      "pixelY": 443,
+      "trainerId": 125,
+      "trainerName": "Edgar",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3124,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 170,
+      "pixelX": 840,
+      "pixelY": 123,
+      "trainerId": 124,
+      "trainerName": "Wilton",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3123,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 171,
+      "pixelX": 792,
+      "pixelY": 475,
+      "trainerId": 408,
+      "trainerName": "Cybil",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3407,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 172,
+      "pixelX": 984,
+      "pixelY": 459,
+      "trainerId": 407,
+      "trainerName": "Allen",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3406,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 173,
+      "pixelX": 968,
+      "pixelY": 107,
+      "trainerId": 406,
+      "trainerName": "Zach",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3405,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t6",
+      "trainerInstanceId": 174,
+      "pixelX": 1384,
+      "pixelY": 267,
+      "trainerId": 137,
+      "trainerName": "Vance",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3136,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

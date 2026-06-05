@@ -1,0 +1,120 @@
+{
+  "zoneId": 153,
+  "displayName": "Union Cave",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 616,
+      "pixelY": 712,
+      "worldX": 464,
+      "worldZ": 688,
+      "destinationZoneId": 99,
+      "destinationName": "Union Cave",
+      "destinationPixelX": 88,
+      "destinationPixelY": 424,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 184,
+      "pixelY": 984,
+      "worldX": 32,
+      "worldZ": 960,
+      "destinationZoneId": 99,
+      "destinationName": "Union Cave",
+      "destinationPixelX": 120,
+      "destinationPixelY": 1496,
+      "anchor": 3
+    },
+    {
+      "id": "w2",
+      "pixelX": 584,
+      "pixelY": 936,
+      "worldX": 432,
+      "worldZ": 912,
+      "destinationZoneId": 154,
+      "destinationName": "Union Cave",
+      "destinationPixelX": 56,
+      "destinationPixelY": 712,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 184,
+      "pixelY": 72,
+      "worldX": 32,
+      "worldZ": 48,
+      "destinationZoneId": 154,
+      "destinationName": "Union Cave",
+      "destinationPixelX": 456,
+      "destinationPixelY": 264,
+      "anchor": 1
+    },
+    {
+      "id": "w4",
+      "pixelX": 184,
+      "pixelY": 216,
+      "worldX": 32,
+      "worldZ": 192,
+      "destinationZoneId": 154,
+      "destinationName": "Union Cave",
+      "destinationPixelX": 168,
+      "destinationPixelY": 456,
+      "anchor": 2
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 273,
+      "pixelX": 360,
+      "pixelY": 96,
+      "trainerId": 203,
+      "trainerName": "Phillip",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3202,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 274,
+      "pixelX": 488,
+      "pixelY": 336,
+      "trainerId": 204,
+      "trainerName": "Leonard",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3203,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 275,
+      "pixelX": 264,
+      "pixelY": 976,
+      "trainerId": 201,
+      "trainerName": "Andrew",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3200,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 276,
+      "pixelX": 568,
+      "pixelY": 960,
+      "trainerId": 202,
+      "trainerName": "Calvin",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3201,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

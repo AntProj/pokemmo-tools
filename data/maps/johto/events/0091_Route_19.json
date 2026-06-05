@@ -1,0 +1,84 @@
+{
+  "zoneId": 91,
+  "displayName": "Route 19",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 456,
+      "pixelY": 108,
+      "worldX": 19248,
+      "worldZ": 7248,
+      "destinationZoneId": 424,
+      "destinationName": "Route 19",
+      "destinationPixelX": 120,
+      "destinationPixelY": 256,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 472,
+      "pixelY": 108,
+      "worldX": 19264,
+      "worldZ": 7248,
+      "destinationZoneId": 424,
+      "destinationName": "Route 19",
+      "destinationPixelX": 120,
+      "destinationPixelY": 256,
+      "anchor": 1
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 193,
+      "pixelX": 376,
+      "pixelY": 452,
+      "trainerId": 370,
+      "trainerName": "Jerome",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3369,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 194,
+      "pixelX": 312,
+      "pixelY": 628,
+      "trainerId": 252,
+      "trainerName": "Harold",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3251,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 195,
+      "pixelX": 408,
+      "pixelY": 820,
+      "trainerId": 371,
+      "trainerName": "Tucker",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3370,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 196,
+      "pixelX": 424,
+      "pixelY": 820,
+      "trainerId": 291,
+      "trainerName": "Debbie",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3290,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

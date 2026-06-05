@@ -1,0 +1,151 @@
+{
+  "zoneId": 65,
+  "displayName": "Eterna City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 280,
+      "pixelY": 296,
+      "worldX": 4880,
+      "worldZ": 8480,
+      "destinationZoneId": 69,
+      "destinationName": "Eterna City",
+      "destinationPixelX": 136,
+      "destinationPixelY": 200,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 344,
+      "pixelY": 584,
+      "worldX": 4944,
+      "worldZ": 8768,
+      "destinationZoneId": 66,
+      "destinationName": "Eterna City",
+      "destinationPixelX": 56,
+      "destinationPixelY": 184,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 360,
+      "pixelY": 440,
+      "worldX": 4960,
+      "worldZ": 8624,
+      "destinationZoneId": 71,
+      "destinationName": "Cycle Shop",
+      "destinationPixelX": 120,
+      "destinationPixelY": 184,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 280,
+      "pixelY": 120,
+      "worldX": 4880,
+      "worldZ": 8304,
+      "destinationZoneId": 72,
+      "destinationName": "T.G. Eterna Bldg",
+      "destinationPixelX": 184,
+      "destinationPixelY": 248,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 440,
+      "pixelY": 584,
+      "worldX": 5040,
+      "worldZ": 8768,
+      "destinationZoneId": 76,
+      "destinationName": "Eterna City",
+      "destinationPixelX": 184,
+      "destinationPixelY": 200,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 168,
+      "pixelY": 808,
+      "worldX": 4768,
+      "worldZ": 8992,
+      "destinationZoneId": 82,
+      "destinationName": "Eterna City",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w6",
+      "pixelX": 632,
+      "pixelY": 408,
+      "worldX": 5232,
+      "worldZ": 8592,
+      "destinationZoneId": 83,
+      "destinationName": "Eterna City",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w7",
+      "pixelX": 456,
+      "pixelY": 152,
+      "worldX": 5056,
+      "worldZ": 8336,
+      "destinationZoneId": 81,
+      "destinationName": "Eterna City",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w8",
+      "pixelX": 264,
+      "pixelY": 920,
+      "worldX": 4864,
+      "worldZ": 9104,
+      "destinationZoneId": 80,
+      "destinationName": "Route 206",
+      "destinationPixelX": 120,
+      "destinationPixelY": 40,
+      "anchor": 0
+    },
+    {
+      "id": "w9",
+      "pixelX": 280,
+      "pixelY": 920,
+      "worldX": 4880,
+      "worldZ": 9104,
+      "destinationZoneId": 80,
+      "destinationName": "Route 206",
+      "destinationPixelX": 120,
+      "destinationPixelY": 40,
+      "anchor": 0
+    },
+    {
+      "id": "w10",
+      "pixelX": 392,
+      "pixelY": 808,
+      "worldX": 4992,
+      "worldZ": 8992,
+      "destinationZoneId": 67,
+      "destinationName": "Eterna City",
+      "destinationPixelX": 184,
+      "destinationPixelY": 440,
+      "anchor": 0
+    },
+    {
+      "id": "w11",
+      "pixelX": 360,
+      "pixelY": 296,
+      "worldX": 4960,
+      "worldZ": 8480,
+      "destinationZoneId": 84,
+      "destinationName": "Eterna City",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

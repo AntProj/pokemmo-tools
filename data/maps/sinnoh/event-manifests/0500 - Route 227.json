@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 500,
+    "name": "Route 227",
+    "mapName": "0500 - Route 227",
+    "matrixId": 243
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0017_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 56,
+        "y": 96,
+        "targetPng": "0500 - Route 227.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

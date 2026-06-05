@@ -1,0 +1,580 @@
+{
+  "header": {
+    "id": 559,
+    "name": "Battle Frontier",
+    "mapName": "0559 - Battle Frontier",
+    "matrixId": 256
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_blue_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 408,
+        "y": 520,
+        "targetPng": "0559 - Battle Frontier.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 25,
+        "yMap": 0,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_blue_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 760,
+        "y": 312,
+        "targetPng": "0559 - Battle Frontier.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 15,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0011_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 712,
+        "y": 824,
+        "targetPng": "0559 - Battle Frontier.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 12,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0017_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 792,
+        "y": 1048,
+        "targetPng": "0559 - Battle Frontier.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 2,
+        "xMap": 17,
+        "yMap": 0,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0016_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 776,
+        "y": 1048,
+        "targetPng": "0559 - Battle Frontier.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 2,
+        "xMap": 16,
+        "yMap": 0,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0001_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 664,
+        "y": 936,
+        "targetPng": "0559 - Battle Frontier.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 9,
+        "yMap": 25,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0002_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 952,
+        "y": 744,
+        "targetPng": "0559 - Battle Frontier.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 27,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0000_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 808,
+        "y": 328,
+        "targetPng": "0559 - Battle Frontier.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 18,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0033_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 424,
+        "y": 504,
+        "targetPng": "0559 - Battle Frontier.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 26,
+        "yMap": 30,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0029_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1080,
+        "y": 648,
+        "targetPng": "0559 - Battle Frontier.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 2,
+        "yMatrix": 1,
+        "xMap": 3,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0049_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 616,
+        "y": 392,
+        "targetPng": "0559 - Battle Frontier.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 23,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0396_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 728,
+        "y": 712,
+        "targetPng": "0559 - Battle Frontier.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 13,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 12,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0396_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 728,
+        "y": 616,
+        "targetPng": "0559 - Battle Frontier.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 13,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 13,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0396_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 840,
+        "y": 712,
+        "targetPng": "0559 - Battle Frontier.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 20,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 14,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0014_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 968,
+        "y": 488,
+        "targetPng": "0559 - Battle Frontier.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 28,
+        "yMap": 29,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 15,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0018_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 952,
+        "y": 312,
+        "targetPng": "0559 - Battle Frontier.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 27,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 16,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0034_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 616,
+        "y": 616,
+        "targetPng": "0559 - Battle Frontier.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 6,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 17,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0047_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 888,
+        "y": 632,
+        "targetPng": "0559 - Battle Frontier.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 23,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 18,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0010_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 872,
+        "y": 808,
+        "targetPng": "0559 - Battle Frontier.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 22,
+        "yMap": 17,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 19,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0040_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1064,
+        "y": 824,
+        "targetPng": "0559 - Battle Frontier.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 2,
+        "yMatrix": 1,
+        "xMap": 2,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 20,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0052_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 968,
+        "y": 616,
+        "targetPng": "0559 - Battle Frontier.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 28,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 21,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0051_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 728,
+        "y": 760,
+        "targetPng": "0559 - Battle Frontier.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 13,
+        "yMap": 14,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 22,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0053_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 712,
+        "y": 1000,
+        "targetPng": "0559 - Battle Frontier.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 12,
+        "yMap": 29,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 23,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0058_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 872,
+        "y": 968,
+        "targetPng": "0559 - Battle Frontier.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 22,
+        "yMap": 27,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 24,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_blue_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 568,
+        "y": 920,
+        "targetPng": "0559 - Battle Frontier.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 3,
+        "yMap": 25,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 25,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_blue_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 1000,
+        "y": 920,
+        "targetPng": "0559 - Battle Frontier.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 30,
+        "yMap": 25,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 26,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_blue_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 1160,
+        "y": 520,
+        "targetPng": "0559 - Battle Frontier.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 2,
+        "yMatrix": 1,
+        "xMap": 8,
+        "yMap": 0,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 27,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0010_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 680,
+        "y": 680,
+        "targetPng": "0559 - Battle Frontier.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 10,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 28,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0067_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 504,
+        "y": 664,
+        "targetPng": "0559 - Battle Frontier.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 31,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 29,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0020_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 408,
+        "y": 600,
+        "targetPng": "0559 - Battle Frontier.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 25,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

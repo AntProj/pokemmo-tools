@@ -1,0 +1,82 @@
+{
+  "zoneId": 74,
+  "displayName": "T.G. Eterna Bldg",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 136,
+      "pixelY": 56,
+      "worldX": 128,
+      "worldZ": 48,
+      "destinationZoneId": 73,
+      "destinationName": "T.G. Eterna Bldg",
+      "destinationPixelX": 328,
+      "destinationPixelY": 206,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 328,
+      "pixelY": 56,
+      "worldX": 320,
+      "worldZ": 48,
+      "destinationZoneId": 75,
+      "destinationName": "T.G. Eterna Bldg",
+      "destinationPixelX": 136,
+      "destinationPixelY": 56,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 40,
+      "pixelY": 56,
+      "worldX": 32,
+      "worldZ": 48,
+      "destinationZoneId": 73,
+      "destinationName": "T.G. Eterna Bldg",
+      "destinationPixelX": 232,
+      "destinationPixelY": 206,
+      "anchor": 3
+    },
+    {
+      "id": "w3",
+      "pixelX": 232,
+      "pixelY": 56,
+      "worldX": 224,
+      "worldZ": 48,
+      "destinationZoneId": 75,
+      "destinationName": "T.G. Eterna Bldg",
+      "destinationPixelX": 56,
+      "destinationPixelY": 56,
+      "anchor": 1
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t1",
+      "trainerInstanceId": 14,
+      "pixelX": 136,
+      "pixelY": 128,
+      "trainerId": 423,
+      "trainerName": "Grunt",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3422,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 15,
+      "pixelX": 296,
+      "pixelY": 96,
+      "trainerId": 831,
+      "trainerName": "Travon",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3830,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

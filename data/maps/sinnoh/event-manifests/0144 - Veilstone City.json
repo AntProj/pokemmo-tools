@@ -1,0 +1,67 @@
+{
+  "header": {
+    "id": 144,
+    "name": "Veilstone City",
+    "mapName": "0144 - Veilstone City",
+    "matrixId": 204
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0142_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 72,
+        "y": 80,
+        "targetPng": "0144 - Veilstone City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 4,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0009_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 40,
+        "y": 128,
+        "targetPng": "0144 - Veilstone City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 2,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0143_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 128,
+        "targetPng": "0144 - Veilstone City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 7,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

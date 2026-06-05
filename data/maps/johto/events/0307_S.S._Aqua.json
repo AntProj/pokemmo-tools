@@ -1,0 +1,163 @@
+{
+  "zoneId": 307,
+  "displayName": "S.S. Aqua",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 512,
+      "pixelY": 408,
+      "worldX": 384,
+      "worldZ": 304,
+      "destinationZoneId": 330,
+      "destinationName": "Olivine City",
+      "destinationPixelX": 552,
+      "destinationPixelY": 536,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 336,
+      "pixelY": 328,
+      "worldX": 208,
+      "worldZ": 224,
+      "destinationZoneId": 310,
+      "destinationName": "S.S. Aqua",
+      "destinationPixelX": 272,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 432,
+      "pixelY": 328,
+      "worldX": 304,
+      "worldZ": 224,
+      "destinationZoneId": 310,
+      "destinationName": "S.S. Aqua",
+      "destinationPixelX": 496,
+      "destinationPixelY": 136,
+      "anchor": 1
+    },
+    {
+      "id": "w3",
+      "pixelX": 608,
+      "pixelY": 328,
+      "worldX": 480,
+      "worldZ": 224,
+      "destinationZoneId": 309,
+      "destinationName": "S.S. Aqua",
+      "destinationPixelX": 272,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 704,
+      "pixelY": 328,
+      "worldX": 576,
+      "worldZ": 224,
+      "destinationZoneId": 309,
+      "destinationName": "S.S. Aqua",
+      "destinationPixelX": 496,
+      "destinationPixelY": 136,
+      "anchor": 1
+    },
+    {
+      "id": "w5",
+      "pixelX": 336,
+      "pixelY": 232,
+      "worldX": 208,
+      "worldZ": 128,
+      "destinationZoneId": 328,
+      "destinationName": "S.S. Aqua",
+      "destinationPixelX": 272,
+      "destinationPixelY": 280,
+      "anchor": 0
+    },
+    {
+      "id": "w6",
+      "pixelX": 432,
+      "pixelY": 232,
+      "worldX": 304,
+      "worldZ": 128,
+      "destinationZoneId": 328,
+      "destinationName": "S.S. Aqua",
+      "destinationPixelX": 496,
+      "destinationPixelY": 280,
+      "anchor": 1
+    },
+    {
+      "id": "w7",
+      "pixelX": 608,
+      "pixelY": 232,
+      "worldX": 480,
+      "worldZ": 128,
+      "destinationZoneId": 311,
+      "destinationName": "S.S. Aqua",
+      "destinationPixelX": 272,
+      "destinationPixelY": 280,
+      "anchor": 0
+    },
+    {
+      "id": "w8",
+      "pixelX": 704,
+      "pixelY": 232,
+      "worldX": 576,
+      "worldZ": 128,
+      "destinationZoneId": 311,
+      "destinationName": "S.S. Aqua",
+      "destinationPixelX": 496,
+      "destinationPixelY": 280,
+      "anchor": 1
+    },
+    {
+      "id": "w9",
+      "pixelX": 512,
+      "pixelY": 152,
+      "worldX": 384,
+      "worldZ": 48,
+      "destinationZoneId": 329,
+      "destinationName": "S.S. Aqua",
+      "destinationPixelX": 512,
+      "destinationPixelY": 168,
+      "anchor": 0
+    },
+    {
+      "id": "w10",
+      "pixelX": 800,
+      "pixelY": 248,
+      "worldX": 672,
+      "worldZ": 144,
+      "destinationZoneId": 329,
+      "destinationName": "S.S. Aqua",
+      "destinationPixelX": 800,
+      "destinationPixelY": 264,
+      "anchor": 1
+    },
+    {
+      "id": "w11",
+      "pixelX": 912,
+      "pixelY": 344,
+      "worldX": 784,
+      "worldZ": 240,
+      "destinationZoneId": 308,
+      "destinationName": "S.S. Aqua",
+      "destinationPixelX": 272,
+      "destinationPixelY": 280,
+      "anchor": 0
+    },
+    {
+      "id": "w12",
+      "pixelX": 512,
+      "pixelY": 408,
+      "worldX": 384,
+      "worldZ": 304,
+      "destinationZoneId": 387,
+      "destinationName": "Vermilion City",
+      "destinationPixelX": 376,
+      "destinationPixelY": 280,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

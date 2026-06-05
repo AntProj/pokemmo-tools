@@ -1,0 +1,67 @@
+{
+  "header": {
+    "id": 26,
+    "name": "Route 18",
+    "mapName": "0026 - Route 18",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 1,
+      "orientation": "Up",
+      "spriteFile": "ow_0121_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 760,
+        "y": 320,
+        "targetPng": "0026 - Route 18.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 36,
+        "yMatrix": 13,
+        "xMap": 15,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 1,
+      "orientation": "Right",
+      "spriteFile": "ow_0121_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 680,
+        "y": 336,
+        "targetPng": "0026 - Route 18.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 36,
+        "yMatrix": 13,
+        "xMap": 10,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 1,
+      "orientation": "Right",
+      "spriteFile": "ow_0179_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 248,
+        "y": 160,
+        "targetPng": "0026 - Route 18.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 35,
+        "yMatrix": 13,
+        "xMap": 15,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

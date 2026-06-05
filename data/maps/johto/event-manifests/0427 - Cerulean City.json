@@ -1,0 +1,200 @@
+{
+  "header": {
+    "id": 427,
+    "name": "Cerulean City",
+    "mapName": "0427 - Cerulean City",
+    "matrixId": 257
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0057_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 217,
+        "y": 352,
+        "targetPng": "0427 - Cerulean City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 13,
+        "yMap": 21,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 1,
+      "orientation": "Right",
+      "spriteFile": "ow_0139_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 121,
+        "y": 272,
+        "targetPng": "0427 - Cerulean City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 7,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 4,
+      "orientation": "Right",
+      "spriteFile": "ow_0139_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 105,
+        "y": 224,
+        "targetPng": "0427 - Cerulean City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 1,
+      "orientation": "Left",
+      "spriteFile": "ow_0139_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 233,
+        "y": 176,
+        "targetPng": "0427 - Cerulean City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 14,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 1,
+      "orientation": "Down",
+      "spriteFile": "ow_0144_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 313,
+        "y": 144,
+        "targetPng": "0427 - Cerulean City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 19,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 1,
+      "orientation": "Right",
+      "spriteFile": "ow_0144_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 297,
+        "y": 304,
+        "targetPng": "0427 - Cerulean City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 18,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0164_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 169,
+        "y": 32,
+        "targetPng": "0427 - Cerulean City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 10,
+        "yMap": 1,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0174_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 169,
+        "y": 320,
+        "targetPng": "0427 - Cerulean City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 10,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0243_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 57,
+        "y": 176,
+        "targetPng": "0427 - Cerulean City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0243_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 73,
+        "y": 176,
+        "targetPng": "0427 - Cerulean City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 4,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

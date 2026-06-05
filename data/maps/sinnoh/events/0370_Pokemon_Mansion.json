@@ -1,0 +1,19 @@
+{
+  "zoneId": 370,
+  "displayName": "Pokémon Mansion",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 264,
+      "pixelY": 168,
+      "worldX": 256,
+      "worldZ": 160,
+      "destinationZoneId": 368,
+      "destinationName": "Pokémon Mansion",
+      "destinationPixelX": 776,
+      "destinationPixelY": 88,
+      "anchor": 4
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,33 @@
+{
+  "zoneId": 396,
+  "displayName": "Route 222",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 72,
+      "pixelY": 136,
+      "worldX": 64,
+      "worldZ": 128,
+      "destinationZoneId": 395,
+      "destinationName": "Route 222",
+      "destinationPixelX": 956,
+      "destinationPixelY": 266,
+      "anchor": 3
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t6",
+      "trainerInstanceId": 326,
+      "pixelX": 72,
+      "pixelY": 64,
+      "trainerId": 832,
+      "trainerName": "Janet",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3831,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

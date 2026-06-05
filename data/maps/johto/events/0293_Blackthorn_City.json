@@ -1,0 +1,31 @@
+{
+  "zoneId": 293,
+  "displayName": "Blackthorn City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 152,
+      "pixelY": 312,
+      "worldX": 128,
+      "worldZ": 304,
+      "destinationZoneId": 89,
+      "destinationName": "Blackthorn City",
+      "destinationPixelX": 552,
+      "destinationPixelY": 784,
+      "anchor": 6
+    },
+    {
+      "id": "w1",
+      "pixelX": 248,
+      "pixelY": 280,
+      "worldX": 224,
+      "worldZ": 272,
+      "destinationZoneId": 369,
+      "destinationName": "Blackthorn City",
+      "destinationPixelX": 248,
+      "destinationPixelY": 168,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

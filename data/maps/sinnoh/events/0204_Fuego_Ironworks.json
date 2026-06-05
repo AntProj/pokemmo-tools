@@ -1,0 +1,43 @@
+{
+  "zoneId": 204,
+  "displayName": "Fuego Ironworks",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 156,
+      "pixelY": 186,
+      "worldX": 2704,
+      "worldZ": 9392,
+      "destinationZoneId": 205,
+      "destinationName": "Fuego Ironworks",
+      "destinationPixelX": 424,
+      "destinationPixelY": 424,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 140,
+      "pixelY": 186,
+      "worldX": 2688,
+      "worldZ": 9392,
+      "destinationZoneId": 205,
+      "destinationName": "Fuego Ironworks",
+      "destinationPixelX": 424,
+      "destinationPixelY": 424,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 172,
+      "pixelY": 186,
+      "worldX": 2720,
+      "worldZ": 9392,
+      "destinationZoneId": 205,
+      "destinationName": "Fuego Ironworks",
+      "destinationPixelX": 424,
+      "destinationPixelY": 424,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

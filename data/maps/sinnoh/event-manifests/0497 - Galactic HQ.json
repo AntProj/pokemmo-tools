@@ -1,0 +1,67 @@
+{
+  "header": {
+    "id": 497,
+    "name": "Galactic HQ",
+    "mapName": "0497 - Galactic HQ",
+    "matrixId": 239
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0027_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 136,
+        "y": 224,
+        "targetPng": "0497 - Galactic HQ.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 8,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0028_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 584,
+        "y": 176,
+        "targetPng": "0497 - Galactic HQ.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 4,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 104,
+        "y": 144,
+        "targetPng": "0497 - Galactic HQ.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

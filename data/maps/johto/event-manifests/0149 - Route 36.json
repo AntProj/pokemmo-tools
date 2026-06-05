@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 149,
+    "name": "Route 36",
+    "mapName": "0149 - Route 36",
+    "matrixId": 70
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0193_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 112,
+        "y": 80,
+        "targetPng": "0149 - Route 36.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0067_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 80,
+        "y": 144,
+        "targetPng": "0149 - Route 36.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 4,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

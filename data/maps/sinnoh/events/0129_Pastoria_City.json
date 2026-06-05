@@ -1,0 +1,19 @@
+{
+  "zoneId": 129,
+  "displayName": "Pastoria City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 72,
+      "pixelY": 136,
+      "worldX": 64,
+      "worldZ": 128,
+      "destinationZoneId": 120,
+      "destinationName": "Pastoria City",
+      "destinationPixelX": 572,
+      "destinationPixelY": 570,
+      "anchor": 4
+    }
+  ],
+  "trainers": []
+}

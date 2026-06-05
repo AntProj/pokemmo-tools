@@ -1,0 +1,219 @@
+{
+  "header": {
+    "id": 199,
+    "name": "Oreburgh Mine",
+    "mapName": "0199 - Oreburgh Mine",
+    "matrixId": 6
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0105_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 301,
+        "y": 470,
+        "targetPng": "0199 - Oreburgh Mine.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 18,
+        "yMap": 28,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0083_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 317,
+        "y": 470,
+        "targetPng": "0199 - Oreburgh Mine.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 19,
+        "yMap": 28,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0083_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 285,
+        "y": 470,
+        "targetPng": "0199 - Oreburgh Mine.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 17,
+        "yMap": 28,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 77,
+        "y": 470,
+        "targetPng": "0199 - Oreburgh Mine.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 4,
+        "yMap": 28,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 429,
+        "y": 406,
+        "targetPng": "0199 - Oreburgh Mine.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 26,
+        "yMap": 24,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 1,
+      "orientation": "Up",
+      "spriteFile": "ow_0038_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 141,
+        "y": 470,
+        "targetPng": "0199 - Oreburgh Mine.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 8,
+        "yMap": 28,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 1,
+      "orientation": "Left",
+      "spriteFile": "ow_0038_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 429,
+        "y": 342,
+        "targetPng": "0199 - Oreburgh Mine.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 26,
+        "yMap": 20,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0038_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 349,
+        "y": 262,
+        "targetPng": "0199 - Oreburgh Mine.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 21,
+        "yMap": 15,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0375_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 205,
+        "y": 470,
+        "targetPng": "0199 - Oreburgh Mine.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 12,
+        "yMap": 28,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0375_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 333,
+        "y": 262,
+        "targetPng": "0199 - Oreburgh Mine.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 20,
+        "yMap": 15,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0375_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 445,
+        "y": 262,
+        "targetPng": "0199 - Oreburgh Mine.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 27,
+        "yMap": 15,
+        "zPositionRaw": 65536
+      }
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "header": {
+    "id": 192,
+    "name": "Goldenrod City",
+    "mapName": "0192 - Goldenrod City",
+    "matrixId": 114
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0132_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 392,
+        "y": 128,
+        "targetPng": "0192 - Goldenrod City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 23,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0132_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 392,
+        "y": 96,
+        "targetPng": "0192 - Goldenrod City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 23,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0141_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 312,
+        "y": 176,
+        "targetPng": "0192 - Goldenrod City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 18,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0117_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 184,
+        "y": 80,
+        "targetPng": "0192 - Goldenrod City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 10,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0137_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 128,
+        "targetPng": "0192 - Goldenrod City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

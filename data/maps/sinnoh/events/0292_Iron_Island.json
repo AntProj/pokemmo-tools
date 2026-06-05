@@ -1,0 +1,46 @@
+{
+  "zoneId": 292,
+  "displayName": "Iron Island",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 40,
+      "pixelY": 56,
+      "worldX": 32,
+      "worldZ": 48,
+      "destinationZoneId": 291,
+      "destinationName": "Iron Island",
+      "destinationPixelX": 264,
+      "destinationPixelY": 424,
+      "anchor": 1
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t2",
+      "trainerInstanceId": 136,
+      "pixelX": 72,
+      "pixelY": 96,
+      "trainerId": 503,
+      "trainerName": "Noel",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3502,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 137,
+      "pixelX": 24,
+      "pixelY": 320,
+      "trainerId": 504,
+      "trainerName": "Braden",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3503,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

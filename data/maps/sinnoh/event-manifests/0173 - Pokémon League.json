@@ -1,0 +1,67 @@
+{
+  "header": {
+    "id": 173,
+    "name": "Pok\u00E9mon League",
+    "mapName": "0173 - Pok\u00E9mon League",
+    "matrixId": 116
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": null,
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 136,
+        "y": 80,
+        "targetPng": "0173 - Pok\u00E9mon League.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 8,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0014_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 56,
+        "y": 112,
+        "targetPng": "0173 - Pok\u00E9mon League.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0013_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 152,
+        "y": 144,
+        "targetPng": "0173 - Pok\u00E9mon League.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 9,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

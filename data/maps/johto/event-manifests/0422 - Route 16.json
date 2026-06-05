@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 422,
+    "name": "Route 16",
+    "mapName": "0422 - Route 16",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0093_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 260,
+        "y": 160,
+        "targetPng": "0422 - Route 16.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 36,
+        "yMatrix": 8,
+        "xMap": 15,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

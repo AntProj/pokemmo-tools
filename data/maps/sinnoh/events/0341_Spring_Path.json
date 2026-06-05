@@ -1,0 +1,31 @@
+{
+  "zoneId": 341,
+  "displayName": "Spring Path",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 428,
+      "pixelY": 666,
+      "worldX": 12192,
+      "worldZ": 11408,
+      "destinationZoneId": 267,
+      "destinationName": "Sendoff Spring",
+      "destinationPixelX": 204,
+      "destinationPixelY": 938,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 444,
+      "pixelY": 666,
+      "worldX": 12208,
+      "worldZ": 11408,
+      "destinationZoneId": 267,
+      "destinationName": "Sendoff Spring",
+      "destinationPixelX": 220,
+      "destinationPixelY": 938,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

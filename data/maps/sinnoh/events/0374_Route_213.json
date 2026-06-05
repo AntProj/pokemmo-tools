@@ -1,0 +1,31 @@
+{
+  "zoneId": 374,
+  "displayName": "Route 213",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 172,
+      "pixelY": 120,
+      "worldX": 160,
+      "worldZ": 112,
+      "destinationZoneId": 373,
+      "destinationName": "Route 213",
+      "destinationPixelX": 120,
+      "destinationPixelY": 232,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 28,
+      "pixelY": 120,
+      "worldX": 16,
+      "worldZ": 112,
+      "destinationZoneId": 120,
+      "destinationName": "Pastoria City",
+      "destinationPixelX": 1020,
+      "destinationPixelY": 202,
+      "anchor": 10
+    }
+  ],
+  "trainers": []
+}

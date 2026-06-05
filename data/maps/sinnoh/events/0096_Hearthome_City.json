@@ -1,0 +1,33 @@
+{
+  "zoneId": 96,
+  "displayName": "Hearthome City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 152,
+      "pixelY": 168,
+      "worldX": 112,
+      "worldZ": 160,
+      "destinationZoneId": 93,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 184,
+      "destinationPixelY": 40,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 24,
+      "pixelX": 152,
+      "pixelY": 112,
+      "trainerId": 340,
+      "trainerName": "Chance",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3339,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

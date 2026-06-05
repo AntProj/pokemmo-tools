@@ -1,0 +1,19 @@
+{
+  "zoneId": 190,
+  "displayName": "Radio Tower",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 325,
+      "pixelY": 307,
+      "worldX": 128,
+      "worldZ": 192,
+      "destinationZoneId": 447,
+      "destinationName": "Radio Tower",
+      "destinationPixelX": 88,
+      "destinationPixelY": 104,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

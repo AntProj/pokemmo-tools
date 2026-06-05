@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 299,
+    "name": "Old Chateau",
+    "mapName": "0299 - Old Chateau",
+    "matrixId": 90
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 56,
+        "y": 80,
+        "targetPng": "0299 - Old Chateau.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

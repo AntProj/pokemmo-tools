@@ -1,0 +1,72 @@
+{
+  "zoneId": 133,
+  "displayName": "Veilstone City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 200,
+      "pixelY": 488,
+      "worldX": 192,
+      "worldZ": 480,
+      "destinationZoneId": 132,
+      "destinationName": "Veilstone City",
+      "destinationPixelX": 216,
+      "destinationPixelY": 576,
+      "anchor": 13
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t2",
+      "trainerInstanceId": 34,
+      "pixelX": 248,
+      "pixelY": 384,
+      "trainerId": 309,
+      "trainerName": "Colby",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3308,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 35,
+      "pixelX": 264,
+      "pixelY": 240,
+      "trainerId": 310,
+      "trainerName": "Darren",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3309,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 36,
+      "pixelX": 40,
+      "pixelY": 160,
+      "trainerId": 312,
+      "trainerName": "Jeffery",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3311,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 37,
+      "pixelX": 184,
+      "pixelY": 224,
+      "trainerId": 311,
+      "trainerName": "Rafael",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3310,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

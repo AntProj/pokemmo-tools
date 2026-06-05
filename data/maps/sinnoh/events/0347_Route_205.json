@@ -1,0 +1,148 @@
+{
+  "zoneId": 347,
+  "displayName": "Route 205",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 236,
+      "pixelY": 90,
+      "worldX": 3296,
+      "worldZ": 9296,
+      "destinationZoneId": 203,
+      "destinationName": "Eterna Forest",
+      "destinationPixelX": 456,
+      "destinationPixelY": 1386,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 252,
+      "pixelY": 90,
+      "worldX": 3312,
+      "worldZ": 9296,
+      "destinationZoneId": 203,
+      "destinationName": "Eterna Forest",
+      "destinationPixelX": 472,
+      "destinationPixelY": 1386,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 364,
+      "pixelY": 298,
+      "worldX": 3424,
+      "worldZ": 9504,
+      "destinationZoneId": 348,
+      "destinationName": "Route 205",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 179,
+      "pixelX": 300,
+      "pixelY": 994,
+      "trainerId": 18,
+      "trainerName": "Daniel",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3017,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 180,
+      "pixelX": 380,
+      "pixelY": 930,
+      "trainerId": 21,
+      "trainerName": "Elizabeth",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3020,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 181,
+      "pixelX": 380,
+      "pixelY": 1138,
+      "trainerId": 16,
+      "trainerName": "Jacob",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3015,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 182,
+      "pixelX": 380,
+      "pixelY": 706,
+      "trainerId": 17,
+      "trainerName": "Siena",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3016,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 183,
+      "pixelX": 268,
+      "pixelY": 562,
+      "trainerId": 19,
+      "trainerName": "Nicholas",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3018,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 184,
+      "pixelX": 252,
+      "pixelY": 370,
+      "trainerId": 20,
+      "trainerName": "Kelsey",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3019,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t20",
+      "trainerInstanceId": 185,
+      "pixelX": 268,
+      "pixelY": 322,
+      "trainerId": 456,
+      "trainerName": "Karina",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3455,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t21",
+      "trainerInstanceId": 186,
+      "pixelX": 236,
+      "pixelY": 802,
+      "trainerId": 377,
+      "trainerName": "Zackary",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3376,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

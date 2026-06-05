@@ -1,0 +1,314 @@
+{
+  "header": {
+    "id": 253,
+    "name": "Amity Square",
+    "mapName": "0253 - Amity Square",
+    "matrixId": 50
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0142_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 172,
+        "y": 752,
+        "targetPng": "0253 - Amity Square.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 10,
+        "yMap": 14,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0142_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 860,
+        "y": 752,
+        "targetPng": "0253 - Amity Square.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 21,
+        "yMap": 14,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 604,
+        "y": 336,
+        "targetPng": "0253 - Amity Square.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 20,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 444,
+        "y": 592,
+        "targetPng": "0253 - Amity Square.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 27,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 732,
+        "y": 688,
+        "targetPng": "0253 - Amity Square.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 13,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_dawn_platinum.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 204,
+        "y": 720,
+        "targetPng": "0253 - Amity Square.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 12,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0008_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 652,
+        "y": 432,
+        "targetPng": "0253 - Amity Square.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 8,
+        "yMap": 26,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0163_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 668,
+        "y": 432,
+        "targetPng": "0253 - Amity Square.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 9,
+        "yMap": 26,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0374_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 604,
+        "y": 208,
+        "targetPng": "0253 - Amity Square.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0011_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 588,
+        "y": 208,
+        "targetPng": "0253 - Amity Square.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 4,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0018_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 284,
+        "y": 544,
+        "targetPng": "0253 - Amity Square.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 17,
+        "yMap": 1,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0069_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 268,
+        "y": 544,
+        "targetPng": "0253 - Amity Square.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 16,
+        "yMap": 1,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 12,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0001_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 764,
+        "y": 496,
+        "targetPng": "0253 - Amity Square.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 15,
+        "yMap": 30,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 13,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0070_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 780,
+        "y": 496,
+        "targetPng": "0253 - Amity Square.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 16,
+        "yMap": 30,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 14,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 668,
+        "y": 160,
+        "targetPng": "0253 - Amity Square.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 9,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 15,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0018_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 332,
+        "y": 224,
+        "targetPng": "0253 - Amity Square.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 20,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "zoneId": 103,
+  "displayName": "Route 36",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 120,
+      "pixelY": 96,
+      "worldX": 80,
+      "worldZ": 32,
+      "destinationZoneId": 40,
+      "destinationName": "Route 36",
+      "destinationPixelX": 1256,
+      "destinationPixelY": 472,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 120,
+      "pixelY": 256,
+      "worldX": 80,
+      "worldZ": 192,
+      "destinationZoneId": 113,
+      "destinationName": "Ruins of Alph",
+      "destinationPixelX": 264,
+      "destinationPixelY": 116,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

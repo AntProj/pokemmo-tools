@@ -1,0 +1,72 @@
+{
+  "zoneId": 403,
+  "displayName": "Route 227",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 72,
+      "pixelY": 744,
+      "worldX": 11840,
+      "worldZ": 4832,
+      "destinationZoneId": 500,
+      "destinationName": "Route 227",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t5",
+      "trainerInstanceId": 342,
+      "pixelX": 328,
+      "pixelY": 848,
+      "trainerId": 564,
+      "trainerName": "Saul",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3563,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t6",
+      "trainerInstanceId": 343,
+      "pixelX": 184,
+      "pixelY": 896,
+      "trainerId": 595,
+      "trainerName": "Felicia",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3594,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t7",
+      "trainerInstanceId": 344,
+      "pixelX": 456,
+      "pixelY": 176,
+      "trainerId": 588,
+      "trainerName": "Griffin",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3587,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t8",
+      "trainerInstanceId": 345,
+      "pixelX": 264,
+      "pixelY": 640,
+      "trainerId": 576,
+      "trainerName": "Mikayla",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3575,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

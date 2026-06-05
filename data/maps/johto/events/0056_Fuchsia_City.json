@@ -1,0 +1,139 @@
+{
+  "zoneId": 56,
+  "displayName": "Fuchsia City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 936,
+      "pixelY": 632,
+      "worldX": 19856,
+      "worldZ": 6752,
+      "destinationZoneId": 392,
+      "destinationName": "Route 15",
+      "destinationPixelX": 32,
+      "destinationPixelY": 120,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 936,
+      "pixelY": 648,
+      "worldX": 19856,
+      "worldZ": 6768,
+      "destinationZoneId": 392,
+      "destinationName": "Route 15",
+      "destinationPixelX": 32,
+      "destinationPixelY": 120,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 328,
+      "pixelY": 1000,
+      "worldX": 19248,
+      "worldZ": 7120,
+      "destinationZoneId": 424,
+      "destinationName": "Route 19",
+      "destinationPixelX": 120,
+      "destinationPixelY": 96,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 344,
+      "pixelY": 1000,
+      "worldX": 19264,
+      "worldZ": 7120,
+      "destinationZoneId": 424,
+      "destinationName": "Route 19",
+      "destinationPixelX": 120,
+      "destinationPixelY": 96,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 232,
+      "pixelY": 536,
+      "worldX": 19152,
+      "worldZ": 6656,
+      "destinationZoneId": 478,
+      "destinationName": "Fuchsia City",
+      "destinationPixelX": 88,
+      "destinationPixelY": 184,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 504,
+      "pixelY": 328,
+      "worldX": 19424,
+      "worldZ": 6448,
+      "destinationZoneId": 479,
+      "destinationName": "Pal Park",
+      "destinationPixelX": 168,
+      "destinationPixelY": 312,
+      "anchor": 0
+    },
+    {
+      "id": "w6",
+      "pixelX": 520,
+      "pixelY": 328,
+      "worldX": 19440,
+      "worldZ": 6448,
+      "destinationZoneId": 479,
+      "destinationName": "Pal Park",
+      "destinationPixelX": 168,
+      "destinationPixelY": 312,
+      "anchor": 0
+    },
+    {
+      "id": "w7",
+      "pixelX": 200,
+      "pixelY": 904,
+      "worldX": 19120,
+      "worldZ": 7024,
+      "destinationZoneId": 480,
+      "destinationName": "Fuchsia City",
+      "destinationPixelX": 240,
+      "destinationPixelY": 504,
+      "anchor": 0
+    },
+    {
+      "id": "w8",
+      "pixelX": 280,
+      "pixelY": 904,
+      "worldX": 19200,
+      "worldZ": 7024,
+      "destinationZoneId": 481,
+      "destinationName": "Fuchsia City",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w9",
+      "pixelX": 424,
+      "pixelY": 904,
+      "worldX": 19344,
+      "worldZ": 7024,
+      "destinationZoneId": 482,
+      "destinationName": "Fuchsia City",
+      "destinationPixelX": 152,
+      "destinationPixelY": 312,
+      "anchor": 0
+    },
+    {
+      "id": "w10",
+      "pixelX": 632,
+      "pixelY": 840,
+      "worldX": 19552,
+      "worldZ": 6960,
+      "destinationZoneId": 483,
+      "destinationName": "Fuchsia City",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

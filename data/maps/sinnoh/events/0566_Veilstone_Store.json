@@ -1,0 +1,31 @@
+{
+  "zoneId": 566,
+  "displayName": "Veilstone Store",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 184,
+      "pixelY": 136,
+      "worldX": 176,
+      "worldZ": 128,
+      "destinationZoneId": 137,
+      "destinationName": "Veilstone Store",
+      "destinationPixelX": 120,
+      "destinationPixelY": 136,
+      "anchor": 3
+    },
+    {
+      "id": "w1",
+      "pixelX": 232,
+      "pixelY": 40,
+      "worldX": 224,
+      "worldZ": 32,
+      "destinationZoneId": 142,
+      "destinationName": "Veilstone Store",
+      "destinationPixelX": 56,
+      "destinationPixelY": 104,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

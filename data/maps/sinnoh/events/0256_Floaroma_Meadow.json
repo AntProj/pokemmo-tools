@@ -1,0 +1,67 @@
+{
+  "zoneId": 256,
+  "displayName": "Floaroma Meadow",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 812,
+      "pixelY": 154,
+      "worldX": 800,
+      "worldZ": 144,
+      "destinationZoneId": 426,
+      "destinationName": "Floaroma Town",
+      "destinationPixelX": 332,
+      "destinationPixelY": 74,
+      "anchor": 5
+    },
+    {
+      "id": "w1",
+      "pixelX": 828,
+      "pixelY": 154,
+      "worldX": 816,
+      "worldZ": 144,
+      "destinationZoneId": 426,
+      "destinationName": "Floaroma Town",
+      "destinationPixelX": 348,
+      "destinationPixelY": 74,
+      "anchor": 6
+    },
+    {
+      "id": "w2",
+      "pixelX": 636,
+      "pixelY": 730,
+      "worldX": 624,
+      "worldZ": 720,
+      "destinationZoneId": 257,
+      "destinationName": "Floaroma Meadow",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 204,
+      "pixelY": 874,
+      "worldX": 192,
+      "worldZ": 864,
+      "destinationZoneId": 426,
+      "destinationName": "Floaroma Town",
+      "destinationPixelX": 44,
+      "destinationPixelY": 538,
+      "anchor": 7
+    },
+    {
+      "id": "w4",
+      "pixelX": 220,
+      "pixelY": 874,
+      "worldX": 208,
+      "worldZ": 864,
+      "destinationZoneId": 426,
+      "destinationName": "Floaroma Town",
+      "destinationPixelX": 60,
+      "destinationPixelY": 538,
+      "anchor": 8
+    }
+  ],
+  "trainers": []
+}

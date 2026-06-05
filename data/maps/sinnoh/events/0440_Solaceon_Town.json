@@ -1,0 +1,19 @@
+{
+  "zoneId": 440,
+  "displayName": "Solaceon Town",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 72,
+      "pixelY": 136,
+      "worldX": 64,
+      "worldZ": 128,
+      "destinationZoneId": 433,
+      "destinationName": "Solaceon Town",
+      "destinationPixelX": 344,
+      "destinationPixelY": 106,
+      "anchor": 3
+    }
+  ],
+  "trainers": []
+}

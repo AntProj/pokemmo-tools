@@ -1,0 +1,31 @@
+{
+  "zoneId": 493,
+  "displayName": "Route 7",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 176,
+      "pixelY": 120,
+      "worldX": 160,
+      "worldZ": 112,
+      "destinationZoneId": 59,
+      "destinationName": "Saffron City",
+      "destinationPixelX": 24,
+      "destinationPixelY": 796,
+      "anchor": 15
+    },
+    {
+      "id": "w1",
+      "pixelX": 32,
+      "pixelY": 120,
+      "worldX": 16,
+      "worldZ": 112,
+      "destinationZoneId": 15,
+      "destinationName": "Route 7",
+      "destinationPixelX": 424,
+      "destinationPixelY": 280,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

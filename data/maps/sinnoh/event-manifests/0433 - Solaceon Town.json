@@ -1,0 +1,409 @@
+{
+  "header": {
+    "id": 433,
+    "name": "Solaceon Town",
+    "mapName": "0433 - Solaceon Town",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0040_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 312,
+        "y": 210,
+        "targetPng": "0433 - Solaceon Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 17,
+        "yMatrix": 20,
+        "xMap": 19,
+        "yMap": 12,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0001_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 306,
+        "targetPng": "0433 - Solaceon Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 17,
+        "yMatrix": 20,
+        "xMap": 7,
+        "yMap": 18,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0039_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 408,
+        "y": 322,
+        "targetPng": "0433 - Solaceon Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 17,
+        "yMatrix": 20,
+        "xMap": 25,
+        "yMap": 19,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0016_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 184,
+        "y": 146,
+        "targetPng": "0433 - Solaceon Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 17,
+        "yMatrix": 20,
+        "xMap": 11,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_3d_brown_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 328,
+        "y": 434,
+        "targetPng": "0433 - Solaceon Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 17,
+        "yMatrix": 20,
+        "xMap": 20,
+        "yMap": 27,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 200,
+        "y": 82,
+        "targetPng": "0433 - Solaceon Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 17,
+        "yMatrix": 20,
+        "xMap": 12,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 408,
+        "y": 258,
+        "targetPng": "0433 - Solaceon Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 17,
+        "yMatrix": 20,
+        "xMap": 25,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0040_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 248,
+        "y": 226,
+        "targetPng": "0433 - Solaceon Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 17,
+        "yMatrix": 20,
+        "xMap": 15,
+        "yMap": 13,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0048_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 232,
+        "y": 322,
+        "targetPng": "0433 - Solaceon Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 17,
+        "yMatrix": 20,
+        "xMap": 14,
+        "yMap": 19,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": null,
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 344,
+        "y": 386,
+        "targetPng": "0433 - Solaceon Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 17,
+        "yMatrix": 20,
+        "xMap": 21,
+        "yMap": 23,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": null,
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 360,
+        "y": 386,
+        "targetPng": "0433 - Solaceon Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 17,
+        "yMatrix": 20,
+        "xMap": 22,
+        "yMap": 23,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": null,
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 376,
+        "y": 386,
+        "targetPng": "0433 - Solaceon Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 17,
+        "yMatrix": 20,
+        "xMap": 23,
+        "yMap": 23,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 12,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": null,
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 392,
+        "y": 386,
+        "targetPng": "0433 - Solaceon Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 17,
+        "yMatrix": 20,
+        "xMap": 24,
+        "yMap": 23,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 13,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_route_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 312,
+        "y": 610,
+        "targetPng": "0433 - Solaceon Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 17,
+        "yMatrix": 21,
+        "xMap": 19,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 14,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0039_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 408,
+        "y": 178,
+        "targetPng": "0433 - Solaceon Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 17,
+        "yMatrix": 20,
+        "xMap": 25,
+        "yMap": 10,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 15,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0373_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 88,
+        "y": 322,
+        "targetPng": "0433 - Solaceon Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 17,
+        "yMatrix": 20,
+        "xMap": 5,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 16,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0373_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 136,
+        "y": 210,
+        "targetPng": "0433 - Solaceon Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 17,
+        "yMatrix": 20,
+        "xMap": 8,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 17,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0371_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 152,
+        "y": 258,
+        "targetPng": "0433 - Solaceon Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 17,
+        "yMatrix": 20,
+        "xMap": 9,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 18,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0127_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 264,
+        "y": 322,
+        "targetPng": "0433 - Solaceon Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 17,
+        "yMatrix": 20,
+        "xMap": 16,
+        "yMap": 19,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 19,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 648,
+        "y": 370,
+        "targetPng": "0433 - Solaceon Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 18,
+        "yMatrix": 20,
+        "xMap": 8,
+        "yMap": 22,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 20,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 808,
+        "y": 226,
+        "targetPng": "0433 - Solaceon Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 18,
+        "yMatrix": 20,
+        "xMap": 18,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "zoneId": 105,
+  "displayName": "Hearthome City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 56,
+      "pixelY": 104,
+      "worldX": 48,
+      "worldZ": 96,
+      "destinationZoneId": 4095,
+      "destinationName": "",
+      "destinationPixelX": null,
+      "destinationPixelY": null,
+      "anchor": 256
+    }
+  ],
+  "trainers": []
+}

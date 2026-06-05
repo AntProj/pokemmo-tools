@@ -1,0 +1,19 @@
+{
+  "zoneId": 348,
+  "displayName": "Route 205",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 72,
+      "pixelY": 136,
+      "worldX": 64,
+      "worldZ": 128,
+      "destinationZoneId": 347,
+      "destinationName": "Route 205",
+      "destinationPixelX": 364,
+      "destinationPixelY": 298,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

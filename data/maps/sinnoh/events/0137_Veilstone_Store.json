@@ -1,0 +1,55 @@
+{
+  "zoneId": 137,
+  "displayName": "Veilstone Store",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 168,
+      "pixelY": 200,
+      "worldX": 160,
+      "worldZ": 192,
+      "destinationZoneId": 132,
+      "destinationName": "Veilstone City",
+      "destinationPixelX": 488,
+      "destinationPixelY": 448,
+      "anchor": 3
+    },
+    {
+      "id": "w1",
+      "pixelX": 200,
+      "pixelY": 136,
+      "worldX": 192,
+      "worldZ": 128,
+      "destinationZoneId": 138,
+      "destinationName": "Veilstone Store",
+      "destinationPixelX": 120,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 248,
+      "pixelY": 40,
+      "worldX": 240,
+      "worldZ": 32,
+      "destinationZoneId": 142,
+      "destinationName": "Veilstone Store",
+      "destinationPixelX": 56,
+      "destinationPixelY": 104,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 120,
+      "pixelY": 136,
+      "worldX": 112,
+      "worldZ": 128,
+      "destinationZoneId": 566,
+      "destinationName": "Veilstone Store",
+      "destinationPixelX": 184,
+      "destinationPixelY": 136,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,122 @@
+{
+  "zoneId": 31,
+  "displayName": "Route 27",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 600,
+      "pixelY": 296,
+      "worldX": 11840,
+      "worldZ": 6336,
+      "destinationZoneId": 126,
+      "destinationName": "Tohjo Falls",
+      "destinationPixelX": 488,
+      "destinationPixelY": 360,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 840,
+      "pixelY": 264,
+      "worldX": 12080,
+      "worldZ": 6304,
+      "destinationZoneId": 126,
+      "destinationName": "Tohjo Falls",
+      "destinationPixelX": 728,
+      "destinationPixelY": 328,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 776,
+      "pixelY": 360,
+      "worldX": 12016,
+      "worldZ": 6400,
+      "destinationZoneId": 322,
+      "destinationName": "Route 27",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t1",
+      "trainerInstanceId": 109,
+      "pixelX": 872,
+      "pixelY": 304,
+      "trainerId": 115,
+      "trainerName": "Megan",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3114,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 110,
+      "pixelX": 1208,
+      "pixelY": 320,
+      "trainerId": 103,
+      "trainerName": "Blake",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3102,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 111,
+      "pixelX": 1384,
+      "pixelY": 496,
+      "trainerId": 414,
+      "trainerName": "Jose",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3413,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 112,
+      "pixelX": 1640,
+      "pixelY": 352,
+      "trainerId": 104,
+      "trainerName": "Brian",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3103,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 113,
+      "pixelX": 2424,
+      "pixelY": 368,
+      "trainerId": 412,
+      "trainerName": "Eli",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3411,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t6",
+      "trainerInstanceId": 114,
+      "pixelX": 2744,
+      "pixelY": 416,
+      "trainerId": 114,
+      "trainerName": "Reena",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3113,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

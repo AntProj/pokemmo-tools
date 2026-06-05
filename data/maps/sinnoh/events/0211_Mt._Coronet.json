@@ -1,0 +1,43 @@
+{
+  "zoneId": 211,
+  "displayName": "Mt. Coronet",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 280,
+      "pixelY": 664,
+      "worldX": 192,
+      "worldZ": 560,
+      "destinationZoneId": 209,
+      "destinationName": "Mt. Coronet",
+      "destinationPixelX": 56,
+      "destinationPixelY": 472,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 264,
+      "pixelY": 376,
+      "worldX": 176,
+      "worldZ": 272,
+      "destinationZoneId": 212,
+      "destinationName": "Mt. Coronet",
+      "destinationPixelX": 120,
+      "destinationPixelY": 408,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 712,
+      "pixelY": 392,
+      "worldX": 624,
+      "worldZ": 288,
+      "destinationZoneId": 212,
+      "destinationName": "Mt. Coronet",
+      "destinationPixelX": 568,
+      "destinationPixelY": 392,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

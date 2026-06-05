@@ -1,0 +1,31 @@
+{
+  "zoneId": 254,
+  "displayName": "Ravaged Path",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 312,
+      "pixelY": 808,
+      "worldX": 304,
+      "worldZ": 800,
+      "destinationZoneId": 345,
+      "destinationName": "Route 204",
+      "destinationPixelX": 188,
+      "destinationPixelY": 42,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 456,
+      "pixelY": 712,
+      "worldX": 448,
+      "worldZ": 704,
+      "destinationZoneId": 346,
+      "destinationName": "Route 204",
+      "destinationPixelX": 332,
+      "destinationPixelY": 426,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

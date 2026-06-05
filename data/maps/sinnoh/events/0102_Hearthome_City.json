@@ -1,0 +1,31 @@
+{
+  "zoneId": 102,
+  "displayName": "Hearthome City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 40,
+      "pixelY": 168,
+      "worldX": 32,
+      "worldZ": 160,
+      "destinationZoneId": 101,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 40,
+      "destinationPixelY": 168,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 136,
+      "pixelY": 40,
+      "worldX": 128,
+      "worldZ": 32,
+      "destinationZoneId": 466,
+      "destinationName": "Mystery Zone",
+      "destinationPixelX": 136,
+      "destinationPixelY": 232,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

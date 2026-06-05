@@ -1,0 +1,19 @@
+{
+  "zoneId": 286,
+  "displayName": "Ruin Maniac Cave",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 104,
+      "pixelY": 120,
+      "worldX": 96,
+      "worldZ": 112,
+      "destinationZoneId": 380,
+      "destinationName": "Route 214",
+      "destinationPixelX": 152,
+      "destinationPixelY": 500,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

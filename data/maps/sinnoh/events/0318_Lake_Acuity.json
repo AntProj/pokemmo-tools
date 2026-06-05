@@ -1,0 +1,67 @@
+{
+  "zoneId": 318,
+  "displayName": "Lake Acuity",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 184,
+      "pixelY": 810,
+      "worldX": 176,
+      "worldZ": 800,
+      "destinationZoneId": 340,
+      "destinationName": "Acuity Lakefront",
+      "destinationPixelX": 332,
+      "destinationPixelY": 602,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 520,
+      "pixelY": 522,
+      "worldX": 512,
+      "worldZ": 512,
+      "destinationZoneId": 319,
+      "destinationName": "Acuity Cavern",
+      "destinationPixelX": 232,
+      "destinationPixelY": 472,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 200,
+      "pixelY": 810,
+      "worldX": 192,
+      "worldZ": 800,
+      "destinationZoneId": 340,
+      "destinationName": "Acuity Lakefront",
+      "destinationPixelX": 348,
+      "destinationPixelY": 602,
+      "anchor": 1
+    },
+    {
+      "id": "w3",
+      "pixelX": 232,
+      "pixelY": 810,
+      "worldX": 224,
+      "worldZ": 800,
+      "destinationZoneId": 340,
+      "destinationName": "Acuity Lakefront",
+      "destinationPixelX": 332,
+      "destinationPixelY": 602,
+      "anchor": 2
+    },
+    {
+      "id": "w4",
+      "pixelX": 248,
+      "pixelY": 810,
+      "worldX": 240,
+      "worldZ": 800,
+      "destinationZoneId": 340,
+      "destinationName": "Acuity Lakefront",
+      "destinationPixelX": 348,
+      "destinationPixelY": 602,
+      "anchor": 3
+    }
+  ],
+  "trainers": []
+}

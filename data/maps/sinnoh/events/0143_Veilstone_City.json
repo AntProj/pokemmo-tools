@@ -1,0 +1,31 @@
+{
+  "zoneId": 143,
+  "displayName": "Veilstone City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 136,
+      "pixelY": 184,
+      "worldX": 128,
+      "worldZ": 176,
+      "destinationZoneId": 132,
+      "destinationName": "Veilstone City",
+      "destinationPixelX": 488,
+      "destinationPixelY": 256,
+      "anchor": 4
+    },
+    {
+      "id": "w1",
+      "pixelX": 216,
+      "pixelY": 56,
+      "worldX": 208,
+      "worldZ": 48,
+      "destinationZoneId": 310,
+      "destinationName": "Galactic HQ",
+      "destinationPixelX": 56,
+      "destinationPixelY": 264,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

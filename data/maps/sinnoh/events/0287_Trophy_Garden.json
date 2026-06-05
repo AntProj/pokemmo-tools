@@ -1,0 +1,31 @@
+{
+  "zoneId": 287,
+  "displayName": "Trophy Garden",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 232,
+      "pixelY": 456,
+      "worldX": 224,
+      "worldZ": 400,
+      "destinationZoneId": 368,
+      "destinationName": "Pokémon Mansion",
+      "destinationPixelX": 536,
+      "destinationPixelY": 40,
+      "anchor": 5
+    },
+    {
+      "id": "w1",
+      "pixelX": 248,
+      "pixelY": 456,
+      "worldX": 240,
+      "worldZ": 400,
+      "destinationZoneId": 368,
+      "destinationName": "Pokémon Mansion",
+      "destinationPixelX": 536,
+      "destinationPixelY": 40,
+      "anchor": 5
+    }
+  ],
+  "trainers": []
+}

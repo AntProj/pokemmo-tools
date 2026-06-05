@@ -1,0 +1,119 @@
+{
+  "zoneId": 222,
+  "displayName": "Lighthouse",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 263,
+      "pixelY": 135,
+      "worldX": 208,
+      "worldZ": 112,
+      "destinationZoneId": 220,
+      "destinationName": "Lighthouse",
+      "destinationPixelX": 232,
+      "destinationPixelY": 104,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 215,
+      "pixelY": 135,
+      "worldX": 160,
+      "worldZ": 112,
+      "destinationZoneId": 223,
+      "destinationName": "Lighthouse",
+      "destinationPixelX": 215,
+      "destinationPixelY": 135,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 215,
+      "pixelY": 119,
+      "worldX": 160,
+      "worldZ": 96,
+      "destinationZoneId": 223,
+      "destinationName": "Lighthouse",
+      "destinationPixelX": 215,
+      "destinationPixelY": 135,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 151,
+      "pixelY": 135,
+      "worldX": 96,
+      "worldZ": 112,
+      "destinationZoneId": 223,
+      "destinationName": "Lighthouse",
+      "destinationPixelX": 151,
+      "destinationPixelY": 135,
+      "anchor": 1
+    },
+    {
+      "id": "w4",
+      "pixelX": 151,
+      "pixelY": 119,
+      "worldX": 96,
+      "worldZ": 96,
+      "destinationZoneId": 223,
+      "destinationName": "Lighthouse",
+      "destinationPixelX": 151,
+      "destinationPixelY": 135,
+      "anchor": 1
+    },
+    {
+      "id": "w5",
+      "pixelX": 183,
+      "pixelY": 311,
+      "worldX": 128,
+      "worldZ": 288,
+      "destinationZoneId": 221,
+      "destinationName": "Lighthouse",
+      "destinationPixelX": 156,
+      "destinationPixelY": 264,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 320,
+      "pixelX": 231,
+      "pixelY": 239,
+      "trainerId": 213,
+      "trainerName": "Kent",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3212,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 321,
+      "pixelX": 71,
+      "pixelY": 159,
+      "trainerId": 217,
+      "trainerName": "Denis",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3216,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 322,
+      "pixelX": 247,
+      "pixelY": 95,
+      "trainerId": 73,
+      "trainerName": "Theo",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3072,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

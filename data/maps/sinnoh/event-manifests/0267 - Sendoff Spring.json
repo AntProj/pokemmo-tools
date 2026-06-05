@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 267,
+    "name": "Sendoff Spring",
+    "mapName": "0267 - Sendoff Spring",
+    "matrixId": 60
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0117_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 508,
+        "y": 322,
+        "targetPng": "0267 - Sendoff Spring.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 31,
+        "yMap": 17,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

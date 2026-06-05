@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 491,
+    "name": "Ruins of Alph",
+    "mapName": "0491 - Ruins of Alph",
+    "matrixId": 181
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0126_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 376,
+        "y": 432,
+        "targetPng": "0491 - Ruins of Alph.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 23,
+        "yMap": 26,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

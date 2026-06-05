@@ -1,0 +1,79 @@
+{
+  "zoneId": 208,
+  "displayName": "Mt. Coronet",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 440,
+      "pixelY": 776,
+      "worldX": 432,
+      "worldZ": 768,
+      "destinationZoneId": 207,
+      "destinationName": "Mt. Coronet",
+      "destinationPixelX": 408,
+      "destinationPixelY": 56,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 40,
+      "pixelY": 952,
+      "worldX": 32,
+      "worldZ": 944,
+      "destinationZoneId": 353,
+      "destinationName": "Route 207",
+      "destinationPixelX": 968,
+      "destinationPixelY": 218,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 120,
+      "pixelY": 376,
+      "worldX": 112,
+      "worldZ": 368,
+      "destinationZoneId": 208,
+      "destinationName": "Mt. Coronet",
+      "destinationPixelX": 120,
+      "destinationPixelY": 200,
+      "anchor": 3
+    },
+    {
+      "id": "w3",
+      "pixelX": 120,
+      "pixelY": 200,
+      "worldX": 112,
+      "worldZ": 192,
+      "destinationZoneId": 208,
+      "destinationName": "Mt. Coronet",
+      "destinationPixelX": 120,
+      "destinationPixelY": 376,
+      "anchor": 2
+    },
+    {
+      "id": "w4",
+      "pixelX": 184,
+      "pixelY": 72,
+      "worldX": 176,
+      "worldZ": 64,
+      "destinationZoneId": 209,
+      "destinationName": "Mt. Coronet",
+      "destinationPixelX": 232,
+      "destinationPixelY": 424,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 344,
+      "pixelY": 72,
+      "worldX": 336,
+      "worldZ": 64,
+      "destinationZoneId": 209,
+      "destinationName": "Mt. Coronet",
+      "destinationPixelX": 296,
+      "destinationPixelY": 424,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,19 @@
+{
+  "zoneId": 64,
+  "displayName": "Oreburgh City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 72,
+      "pixelY": 136,
+      "worldX": 64,
+      "worldZ": 128,
+      "destinationZoneId": 45,
+      "destinationName": "Oreburgh City",
+      "destinationPixelX": 824,
+      "destinationPixelY": 584,
+      "anchor": 9
+    }
+  ],
+  "trainers": []
+}

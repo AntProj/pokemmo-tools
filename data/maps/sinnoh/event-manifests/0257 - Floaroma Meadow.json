@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 257,
+    "name": "Floaroma Meadow",
+    "mapName": "0257 - Floaroma Meadow",
+    "matrixId": 123
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0019_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 88,
+        "y": 64,
+        "targetPng": "0257 - Floaroma Meadow.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0000_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 104,
+        "y": 112,
+        "targetPng": "0257 - Floaroma Meadow.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

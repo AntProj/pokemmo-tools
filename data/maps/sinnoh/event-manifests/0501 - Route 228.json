@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 501,
+    "name": "Route 228",
+    "mapName": "0501 - Route 228",
+    "matrixId": 258
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0007_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 92,
+        "y": 144,
+        "targetPng": "0501 - Route 228.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0013_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 124,
+        "y": 112,
+        "targetPng": "0501 - Route 228.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 7,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

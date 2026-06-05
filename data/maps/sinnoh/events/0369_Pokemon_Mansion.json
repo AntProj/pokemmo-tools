@@ -1,0 +1,43 @@
+{
+  "zoneId": 369,
+  "displayName": "Pokémon Mansion",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 328,
+      "pixelY": 152,
+      "worldX": 320,
+      "worldZ": 144,
+      "destinationZoneId": 368,
+      "destinationName": "Pokémon Mansion",
+      "destinationPixelX": 344,
+      "destinationPixelY": 88,
+      "anchor": 3
+    },
+    {
+      "id": "w1",
+      "pixelX": 72,
+      "pixelY": 152,
+      "worldX": 64,
+      "worldZ": 144,
+      "destinationZoneId": 368,
+      "destinationName": "Pokémon Mansion",
+      "destinationPixelX": 88,
+      "destinationPixelY": 88,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 200,
+      "pixelY": 152,
+      "worldX": 192,
+      "worldZ": 144,
+      "destinationZoneId": 368,
+      "destinationName": "Pokémon Mansion",
+      "destinationPixelX": 216,
+      "destinationPixelY": 88,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

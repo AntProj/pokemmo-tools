@@ -1,0 +1,135 @@
+{
+  "zoneId": 367,
+  "displayName": "Route 212",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 172,
+      "pixelY": 72,
+      "worldX": 7328,
+      "worldZ": 11776,
+      "destinationZoneId": 111,
+      "destinationName": "Route 212",
+      "destinationPixelX": 88,
+      "destinationPixelY": 200,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 188,
+      "pixelY": 72,
+      "worldX": 7344,
+      "worldZ": 11776,
+      "destinationZoneId": 111,
+      "destinationName": "Route 212",
+      "destinationPixelX": 88,
+      "destinationPixelY": 200,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 364,
+      "pixelY": 648,
+      "worldX": 7520,
+      "worldZ": 12352,
+      "destinationZoneId": 368,
+      "destinationName": "Pokémon Mansion",
+      "destinationPixelX": 536,
+      "destinationPixelY": 264,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 250,
+      "pixelX": 396,
+      "pixelY": 784,
+      "trainerId": 82,
+      "trainerName": "Jason",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3081,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 251,
+      "pixelX": 428,
+      "pixelY": 784,
+      "trainerId": 83,
+      "trainerName": "Melissa",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3082,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 252,
+      "pixelX": 124,
+      "pixelY": 1040,
+      "trainerId": 84,
+      "trainerName": "Jeremy",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3083,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 253,
+      "pixelX": 172,
+      "pixelY": 1040,
+      "trainerId": 85,
+      "trainerName": "Reina",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3084,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 254,
+      "pixelX": 172,
+      "pixelY": 448,
+      "trainerId": 88,
+      "trainerName": "Bobby",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3087,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 255,
+      "pixelX": 172,
+      "pixelY": 736,
+      "trainerId": 89,
+      "trainerName": "Alex",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3088,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t7",
+      "trainerInstanceId": 256,
+      "pixelX": 300,
+      "pixelY": 1056,
+      "trainerId": 102,
+      "trainerName": "Caleb",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3101,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

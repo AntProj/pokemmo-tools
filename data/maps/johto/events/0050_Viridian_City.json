@@ -1,0 +1,91 @@
+{
+  "zoneId": 50,
+  "displayName": "Viridian City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 856,
+      "pixelY": 264,
+      "worldX": 16720,
+      "worldZ": 3824,
+      "destinationZoneId": 496,
+      "destinationName": "Viridian City",
+      "destinationPixelX": 104,
+      "destinationPixelY": 760,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 680,
+      "pixelY": 344,
+      "worldX": 16544,
+      "worldZ": 3904,
+      "destinationZoneId": 497,
+      "destinationName": "Viridian City",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 712,
+      "pixelY": 488,
+      "worldX": 16576,
+      "worldZ": 4048,
+      "destinationZoneId": 498,
+      "destinationName": "Viridian City",
+      "destinationPixelX": 208,
+      "destinationPixelY": 344,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 808,
+      "pixelY": 488,
+      "worldX": 16672,
+      "worldZ": 4048,
+      "destinationZoneId": 500,
+      "destinationName": "Viridian City",
+      "destinationPixelX": 88,
+      "destinationPixelY": 184,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 648,
+      "pixelY": 632,
+      "worldX": 16512,
+      "worldZ": 4192,
+      "destinationZoneId": 501,
+      "destinationName": "Viridian City",
+      "destinationPixelX": 152,
+      "destinationPixelY": 312,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 712,
+      "pixelY": 920,
+      "worldX": 16576,
+      "worldZ": 4480,
+      "destinationZoneId": 527,
+      "destinationName": "Route 1",
+      "destinationPixelX": 120,
+      "destinationPixelY": 96,
+      "anchor": 1
+    },
+    {
+      "id": "w6",
+      "pixelX": 728,
+      "pixelY": 920,
+      "worldX": 16592,
+      "worldZ": 4480,
+      "destinationZoneId": 527,
+      "destinationName": "Route 1",
+      "destinationPixelX": 120,
+      "destinationPixelY": 96,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

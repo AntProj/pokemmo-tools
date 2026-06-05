@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 377,
+    "name": "Grand Lake",
+    "mapName": "0377 - Grand Lake",
+    "matrixId": 146
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0080_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 136,
+        "y": 96,
+        "targetPng": "0377 - Grand Lake.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 8,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

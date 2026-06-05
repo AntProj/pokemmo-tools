@@ -1,0 +1,103 @@
+{
+  "zoneId": 452,
+  "displayName": "Rock Tunnel",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 136,
+      "pixelY": 552,
+      "worldX": 128,
+      "worldZ": 544,
+      "destinationZoneId": 108,
+      "destinationName": "Rock Tunnel",
+      "destinationPixelX": 136,
+      "destinationPixelY": 552,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 168,
+      "pixelY": 312,
+      "worldX": 160,
+      "worldZ": 304,
+      "destinationZoneId": 108,
+      "destinationName": "Rock Tunnel",
+      "destinationPixelX": 168,
+      "destinationPixelY": 296,
+      "anchor": 3
+    },
+    {
+      "id": "w2",
+      "pixelX": 136,
+      "pixelY": 120,
+      "worldX": 128,
+      "worldZ": 112,
+      "destinationZoneId": 108,
+      "destinationName": "Rock Tunnel",
+      "destinationPixelX": 136,
+      "destinationPixelY": 120,
+      "anchor": 4
+    },
+    {
+      "id": "w3",
+      "pixelX": 600,
+      "pixelY": 296,
+      "worldX": 592,
+      "worldZ": 288,
+      "destinationZoneId": 108,
+      "destinationName": "Rock Tunnel",
+      "destinationPixelX": 600,
+      "destinationPixelY": 280,
+      "anchor": 5
+    },
+    {
+      "id": "w4",
+      "pixelX": 136,
+      "pixelY": 536,
+      "worldX": 128,
+      "worldZ": 528,
+      "destinationZoneId": 108,
+      "destinationName": "Rock Tunnel",
+      "destinationPixelX": 136,
+      "destinationPixelY": 552,
+      "anchor": 2
+    },
+    {
+      "id": "w5",
+      "pixelX": 168,
+      "pixelY": 296,
+      "worldX": 160,
+      "worldZ": 288,
+      "destinationZoneId": 108,
+      "destinationName": "Rock Tunnel",
+      "destinationPixelX": 168,
+      "destinationPixelY": 296,
+      "anchor": 3
+    },
+    {
+      "id": "w6",
+      "pixelX": 136,
+      "pixelY": 104,
+      "worldX": 128,
+      "worldZ": 96,
+      "destinationZoneId": 108,
+      "destinationName": "Rock Tunnel",
+      "destinationPixelX": 136,
+      "destinationPixelY": 120,
+      "anchor": 4
+    },
+    {
+      "id": "w7",
+      "pixelX": 600,
+      "pixelY": 280,
+      "worldX": 592,
+      "worldZ": 272,
+      "destinationZoneId": 108,
+      "destinationName": "Rock Tunnel",
+      "destinationPixelX": 600,
+      "destinationPixelY": 280,
+      "anchor": 5
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,19 @@
+{
+  "zoneId": 446,
+  "displayName": "Lighthouse",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 88,
+      "pixelY": 104,
+      "worldX": 48,
+      "worldZ": 96,
+      "destinationZoneId": 4095,
+      "destinationName": "Mt. Coronet",
+      "destinationPixelX": null,
+      "destinationPixelY": null,
+      "anchor": 256
+    }
+  ],
+  "trainers": []
+}

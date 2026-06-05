@@ -1,0 +1,86 @@
+{
+  "header": {
+    "id": 53,
+    "name": "Lavender Town",
+    "mapName": "0053 - Lavender Town",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0123_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 464,
+        "targetPng": "0053 - Lavender Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 44,
+        "yMatrix": 7,
+        "xMap": 7,
+        "yMap": 28,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0067_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 104,
+        "y": 336,
+        "targetPng": "0053 - Lavender Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 44,
+        "yMatrix": 7,
+        "xMap": 6,
+        "yMap": 20,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0128_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 424,
+        "y": 416,
+        "targetPng": "0053 - Lavender Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 44,
+        "yMatrix": 7,
+        "xMap": 26,
+        "yMap": 25,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0126_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 296,
+        "y": 256,
+        "targetPng": "0053 - Lavender Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 44,
+        "yMatrix": 7,
+        "xMap": 18,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

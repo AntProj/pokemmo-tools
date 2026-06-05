@@ -1,0 +1,19 @@
+{
+  "zoneId": 514,
+  "displayName": "Iron Island",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 72,
+      "pixelY": 136,
+      "worldX": 64,
+      "worldZ": 128,
+      "destinationZoneId": 288,
+      "destinationName": "Iron Island",
+      "destinationPixelX": 269,
+      "destinationPixelY": 376,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,31 @@
+{
+  "zoneId": 285,
+  "displayName": "Wayward Cave",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 696,
+      "pixelY": 616,
+      "worldX": 688,
+      "worldZ": 608,
+      "destinationZoneId": 284,
+      "destinationName": "Wayward Cave",
+      "destinationPixelX": 888,
+      "destinationPixelY": 872,
+      "anchor": 3
+    },
+    {
+      "id": "w1",
+      "pixelX": 264,
+      "pixelY": 648,
+      "worldX": 256,
+      "worldZ": 640,
+      "destinationZoneId": 284,
+      "destinationName": "Wayward Cave",
+      "destinationPixelX": 456,
+      "destinationPixelY": 872,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

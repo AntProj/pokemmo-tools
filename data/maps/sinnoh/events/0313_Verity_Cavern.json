@@ -1,0 +1,19 @@
+{
+  "zoneId": 313,
+  "displayName": "Verity Cavern",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 244,
+      "pixelY": 472,
+      "worldX": 224,
+      "worldZ": 464,
+      "destinationZoneId": 312,
+      "destinationName": "Lake Verity",
+      "destinationPixelX": 524,
+      "destinationPixelY": 522,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

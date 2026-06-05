@@ -1,0 +1,19 @@
+{
+  "zoneId": 116,
+  "displayName": "Poffin House",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 136,
+      "pixelY": 216,
+      "worldX": 128,
+      "worldZ": 208,
+      "destinationZoneId": 86,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 408,
+      "destinationPixelY": 618,
+      "anchor": 10
+    }
+  ],
+  "trainers": []
+}

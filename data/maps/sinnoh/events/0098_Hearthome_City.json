@@ -1,0 +1,33 @@
+{
+  "zoneId": 98,
+  "displayName": "Hearthome City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 152,
+      "pixelY": 168,
+      "worldX": 112,
+      "worldZ": 160,
+      "destinationZoneId": 95,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 104,
+      "destinationPixelY": 40,
+      "anchor": 1
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 26,
+      "pixelX": 152,
+      "pixelY": 112,
+      "trainerId": 280,
+      "trainerName": "Allen",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3279,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

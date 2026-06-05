@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 294,
+    "name": "Iron Island",
+    "mapName": "0294 - Iron Island",
+    "matrixId": 85
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 280,
+        "y": 128,
+        "targetPng": "0294 - Iron Island.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 14,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

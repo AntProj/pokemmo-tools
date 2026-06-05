@@ -1,0 +1,84 @@
+{
+  "zoneId": 310,
+  "displayName": "S.S. Aqua",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 272,
+      "pixelY": 136,
+      "worldX": 144,
+      "worldZ": 32,
+      "destinationZoneId": 307,
+      "destinationName": "S.S. Aqua",
+      "destinationPixelX": 336,
+      "destinationPixelY": 328,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 496,
+      "pixelY": 136,
+      "worldX": 368,
+      "worldZ": 32,
+      "destinationZoneId": 307,
+      "destinationName": "S.S. Aqua",
+      "destinationPixelX": 432,
+      "destinationPixelY": 328,
+      "anchor": 2
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 345,
+      "pixelX": 464,
+      "pixelY": 240,
+      "trainerId": 235,
+      "trainerName": "Noland",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3234,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 346,
+      "pixelX": 208,
+      "pixelY": 176,
+      "trainerId": 236,
+      "trainerName": "Shaye",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3235,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 347,
+      "pixelX": 288,
+      "pixelY": 240,
+      "trainerId": 237,
+      "trainerName": "Carol",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3236,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 348,
+      "pixelX": 288,
+      "pixelY": 256,
+      "trainerId": 133,
+      "trainerName": "Morgan",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3132,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

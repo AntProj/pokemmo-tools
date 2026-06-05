@@ -1,0 +1,43 @@
+{
+  "zoneId": 289,
+  "displayName": "Iron Island",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 104,
+      "pixelY": 136,
+      "worldX": 96,
+      "worldZ": 128,
+      "destinationZoneId": 288,
+      "destinationName": "Iron Island",
+      "destinationPixelX": 365,
+      "destinationPixelY": 216,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 72,
+      "pixelY": 56,
+      "worldX": 64,
+      "worldZ": 48,
+      "destinationZoneId": 290,
+      "destinationName": "Iron Island",
+      "destinationPixelX": 248,
+      "destinationPixelY": 56,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 136,
+      "pixelY": 56,
+      "worldX": 128,
+      "worldZ": 48,
+      "destinationZoneId": 291,
+      "destinationName": "Iron Island",
+      "destinationPixelX": 40,
+      "destinationPixelY": 56,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

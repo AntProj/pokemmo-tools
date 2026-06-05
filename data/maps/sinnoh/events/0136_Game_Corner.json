@@ -1,0 +1,19 @@
+{
+  "zoneId": 136,
+  "displayName": "Game Corner",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 88,
+      "pixelY": 184,
+      "worldX": 80,
+      "worldZ": 176,
+      "destinationZoneId": 132,
+      "destinationName": "Veilstone City",
+      "destinationPixelX": 568,
+      "destinationPixelY": 768,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

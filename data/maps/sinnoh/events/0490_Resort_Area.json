@@ -1,0 +1,19 @@
+{
+  "zoneId": 490,
+  "displayName": "Resort Area",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 232,
+      "pixelY": 168,
+      "worldX": 224,
+      "worldZ": 160,
+      "destinationZoneId": 459,
+      "destinationName": "Resort Area",
+      "destinationPixelX": 232,
+      "destinationPixelY": 168,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

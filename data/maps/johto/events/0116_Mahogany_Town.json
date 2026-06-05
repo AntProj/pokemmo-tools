@@ -1,0 +1,31 @@
+{
+  "zoneId": 116,
+  "displayName": "Mahogany Town",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 120,
+      "pixelY": 168,
+      "worldX": 80,
+      "worldZ": 144,
+      "destinationZoneId": 87,
+      "destinationName": "Mahogany Town",
+      "destinationPixelX": 360,
+      "destinationPixelY": 252,
+      "anchor": 5
+    },
+    {
+      "id": "w1",
+      "pixelX": 136,
+      "pixelY": 72,
+      "worldX": 96,
+      "worldZ": 48,
+      "destinationZoneId": 247,
+      "destinationName": "Team Rocket HQ",
+      "destinationPixelX": 824,
+      "destinationPixelY": 160,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

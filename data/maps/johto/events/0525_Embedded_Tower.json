@@ -1,0 +1,19 @@
+{
+  "zoneId": 525,
+  "displayName": "Embedded Tower",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 264,
+      "pixelY": 472,
+      "worldX": 256,
+      "worldZ": 464,
+      "destinationZoneId": 151,
+      "destinationName": "Route 47",
+      "destinationPixelX": 376,
+      "destinationPixelY": 616,
+      "anchor": 5
+    }
+  ],
+  "trainers": []
+}

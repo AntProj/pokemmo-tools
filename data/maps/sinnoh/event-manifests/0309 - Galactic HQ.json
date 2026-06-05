@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 309,
+    "name": "Galactic HQ",
+    "mapName": "0309 - Galactic HQ",
+    "matrixId": 100
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0103_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 88,
+        "y": 128,
+        "targetPng": "0309 - Galactic HQ.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "zoneId": 323,
+  "displayName": "Battle Park",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 88,
+      "pixelY": 280,
+      "worldX": 80,
+      "worldZ": 272,
+      "destinationZoneId": 322,
+      "destinationName": "Battle Park",
+      "destinationPixelX": 332,
+      "destinationPixelY": 545,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 344,
+      "pixelY": 280,
+      "worldX": 336,
+      "worldZ": 272,
+      "destinationZoneId": 322,
+      "destinationName": "Battle Park",
+      "destinationPixelX": 476,
+      "destinationPixelY": 545,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

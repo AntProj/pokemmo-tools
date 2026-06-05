@@ -1,0 +1,145 @@
+{
+  "zoneId": 147,
+  "displayName": "Viridian Forest",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 536,
+      "pixelY": 1256,
+      "worldX": 512,
+      "worldZ": 1232,
+      "destinationZoneId": 419,
+      "destinationName": "Route 2",
+      "destinationPixelX": 120,
+      "destinationPixelY": 96,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 216,
+      "pixelY": 264,
+      "worldX": 192,
+      "worldZ": 240,
+      "destinationZoneId": 420,
+      "destinationName": "Route 2",
+      "destinationPixelX": 120,
+      "destinationPixelY": 256,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 552,
+      "pixelY": 1256,
+      "worldX": 528,
+      "worldZ": 1232,
+      "destinationZoneId": 419,
+      "destinationName": "Route 2",
+      "destinationPixelX": 120,
+      "destinationPixelY": 96,
+      "anchor": 1
+    },
+    {
+      "id": "w3",
+      "pixelX": 232,
+      "pixelY": 264,
+      "worldX": 208,
+      "worldZ": 240,
+      "destinationZoneId": 420,
+      "destinationName": "Route 2",
+      "destinationPixelX": 120,
+      "destinationPixelY": 256,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 216,
+      "pixelY": 280,
+      "worldX": 192,
+      "worldZ": 256,
+      "destinationZoneId": 420,
+      "destinationName": "Route 2",
+      "destinationPixelX": 120,
+      "destinationPixelY": 256,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 232,
+      "pixelY": 280,
+      "worldX": 208,
+      "worldZ": 256,
+      "destinationZoneId": 420,
+      "destinationName": "Route 2",
+      "destinationPixelX": 120,
+      "destinationPixelY": 256,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t7",
+      "trainerInstanceId": 262,
+      "pixelX": 792,
+      "pixelY": 1200,
+      "trainerId": 695,
+      "trainerName": "Dane",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3694,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t8",
+      "trainerInstanceId": 263,
+      "pixelX": 776,
+      "pixelY": 896,
+      "trainerId": 696,
+      "trainerName": "Dion",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3695,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t9",
+      "trainerInstanceId": 264,
+      "pixelX": 776,
+      "pixelY": 656,
+      "trainerId": 697,
+      "trainerName": "Stacey",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3696,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t10",
+      "trainerInstanceId": 265,
+      "pixelX": 616,
+      "pixelY": 304,
+      "trainerId": 698,
+      "trainerName": "Ellis",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3697,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t11",
+      "trainerInstanceId": 266,
+      "pixelX": 248,
+      "pixelY": 480,
+      "trainerId": 699,
+      "trainerName": "Abner",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3698,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "zoneId": 326,
+  "displayName": "Battle Tower",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 360,
+      "pixelY": 312,
+      "worldX": 240,
+      "worldZ": 304,
+      "destinationZoneId": 559,
+      "destinationName": "Battle Frontier",
+      "destinationPixelX": 776,
+      "destinationPixelY": 288,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 344,
+      "pixelY": 312,
+      "worldX": 224,
+      "worldZ": 304,
+      "destinationZoneId": 559,
+      "destinationName": "Battle Frontier",
+      "destinationPixelX": 776,
+      "destinationPixelY": 288,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 376,
+      "pixelY": 312,
+      "worldX": 256,
+      "worldZ": 304,
+      "destinationZoneId": 559,
+      "destinationName": "Battle Frontier",
+      "destinationPixelX": 776,
+      "destinationPixelY": 288,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,19 @@
+{
+  "zoneId": 290,
+  "displayName": "Blackthorn City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 104,
+      "pixelY": 136,
+      "worldX": 64,
+      "worldZ": 128,
+      "destinationZoneId": 89,
+      "destinationName": "Blackthorn City",
+      "destinationPixelX": 712,
+      "destinationPixelY": 656,
+      "anchor": 4
+    }
+  ],
+  "trainers": []
+}

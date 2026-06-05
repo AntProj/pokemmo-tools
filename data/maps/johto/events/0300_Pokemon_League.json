@@ -1,0 +1,43 @@
+{
+  "zoneId": 300,
+  "displayName": "Pokémon League",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 232,
+      "pixelY": 464,
+      "worldX": 176,
+      "worldZ": 400,
+      "destinationZoneId": 58,
+      "destinationName": "Indigo Plateau",
+      "destinationPixelX": 264,
+      "destinationPixelY": 146,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 232,
+      "pixelY": 176,
+      "worldX": 176,
+      "worldZ": 112,
+      "destinationZoneId": 301,
+      "destinationName": "Pokémon League",
+      "destinationPixelX": 239,
+      "destinationPixelY": 360,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 376,
+      "pixelY": 448,
+      "worldX": 320,
+      "worldZ": 384,
+      "destinationZoneId": 539,
+      "destinationName": "Pokémon League",
+      "destinationPixelX": 248,
+      "destinationPixelY": 168,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

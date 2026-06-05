@@ -1,0 +1,70 @@
+{
+  "zoneId": 224,
+  "displayName": "Lighthouse",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 119,
+      "pixelY": 103,
+      "worldX": 64,
+      "worldZ": 80,
+      "destinationZoneId": 223,
+      "destinationName": "Lighthouse",
+      "destinationPixelX": 103,
+      "destinationPixelY": 103,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 215,
+      "pixelY": 183,
+      "worldX": 160,
+      "worldZ": 160,
+      "destinationZoneId": 225,
+      "destinationName": "Lighthouse",
+      "destinationPixelX": 323,
+      "destinationPixelY": 274,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 215,
+      "pixelY": 167,
+      "worldX": 160,
+      "worldZ": 144,
+      "destinationZoneId": 225,
+      "destinationName": "Lighthouse",
+      "destinationPixelX": 323,
+      "destinationPixelY": 274,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 325,
+      "pixelX": 151,
+      "pixelY": 175,
+      "trainerId": 212,
+      "trainerName": "Terrell",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3211,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 326,
+      "pixelX": 263,
+      "pixelY": 143,
+      "trainerId": 214,
+      "trainerName": "Roberto",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3213,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

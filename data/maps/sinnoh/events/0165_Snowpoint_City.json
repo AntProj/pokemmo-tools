@@ -1,0 +1,91 @@
+{
+  "zoneId": 165,
+  "displayName": "Snowpoint City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 28,
+      "pixelY": 268,
+      "worldX": 5648,
+      "worldZ": 3328,
+      "destinationZoneId": 170,
+      "destinationName": "Snowpoint City",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 444,
+      "pixelY": 268,
+      "worldX": 6064,
+      "worldZ": 3328,
+      "destinationZoneId": 171,
+      "destinationName": "Snowpoint City",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 236,
+      "pixelY": 92,
+      "worldX": 5856,
+      "worldZ": 3152,
+      "destinationZoneId": 278,
+      "destinationName": "Snowpoint Temple",
+      "destinationPixelX": 136,
+      "destinationPixelY": 216,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 28,
+      "pixelY": 652,
+      "worldX": 5648,
+      "worldZ": 3712,
+      "destinationZoneId": 166,
+      "destinationName": "Snowpoint City",
+      "destinationPixelX": 56,
+      "destinationPixelY": 184,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 444,
+      "pixelY": 668,
+      "worldX": 6064,
+      "worldZ": 3728,
+      "destinationZoneId": 168,
+      "destinationName": "Snowpoint City",
+      "destinationPixelX": 136,
+      "destinationPixelY": 200,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 252,
+      "pixelY": 492,
+      "worldX": 5872,
+      "worldZ": 3552,
+      "destinationZoneId": 167,
+      "destinationName": "Snowpoint City",
+      "destinationPixelX": 184,
+      "destinationPixelY": 456,
+      "anchor": 0
+    },
+    {
+      "id": "w6",
+      "pixelX": 252,
+      "pixelY": 92,
+      "worldX": 5872,
+      "worldZ": 3152,
+      "destinationZoneId": 278,
+      "destinationName": "Snowpoint Temple",
+      "destinationPixelX": 136,
+      "destinationPixelY": 216,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

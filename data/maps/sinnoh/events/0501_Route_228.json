@@ -1,0 +1,31 @@
+{
+  "zoneId": 501,
+  "displayName": "Route 228",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 28,
+      "pixelY": 120,
+      "worldX": 16,
+      "worldZ": 112,
+      "destinationZoneId": 469,
+      "destinationName": "Route 226",
+      "destinationPixelX": 1532,
+      "destinationPixelY": 170,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 172,
+      "pixelY": 120,
+      "worldX": 160,
+      "worldZ": 112,
+      "destinationZoneId": 406,
+      "destinationName": "Route 228",
+      "destinationPixelX": 120,
+      "destinationPixelY": 168,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

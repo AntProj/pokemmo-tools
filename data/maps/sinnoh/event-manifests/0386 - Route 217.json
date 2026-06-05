@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 386,
+    "name": "Route 217",
+    "mapName": "0386 - Route 217",
+    "matrixId": 124
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0019_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 72,
+        "y": 96,
+        "targetPng": "0386 - Route 217.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 4,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

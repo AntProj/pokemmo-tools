@@ -1,0 +1,124 @@
+{
+  "header": {
+    "id": 14,
+    "name": "Route 6",
+    "mapName": "0014 - Route 6",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 1,
+      "orientation": "Right",
+      "spriteFile": "ow_0141_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 200,
+        "y": 292,
+        "targetPng": "0014 - Route 6.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 40,
+        "yMatrix": 8,
+        "xMap": 11,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 1,
+      "orientation": "Right",
+      "spriteFile": "ow_0142_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 264,
+        "y": 500,
+        "targetPng": "0014 - Route 6.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 40,
+        "yMatrix": 8,
+        "xMap": 15,
+        "yMap": 29,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 1,
+      "orientation": "Up",
+      "spriteFile": "ow_0114_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 392,
+        "y": 324,
+        "targetPng": "0014 - Route 6.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 40,
+        "yMatrix": 8,
+        "xMap": 23,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 1,
+      "orientation": "Up",
+      "spriteFile": "ow_0114_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 408,
+        "y": 324,
+        "targetPng": "0014 - Route 6.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 40,
+        "yMatrix": 8,
+        "xMap": 24,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0126_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 488,
+        "y": 196,
+        "targetPng": "0014 - Route 6.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 40,
+        "yMatrix": 8,
+        "xMap": 29,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 200,
+        "y": 452,
+        "targetPng": "0014 - Route 6.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 40,
+        "yMatrix": 8,
+        "xMap": 11,
+        "yMap": 26,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

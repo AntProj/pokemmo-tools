@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 333,
+    "name": "Bell Tower",
+    "mapName": "0333 - Bell Tower",
+    "matrixId": 17
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 104,
+        "y": 416,
+        "targetPng": "0333 - Bell Tower.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 25,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

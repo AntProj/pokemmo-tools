@@ -1,0 +1,59 @@
+{
+  "zoneId": 12,
+  "displayName": "Route 4",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 184,
+      "pixelY": 264,
+      "worldX": 19120,
+      "worldZ": 1792,
+      "destinationZoneId": 107,
+      "destinationName": "Mt. Moon",
+      "destinationPixelX": 376,
+      "destinationPixelY": 392,
+      "anchor": 1
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 20,
+      "pixelX": 488,
+      "pixelY": 320,
+      "trainerId": 152,
+      "trainerName": "Hope",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3151,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 21,
+      "pixelX": 1064,
+      "pixelY": 272,
+      "trainerId": 153,
+      "trainerName": "Sharon",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3152,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 22,
+      "pixelX": 840,
+      "pixelY": 336,
+      "trainerId": 299,
+      "trainerName": "Hank",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3298,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

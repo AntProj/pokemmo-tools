@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 302,
+    "name": "Old Chateau",
+    "mapName": "0302 - Old Chateau",
+    "matrixId": 93
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 328,
+        "y": 80,
+        "targetPng": "0302 - Old Chateau.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 20,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0001_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 328,
+        "y": 96,
+        "targetPng": "0302 - Old Chateau.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 20,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

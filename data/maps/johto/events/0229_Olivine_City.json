@@ -1,0 +1,19 @@
+{
+  "zoneId": 229,
+  "displayName": "Olivine City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 104,
+      "pixelY": 136,
+      "worldX": 64,
+      "worldZ": 128,
+      "destinationZoneId": 77,
+      "destinationName": "Olivine City",
+      "destinationPixelX": 600,
+      "destinationPixelY": 296,
+      "anchor": 7
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 455,
+    "name": "Survival Area",
+    "mapName": "0455 - Survival Area",
+    "matrixId": 125
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0049_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 72,
+        "y": 96,
+        "targetPng": "0455 - Survival Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 4,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

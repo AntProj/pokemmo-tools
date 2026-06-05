@@ -1,0 +1,19 @@
+{
+  "zoneId": 523,
+  "displayName": "Sinjoh Ruins",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 104,
+      "pixelY": 136,
+      "worldX": 64,
+      "worldZ": 128,
+      "destinationZoneId": 521,
+      "destinationName": "Sinjoh Ruins",
+      "destinationPixelX": 360,
+      "destinationPixelY": 480,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

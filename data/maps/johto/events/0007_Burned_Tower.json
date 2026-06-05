@@ -1,0 +1,58 @@
+{
+  "zoneId": 7,
+  "displayName": "Burned Tower",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 248,
+      "pixelY": 424,
+      "worldX": 240,
+      "worldZ": 416,
+      "destinationZoneId": 78,
+      "destinationName": "Ecruteak City",
+      "destinationPixelX": 408,
+      "destinationPixelY": 360,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 360,
+      "pixelY": 264,
+      "worldX": 352,
+      "worldZ": 256,
+      "destinationZoneId": 217,
+      "destinationName": "Burned Tower",
+      "destinationPixelX": 376,
+      "destinationPixelY": 264,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t3",
+      "trainerInstanceId": 1,
+      "pixelX": 104,
+      "pixelY": 160,
+      "trainerId": 281,
+      "trainerName": "Richard",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3280,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 2,
+      "pixelX": 360,
+      "pixelY": 144,
+      "trainerId": 282,
+      "trainerName": "Ned",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3281,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

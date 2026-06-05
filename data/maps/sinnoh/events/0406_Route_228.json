@@ -1,0 +1,171 @@
+{
+  "zoneId": 406,
+  "displayName": "Route 228",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 120,
+      "pixelY": 184,
+      "worldX": 12384,
+      "worldZ": 5296,
+      "destinationZoneId": 501,
+      "destinationName": "Route 228",
+      "destinationPixelX": 172,
+      "destinationPixelY": 120,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 120,
+      "pixelY": 168,
+      "worldX": 12384,
+      "worldZ": 5280,
+      "destinationZoneId": 501,
+      "destinationName": "Route 228",
+      "destinationPixelX": 172,
+      "destinationPixelY": 120,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 360,
+      "pixelY": 584,
+      "worldX": 12624,
+      "worldZ": 5696,
+      "destinationZoneId": 502,
+      "destinationName": "Route 228",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 136,
+      "pixelY": 1064,
+      "worldX": 12400,
+      "worldZ": 6176,
+      "destinationZoneId": 503,
+      "destinationName": "Route 228",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 296,
+      "pixelY": 328,
+      "worldX": 12560,
+      "worldZ": 5440,
+      "destinationZoneId": 591,
+      "destinationName": "Route 228",
+      "destinationPixelX": 168,
+      "destinationPixelY": 248,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 296,
+      "pixelY": 328,
+      "worldX": 12560,
+      "worldZ": 5440,
+      "destinationZoneId": 592,
+      "destinationName": "Rock Peak Ruins",
+      "destinationPixelX": 168,
+      "destinationPixelY": 248,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t15",
+      "trainerInstanceId": 346,
+      "pixelX": 200,
+      "pixelY": 96,
+      "trainerId": 565,
+      "trainerName": "Jose",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3564,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t16",
+      "trainerInstanceId": 347,
+      "pixelX": 104,
+      "pixelY": 432,
+      "trainerId": 574,
+      "trainerName": "Moira",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3573,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t17",
+      "trainerInstanceId": 348,
+      "pixelX": 360,
+      "pixelY": 896,
+      "trainerId": 591,
+      "trainerName": "Kyler",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3590,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t18",
+      "trainerInstanceId": 349,
+      "pixelX": 312,
+      "pixelY": 896,
+      "trainerId": 596,
+      "trainerName": "Krista",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3595,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t19",
+      "trainerInstanceId": 350,
+      "pixelX": 472,
+      "pixelY": 128,
+      "trainerId": 559,
+      "trainerName": "Keegan",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3558,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t20",
+      "trainerInstanceId": 351,
+      "pixelX": 296,
+      "pixelY": 1264,
+      "trainerId": 583,
+      "trainerName": "Corbin",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3582,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t21",
+      "trainerInstanceId": 352,
+      "pixelX": 456,
+      "pixelY": 1200,
+      "trainerId": 577,
+      "trainerName": "Meagan",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3576,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

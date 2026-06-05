@@ -1,0 +1,19 @@
+{
+  "zoneId": 451,
+  "displayName": "Survival Area",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 56,
+      "pixelY": 184,
+      "worldX": 48,
+      "worldZ": 176,
+      "destinationZoneId": 450,
+      "destinationName": "Survival Area",
+      "destinationPixelX": 380,
+      "destinationPixelY": 296,
+      "anchor": 4
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,96 @@
+{
+  "zoneId": 187,
+  "displayName": "Radio Tower",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 96,
+      "pixelY": 104,
+      "worldX": 48,
+      "worldZ": 80,
+      "destinationZoneId": 186,
+      "destinationName": "Radio Tower",
+      "destinationPixelX": 96,
+      "destinationPixelY": 120,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 240,
+      "pixelY": 104,
+      "worldX": 192,
+      "worldZ": 80,
+      "destinationZoneId": 188,
+      "destinationName": "Radio Tower",
+      "destinationPixelX": 240,
+      "destinationPixelY": 120,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 352,
+      "pixelY": 104,
+      "worldX": 304,
+      "worldZ": 80,
+      "destinationZoneId": 188,
+      "destinationName": "Radio Tower",
+      "destinationPixelX": 352,
+      "destinationPixelY": 120,
+      "anchor": 2
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 297,
+      "pixelX": 192,
+      "pixelY": 112,
+      "trainerId": 189,
+      "trainerName": "Grunt",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3188,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 298,
+      "pixelX": 320,
+      "pixelY": 224,
+      "trainerId": 190,
+      "trainerName": "Grunt",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3189,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 299,
+      "pixelX": 256,
+      "pixelY": 256,
+      "trainerId": 471,
+      "trainerName": "Garett",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3470,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t6",
+      "trainerInstanceId": 300,
+      "pixelX": 384,
+      "pixelY": 144,
+      "trainerId": 191,
+      "trainerName": "Grunt",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3190,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

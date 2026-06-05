@@ -1,0 +1,238 @@
+{
+  "header": {
+    "id": 442,
+    "name": "Celestic Town",
+    "mapName": "0442 - Celestic Town",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0016_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 344,
+        "y": 128,
+        "targetPng": "0442 - Celestic Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 16,
+        "xMap": 21,
+        "yMap": 6,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0000_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 104,
+        "y": 496,
+        "targetPng": "0442 - Celestic Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 16,
+        "xMap": 6,
+        "yMap": 29,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0103_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 248,
+        "y": 192,
+        "targetPng": "0442 - Celestic Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 16,
+        "xMap": 15,
+        "yMap": 10,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0017_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 232,
+        "y": 448,
+        "targetPng": "0442 - Celestic Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 16,
+        "xMap": 14,
+        "yMap": 26,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0117_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 296,
+        "y": 192,
+        "targetPng": "0442 - Celestic Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 16,
+        "xMap": 18,
+        "yMap": 10,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_brown_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 296,
+        "y": 416,
+        "targetPng": "0442 - Celestic Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 16,
+        "xMap": 18,
+        "yMap": 25,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_route_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 648,
+        "y": 288,
+        "targetPng": "0442 - Celestic Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 16,
+        "xMap": 8,
+        "yMap": 17,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_route_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": -120,
+        "y": 240,
+        "targetPng": "0442 - Celestic Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 13,
+        "yMatrix": 16,
+        "xMap": 24,
+        "yMap": 14,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0013_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 104,
+        "y": 96,
+        "targetPng": "0442 - Celestic Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 16,
+        "xMap": 6,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0161_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 456,
+        "y": 512,
+        "targetPng": "0442 - Celestic Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 16,
+        "xMap": 28,
+        "yMap": 30,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0161_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 360,
+        "y": 512,
+        "targetPng": "0442 - Celestic Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 16,
+        "xMap": 22,
+        "yMap": 30,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 344,
+        "y": 368,
+        "targetPng": "0442 - Celestic Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 16,
+        "xMap": 21,
+        "yMap": 21,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

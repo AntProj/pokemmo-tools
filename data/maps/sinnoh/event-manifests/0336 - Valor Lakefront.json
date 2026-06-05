@@ -1,0 +1,238 @@
+{
+  "header": {
+    "id": 336,
+    "name": "Valor Lakefront",
+    "mapName": "0336 - Valor Lakefront",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0117_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 828,
+        "y": 402,
+        "targetPng": "0336 - Valor Lakefront.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 23,
+        "xMap": 19,
+        "yMap": 24,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0021_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 748,
+        "y": 402,
+        "targetPng": "0336 - Valor Lakefront.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 23,
+        "xMap": 14,
+        "yMap": 24,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0021_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 748,
+        "y": 418,
+        "targetPng": "0336 - Valor Lakefront.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 23,
+        "xMap": 14,
+        "yMap": 25,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 652,
+        "y": 770,
+        "targetPng": "0336 - Valor Lakefront.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 24,
+        "xMap": 8,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 732,
+        "y": 210,
+        "targetPng": "0336 - Valor Lakefront.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 23,
+        "xMap": 13,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0103_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 764,
+        "y": 882,
+        "targetPng": "0336 - Valor Lakefront.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 24,
+        "xMap": 15,
+        "yMap": 22,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0012_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 364,
+        "y": 1106,
+        "targetPng": "0336 - Valor Lakefront.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 21,
+        "yMatrix": 25,
+        "xMap": 22,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 524,
+        "y": 898,
+        "targetPng": "0336 - Valor Lakefront.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 24,
+        "xMap": 0,
+        "yMap": 24,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0012_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 700,
+        "y": 754,
+        "targetPng": "0336 - Valor Lakefront.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 24,
+        "xMap": 11,
+        "yMap": 14,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0018_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 844,
+        "y": 850,
+        "targetPng": "0336 - Valor Lakefront.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 24,
+        "xMap": 20,
+        "yMap": 20,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0127_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 828,
+        "y": 674,
+        "targetPng": "0336 - Valor Lakefront.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 24,
+        "xMap": 19,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 652,
+        "y": 722,
+        "targetPng": "0336 - Valor Lakefront.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 22,
+        "yMatrix": 24,
+        "xMap": 8,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

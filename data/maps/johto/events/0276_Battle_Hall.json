@@ -1,0 +1,43 @@
+{
+  "zoneId": 276,
+  "displayName": "Battle Hall",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 408,
+      "pixelY": 152,
+      "worldX": 400,
+      "worldZ": 144,
+      "destinationZoneId": 272,
+      "destinationName": "Battle Frontier",
+      "destinationPixelX": 376,
+      "destinationPixelY": 560,
+      "anchor": 13
+    },
+    {
+      "id": "w1",
+      "pixelX": 408,
+      "pixelY": 136,
+      "worldX": 400,
+      "worldZ": 128,
+      "destinationZoneId": 272,
+      "destinationName": "Battle Frontier",
+      "destinationPixelX": 376,
+      "destinationPixelY": 560,
+      "anchor": 13
+    },
+    {
+      "id": "w2",
+      "pixelX": 408,
+      "pixelY": 168,
+      "worldX": 400,
+      "worldZ": 160,
+      "destinationZoneId": 272,
+      "destinationName": "Battle Frontier",
+      "destinationPixelX": 376,
+      "destinationPixelY": 560,
+      "anchor": 13
+    }
+  ],
+  "trainers": []
+}

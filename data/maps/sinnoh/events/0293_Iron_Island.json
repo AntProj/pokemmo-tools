@@ -1,0 +1,136 @@
+{
+  "zoneId": 293,
+  "displayName": "Iron Island",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 616,
+      "pixelY": 56,
+      "worldX": 608,
+      "worldZ": 48,
+      "destinationZoneId": 291,
+      "destinationName": "Iron Island",
+      "destinationPixelX": 104,
+      "destinationPixelY": 424,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 232,
+      "pixelY": 776,
+      "worldX": 224,
+      "worldZ": 768,
+      "destinationZoneId": 294,
+      "destinationName": "Iron Island",
+      "destinationPixelX": 280,
+      "destinationPixelY": 248,
+      "anchor": 1
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t7",
+      "trainerInstanceId": 138,
+      "pixelX": 424,
+      "pixelY": 48,
+      "trainerId": 452,
+      "trainerName": "Damon",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3451,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t8",
+      "trainerInstanceId": 139,
+      "pixelX": 344,
+      "pixelY": 80,
+      "trainerId": 453,
+      "trainerName": "Maurice",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3452,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t9",
+      "trainerInstanceId": 140,
+      "pixelX": 584,
+      "pixelY": 304,
+      "trainerId": 445,
+      "trainerName": "Kendal",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3444,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t10",
+      "trainerInstanceId": 141,
+      "pixelX": 584,
+      "pixelY": 352,
+      "trainerId": 372,
+      "trainerName": "Tyler",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3371,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t11",
+      "trainerInstanceId": 142,
+      "pixelX": 248,
+      "pixelY": 416,
+      "trainerId": 505,
+      "trainerName": "Brendon",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3504,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t12",
+      "trainerInstanceId": 143,
+      "pixelX": 232,
+      "pixelY": 464,
+      "trainerId": 506,
+      "trainerName": "Quentin",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3505,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t13",
+      "trainerInstanceId": 144,
+      "pixelX": 376,
+      "pixelY": 512,
+      "trainerId": 388,
+      "trainerName": "Jonah",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3387,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t14",
+      "trainerInstanceId": 145,
+      "pixelX": 440,
+      "pixelY": 512,
+      "trainerId": 392,
+      "trainerName": "Brenda",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3391,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

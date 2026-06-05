@@ -1,0 +1,110 @@
+{
+  "zoneId": 353,
+  "displayName": "Route 207",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 856,
+      "pixelY": 138,
+      "worldX": 5456,
+      "worldZ": 11392,
+      "destinationZoneId": 207,
+      "destinationName": "Mt. Coronet",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 968,
+      "pixelY": 218,
+      "worldX": 5568,
+      "worldZ": 11472,
+      "destinationZoneId": 208,
+      "destinationName": "Mt. Coronet",
+      "destinationPixelX": 40,
+      "destinationPixelY": 952,
+      "anchor": 1
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 199,
+      "pixelX": 520,
+      "pixelY": 210,
+      "trainerId": 34,
+      "trainerName": "Anthony",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3033,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 200,
+      "pixelX": 520,
+      "pixelY": 114,
+      "trainerId": 35,
+      "trainerName": "Lauren",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3034,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 201,
+      "pixelX": 600,
+      "pixelY": 354,
+      "trainerId": 33,
+      "trainerName": "Austin",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3032,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 202,
+      "pixelX": 664,
+      "pixelY": 194,
+      "trainerId": 37,
+      "trainerName": "Justin",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3036,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 203,
+      "pixelX": 504,
+      "pixelY": 290,
+      "trainerId": 36,
+      "trainerName": "Kevin",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3035,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 204,
+      "pixelX": 776,
+      "pixelY": 306,
+      "trainerId": 38,
+      "trainerName": "Helen",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3037,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

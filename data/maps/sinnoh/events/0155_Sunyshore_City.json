@@ -1,0 +1,71 @@
+{
+  "zoneId": 155,
+  "displayName": "Sunyshore City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 152,
+      "pixelY": 344,
+      "worldX": 144,
+      "worldZ": 336,
+      "destinationZoneId": 154,
+      "destinationName": "Sunyshore City",
+      "destinationPixelX": 136,
+      "destinationPixelY": 40,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 152,
+      "pixelY": 40,
+      "worldX": 144,
+      "worldZ": 32,
+      "destinationZoneId": 156,
+      "destinationName": "Sunyshore City",
+      "destinationPixelX": 184,
+      "destinationPixelY": 408,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 39,
+      "pixelX": 72,
+      "pixelY": 96,
+      "trainerId": 341,
+      "trainerName": "Forrest",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3340,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 40,
+      "pixelX": 232,
+      "pixelY": 192,
+      "trainerId": 301,
+      "trainerName": "Jerry",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3300,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 41,
+      "pixelX": 200,
+      "pixelY": 80,
+      "trainerId": 331,
+      "trainerName": "Meghan",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3330,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "zoneId": 298,
+  "displayName": "Old Chateau",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 312,
+      "pixelY": 112,
+      "worldX": 304,
+      "worldZ": 80,
+      "destinationZoneId": 295,
+      "destinationName": "Old Chateau",
+      "destinationPixelX": 152,
+      "destinationPixelY": 48,
+      "anchor": 3
+    },
+    {
+      "id": "w1",
+      "pixelX": 72,
+      "pixelY": 64,
+      "worldX": 64,
+      "worldZ": 32,
+      "destinationZoneId": 299,
+      "destinationName": "Old Chateau",
+      "destinationPixelX": 72,
+      "destinationPixelY": 120,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 184,
+      "pixelY": 64,
+      "worldX": 176,
+      "worldZ": 32,
+      "destinationZoneId": 300,
+      "destinationName": "Old Chateau",
+      "destinationPixelX": 184,
+      "destinationPixelY": 120,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 312,
+      "pixelY": 64,
+      "worldX": 304,
+      "worldZ": 32,
+      "destinationZoneId": 301,
+      "destinationName": "Old Chateau",
+      "destinationPixelX": 200,
+      "destinationPixelY": 120,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 440,
+      "pixelY": 64,
+      "worldX": 432,
+      "worldZ": 32,
+      "destinationZoneId": 302,
+      "destinationName": "Old Chateau",
+      "destinationPixelX": 216,
+      "destinationPixelY": 120,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 552,
+      "pixelY": 64,
+      "worldX": 544,
+      "worldZ": 32,
+      "destinationZoneId": 303,
+      "destinationName": "Old Chateau",
+      "destinationPixelX": 168,
+      "destinationPixelY": 120,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

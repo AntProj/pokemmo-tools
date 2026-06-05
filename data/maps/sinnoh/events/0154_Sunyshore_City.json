@@ -1,0 +1,45 @@
+{
+  "zoneId": 154,
+  "displayName": "Sunyshore City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 136,
+      "pixelY": 232,
+      "worldX": 128,
+      "worldZ": 224,
+      "destinationZoneId": 150,
+      "destinationName": "Sunyshore City",
+      "destinationPixelX": 220,
+      "destinationPixelY": 184,
+      "anchor": 12
+    },
+    {
+      "id": "w1",
+      "pixelX": 136,
+      "pixelY": 40,
+      "worldX": 128,
+      "worldZ": 32,
+      "destinationZoneId": 155,
+      "destinationName": "Sunyshore City",
+      "destinationPixelX": 152,
+      "destinationPixelY": 344,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t1",
+      "trainerInstanceId": 38,
+      "pixelX": 104,
+      "pixelY": 80,
+      "trainerId": 344,
+      "trainerName": "Tiera",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3343,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 499,
+    "name": "Route 226",
+    "mapName": "0499 - Route 226",
+    "matrixId": 244
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0019_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 40,
+        "y": 96,
+        "targetPng": "0499 - Route 226.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 2,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

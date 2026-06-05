@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 510,
+    "name": "Hall of Origin",
+    "mapName": "0510 - Hall of Origin",
+    "matrixId": 241
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0135_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 504,
+        "y": 448,
+        "targetPng": "0510 - Hall of Origin.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 31,
+        "yMap": 27,
+        "zPositionRaw": 1048576
+      }
+    }
+  ]
+}

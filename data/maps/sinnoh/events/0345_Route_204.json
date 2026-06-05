@@ -1,0 +1,59 @@
+{
+  "zoneId": 345,
+  "displayName": "Route 204",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 188,
+      "pixelY": 42,
+      "worldX": 2736,
+      "worldZ": 11280,
+      "destinationZoneId": 254,
+      "destinationName": "Ravaged Path",
+      "destinationPixelX": 312,
+      "destinationPixelY": 808,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 172,
+      "pixelX": 204,
+      "pixelY": 370,
+      "trainerId": 12,
+      "trainerName": "Sarah",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3011,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 173,
+      "pixelX": 188,
+      "pixelY": 162,
+      "trainerId": 11,
+      "trainerName": "Samantha",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3010,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 174,
+      "pixelX": 124,
+      "pixelY": 322,
+      "trainerId": 10,
+      "trainerName": "Tyler",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3009,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

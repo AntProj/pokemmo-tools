@@ -1,0 +1,31 @@
+{
+  "zoneId": 61,
+  "displayName": "Oreburgh City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 184,
+      "pixelY": 200,
+      "worldX": 176,
+      "worldZ": 192,
+      "destinationZoneId": 45,
+      "destinationName": "Oreburgh City",
+      "destinationPixelX": 904,
+      "destinationPixelY": 456,
+      "anchor": 7
+    },
+    {
+      "id": "w1",
+      "pixelX": 248,
+      "pixelY": 56,
+      "worldX": 240,
+      "worldZ": 48,
+      "destinationZoneId": 62,
+      "destinationName": "Oreburgh City",
+      "destinationPixelX": 136,
+      "destinationPixelY": 56,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,71 @@
+{
+  "zoneId": 349,
+  "displayName": "Route 205",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 60,
+      "pixelY": 218,
+      "worldX": 4144,
+      "worldZ": 8400,
+      "destinationZoneId": 203,
+      "destinationName": "Eterna Forest",
+      "destinationPixelX": 1384,
+      "destinationPixelY": 602,
+      "anchor": 3
+    },
+    {
+      "id": "w1",
+      "pixelX": 60,
+      "pixelY": 202,
+      "worldX": 4144,
+      "worldZ": 8384,
+      "destinationZoneId": 203,
+      "destinationName": "Eterna Forest",
+      "destinationPixelX": 1384,
+      "destinationPixelY": 586,
+      "anchor": 2
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 187,
+      "pixelX": 300,
+      "pixelY": 322,
+      "trainerId": 22,
+      "trainerName": "Andrew",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3021,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 188,
+      "pixelX": 236,
+      "pixelY": 338,
+      "trainerId": 23,
+      "trainerName": "Joseph",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3022,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 189,
+      "pixelX": 348,
+      "pixelY": 386,
+      "trainerId": 24,
+      "trainerName": "Zachary",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3023,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

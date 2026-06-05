@@ -1,0 +1,43 @@
+{
+  "zoneId": 197,
+  "displayName": "Goldenrod City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 147,
+      "pixelY": 296,
+      "worldX": 96,
+      "worldZ": 288,
+      "destinationZoneId": 76,
+      "destinationName": "Goldenrod City",
+      "destinationPixelX": 968,
+      "destinationPixelY": 500,
+      "anchor": 9
+    },
+    {
+      "id": "w1",
+      "pixelX": 99,
+      "pixelY": 56,
+      "worldX": 48,
+      "worldZ": 48,
+      "destinationZoneId": 519,
+      "destinationName": "Goldenrod City",
+      "destinationPixelX": 168,
+      "destinationPixelY": 232,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 99,
+      "pixelY": 72,
+      "worldX": 48,
+      "worldZ": 64,
+      "destinationZoneId": 519,
+      "destinationName": "Goldenrod City",
+      "destinationPixelX": 168,
+      "destinationPixelY": 232,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

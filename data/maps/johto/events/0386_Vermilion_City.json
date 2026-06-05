@@ -1,0 +1,31 @@
+{
+  "zoneId": 386,
+  "displayName": "Vermilion City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 240,
+      "pixelY": 136,
+      "worldX": 112,
+      "worldZ": 32,
+      "destinationZoneId": 54,
+      "destinationName": "Vermilion City",
+      "destinationPixelX": 472,
+      "destinationPixelY": 856,
+      "anchor": 7
+    },
+    {
+      "id": "w1",
+      "pixelX": 240,
+      "pixelY": 280,
+      "worldX": 112,
+      "worldZ": 176,
+      "destinationZoneId": 387,
+      "destinationName": "Vermilion City",
+      "destinationPixelX": 200,
+      "destinationPixelY": 200,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

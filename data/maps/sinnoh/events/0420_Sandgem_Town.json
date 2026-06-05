@@ -1,0 +1,43 @@
+{
+  "zoneId": 420,
+  "displayName": "Sandgem Town",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 136,
+      "pixelY": 200,
+      "worldX": 128,
+      "worldZ": 192,
+      "destinationZoneId": 418,
+      "destinationName": "Sandgem Town",
+      "destinationPixelX": 284,
+      "destinationPixelY": 170,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 40,
+      "pixelY": 168,
+      "worldX": 32,
+      "worldZ": 160,
+      "destinationZoneId": 421,
+      "destinationName": "Sandgem Town",
+      "destinationPixelX": 40,
+      "destinationPixelY": 168,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 232,
+      "pixelY": 168,
+      "worldX": 224,
+      "worldZ": 160,
+      "destinationZoneId": 485,
+      "destinationName": "Sandgem Town",
+      "destinationPixelX": 232,
+      "destinationPixelY": 168,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

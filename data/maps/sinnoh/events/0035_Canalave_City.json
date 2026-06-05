@@ -1,0 +1,111 @@
+{
+  "zoneId": 35,
+  "displayName": "Canalave City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 264,
+      "pixelY": 440,
+      "worldX": 256,
+      "worldZ": 432,
+      "destinationZoneId": 33,
+      "destinationName": "Canalave City",
+      "destinationPixelX": 124,
+      "destinationPixelY": 442,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 1,
+      "pixelX": 392,
+      "pixelY": 64,
+      "trainerId": 232,
+      "trainerName": "David",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3231,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 2,
+      "pixelX": 232,
+      "pixelY": 64,
+      "trainerId": 256,
+      "trainerName": "Jackson",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3255,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 3,
+      "pixelX": 360,
+      "pixelY": 272,
+      "trainerId": 257,
+      "trainerName": "Gary",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3256,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 4,
+      "pixelX": 152,
+      "pixelY": 288,
+      "trainerId": 314,
+      "trainerName": "Ricky",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3313,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t6",
+      "trainerInstanceId": 5,
+      "pixelX": 440,
+      "pixelY": 416,
+      "trainerId": 279,
+      "trainerName": "Cesar",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3278,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t7",
+      "trainerInstanceId": 6,
+      "pixelX": 136,
+      "pixelY": 64,
+      "trainerId": 367,
+      "trainerName": "Gerardo",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3366,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t8",
+      "trainerInstanceId": 7,
+      "pixelX": 440,
+      "pixelY": 96,
+      "trainerId": 283,
+      "trainerName": "Breanna",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3282,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

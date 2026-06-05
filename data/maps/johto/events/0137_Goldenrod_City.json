@@ -1,0 +1,72 @@
+{
+  "zoneId": 137,
+  "displayName": "Goldenrod City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 114,
+      "pixelY": 408,
+      "worldX": 96,
+      "worldZ": 400,
+      "destinationZoneId": 76,
+      "destinationName": "Goldenrod City",
+      "destinationPixelX": 1256,
+      "destinationPixelY": 260,
+      "anchor": 2
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t1",
+      "trainerInstanceId": 246,
+      "pixelX": 242,
+      "pixelY": 256,
+      "trainerId": 71,
+      "trainerName": "Cathy",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3070,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 247,
+      "pixelX": 162,
+      "pixelY": 304,
+      "trainerId": 22,
+      "trainerName": "Carrie",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3021,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 248,
+      "pixelX": 114,
+      "pixelY": 192,
+      "trainerId": 5,
+      "trainerName": "Victoria",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3004,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 249,
+      "pixelX": 402,
+      "pixelY": 304,
+      "trainerId": 70,
+      "trainerName": "Samantha",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3069,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

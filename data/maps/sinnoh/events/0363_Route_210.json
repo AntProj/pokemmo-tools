@@ -1,0 +1,111 @@
+{
+  "zoneId": 363,
+  "displayName": "Route 210",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 1352,
+      "pixelY": 72,
+      "worldX": 9024,
+      "worldZ": 8256,
+      "destinationZoneId": 364,
+      "destinationName": "Route 210",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 238,
+      "pixelX": 872,
+      "pixelY": 176,
+      "trainerId": 66,
+      "trainerName": "Ernest",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3065,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 239,
+      "pixelX": 1080,
+      "pixelY": 368,
+      "trainerId": 67,
+      "trainerName": "Alyssa",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3066,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 240,
+      "pixelX": 1288,
+      "pixelY": 176,
+      "trainerId": 73,
+      "trainerName": "Patrick",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3072,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t6",
+      "trainerInstanceId": 241,
+      "pixelX": 504,
+      "pixelY": 352,
+      "trainerId": 74,
+      "trainerName": "Brianna",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3073,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t7",
+      "trainerInstanceId": 242,
+      "pixelX": 920,
+      "pixelY": 272,
+      "trainerId": 75,
+      "trainerName": "Zac & Jen",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3074,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t8",
+      "trainerInstanceId": 243,
+      "pixelX": 920,
+      "pixelY": 288,
+      "trainerId": 75,
+      "trainerName": "Zac & Jen",
+      "orientation": "Right",
+      "isDoubleBattlePartner": true,
+      "scriptNumber": 5074,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t9",
+      "trainerInstanceId": 244,
+      "pixelX": 232,
+      "pixelY": 272,
+      "trainerId": 68,
+      "trainerName": "Brian",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3067,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

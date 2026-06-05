@@ -1,0 +1,103 @@
+{
+  "zoneId": 188,
+  "displayName": "Fight Area",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 360,
+      "pixelY": 127,
+      "worldX": 10080,
+      "worldZ": 6736,
+      "destinationZoneId": 193,
+      "destinationName": "Route 225",
+      "destinationPixelX": 88,
+      "destinationPixelY": 200,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 376,
+      "pixelY": 127,
+      "worldX": 10096,
+      "worldZ": 6736,
+      "destinationZoneId": 193,
+      "destinationName": "Route 225",
+      "destinationPixelX": 88,
+      "destinationPixelY": 200,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 744,
+      "pixelY": 159,
+      "worldX": 10464,
+      "worldZ": 6768,
+      "destinationZoneId": 560,
+      "destinationName": "Battle Frontier",
+      "destinationPixelX": 120,
+      "destinationPixelY": 328,
+      "anchor": 3
+    },
+    {
+      "id": "w3",
+      "pixelX": 760,
+      "pixelY": 159,
+      "worldX": 10480,
+      "worldZ": 6768,
+      "destinationZoneId": 560,
+      "destinationName": "Battle Frontier",
+      "destinationPixelX": 120,
+      "destinationPixelY": 328,
+      "anchor": 3
+    },
+    {
+      "id": "w4",
+      "pixelX": 744,
+      "pixelY": 399,
+      "worldX": 10464,
+      "worldZ": 7008,
+      "destinationZoneId": 194,
+      "destinationName": "Fight Area",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 744,
+      "pixelY": 495,
+      "worldX": 10464,
+      "worldZ": 7104,
+      "destinationZoneId": 195,
+      "destinationName": "Fight Area",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w6",
+      "pixelX": 632,
+      "pixelY": 255,
+      "worldX": 10352,
+      "worldZ": 6864,
+      "destinationZoneId": 189,
+      "destinationName": "Fight Area",
+      "destinationPixelX": 136,
+      "destinationPixelY": 200,
+      "anchor": 0
+    },
+    {
+      "id": "w7",
+      "pixelX": 840,
+      "pixelY": 255,
+      "worldX": 10560,
+      "worldZ": 6864,
+      "destinationZoneId": 191,
+      "destinationName": "Fight Area",
+      "destinationPixelX": 56,
+      "destinationPixelY": 184,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

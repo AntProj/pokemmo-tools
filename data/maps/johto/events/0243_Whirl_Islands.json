@@ -1,0 +1,79 @@
+{
+  "zoneId": 243,
+  "displayName": "Whirl Islands",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 472,
+      "pixelY": 536,
+      "worldX": 432,
+      "worldZ": 448,
+      "destinationZoneId": 242,
+      "destinationName": "Whirl Islands",
+      "destinationPixelX": 504,
+      "destinationPixelY": 808,
+      "anchor": 4
+    },
+    {
+      "id": "w1",
+      "pixelX": 472,
+      "pixelY": 520,
+      "worldX": 432,
+      "worldZ": 432,
+      "destinationZoneId": 242,
+      "destinationName": "Whirl Islands",
+      "destinationPixelX": 504,
+      "destinationPixelY": 808,
+      "anchor": 4
+    },
+    {
+      "id": "w2",
+      "pixelX": 552,
+      "pixelY": 312,
+      "worldX": 512,
+      "worldZ": 224,
+      "destinationZoneId": 242,
+      "destinationName": "Whirl Islands",
+      "destinationPixelX": 872,
+      "destinationPixelY": 712,
+      "anchor": 11
+    },
+    {
+      "id": "w3",
+      "pixelX": 552,
+      "pixelY": 296,
+      "worldX": 512,
+      "worldZ": 208,
+      "destinationZoneId": 242,
+      "destinationName": "Whirl Islands",
+      "destinationPixelX": 872,
+      "destinationPixelY": 712,
+      "anchor": 11
+    },
+    {
+      "id": "w4",
+      "pixelX": 536,
+      "pixelY": 584,
+      "worldX": 496,
+      "worldZ": 496,
+      "destinationZoneId": 486,
+      "destinationName": "Whirl Islands",
+      "destinationPixelX": 312,
+      "destinationPixelY": 611,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 536,
+      "pixelY": 776,
+      "worldX": 496,
+      "worldZ": 688,
+      "destinationZoneId": 244,
+      "destinationName": "Whirl Islands",
+      "destinationPixelX": 280,
+      "destinationPixelY": 675,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

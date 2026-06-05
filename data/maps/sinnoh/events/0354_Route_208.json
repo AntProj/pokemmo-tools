@@ -1,0 +1,147 @@
+{
+  "zoneId": 354,
+  "displayName": "Route 208",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 1016,
+      "pixelY": 362,
+      "worldX": 7152,
+      "worldZ": 11616,
+      "destinationZoneId": 109,
+      "destinationName": "Route 208",
+      "destinationPixelX": 28,
+      "destinationPixelY": 120,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 1016,
+      "pixelY": 378,
+      "worldX": 7152,
+      "worldZ": 11632,
+      "destinationZoneId": 109,
+      "destinationName": "Route 208",
+      "destinationPixelX": 28,
+      "destinationPixelY": 120,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 920,
+      "pixelY": 202,
+      "worldX": 7056,
+      "worldZ": 11456,
+      "destinationZoneId": 355,
+      "destinationName": "Route 208",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 136,
+      "pixelY": 330,
+      "worldX": 6272,
+      "worldZ": 11584,
+      "destinationZoneId": 207,
+      "destinationName": "Mt. Coronet",
+      "destinationPixelX": 440,
+      "destinationPixelY": 328,
+      "anchor": 1
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 205,
+      "pixelX": 584,
+      "pixelY": 306,
+      "trainerId": 39,
+      "trainerName": "Robert",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3038,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 206,
+      "pixelX": 104,
+      "pixelY": 258,
+      "trainerId": 40,
+      "trainerName": "Alexander",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3039,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 207,
+      "pixelX": 392,
+      "pixelY": 322,
+      "trainerId": 41,
+      "trainerName": "Jonathan",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3040,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 208,
+      "pixelX": 344,
+      "pixelY": 178,
+      "trainerId": 42,
+      "trainerName": "Kyle",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3041,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 209,
+      "pixelX": 472,
+      "pixelY": 386,
+      "trainerId": 43,
+      "trainerName": "Cody",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3042,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 210,
+      "pixelX": 792,
+      "pixelY": 274,
+      "trainerId": 44,
+      "trainerName": "Hannah",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3043,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t6",
+      "trainerInstanceId": 211,
+      "pixelX": 888,
+      "pixelY": 338,
+      "trainerId": 45,
+      "trainerName": "William",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3044,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

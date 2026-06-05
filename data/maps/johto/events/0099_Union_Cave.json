@@ -1,0 +1,169 @@
+{
+  "zoneId": 99,
+  "displayName": "Union Cave",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 456,
+      "pixelY": 712,
+      "worldX": 432,
+      "worldZ": 688,
+      "destinationZoneId": 36,
+      "destinationName": "Route 32",
+      "destinationPixelX": 360,
+      "destinationPixelY": 2296,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 88,
+      "pixelY": 424,
+      "worldX": 64,
+      "worldZ": 400,
+      "destinationZoneId": 153,
+      "destinationName": "Union Cave",
+      "destinationPixelX": 616,
+      "destinationPixelY": 712,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 456,
+      "pixelY": 1512,
+      "worldX": 432,
+      "worldZ": 1488,
+      "destinationZoneId": 37,
+      "destinationName": "Route 33",
+      "destinationPixelX": 328,
+      "destinationPixelY": 232,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 120,
+      "pixelY": 1496,
+      "worldX": 96,
+      "worldZ": 1472,
+      "destinationZoneId": 153,
+      "destinationName": "Union Cave",
+      "destinationPixelX": 184,
+      "destinationPixelY": 984,
+      "anchor": 1
+    },
+    {
+      "id": "w4",
+      "pixelX": 104,
+      "pixelY": 72,
+      "worldX": 80,
+      "worldZ": 48,
+      "destinationZoneId": 154,
+      "destinationName": "Union Cave",
+      "destinationPixelX": 56,
+      "destinationPixelY": 328,
+      "anchor": 4
+    },
+    {
+      "id": "w5",
+      "pixelX": 456,
+      "pixelY": 72,
+      "worldX": 432,
+      "worldZ": 48,
+      "destinationZoneId": 154,
+      "destinationName": "Union Cave",
+      "destinationPixelX": 344,
+      "destinationPixelY": 72,
+      "anchor": 3
+    },
+    {
+      "id": "w6",
+      "pixelX": 88,
+      "pixelY": 88,
+      "worldX": 64,
+      "worldZ": 64,
+      "destinationZoneId": 113,
+      "destinationName": "Ruins of Alph",
+      "destinationPixelX": 88,
+      "destinationPixelY": 868,
+      "anchor": 15
+    },
+    {
+      "id": "w7",
+      "pixelX": 440,
+      "pixelY": 120,
+      "worldX": 416,
+      "worldZ": 96,
+      "destinationZoneId": 113,
+      "destinationName": "Ruins of Alph",
+      "destinationPixelX": 88,
+      "destinationPixelY": 564,
+      "anchor": 16
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 237,
+      "pixelX": 104,
+      "pixelY": 800,
+      "trainerId": 384,
+      "trainerName": "Daniel",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3383,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 238,
+      "pixelX": 344,
+      "pixelY": 848,
+      "trainerId": 25,
+      "trainerName": "Russel",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3024,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 239,
+      "pixelX": 392,
+      "pixelY": 1136,
+      "trainerId": 319,
+      "trainerName": "Bill",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3318,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 240,
+      "pixelX": 152,
+      "pixelY": 448,
+      "trainerId": 390,
+      "trainerName": "Ray",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3389,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 241,
+      "pixelX": 216,
+      "pixelY": 1312,
+      "trainerId": 23,
+      "trainerName": "Larry",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3022,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

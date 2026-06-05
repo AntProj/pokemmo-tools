@@ -1,0 +1,79 @@
+{
+  "zoneId": 450,
+  "displayName": "Cerulean Cave",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 168,
+      "pixelY": 216,
+      "worldX": 160,
+      "worldZ": 208,
+      "destinationZoneId": 145,
+      "destinationName": "Cerulean Cave",
+      "destinationPixelX": 170,
+      "destinationPixelY": 184,
+      "anchor": 5
+    },
+    {
+      "id": "w1",
+      "pixelX": 248,
+      "pixelY": 312,
+      "worldX": 240,
+      "worldZ": 304,
+      "destinationZoneId": 145,
+      "destinationName": "Cerulean Cave",
+      "destinationPixelX": 250,
+      "destinationPixelY": 280,
+      "anchor": 6
+    },
+    {
+      "id": "w2",
+      "pixelX": 136,
+      "pixelY": 472,
+      "worldX": 128,
+      "worldZ": 464,
+      "destinationZoneId": 145,
+      "destinationName": "Cerulean Cave",
+      "destinationPixelX": 138,
+      "destinationPixelY": 440,
+      "anchor": 8
+    },
+    {
+      "id": "w3",
+      "pixelX": 904,
+      "pixelY": 216,
+      "worldX": 896,
+      "worldZ": 208,
+      "destinationZoneId": 145,
+      "destinationName": "Cerulean Cave",
+      "destinationPixelX": 906,
+      "destinationPixelY": 184,
+      "anchor": 1
+    },
+    {
+      "id": "w4",
+      "pixelX": 744,
+      "pixelY": 440,
+      "worldX": 736,
+      "worldZ": 432,
+      "destinationZoneId": 145,
+      "destinationName": "Cerulean Cave",
+      "destinationPixelX": 746,
+      "destinationPixelY": 408,
+      "anchor": 3
+    },
+    {
+      "id": "w5",
+      "pixelX": 568,
+      "pixelY": 536,
+      "worldX": 560,
+      "worldZ": 528,
+      "destinationZoneId": 145,
+      "destinationName": "Cerulean Cave",
+      "destinationPixelX": 570,
+      "destinationPixelY": 504,
+      "anchor": 4
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,19 @@
+{
+  "zoneId": 4,
+  "displayName": "Jubilife City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 56,
+      "pixelY": 184,
+      "worldX": 48,
+      "worldZ": 176,
+      "destinationZoneId": 3,
+      "destinationName": "Jubilife City",
+      "destinationPixelX": 832,
+      "destinationPixelY": 490,
+      "anchor": 6
+    }
+  ],
+  "trainers": []
+}

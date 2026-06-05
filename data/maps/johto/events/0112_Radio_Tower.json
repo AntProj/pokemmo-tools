@@ -1,0 +1,31 @@
+{
+  "zoneId": 112,
+  "displayName": "Radio Tower",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 84,
+      "pixelY": 248,
+      "worldX": 32,
+      "worldZ": 224,
+      "destinationZoneId": 76,
+      "destinationName": "Goldenrod City",
+      "destinationPixelX": 872,
+      "destinationPixelY": 500,
+      "anchor": 7
+    },
+    {
+      "id": "w1",
+      "pixelX": 420,
+      "pixelY": 104,
+      "worldX": 368,
+      "worldZ": 80,
+      "destinationZoneId": 186,
+      "destinationName": "Radio Tower",
+      "destinationPixelX": 416,
+      "destinationPixelY": 120,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

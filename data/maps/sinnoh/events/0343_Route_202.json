@@ -1,0 +1,46 @@
+{
+  "zoneId": 343,
+  "displayName": "Route 202",
+  "warps": [],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 164,
+      "pixelX": 108,
+      "pixelY": 226,
+      "trainerId": 1,
+      "trainerName": "Tristan",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3000,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 165,
+      "pixelX": 348,
+      "pixelY": 306,
+      "trainerId": 3,
+      "trainerName": "Natalie",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3002,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 166,
+      "pixelX": 412,
+      "pixelY": 82,
+      "trainerId": 2,
+      "trainerName": "Logan",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3001,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

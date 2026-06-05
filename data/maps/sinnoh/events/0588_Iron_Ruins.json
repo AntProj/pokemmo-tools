@@ -1,0 +1,19 @@
+{
+  "zoneId": 588,
+  "displayName": "Iron Ruins",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 168,
+      "pixelY": 248,
+      "worldX": 112,
+      "worldZ": 192,
+      "destinationZoneId": 294,
+      "destinationName": "Iron Island",
+      "destinationPixelX": 280,
+      "destinationPixelY": 24,
+      "anchor": 3
+    }
+  ],
+  "trainers": []
+}

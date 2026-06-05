@@ -1,0 +1,86 @@
+{
+  "header": {
+    "id": 27,
+    "name": "Route 22",
+    "mapName": "0027 - Route 22",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0126_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 398,
+        "y": 256,
+        "targetPng": "0027 - Route 22.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 29,
+        "yMatrix": 8,
+        "xMap": 24,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0225_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 206,
+        "y": 240,
+        "targetPng": "0027 - Route 22.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 29,
+        "yMatrix": 8,
+        "xMap": 12,
+        "yMap": 14,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0058_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 270,
+        "y": 240,
+        "targetPng": "0027 - Route 22.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 29,
+        "yMatrix": 8,
+        "xMap": 16,
+        "yMap": 14,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_3d_dawn_platinum.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 334,
+        "y": 304,
+        "targetPng": "0027 - Route 22.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 29,
+        "yMatrix": 8,
+        "xMap": 20,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

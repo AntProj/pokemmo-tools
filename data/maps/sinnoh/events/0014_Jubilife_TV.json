@@ -1,0 +1,31 @@
+{
+  "zoneId": 14,
+  "displayName": "Jubilife TV",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 120,
+      "pixelY": 56,
+      "worldX": 112,
+      "worldZ": 48,
+      "destinationZoneId": 13,
+      "destinationName": "Jubilife TV",
+      "destinationPixelX": 232,
+      "destinationPixelY": 56,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 296,
+      "pixelY": 40,
+      "worldX": 288,
+      "worldZ": 32,
+      "destinationZoneId": 18,
+      "destinationName": "Jubilife TV",
+      "destinationPixelX": 56,
+      "destinationPixelY": 104,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

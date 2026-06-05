@@ -1,0 +1,33 @@
+{
+  "zoneId": 92,
+  "displayName": "Hearthome City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 152,
+      "pixelY": 168,
+      "worldX": 112,
+      "worldZ": 160,
+      "destinationZoneId": 91,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 24,
+      "destinationPixelY": 280,
+      "anchor": 1
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 22,
+      "pixelX": 152,
+      "pixelY": 112,
+      "trainerId": 266,
+      "trainerName": "Drew",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3265,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

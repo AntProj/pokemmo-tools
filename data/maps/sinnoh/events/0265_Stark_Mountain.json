@@ -1,0 +1,19 @@
+{
+  "zoneId": 265,
+  "displayName": "Stark Mountain",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 120,
+      "pixelY": 280,
+      "worldX": 112,
+      "worldZ": 272,
+      "destinationZoneId": 264,
+      "destinationName": "Stark Mountain",
+      "destinationPixelX": 760,
+      "destinationPixelY": 40,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

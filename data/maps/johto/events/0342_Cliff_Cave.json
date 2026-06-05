@@ -1,0 +1,115 @@
+{
+  "zoneId": 342,
+  "displayName": "Cliff Cave",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 120,
+      "pixelY": 136,
+      "worldX": 96,
+      "worldZ": 112,
+      "destinationZoneId": 151,
+      "destinationName": "Route 47",
+      "destinationPixelX": 1064,
+      "destinationPixelY": 552,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 440,
+      "pixelY": 232,
+      "worldX": 416,
+      "worldZ": 208,
+      "destinationZoneId": 151,
+      "destinationName": "Route 47",
+      "destinationPixelX": 1080,
+      "destinationPixelY": 648,
+      "anchor": 2
+    },
+    {
+      "id": "w2",
+      "pixelX": 120,
+      "pixelY": 488,
+      "worldX": 96,
+      "worldZ": 464,
+      "destinationZoneId": 151,
+      "destinationName": "Route 47",
+      "destinationPixelX": 1064,
+      "destinationPixelY": 488,
+      "anchor": 3
+    },
+    {
+      "id": "w3",
+      "pixelX": 88,
+      "pixelY": 104,
+      "worldX": 64,
+      "worldZ": 80,
+      "destinationZoneId": 342,
+      "destinationName": "Cliff Cave",
+      "destinationPixelX": 88,
+      "destinationPixelY": 376,
+      "anchor": 5
+    },
+    {
+      "id": "w4",
+      "pixelX": 88,
+      "pixelY": 88,
+      "worldX": 64,
+      "worldZ": 64,
+      "destinationZoneId": 342,
+      "destinationName": "Cliff Cave",
+      "destinationPixelX": 88,
+      "destinationPixelY": 376,
+      "anchor": 5
+    },
+    {
+      "id": "w5",
+      "pixelX": 88,
+      "pixelY": 376,
+      "worldX": 64,
+      "worldZ": 352,
+      "destinationZoneId": 342,
+      "destinationName": "Cliff Cave",
+      "destinationPixelX": 88,
+      "destinationPixelY": 104,
+      "anchor": 3
+    },
+    {
+      "id": "w6",
+      "pixelX": 152,
+      "pixelY": 104,
+      "worldX": 128,
+      "worldZ": 80,
+      "destinationZoneId": 342,
+      "destinationName": "Cliff Cave",
+      "destinationPixelX": 456,
+      "destinationPixelY": 88,
+      "anchor": 7
+    },
+    {
+      "id": "w7",
+      "pixelX": 456,
+      "pixelY": 88,
+      "worldX": 432,
+      "worldZ": 64,
+      "destinationZoneId": 342,
+      "destinationName": "Cliff Cave",
+      "destinationPixelX": 152,
+      "destinationPixelY": 104,
+      "anchor": 6
+    },
+    {
+      "id": "w8",
+      "pixelX": 456,
+      "pixelY": 72,
+      "worldX": 432,
+      "worldZ": 48,
+      "destinationZoneId": 342,
+      "destinationName": "Cliff Cave",
+      "destinationPixelX": 152,
+      "destinationPixelY": 104,
+      "anchor": 6
+    }
+  ],
+  "trainers": []
+}

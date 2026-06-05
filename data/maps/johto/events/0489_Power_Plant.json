@@ -1,0 +1,19 @@
+{
+  "zoneId": 489,
+  "displayName": "Power Plant",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 240,
+      "pixelY": 424,
+      "worldX": 112,
+      "worldZ": 320,
+      "destinationZoneId": 18,
+      "destinationName": "Route 10",
+      "destinationPixelX": 248,
+      "destinationPixelY": 392,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

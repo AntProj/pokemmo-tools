@@ -1,0 +1,46 @@
+{
+  "zoneId": 199,
+  "displayName": "Oreburgh Mine",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 253,
+      "pixelY": 30,
+      "worldX": 240,
+      "worldZ": 16,
+      "destinationZoneId": 198,
+      "destinationName": "Oreburgh Mine",
+      "destinationPixelX": 200,
+      "destinationPixelY": 357,
+      "anchor": 3
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t5",
+      "trainerInstanceId": 52,
+      "pixelX": 141,
+      "pixelY": 470,
+      "trainerId": 195,
+      "trainerName": "Colin",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3194,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t6",
+      "trainerInstanceId": 53,
+      "pixelX": 429,
+      "pixelY": 342,
+      "trainerId": 196,
+      "trainerName": "Mason",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3195,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

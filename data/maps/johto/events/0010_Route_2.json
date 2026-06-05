@@ -1,0 +1,82 @@
+{
+  "zoneId": 10,
+  "displayName": "Route 2",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 184,
+      "pixelY": 132,
+      "worldX": 16544,
+      "worldZ": 3072,
+      "destinationZoneId": 419,
+      "destinationName": "Route 2",
+      "destinationPixelX": 120,
+      "destinationPixelY": 256,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 200,
+      "pixelY": 132,
+      "worldX": 16560,
+      "worldZ": 3072,
+      "destinationZoneId": 419,
+      "destinationName": "Route 2",
+      "destinationPixelX": 120,
+      "destinationPixelY": 256,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 440,
+      "pixelY": 132,
+      "worldX": 16800,
+      "worldZ": 3072,
+      "destinationZoneId": 418,
+      "destinationName": "Route 2",
+      "destinationPixelX": 120,
+      "destinationPixelY": 256,
+      "anchor": 1
+    },
+    {
+      "id": "w3",
+      "pixelX": 456,
+      "pixelY": 132,
+      "worldX": 16816,
+      "worldZ": 3072,
+      "destinationZoneId": 418,
+      "destinationName": "Route 2",
+      "destinationPixelX": 120,
+      "destinationPixelY": 256,
+      "anchor": 1
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 7,
+      "pixelX": 248,
+      "pixelY": 428,
+      "trainerId": 48,
+      "trainerName": "Rob",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3047,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 8,
+      "pixelX": 136,
+      "pixelY": 316,
+      "trainerId": 140,
+      "trainerName": "Doug",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3139,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

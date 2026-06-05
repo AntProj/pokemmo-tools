@@ -1,0 +1,31 @@
+{
+  "zoneId": 387,
+  "displayName": "Vermilion City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 200,
+      "pixelY": 200,
+      "worldX": 192,
+      "worldZ": 192,
+      "destinationZoneId": 386,
+      "destinationName": "Vermilion City",
+      "destinationPixelX": 240,
+      "destinationPixelY": 280,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 376,
+      "pixelY": 280,
+      "worldX": 368,
+      "worldZ": 272,
+      "destinationZoneId": 307,
+      "destinationName": "S.S. Aqua",
+      "destinationPixelX": 512,
+      "destinationPixelY": 408,
+      "anchor": 12
+    }
+  ],
+  "trainers": []
+}

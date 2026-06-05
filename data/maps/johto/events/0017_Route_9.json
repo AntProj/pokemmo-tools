@@ -1,0 +1,85 @@
+{
+  "zoneId": 17,
+  "displayName": "Route 9",
+  "warps": [],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 35,
+      "pixelX": 200,
+      "pixelY": 464,
+      "trainerId": 150,
+      "trainerName": "Sid",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3149,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 36,
+      "pixelX": 296,
+      "pixelY": 704,
+      "trainerId": 333,
+      "trainerName": "Edna",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3332,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 37,
+      "pixelX": 712,
+      "pixelY": 624,
+      "trainerId": 149,
+      "trainerName": "Dean",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3148,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 38,
+      "pixelX": 1080,
+      "pixelY": 672,
+      "trainerId": 357,
+      "trainerName": "Clarke",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3356,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 39,
+      "pixelX": 952,
+      "pixelY": 416,
+      "trainerId": 234,
+      "trainerName": "Eoin",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3233,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 40,
+      "pixelX": 1112,
+      "pixelY": 528,
+      "trainerId": 332,
+      "trainerName": "Heidi",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3331,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

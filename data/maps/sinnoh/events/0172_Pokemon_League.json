@@ -1,0 +1,103 @@
+{
+  "zoneId": 172,
+  "displayName": "Pokémon League",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 168,
+      "pixelY": 872,
+      "worldX": 13472,
+      "worldZ": 9568,
+      "destinationZoneId": 173,
+      "destinationName": "Pokémon League",
+      "destinationPixelX": 136,
+      "destinationPixelY": 200,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 248,
+      "pixelY": 248,
+      "worldX": 13552,
+      "worldZ": 8944,
+      "destinationZoneId": 175,
+      "destinationName": "Pokémon League",
+      "destinationPixelX": 184,
+      "destinationPixelY": 233,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 312,
+      "pixelY": 856,
+      "worldX": 13616,
+      "worldZ": 9552,
+      "destinationZoneId": 244,
+      "destinationName": "Victory Road",
+      "destinationPixelX": 248,
+      "destinationPixelY": 1256,
+      "anchor": 7
+    },
+    {
+      "id": "w3",
+      "pixelX": 344,
+      "pixelY": 616,
+      "worldX": 13648,
+      "worldZ": 9312,
+      "destinationZoneId": 244,
+      "destinationName": "Victory Road",
+      "destinationPixelX": 552,
+      "destinationPixelY": 88,
+      "anchor": 8
+    },
+    {
+      "id": "w4",
+      "pixelX": 296,
+      "pixelY": 856,
+      "worldX": 13600,
+      "worldZ": 9552,
+      "destinationZoneId": 244,
+      "destinationName": "Victory Road",
+      "destinationPixelX": 248,
+      "destinationPixelY": 1256,
+      "anchor": 7
+    },
+    {
+      "id": "w5",
+      "pixelX": 328,
+      "pixelY": 856,
+      "worldX": 13632,
+      "worldZ": 9552,
+      "destinationZoneId": 244,
+      "destinationName": "Victory Road",
+      "destinationPixelX": 248,
+      "destinationPixelY": 1256,
+      "anchor": 7
+    },
+    {
+      "id": "w6",
+      "pixelX": 344,
+      "pixelY": 600,
+      "worldX": 13648,
+      "worldZ": 9296,
+      "destinationZoneId": 244,
+      "destinationName": "Victory Road",
+      "destinationPixelX": 552,
+      "destinationPixelY": 88,
+      "anchor": 8
+    },
+    {
+      "id": "w7",
+      "pixelX": 344,
+      "pixelY": 632,
+      "worldX": 13648,
+      "worldZ": 9328,
+      "destinationZoneId": 244,
+      "destinationName": "Victory Road",
+      "destinationPixelX": 552,
+      "destinationPixelY": 88,
+      "anchor": 8
+    }
+  ],
+  "trainers": []
+}

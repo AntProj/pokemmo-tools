@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 413,
+    "name": "Twinleaf Town",
+    "mapName": "0413 - Twinleaf Town",
+    "matrixId": 127
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0127_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 152,
+        "y": 96,
+        "targetPng": "0413 - Twinleaf Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 9,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

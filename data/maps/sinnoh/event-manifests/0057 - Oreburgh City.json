@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 57,
+    "name": "Oreburgh City",
+    "mapName": "0057 - Oreburgh City",
+    "matrixId": 208
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0018_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 168,
+        "y": 192,
+        "targetPng": "0057 - Oreburgh City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 10,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

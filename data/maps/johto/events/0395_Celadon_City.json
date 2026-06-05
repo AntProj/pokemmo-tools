@@ -1,0 +1,85 @@
+{
+  "zoneId": 395,
+  "displayName": "Celadon City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 160,
+      "pixelY": 744,
+      "worldX": 112,
+      "worldZ": 736,
+      "destinationZoneId": 55,
+      "destinationName": "Celadon City",
+      "destinationPixelX": 296,
+      "destinationPixelY": 696,
+      "anchor": 5
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t3",
+      "trainerInstanceId": 375,
+      "pixelX": 80,
+      "pixelY": 496,
+      "trainerId": 326,
+      "trainerName": "Jo & Zoe",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3325,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 376,
+      "pixelX": 96,
+      "pixelY": 496,
+      "trainerId": 326,
+      "trainerName": "Jo & Zoe",
+      "orientation": "Down",
+      "isDoubleBattlePartner": true,
+      "scriptNumber": 5325,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 377,
+      "pixelX": 256,
+      "pixelY": 560,
+      "trainerId": 356,
+      "trainerName": "Michelle",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3355,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t6",
+      "trainerInstanceId": 378,
+      "pixelX": 208,
+      "pixelY": 288,
+      "trainerId": 336,
+      "trainerName": "Tanya",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3335,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t7",
+      "trainerInstanceId": 379,
+      "pixelX": 160,
+      "pixelY": 288,
+      "trainerId": 346,
+      "trainerName": "Julia",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3345,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

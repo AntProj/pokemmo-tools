@@ -1,0 +1,96 @@
+{
+  "zoneId": 14,
+  "displayName": "Route 6",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 344,
+      "pixelY": 108,
+      "worldX": 20800,
+      "worldZ": 4176,
+      "destinationZoneId": 389,
+      "destinationName": "Route 6",
+      "destinationPixelX": 120,
+      "destinationPixelY": 256,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 360,
+      "pixelY": 108,
+      "worldX": 20816,
+      "worldZ": 4176,
+      "destinationZoneId": 389,
+      "destinationName": "Route 6",
+      "destinationPixelX": 120,
+      "destinationPixelY": 256,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 488,
+      "pixelY": 172,
+      "worldX": 20944,
+      "worldZ": 4240,
+      "destinationZoneId": 470,
+      "destinationName": "Route 6",
+      "destinationPixelX": 120,
+      "destinationPixelY": 152,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 23,
+      "pixelX": 200,
+      "pixelY": 292,
+      "trainerId": 599,
+      "trainerName": "Virgil",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3598,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 24,
+      "pixelX": 264,
+      "pixelY": 500,
+      "trainerId": 600,
+      "trainerName": "Selina",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3599,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 25,
+      "pixelX": 392,
+      "pixelY": 324,
+      "trainerId": 598,
+      "trainerName": "Day & Dani",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3597,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 26,
+      "pixelX": 408,
+      "pixelY": 324,
+      "trainerId": 598,
+      "trainerName": "Day & Dani",
+      "orientation": "Up",
+      "isDoubleBattlePartner": true,
+      "scriptNumber": 5597,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

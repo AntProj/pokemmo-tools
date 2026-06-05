@@ -1,0 +1,19 @@
+{
+  "zoneId": 592,
+  "displayName": "Rock Peak Ruins",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 168,
+      "pixelY": 248,
+      "worldX": 112,
+      "worldZ": 192,
+      "destinationZoneId": 406,
+      "destinationName": "Route 228",
+      "destinationPixelX": 296,
+      "destinationPixelY": 328,
+      "anchor": 5
+    }
+  ],
+  "trainers": []
+}

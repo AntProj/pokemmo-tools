@@ -1,0 +1,162 @@
+{
+  "zoneId": 23,
+  "displayName": "Route 15",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 24,
+      "pixelY": 120,
+      "worldX": 19968,
+      "worldZ": 6752,
+      "destinationZoneId": 392,
+      "destinationName": "Route 15",
+      "destinationPixelX": 176,
+      "destinationPixelY": 120,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 24,
+      "pixelY": 136,
+      "worldX": 19968,
+      "worldZ": 6768,
+      "destinationZoneId": 392,
+      "destinationName": "Route 15",
+      "destinationPixelX": 176,
+      "destinationPixelY": 120,
+      "anchor": 1
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 73,
+      "pixelX": 312,
+      "pixelY": 288,
+      "trainerId": 179,
+      "trainerName": "Kipp",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3178,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 74,
+      "pixelX": 328,
+      "pixelY": 368,
+      "trainerId": 328,
+      "trainerName": "Tommy",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3327,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 75,
+      "pixelX": 536,
+      "pixelY": 288,
+      "trainerId": 382,
+      "trainerName": "Hillary",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3381,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 76,
+      "pixelX": 472,
+      "pixelY": 112,
+      "trainerId": 569,
+      "trainerName": "Kay & Tia",
+      "orientation": "Down",
+      "isDoubleBattlePartner": true,
+      "scriptNumber": 5568,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 77,
+      "pixelX": 488,
+      "pixelY": 112,
+      "trainerId": 569,
+      "trainerName": "Kay & Tia",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3568,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 78,
+      "pixelX": 376,
+      "pixelY": 96,
+      "trainerId": 571,
+      "trainerName": "Eleanor",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3570,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t6",
+      "trainerInstanceId": 79,
+      "pixelX": 904,
+      "pixelY": 368,
+      "trainerId": 570,
+      "trainerName": "Boone",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3569,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t7",
+      "trainerInstanceId": 80,
+      "pixelX": 680,
+      "pixelY": 144,
+      "trainerId": 38,
+      "trainerName": "Colette",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3037,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t8",
+      "trainerInstanceId": 81,
+      "pixelX": 1144,
+      "pixelY": 304,
+      "trainerId": 135,
+      "trainerName": "Johnny",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3134,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t9",
+      "trainerInstanceId": 82,
+      "pixelX": 1080,
+      "pixelY": 128,
+      "trainerId": 331,
+      "trainerName": "Billy",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3330,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

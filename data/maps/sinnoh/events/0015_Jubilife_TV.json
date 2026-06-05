@@ -1,0 +1,19 @@
+{
+  "zoneId": 15,
+  "displayName": "Jubilife TV",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 56,
+      "pixelY": 216,
+      "worldX": 48,
+      "worldZ": 208,
+      "destinationZoneId": 12,
+      "destinationName": "Jubilife TV",
+      "destinationPixelX": 56,
+      "destinationPixelY": 40,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

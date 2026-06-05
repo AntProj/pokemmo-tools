@@ -1,0 +1,67 @@
+{
+  "zoneId": 450,
+  "displayName": "Survival Area",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 204,
+      "pixelY": 296,
+      "worldX": 10432,
+      "worldZ": 5408,
+      "destinationZoneId": 454,
+      "destinationName": "Battleground",
+      "destinationPixelX": 120,
+      "destinationPixelY": 184,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 252,
+      "pixelY": 456,
+      "worldX": 10480,
+      "worldZ": 5568,
+      "destinationZoneId": 455,
+      "destinationName": "Survival Area",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 268,
+      "pixelY": 88,
+      "worldX": 10496,
+      "worldZ": 5200,
+      "destinationZoneId": 456,
+      "destinationName": "Survival Area",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 316,
+      "pixelY": 296,
+      "worldX": 10544,
+      "worldZ": 5408,
+      "destinationZoneId": 452,
+      "destinationName": "Survival Area",
+      "destinationPixelX": 136,
+      "destinationPixelY": 200,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 380,
+      "pixelY": 296,
+      "worldX": 10608,
+      "worldZ": 5408,
+      "destinationZoneId": 451,
+      "destinationName": "Survival Area",
+      "destinationPixelX": 56,
+      "destinationPixelY": 184,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

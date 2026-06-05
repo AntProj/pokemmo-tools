@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 315,
+    "name": "Lake Valor",
+    "mapName": "0315 - Lake Valor",
+    "matrixId": 105
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 856,
+        "y": 754,
+        "targetPng": "0315 - Lake Valor.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 21,
+        "yMap": 14,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

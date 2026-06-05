@@ -1,0 +1,67 @@
+{
+  "zoneId": 315,
+  "displayName": "Lake Valor",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 824,
+      "pixelY": 138,
+      "worldX": 816,
+      "worldZ": 128,
+      "destinationZoneId": 336,
+      "destinationName": "Valor Lakefront",
+      "destinationPixelX": 732,
+      "destinationPixelY": 394,
+      "anchor": 3
+    },
+    {
+      "id": "w1",
+      "pixelX": 520,
+      "pixelY": 522,
+      "worldX": 512,
+      "worldZ": 512,
+      "destinationZoneId": 316,
+      "destinationName": "Valor Cavern",
+      "destinationPixelX": 244,
+      "destinationPixelY": 480,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 824,
+      "pixelY": 122,
+      "worldX": 816,
+      "worldZ": 112,
+      "destinationZoneId": 336,
+      "destinationName": "Valor Lakefront",
+      "destinationPixelX": 732,
+      "destinationPixelY": 410,
+      "anchor": 4
+    },
+    {
+      "id": "w3",
+      "pixelX": 840,
+      "pixelY": 170,
+      "worldX": 832,
+      "worldZ": 160,
+      "destinationZoneId": 336,
+      "destinationName": "Valor Lakefront",
+      "destinationPixelX": 732,
+      "destinationPixelY": 394,
+      "anchor": 5
+    },
+    {
+      "id": "w4",
+      "pixelX": 840,
+      "pixelY": 186,
+      "worldX": 832,
+      "worldZ": 176,
+      "destinationZoneId": 336,
+      "destinationName": "Valor Lakefront",
+      "destinationPixelX": 732,
+      "destinationPixelY": 410,
+      "anchor": 6
+    }
+  ],
+  "trainers": []
+}

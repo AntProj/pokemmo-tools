@@ -1,0 +1,67 @@
+{
+  "header": {
+    "id": 330,
+    "name": "Battle Tower",
+    "mapName": "0330 - Battle Tower",
+    "matrixId": 197
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0025_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 40,
+        "y": 112,
+        "targetPng": "0330 - Battle Tower.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 2,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_3d_overworld.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 120,
+        "y": 32,
+        "targetPng": "0330 - Battle Tower.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 7,
+        "yMap": 2,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_dawn_platinum.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 120,
+        "y": 160,
+        "targetPng": "0330 - Battle Tower.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 7,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

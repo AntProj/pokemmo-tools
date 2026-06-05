@@ -1,0 +1,33 @@
+{
+  "zoneId": 99,
+  "displayName": "Hearthome City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 152,
+      "pixelY": 168,
+      "worldX": 112,
+      "worldZ": 160,
+      "destinationZoneId": 95,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 184,
+      "destinationPixelY": 40,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 27,
+      "pixelX": 152,
+      "pixelY": 112,
+      "trainerId": 284,
+      "trainerName": "Catherine",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3283,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

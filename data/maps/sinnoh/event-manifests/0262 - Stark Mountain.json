@@ -1,0 +1,162 @@
+{
+  "header": {
+    "id": 262,
+    "name": "Stark Mountain",
+    "mapName": "0262 - Stark Mountain",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 72,
+        "y": 519,
+        "targetPng": "0262 - Stark Mountain.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 23,
+        "yMatrix": 7,
+        "xMap": 4,
+        "yMap": 24,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 424,
+        "y": 263,
+        "targetPng": "0262 - Stark Mountain.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 23,
+        "yMatrix": 7,
+        "xMap": 26,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 1,
+      "orientation": "Right",
+      "spriteFile": "ow_0010_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 216,
+        "y": 519,
+        "targetPng": "0262 - Stark Mountain.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 23,
+        "yMatrix": 7,
+        "xMap": 13,
+        "yMap": 24,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 200,
+        "y": 247,
+        "targetPng": "0262 - Stark Mountain.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 23,
+        "yMatrix": 7,
+        "xMap": 12,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0376_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 248,
+        "y": 263,
+        "targetPng": "0262 - Stark Mountain.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 23,
+        "yMatrix": 7,
+        "xMap": 15,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0123_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 232,
+        "y": 279,
+        "targetPng": "0262 - Stark Mountain.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 23,
+        "yMatrix": 7,
+        "xMap": 14,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0103_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 104,
+        "y": 263,
+        "targetPng": "0262 - Stark Mountain.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 23,
+        "yMatrix": 7,
+        "xMap": 6,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0103_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 104,
+        "y": 279,
+        "targetPng": "0262 - Stark Mountain.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 23,
+        "yMatrix": 7,
+        "xMap": 6,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "zoneId": 54,
+  "displayName": "Vermilion City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 200,
+      "pixelY": 120,
+      "worldX": 20672,
+      "worldZ": 4704,
+      "destinationZoneId": 361,
+      "destinationName": "Vermilion City",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 280,
+      "pixelY": 120,
+      "worldX": 20752,
+      "worldZ": 4704,
+      "destinationZoneId": 358,
+      "destinationName": "Vermilion City",
+      "destinationPixelX": 152,
+      "destinationPixelY": 312,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 216,
+      "pixelY": 360,
+      "worldX": 20688,
+      "worldZ": 4944,
+      "destinationZoneId": 362,
+      "destinationName": "Vermilion City",
+      "destinationPixelX": 240,
+      "destinationPixelY": 312,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 344,
+      "pixelY": 360,
+      "worldX": 20816,
+      "worldZ": 4944,
+      "destinationZoneId": 363,
+      "destinationName": "Vermilion City",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 488,
+      "pixelY": 360,
+      "worldX": 20960,
+      "worldZ": 4944,
+      "destinationZoneId": 360,
+      "destinationName": "Vermilion City",
+      "destinationPixelX": 88,
+      "destinationPixelY": 184,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 488,
+      "pixelY": 504,
+      "worldX": 20960,
+      "worldZ": 5088,
+      "destinationZoneId": 364,
+      "destinationName": "Vermilion City",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w6",
+      "pixelX": 248,
+      "pixelY": 520,
+      "worldX": 20720,
+      "worldZ": 5104,
+      "destinationZoneId": 365,
+      "destinationName": "Vermilion City",
+      "destinationPixelX": 216,
+      "destinationPixelY": 360,
+      "anchor": 0
+    },
+    {
+      "id": "w7",
+      "pixelX": 472,
+      "pixelY": 856,
+      "worldX": 20944,
+      "worldZ": 5440,
+      "destinationZoneId": 386,
+      "destinationName": "Vermilion City",
+      "destinationPixelX": 240,
+      "destinationPixelY": 136,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

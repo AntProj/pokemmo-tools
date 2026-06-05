@@ -1,0 +1,59 @@
+{
+  "zoneId": 205,
+  "displayName": "Fuego Ironworks",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 424,
+      "pixelY": 424,
+      "worldX": 416,
+      "worldZ": 416,
+      "destinationZoneId": 204,
+      "destinationName": "Fuego Ironworks",
+      "destinationPixelX": 156,
+      "destinationPixelY": 186,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t5",
+      "trainerInstanceId": 64,
+      "pixelX": 56,
+      "pixelY": 128,
+      "trainerId": 844,
+      "trainerName": "Dillan",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3843,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t6",
+      "trainerInstanceId": 65,
+      "pixelX": 424,
+      "pixelY": 112,
+      "trainerId": 845,
+      "trainerName": "Holden",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3844,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t7",
+      "trainerInstanceId": 66,
+      "pixelX": 568,
+      "pixelY": 416,
+      "trainerId": 846,
+      "trainerName": "Conrad",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3845,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

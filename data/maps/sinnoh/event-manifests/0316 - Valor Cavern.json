@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 316,
+    "name": "Valor Cavern",
+    "mapName": "0316 - Valor Cavern",
+    "matrixId": 106
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0132_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 276,
+        "y": 248,
+        "targetPng": "0316 - Valor Cavern.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 16,
+        "yMap": 14,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0101_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 244,
+        "y": 328,
+        "targetPng": "0316 - Valor Cavern.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 14,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "header": {
+    "id": 51,
+    "name": "Pewter City",
+    "mapName": "0051 - Pewter City",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0128_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 824,
+        "y": 512,
+        "targetPng": "0051 - Pewter City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 33,
+        "yMatrix": 2,
+        "xMap": 13,
+        "yMap": 30,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0125_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 616,
+        "y": 432,
+        "targetPng": "0051 - Pewter City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 33,
+        "yMatrix": 2,
+        "xMap": 0,
+        "yMap": 25,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0113_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 520,
+        "y": 784,
+        "targetPng": "0051 - Pewter City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 32,
+        "yMatrix": 3,
+        "xMap": 26,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 280,
+        "y": 208,
+        "targetPng": "0051 - Pewter City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 32,
+        "yMatrix": 2,
+        "xMap": 11,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0251_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 872,
+        "y": 240,
+        "targetPng": "0051 - Pewter City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 33,
+        "yMatrix": 2,
+        "xMap": 16,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0251_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 904,
+        "y": 240,
+        "targetPng": "0051 - Pewter City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 33,
+        "yMatrix": 2,
+        "xMap": 18,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 184,
+        "y": 464,
+        "targetPng": "0051 - Pewter City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 32,
+        "yMatrix": 2,
+        "xMap": 5,
+        "yMap": 27,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0126_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 472,
+        "y": 368,
+        "targetPng": "0051 - Pewter City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 32,
+        "yMatrix": 2,
+        "xMap": 23,
+        "yMap": 21,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0059_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 424,
+        "y": 304,
+        "targetPng": "0051 - Pewter City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 32,
+        "yMatrix": 2,
+        "xMap": 20,
+        "yMap": 17,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0711_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 344,
+        "y": 336,
+        "targetPng": "0051 - Pewter City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 32,
+        "yMatrix": 2,
+        "xMap": 15,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0710_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 344,
+        "y": 336,
+        "targetPng": "0051 - Pewter City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 32,
+        "yMatrix": 2,
+        "xMap": 15,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "zoneId": 106,
+  "displayName": "DIGLETT’s Cave",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 88,
+      "pixelY": 120,
+      "worldX": 64,
+      "worldZ": 96,
+      "destinationZoneId": 19,
+      "destinationName": "Route 11",
+      "destinationPixelX": 184,
+      "destinationPixelY": 248,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 88,
+      "pixelY": 88,
+      "worldX": 64,
+      "worldZ": 64,
+      "destinationZoneId": 106,
+      "destinationName": "DIGLETT’s Cave",
+      "destinationPixelX": 568,
+      "destinationPixelY": 1400,
+      "anchor": 2
+    },
+    {
+      "id": "w2",
+      "pixelX": 568,
+      "pixelY": 1400,
+      "worldX": 544,
+      "worldZ": 1376,
+      "destinationZoneId": 106,
+      "destinationName": "DIGLETT’s Cave",
+      "destinationPixelX": 88,
+      "destinationPixelY": 88,
+      "anchor": 1
+    },
+    {
+      "id": "w3",
+      "pixelX": 568,
+      "pixelY": 1384,
+      "worldX": 544,
+      "worldZ": 1360,
+      "destinationZoneId": 106,
+      "destinationName": "DIGLETT’s Cave",
+      "destinationPixelX": 88,
+      "destinationPixelY": 88,
+      "anchor": 1
+    },
+    {
+      "id": "w4",
+      "pixelX": 184,
+      "pixelY": 632,
+      "worldX": 160,
+      "worldZ": 608,
+      "destinationZoneId": 106,
+      "destinationName": "DIGLETT’s Cave",
+      "destinationPixelX": 712,
+      "destinationPixelY": 120,
+      "anchor": 6
+    },
+    {
+      "id": "w5",
+      "pixelX": 184,
+      "pixelY": 616,
+      "worldX": 160,
+      "worldZ": 592,
+      "destinationZoneId": 106,
+      "destinationName": "DIGLETT’s Cave",
+      "destinationPixelX": 712,
+      "destinationPixelY": 120,
+      "anchor": 6
+    },
+    {
+      "id": "w6",
+      "pixelX": 712,
+      "pixelY": 120,
+      "worldX": 688,
+      "worldZ": 96,
+      "destinationZoneId": 106,
+      "destinationName": "DIGLETT’s Cave",
+      "destinationPixelX": 184,
+      "destinationPixelY": 632,
+      "anchor": 4
+    },
+    {
+      "id": "w7",
+      "pixelX": 616,
+      "pixelY": 184,
+      "worldX": 592,
+      "worldZ": 160,
+      "destinationZoneId": 414,
+      "destinationName": "Route 2",
+      "destinationPixelX": 408,
+      "destinationPixelY": 167,
+      "anchor": 4
+    }
+  ],
+  "trainers": []
+}

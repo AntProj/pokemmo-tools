@@ -1,0 +1,91 @@
+{
+  "zoneId": 336,
+  "displayName": "Valor Lakefront",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 556,
+      "pixelY": 874,
+      "worldX": 11296,
+      "worldZ": 12640,
+      "destinationZoneId": 337,
+      "destinationName": "Restaurant",
+      "destinationPixelX": 152,
+      "destinationPixelY": 200,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 700,
+      "pixelY": 730,
+      "worldX": 11440,
+      "worldZ": 12496,
+      "destinationZoneId": 338,
+      "destinationName": "Grand Lake",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 300,
+      "pixelY": 890,
+      "worldX": 11040,
+      "worldZ": 12656,
+      "destinationZoneId": 339,
+      "destinationName": "Grand Lake",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 732,
+      "pixelY": 394,
+      "worldX": 11472,
+      "worldZ": 12160,
+      "destinationZoneId": 314,
+      "destinationName": "Lake Valor",
+      "destinationPixelX": 872,
+      "destinationPixelY": 200,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 732,
+      "pixelY": 410,
+      "worldX": 11472,
+      "worldZ": 12176,
+      "destinationZoneId": 314,
+      "destinationName": "Lake Valor",
+      "destinationPixelX": 872,
+      "destinationPixelY": 216,
+      "anchor": 2
+    },
+    {
+      "id": "w5",
+      "pixelX": 732,
+      "pixelY": 394,
+      "worldX": 11472,
+      "worldZ": 12160,
+      "destinationZoneId": 315,
+      "destinationName": "Lake Valor",
+      "destinationPixelX": 840,
+      "destinationPixelY": 170,
+      "anchor": 3
+    },
+    {
+      "id": "w6",
+      "pixelX": 732,
+      "pixelY": 410,
+      "worldX": 11472,
+      "worldZ": 12176,
+      "destinationZoneId": 315,
+      "destinationName": "Lake Valor",
+      "destinationPixelX": 840,
+      "destinationPixelY": 186,
+      "anchor": 4
+    }
+  ],
+  "trainers": []
+}

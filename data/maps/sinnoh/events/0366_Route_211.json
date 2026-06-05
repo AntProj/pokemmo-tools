@@ -1,0 +1,59 @@
+{
+  "zoneId": 366,
+  "displayName": "Route 211",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 56,
+      "pixelY": 392,
+      "worldX": 6704,
+      "worldZ": 8432,
+      "destinationZoneId": 218,
+      "destinationName": "Mt. Coronet",
+      "destinationPixelX": 472,
+      "destinationPixelY": 568,
+      "anchor": 3
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 247,
+      "pixelX": 264,
+      "pixelY": 288,
+      "trainerId": 81,
+      "trainerName": "Katherine",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3080,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 248,
+      "pixelX": 200,
+      "pixelY": 608,
+      "trainerId": 79,
+      "trainerName": "Sean",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3078,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t19",
+      "trainerInstanceId": 249,
+      "pixelX": 216,
+      "pixelY": 368,
+      "trainerId": 442,
+      "trainerName": "Harry",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3441,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

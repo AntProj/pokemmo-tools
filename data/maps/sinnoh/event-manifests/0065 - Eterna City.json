@@ -1,0 +1,656 @@
+{
+  "header": {
+    "id": 65,
+    "name": "Eterna City",
+    "mapName": "0065 - Eterna City",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0008_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 248,
+        "y": 800,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 9,
+        "yMatrix": 17,
+        "xMap": 15,
+        "yMap": 17,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0016_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 200,
+        "y": 624,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 9,
+        "yMatrix": 17,
+        "xMap": 12,
+        "yMap": 6,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0000_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 680,
+        "y": 256,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 10,
+        "yMatrix": 16,
+        "xMap": 10,
+        "yMap": 15,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0103_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 696,
+        "y": 448,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 10,
+        "yMatrix": 16,
+        "xMap": 11,
+        "yMap": 27,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0103_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 216,
+        "y": 288,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 9,
+        "yMatrix": 16,
+        "xMap": 13,
+        "yMap": 17,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_blue_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 328,
+        "y": 800,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 9,
+        "yMatrix": 17,
+        "xMap": 20,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 312,
+        "y": 448,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 9,
+        "yMatrix": 16,
+        "xMap": 19,
+        "yMap": 28,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_brown_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 88,
+        "y": 288,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 9,
+        "yMatrix": 16,
+        "xMap": 5,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 248,
+        "y": 160,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 9,
+        "yMatrix": 16,
+        "xMap": 15,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_brown_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 904,
+        "y": 288,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 10,
+        "yMatrix": 16,
+        "xMap": 24,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0011_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 392,
+        "y": 656,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 9,
+        "yMatrix": 17,
+        "xMap": 24,
+        "yMap": 8,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0013_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 328,
+        "y": 656,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 9,
+        "yMatrix": 17,
+        "xMap": 20,
+        "yMap": 8,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 12,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0117_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 376,
+        "y": 192,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 9,
+        "yMatrix": 16,
+        "xMap": 23,
+        "yMap": 11,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 13,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_route_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": -104,
+        "y": 320,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 8,
+        "yMatrix": 16,
+        "xMap": 25,
+        "yMap": 20,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 14,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0084_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 264,
+        "y": 160,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 9,
+        "yMatrix": 16,
+        "xMap": 16,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 15,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0084_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 280,
+        "y": 160,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 9,
+        "yMatrix": 16,
+        "xMap": 17,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 16,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0084_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 296,
+        "y": 160,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 9,
+        "yMatrix": 16,
+        "xMap": 18,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 17,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0084_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 408,
+        "y": 64,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 9,
+        "yMatrix": 16,
+        "xMap": 25,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 18,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0161_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 824,
+        "y": 192,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 10,
+        "yMatrix": 16,
+        "xMap": 19,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 19,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0161_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 504,
+        "y": 432,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 9,
+        "yMatrix": 16,
+        "xMap": 31,
+        "yMap": 26,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 20,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0161_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 504,
+        "y": 464,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 9,
+        "yMatrix": 16,
+        "xMap": 31,
+        "yMap": 28,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 21,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 632,
+        "y": 80,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 10,
+        "yMatrix": 16,
+        "xMap": 7,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 22,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 472,
+        "y": 752,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 9,
+        "yMatrix": 17,
+        "xMap": 29,
+        "yMap": 14,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 23,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0103_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 440,
+        "y": 384,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 9,
+        "yMatrix": 16,
+        "xMap": 27,
+        "yMap": 23,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 24,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0004_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 232,
+        "y": 432,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 9,
+        "yMatrix": 16,
+        "xMap": 14,
+        "yMap": 26,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 25,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_route_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 1048,
+        "y": 304,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 11,
+        "yMatrix": 16,
+        "xMap": 1,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 26,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 408,
+        "y": 288,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 9,
+        "yMatrix": 16,
+        "xMap": 25,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 27,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 408,
+        "y": 592,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 9,
+        "yMatrix": 17,
+        "xMap": 25,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 28,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0011_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 232,
+        "y": 864,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 9,
+        "yMatrix": 17,
+        "xMap": 14,
+        "yMap": 21,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 29,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0161_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 824,
+        "y": 208,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 10,
+        "yMatrix": 16,
+        "xMap": 19,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 30,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0004_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 152,
+        "y": 320,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 9,
+        "yMatrix": 16,
+        "xMap": 9,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 31,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0106_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 392,
+        "y": 832,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 9,
+        "yMatrix": 17,
+        "xMap": 24,
+        "yMap": 19,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 32,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0099_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 632,
+        "y": 240,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 10,
+        "yMatrix": 16,
+        "xMap": 7,
+        "yMap": 14,
+        "zPositionRaw": 458752
+      }
+    },
+    {
+      "npcIndex": 33,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0127_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 184,
+        "y": 320,
+        "targetPng": "0065 - Eterna City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 9,
+        "yMatrix": 16,
+        "xMap": 11,
+        "yMap": 19,
+        "zPositionRaw": 458752
+      }
+    }
+  ]
+}

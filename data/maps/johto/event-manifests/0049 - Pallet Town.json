@@ -1,0 +1,67 @@
+{
+  "header": {
+    "id": 49,
+    "name": "Pallet Town",
+    "mapName": "0049 - Pallet Town",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0123_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 264,
+        "y": 272,
+        "targetPng": "0049 - Pallet Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 32,
+        "yMatrix": 11,
+        "xMap": 16,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0130_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 328,
+        "y": 480,
+        "targetPng": "0049 - Pallet Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 32,
+        "yMatrix": 11,
+        "xMap": 20,
+        "yMap": 28,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0126_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 336,
+        "targetPng": "0049 - Pallet Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 32,
+        "yMatrix": 11,
+        "xMap": 7,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

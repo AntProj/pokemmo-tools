@@ -1,0 +1,31 @@
+{
+  "zoneId": 398,
+  "displayName": "Route 222",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 28,
+      "pixelY": 120,
+      "worldX": 16,
+      "worldZ": 112,
+      "destinationZoneId": 395,
+      "destinationName": "Route 222",
+      "destinationPixelX": 1436,
+      "destinationPixelY": 362,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 172,
+      "pixelY": 120,
+      "worldX": 160,
+      "worldZ": 112,
+      "destinationZoneId": 150,
+      "destinationName": "Sunyshore City",
+      "destinationPixelX": 12,
+      "destinationPixelY": 872,
+      "anchor": 3
+    }
+  ],
+  "trainers": []
+}

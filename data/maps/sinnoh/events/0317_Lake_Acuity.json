@@ -1,0 +1,31 @@
+{
+  "zoneId": 317,
+  "displayName": "Lake Acuity",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 232,
+      "pixelY": 810,
+      "worldX": 224,
+      "worldZ": 800,
+      "destinationZoneId": 340,
+      "destinationName": "Acuity Lakefront",
+      "destinationPixelX": 332,
+      "destinationPixelY": 602,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 248,
+      "pixelY": 810,
+      "worldX": 240,
+      "worldZ": 800,
+      "destinationZoneId": 340,
+      "destinationName": "Acuity Lakefront",
+      "destinationPixelX": 348,
+      "destinationPixelY": 602,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

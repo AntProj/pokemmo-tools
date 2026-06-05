@@ -1,0 +1,19 @@
+{
+  "zoneId": 375,
+  "displayName": "Footstep House",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 72,
+      "pixelY": 136,
+      "worldX": 64,
+      "worldZ": 128,
+      "destinationZoneId": 373,
+      "destinationName": "Route 213",
+      "destinationPixelX": 392,
+      "destinationPixelY": 584,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

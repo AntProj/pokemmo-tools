@@ -1,0 +1,103 @@
+{
+  "zoneId": 75,
+  "displayName": "Cianwood City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 296,
+      "pixelY": 600,
+      "worldX": 2752,
+      "worldZ": 5712,
+      "destinationZoneId": 139,
+      "destinationName": "Cianwood City",
+      "destinationPixelX": 312,
+      "destinationPixelY": 340,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 536,
+      "pixelY": 792,
+      "worldX": 2992,
+      "worldZ": 5904,
+      "destinationZoneId": 236,
+      "destinationName": "Cianwood City",
+      "destinationPixelX": 152,
+      "destinationPixelY": 312,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 408,
+      "pixelY": 808,
+      "worldX": 2864,
+      "worldZ": 5920,
+      "destinationZoneId": 233,
+      "destinationName": "Cianwood City",
+      "destinationPixelX": 99,
+      "destinationPixelY": 152,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 264,
+      "pixelY": 760,
+      "worldX": 2720,
+      "worldZ": 5872,
+      "destinationZoneId": 232,
+      "destinationName": "Cianwood City",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 440,
+      "pixelY": 680,
+      "worldX": 2896,
+      "worldZ": 5792,
+      "destinationZoneId": 235,
+      "destinationName": "Cianwood City",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 440,
+      "pixelY": 552,
+      "worldX": 2896,
+      "worldZ": 5664,
+      "destinationZoneId": 234,
+      "destinationName": "Cianwood City",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w6",
+      "pixelX": 280,
+      "pixelY": 440,
+      "worldX": 2736,
+      "worldZ": 5552,
+      "destinationZoneId": 279,
+      "destinationName": "Cliff Edge Gate",
+      "destinationPixelX": 648,
+      "destinationPixelY": 360,
+      "anchor": 0
+    },
+    {
+      "id": "w7",
+      "pixelX": 216,
+      "pixelY": 248,
+      "worldX": 2672,
+      "worldZ": 5360,
+      "destinationZoneId": 385,
+      "destinationName": "Cianwood City",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

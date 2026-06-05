@@ -1,0 +1,96 @@
+{
+  "zoneId": 19,
+  "displayName": "Route 11",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 936,
+      "pixelY": 296,
+      "worldX": 22416,
+      "worldZ": 4880,
+      "destinationZoneId": 425,
+      "destinationName": "Route 11",
+      "destinationPixelX": 32,
+      "destinationPixelY": 120,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 936,
+      "pixelY": 312,
+      "worldX": 22416,
+      "worldZ": 4896,
+      "destinationZoneId": 425,
+      "destinationName": "Route 11",
+      "destinationPixelX": 32,
+      "destinationPixelY": 120,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 184,
+      "pixelY": 248,
+      "worldX": 21664,
+      "worldZ": 4832,
+      "destinationZoneId": 106,
+      "destinationName": "DIGLETT’s Cave",
+      "destinationPixelX": 88,
+      "destinationPixelY": 120,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 41,
+      "pixelX": 328,
+      "pixelY": 224,
+      "trainerId": 317,
+      "trainerName": "Fidel",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3316,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 42,
+      "pixelX": 600,
+      "pixelY": 240,
+      "trainerId": 316,
+      "trainerName": "Herman",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3315,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 43,
+      "pixelX": 472,
+      "pixelY": 256,
+      "trainerId": 380,
+      "trainerName": "Owen",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3379,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 44,
+      "pixelX": 472,
+      "pixelY": 144,
+      "trainerId": 381,
+      "trainerName": "Jason",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3380,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

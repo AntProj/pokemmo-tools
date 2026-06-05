@@ -1,0 +1,19 @@
+{
+  "zoneId": 200,
+  "displayName": "Valley Windworks",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 312,
+      "pixelY": 232,
+      "worldX": 3888,
+      "worldZ": 10464,
+      "destinationZoneId": 201,
+      "destinationName": "Valley Windworks",
+      "destinationPixelX": 200,
+      "destinationPixelY": 264,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

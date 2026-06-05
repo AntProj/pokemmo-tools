@@ -1,0 +1,70 @@
+{
+  "zoneId": 310,
+  "displayName": "Galactic HQ",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 808,
+      "pixelY": 56,
+      "worldX": 800,
+      "worldZ": 48,
+      "destinationZoneId": 305,
+      "destinationName": "Galactic HQ",
+      "destinationPixelX": 184,
+      "destinationPixelY": 56,
+      "anchor": 6
+    },
+    {
+      "id": "w1",
+      "pixelX": 1304,
+      "pixelY": 56,
+      "worldX": 1296,
+      "worldZ": 48,
+      "destinationZoneId": 309,
+      "destinationName": "Galactic HQ",
+      "destinationPixelX": 56,
+      "destinationPixelY": 120,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 56,
+      "pixelY": 264,
+      "worldX": 48,
+      "worldZ": 256,
+      "destinationZoneId": 143,
+      "destinationName": "Veilstone City",
+      "destinationPixelX": 216,
+      "destinationPixelY": 56,
+      "anchor": 1
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t3",
+      "trainerInstanceId": 155,
+      "pixelX": 648,
+      "pixelY": 256,
+      "trainerId": 507,
+      "trainerName": "Grunt",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3506,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 156,
+      "pixelX": 1144,
+      "pixelY": 176,
+      "trainerId": 508,
+      "trainerName": "Grunt",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3507,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

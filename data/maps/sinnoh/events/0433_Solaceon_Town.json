@@ -1,0 +1,115 @@
+{
+  "zoneId": 433,
+  "displayName": "Solaceon Town",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 152,
+      "pixelY": 90,
+      "worldX": 8848,
+      "worldZ": 10320,
+      "destinationZoneId": 437,
+      "destinationName": "Pokémon Day Care",
+      "destinationPixelX": 152,
+      "destinationPixelY": 184,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 568,
+      "pixelY": 138,
+      "worldX": 9264,
+      "worldZ": 10368,
+      "destinationZoneId": 438,
+      "destinationName": "Solaceon Town",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 440,
+      "pixelY": 266,
+      "worldX": 9136,
+      "worldZ": 10496,
+      "destinationZoneId": 439,
+      "destinationName": "Solaceon Town",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 344,
+      "pixelY": 106,
+      "worldX": 9040,
+      "worldZ": 10336,
+      "destinationZoneId": 440,
+      "destinationName": "Solaceon Town",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 600,
+      "pixelY": 266,
+      "worldX": 9296,
+      "worldZ": 10496,
+      "destinationZoneId": 441,
+      "destinationName": "Solaceon Town",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 360,
+      "pixelY": 266,
+      "worldX": 9056,
+      "worldZ": 10496,
+      "destinationZoneId": 435,
+      "destinationName": "Solaceon Town",
+      "destinationPixelX": 136,
+      "destinationPixelY": 200,
+      "anchor": 0
+    },
+    {
+      "id": "w6",
+      "pixelX": 440,
+      "pixelY": 410,
+      "worldX": 9136,
+      "worldZ": 10640,
+      "destinationZoneId": 434,
+      "destinationName": "Solaceon Town",
+      "destinationPixelX": 56,
+      "destinationPixelY": 184,
+      "anchor": 0
+    },
+    {
+      "id": "w7",
+      "pixelX": 856,
+      "pixelY": 202,
+      "worldX": 9552,
+      "worldZ": 10432,
+      "destinationZoneId": 225,
+      "destinationName": "Solaceon Ruins",
+      "destinationPixelX": 88,
+      "destinationPixelY": 184,
+      "anchor": 0
+    },
+    {
+      "id": "w8",
+      "pixelX": 824,
+      "pixelY": 250,
+      "worldX": 9520,
+      "worldZ": 10480,
+      "destinationZoneId": 226,
+      "destinationName": "Solaceon Ruins",
+      "destinationPixelX": 152,
+      "destinationPixelY": 184,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

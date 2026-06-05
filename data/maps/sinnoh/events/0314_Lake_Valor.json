@@ -1,0 +1,83 @@
+{
+  "zoneId": 314,
+  "displayName": "Lake Valor",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 872,
+      "pixelY": 200,
+      "worldX": 832,
+      "worldZ": 160,
+      "destinationZoneId": 336,
+      "destinationName": "Valor Lakefront",
+      "destinationPixelX": 732,
+      "destinationPixelY": 394,
+      "anchor": 3
+    },
+    {
+      "id": "w1",
+      "pixelX": 552,
+      "pixelY": 552,
+      "worldX": 512,
+      "worldZ": 512,
+      "destinationZoneId": 316,
+      "destinationName": "Valor Cavern",
+      "destinationPixelX": 244,
+      "destinationPixelY": 480,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 872,
+      "pixelY": 216,
+      "worldX": 832,
+      "worldZ": 176,
+      "destinationZoneId": 336,
+      "destinationName": "Valor Lakefront",
+      "destinationPixelX": 732,
+      "destinationPixelY": 410,
+      "anchor": 4
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t4",
+      "trainerInstanceId": 161,
+      "pixelX": 312,
+      "pixelY": 560,
+      "trainerId": 417,
+      "trainerName": "Grunt",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3416,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 162,
+      "pixelX": 504,
+      "pixelY": 336,
+      "trainerId": 425,
+      "trainerName": "Grunt",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3424,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t6",
+      "trainerInstanceId": 163,
+      "pixelX": 440,
+      "pixelY": 608,
+      "trainerId": 418,
+      "trainerName": "Grunt",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3417,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

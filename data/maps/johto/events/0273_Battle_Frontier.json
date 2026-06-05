@@ -1,0 +1,79 @@
+{
+  "zoneId": 273,
+  "displayName": "Battle Frontier",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 152,
+      "pixelY": 40,
+      "worldX": 112,
+      "worldZ": 32,
+      "destinationZoneId": 272,
+      "destinationName": "Battle Frontier",
+      "destinationPixelX": 776,
+      "destinationPixelY": 848,
+      "anchor": 10
+    },
+    {
+      "id": "w1",
+      "pixelX": 136,
+      "pixelY": 40,
+      "worldX": 96,
+      "worldZ": 32,
+      "destinationZoneId": 272,
+      "destinationName": "Battle Frontier",
+      "destinationPixelX": 776,
+      "destinationPixelY": 848,
+      "anchor": 10
+    },
+    {
+      "id": "w2",
+      "pixelX": 168,
+      "pixelY": 40,
+      "worldX": 128,
+      "worldZ": 32,
+      "destinationZoneId": 272,
+      "destinationName": "Battle Frontier",
+      "destinationPixelX": 776,
+      "destinationPixelY": 848,
+      "anchor": 10
+    },
+    {
+      "id": "w3",
+      "pixelX": 136,
+      "pixelY": 328,
+      "worldX": 96,
+      "worldZ": 320,
+      "destinationZoneId": 411,
+      "destinationName": "Frontier Access",
+      "destinationPixelX": 488,
+      "destinationPixelY": 159,
+      "anchor": 2
+    },
+    {
+      "id": "w4",
+      "pixelX": 152,
+      "pixelY": 328,
+      "worldX": 112,
+      "worldZ": 320,
+      "destinationZoneId": 411,
+      "destinationName": "Frontier Access",
+      "destinationPixelX": 488,
+      "destinationPixelY": 159,
+      "anchor": 2
+    },
+    {
+      "id": "w5",
+      "pixelX": 168,
+      "pixelY": 328,
+      "worldX": 128,
+      "worldZ": 320,
+      "destinationZoneId": 411,
+      "destinationName": "Frontier Access",
+      "destinationPixelX": 504,
+      "destinationPixelY": 159,
+      "anchor": 3
+    }
+  ],
+  "trainers": []
+}

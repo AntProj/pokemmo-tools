@@ -1,0 +1,136 @@
+{
+  "zoneId": 16,
+  "displayName": "Route 8",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 24,
+      "pixelY": 279,
+      "worldX": 21504,
+      "worldZ": 3840,
+      "destinationZoneId": 390,
+      "destinationName": "Route 8",
+      "destinationPixelX": 176,
+      "destinationPixelY": 120,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 24,
+      "pixelY": 295,
+      "worldX": 21504,
+      "worldZ": 3856,
+      "destinationZoneId": 390,
+      "destinationName": "Route 8",
+      "destinationPixelX": 176,
+      "destinationPixelY": 120,
+      "anchor": 1
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 27,
+      "pixelX": 280,
+      "pixelY": 335,
+      "trainerId": 309,
+      "trainerName": "Dwayne",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3308,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 28,
+      "pixelX": 280,
+      "pixelY": 351,
+      "trainerId": 310,
+      "trainerName": "Harris",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3309,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 29,
+      "pixelX": 280,
+      "pixelY": 367,
+      "trainerId": 311,
+      "trainerName": "Zeke",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3310,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 30,
+      "pixelX": 472,
+      "pixelY": 287,
+      "trainerId": 364,
+      "trainerName": "Sam",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3363,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 31,
+      "pixelX": 728,
+      "pixelY": 303,
+      "trainerId": 365,
+      "trainerName": "Tyrone",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3364,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 32,
+      "pixelX": 584,
+      "pixelY": 175,
+      "trainerId": 553,
+      "trainerName": "Moe & Lulu",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3552,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t6",
+      "trainerInstanceId": 33,
+      "pixelX": 600,
+      "pixelY": 175,
+      "trainerId": 553,
+      "trainerName": "Moe & Lulu",
+      "orientation": "Down",
+      "isDoubleBattlePartner": true,
+      "scriptNumber": 5552,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t7",
+      "trainerInstanceId": 34,
+      "pixelX": 840,
+      "pixelY": 431,
+      "trainerId": 554,
+      "trainerName": "Milton",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3553,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

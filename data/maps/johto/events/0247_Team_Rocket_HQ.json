@@ -1,0 +1,58 @@
+{
+  "zoneId": 247,
+  "displayName": "Team Rocket HQ",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 824,
+      "pixelY": 160,
+      "worldX": 816,
+      "worldZ": 64,
+      "destinationZoneId": 116,
+      "destinationName": "Mahogany Town",
+      "destinationPixelX": 136,
+      "destinationPixelY": 72,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 168,
+      "pixelY": 560,
+      "worldX": 160,
+      "worldZ": 464,
+      "destinationZoneId": 248,
+      "destinationName": "Team Rocket HQ",
+      "destinationPixelX": 168,
+      "destinationPixelY": 472,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t6",
+      "trainerInstanceId": 327,
+      "pixelX": 200,
+      "pixelY": 184,
+      "trainerId": 216,
+      "trainerName": "Grunt",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3215,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t7",
+      "trainerInstanceId": 328,
+      "pixelX": 584,
+      "pixelY": 456,
+      "trainerId": 470,
+      "trainerName": "Gregg",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3469,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

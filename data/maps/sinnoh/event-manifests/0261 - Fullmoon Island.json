@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 261,
+    "name": "Fullmoon Island",
+    "mapName": "0261 - Fullmoon Island",
+    "matrixId": 53
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0138_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 264,
+        "y": 258,
+        "targetPng": "0261 - Fullmoon Island.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 16,
+        "yMap": 15,
+        "zPositionRaw": 65536
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 264,
+        "y": 258,
+        "targetPng": "0261 - Fullmoon Island.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 16,
+        "yMap": 15,
+        "zPositionRaw": 65536
+      }
+    }
+  ]
+}

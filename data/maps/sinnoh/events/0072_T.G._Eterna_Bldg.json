@@ -1,0 +1,82 @@
+{
+  "zoneId": 72,
+  "displayName": "T.G. Eterna Bldg",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 184,
+      "pixelY": 248,
+      "worldX": 176,
+      "worldZ": 240,
+      "destinationZoneId": 65,
+      "destinationName": "Eterna City",
+      "destinationPixelX": 280,
+      "destinationPixelY": 120,
+      "anchor": 3
+    },
+    {
+      "id": "w1",
+      "pixelX": 232,
+      "pixelY": 104,
+      "worldX": 224,
+      "worldZ": 96,
+      "destinationZoneId": 73,
+      "destinationName": "T.G. Eterna Bldg",
+      "destinationPixelX": 56,
+      "destinationPixelY": 206,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 328,
+      "pixelY": 104,
+      "worldX": 320,
+      "worldZ": 96,
+      "destinationZoneId": 73,
+      "destinationName": "T.G. Eterna Bldg",
+      "destinationPixelX": 136,
+      "destinationPixelY": 206,
+      "anchor": 2
+    },
+    {
+      "id": "w3",
+      "pixelX": 40,
+      "pixelY": 40,
+      "worldX": 32,
+      "worldZ": 32,
+      "destinationZoneId": 571,
+      "destinationName": "ROTOM’s Room",
+      "destinationPixelX": 120,
+      "destinationPixelY": 184,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t2",
+      "trainerInstanceId": 10,
+      "pixelX": 264,
+      "pixelY": 144,
+      "trainerId": 410,
+      "trainerName": "Grunt",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3409,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 11,
+      "pixelX": 200,
+      "pixelY": 144,
+      "trainerId": 421,
+      "trainerName": "Grunt",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3420,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

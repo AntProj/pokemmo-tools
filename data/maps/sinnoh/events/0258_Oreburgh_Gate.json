@@ -1,0 +1,70 @@
+{
+  "zoneId": 258,
+  "displayName": "Oreburgh Gate",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 168,
+      "pixelY": 360,
+      "worldX": 64,
+      "worldZ": 352,
+      "destinationZoneId": 344,
+      "destinationName": "Route 203",
+      "destinationPixelX": 888,
+      "destinationPixelY": 234,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 536,
+      "pixelY": 360,
+      "worldX": 432,
+      "worldZ": 352,
+      "destinationZoneId": 45,
+      "destinationName": "Oreburgh City",
+      "destinationPixelX": 40,
+      "destinationPixelY": 216,
+      "anchor": 10
+    },
+    {
+      "id": "w2",
+      "pixelX": 424,
+      "pixelY": 88,
+      "worldX": 320,
+      "worldZ": 80,
+      "destinationZoneId": 259,
+      "destinationName": "Oreburgh Gate",
+      "destinationPixelX": 776,
+      "destinationPixelY": 72,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 104,
+      "pixelX": 488,
+      "pixelY": 352,
+      "trainerId": 329,
+      "trainerName": "Diana",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3328,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 105,
+      "pixelX": 376,
+      "pixelY": 416,
+      "trainerId": 265,
+      "trainerName": "Curtis",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3264,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

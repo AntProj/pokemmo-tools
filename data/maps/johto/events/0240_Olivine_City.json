@@ -1,0 +1,43 @@
+{
+  "zoneId": 240,
+  "displayName": "Olivine City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 136,
+      "pixelY": 40,
+      "worldX": 112,
+      "worldZ": 32,
+      "destinationZoneId": 77,
+      "destinationName": "Olivine City",
+      "destinationPixelX": 392,
+      "destinationPixelY": 856,
+      "anchor": 8
+    },
+    {
+      "id": "w1",
+      "pixelX": 136,
+      "pixelY": 184,
+      "worldX": 112,
+      "worldZ": 176,
+      "destinationZoneId": 330,
+      "destinationName": "Olivine City",
+      "destinationPixelX": 376,
+      "destinationPixelY": 456,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 40,
+      "pixelY": 120,
+      "worldX": 16,
+      "worldZ": 112,
+      "destinationZoneId": 330,
+      "destinationName": "Olivine City",
+      "destinationPixelX": 296,
+      "destinationPixelY": 424,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

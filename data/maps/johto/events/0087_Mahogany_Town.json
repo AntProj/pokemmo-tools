@@ -1,0 +1,79 @@
+{
+  "zoneId": 87,
+  "displayName": "Mahogany Town",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 296,
+      "pixelY": 108,
+      "worldX": 8384,
+      "worldZ": 2640,
+      "destinationZoneId": 142,
+      "destinationName": "Route 43",
+      "destinationPixelX": 120,
+      "destinationPixelY": 256,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 312,
+      "pixelY": 108,
+      "worldX": 8400,
+      "worldZ": 2640,
+      "destinationZoneId": 142,
+      "destinationName": "Route 43",
+      "destinationPixelX": 120,
+      "destinationPixelY": 256,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 280,
+      "pixelY": 396,
+      "worldX": 8368,
+      "worldZ": 2928,
+      "destinationZoneId": 397,
+      "destinationName": "Mahogany Town",
+      "destinationPixelX": 400,
+      "destinationPixelY": 332,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 456,
+      "pixelY": 396,
+      "worldX": 8544,
+      "worldZ": 2928,
+      "destinationZoneId": 246,
+      "destinationName": "Mahogany Town",
+      "destinationPixelX": 152,
+      "destinationPixelY": 312,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 504,
+      "pixelY": 252,
+      "worldX": 8592,
+      "worldZ": 2784,
+      "destinationZoneId": 133,
+      "destinationName": "Mahogany Town",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 360,
+      "pixelY": 252,
+      "worldX": 8448,
+      "worldZ": 2784,
+      "destinationZoneId": 116,
+      "destinationName": "Mahogany Town",
+      "destinationPixelX": 120,
+      "destinationPixelY": 168,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

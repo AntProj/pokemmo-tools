@@ -1,0 +1,31 @@
+{
+  "zoneId": 58,
+  "displayName": "Indigo Plateau",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 264,
+      "pixelY": 434,
+      "worldX": 14592,
+      "worldZ": 3488,
+      "destinationZoneId": 179,
+      "destinationName": "Victory Road",
+      "destinationPixelX": 616,
+      "destinationPixelY": 232,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 264,
+      "pixelY": 146,
+      "worldX": 14592,
+      "worldZ": 3200,
+      "destinationZoneId": 300,
+      "destinationName": "Pokémon League",
+      "destinationPixelX": 232,
+      "destinationPixelY": 464,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,135 @@
+{
+  "zoneId": 400,
+  "displayName": "Route 225",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 364,
+      "pixelY": 1496,
+      "worldX": 10080,
+      "worldZ": 6608,
+      "destinationZoneId": 193,
+      "destinationName": "Route 225",
+      "destinationPixelX": 88,
+      "destinationPixelY": 40,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 380,
+      "pixelY": 1496,
+      "worldX": 10096,
+      "worldZ": 6608,
+      "destinationZoneId": 193,
+      "destinationName": "Route 225",
+      "destinationPixelX": 88,
+      "destinationPixelY": 40,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 156,
+      "pixelY": 776,
+      "worldX": 9872,
+      "worldZ": 5888,
+      "destinationZoneId": 498,
+      "destinationName": "Route 225",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t20",
+      "trainerInstanceId": 335,
+      "pixelX": 332,
+      "pixelY": 1168,
+      "trainerId": 594,
+      "trainerName": "Ashlee",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3593,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t21",
+      "trainerInstanceId": 336,
+      "pixelX": 332,
+      "pixelY": 1248,
+      "trainerId": 554,
+      "trainerName": "Audrey",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3553,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t22",
+      "trainerInstanceId": 337,
+      "pixelX": 380,
+      "pixelY": 1168,
+      "trainerId": 585,
+      "trainerName": "Daisy",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3584,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t23",
+      "trainerInstanceId": 338,
+      "pixelX": 316,
+      "pixelY": 48,
+      "trainerId": 557,
+      "trainerName": "Geoffrey",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3556,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t24",
+      "trainerInstanceId": 339,
+      "pixelX": 188,
+      "pixelY": 336,
+      "trainerId": 573,
+      "trainerName": "Deanna",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3572,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t26",
+      "trainerInstanceId": 340,
+      "pixelX": 76,
+      "pixelY": 1248,
+      "trainerId": 593,
+      "trainerName": "Dwayne",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3592,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t27",
+      "trainerInstanceId": 341,
+      "pixelX": 268,
+      "pixelY": 768,
+      "trainerId": 567,
+      "trainerName": "Quinn",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3566,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

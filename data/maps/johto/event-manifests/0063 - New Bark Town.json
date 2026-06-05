@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 63,
+    "name": "New Bark Town",
+    "mapName": "0063 - New Bark Town",
+    "matrixId": 71
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0159_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 136,
+        "y": 128,
+        "targetPng": "0063 - New Bark Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "zoneId": 279,
+  "displayName": "Snowpoint Temple",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 72,
+      "pixelY": 56,
+      "worldX": 64,
+      "worldZ": 48,
+      "destinationZoneId": 278,
+      "destinationName": "Snowpoint Temple",
+      "destinationPixelX": 232,
+      "destinationPixelY": 56,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 232,
+      "pixelY": 56,
+      "worldX": 224,
+      "worldZ": 48,
+      "destinationZoneId": 280,
+      "destinationName": "Snowpoint Temple",
+      "destinationPixelX": 104,
+      "destinationPixelY": 56,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

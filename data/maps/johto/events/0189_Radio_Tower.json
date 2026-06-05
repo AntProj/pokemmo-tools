@@ -1,0 +1,57 @@
+{
+  "zoneId": 189,
+  "displayName": "Radio Tower",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 96,
+      "pixelY": 96,
+      "worldX": 48,
+      "worldZ": 80,
+      "destinationZoneId": 188,
+      "destinationName": "Radio Tower",
+      "destinationPixelX": 96,
+      "destinationPixelY": 120,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 256,
+      "pixelY": 48,
+      "worldX": 208,
+      "worldZ": 32,
+      "destinationZoneId": 447,
+      "destinationName": "Radio Tower",
+      "destinationPixelX": 88,
+      "destinationPixelY": 104,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 352,
+      "pixelY": 96,
+      "worldX": 304,
+      "worldZ": 80,
+      "destinationZoneId": 188,
+      "destinationName": "Radio Tower",
+      "destinationPixelX": 416,
+      "destinationPixelY": 120,
+      "anchor": 3
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t1",
+      "trainerInstanceId": 304,
+      "pixelX": 224,
+      "pixelY": 88,
+      "trainerId": 478,
+      "trainerName": "Ariana",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3477,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

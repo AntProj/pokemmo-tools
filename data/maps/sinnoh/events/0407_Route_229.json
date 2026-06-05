@@ -1,0 +1,59 @@
+{
+  "zoneId": 407,
+  "displayName": "Route 229",
+  "warps": [],
+  "trainers": [
+    {
+      "id": "t14",
+      "trainerInstanceId": 353,
+      "pixelX": 992,
+      "pixelY": 290,
+      "trainerId": 592,
+      "trainerName": "Deshawn",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3591,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t15",
+      "trainerInstanceId": 354,
+      "pixelX": 464,
+      "pixelY": 274,
+      "trainerId": 566,
+      "trainerName": "Felix",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3565,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t16",
+      "trainerInstanceId": 355,
+      "pixelX": 544,
+      "pixelY": 274,
+      "trainerId": 575,
+      "trainerName": "Dana",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3574,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t17",
+      "trainerInstanceId": 356,
+      "pixelX": 848,
+      "pixelY": 50,
+      "trainerId": 578,
+      "trainerName": "Sandra",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3577,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

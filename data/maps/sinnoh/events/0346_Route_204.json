@@ -1,0 +1,72 @@
+{
+  "zoneId": 346,
+  "displayName": "Route 204",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 332,
+      "pixelY": 426,
+      "worldX": 2880,
+      "worldZ": 11168,
+      "destinationZoneId": 254,
+      "destinationName": "Ravaged Path",
+      "destinationPixelX": 456,
+      "destinationPixelY": 712,
+      "anchor": 1
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 175,
+      "pixelX": 364,
+      "pixelY": 226,
+      "trainerId": 13,
+      "trainerName": "Brandon",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3012,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 176,
+      "pixelX": 284,
+      "pixelY": 338,
+      "trainerId": 14,
+      "trainerName": "Taylor",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3013,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 177,
+      "pixelX": 252,
+      "pixelY": 130,
+      "trainerId": 15,
+      "trainerName": "Liv & Liz",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3014,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 178,
+      "pixelX": 268,
+      "pixelY": 130,
+      "trainerId": 15,
+      "trainerName": "Liv & Liz",
+      "orientation": "Down",
+      "isDoubleBattlePartner": true,
+      "scriptNumber": 5014,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "zoneId": 447,
+  "displayName": "Celestic Town",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 72,
+      "pixelY": 136,
+      "worldX": 64,
+      "worldZ": 128,
+      "destinationZoneId": 442,
+      "destinationName": "Celestic Town",
+      "destinationPixelX": 408,
+      "destinationPixelY": 72,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

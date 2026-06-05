@@ -1,0 +1,71 @@
+{
+  "zoneId": 177,
+  "displayName": "SLOWPOKE Well",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 680,
+      "pixelY": 456,
+      "worldX": 672,
+      "worldZ": 432,
+      "destinationZoneId": 114,
+      "destinationName": "SLOWPOKE Well",
+      "destinationPixelX": 184,
+      "destinationPixelY": 104,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 440,
+      "pixelY": 344,
+      "worldX": 432,
+      "worldZ": 320,
+      "destinationZoneId": 181,
+      "destinationName": "SLOWPOKE Well",
+      "destinationPixelX": 232,
+      "destinationPixelY": 344,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t1",
+      "trainerInstanceId": 285,
+      "pixelX": 680,
+      "pixelY": 208,
+      "trainerId": 101,
+      "trainerName": "Grunt",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3100,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 286,
+      "pixelX": 440,
+      "pixelY": 176,
+      "trainerId": 12,
+      "trainerName": "Grunt",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3011,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 287,
+      "pixelX": 600,
+      "pixelY": 144,
+      "trainerId": 13,
+      "trainerName": "Grunt",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3012,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

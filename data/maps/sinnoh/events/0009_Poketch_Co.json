@@ -1,0 +1,31 @@
+{
+  "zoneId": 9,
+  "displayName": "Pokétch Co",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 248,
+      "pixelY": 56,
+      "worldX": 240,
+      "worldZ": 48,
+      "destinationZoneId": 8,
+      "destinationName": "Pokétch Co.",
+      "destinationPixelX": 104,
+      "destinationPixelY": 56,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 104,
+      "pixelY": 56,
+      "worldX": 96,
+      "worldZ": 48,
+      "destinationZoneId": 10,
+      "destinationName": "Pokétch Co.",
+      "destinationPixelX": 248,
+      "destinationPixelY": 56,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

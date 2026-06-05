@@ -1,0 +1,31 @@
+{
+  "zoneId": 109,
+  "displayName": "Route 208",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 172,
+      "pixelY": 120,
+      "worldX": 160,
+      "worldZ": 112,
+      "destinationZoneId": 86,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 120,
+      "destinationPixelY": 874,
+      "anchor": 14
+    },
+    {
+      "id": "w1",
+      "pixelX": 28,
+      "pixelY": 120,
+      "worldX": 16,
+      "worldZ": 112,
+      "destinationZoneId": 354,
+      "destinationName": "Route 208",
+      "destinationPixelX": 1016,
+      "destinationPixelY": 362,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

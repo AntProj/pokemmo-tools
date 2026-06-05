@@ -1,0 +1,67 @@
+{
+  "zoneId": 418,
+  "displayName": "Sandgem Town",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 444,
+      "pixelY": 170,
+      "worldX": 2992,
+      "worldZ": 13472,
+      "destinationZoneId": 419,
+      "destinationName": "Sandgem Town",
+      "destinationPixelX": 56,
+      "destinationPixelY": 184,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 284,
+      "pixelY": 170,
+      "worldX": 2832,
+      "worldZ": 13472,
+      "destinationZoneId": 420,
+      "destinationName": "Sandgem Town",
+      "destinationPixelX": 136,
+      "destinationPixelY": 200,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 140,
+      "pixelY": 170,
+      "worldX": 2688,
+      "worldZ": 13472,
+      "destinationZoneId": 422,
+      "destinationName": "Sandgem Town",
+      "destinationPixelX": 120,
+      "destinationPixelY": 248,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 268,
+      "pixelY": 362,
+      "worldX": 2816,
+      "worldZ": 13664,
+      "destinationZoneId": 423,
+      "destinationName": "Sandgem Town",
+      "destinationPixelX": 104,
+      "destinationPixelY": 168,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 124,
+      "pixelY": 362,
+      "worldX": 2672,
+      "worldZ": 13664,
+      "destinationZoneId": 425,
+      "destinationName": "Sandgem Town",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

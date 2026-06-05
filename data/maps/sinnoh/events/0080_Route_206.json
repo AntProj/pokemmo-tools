@@ -1,0 +1,79 @@
+{
+  "zoneId": 80,
+  "displayName": "Route 206",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 120,
+      "pixelY": 40,
+      "worldX": 112,
+      "worldZ": 32,
+      "destinationZoneId": 65,
+      "destinationName": "Eterna City",
+      "destinationPixelX": 264,
+      "destinationPixelY": 920,
+      "anchor": 8
+    },
+    {
+      "id": "w1",
+      "pixelX": 120,
+      "pixelY": 200,
+      "worldX": 112,
+      "worldZ": 192,
+      "destinationZoneId": 350,
+      "destinationName": "Route 206",
+      "destinationPixelX": 264,
+      "destinationPixelY": 120,
+      "anchor": 4
+    },
+    {
+      "id": "w2",
+      "pixelX": 104,
+      "pixelY": 200,
+      "worldX": 96,
+      "worldZ": 192,
+      "destinationZoneId": 350,
+      "destinationName": "Route 206",
+      "destinationPixelX": 264,
+      "destinationPixelY": 120,
+      "anchor": 4
+    },
+    {
+      "id": "w3",
+      "pixelX": 136,
+      "pixelY": 200,
+      "worldX": 128,
+      "worldZ": 192,
+      "destinationZoneId": 350,
+      "destinationName": "Route 206",
+      "destinationPixelX": 264,
+      "destinationPixelY": 120,
+      "anchor": 4
+    },
+    {
+      "id": "w4",
+      "pixelX": 104,
+      "pixelY": 40,
+      "worldX": 96,
+      "worldZ": 32,
+      "destinationZoneId": 65,
+      "destinationName": "Eterna City",
+      "destinationPixelX": 264,
+      "destinationPixelY": 920,
+      "anchor": 8
+    },
+    {
+      "id": "w5",
+      "pixelX": 136,
+      "pixelY": 40,
+      "worldX": 128,
+      "worldZ": 32,
+      "destinationZoneId": 65,
+      "destinationName": "Eterna City",
+      "destinationPixelX": 264,
+      "destinationPixelY": 920,
+      "anchor": 8
+    }
+  ],
+  "trainers": []
+}

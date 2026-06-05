@@ -1,0 +1,19 @@
+{
+  "zoneId": 10,
+  "displayName": "Pokétch Co",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 248,
+      "pixelY": 56,
+      "worldX": 240,
+      "worldZ": 48,
+      "destinationZoneId": 9,
+      "destinationName": "Pokétch Co.",
+      "destinationPixelX": 104,
+      "destinationPixelY": 56,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

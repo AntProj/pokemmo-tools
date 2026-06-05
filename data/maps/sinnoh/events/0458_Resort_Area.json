@@ -1,0 +1,19 @@
+{
+  "zoneId": 458,
+  "displayName": "Resort Area",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 56,
+      "pixelY": 184,
+      "worldX": 48,
+      "worldZ": 176,
+      "destinationZoneId": 433,
+      "destinationName": "Solaceon Town",
+      "destinationPixelX": 440,
+      "destinationPixelY": 410,
+      "anchor": 6
+    }
+  ],
+  "trainers": []
+}

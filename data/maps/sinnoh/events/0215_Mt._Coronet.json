@@ -1,0 +1,81 @@
+{
+  "zoneId": 215,
+  "displayName": "Mt. Coronet",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 168,
+      "pixelY": 392,
+      "worldX": 160,
+      "worldZ": 384,
+      "destinationZoneId": 214,
+      "destinationName": "Mt. Coronet",
+      "destinationPixelX": 216,
+      "destinationPixelY": 392,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 120,
+      "pixelY": 88,
+      "worldX": 112,
+      "worldZ": 80,
+      "destinationZoneId": 220,
+      "destinationName": "Spear Pillar",
+      "destinationPixelX": 504,
+      "destinationPixelY": 856,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 120,
+      "pixelY": 88,
+      "worldX": 112,
+      "worldZ": 80,
+      "destinationZoneId": 221,
+      "destinationName": "Spear Pillar",
+      "destinationPixelX": 504,
+      "destinationPixelY": 856,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 120,
+      "pixelY": 88,
+      "worldX": 112,
+      "worldZ": 80,
+      "destinationZoneId": 584,
+      "destinationName": "Spear Pillar",
+      "destinationPixelX": 504,
+      "destinationPixelY": 856,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 120,
+      "pixelY": 88,
+      "worldX": 112,
+      "worldZ": 80,
+      "destinationZoneId": 585,
+      "destinationName": "Spear Pillar",
+      "destinationPixelX": 504,
+      "destinationPixelY": 856,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 71,
+      "pixelX": 168,
+      "pixelY": 256,
+      "trainerId": 526,
+      "trainerName": "Grunt",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3525,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

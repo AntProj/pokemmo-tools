@@ -1,0 +1,109 @@
+{
+  "zoneId": 469,
+  "displayName": "Route 226",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 1084,
+      "pixelY": 314,
+      "worldX": 11824,
+      "worldZ": 5424,
+      "destinationZoneId": 499,
+      "destinationName": "Route 226",
+      "destinationPixelX": 72,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 1532,
+      "pixelY": 170,
+      "worldX": 12272,
+      "worldZ": 5280,
+      "destinationZoneId": 501,
+      "destinationName": "Route 228",
+      "destinationPixelX": 28,
+      "destinationPixelY": 120,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 1532,
+      "pixelY": 186,
+      "worldX": 12272,
+      "worldZ": 5296,
+      "destinationZoneId": 501,
+      "destinationName": "Route 228",
+      "destinationPixelX": 28,
+      "destinationPixelY": 120,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t8",
+      "trainerInstanceId": 373,
+      "pixelX": 892,
+      "pixelY": 370,
+      "trainerId": 604,
+      "trainerName": "Lydia",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3603,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t10",
+      "trainerInstanceId": 374,
+      "pixelX": 284,
+      "pixelY": 258,
+      "trainerId": 568,
+      "trainerName": "Graham",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3567,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t11",
+      "trainerInstanceId": 375,
+      "pixelX": 572,
+      "pixelY": 194,
+      "trainerId": 555,
+      "trainerName": "Geneva",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3554,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t12",
+      "trainerInstanceId": 376,
+      "pixelX": 572,
+      "pixelY": 162,
+      "trainerId": 560,
+      "trainerName": "Stanley",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3559,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t15",
+      "trainerInstanceId": 377,
+      "pixelX": 1420,
+      "pixelY": 370,
+      "trainerId": 600,
+      "trainerName": "Wade",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3599,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

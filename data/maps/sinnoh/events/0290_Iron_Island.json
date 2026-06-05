@@ -1,0 +1,33 @@
+{
+  "zoneId": 290,
+  "displayName": "Iron Island",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 248,
+      "pixelY": 56,
+      "worldX": 240,
+      "worldZ": 48,
+      "destinationZoneId": 289,
+      "destinationName": "Iron Island",
+      "destinationPixelX": 72,
+      "destinationPixelY": 56,
+      "anchor": 1
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t1",
+      "trainerInstanceId": 134,
+      "pixelX": 184,
+      "pixelY": 224,
+      "trainerId": 378,
+      "trainerName": "Lawrence",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3377,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

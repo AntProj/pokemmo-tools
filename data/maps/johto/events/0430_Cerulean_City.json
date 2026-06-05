@@ -1,0 +1,19 @@
+{
+  "zoneId": 430,
+  "displayName": "Cerulean City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 104,
+      "pixelY": 136,
+      "worldX": 64,
+      "worldZ": 128,
+      "destinationZoneId": 52,
+      "destinationName": "Cerulean City",
+      "destinationPixelX": 648,
+      "destinationPixelY": 476,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,72 @@
+{
+  "zoneId": 80,
+  "displayName": "Ecruteak City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 392,
+      "pixelY": 952,
+      "worldX": 256,
+      "worldZ": 848,
+      "destinationZoneId": 78,
+      "destinationName": "Ecruteak City",
+      "destinationPixelX": 408,
+      "destinationPixelY": 904,
+      "anchor": 7
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t2",
+      "trainerInstanceId": 185,
+      "pixelX": 408,
+      "pixelY": 736,
+      "trainerId": 494,
+      "trainerName": "Georgina",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3493,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 186,
+      "pixelX": 440,
+      "pixelY": 592,
+      "trainerId": 89,
+      "trainerName": "Grace",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3088,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 187,
+      "pixelX": 280,
+      "pixelY": 576,
+      "trainerId": 493,
+      "trainerName": "Edith",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3492,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 188,
+      "pixelX": 312,
+      "pixelY": 416,
+      "trainerId": 46,
+      "trainerName": "Martha",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3045,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

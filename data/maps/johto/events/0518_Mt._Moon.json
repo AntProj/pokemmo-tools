@@ -1,0 +1,19 @@
+{
+  "zoneId": 518,
+  "displayName": "Mt. Moon",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 99,
+      "pixelY": 152,
+      "worldX": 80,
+      "worldZ": 144,
+      "destinationZoneId": 449,
+      "destinationName": "Mt. Moon",
+      "destinationPixelX": 424,
+      "destinationPixelY": 288,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

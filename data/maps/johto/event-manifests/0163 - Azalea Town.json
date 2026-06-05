@@ -1,0 +1,86 @@
+{
+  "header": {
+    "id": 163,
+    "name": "Azalea Town",
+    "mapName": "0163 - Azalea Town",
+    "matrixId": 125
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0140_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 69,
+        "y": 112,
+        "targetPng": "0163 - Azalea Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 2,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0067_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 117,
+        "y": 96,
+        "targetPng": "0163 - Azalea Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0381_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 165,
+        "y": 128,
+        "targetPng": "0163 - Azalea Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 8,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0381_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 181,
+        "y": 96,
+        "targetPng": "0163 - Azalea Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 9,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

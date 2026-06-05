@@ -1,0 +1,132 @@
+{
+  "zoneId": 90,
+  "displayName": "Hearthome City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 264,
+      "pixelY": 360,
+      "worldX": 224,
+      "worldZ": 352,
+      "destinationZoneId": 88,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 266,
+      "destinationPixelY": 40,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 104,
+      "pixelY": 40,
+      "worldX": 64,
+      "worldZ": 32,
+      "destinationZoneId": 91,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 72,
+      "destinationPixelY": 216,
+      "anchor": 3
+    },
+    {
+      "id": "w2",
+      "pixelX": 184,
+      "pixelY": 40,
+      "worldX": 144,
+      "worldZ": 32,
+      "destinationZoneId": 91,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 72,
+      "destinationPixelY": 216,
+      "anchor": 3
+    },
+    {
+      "id": "w3",
+      "pixelX": 264,
+      "pixelY": 40,
+      "worldX": 224,
+      "worldZ": 32,
+      "destinationZoneId": 91,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 72,
+      "destinationPixelY": 216,
+      "anchor": 3
+    },
+    {
+      "id": "w4",
+      "pixelX": 344,
+      "pixelY": 40,
+      "worldX": 304,
+      "worldZ": 32,
+      "destinationZoneId": 91,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 72,
+      "destinationPixelY": 216,
+      "anchor": 3
+    },
+    {
+      "id": "w5",
+      "pixelX": 424,
+      "pixelY": 40,
+      "worldX": 384,
+      "worldZ": 32,
+      "destinationZoneId": 91,
+      "destinationName": "Hearthome City",
+      "destinationPixelX": 72,
+      "destinationPixelY": 216,
+      "anchor": 3
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 18,
+      "pixelX": 104,
+      "pixelY": 256,
+      "trainerId": 343,
+      "trainerName": "Mackenzie",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3342,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 19,
+      "pixelX": 328,
+      "pixelY": 128,
+      "trainerId": 280,
+      "trainerName": "Allen",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3279,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 20,
+      "pixelX": 376,
+      "pixelY": 288,
+      "trainerId": 340,
+      "trainerName": "Chance",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3339,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 21,
+      "pixelX": 216,
+      "pixelY": 160,
+      "trainerId": 284,
+      "trainerName": "Catherine",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3283,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

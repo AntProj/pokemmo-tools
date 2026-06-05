@@ -1,0 +1,371 @@
+{
+  "header": {
+    "id": 457,
+    "name": "Resort Area",
+    "mapName": "0457 - Resort Area",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_brown_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 104,
+        "y": 50,
+        "targetPng": "0457 - Resort Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 25,
+        "yMatrix": 14,
+        "xMap": 5,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 232,
+        "y": 146,
+        "targetPng": "0457 - Resort Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 25,
+        "yMatrix": 14,
+        "xMap": 13,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 264,
+        "y": 242,
+        "targetPng": "0457 - Resort Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 25,
+        "yMatrix": 14,
+        "xMap": 15,
+        "yMap": 14,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0012_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 178,
+        "targetPng": "0457 - Resort Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 25,
+        "yMatrix": 14,
+        "xMap": 6,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0012_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 376,
+        "y": 194,
+        "targetPng": "0457 - Resort Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 25,
+        "yMatrix": 14,
+        "xMap": 22,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0049_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 168,
+        "y": 482,
+        "targetPng": "0457 - Resort Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 25,
+        "yMatrix": 14,
+        "xMap": 9,
+        "yMap": 29,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0013_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 386,
+        "targetPng": "0457 - Resort Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 25,
+        "yMatrix": 14,
+        "xMap": 6,
+        "yMap": 23,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": null,
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 472,
+        "y": 354,
+        "targetPng": "0457 - Resort Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 25,
+        "yMatrix": 14,
+        "xMap": 28,
+        "yMap": 21,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": null,
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 280,
+        "y": 354,
+        "targetPng": "0457 - Resort Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 25,
+        "yMatrix": 14,
+        "xMap": 16,
+        "yMap": 21,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": null,
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 296,
+        "y": 354,
+        "targetPng": "0457 - Resort Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 25,
+        "yMatrix": 14,
+        "xMap": 17,
+        "yMap": 21,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": null,
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 456,
+        "y": 354,
+        "targetPng": "0457 - Resort Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 25,
+        "yMatrix": 14,
+        "xMap": 27,
+        "yMap": 21,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0044_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 280,
+        "y": 130,
+        "targetPng": "0457 - Resort Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 25,
+        "yMatrix": 14,
+        "xMap": 16,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 12,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 184,
+        "y": 370,
+        "targetPng": "0457 - Resort Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 25,
+        "yMatrix": 14,
+        "xMap": 10,
+        "yMap": 23,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 13,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0002_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 280,
+        "y": 418,
+        "targetPng": "0457 - Resort Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 25,
+        "yMatrix": 14,
+        "xMap": 16,
+        "yMap": 25,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 14,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0094_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 360,
+        "y": 418,
+        "targetPng": "0457 - Resort Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 25,
+        "yMatrix": 14,
+        "xMap": 21,
+        "yMap": 25,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 15,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0106_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 376,
+        "y": 418,
+        "targetPng": "0457 - Resort Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 25,
+        "yMatrix": 14,
+        "xMap": 22,
+        "yMap": 25,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 16,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0111_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 392,
+        "y": 418,
+        "targetPng": "0457 - Resort Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 25,
+        "yMatrix": 14,
+        "xMap": 23,
+        "yMap": 25,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 17,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0105_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 376,
+        "y": 402,
+        "targetPng": "0457 - Resort Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 25,
+        "yMatrix": 14,
+        "xMap": 22,
+        "yMap": 24,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 18,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0108_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 376,
+        "y": 434,
+        "targetPng": "0457 - Resort Area.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 25,
+        "yMatrix": 14,
+        "xMap": 22,
+        "yMap": 26,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

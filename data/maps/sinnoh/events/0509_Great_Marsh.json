@@ -1,0 +1,31 @@
+{
+  "zoneId": 509,
+  "displayName": "Great Marsh",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 1100,
+      "pixelY": 1898,
+      "worldX": 1088,
+      "worldZ": 1888,
+      "destinationZoneId": 125,
+      "destinationName": "Pastoria City",
+      "destinationPixelX": 88,
+      "destinationPixelY": 40,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 1116,
+      "pixelY": 1898,
+      "worldX": 1104,
+      "worldZ": 1888,
+      "destinationZoneId": 125,
+      "destinationName": "Pastoria City",
+      "destinationPixelX": 88,
+      "destinationPixelY": 40,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

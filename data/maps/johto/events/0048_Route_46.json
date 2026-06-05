@@ -1,0 +1,83 @@
+{
+  "zoneId": 48,
+  "displayName": "Route 46",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 312,
+      "pixelY": 968,
+      "worldX": 10016,
+      "worldZ": 6080,
+      "destinationZoneId": 134,
+      "destinationName": "Route 29",
+      "destinationPixelX": 120,
+      "destinationPixelY": 96,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 328,
+      "pixelY": 968,
+      "worldX": 10032,
+      "worldZ": 6080,
+      "destinationZoneId": 134,
+      "destinationName": "Route 29",
+      "destinationPixelX": 120,
+      "destinationPixelY": 96,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 344,
+      "pixelY": 152,
+      "worldX": 10048,
+      "worldZ": 5264,
+      "destinationZoneId": 176,
+      "destinationName": "Dark Cave",
+      "destinationPixelX": 904,
+      "destinationPixelY": 920,
+      "anchor": 2
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 182,
+      "pixelX": 344,
+      "pixelY": 544,
+      "trainerId": 154,
+      "trainerName": "Bailey",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3153,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 183,
+      "pixelX": 136,
+      "pixelY": 400,
+      "trainerId": 147,
+      "trainerName": "Ted",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3146,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 184,
+      "pixelX": 136,
+      "pixelY": 464,
+      "trainerId": 151,
+      "trainerName": "Erin",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3150,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

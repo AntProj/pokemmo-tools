@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 334,
+    "name": "Verity Lakefront",
+    "mapName": "0334 - Verity Lakefront",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_blue_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 760,
+        "y": 738,
+        "targetPng": "0334 - Verity Lakefront.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 2,
+        "yMatrix": 26,
+        "xMap": 15,
+        "yMap": 14,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

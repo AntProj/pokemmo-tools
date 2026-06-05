@@ -1,0 +1,19 @@
+{
+  "zoneId": 61,
+  "displayName": "New Bark Town",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 88,
+      "pixelY": 232,
+      "worldX": 64,
+      "worldZ": 224,
+      "destinationZoneId": 60,
+      "destinationName": "New Bark Town",
+      "destinationPixelX": 323,
+      "destinationPixelY": 168,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,19 @@
+{
+  "zoneId": 68,
+  "displayName": "Eterna City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 264,
+      "pixelY": 472,
+      "worldX": 256,
+      "worldZ": 464,
+      "destinationZoneId": 67,
+      "destinationName": "Eterna City",
+      "destinationPixelX": 184,
+      "destinationPixelY": 8,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

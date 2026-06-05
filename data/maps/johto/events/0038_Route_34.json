@@ -1,0 +1,122 @@
+{
+  "zoneId": 38,
+  "displayName": "Route 34",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 424,
+      "pixelY": 1063,
+      "worldX": 5952,
+      "worldZ": 7184,
+      "destinationZoneId": 171,
+      "destinationName": "Route 34",
+      "destinationPixelX": 120,
+      "destinationPixelY": 96,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 440,
+      "pixelY": 1063,
+      "worldX": 5968,
+      "worldZ": 7184,
+      "destinationZoneId": 171,
+      "destinationName": "Route 34",
+      "destinationPixelX": 120,
+      "destinationPixelY": 96,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 360,
+      "pixelY": 439,
+      "worldX": 5888,
+      "worldZ": 6560,
+      "destinationZoneId": 331,
+      "destinationName": "Route 34",
+      "destinationPixelX": 92,
+      "destinationPixelY": 216,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 128,
+      "pixelX": 472,
+      "pixelY": 975,
+      "trainerId": 62,
+      "trainerName": "Samuel",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3061,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 129,
+      "pixelX": 328,
+      "pixelY": 751,
+      "trainerId": 65,
+      "trainerName": "Gina",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3064,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 130,
+      "pixelX": 488,
+      "pixelY": 575,
+      "trainerId": 64,
+      "trainerName": "Ian",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3063,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 131,
+      "pixelX": 296,
+      "pixelY": 351,
+      "trainerId": 6,
+      "trainerName": "Keith",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3005,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 132,
+      "pixelX": 312,
+      "pixelY": 207,
+      "trainerId": 66,
+      "trainerName": "Todd",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3065,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t13",
+      "trainerInstanceId": 133,
+      "pixelX": 568,
+      "pixelY": 783,
+      "trainerId": 409,
+      "trainerName": "Brandon",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3408,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "zoneId": 414,
+  "displayName": "Route 2",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 88,
+      "pixelY": 183,
+      "worldX": 16448,
+      "worldZ": 2208,
+      "destinationZoneId": 420,
+      "destinationName": "Route 2",
+      "destinationPixelX": 120,
+      "destinationPixelY": 96,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 104,
+      "pixelY": 183,
+      "worldX": 16464,
+      "worldZ": 2208,
+      "destinationZoneId": 420,
+      "destinationName": "Route 2",
+      "destinationPixelX": 120,
+      "destinationPixelY": 96,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 440,
+      "pixelY": 903,
+      "worldX": 16800,
+      "worldZ": 2928,
+      "destinationZoneId": 418,
+      "destinationName": "Route 2",
+      "destinationPixelX": 120,
+      "destinationPixelY": 96,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 456,
+      "pixelY": 903,
+      "worldX": 16816,
+      "worldZ": 2928,
+      "destinationZoneId": 418,
+      "destinationName": "Route 2",
+      "destinationPixelX": 120,
+      "destinationPixelY": 96,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 408,
+      "pixelY": 167,
+      "worldX": 16768,
+      "worldZ": 2192,
+      "destinationZoneId": 106,
+      "destinationName": "DIGLETT’s Cave",
+      "destinationPixelX": 616,
+      "destinationPixelY": 184,
+      "anchor": 7
+    },
+    {
+      "id": "w5",
+      "pixelX": 392,
+      "pixelY": 455,
+      "worldX": 16752,
+      "worldZ": 2480,
+      "destinationZoneId": 417,
+      "destinationName": "Route 2",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 386,
+      "pixelX": 104,
+      "pixelY": 79,
+      "trainerId": 248,
+      "trainerName": "Ed",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3247,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

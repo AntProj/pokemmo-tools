@@ -1,0 +1,162 @@
+{
+  "header": {
+    "id": 200,
+    "name": "Valley Windworks",
+    "mapName": "0200 - Valley Windworks",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0103_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 312,
+        "y": 256,
+        "targetPng": "0200 - Valley Windworks.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 7,
+        "yMatrix": 20,
+        "xMap": 19,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_gray_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 264,
+        "y": 304,
+        "targetPng": "0200 - Valley Windworks.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 7,
+        "yMatrix": 20,
+        "xMap": 16,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_route_sign.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": -136,
+        "y": 304,
+        "targetPng": "0200 - Valley Windworks.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 6,
+        "yMatrix": 20,
+        "xMap": 23,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 296,
+        "y": 80,
+        "targetPng": "0200 - Valley Windworks.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 7,
+        "yMatrix": 20,
+        "xMap": 18,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0163_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 280,
+        "y": 336,
+        "targetPng": "0200 - Valley Windworks.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 7,
+        "yMatrix": 20,
+        "xMap": 17,
+        "yMap": 20,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 360,
+        "y": 336,
+        "targetPng": "0200 - Valley Windworks.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 7,
+        "yMatrix": 20,
+        "xMap": 22,
+        "yMap": 20,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0376_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 296,
+        "y": 320,
+        "targetPng": "0200 - Valley Windworks.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 7,
+        "yMatrix": 20,
+        "xMap": 18,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0085_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 136,
+        "y": 160,
+        "targetPng": "0200 - Valley Windworks.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 7,
+        "yMatrix": 20,
+        "xMap": 8,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

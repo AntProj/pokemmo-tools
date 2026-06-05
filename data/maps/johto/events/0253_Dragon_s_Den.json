@@ -1,0 +1,96 @@
+{
+  "zoneId": 253,
+  "displayName": "Dragon’s Den",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 456,
+      "pixelY": 104,
+      "worldX": 448,
+      "worldZ": 96,
+      "destinationZoneId": 125,
+      "destinationName": "Dragon’s Den",
+      "destinationPixelX": 104,
+      "destinationPixelY": 88,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 456,
+      "pixelY": 88,
+      "worldX": 448,
+      "worldZ": 80,
+      "destinationZoneId": 125,
+      "destinationName": "Dragon’s Den",
+      "destinationPixelX": 104,
+      "destinationPixelY": 88,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 456,
+      "pixelY": 808,
+      "worldX": 448,
+      "worldZ": 800,
+      "destinationZoneId": 288,
+      "destinationName": "Dragon’s Den",
+      "destinationPixelX": 104,
+      "destinationPixelY": 312,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t1",
+      "trainerInstanceId": 339,
+      "pixelX": 488,
+      "pixelY": 176,
+      "trainerId": 500,
+      "trainerName": "Kobe",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3499,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 340,
+      "pixelX": 200,
+      "pixelY": 336,
+      "trainerId": 501,
+      "trainerName": "Piper",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3500,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 341,
+      "pixelX": 104,
+      "pixelY": 496,
+      "trainerId": 502,
+      "trainerName": "Clea & Gil",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3501,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 342,
+      "pixelX": 104,
+      "pixelY": 512,
+      "trainerId": 502,
+      "trainerName": "Clea & Gil",
+      "orientation": "Right",
+      "isDoubleBattlePartner": true,
+      "scriptNumber": 5501,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

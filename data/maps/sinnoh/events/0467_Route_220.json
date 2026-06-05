@@ -1,0 +1,72 @@
+{
+  "zoneId": 467,
+  "displayName": "Route 220",
+  "warps": [],
+  "trainers": [
+    {
+      "id": "t2",
+      "trainerInstanceId": 357,
+      "pixelX": 248,
+      "pixelY": 160,
+      "trainerId": 162,
+      "trainerName": "Jessica",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3161,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 358,
+      "pixelX": 152,
+      "pixelY": 192,
+      "trainerId": 163,
+      "trainerName": "Erica",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3162,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 359,
+      "pixelX": 408,
+      "pixelY": 368,
+      "trainerId": 159,
+      "trainerName": "Adrian",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3158,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 360,
+      "pixelX": 712,
+      "pixelY": 128,
+      "trainerId": 164,
+      "trainerName": "Katelyn",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3163,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t6",
+      "trainerInstanceId": 361,
+      "pixelX": 824,
+      "pixelY": 256,
+      "trainerId": 494,
+      "trainerName": "Claire",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3493,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

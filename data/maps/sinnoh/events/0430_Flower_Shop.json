@@ -1,0 +1,19 @@
+{
+  "zoneId": 430,
+  "displayName": "Flower Shop",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 136,
+      "pixelY": 184,
+      "worldX": 128,
+      "worldZ": 176,
+      "destinationZoneId": 426,
+      "destinationName": "Floaroma Town",
+      "destinationPixelX": 332,
+      "destinationPixelY": 698,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

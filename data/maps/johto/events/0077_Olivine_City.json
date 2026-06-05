@@ -1,0 +1,115 @@
+{
+  "zoneId": 77,
+  "displayName": "Olivine City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 232,
+      "pixelY": 248,
+      "worldX": 4304,
+      "worldZ": 3808,
+      "destinationZoneId": 138,
+      "destinationName": "Olivine City",
+      "destinationPixelX": 104,
+      "destinationPixelY": 440,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 280,
+      "pixelY": 552,
+      "worldX": 4352,
+      "worldZ": 4112,
+      "destinationZoneId": 226,
+      "destinationName": "Olivine City",
+      "destinationPixelX": 152,
+      "destinationPixelY": 312,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 488,
+      "pixelY": 552,
+      "worldX": 4560,
+      "worldZ": 4112,
+      "destinationZoneId": 227,
+      "destinationName": "Olivine City",
+      "destinationPixelX": 88,
+      "destinationPixelY": 184,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 744,
+      "pixelY": 648,
+      "worldX": 4816,
+      "worldZ": 4208,
+      "destinationZoneId": 115,
+      "destinationName": "Lighthouse",
+      "destinationPixelX": 152,
+      "destinationPixelY": 280,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 296,
+      "pixelY": 392,
+      "worldX": 4368,
+      "worldZ": 3952,
+      "destinationZoneId": 230,
+      "destinationName": "Olivine City",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 168,
+      "pixelY": 552,
+      "worldX": 4240,
+      "worldZ": 4112,
+      "destinationZoneId": 231,
+      "destinationName": "Olivine City",
+      "destinationPixelX": 88,
+      "destinationPixelY": 168,
+      "anchor": 0
+    },
+    {
+      "id": "w6",
+      "pixelX": 520,
+      "pixelY": 296,
+      "worldX": 4592,
+      "worldZ": 3856,
+      "destinationZoneId": 228,
+      "destinationName": "Olivine City",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w7",
+      "pixelX": 600,
+      "pixelY": 296,
+      "worldX": 4672,
+      "worldZ": 3856,
+      "destinationZoneId": 229,
+      "destinationName": "Olivine City",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w8",
+      "pixelX": 392,
+      "pixelY": 856,
+      "worldX": 4464,
+      "worldZ": 4416,
+      "destinationZoneId": 240,
+      "destinationName": "Olivine City",
+      "destinationPixelX": 136,
+      "destinationPixelY": 40,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,31 @@
+{
+  "zoneId": 390,
+  "displayName": "Route 218",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 28,
+      "pixelY": 120,
+      "worldX": 16,
+      "worldZ": 112,
+      "destinationZoneId": 33,
+      "destinationName": "Canalave City",
+      "destinationPixelX": 508,
+      "destinationPixelY": 810,
+      "anchor": 7
+    },
+    {
+      "id": "w1",
+      "pixelX": 172,
+      "pixelY": 120,
+      "worldX": 160,
+      "worldZ": 112,
+      "destinationZoneId": 388,
+      "destinationName": "Route 218",
+      "destinationPixelX": 120,
+      "destinationPixelY": 298,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,45 @@
+{
+  "zoneId": 358,
+  "displayName": "Route 209",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 184,
+      "pixelY": 56,
+      "worldX": 176,
+      "worldZ": 48,
+      "destinationZoneId": 357,
+      "destinationName": "Route 209",
+      "destinationPixelX": 72,
+      "destinationPixelY": 56,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 72,
+      "pixelY": 56,
+      "worldX": 64,
+      "worldZ": 48,
+      "destinationZoneId": 359,
+      "destinationName": "Route 209",
+      "destinationPixelX": 184,
+      "destinationPixelY": 56,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t1",
+      "trainerInstanceId": 222,
+      "pixelX": 136,
+      "pixelY": 176,
+      "trainerId": 532,
+      "trainerName": "Oliver",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3531,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}
