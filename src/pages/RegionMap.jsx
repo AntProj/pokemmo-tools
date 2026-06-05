@@ -955,6 +955,15 @@ function MapView({
               // {z} as the signed integer (e.g. `-3`) verbatim.
               url={asset(entry.tileUrlTemplate)}
               tileSize={entry.tileSize ?? 256}
+              // L.GridLayer.minZoom defaults to 0 — below that the layer is
+              // SILENTLY HIDDEN regardless of whether tiles are available. Our
+              // map starts zoomed-out (FitBoundsOnLoad puts the user around
+              // map zoom -4 to fit the image in the viewport), so without
+              // this we'd show nothing on first paint. Set it to the pyramid
+              // floor so the layer is visible at every map zoom the user can
+              // reach. (ImageOverlay has no minZoom, which is why the fallback
+              // path worked unconditionally.)
+              minZoom={-entry.tilePyramidDepth}
               minNativeZoom={-entry.tilePyramidDepth}
               maxNativeZoom={0}
               bounds={imgBounds}
