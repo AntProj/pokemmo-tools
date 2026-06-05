@@ -34,6 +34,44 @@ const RARITY_FILTERS = [
   'Very Common', 'Common', 'Uncommon', 'Rare', 'Very Rare', 'Horde', 'Lure', 'Special',
 ];
 
+// Evolution-method filter. Groups the raw 27 evolution `type` strings emitted
+// by build-data.mjs into 8 coarse, user-meaningful buckets — the raw types
+// are too granular to expose directly (HAPPINESS / HAPPINESS_DAY /
+// HAPPINESS_NIGHT all "feel" like Friendship to the user; the three
+// LEVEL_LOCATION_* slots are all "near a special rock"; etc.).
+//
+// A mon matches a category if EITHER:
+//   - one of its outgoing evolutions has a type in the category, OR
+//   - it was created via an evolution whose pre_evolution.type is in the
+//     category (so e.g. picking "Stone" surfaces both Eevee — who needs a
+//     stone to evolve into Vaporeon — and Vaporeon itself).
+//
+// Multi-select with OR semantics: pick "Stone" + "Trade" to see every mon
+// in either bucket. Single bucket picked = just that one.
+//
+// Keys here are used as both `markEvolutions` array values (persisted in
+// view state) and React keys; keep them stable.
+const EVOLUTION_CATEGORIES = [
+  { key: 'stone',      label: 'Stone',      types: ['ITEM', 'ITEM_MALE', 'ITEM_FEMALE'] },
+  { key: 'level',      label: 'Level',      types: ['LEVEL', 'LEVEL_FEMALE', 'LEVEL_MALE',
+                                                    'ATK_LESS_THAN_DEF', 'ATK_GREATER_THAN_DEF', 'ATK_EQUAL_TO_DEF',
+                                                    'PERSONALITY_HIGH', 'PERSONALITY_LOW'] },
+  { key: 'friendship', label: 'Friendship', types: ['HAPPINESS', 'HAPPINESS_DAY', 'HAPPINESS_NIGHT'] },
+  { key: 'trade',      label: 'Trade',      types: ['TRADE', 'TRADE_WITH_ITEM', 'TRADE_FOR_OPPOSITE'] },
+  { key: 'held',       label: 'Held item',  types: ['LEVEL_ITEM_DAY', 'LEVEL_ITEM_NIGHT'] },
+  { key: 'move',       label: 'Knows move', types: ['LEVEL_WITH_SKILL'] },
+  { key: 'location',   label: 'Location',   types: ['LEVEL_LOCATION_1', 'LEVEL_LOCATION_2', 'LEVEL_LOCATION_3'] },
+  { key: 'special',    label: 'Special',    types: ['MAX_BEAUTY', 'LEVEL_WITH_MONSTER',
+                                                    'ALLOW_MONSTER_CREATION', 'CREATE_EXTRA_MONSTER'] },
+];
+// Reverse lookup: raw type → category key. Lets the filter map each mon's
+// evolution types straight to a Set of category keys in O(#evolutions).
+const EVOLUTION_TYPE_TO_CATEGORY = (() => {
+  const m = new Map();
+  for (const cat of EVOLUTION_CATEGORIES) for (const t of cat.types) m.set(t, cat.key);
+  return m;
+})();
+
 export default function TrackerMark({
   data,
   trackerState, setMonState, setManyMonStates,
@@ -45,6 +83,7 @@ export default function TrackerMark({
     markBaby = 'any',
     markRarities = [],
     markRaritiesMode = 'only',
+    markEvolutions = [],
   } = view;
   const deferredSearch = useDeferredValue(markSearch);
 
@@ -65,6 +104,9 @@ export default function TrackerMark({
   const toggleRarityFilter = useCallback((r) => {
     updateView({ markRarities: markRarities.includes(r) ? markRarities.filter((x) => x !== r) : [...markRarities, r] });
   }, [markRarities, updateView]);
+  const toggleEvolutionFilter = useCallback((c) => {
+    updateView({ markEvolutions: markEvolutions.includes(c) ? markEvolutions.filter((x) => x !== c) : [...markEvolutions, c] });
+  }, [markEvolutions, updateView]);
 
   // ─────── Evolution-family index ───────
   // Map<pokemonId, Set<pokemonId>> — for every Pokémon, the set of every
@@ -145,6 +187,7 @@ export default function TrackerMark({
     // Pre-bake the rarity filter set so we don't realloc it per mon. Empty
     // selection = filter is off.
     const raritySet = markRarities.length > 0 ? new Set(markRarities) : null;
+    const evoCategorySet = markEvolutions.length > 0 ? new Set(markEvolutions) : null;
 
     const out = data.pokemon.filter((p) => {
       if (rkey) {
@@ -187,6 +230,23 @@ export default function TrackerMark({
           if (!matched) return false;
         }
       }
+      // Evolution-method gate. OR semantics: a mon matches if ANY of its
+      // outgoing-evolution types or its pre_evolution.type maps to a
+      // selected category. Checking both directions surfaces the whole
+      // family — picking "Stone" gets you Eevee (needs Fire/Water/Thunder
+      // Stone) AND Vaporeon/Flareon/Jolteon (came from a stone).
+      if (evoCategorySet) {
+        let matched = false;
+        const pre = p.pre_evolution?.type;
+        if (pre && evoCategorySet.has(EVOLUTION_TYPE_TO_CATEGORY.get(pre))) matched = true;
+        if (!matched) {
+          for (const ev of (p.evolutions || [])) {
+            const cat = EVOLUTION_TYPE_TO_CATEGORY.get(ev?.type);
+            if (cat && evoCategorySet.has(cat)) { matched = true; break; }
+          }
+        }
+        if (!matched) return false;
+      }
       return true;
     });
 
@@ -195,7 +255,7 @@ export default function TrackerMark({
     else if (rkey)              out.sort((a, b) => (a.dex[rkey] || 0) - (b.dex[rkey] || 0));
     else                        out.sort((a, b) => a.id - b.id);
     return out;
-  }, [data.pokemon, deferredSearch, markRegion, markTypes, markStates, markSort, markBaby, markRarities, markRaritiesMode, trackerState, familyMap]);
+  }, [data.pokemon, deferredSearch, markRegion, markTypes, markStates, markSort, markBaby, markRarities, markRaritiesMode, markEvolutions, trackerState, familyMap]);
 
   // ─────── Selection (for bulk actions) ───────
   // Set<pokemonId>. Lives locally — selection is ephemeral and tab-scoped.
@@ -425,6 +485,46 @@ export default function TrackerMark({
                   Clear
                 </button>
               </>
+            )}
+          </div>
+        </div>
+
+        {/* Evolution-method filter — group the 27 raw evolution `type`
+            strings into 8 user-friendly buckets (Stone, Level, Friendship,
+            Trade, Held item, Knows move, Location, Special). Multi-select
+            with OR semantics: pick Stone alone to surface mons that need
+            (or came from) an evolution stone; pick Stone + Trade to widen
+            to both. Match is two-way (outgoing evolutions + incoming
+            pre_evolution) so the whole family shows up for any pick. */}
+        <div className="flex items-start gap-2 flex-wrap">
+          <span className="text-xs text-stone-500 dark:text-stone-400 mr-1 mt-1">Evolution</span>
+          <div className="flex flex-wrap gap-1.5 items-center">
+            {EVOLUTION_CATEGORIES.map(({ key, label }) => {
+              const sel = markEvolutions.includes(key);
+              return (
+                <button
+                  key={key}
+                  type="button"
+                  onClick={() => toggleEvolutionFilter(key)}
+                  aria-pressed={sel}
+                  className={`px-2 py-0.5 rounded text-xs border transition-colors ${
+                    sel
+                      ? 'bg-emerald-100 text-emerald-800 border-emerald-300 dark:bg-emerald-950/50 dark:text-emerald-300 dark:border-emerald-900'
+                      : 'bg-[#fdf8e9] dark:bg-stone-900 text-stone-700 dark:text-stone-300 border-[#d6c8a3] dark:border-stone-700 hover:bg-[#ece2c4] dark:hover:bg-stone-800'
+                  }`}
+                >
+                  {label}
+                </button>
+              );
+            })}
+            {markEvolutions.length > 0 && (
+              <button
+                type="button"
+                onClick={() => updateView({ markEvolutions: [] })}
+                className="ml-1 text-xs text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 underline underline-offset-2"
+              >
+                Clear
+              </button>
             )}
           </div>
         </div>

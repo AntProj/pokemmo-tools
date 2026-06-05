@@ -48,8 +48,17 @@ const INITIAL_TRACKER_VIEW = { view: 'plan', planRegion: 'All', planMethods: [],
   //                                                    location. Default 'only' so
   //                                                    selecting "Special" finds
   //                                                    event-only mons.
+  //   markEvolutions    [] | string[]                — selected evolution-method
+  //                                                    categories ("stone",
+  //                                                    "trade", etc.; see
+  //                                                    EVOLUTION_CATEGORIES in
+  //                                                    TrackerMark.jsx). OR
+  //                                                    semantics, matches on
+  //                                                    either incoming
+  //                                                    pre_evolution or any
+  //                                                    outgoing evolution.
   markSearch: '', markRegion: 'All', markTypes: [], markStates: [], markSort: 'dex',
-  markBaby: 'any', markRarities: [], markRaritiesMode: 'only' };
+  markBaby: 'any', markRarities: [], markRaritiesMode: 'only', markEvolutions: [] };
 
 // Read once from localStorage; default to {} so unlisted ids are 'uncaught'.
 function loadTrackerState() {
