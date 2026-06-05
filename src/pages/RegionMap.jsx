@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate, useParams, Link } from 'react-router-dom';
 import { Sun, Moon, ArrowLeft, X, Users, ExternalLink, ArrowUp, ArrowDown, ArrowLeftIcon, ArrowRight, Coins, Search, ChevronDown, Route as RouteIcon, MapPin, Flag } from 'lucide-react';
-import { MapContainer, ImageOverlay, Marker, Rectangle, Polyline, CircleMarker, useMap, useMapEvents, Tooltip } from 'react-leaflet';
+import { MapContainer, ImageOverlay, TileLayer, Marker, Rectangle, Polyline, CircleMarker, useMap, useMapEvents, Tooltip } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import {
@@ -909,7 +909,64 @@ function MapView({
           attributionControl={false}
         >
           <FitBoundsOnLoad bounds={imgBounds} />
-          <ImageOverlay url={asset(entry.imageUrl)} bounds={imgBounds} />
+          {/*
+            Overworld tile pyramid vs single ImageOverlay.
+            ---------------------------------------------
+            Single <ImageOverlay> with a 15364×15360 (Sinnoh) or 16000×5798
+            (Johto) bitmap means the browser holds the full decoded RGBA in
+            one GPU texture (~944 MB / ~372 MB) and recomposites the lot on
+            every pan/zoom frame. The square Sinnoh image is right at the
+            16384 GPU max-texture cap, where some drivers also fall back to
+            a slow path — so panning judders.
+
+            <TileLayer> over a precomputed pyramid composites only the
+            ~12–30 256-px tiles in view per frame instead.
+
+            Calibration with CRS.Simple (1 projected unit = 1 pixel at map
+            zoom 0). The pyramid uses URL z=0 for the native (1:1) level and
+            negative z for downsampled levels (z=-1 = half-res, …, z=-N =
+            single overview tile). That matches Leaflet's tile geometry —
+            tile_size_in_units = 256 / 2^URL_z — without needing a custom
+            CRS or zoomOffset gymnastics:
+              z=0  → 256 units/tile = 256 image pixels (native)
+              z=-3 → 2048 units/tile = 2048 image pixels (1/8 res)
+            so the build script generates one 256-px webp per URL z + (x,y).
+
+            Settings:
+              - `maxNativeZoom = 0` — at map zoom > 0 Leaflet upscales the
+                z=0 tile instead of asking for a level that doesn't exist.
+                Matches the prior <ImageOverlay>'s browser-side upscale, so
+                the visual at extreme zoom-in is unchanged.
+              - `minNativeZoom = -tilePyramidDepth` — same idea on the
+                zoom-out floor.
+              - `bounds = imgBounds` — Leaflet won't request tiles outside
+                the image, so the build script can skip generating them.
+
+            Fallback: if the build hasn't written a tile pyramid yet (or
+            generation failed), entry.tileUrlTemplate is absent and we
+            render the single <ImageOverlay> as before. Keeps deploys
+            independent of whether the bucket is up-to-date.
+          */}
+          {entry.tileUrlTemplate ? (
+            <TileLayer
+              // asset() passes absolute R2 URLs through, prepends Vite's
+              // BASE_URL for relative dev URLs. The `{z}/{x}/{y}` placeholders
+              // pass through both transforms untouched — Leaflet templates
+              // {z} as the signed integer (e.g. `-3`) verbatim.
+              url={asset(entry.tileUrlTemplate)}
+              tileSize={entry.tileSize ?? 256}
+              minNativeZoom={-entry.tilePyramidDepth}
+              maxNativeZoom={0}
+              bounds={imgBounds}
+              noWrap
+              // Keep request-count predictable on slow networks; default 2 is
+              // fine for cached pans, this protects the first paint when 30+
+              // tiles are needed at once.
+              keepBuffer={2}
+            />
+          ) : (
+            <ImageOverlay url={asset(entry.imageUrl)} bounds={imgBounds} />
+          )}
 
           {/* Walkability debug overlay — one Rectangle per non-walkable
               tile. Walkable tiles get no overlay (the visible map shows

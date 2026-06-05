@@ -8,12 +8,16 @@ dist-ssr/
 # Generated data (rebuild with: npm run build:data)
 src/data/pokemmo.json
 
-# Map image PNGs — hosted on Cloudflare R2 instead of committed to the repo
-# (the full Sinnoh image set is hundreds of MB; sprites are baked into the
-# PNGs by build_world.py's composite step, so there's no separate sprite set).
-# Regenerate locally with `npm run build:map-data`, then push to R2 with
-# `npm run upload:maps`.
-public/data/maps/sinnoh/images/
+# Map image WebPs — hosted on Cloudflare R2 instead of committed to the repo
+# (the full image set is hundreds of MB per region; sprites are baked into the
+# WebPs by build_world.py's composite step, so there's no separate sprite set).
+# Same story for the overworld tile pyramid (`tiles/`): thousands of tiles per
+# region, all pushed to R2.
+# Regenerate locally with `npm run build:map-data:<region>`, then push to R2
+# with `npm run upload:maps:<region>` (or use `regen-and-sync:<region>` for
+# both in one shot).
+public/data/maps/*/images/
+public/data/maps/*/tiles/
 
 # Editor
 .vscode/

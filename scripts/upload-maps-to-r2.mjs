@@ -158,9 +158,75 @@ if (purge) {
 // more regions = appending here, but the per-invocation REGION arg means we
 // only push one region at a time. Run the script twice (once per region) to
 // sync both.
+// Each TARGETS entry is one local dir → one R2 prefix. `recursive: true`
+// makes the walker descend (used for the tile pyramid, which is a deep
+// `{z}/{x}/{y}.webp` tree). Non-recursive entries keep the original flat
+// listdir behavior for the `images/` dir.
 const TARGETS = [
-  { local: path.join(ROOT, 'public', 'data', 'maps', REGION, 'images'), prefix: `${REGION}/images/`, ext: '.webp', mime: 'image/webp' },
+  { local: path.join(ROOT, 'public', 'data', 'maps', REGION, 'images'), prefix: `${REGION}/images/`, ext: '.webp', mime: 'image/webp', recursive: false },
+  // Tile pyramid for the overworld. Lives at <region>/tiles/overworld.<hash>/
+  // — uploading the whole `tiles/` dir means any number of pyramids coexist
+  // (Sinnoh + Johto + …) and the per-region prune-stale pass handles cleanup.
+  // At ~5000 tiles for Sinnoh, the parallel-upload path below is mandatory.
+  { local: path.join(ROOT, 'public', 'data', 'maps', REGION, 'tiles'),  prefix: `${REGION}/tiles/`,  ext: '.webp', mime: 'image/webp', recursive: true },
 ];
+
+// Recursive listing for tile-pyramid uploads. Returns `{ localPath, key }`
+// where `key` is the R2 object key (prefix + relative path with forward
+// slashes — Windows backslashes would break TileLayer URL templating).
+function listLocalFiles(target) {
+  const out = [];
+  const root = target.local;
+  if (!fs.existsSync(root)) return out;
+  if (!target.recursive) {
+    for (const f of fs.readdirSync(root)) {
+      if (!f.endsWith(target.ext)) continue;
+      out.push({ localPath: path.join(root, f), key: `${target.prefix}${f}` });
+    }
+    return out;
+  }
+  function walk(dir, relParts) {
+    for (const ent of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, ent.name);
+      const next = [...relParts, ent.name];
+      if (ent.isDirectory()) { walk(full, next); continue; }
+      if (!ent.name.endsWith(target.ext)) continue;
+      out.push({ localPath: full, key: `${target.prefix}${next.join('/')}` });
+    }
+  }
+  walk(root, []);
+  return out;
+}
+
+// PutObject one file. Body fits comfortably in memory for any single tile
+// (<200 KB worst case), so we read fully — multipart upload would just add
+// latency at this size.
+async function putOne(localPath, key, mime) {
+  const body = fs.readFileSync(localPath);
+  await s3.send(new PutObjectCommand({
+    Bucket: R2_BUCKET,
+    Key: key,
+    Body: body,
+    ContentType: mime,
+    // See cache-control rationale in the comment block below the loop.
+    CacheControl: 'public, max-age=31536000, immutable',
+  }));
+  return body.length;
+}
+
+// Cache-Control: production — immutable, 1-year cache.
+//   public           — fine for shared caches (Cloudflare's CDN edge).
+//   max-age=31536000 — 1 year. Browser doesn't even consider revalidating
+//                      until then.
+//   immutable        — browser will skip revalidation entirely, even on
+//                      hard reload.
+// This is safe because filenames + tile-pyramid dirs are content-hashed by
+// the generator (`<baseName>.<10-hex>.webp` for images; `overworld.<hash>/`
+// for pyramid dirs). Any byte change in the source PNG produces a different
+// hash, hence a different URL — the browser sees it as a new resource and
+// fetches fresh. There's no "stale cache" scenario possible. The R2 bucket
+// accumulates orphans of old hashes over time; --prune-stale + --purge
+// clean them up.
 
 let totalUp = 0, totalSkip = 0, totalBytes = 0;
 
@@ -169,51 +235,62 @@ for (const target of TARGETS) {
     console.log(`✗ ${target.prefix}: no local dir (${target.local}) — skipping`);
     continue;
   }
-  const files = fs.readdirSync(target.local).filter(f => f.endsWith(target.ext));
-  if (files.length === 0) {
+  const entries = listLocalFiles(target);
+  if (entries.length === 0) {
     console.log(`✗ ${target.prefix}: 0 files — skipping`);
     continue;
   }
   process.stdout.write(`► ${target.prefix}: listing existing R2 objects... `);
   const remoteSizes = force ? new Map() : await listAllKeys(target.prefix);
-  process.stdout.write(`${remoteSizes.size} present\n`);
+  process.stdout.write(`${remoteSizes.size} present (${entries.length} local)\n`);
 
-  let upCount = 0, skipCount = 0, byteCount = 0;
-  for (const file of files) {
-    const localPath = path.join(target.local, file);
-    const size = fs.statSync(localPath).size;
-    const key = `${target.prefix}${file}`;
-    if (!force && remoteSizes.get(key) === size) { skipCount++; continue; }
-    if (dryRun) { console.log(`  [dry-run] upload ${key} (${(size/1024).toFixed(0)} KB)`); upCount++; byteCount += size; continue; }
-    const body = fs.readFileSync(localPath);
-    await s3.send(new PutObjectCommand({
-      Bucket: R2_BUCKET,
-      Key: key,
-      Body: body,
-      ContentType: target.mime,
-      // Cache-Control: production — immutable, 1-year cache.
-      //   public           — fine for shared caches (Cloudflare's CDN edge).
-      //   max-age=31536000 — 1 year. Browser doesn't even consider
-      //                      revalidating until then.
-      //   immutable        — browser will skip revalidation entirely, even
-      //                      on hard reload.
-      //
-      // This is safe because filenames are content-hashed by the generator
-      // (`<baseName>.<10-hex>.webp`). Any byte change in the source PNG
-      // produces a different hash, hence a different URL — the browser sees
-      // it as a new resource and fetches fresh. There's no "stale cache"
-      // scenario possible. The R2 bucket accumulates orphans of old hashes
-      // over time; `npm run purge:r2` cleans them up.
-      CacheControl: 'public, max-age=31536000, immutable',
-    }));
-    upCount++; byteCount += size;
-    if (upCount % 20 === 0) {
-      process.stdout.write(`\r  uploaded ${upCount}/${files.length - skipCount} (${(byteCount/1024/1024).toFixed(1)} MB)        `);
-    }
+  // Filter to the entries that actually need uploading. Size-equal = already
+  // uploaded (content-hashed names make this a safe shortcut — same key +
+  // same size = same content).
+  const toUpload = [];
+  let skipCount = 0;
+  for (const e of entries) {
+    const size = fs.statSync(e.localPath).size;
+    if (!force && remoteSizes.get(e.key) === size) { skipCount++; continue; }
+    toUpload.push({ ...e, size });
   }
-  if (!dryRun && upCount > 0) process.stdout.write('\n');
-  console.log(`  ${target.prefix}: ${upCount} uploaded · ${skipCount} skipped · ${(byteCount/1024/1024).toFixed(1)} MB`);
-  totalUp += upCount; totalSkip += skipCount; totalBytes += byteCount;
+  if (toUpload.length === 0) {
+    console.log(`  ${target.prefix}: 0 uploaded · ${skipCount} skipped`);
+    totalSkip += skipCount;
+    continue;
+  }
+
+  if (dryRun) {
+    for (const e of toUpload.slice(0, 6)) console.log(`  [dry-run] upload ${e.key} (${(e.size/1024).toFixed(0)} KB)`);
+    if (toUpload.length > 6) console.log(`  [dry-run] ... and ${toUpload.length - 6} more`);
+    const dryBytes = toUpload.reduce((s, e) => s + e.size, 0);
+    totalUp += toUpload.length; totalSkip += skipCount; totalBytes += dryBytes;
+    console.log(`  ${target.prefix}: ${toUpload.length} would upload · ${skipCount} skipped · ${(dryBytes/1024/1024).toFixed(1)} MB`);
+    continue;
+  }
+
+  // Parallel uploader. Sequential PUTs at ~50 ms/object = 4+ minutes for a
+  // single Sinnoh tile pyramid; with CONC=12 the same work finishes in ~30 s.
+  // The cap is conservative — R2 happily takes more in parallel, but we're
+  // also reading file bytes from disk and PutObjectCommand serializes per
+  // request, so 12 keeps things efficient without saturating laptop I/O.
+  const CONC = 12;
+  let cursor = 0, done = 0, upBytes = 0;
+  let lastTick = Date.now();
+  await Promise.all(Array.from({ length: CONC }, async () => {
+    while (cursor < toUpload.length) {
+      const e = toUpload[cursor++];
+      const written = await putOne(e.localPath, e.key, target.mime);
+      done++; upBytes += written;
+      if (Date.now() - lastTick > 250) {
+        lastTick = Date.now();
+        process.stdout.write(`\r  uploaded ${done}/${toUpload.length} (${(upBytes/1024/1024).toFixed(1)} MB)        `);
+      }
+    }
+  }));
+  process.stdout.write(`\r  uploaded ${done}/${toUpload.length} (${(upBytes/1024/1024).toFixed(1)} MB)        \n`);
+  console.log(`  ${target.prefix}: ${done} uploaded · ${skipCount} skipped · ${(upBytes/1024/1024).toFixed(1)} MB`);
+  totalUp += done; totalSkip += skipCount; totalBytes += upBytes;
 }
 
 // ---------- prune stale R2 objects (opt-in via --prune-stale) ----------
@@ -226,15 +303,14 @@ let totalPruned = 0;
 if (pruneStale) {
   for (const target of TARGETS) {
     if (!fs.existsSync(target.local)) continue;
-    const localSet = new Set(
-      fs.readdirSync(target.local)
-        .filter(f => f.endsWith(target.ext))
-        .map(f => `${target.prefix}${f}`)
-    );
+    // Use the same recursive walker as the upload path so tile-pyramid keys
+    // (which have multi-segment paths under `<region>/tiles/`) compare on
+    // the same key shape as the remote keys we list from R2.
+    const localKeys = new Set(listLocalFiles(target).map(e => e.key));
     process.stdout.write(`► ${target.prefix}: scanning for stale R2 objects... `);
     const remoteKeys = [...(await listAllKeys(target.prefix)).keys()];
-    const stale = remoteKeys.filter(k => !localSet.has(k));
-    process.stdout.write(`${stale.length} stale (of ${remoteKeys.length} remote · ${localSet.size} local)\n`);
+    const stale = remoteKeys.filter(k => !localKeys.has(k));
+    process.stdout.write(`${stale.length} stale (of ${remoteKeys.length} remote · ${localKeys.size} local)\n`);
     if (stale.length === 0) continue;
     if (dryRun) {
       for (const k of stale.slice(0, 8)) console.log(`  [dry-run] would delete ${k}`);

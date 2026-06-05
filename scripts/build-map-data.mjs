@@ -100,6 +100,12 @@ const IMAGE_HOST = process.env.MAPS_IMAGE_HOST ?? 'https://pub-5fa7446d73c34538a
 const IMAGE_PREFIX = IMAGE_HOST
   ? `${IMAGE_HOST.replace(/\/+$/, '')}/${REGION}/images/`
   : `data/maps/${REGION}/images/`;
+// Tile pyramid URLs sit next to images on the same host. Leaflet's TileLayer
+// uses `{z}/{x}/{y}` placeholders that R2 keys exactly map to once we encode
+// the directory layout that way (see buildOverworldTilePyramid below).
+const TILES_PREFIX = IMAGE_HOST
+  ? `${IMAGE_HOST.replace(/\/+$/, '')}/${REGION}/tiles/`
+  : `data/maps/${REGION}/tiles/`;
 
 // ---------- helpers ----------
 function ensureDir(p) { fs.mkdirSync(p, { recursive: true }); }
@@ -172,6 +178,190 @@ function findCurrentHashedWebp(baseName, outDir) {
   return matches
     .map(f => ({ f, mtime: fs.statSync(path.join(outDir, f)).mtimeMs }))
     .sort((a, b) => b.mtime - a.mtime)[0].f;
+}
+
+// Extract the 10-hex content hash baked into a webp filename produced by
+// convertWithHashIfDifferent. Returns null if the name doesn't match.
+function extractWebpHash(webpName) {
+  const m = webpName.match(/\.([0-9a-f]{10})\.webp$/);
+  return m ? m[1] : null;
+}
+
+// Build a Leaflet tile pyramid for the overworld image. WHY: the overworld is
+// 90–240 megapixels per region; rendering it through <ImageOverlay> means the
+// browser holds the entire decoded bitmap as one texture (≈1 GB raw for
+// Sinnoh) and recomposites the lot every pan frame. A tile pyramid means each
+// frame only composites the ~12–30 tiles currently in view.
+//
+// Pyramid layout — `<region>/tiles/overworld.<hash>/{z}/{x}/{y}.webp`:
+//   z= 0          native resolution. ceil(W/256) × ceil(H/256) tiles, no
+//                 downscale. Each tile is a 256-px patch of the source image.
+//   z=-1          half-res. ceil(W/512) × ceil(H/512) tiles.
+//   z=-N          one 256-px overview tile (downscaled 2^N×).
+// where N = ceil(log2(max(W, H) / 256)). Both Sinnoh and Johto come out to
+// N=6 at current dimensions, so the URL z range is 0 (native) down to -6
+// (overview).
+//
+// Why URL z=0 = native (and negative z = increasingly downsampled)?
+// Because <MapContainer crs={L.CRS.Simple}> uses 1 projected unit = 1 pixel
+// at MAP zoom 0, and Leaflet's TileLayer derives tile geometry from the URL z
+// value: `tile_size_in_projected_units = 256 / 2^URL_z`. So:
+//   URL z=0  → 256 units per tile (= 256 pixels, native 1:1)        ✓
+//   URL z=-1 → 512 units per tile (we generate by resizing to W/2)  ✓
+//   URL z=-K → 256·2^K units per tile (we generate by resizing 1/2^K)
+// The math lines up with no zoomOffset, no custom CRS, and no changes to the
+// existing pixel-aligned coord conventions used by the rest of RegionMap.jsx
+// (pathfinding code etc.). Negative URL z values are valid as file paths
+// (e.g. `tiles/HASH/-3/0/0.webp`) and as URL substitutions — Leaflet just
+// templates `{z}` to the integer string verbatim.
+//
+// Encoder choice:
+//   level 0 (native)  lossless. Pixel-perfect tiles for the original sprite
+//                     art at full resolution.
+//   level >0          lossy q=85. The downscaled levels are no longer pixel
+//                     art (lanczos3 smoothed them); lossy webp compresses
+//                     these 3–5× better with no visible difference.
+//
+// Hash naming: tile dir is `overworld.<hash>` where <hash> is the same
+// 10-hex content hash already baked into the overworld webp filename. Same
+// source → same hash → same dir → no work. Source change → new dir → old dir
+// becomes an orphan that gets pruned alongside the orphan webps below.
+//
+// Cache: if a dir matching the current hash already exists and has the
+// expected number of native-level tiles, we trust it and skip regeneration.
+// (Generating ~5000 tiles for Sinnoh takes ~3-5 minutes; cache hits are
+// instant.)
+async function buildOverworldTilePyramid({ srcPath, hash, regionOutDir }) {
+  const TILE_SIZE = 256;
+  const tileDirName = `overworld.${hash}`;
+  const tilesRootOut = path.join(regionOutDir, 'tiles', tileDirName);
+
+  const meta = await sharp(srcPath).metadata();
+  const W = meta.width;
+  const H = meta.height;
+  if (!W || !H) throw new Error(`Could not read dimensions of ${srcPath}`);
+  const N = Math.ceil(Math.log2(Math.max(W, H) / TILE_SIZE));
+
+  const result = {
+    tileUrlTemplate: `${TILES_PREFIX}${tileDirName}/{z}/{x}/{y}.webp`,
+    tileSize: TILE_SIZE,
+    tilePyramidDepth: N,
+  };
+
+  // Cache check — count native-level tiles vs expected. Native level lives
+  // at the `0/` subdir under this naming scheme.
+  if (fs.existsSync(tilesRootOut)) {
+    const expectedNative = Math.ceil(W / TILE_SIZE) * Math.ceil(H / TILE_SIZE);
+    let actualNative = 0;
+    const nativeDir = path.join(tilesRootOut, '0');
+    if (fs.existsSync(nativeDir)) {
+      for (const xName of fs.readdirSync(nativeDir)) {
+        const xPath = path.join(nativeDir, xName);
+        try {
+          if (fs.statSync(xPath).isDirectory()) {
+            actualNative += fs.readdirSync(xPath).filter(f => f.endsWith('.webp')).length;
+          }
+        } catch {}
+      }
+    }
+    if (actualNative >= expectedNative) {
+      console.log(`    tile pyramid cached (${tileDirName}, ${actualNative} native tiles)`);
+      return result;
+    }
+    console.log(`    tile pyramid present but incomplete (${actualNative}/${expectedNative}); rebuilding`);
+  }
+
+  ensureDir(tilesRootOut);
+  console.log(`    building tile pyramid ${W}×${H} → depth ${N} (URL z=0 native to z=-${N} overview)`);
+
+  let total = 0;
+  const tStart = Date.now();
+
+  // `level` 0 = native (URL z=0), level N = max downsample (URL z=-N).
+  for (let level = 0; level <= N; level++) {
+    const urlZ = -level;
+    const scale = Math.pow(2, -level);  // 1, 1/2, 1/4, ..., 1/2^N
+    const lvlW = level === 0 ? W : Math.max(1, Math.round(W * scale));
+    const lvlH = level === 0 ? H : Math.max(1, Math.round(H * scale));
+    const tilesX = Math.ceil(lvlW / TILE_SIZE);
+    const tilesY = Math.ceil(lvlH / TILE_SIZE);
+
+    // Decode the PNG ONCE per level into a raw RGBA buffer; every tile then
+    // `.extract()`s from the same in-memory pixel array via the `raw` input
+    // hint, skipping PNG decode entirely. The naive `.toBuffer()` path
+    // produces a PNG buffer, which every tile pipeline would then re-decode
+    // (≈200 ms × 4000 tiles ≈ 12 min wasted on Sinnoh's native level).
+    //
+    // Memory: a raw RGBA frame at native is ~944 MB for Sinnoh / ~372 MB for
+    // Johto. Each downscaled level uses 1/4 the bytes of the one above, and
+    // we only hold one level's buffer at a time, so peak ≈ native size.
+    // On a 16 GB machine this is fine; on lower-RAM CI we'd need to chunk
+    // the native level by row band, but that's a future optimization.
+    const lvlPipe = level === 0
+      ? sharp(srcPath)
+      : sharp(srcPath).resize(lvlW, lvlH, { fit: 'fill', kernel: 'lanczos3' });
+    const { data: levelBuf, info: levelInfo } = await lvlPipe
+      .ensureAlpha()           // guarantees 4 channels for the `raw` input below
+      .raw()
+      .toBuffer({ resolveWithObject: true });
+    const rawInput = { raw: { width: levelInfo.width, height: levelInfo.height, channels: levelInfo.channels } };
+
+    const webpOpts = level === 0
+      ? { lossless: true, effort: 4, alphaQuality: 100 }
+      : { quality: 85, effort: 4, alphaQuality: 90 };
+
+    // Collect tile descriptors so we can pre-create directories in a batch
+    // (mkdir-per-file is the bottleneck at scale on Windows NTFS).
+    const tasks = [];
+    for (let ty = 0; ty < tilesY; ty++) {
+      for (let tx = 0; tx < tilesX; tx++) {
+        const left = tx * TILE_SIZE;
+        const top  = ty * TILE_SIZE;
+        const tileW = Math.min(TILE_SIZE, lvlW - left);
+        const tileH = Math.min(TILE_SIZE, lvlH - top);
+        if (tileW <= 0 || tileH <= 0) continue;
+        tasks.push({
+          left, top, tileW, tileH,
+          outPath: path.join(tilesRootOut, String(urlZ), String(tx), `${ty}.webp`),
+          needsPad: tileW < TILE_SIZE || tileH < TILE_SIZE,
+        });
+      }
+    }
+    for (const d of new Set(tasks.map(t => path.dirname(t.outPath)))) ensureDir(d);
+
+    // Bounded concurrency. sharp is itself threaded via libvips so 8 in-flight
+    // JS pipelines is enough to saturate CPU without thrashing the GC. The
+    // 4096-tile native level on Sinnoh runs in ~90 s on a typical laptop.
+    const CONC = 8;
+    let cursor = 0;
+    await Promise.all(Array.from({ length: CONC }, async () => {
+      while (cursor < tasks.length) {
+        const idx = cursor++;
+        const { left, top, tileW, tileH, outPath, needsPad } = tasks[idx];
+        let pipe = sharp(levelBuf, rawInput).extract({ left, top, width: tileW, height: tileH });
+        if (needsPad) {
+          // Pad edge tiles to full TILE_SIZE with transparency so Leaflet
+          // doesn't stretch a smaller image to fit the tile slot. Leaflet's
+          // `bounds` keeps tiles fully outside the image from ever being
+          // requested in the first place.
+          pipe = pipe.extend({
+            top: 0, left: 0,
+            bottom: TILE_SIZE - tileH,
+            right:  TILE_SIZE - tileW,
+            background: { r: 0, g: 0, b: 0, alpha: 0 },
+          });
+        }
+        await pipe.webp(webpOpts).toFile(outPath);
+      }
+    }));
+
+    total += tasks.length;
+    console.log(`      z=${urlZ} (${lvlW}×${lvlH}): ${tasks.length} tiles`);
+  }
+
+  const dt = ((Date.now() - tStart) / 1000).toFixed(1);
+  console.log(`    tile pyramid done: ${total} tiles in ${dt}s`);
+  return result;
 }
 
 // "0003 - Jubilife City.png" → { id: 3, name: "Jubilife City" }
@@ -328,12 +518,40 @@ for (const png of pngFiles.sort()) {
 
   // World overview gets a special entry.
   if (parsed.id === 'world') {
+    // Build a Leaflet-compatible tile pyramid for the overworld image. The
+    // pyramid is what lets pan/zoom be smooth: <ImageOverlay> holds the
+    // whole decoded bitmap as one GPU texture (≈944 MB raw for Sinnoh,
+    // ≈372 MB for Johto), and recomposites it every frame; <TileLayer> only
+    // composites the ~12-30 tiles in view. See buildOverworldTilePyramid for
+    // the layout + coordinate calibration.
+    const overworldHash = extractWebpHash(webpName);
+    let pyramidMeta = {};
+    if (overworldHash) {
+      try {
+        pyramidMeta = await buildOverworldTilePyramid({
+          srcPath: path.join(MAPS_IMG_DIR, png),
+          hash: overworldHash,
+          regionOutDir: PUBLIC_REGION_DIR,
+        });
+      } catch (err) {
+        // If pyramid build fails for any reason, the React side falls back to
+        // <ImageOverlay> via the imageUrl field. That keeps the build
+        // resilient — we'd rather ship the slower-but-working overview than
+        // block the regen.
+        console.warn(`    ✗ tile pyramid failed for overworld: ${err.message}`);
+      }
+    } else {
+      console.warn(`    ✗ could not extract content hash from "${webpName}" — skipping tile pyramid`);
+    }
     mapsIndex.world = {
       displayName: `${REGION_DISPLAY} Overworld`,
       imageUrl: `${IMAGE_PREFIX}${webpName}`,
       imageWidth: sidecar.imageWidth,
       imageHeight: sidecar.imageHeight,
       type: 'overview',
+      // Tile pyramid metadata, when generation succeeded. Consumer:
+      // src/pages/RegionMap.jsx — falls back to ImageOverlay if absent.
+      ...pyramidMeta,
     };
     continue;
   }
@@ -521,6 +739,36 @@ for (const f of fs.readdirSync(PUBLIC_IMAGES_DIR)) {
   }
 }
 if (orphans) console.log(`  pruned ${orphans} orphan WebPs (stale content hashes)`);
+
+// Stale tile-pyramid directories. The tile dir is named `overworld.<hash>`
+// where <hash> matches the current overworld webp filename. Anything else
+// under public/data/maps/<region>/tiles/ is from a previous content version.
+const tilesRootDir = path.join(PUBLIC_REGION_DIR, 'tiles');
+if (fs.existsSync(tilesRootDir)) {
+  // Derive the keeper dir name from the current world entry. If pyramid
+  // generation failed for some reason (no tileUrlTemplate), keep all dirs
+  // around — better to leak some bytes than nuke a working overview.
+  let keepDirName = null;
+  const tpl = mapsIndex.world?.tileUrlTemplate;
+  if (tpl) {
+    // tpl looks like `…/tiles/overworld.<hash>/{z}/{x}/{y}.webp` — the
+    // segment between `/tiles/` and the next `/` is the dir name.
+    const m = tpl.match(/\/tiles\/([^/]+)\//);
+    keepDirName = m ? m[1] : null;
+  }
+  let orphanTileDirs = 0;
+  for (const sub of fs.readdirSync(tilesRootDir)) {
+    if (keepDirName && sub === keepDirName) continue;
+    const p = path.join(tilesRootDir, sub);
+    try {
+      if (fs.statSync(p).isDirectory()) {
+        fs.rmSync(p, { recursive: true, force: true });
+        orphanTileDirs++;
+      }
+    } catch {}
+  }
+  if (orphanTileDirs) console.log(`  pruned ${orphanTileDirs} stale tile-pyramid dir(s)`);
+}
 
 // ---------- overworld locations from warps/overworld.json ----------
 console.log('► Building overworld locations...');
