@@ -1,287 +1,185 @@
 {
   "locations": [
     {
-      "name": "Azalea Town",
-      "zoneId": 74,
-      "pixelX": 4425,
-      "pixelY": 4947,
+      "name": "Acuity Lakefront",
+      "zoneId": 340,
+      "pixelX": 5124,
+      "pixelY": 3584,
       "pixelBounds": {
-        "minX": 4085,
-        "maxX": 4766,
-        "minY": 4777,
-        "maxY": 5117
-      },
-      "cellsInMatrix0": [
-        [
-          14,
-          12
-        ],
-        [
-          14,
-          13
-        ]
-      ]
-    },
-    {
-      "name": "Blackthorn City",
-      "zoneId": 89,
-      "pixelX": 7149,
-      "pixelY": 1712,
-      "pixelBounds": {
-        "minX": 6809,
-        "maxX": 7489,
-        "minY": 1372,
-        "maxY": 2053
-      },
-      "cellsInMatrix0": [
-        [
-          4,
-          20
-        ],
-        [
-          4,
-          21
-        ],
-        [
-          5,
-          20
-        ],
-        [
-          5,
-          21
-        ]
-      ]
-    },
-    {
-      "name": "Celadon City",
-      "zoneId": 55,
-      "pixelX": 12936,
-      "pixelY": 2734,
-      "pixelBounds": {
-        "minX": 12596,
-        "maxX": 13277,
-        "minY": 2394,
-        "maxY": 3074
-      },
-      "cellsInMatrix0": [
-        [
-          7,
-          37
-        ],
-        [
-          7,
-          38
-        ],
-        [
-          8,
-          37
-        ],
-        [
-          8,
-          38
-        ]
-      ]
-    },
-    {
-      "name": "Cerulean City",
-      "zoneId": 52,
-      "pixelX": 13957,
-      "pixelY": 1372,
-      "pixelBounds": {
-        "minX": 13617,
-        "maxX": 14298,
-        "minY": 1032,
-        "maxY": 1713
-      },
-      "cellsInMatrix0": [
-        [
-          3,
-          40
-        ],
-        [
-          3,
-          41
-        ],
-        [
-          4,
-          40
-        ],
-        [
-          4,
-          41
-        ]
-      ]
-    },
-    {
-      "name": "Cherrygrove City",
-      "zoneId": 67,
-      "pixelX": 5787,
-      "pixelY": 4266,
-      "pixelBounds": {
-        "minX": 5447,
-        "maxX": 6128,
-        "minY": 4096,
-        "maxY": 4436
-      },
-      "cellsInMatrix0": [
-        [
-          12,
-          16
-        ],
-        [
-          12,
-          17
-        ]
-      ]
-    },
-    {
-      "name": "Cianwood City",
-      "zoneId": 75,
-      "pixelX": 1872,
-      "pixelY": 3755,
-      "pixelBounds": {
-        "minX": 1702,
-        "maxX": 2043,
-        "minY": 3415,
+        "minX": 4612,
+        "maxX": 5636,
+        "minY": 3072,
         "maxY": 4096
       },
       "cellsInMatrix0": [
         [
-          10,
-          5
-        ],
-        [
-          11,
-          5
-        ]
-      ]
-    },
-    {
-      "name": "Cinnabar Island",
-      "zoneId": 57,
-      "pixelX": 11064,
-      "pixelY": 5287,
-      "pixelBounds": {
-        "minX": 10894,
-        "maxX": 11234,
-        "minY": 5117,
-        "maxY": 5457
-      },
-      "cellsInMatrix0": [
-        [
-          15,
-          32
-        ]
-      ]
-    },
-    {
-      "name": "Ecruteak City",
-      "zoneId": 78,
-      "pixelX": 4085,
-      "pixelY": 1712,
-      "pixelBounds": {
-        "minX": 3745,
-        "maxX": 4426,
-        "minY": 1372,
-        "maxY": 2053
-      },
-      "cellsInMatrix0": [
-        [
-          4,
-          11
-        ],
-        [
-          4,
-          12
-        ],
-        [
-          5,
-          11
-        ],
-        [
-          5,
-          12
-        ]
-      ]
-    },
-    {
-      "name": "Fuchsia City",
-      "zoneId": 56,
-      "pixelX": 12936,
-      "pixelY": 4436,
-      "pixelBounds": {
-        "minX": 12596,
-        "maxX": 13277,
-        "minY": 4096,
-        "maxY": 4777
-      },
-      "cellsInMatrix0": [
-        [
-          12,
-          37
-        ],
-        [
-          12,
-          38
-        ],
-        [
-          13,
-          37
-        ],
-        [
-          13,
-          38
-        ]
-      ]
-    },
-    {
-      "name": "Goldenrod City",
-      "zoneId": 76,
-      "pixelX": 3574,
-      "pixelY": 3755,
-      "pixelBounds": {
-        "minX": 3064,
-        "maxX": 4085,
-        "minY": 3415,
-        "maxY": 4096
-      },
-      "cellsInMatrix0": [
-        [
-          10,
+          6,
           9
         ],
         [
-          10,
+          6,
           10
         ],
         [
-          10,
-          11
-        ],
-        [
-          11,
+          7,
           9
         ],
         [
-          11,
+          7,
           10
-        ],
-        [
-          11,
-          11
         ]
       ]
     },
     {
-      "name": "Indigo Plateau",
-      "zoneId": 58,
-      "pixelX": 9702,
-      "pixelY": 2223,
+      "name": "Canalave City",
+      "zoneId": 33,
+      "pixelX": 772,
+      "pixelY": 11776,
       "pixelBounds": {
-        "minX": 9532,
-        "maxX": 9872,
-        "minY": 2053,
-        "maxY": 2394
+        "minX": 516,
+        "maxX": 1028,
+        "minY": 11264,
+        "maxY": 12288
+      },
+      "cellsInMatrix0": [
+        [
+          22,
+          1
+        ],
+        [
+          23,
+          1
+        ]
+      ]
+    },
+    {
+      "name": "Celestic Town",
+      "zoneId": 442,
+      "pixelX": 7428,
+      "pixelY": 8448,
+      "pixelBounds": {
+        "minX": 7172,
+        "maxX": 7684,
+        "minY": 8192,
+        "maxY": 8704
+      },
+      "cellsInMatrix0": [
+        [
+          16,
+          14
+        ]
+      ]
+    },
+    {
+      "name": "Eterna City",
+      "zoneId": 65,
+      "pixelX": 5124,
+      "pixelY": 8704,
+      "pixelBounds": {
+        "minX": 4612,
+        "maxX": 5636,
+        "minY": 8192,
+        "maxY": 9216
+      },
+      "cellsInMatrix0": [
+        [
+          16,
+          9
+        ],
+        [
+          16,
+          10
+        ],
+        [
+          17,
+          9
+        ]
+      ]
+    },
+    {
+      "name": "Eterna Forest",
+      "zoneId": 202,
+      "pixelX": 3588,
+      "pixelY": 8704,
+      "pixelBounds": {
+        "minX": 3076,
+        "maxX": 4100,
+        "minY": 8192,
+        "maxY": 9216
+      },
+      "cellsInMatrix0": [
+        [
+          16,
+          6
+        ],
+        [
+          16,
+          7
+        ],
+        [
+          17,
+          6
+        ],
+        [
+          17,
+          7
+        ]
+      ]
+    },
+    {
+      "name": "Fight Area",
+      "zoneId": 188,
+      "pixelX": 10244,
+      "pixelY": 6912,
+      "pixelBounds": {
+        "minX": 9732,
+        "maxX": 10756,
+        "minY": 6656,
+        "maxY": 7168
+      },
+      "cellsInMatrix0": [
+        [
+          13,
+          19
+        ],
+        [
+          13,
+          20
+        ]
+      ]
+    },
+    {
+      "name": "Floaroma Town",
+      "zoneId": 426,
+      "pixelX": 2820,
+      "pixelY": 10240,
+      "pixelBounds": {
+        "minX": 2564,
+        "maxX": 3076,
+        "minY": 9728,
+        "maxY": 10752
+      },
+      "cellsInMatrix0": [
+        [
+          19,
+          5
+        ],
+        [
+          20,
+          5
+        ]
+      ]
+    },
+    {
+      "name": "Flower Paradise",
+      "zoneId": 274,
+      "pixelX": 14596,
+      "pixelY": 3328,
+      "pixelBounds": {
+        "minX": 14340,
+        "maxX": 14852,
+        "minY": 3072,
+        "maxY": 3584
       },
       "cellsInMatrix0": [
         [
@@ -291,1566 +189,1414 @@
       ]
     },
     {
-      "name": "Lake of Rage",
-      "zoneId": 88,
-      "pixelX": 5617,
-      "pixelY": 691,
+      "name": "Fuego Ironworks",
+      "zoneId": 204,
+      "pixelX": 2820,
+      "pixelY": 9472,
       "pixelBounds": {
-        "minX": 5106,
-        "maxX": 6128,
-        "minY": 351,
-        "maxY": 1032
+        "minX": 2564,
+        "maxX": 3076,
+        "minY": 9216,
+        "maxY": 9728
       },
       "cellsInMatrix0": [
         [
-          1,
-          15
-        ],
-        [
-          1,
-          16
-        ],
-        [
-          1,
-          17
-        ],
-        [
-          2,
-          15
-        ],
-        [
-          2,
-          16
-        ],
-        [
-          2,
-          17
+          18,
+          5
         ]
       ]
     },
     {
-      "name": "Lavender Town",
-      "zoneId": 53,
-      "pixelX": 15149,
-      "pixelY": 2564,
+      "name": "Fullmoon Island",
+      "zoneId": 260,
+      "pixelX": 772,
+      "pixelY": 4352,
       "pixelBounds": {
-        "minX": 14979,
-        "maxX": 15319,
-        "minY": 2394,
-        "maxY": 2734
-      },
-      "cellsInMatrix0": [
-        [
-          7,
-          44
-        ]
-      ]
-    },
-    {
-      "name": "Mahogany Town",
-      "zoneId": 87,
-      "pixelX": 5617,
-      "pixelY": 1883,
-      "pixelBounds": {
-        "minX": 5447,
-        "maxX": 5787,
-        "minY": 1713,
-        "maxY": 2053
-      },
-      "cellsInMatrix0": [
-        [
-          5,
-          16
-        ]
-      ]
-    },
-    {
-      "name": "Mt. Silver",
-      "zoneId": 90,
-      "pixelX": 8681,
-      "pixelY": 2904,
-      "pixelBounds": {
-        "minX": 8511,
-        "maxX": 8851,
-        "minY": 2734,
-        "maxY": 3074
+        "minX": 516,
+        "maxX": 1028,
+        "minY": 4096,
+        "maxY": 4608
       },
       "cellsInMatrix0": [
         [
           8,
+          1
+        ]
+      ]
+    },
+    {
+      "name": "Hearthome City",
+      "zoneId": 86,
+      "pixelX": 7684,
+      "pixelY": 11264,
+      "pixelBounds": {
+        "minX": 7172,
+        "maxX": 8196,
+        "minY": 10752,
+        "maxY": 11776
+      },
+      "cellsInMatrix0": [
+        [
+          21,
+          14
+        ],
+        [
+          21,
+          15
+        ],
+        [
+          22,
+          14
+        ],
+        [
+          22,
+          15
+        ]
+      ]
+    },
+    {
+      "name": "Iron Island",
+      "zoneId": 288,
+      "pixelX": 1796,
+      "pixelY": 7936,
+      "pixelBounds": {
+        "minX": 1540,
+        "maxX": 2052,
+        "minY": 7680,
+        "maxY": 8192
+      },
+      "cellsInMatrix0": [
+        [
+          15,
+          3
+        ]
+      ]
+    },
+    {
+      "name": "Jubilife City",
+      "zoneId": 3,
+      "pixelX": 2564,
+      "pixelY": 12288,
+      "pixelBounds": {
+        "minX": 2052,
+        "maxX": 3076,
+        "minY": 11776,
+        "maxY": 12800
+      },
+      "cellsInMatrix0": [
+        [
+          23,
+          4
+        ],
+        [
+          23,
+          5
+        ],
+        [
+          24,
+          4
+        ],
+        [
+          24,
+          5
+        ]
+      ]
+    },
+    {
+      "name": "Newmoon Island",
+      "zoneId": 320,
+      "pixelX": 2308,
+      "pixelY": 4352,
+      "pixelBounds": {
+        "minX": 2052,
+        "maxX": 2564,
+        "minY": 4096,
+        "maxY": 4608
+      },
+      "cellsInMatrix0": [
+        [
+          8,
+          4
+        ]
+      ]
+    },
+    {
+      "name": "Oreburgh City",
+      "zoneId": 45,
+      "pixelX": 4612,
+      "pixelY": 12288,
+      "pixelBounds": {
+        "minX": 4100,
+        "maxX": 5124,
+        "minY": 11776,
+        "maxY": 12800
+      },
+      "cellsInMatrix0": [
+        [
+          23,
+          8
+        ],
+        [
+          23,
+          9
+        ],
+        [
+          24,
+          9
+        ]
+      ]
+    },
+    {
+      "name": "Pastoria City",
+      "zoneId": 120,
+      "pixelX": 9732,
+      "pixelY": 13312,
+      "pixelBounds": {
+        "minX": 9220,
+        "maxX": 10244,
+        "minY": 12800,
+        "maxY": 13824
+      },
+      "cellsInMatrix0": [
+        [
+          25,
+          18
+        ],
+        [
+          25,
+          19
+        ],
+        [
+          26,
+          18
+        ],
+        [
+          26,
+          19
+        ]
+      ]
+    },
+    {
+      "name": "Pokémon League",
+      "zoneId": 172,
+      "pixelX": 13572,
+      "pixelY": 9216,
+      "pixelBounds": {
+        "minX": 13316,
+        "maxX": 13828,
+        "minY": 8704,
+        "maxY": 9728
+      },
+      "cellsInMatrix0": [
+        [
+          17,
+          26
+        ],
+        [
+          18,
+          26
+        ]
+      ]
+    },
+    {
+      "name": "Resort Area",
+      "zoneId": 457,
+      "pixelX": 13060,
+      "pixelY": 7424,
+      "pixelBounds": {
+        "minX": 12804,
+        "maxX": 13316,
+        "minY": 7168,
+        "maxY": 7680
+      },
+      "cellsInMatrix0": [
+        [
+          14,
           25
         ]
       ]
     },
     {
-      "name": "New Bark Town",
-      "zoneId": 60,
-      "pixelX": 7319,
-      "pixelY": 4266,
+      "name": "Route 201",
+      "zoneId": 342,
+      "pixelX": 2052,
+      "pixelY": 13568,
       "pixelBounds": {
-        "minX": 7149,
-        "maxX": 7489,
-        "minY": 4096,
-        "maxY": 4436
+        "minX": 1540,
+        "maxX": 2564,
+        "minY": 13312,
+        "maxY": 13824
       },
       "cellsInMatrix0": [
         [
-          12,
+          26,
+          3
+        ],
+        [
+          26,
+          4
+        ]
+      ]
+    },
+    {
+      "name": "Route 202",
+      "zoneId": 343,
+      "pixelX": 2820,
+      "pixelY": 13056,
+      "pixelBounds": {
+        "minX": 2564,
+        "maxX": 3076,
+        "minY": 12800,
+        "maxY": 13312
+      },
+      "cellsInMatrix0": [
+        [
+          25,
+          5
+        ]
+      ]
+    },
+    {
+      "name": "Route 203",
+      "zoneId": 344,
+      "pixelX": 3588,
+      "pixelY": 12032,
+      "pixelBounds": {
+        "minX": 3076,
+        "maxX": 4100,
+        "minY": 11776,
+        "maxY": 12288
+      },
+      "cellsInMatrix0": [
+        [
+          23,
+          6
+        ],
+        [
+          23,
+          7
+        ]
+      ]
+    },
+    {
+      "name": "Route 204",
+      "zoneId": 345,
+      "pixelX": 2820,
+      "pixelY": 11520,
+      "pixelBounds": {
+        "minX": 2564,
+        "maxX": 3076,
+        "minY": 11264,
+        "maxY": 11776
+      },
+      "cellsInMatrix0": [
+        [
+          22,
+          5
+        ]
+      ]
+    },
+    {
+      "name": "Route 204",
+      "zoneId": 346,
+      "pixelX": 2820,
+      "pixelY": 11008,
+      "pixelBounds": {
+        "minX": 2564,
+        "maxX": 3076,
+        "minY": 10752,
+        "maxY": 11264
+      },
+      "cellsInMatrix0": [
+        [
+          21,
+          5
+        ]
+      ]
+    },
+    {
+      "name": "Route 205",
+      "zoneId": 347,
+      "pixelX": 3332,
+      "pixelY": 9984,
+      "pixelBounds": {
+        "minX": 3076,
+        "maxX": 3588,
+        "minY": 9216,
+        "maxY": 10752
+      },
+      "cellsInMatrix0": [
+        [
+          18,
+          6
+        ],
+        [
+          19,
+          6
+        ],
+        [
+          20,
+          6
+        ]
+      ]
+    },
+    {
+      "name": "Route 205",
+      "zoneId": 349,
+      "pixelX": 4356,
+      "pixelY": 8448,
+      "pixelBounds": {
+        "minX": 4100,
+        "maxX": 4612,
+        "minY": 8192,
+        "maxY": 8704
+      },
+      "cellsInMatrix0": [
+        [
+          16,
+          8
+        ]
+      ]
+    },
+    {
+      "name": "Route 206",
+      "zoneId": 350,
+      "pixelX": 4868,
+      "pixelY": 10240,
+      "pixelBounds": {
+        "minX": 4612,
+        "maxX": 5124,
+        "minY": 9216,
+        "maxY": 11264
+      },
+      "cellsInMatrix0": [
+        [
+          18,
+          9
+        ],
+        [
+          19,
+          9
+        ],
+        [
+          20,
+          9
+        ],
+        [
+          21,
+          9
+        ]
+      ]
+    },
+    {
+      "name": "Route 207",
+      "zoneId": 353,
+      "pixelX": 5124,
+      "pixelY": 11520,
+      "pixelBounds": {
+        "minX": 4612,
+        "maxX": 5636,
+        "minY": 11264,
+        "maxY": 11776
+      },
+      "cellsInMatrix0": [
+        [
+          22,
+          9
+        ],
+        [
+          22,
+          10
+        ]
+      ]
+    },
+    {
+      "name": "Route 208",
+      "zoneId": 354,
+      "pixelX": 6660,
+      "pixelY": 11520,
+      "pixelBounds": {
+        "minX": 6148,
+        "maxX": 7172,
+        "minY": 11264,
+        "maxY": 11776
+      },
+      "cellsInMatrix0": [
+        [
+          22,
+          12
+        ],
+        [
+          22,
+          13
+        ]
+      ]
+    },
+    {
+      "name": "Route 209",
+      "zoneId": 356,
+      "pixelX": 8708,
+      "pixelY": 11264,
+      "pixelBounds": {
+        "minX": 8196,
+        "maxX": 9220,
+        "minY": 10752,
+        "maxY": 11776
+      },
+      "cellsInMatrix0": [
+        [
+          21,
+          17
+        ],
+        [
+          22,
+          16
+        ],
+        [
+          22,
+          17
+        ]
+      ]
+    },
+    {
+      "name": "Route 210",
+      "zoneId": 362,
+      "pixelX": 8964,
+      "pixelY": 9472,
+      "pixelBounds": {
+        "minX": 8708,
+        "maxX": 9220,
+        "minY": 8704,
+        "maxY": 10240
+      },
+      "cellsInMatrix0": [
+        [
+          17,
+          17
+        ],
+        [
+          18,
+          17
+        ],
+        [
+          19,
+          17
+        ]
+      ]
+    },
+    {
+      "name": "Route 210",
+      "zoneId": 363,
+      "pixelX": 8452,
+      "pixelY": 8448,
+      "pixelBounds": {
+        "minX": 7684,
+        "maxX": 9220,
+        "minY": 8192,
+        "maxY": 8704
+      },
+      "cellsInMatrix0": [
+        [
+          16,
+          15
+        ],
+        [
+          16,
+          16
+        ],
+        [
+          16,
+          17
+        ]
+      ]
+    },
+    {
+      "name": "Route 211",
+      "zoneId": 365,
+      "pixelX": 5892,
+      "pixelY": 8448,
+      "pixelBounds": {
+        "minX": 5636,
+        "maxX": 6148,
+        "minY": 8192,
+        "maxY": 8704
+      },
+      "cellsInMatrix0": [
+        [
+          16,
+          11
+        ]
+      ]
+    },
+    {
+      "name": "Route 211",
+      "zoneId": 366,
+      "pixelX": 6916,
+      "pixelY": 8448,
+      "pixelBounds": {
+        "minX": 6660,
+        "maxX": 7172,
+        "minY": 8192,
+        "maxY": 8704
+      },
+      "cellsInMatrix0": [
+        [
+          16,
+          13
+        ]
+      ]
+    },
+    {
+      "name": "Route 212",
+      "zoneId": 367,
+      "pixelX": 7428,
+      "pixelY": 12544,
+      "pixelBounds": {
+        "minX": 7172,
+        "maxX": 7684,
+        "minY": 11776,
+        "maxY": 13312
+      },
+      "cellsInMatrix0": [
+        [
+          23,
+          14
+        ],
+        [
+          24,
+          14
+        ],
+        [
+          25,
+          14
+        ]
+      ]
+    },
+    {
+      "name": "Route 212",
+      "zoneId": 371,
+      "pixelX": 8196,
+      "pixelY": 13568,
+      "pixelBounds": {
+        "minX": 7172,
+        "maxX": 9220,
+        "minY": 13312,
+        "maxY": 13824
+      },
+      "cellsInMatrix0": [
+        [
+          26,
+          14
+        ],
+        [
+          26,
+          15
+        ],
+        [
+          26,
+          16
+        ],
+        [
+          26,
+          17
+        ]
+      ]
+    },
+    {
+      "name": "Route 213",
+      "zoneId": 373,
+      "pixelX": 11012,
+      "pixelY": 13312,
+      "pixelBounds": {
+        "minX": 10244,
+        "maxX": 11780,
+        "minY": 12800,
+        "maxY": 13824
+      },
+      "cellsInMatrix0": [
+        [
+          25,
+          20
+        ],
+        [
+          25,
           21
-        ]
-      ]
-    },
-    {
-      "name": "Olivine City",
-      "zoneId": 77,
-      "pixelX": 3063,
-      "pixelY": 2734,
-      "pixelBounds": {
-        "minX": 2723,
-        "maxX": 3404,
-        "minY": 2394,
-        "maxY": 3074
-      },
-      "cellsInMatrix0": [
-        [
-          7,
-          8
         ],
         [
-          7,
-          9
-        ],
-        [
-          8,
-          8
-        ],
-        [
-          8,
-          9
-        ]
-      ]
-    },
-    {
-      "name": "Pallet Town",
-      "zoneId": 49,
-      "pixelX": 11064,
-      "pixelY": 3925,
-      "pixelBounds": {
-        "minX": 10894,
-        "maxX": 11234,
-        "minY": 3755,
-        "maxY": 4096
-      },
-      "cellsInMatrix0": [
-        [
-          11,
-          32
-        ]
-      ]
-    },
-    {
-      "name": "Pewter City",
-      "zoneId": 51,
-      "pixelX": 11234,
-      "pixelY": 1031,
-      "pixelBounds": {
-        "minX": 10894,
-        "maxX": 11574,
-        "minY": 691,
-        "maxY": 1372
-      },
-      "cellsInMatrix0": [
-        [
-          2,
-          32
-        ],
-        [
-          2,
-          33
-        ],
-        [
-          3,
-          32
-        ],
-        [
-          3,
-          33
-        ]
-      ]
-    },
-    {
-      "name": "Route 1",
-      "zoneId": 9,
-      "pixelX": 11064,
-      "pixelY": 3414,
-      "pixelBounds": {
-        "minX": 10894,
-        "maxX": 11234,
-        "minY": 3074,
-        "maxY": 3755
-      },
-      "cellsInMatrix0": [
-        [
-          9,
-          32
-        ],
-        [
-          10,
-          32
-        ]
-      ]
-    },
-    {
-      "name": "Route 10",
-      "zoneId": 18,
-      "pixelX": 15149,
-      "pixelY": 1883,
-      "pixelBounds": {
-        "minX": 14979,
-        "maxX": 15319,
-        "minY": 1713,
-        "maxY": 2053
-      },
-      "cellsInMatrix0": [
-        [
-          5,
-          44
-        ]
-      ]
-    },
-    {
-      "name": "Route 10",
-      "zoneId": 388,
-      "pixelX": 15149,
-      "pixelY": 2223,
-      "pixelBounds": {
-        "minX": 14979,
-        "maxX": 15319,
-        "minY": 2053,
-        "maxY": 2394
-      },
-      "cellsInMatrix0": [
-        [
-          6,
-          44
-        ]
-      ]
-    },
-    {
-      "name": "Route 11",
-      "zoneId": 19,
-      "pixelX": 14638,
-      "pixelY": 3244,
-      "pixelBounds": {
-        "minX": 14298,
-        "maxX": 14979,
-        "minY": 3074,
-        "maxY": 3415
-      },
-      "cellsInMatrix0": [
-        [
-          9,
-          42
-        ],
-        [
-          9,
-          43
-        ]
-      ]
-    },
-    {
-      "name": "Route 12",
-      "zoneId": 20,
-      "pixelX": 15149,
-      "pixelY": 3244,
-      "pixelBounds": {
-        "minX": 14979,
-        "maxX": 15319,
-        "minY": 2734,
-        "maxY": 3755
-      },
-      "cellsInMatrix0": [
-        [
-          8,
-          44
-        ],
-        [
-          9,
-          44
-        ],
-        [
-          10,
-          44
-        ]
-      ]
-    },
-    {
-      "name": "Route 13",
-      "zoneId": 21,
-      "pixelX": 14808,
-      "pixelY": 3925,
-      "pixelBounds": {
-        "minX": 14298,
-        "maxX": 15319,
-        "minY": 3755,
-        "maxY": 4096
-      },
-      "cellsInMatrix0": [
-        [
-          11,
-          42
-        ],
-        [
-          11,
-          43
-        ],
-        [
-          11,
-          44
-        ]
-      ]
-    },
-    {
-      "name": "Route 14",
-      "zoneId": 22,
-      "pixelX": 14468,
-      "pixelY": 4436,
-      "pixelBounds": {
-        "minX": 14298,
-        "maxX": 14638,
-        "minY": 4096,
-        "maxY": 4777
-      },
-      "cellsInMatrix0": [
-        [
-          12,
-          42
-        ],
-        [
-          13,
-          42
-        ]
-      ]
-    },
-    {
-      "name": "Route 15",
-      "zoneId": 23,
-      "pixelX": 13787,
-      "pixelY": 4606,
-      "pixelBounds": {
-        "minX": 13277,
-        "maxX": 14298,
-        "minY": 4436,
-        "maxY": 4777
-      },
-      "cellsInMatrix0": [
-        [
-          13,
-          39
-        ],
-        [
-          13,
-          40
-        ],
-        [
-          13,
-          41
-        ]
-      ]
-    },
-    {
-      "name": "Route 16",
-      "zoneId": 24,
-      "pixelX": 12085,
-      "pixelY": 2904,
-      "pixelBounds": {
-        "minX": 11915,
-        "maxX": 12255,
-        "minY": 2734,
-        "maxY": 3074
-      },
-      "cellsInMatrix0": [
-        [
-          8,
-          35
-        ]
-      ]
-    },
-    {
-      "name": "Route 16",
-      "zoneId": 422,
-      "pixelX": 12425,
-      "pixelY": 2904,
-      "pixelBounds": {
-        "minX": 12255,
-        "maxX": 12596,
-        "minY": 2734,
-        "maxY": 3074
-      },
-      "cellsInMatrix0": [
-        [
-          8,
-          36
-        ]
-      ]
-    },
-    {
-      "name": "Route 17",
-      "zoneId": 25,
-      "pixelX": 12085,
-      "pixelY": 3755,
-      "pixelBounds": {
-        "minX": 11915,
-        "maxX": 12255,
-        "minY": 3074,
-        "maxY": 4436
-      },
-      "cellsInMatrix0": [
-        [
-          9,
-          35
-        ],
-        [
-          10,
-          35
-        ],
-        [
-          11,
-          35
-        ],
-        [
-          12,
-          35
-        ]
-      ]
-    },
-    {
-      "name": "Route 18",
-      "zoneId": 26,
-      "pixelX": 12255,
-      "pixelY": 4606,
-      "pixelBounds": {
-        "minX": 11915,
-        "maxX": 12596,
-        "minY": 4436,
-        "maxY": 4777
-      },
-      "cellsInMatrix0": [
-        [
-          13,
-          35
-        ],
-        [
-          13,
-          36
-        ]
-      ]
-    },
-    {
-      "name": "Route 19",
-      "zoneId": 91,
-      "pixelX": 12766,
-      "pixelY": 5117,
-      "pixelBounds": {
-        "minX": 12596,
-        "maxX": 12936,
-        "minY": 4777,
-        "maxY": 5457
-      },
-      "cellsInMatrix0": [
-        [
-          14,
-          37
-        ],
-        [
-          15,
-          37
-        ]
-      ]
-    },
-    {
-      "name": "Route 2",
-      "zoneId": 10,
-      "pixelX": 11064,
-      "pixelY": 2223,
-      "pixelBounds": {
-        "minX": 10894,
-        "maxX": 11234,
-        "minY": 2053,
-        "maxY": 2394
-      },
-      "cellsInMatrix0": [
-        [
-          6,
-          32
-        ]
-      ]
-    },
-    {
-      "name": "Route 2",
-      "zoneId": 414,
-      "pixelX": 11064,
-      "pixelY": 1712,
-      "pixelBounds": {
-        "minX": 10894,
-        "maxX": 11234,
-        "minY": 1372,
-        "maxY": 2053
-      },
-      "cellsInMatrix0": [
-        [
-          4,
-          32
-        ],
-        [
-          5,
-          32
-        ]
-      ]
-    },
-    {
-      "name": "Route 20",
-      "zoneId": 92,
-      "pixelX": 11915,
-      "pixelY": 5287,
-      "pixelBounds": {
-        "minX": 11234,
-        "maxX": 12596,
-        "minY": 5117,
-        "maxY": 5457
-      },
-      "cellsInMatrix0": [
-        [
-          15,
-          33
-        ],
-        [
-          15,
-          34
-        ],
-        [
-          15,
-          35
-        ],
-        [
-          15,
-          36
-        ]
-      ]
-    },
-    {
-      "name": "Route 21",
-      "zoneId": 93,
-      "pixelX": 11064,
-      "pixelY": 4606,
-      "pixelBounds": {
-        "minX": 10894,
-        "maxX": 11234,
-        "minY": 4096,
-        "maxY": 5117
-      },
-      "cellsInMatrix0": [
-        [
-          12,
-          32
-        ],
-        [
-          13,
-          32
-        ],
-        [
-          14,
-          32
-        ]
-      ]
-    },
-    {
-      "name": "Route 22",
-      "zoneId": 27,
-      "pixelX": 10212,
-      "pixelY": 2904,
-      "pixelBounds": {
-        "minX": 9872,
-        "maxX": 10553,
-        "minY": 2734,
-        "maxY": 3074
-      },
-      "cellsInMatrix0": [
-        [
-          8,
-          29
-        ],
-        [
-          8,
-          30
-        ]
-      ]
-    },
-    {
-      "name": "Route 24",
-      "zoneId": 28,
-      "pixelX": 14127,
-      "pixelY": 861,
-      "pixelBounds": {
-        "minX": 13957,
-        "maxX": 14298,
-        "minY": 691,
-        "maxY": 1032
-      },
-      "cellsInMatrix0": [
-        [
-          2,
-          41
-        ]
-      ]
-    },
-    {
-      "name": "Route 25",
-      "zoneId": 29,
-      "pixelX": 14638,
-      "pixelY": 521,
-      "pixelBounds": {
-        "minX": 13957,
-        "maxX": 15319,
-        "minY": 351,
-        "maxY": 691
-      },
-      "cellsInMatrix0": [
-        [
-          1,
-          41
-        ],
-        [
-          1,
-          42
-        ],
-        [
-          1,
-          43
-        ],
-        [
-          1,
-          44
-        ]
-      ]
-    },
-    {
-      "name": "Route 26",
-      "zoneId": 30,
-      "pixelX": 9702,
-      "pixelY": 3755,
-      "pixelBounds": {
-        "minX": 9532,
-        "maxX": 9872,
-        "minY": 3074,
-        "maxY": 4436
-      },
-      "cellsInMatrix0": [
-        [
-          9,
-          28
-        ],
-        [
-          10,
-          28
-        ],
-        [
-          11,
-          28
-        ],
-        [
-          12,
-          28
-        ]
-      ]
-    },
-    {
-      "name": "Route 27",
-      "zoneId": 31,
-      "pixelX": 8510,
-      "pixelY": 4266,
-      "pixelBounds": {
-        "minX": 7489,
-        "maxX": 9532,
-        "minY": 4096,
-        "maxY": 4436
-      },
-      "cellsInMatrix0": [
-        [
-          12,
+          25,
           22
         ],
         [
+          26,
+          20
+        ],
+        [
+          26,
+          21
+        ],
+        [
+          26,
+          22
+        ]
+      ]
+    },
+    {
+      "name": "Route 214",
+      "zoneId": 380,
+      "pixelX": 11524,
+      "pixelY": 11008,
+      "pixelBounds": {
+        "minX": 11268,
+        "maxX": 11780,
+        "minY": 10240,
+        "maxY": 11776
+      },
+      "cellsInMatrix0": [
+        [
+          20,
+          22
+        ],
+        [
+          21,
+          22
+        ],
+        [
+          22,
+          22
+        ]
+      ]
+    },
+    {
+      "name": "Route 215",
+      "zoneId": 382,
+      "pixelX": 9988,
+      "pixelY": 9472,
+      "pixelBounds": {
+        "minX": 9220,
+        "maxX": 10756,
+        "minY": 9216,
+        "maxY": 9728
+      },
+      "cellsInMatrix0": [
+        [
+          18,
+          18
+        ],
+        [
+          18,
+          19
+        ],
+        [
+          18,
+          20
+        ]
+      ]
+    },
+    {
+      "name": "Route 216",
+      "zoneId": 383,
+      "pixelX": 5380,
+      "pixelY": 6400,
+      "pixelBounds": {
+        "minX": 4612,
+        "maxX": 6148,
+        "minY": 6144,
+        "maxY": 6656
+      },
+      "cellsInMatrix0": [
+        [
           12,
-          23
+          9
         ],
         [
           12,
+          10
+        ],
+        [
+          12,
+          11
+        ]
+      ]
+    },
+    {
+      "name": "Route 217",
+      "zoneId": 385,
+      "pixelX": 4868,
+      "pixelY": 5120,
+      "pixelBounds": {
+        "minX": 4612,
+        "maxX": 5124,
+        "minY": 4096,
+        "maxY": 6144
+      },
+      "cellsInMatrix0": [
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          11,
+          9
+        ]
+      ]
+    },
+    {
+      "name": "Route 218",
+      "zoneId": 388,
+      "pixelX": 1540,
+      "pixelY": 12032,
+      "pixelBounds": {
+        "minX": 1028,
+        "maxX": 2052,
+        "minY": 11776,
+        "maxY": 12288
+      },
+      "cellsInMatrix0": [
+        [
+          23,
+          2
+        ],
+        [
+          23,
+          3
+        ]
+      ]
+    },
+    {
+      "name": "Route 219",
+      "zoneId": 391,
+      "pixelX": 2820,
+      "pixelY": 14080,
+      "pixelBounds": {
+        "minX": 2564,
+        "maxX": 3076,
+        "minY": 13824,
+        "maxY": 14336
+      },
+      "cellsInMatrix0": [
+        [
+          27,
+          5
+        ]
+      ]
+    },
+    {
+      "name": "Route 220",
+      "zoneId": 467,
+      "pixelX": 3076,
+      "pixelY": 14592,
+      "pixelBounds": {
+        "minX": 2564,
+        "maxX": 3588,
+        "minY": 14336,
+        "maxY": 14848
+      },
+      "cellsInMatrix0": [
+        [
+          28,
+          5
+        ],
+        [
+          28,
+          6
+        ]
+      ]
+    },
+    {
+      "name": "Route 221",
+      "zoneId": 392,
+      "pixelX": 4356,
+      "pixelY": 14592,
+      "pixelBounds": {
+        "minX": 3588,
+        "maxX": 5124,
+        "minY": 14336,
+        "maxY": 14848
+      },
+      "cellsInMatrix0": [
+        [
+          28,
+          7
+        ],
+        [
+          28,
+          8
+        ],
+        [
+          28,
+          9
+        ]
+      ]
+    },
+    {
+      "name": "Route 222",
+      "zoneId": 395,
+      "pixelX": 12548,
+      "pixelY": 12544,
+      "pixelBounds": {
+        "minX": 11780,
+        "maxX": 13316,
+        "minY": 12288,
+        "maxY": 12800
+      },
+      "cellsInMatrix0": [
+        [
+          24,
+          23
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          24,
+          25
+        ]
+      ]
+    },
+    {
+      "name": "Route 223",
+      "zoneId": 468,
+      "pixelX": 13572,
+      "pixelY": 10752,
+      "pixelBounds": {
+        "minX": 13316,
+        "maxX": 13828,
+        "minY": 9728,
+        "maxY": 11776
+      },
+      "cellsInMatrix0": [
+        [
+          19,
+          26
+        ],
+        [
+          20,
+          26
+        ],
+        [
+          21,
+          26
+        ],
+        [
+          22,
+          26
+        ]
+      ]
+    },
+    {
+      "name": "Route 224",
+      "zoneId": 399,
+      "pixelX": 14340,
+      "pixelY": 8448,
+      "pixelBounds": {
+        "minX": 13828,
+        "maxX": 14852,
+        "minY": 7680,
+        "maxY": 9216
+      },
+      "cellsInMatrix0": [
+        [
+          15,
+          28
+        ],
+        [
+          16,
+          27
+        ],
+        [
+          16,
+          28
+        ],
+        [
+          17,
+          27
+        ]
+      ]
+    },
+    {
+      "name": "Route 225",
+      "zoneId": 400,
+      "pixelX": 9988,
+      "pixelY": 5888,
+      "pixelBounds": {
+        "minX": 9732,
+        "maxX": 10244,
+        "minY": 5120,
+        "maxY": 6656
+      },
+      "cellsInMatrix0": [
+        [
+          10,
+          19
+        ],
+        [
+          11,
+          19
+        ],
+        [
+          12,
+          19
+        ]
+      ]
+    },
+    {
+      "name": "Route 226",
+      "zoneId": 469,
+      "pixelX": 11524,
+      "pixelY": 5376,
+      "pixelBounds": {
+        "minX": 10756,
+        "maxX": 12292,
+        "minY": 5120,
+        "maxY": 5632
+      },
+      "cellsInMatrix0": [
+        [
+          10,
+          21
+        ],
+        [
+          10,
+          22
+        ],
+        [
+          10,
+          23
+        ]
+      ]
+    },
+    {
+      "name": "Route 227",
+      "zoneId": 403,
+      "pixelX": 12036,
+      "pixelY": 4608,
+      "pixelBounds": {
+        "minX": 11780,
+        "maxX": 12292,
+        "minY": 4096,
+        "maxY": 5120
+      },
+      "cellsInMatrix0": [
+        [
+          8,
+          23
+        ],
+        [
+          9,
+          23
+        ]
+      ]
+    },
+    {
+      "name": "Route 228",
+      "zoneId": 406,
+      "pixelX": 12548,
+      "pixelY": 5888,
+      "pixelBounds": {
+        "minX": 12292,
+        "maxX": 12804,
+        "minY": 5120,
+        "maxY": 6656
+      },
+      "cellsInMatrix0": [
+        [
+          10,
+          24
+        ],
+        [
+          11,
           24
         ],
         [
           12,
+          24
+        ]
+      ]
+    },
+    {
+      "name": "Route 229",
+      "zoneId": 407,
+      "pixelX": 12804,
+      "pixelY": 6912,
+      "pixelBounds": {
+        "minX": 12292,
+        "maxX": 13316,
+        "minY": 6656,
+        "maxY": 7168
+      },
+      "cellsInMatrix0": [
+        [
+          13,
+          24
+        ],
+        [
+          13,
           25
+        ]
+      ]
+    },
+    {
+      "name": "Route 230",
+      "zoneId": 471,
+      "pixelX": 11524,
+      "pixelY": 6912,
+      "pixelBounds": {
+        "minX": 10756,
+        "maxX": 12292,
+        "minY": 6656,
+        "maxY": 7168
+      },
+      "cellsInMatrix0": [
+        [
+          13,
+          21
+        ],
+        [
+          13,
+          22
+        ],
+        [
+          13,
+          23
+        ]
+      ]
+    },
+    {
+      "name": "Sandgem Town",
+      "zoneId": 418,
+      "pixelX": 2820,
+      "pixelY": 13568,
+      "pixelBounds": {
+        "minX": 2564,
+        "maxX": 3076,
+        "minY": 13312,
+        "maxY": 13824
+      },
+      "cellsInMatrix0": [
+        [
+          26,
+          5
+        ]
+      ]
+    },
+    {
+      "name": "Seabreak Path",
+      "zoneId": 472,
+      "pixelX": 14596,
+      "pixelY": 5632,
+      "pixelBounds": {
+        "minX": 14340,
+        "maxX": 14852,
+        "minY": 3584,
+        "maxY": 7680
+      },
+      "cellsInMatrix0": [
+        [
+          7,
+          28
+        ],
+        [
+          8,
+          28
+        ],
+        [
+          9,
+          28
+        ],
+        [
+          10,
+          28
+        ],
+        [
+          11,
+          28
         ],
         [
           12,
+          28
+        ],
+        [
+          13,
+          28
+        ],
+        [
+          14,
+          28
+        ]
+      ]
+    },
+    {
+      "name": "Snowpoint City",
+      "zoneId": 165,
+      "pixelX": 5892,
+      "pixelY": 3584,
+      "pixelBounds": {
+        "minX": 5636,
+        "maxX": 6148,
+        "minY": 3072,
+        "maxY": 4096
+      },
+      "cellsInMatrix0": [
+        [
+          6,
+          11
+        ],
+        [
+          7,
+          11
+        ]
+      ]
+    },
+    {
+      "name": "Solaceon Town",
+      "zoneId": 433,
+      "pixelX": 9220,
+      "pixelY": 10496,
+      "pixelBounds": {
+        "minX": 8708,
+        "maxX": 9732,
+        "minY": 10240,
+        "maxY": 10752
+      },
+      "cellsInMatrix0": [
+        [
+          20,
+          17
+        ],
+        [
+          20,
+          18
+        ]
+      ]
+    },
+    {
+      "name": "Spring Path",
+      "zoneId": 341,
+      "pixelX": 12292,
+      "pixelY": 11264,
+      "pixelBounds": {
+        "minX": 11780,
+        "maxX": 12804,
+        "minY": 10752,
+        "maxY": 11776
+      },
+      "cellsInMatrix0": [
+        [
+          21,
+          23
+        ],
+        [
+          21,
+          24
+        ],
+        [
+          22,
+          23
+        ],
+        [
+          22,
+          24
+        ]
+      ]
+    },
+    {
+      "name": "Stark Mountain",
+      "zoneId": 262,
+      "pixelX": 12036,
+      "pixelY": 3840,
+      "pixelBounds": {
+        "minX": 11780,
+        "maxX": 12292,
+        "minY": 3584,
+        "maxY": 4096
+      },
+      "cellsInMatrix0": [
+        [
+          7,
+          23
+        ]
+      ]
+    },
+    {
+      "name": "Sunyshore City",
+      "zoneId": 150,
+      "pixelX": 13828,
+      "pixelY": 12288,
+      "pixelBounds": {
+        "minX": 13316,
+        "maxX": 14340,
+        "minY": 11776,
+        "maxY": 12800
+      },
+      "cellsInMatrix0": [
+        [
+          23,
           26
         ],
         [
-          12,
+          23,
+          27
+        ],
+        [
+          24,
+          26
+        ],
+        [
+          24,
           27
         ]
       ]
     },
     {
-      "name": "Route 28",
-      "zoneId": 32,
-      "pixelX": 9191,
-      "pixelY": 2904,
+      "name": "Survival Area",
+      "zoneId": 450,
+      "pixelX": 10500,
+      "pixelY": 5376,
       "pixelBounds": {
-        "minX": 8851,
-        "maxX": 9532,
-        "minY": 2734,
-        "maxY": 3074
+        "minX": 10244,
+        "maxX": 10756,
+        "minY": 5120,
+        "maxY": 5632
       },
       "cellsInMatrix0": [
         [
-          8,
-          26
-        ],
-        [
-          8,
-          27
-        ]
-      ]
-    },
-    {
-      "name": "Route 29",
-      "zoneId": 33,
-      "pixelX": 6638,
-      "pixelY": 4266,
-      "pixelBounds": {
-        "minX": 6128,
-        "maxX": 7149,
-        "minY": 4096,
-        "maxY": 4436
-      },
-      "cellsInMatrix0": [
-        [
-          12,
-          18
-        ],
-        [
-          12,
-          19
-        ],
-        [
-          12,
+          10,
           20
         ]
       ]
     },
     {
-      "name": "Route 3",
-      "zoneId": 11,
-      "pixelX": 12085,
-      "pixelY": 1202,
+      "name": "Twinleaf Town",
+      "zoneId": 411,
+      "pixelX": 1796,
+      "pixelY": 14080,
       "pixelBounds": {
-        "minX": 11574,
-        "maxX": 12596,
-        "minY": 1032,
-        "maxY": 1372
+        "minX": 1540,
+        "maxX": 2052,
+        "minY": 13824,
+        "maxY": 14336
       },
       "cellsInMatrix0": [
         [
-          3,
-          34
-        ],
-        [
-          3,
-          35
-        ],
-        [
-          3,
-          36
+          27,
+          3
         ]
       ]
     },
     {
-      "name": "Route 30",
-      "zoneId": 34,
-      "pixelX": 5957,
-      "pixelY": 3585,
+      "name": "Valley Windworks",
+      "zoneId": 200,
+      "pixelX": 3844,
+      "pixelY": 10496,
       "pixelBounds": {
-        "minX": 5787,
-        "maxX": 6128,
-        "minY": 3074,
-        "maxY": 4096
+        "minX": 3588,
+        "maxX": 4100,
+        "minY": 10240,
+        "maxY": 10752
       },
       "cellsInMatrix0": [
         [
-          9,
-          17
-        ],
-        [
-          10,
-          17
-        ],
-        [
-          11,
-          17
-        ]
-      ]
-    },
-    {
-      "name": "Route 31",
-      "zoneId": 35,
-      "pixelX": 5787,
-      "pixelY": 2904,
-      "pixelBounds": {
-        "minX": 5447,
-        "maxX": 6128,
-        "minY": 2734,
-        "maxY": 3074
-      },
-      "cellsInMatrix0": [
-        [
-          8,
-          16
-        ],
-        [
-          8,
-          17
-        ]
-      ]
-    },
-    {
-      "name": "Route 32",
-      "zoneId": 36,
-      "pixelX": 4936,
-      "pixelY": 3925,
-      "pixelBounds": {
-        "minX": 4766,
-        "maxX": 5106,
-        "minY": 3074,
-        "maxY": 4777
-      },
-      "cellsInMatrix0": [
-        [
-          9,
-          14
-        ],
-        [
-          10,
-          14
-        ],
-        [
-          11,
-          14
-        ],
-        [
-          12,
-          14
-        ],
-        [
-          13,
-          14
-        ]
-      ]
-    },
-    {
-      "name": "Route 33",
-      "zoneId": 37,
-      "pixelX": 4936,
-      "pixelY": 4947,
-      "pixelBounds": {
-        "minX": 4766,
-        "maxX": 5106,
-        "minY": 4777,
-        "maxY": 5117
-      },
-      "cellsInMatrix0": [
-        [
-          14,
-          14
-        ]
-      ]
-    },
-    {
-      "name": "Route 34",
-      "zoneId": 38,
-      "pixelX": 3915,
-      "pixelY": 4606,
-      "pixelBounds": {
-        "minX": 3745,
-        "maxX": 4085,
-        "minY": 4096,
-        "maxY": 5117
-      },
-      "cellsInMatrix0": [
-        [
-          12,
-          11
-        ],
-        [
-          13,
-          11
-        ],
-        [
-          14,
-          11
-        ]
-      ]
-    },
-    {
-      "name": "Route 35",
-      "zoneId": 39,
-      "pixelX": 3915,
-      "pixelY": 3074,
-      "pixelBounds": {
-        "minX": 3745,
-        "maxX": 4085,
-        "minY": 2734,
-        "maxY": 3415
-      },
-      "cellsInMatrix0": [
-        [
-          8,
-          11
-        ],
-        [
-          9,
-          11
-        ]
-      ]
-    },
-    {
-      "name": "Route 36",
-      "zoneId": 40,
-      "pixelX": 4255,
-      "pixelY": 2564,
-      "pixelBounds": {
-        "minX": 3745,
-        "maxX": 4766,
-        "minY": 2394,
-        "maxY": 2734
-      },
-      "cellsInMatrix0": [
-        [
-          7,
-          11
-        ],
-        [
-          7,
-          12
-        ],
-        [
-          7,
-          13
-        ]
-      ]
-    },
-    {
-      "name": "Route 37",
-      "zoneId": 41,
-      "pixelX": 4255,
-      "pixelY": 2223,
-      "pixelBounds": {
-        "minX": 4085,
-        "maxX": 4426,
-        "minY": 2053,
-        "maxY": 2394
-      },
-      "cellsInMatrix0": [
-        [
-          6,
-          12
-        ]
-      ]
-    },
-    {
-      "name": "Route 38",
-      "zoneId": 42,
-      "pixelX": 3404,
-      "pixelY": 1883,
-      "pixelBounds": {
-        "minX": 3064,
-        "maxX": 3745,
-        "minY": 1713,
-        "maxY": 2053
-      },
-      "cellsInMatrix0": [
-        [
-          5,
-          9
-        ],
-        [
-          5,
-          10
-        ]
-      ]
-    },
-    {
-      "name": "Route 39",
-      "zoneId": 43,
-      "pixelX": 2893,
-      "pixelY": 2053,
-      "pixelBounds": {
-        "minX": 2723,
-        "maxX": 3064,
-        "minY": 1713,
-        "maxY": 2394
-      },
-      "cellsInMatrix0": [
-        [
-          5,
-          8
-        ],
-        [
-          6,
-          8
-        ]
-      ]
-    },
-    {
-      "name": "Route 4",
-      "zoneId": 12,
-      "pixelX": 13106,
-      "pixelY": 1202,
-      "pixelBounds": {
-        "minX": 12596,
-        "maxX": 13617,
-        "minY": 1032,
-        "maxY": 1372
-      },
-      "cellsInMatrix0": [
-        [
-          3,
-          37
-        ],
-        [
-          3,
-          38
-        ],
-        [
-          3,
-          39
-        ]
-      ]
-    },
-    {
-      "name": "Route 40",
-      "zoneId": 94,
-      "pixelX": 2553,
-      "pixelY": 3074,
-      "pixelBounds": {
-        "minX": 2383,
-        "maxX": 2723,
-        "minY": 2734,
-        "maxY": 3415
-      },
-      "cellsInMatrix0": [
-        [
-          8,
-          7
-        ],
-        [
-          9,
+          20,
           7
         ]
       ]
     },
     {
-      "name": "Route 41",
-      "zoneId": 95,
-      "pixelX": 2383,
-      "pixelY": 3755,
+      "name": "Valor Lakefront",
+      "zoneId": 336,
+      "pixelX": 11268,
+      "pixelY": 12288,
       "pixelBounds": {
-        "minX": 2043,
-        "maxX": 2723,
-        "minY": 3415,
-        "maxY": 4096
+        "minX": 10756,
+        "maxX": 11780,
+        "minY": 11776,
+        "maxY": 12800
       },
       "cellsInMatrix0": [
         [
-          10,
-          6
+          23,
+          21
         ],
         [
-          10,
-          7
+          23,
+          22
         ],
         [
-          11,
-          6
+          24,
+          21
         ],
         [
-          11,
-          7
+          24,
+          22
         ]
       ]
     },
     {
-      "name": "Route 42",
-      "zoneId": 44,
-      "pixelX": 4936,
-      "pixelY": 1883,
+      "name": "Veilstone City",
+      "zoneId": 132,
+      "pixelX": 11268,
+      "pixelY": 9728,
       "pixelBounds": {
-        "minX": 4426,
-        "maxX": 5447,
-        "minY": 1713,
-        "maxY": 2053
+        "minX": 10756,
+        "maxX": 11780,
+        "minY": 9216,
+        "maxY": 10240
       },
       "cellsInMatrix0": [
         [
-          5,
-          13
+          18,
+          21
         ],
         [
-          5,
-          14
+          18,
+          22
         ],
         [
-          5,
-          15
+          19,
+          21
+        ],
+        [
+          19,
+          22
         ]
       ]
     },
     {
-      "name": "Route 43",
-      "zoneId": 45,
-      "pixelX": 5617,
-      "pixelY": 1372,
+      "name": "Verity Lakefront",
+      "zoneId": 334,
+      "pixelX": 1028,
+      "pixelY": 13312,
       "pixelBounds": {
-        "minX": 5447,
-        "maxX": 5787,
-        "minY": 1032,
-        "maxY": 1713
+        "minX": 516,
+        "maxX": 1540,
+        "minY": 12800,
+        "maxY": 13824
       },
       "cellsInMatrix0": [
         [
-          3,
-          16
+          25,
+          1
         ],
         [
-          4,
-          16
-        ]
-      ]
-    },
-    {
-      "name": "Route 44",
-      "zoneId": 46,
-      "pixelX": 6298,
-      "pixelY": 1883,
-      "pixelBounds": {
-        "minX": 5787,
-        "maxX": 6809,
-        "minY": 1713,
-        "maxY": 2053
-      },
-      "cellsInMatrix0": [
-        [
-          5,
-          17
-        ],
-        [
-          5,
-          18
-        ],
-        [
-          5,
-          19
-        ]
-      ]
-    },
-    {
-      "name": "Route 45",
-      "zoneId": 47,
-      "pixelX": 6979,
-      "pixelY": 2904,
-      "pixelBounds": {
-        "minX": 6809,
-        "maxX": 7149,
-        "minY": 2053,
-        "maxY": 3755
-      },
-      "cellsInMatrix0": [
-        [
-          6,
-          20
-        ],
-        [
-          7,
-          20
-        ],
-        [
-          8,
-          20
-        ],
-        [
-          9,
-          20
-        ],
-        [
-          10,
-          20
-        ]
-      ]
-    },
-    {
-      "name": "Route 46",
-      "zoneId": 48,
-      "pixelX": 6638,
-      "pixelY": 3755,
-      "pixelBounds": {
-        "minX": 6468,
-        "maxX": 6809,
-        "minY": 3415,
-        "maxY": 4096
-      },
-      "cellsInMatrix0": [
-        [
-          10,
-          19
-        ],
-        [
-          11,
-          19
-        ]
-      ]
-    },
-    {
-      "name": "Route 47",
-      "zoneId": 151,
-      "pixelX": 1191,
-      "pixelY": 4095,
-      "pixelBounds": {
-        "minX": 681,
-        "maxX": 1702,
-        "minY": 3755,
-        "maxY": 4436
-      },
-      "cellsInMatrix0": [
-        [
-          11,
+          25,
           2
         ],
         [
-          11,
-          3
+          26,
+          1
         ],
         [
-          11,
-          4
-        ],
-        [
-          12,
+          26,
           2
-        ],
-        [
-          12,
-          3
-        ],
-        [
-          12,
-          4
-        ]
-      ]
-    },
-    {
-      "name": "Route 48",
-      "zoneId": 152,
-      "pixelX": 1021,
-      "pixelY": 3585,
-      "pixelBounds": {
-        "minX": 681,
-        "maxX": 1362,
-        "minY": 3415,
-        "maxY": 3755
-      },
-      "cellsInMatrix0": [
-        [
-          10,
-          2
-        ],
-        [
-          10,
-          3
-        ]
-      ]
-    },
-    {
-      "name": "Route 5",
-      "zoneId": 13,
-      "pixelX": 13787,
-      "pixelY": 1883,
-      "pixelBounds": {
-        "minX": 13617,
-        "maxX": 13957,
-        "minY": 1713,
-        "maxY": 2053
-      },
-      "cellsInMatrix0": [
-        [
-          5,
-          40
-        ]
-      ]
-    },
-    {
-      "name": "Route 6",
-      "zoneId": 14,
-      "pixelX": 13787,
-      "pixelY": 2904,
-      "pixelBounds": {
-        "minX": 13617,
-        "maxX": 13957,
-        "minY": 2734,
-        "maxY": 3074
-      },
-      "cellsInMatrix0": [
-        [
-          8,
-          40
-        ]
-      ]
-    },
-    {
-      "name": "Route 7",
-      "zoneId": 15,
-      "pixelX": 13447,
-      "pixelY": 2564,
-      "pixelBounds": {
-        "minX": 13277,
-        "maxX": 13617,
-        "minY": 2394,
-        "maxY": 2734
-      },
-      "cellsInMatrix0": [
-        [
-          7,
-          39
-        ]
-      ]
-    },
-    {
-      "name": "Route 8",
-      "zoneId": 16,
-      "pixelX": 14638,
-      "pixelY": 2564,
-      "pixelBounds": {
-        "minX": 14298,
-        "maxX": 14979,
-        "minY": 2394,
-        "maxY": 2734
-      },
-      "cellsInMatrix0": [
-        [
-          7,
-          42
-        ],
-        [
-          7,
-          43
-        ]
-      ]
-    },
-    {
-      "name": "Route 9",
-      "zoneId": 17,
-      "pixelX": 14808,
-      "pixelY": 1542,
-      "pixelBounds": {
-        "minX": 14298,
-        "maxX": 15319,
-        "minY": 1372,
-        "maxY": 1713
-      },
-      "cellsInMatrix0": [
-        [
-          4,
-          42
-        ],
-        [
-          4,
-          43
-        ],
-        [
-          4,
-          44
-        ]
-      ]
-    },
-    {
-      "name": "Ruins of Alph",
-      "zoneId": 113,
-      "pixelX": 4596,
-      "pixelY": 3074,
-      "pixelBounds": {
-        "minX": 4426,
-        "maxX": 4766,
-        "minY": 2734,
-        "maxY": 3415
-      },
-      "cellsInMatrix0": [
-        [
-          8,
-          13
-        ],
-        [
-          9,
-          13
-        ]
-      ]
-    },
-    {
-      "name": "Safari Zone Gate",
-      "zoneId": 174,
-      "pixelX": 1021,
-      "pixelY": 3074,
-      "pixelBounds": {
-        "minX": 681,
-        "maxX": 1362,
-        "minY": 2734,
-        "maxY": 3415
-      },
-      "cellsInMatrix0": [
-        [
-          8,
-          2
-        ],
-        [
-          8,
-          3
-        ],
-        [
-          9,
-          2
-        ],
-        [
-          9,
-          3
-        ]
-      ]
-    },
-    {
-      "name": "Saffron City",
-      "zoneId": 59,
-      "pixelX": 13957,
-      "pixelY": 2393,
-      "pixelBounds": {
-        "minX": 13617,
-        "maxX": 14298,
-        "minY": 2053,
-        "maxY": 2734
-      },
-      "cellsInMatrix0": [
-        [
-          6,
-          40
-        ],
-        [
-          6,
-          41
-        ],
-        [
-          7,
-          40
-        ],
-        [
-          7,
-          41
-        ]
-      ]
-    },
-    {
-      "name": "Vermilion City",
-      "zoneId": 54,
-      "pixelX": 13957,
-      "pixelY": 3414,
-      "pixelBounds": {
-        "minX": 13617,
-        "maxX": 14298,
-        "minY": 3074,
-        "maxY": 3755
-      },
-      "cellsInMatrix0": [
-        [
-          9,
-          40
-        ],
-        [
-          9,
-          41
-        ],
-        [
-          10,
-          40
-        ],
-        [
-          10,
-          41
-        ]
-      ]
-    },
-    {
-      "name": "Violet City",
-      "zoneId": 73,
-      "pixelX": 5106,
-      "pixelY": 2734,
-      "pixelBounds": {
-        "minX": 4766,
-        "maxX": 5447,
-        "minY": 2394,
-        "maxY": 3074
-      },
-      "cellsInMatrix0": [
-        [
-          7,
-          14
-        ],
-        [
-          7,
-          15
-        ],
-        [
-          8,
-          14
-        ],
-        [
-          8,
-          15
-        ]
-      ]
-    },
-    {
-      "name": "Viridian City",
-      "zoneId": 50,
-      "pixelX": 10893,
-      "pixelY": 2734,
-      "pixelBounds": {
-        "minX": 10553,
-        "maxX": 11234,
-        "minY": 2394,
-        "maxY": 3074
-      },
-      "cellsInMatrix0": [
-        [
-          7,
-          31
-        ],
-        [
-          7,
-          32
-        ],
-        [
-          8,
-          31
-        ],
-        [
-          8,
-          32
         ]
       ]
     }

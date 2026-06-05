@@ -3,14 +3,14 @@
     "id": 2,
     "name": "Mystery Zone",
     "mapName": "0002 - Mystery Zone",
-    "matrixId": 74
+    "matrixId": 2
   },
   "tileSize": 16,
   "tilePxOnVisibleMap": 16,
-  "tilesWidth": 32,
-  "tilesHeight": 32,
-  "visibleMapImageWidth": 512,
-  "visibleMapImageHeight": 512,
+  "tilesWidth": 481,
+  "tilesHeight": 480,
+  "visibleMapImageWidth": 7681,
+  "visibleMapImageHeight": 7680,
   "visibleMapPixelsPerUnit": 1,
   "visibleMapPng": "0002 - Mystery Zone.png",
   "alignment": "visible-map",
@@ -18,10 +18,10 @@
     "row": 0,
     "col": 0
   },
-  "cellsWide": 1,
-  "cellsTall": 1,
+  "cellsWide": 15,
+  "cellsTall": 15,
   "cellBlockLeftPx": 0,
-  "cellBlockTopPx": 0,
+  "cellBlockTopPx": -0.179421216,
   "pngFile": "0002 - Mystery Zone.png",
   "rawFile": "0002 - Mystery Zone.raw.bin",
   "typeByteMap": {
