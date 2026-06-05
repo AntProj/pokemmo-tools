@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 387,
+    "name": "Vermilion City",
+    "mapName": "0387 - Vermilion City",
+    "matrixId": 211
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0144_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 376,
+        "y": 320,
+        "targetPng": "0387 - Vermilion City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 23,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

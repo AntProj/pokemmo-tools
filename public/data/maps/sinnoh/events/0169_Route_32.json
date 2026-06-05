@@ -1,0 +1,31 @@
+{
+  "zoneId": 169,
+  "displayName": "Route 32",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 152,
+      "pixelY": 312,
+      "worldX": 128,
+      "worldZ": 304,
+      "destinationZoneId": 36,
+      "destinationName": "Route 32",
+      "destinationPixelX": 456,
+      "destinationPixelY": 2104,
+      "anchor": 3
+    },
+    {
+      "id": "w1",
+      "pixelX": 248,
+      "pixelY": 280,
+      "worldX": 224,
+      "worldZ": 272,
+      "destinationZoneId": 170,
+      "destinationName": "Route 32",
+      "destinationPixelX": 248,
+      "destinationPixelY": 168,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,31 @@
+{
+  "zoneId": 419,
+  "displayName": "Route 2",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 120,
+      "pixelY": 256,
+      "worldX": 80,
+      "worldZ": 192,
+      "destinationZoneId": 10,
+      "destinationName": "Route 2",
+      "destinationPixelX": 184,
+      "destinationPixelY": 132,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 120,
+      "pixelY": 96,
+      "worldX": 80,
+      "worldZ": 32,
+      "destinationZoneId": 147,
+      "destinationName": "Viridian Forest",
+      "destinationPixelX": 536,
+      "destinationPixelY": 1256,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

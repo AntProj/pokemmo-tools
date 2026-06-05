@@ -1,0 +1,19 @@
+{
+  "zoneId": 143,
+  "displayName": "Route 30",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 104,
+      "pixelY": 152,
+      "worldX": 64,
+      "worldZ": 144,
+      "destinationZoneId": 34,
+      "destinationName": "Route 30",
+      "destinationPixelX": 408,
+      "destinationPixelY": 104,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

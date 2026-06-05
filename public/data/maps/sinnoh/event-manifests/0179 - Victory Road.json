@@ -1,0 +1,219 @@
+{
+  "header": {
+    "id": 179,
+    "name": "Victory Road",
+    "mapName": "0179 - Victory Road",
+    "matrixId": 163
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0058_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 536,
+        "y": 480,
+        "targetPng": "0179 - Victory Road.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 1,
+        "yMap": 29,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 744,
+        "y": 320,
+        "targetPng": "0179 - Victory Road.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 14,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 536,
+        "y": 592,
+        "targetPng": "0179 - Victory Road.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 1,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 408,
+        "y": 256,
+        "targetPng": "0179 - Victory Road.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 25,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 536,
+        "y": 512,
+        "targetPng": "0179 - Victory Road.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 1,
+        "yMap": 31,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 536,
+        "y": 528,
+        "targetPng": "0179 - Victory Road.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 1,
+        "yMap": 0,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 536,
+        "y": 544,
+        "targetPng": "0179 - Victory Road.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 1,
+        "yMap": 1,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 696,
+        "y": 320,
+        "targetPng": "0179 - Victory Road.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 11,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 728,
+        "y": 352,
+        "targetPng": "0179 - Victory Road.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 13,
+        "yMap": 21,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 760,
+        "y": 336,
+        "targetPng": "0179 - Victory Road.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 15,
+        "yMap": 20,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 680,
+        "y": 352,
+        "targetPng": "0179 - Victory Road.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 10,
+        "yMap": 21,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

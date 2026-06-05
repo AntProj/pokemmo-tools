@@ -1,0 +1,105 @@
+{
+  "zoneId": 110,
+  "displayName": "Sprout Tower",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 248,
+      "pixelY": 456,
+      "worldX": 240,
+      "worldZ": 448,
+      "destinationZoneId": 73,
+      "destinationName": "Violet City",
+      "destinationPixelX": 644,
+      "destinationPixelY": 344,
+      "anchor": 5
+    },
+    {
+      "id": "w1",
+      "pixelX": 168,
+      "pixelY": 248,
+      "worldX": 160,
+      "worldZ": 240,
+      "destinationZoneId": 155,
+      "destinationName": "Sprout Tower",
+      "destinationPixelX": 184,
+      "destinationPixelY": 232,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 392,
+      "pixelY": 152,
+      "worldX": 384,
+      "worldZ": 144,
+      "destinationZoneId": 155,
+      "destinationName": "Sprout Tower",
+      "destinationPixelX": 392,
+      "destinationPixelY": 152,
+      "anchor": 1
+    },
+    {
+      "id": "w3",
+      "pixelX": 104,
+      "pixelY": 264,
+      "worldX": 96,
+      "worldZ": 256,
+      "destinationZoneId": 155,
+      "destinationName": "Sprout Tower",
+      "destinationPixelX": 104,
+      "destinationPixelY": 264,
+      "anchor": 2
+    },
+    {
+      "id": "w4",
+      "pixelX": 104,
+      "pixelY": 248,
+      "worldX": 96,
+      "worldZ": 240,
+      "destinationZoneId": 155,
+      "destinationName": "Sprout Tower",
+      "destinationPixelX": 104,
+      "destinationPixelY": 264,
+      "anchor": 2
+    },
+    {
+      "id": "w5",
+      "pixelX": 168,
+      "pixelY": 232,
+      "worldX": 160,
+      "worldZ": 224,
+      "destinationZoneId": 155,
+      "destinationName": "Sprout Tower",
+      "destinationPixelX": 184,
+      "destinationPixelY": 232,
+      "anchor": 0
+    },
+    {
+      "id": "w6",
+      "pixelX": 392,
+      "pixelY": 136,
+      "worldX": 384,
+      "worldZ": 128,
+      "destinationZoneId": 155,
+      "destinationName": "Sprout Tower",
+      "destinationPixelX": 392,
+      "destinationPixelY": 152,
+      "anchor": 1
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t4",
+      "trainerInstanceId": 242,
+      "pixelX": 88,
+      "pixelY": 176,
+      "trainerId": 43,
+      "trainerName": "Chow",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3042,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

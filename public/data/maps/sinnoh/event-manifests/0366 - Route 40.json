@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 366,
+    "name": "Route 40",
+    "mapName": "0366 - Route 40",
+    "matrixId": 69
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0126_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 120,
+        "targetPng": "0366 - Route 40.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0193_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 56,
+        "y": 200,
+        "targetPng": "0366 - Route 40.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 1,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

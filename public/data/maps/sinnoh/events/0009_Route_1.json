@@ -1,0 +1,84 @@
+{
+  "zoneId": 9,
+  "displayName": "Route 1",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 216,
+      "pixelY": 24,
+      "worldX": 16576,
+      "worldZ": 4608,
+      "destinationZoneId": 527,
+      "destinationName": "Route 1",
+      "destinationPixelX": 120,
+      "destinationPixelY": 256,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 232,
+      "pixelY": 24,
+      "worldX": 16592,
+      "worldZ": 4608,
+      "destinationZoneId": 527,
+      "destinationName": "Route 1",
+      "destinationPixelX": 120,
+      "destinationPixelY": 256,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 3,
+      "pixelX": 296,
+      "pixelY": 784,
+      "trainerId": 362,
+      "trainerName": "Quinn",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3361,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 4,
+      "pixelX": 232,
+      "pixelY": 624,
+      "trainerId": 545,
+      "trainerName": "French",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3544,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 5,
+      "pixelX": 168,
+      "pixelY": 432,
+      "trainerId": 327,
+      "trainerName": "Danny",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3326,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 6,
+      "pixelX": 264,
+      "pixelY": 336,
+      "trainerId": 546,
+      "trainerName": "Sherman",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3545,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

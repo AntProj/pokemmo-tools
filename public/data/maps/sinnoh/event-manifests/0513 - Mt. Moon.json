@@ -1,0 +1,143 @@
+{
+  "header": {
+    "id": 513,
+    "name": "Mt. Moon",
+    "mapName": "0513 - Mt. Moon",
+    "matrixId": 281
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0333_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 280,
+        "y": 328,
+        "targetPng": "0513 - Mt. Moon.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 9,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0333_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 328,
+        "y": 280,
+        "targetPng": "0513 - Mt. Moon.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 12,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0333_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 280,
+        "y": 232,
+        "targetPng": "0513 - Mt. Moon.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 9,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0333_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 232,
+        "y": 280,
+        "targetPng": "0513 - Mt. Moon.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0333_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 360,
+        "y": 280,
+        "targetPng": "0513 - Mt. Moon.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 14,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0333_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 200,
+        "y": 280,
+        "targetPng": "0513 - Mt. Moon.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 4,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 312,
+        "y": 328,
+        "targetPng": "0513 - Mt. Moon.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 11,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

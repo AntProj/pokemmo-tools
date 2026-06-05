@@ -1,0 +1,170 @@
+{
+  "zoneId": 151,
+  "displayName": "Route 47",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 1368,
+      "pixelY": 536,
+      "worldX": 2384,
+      "worldZ": 6144,
+      "destinationZoneId": 279,
+      "destinationName": "Cliff Edge Gate",
+      "destinationPixelX": 296,
+      "destinationPixelY": 744,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 1064,
+      "pixelY": 552,
+      "worldX": 2080,
+      "worldZ": 6160,
+      "destinationZoneId": 342,
+      "destinationName": "Cliff Cave",
+      "destinationPixelX": 120,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 1080,
+      "pixelY": 648,
+      "worldX": 2096,
+      "worldZ": 6256,
+      "destinationZoneId": 342,
+      "destinationName": "Cliff Cave",
+      "destinationPixelX": 440,
+      "destinationPixelY": 232,
+      "anchor": 1
+    },
+    {
+      "id": "w3",
+      "pixelX": 1064,
+      "pixelY": 488,
+      "worldX": 2080,
+      "worldZ": 6096,
+      "destinationZoneId": 342,
+      "destinationName": "Cliff Cave",
+      "destinationPixelX": 120,
+      "destinationPixelY": 488,
+      "anchor": 2
+    },
+    {
+      "id": "w4",
+      "pixelX": 376,
+      "pixelY": 616,
+      "worldX": 1392,
+      "worldZ": 6224,
+      "destinationZoneId": 524,
+      "destinationName": "Embedded Tower",
+      "destinationPixelX": 264,
+      "destinationPixelY": 472,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 376,
+      "pixelY": 616,
+      "worldX": 1392,
+      "worldZ": 6224,
+      "destinationZoneId": 525,
+      "destinationName": "Embedded Tower",
+      "destinationPixelX": 264,
+      "destinationPixelY": 472,
+      "anchor": 0
+    },
+    {
+      "id": "w6",
+      "pixelX": 376,
+      "pixelY": 616,
+      "worldX": 1392,
+      "worldZ": 6224,
+      "destinationZoneId": 526,
+      "destinationName": "Embedded Tower",
+      "destinationPixelX": 264,
+      "destinationPixelY": 472,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t6",
+      "trainerInstanceId": 267,
+      "pixelX": 1080,
+      "pixelY": 544,
+      "trainerId": 730,
+      "trainerName": "Thom & Kae",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3729,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t7",
+      "trainerInstanceId": 268,
+      "pixelX": 1080,
+      "pixelY": 528,
+      "trainerId": 730,
+      "trainerName": "Thom & Kae",
+      "orientation": "Left",
+      "isDoubleBattlePartner": true,
+      "scriptNumber": 5729,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t8",
+      "trainerInstanceId": 269,
+      "pixelX": 856,
+      "pixelY": 640,
+      "trainerId": 732,
+      "trainerName": "Grant",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3731,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t9",
+      "trainerInstanceId": 270,
+      "pixelX": 584,
+      "pixelY": 224,
+      "trainerId": 729,
+      "trainerName": "Duff & Eda",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3728,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t10",
+      "trainerInstanceId": 271,
+      "pixelX": 600,
+      "pixelY": 224,
+      "trainerId": 729,
+      "trainerName": "Duff & Eda",
+      "orientation": "Down",
+      "isDoubleBattlePartner": true,
+      "scriptNumber": 5728,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t11",
+      "trainerInstanceId": 272,
+      "pixelX": 1144,
+      "pixelY": 672,
+      "trainerId": 731,
+      "trainerName": "Devin",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3730,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

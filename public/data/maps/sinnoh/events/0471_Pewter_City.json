@@ -1,0 +1,19 @@
+{
+  "zoneId": 471,
+  "displayName": "Pewter City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 280,
+      "pixelY": 408,
+      "worldX": 160,
+      "worldZ": 304,
+      "destinationZoneId": 51,
+      "destinationName": "Pewter City",
+      "destinationPixelX": 488,
+      "destinationPixelY": 248,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

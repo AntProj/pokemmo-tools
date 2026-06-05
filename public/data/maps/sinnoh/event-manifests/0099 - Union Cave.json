@@ -1,0 +1,181 @@
+{
+  "header": {
+    "id": 99,
+    "name": "Union Cave",
+    "mapName": "0099 - Union Cave",
+    "matrixId": 42
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 1,
+      "orientation": "Right",
+      "spriteFile": "ow_0131_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 104,
+        "y": 800,
+        "targetPng": "0099 - Union Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 5,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 1,
+      "orientation": "Left",
+      "spriteFile": "ow_0131_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 344,
+        "y": 848,
+        "targetPng": "0099 - Union Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 20,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 1,
+      "orientation": "Right",
+      "spriteFile": "ow_0178_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 392,
+        "y": 1136,
+        "targetPng": "0099 - Union Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 2,
+        "xMap": 23,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 1,
+      "orientation": "Down",
+      "spriteFile": "ow_0178_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 152,
+        "y": 448,
+        "targetPng": "0099 - Union Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 8,
+        "yMap": 26,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 1,
+      "orientation": "Right",
+      "spriteFile": "ow_0184_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 216,
+        "y": 1312,
+        "targetPng": "0099 - Union Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 2,
+        "xMap": 12,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 72,
+        "y": 576,
+        "targetPng": "0099 - Union Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 3,
+        "yMap": 2,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 488,
+        "y": 1184,
+        "targetPng": "0099 - Union Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 2,
+        "xMap": 29,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 88,
+        "y": 1104,
+        "targetPng": "0099 - Union Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 2,
+        "xMap": 4,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 392,
+        "y": 1520,
+        "targetPng": "0099 - Union Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 2,
+        "xMap": 23,
+        "yMap": 29,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

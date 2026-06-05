@@ -1,0 +1,19 @@
+{
+  "zoneId": 340,
+  "displayName": "Bell Tower",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 248,
+      "pixelY": 440,
+      "worldX": 240,
+      "worldZ": 384,
+      "destinationZoneId": 341,
+      "destinationName": "Bell Tower",
+      "destinationPixelX": 248,
+      "destinationPixelY": 408,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

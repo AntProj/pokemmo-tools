@@ -1,0 +1,19 @@
+{
+  "zoneId": 306,
+  "displayName": "Pokémon League",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 104,
+      "pixelY": 400,
+      "worldX": 96,
+      "worldZ": 352,
+      "destinationZoneId": 305,
+      "destinationName": "Pokémon League",
+      "destinationPixelX": 201,
+      "destinationPixelY": 40,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

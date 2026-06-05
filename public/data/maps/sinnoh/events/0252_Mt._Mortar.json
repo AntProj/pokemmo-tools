@@ -1,0 +1,55 @@
+{
+  "zoneId": 252,
+  "displayName": "Mt. Mortar",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 584,
+      "pixelY": 1144,
+      "worldX": 512,
+      "worldZ": 1136,
+      "destinationZoneId": 119,
+      "destinationName": "Mt. Mortar",
+      "destinationPixelX": 728,
+      "destinationPixelY": 728,
+      "anchor": 10
+    },
+    {
+      "id": "w1",
+      "pixelX": 408,
+      "pixelY": 232,
+      "worldX": 336,
+      "worldZ": 224,
+      "destinationZoneId": 250,
+      "destinationName": "Mt. Mortar",
+      "destinationPixelX": 568,
+      "destinationPixelY": 616,
+      "anchor": 7
+    },
+    {
+      "id": "w2",
+      "pixelX": 408,
+      "pixelY": 216,
+      "worldX": 336,
+      "worldZ": 208,
+      "destinationZoneId": 250,
+      "destinationName": "Mt. Mortar",
+      "destinationPixelX": 568,
+      "destinationPixelY": 616,
+      "anchor": 7
+    },
+    {
+      "id": "w3",
+      "pixelX": 584,
+      "pixelY": 1128,
+      "worldX": 512,
+      "worldZ": 1120,
+      "destinationZoneId": 119,
+      "destinationName": "Mt. Mortar",
+      "destinationPixelX": 728,
+      "destinationPixelY": 728,
+      "anchor": 10
+    }
+  ],
+  "trainers": []
+}

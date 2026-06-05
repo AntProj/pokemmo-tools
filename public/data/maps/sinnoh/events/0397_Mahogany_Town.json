@@ -1,0 +1,31 @@
+{
+  "zoneId": 397,
+  "displayName": "Mahogany Town",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 400,
+      "pixelY": 332,
+      "worldX": 64,
+      "worldZ": 304,
+      "destinationZoneId": 87,
+      "destinationName": "Mahogany Town",
+      "destinationPixelX": 280,
+      "destinationPixelY": 396,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 384,
+      "pixelY": 60,
+      "worldX": 48,
+      "worldZ": 32,
+      "destinationZoneId": 396,
+      "destinationName": "Mahogany Town",
+      "destinationPixelX": 760,
+      "destinationPixelY": 280,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

@@ -1,6 +1,19 @@
 {
   "zoneId": 2,
   "displayName": "Mystery Zone",
-  "warps": [],
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 136,
+      "pixelY": 232,
+      "worldX": 128,
+      "worldZ": 224,
+      "destinationZoneId": 81,
+      "destinationName": "Ecruteak City",
+      "destinationPixelX": 136,
+      "destinationPixelY": 40,
+      "anchor": 1
+    }
+  ],
   "trainers": []
 }

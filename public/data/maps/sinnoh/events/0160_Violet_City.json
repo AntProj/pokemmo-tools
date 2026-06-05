@@ -1,0 +1,19 @@
+{
+  "zoneId": 160,
+  "displayName": "Violet City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 104,
+      "pixelY": 136,
+      "worldX": 64,
+      "worldZ": 128,
+      "destinationZoneId": 73,
+      "destinationName": "Violet City",
+      "destinationPixelX": 196,
+      "destinationPixelY": 760,
+      "anchor": 8
+    }
+  ],
+  "trainers": []
+}

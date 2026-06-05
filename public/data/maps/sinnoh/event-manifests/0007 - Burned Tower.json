@@ -1,0 +1,276 @@
+{
+  "header": {
+    "id": 7,
+    "name": "Burned Tower",
+    "mapName": "0007 - Burned Tower",
+    "matrixId": 25
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0058_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 376,
+        "y": 240,
+        "targetPng": "0007 - Burned Tower.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 23,
+        "yMap": 14,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0187_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 376,
+        "y": 384,
+        "targetPng": "0007 - Burned Tower.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 23,
+        "yMap": 23,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0149_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 376,
+        "y": 432,
+        "targetPng": "0007 - Burned Tower.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 23,
+        "yMap": 26,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 1,
+      "orientation": "Right",
+      "spriteFile": "ow_0178_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 104,
+        "y": 160,
+        "targetPng": "0007 - Burned Tower.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 1,
+      "orientation": "Down",
+      "spriteFile": "ow_0178_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 360,
+        "y": 144,
+        "targetPng": "0007 - Burned Tower.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 22,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0575_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 248,
+        "y": 272,
+        "targetPng": "0007 - Burned Tower.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 15,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0573_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 232,
+        "y": 256,
+        "targetPng": "0007 - Burned Tower.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 14,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0574_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 264,
+        "y": 256,
+        "targetPng": "0007 - Burned Tower.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 16,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 88,
+        "y": 368,
+        "targetPng": "0007 - Burned Tower.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 22,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 104,
+        "y": 384,
+        "targetPng": "0007 - Burned Tower.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 23,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 416,
+        "targetPng": "0007 - Burned Tower.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 7,
+        "yMap": 25,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 432,
+        "targetPng": "0007 - Burned Tower.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 7,
+        "yMap": 26,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 12,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 248,
+        "y": 160,
+        "targetPng": "0007 - Burned Tower.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 15,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 13,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0575_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 232,
+        "y": 128,
+        "targetPng": "0007 - Burned Tower.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 14,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

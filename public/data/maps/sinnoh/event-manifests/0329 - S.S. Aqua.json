@@ -1,0 +1,238 @@
+{
+  "header": {
+    "id": 329,
+    "name": "S.S. Aqua",
+    "mapName": "0329 - S.S. Aqua",
+    "matrixId": 177
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0114_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 144,
+        "y": 336,
+        "targetPng": "0329 - S.S. Aqua.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 1,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0144_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 736,
+        "y": 416,
+        "targetPng": "0329 - S.S. Aqua.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 1,
+      "orientation": "Right",
+      "spriteFile": "ow_0142_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 912,
+        "y": 192,
+        "targetPng": "0329 - S.S. Aqua.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 17,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 1,
+      "orientation": "Down",
+      "spriteFile": "ow_0144_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 688,
+        "y": 272,
+        "targetPng": "0329 - S.S. Aqua.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 1,
+      "orientation": "Up",
+      "spriteFile": "ow_0185_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 256,
+        "y": 192,
+        "targetPng": "0329 - S.S. Aqua.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 8,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 1,
+      "orientation": "Down",
+      "spriteFile": "ow_0143_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 352,
+        "y": 320,
+        "targetPng": "0329 - S.S. Aqua.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 14,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 1,
+      "orientation": "Left",
+      "spriteFile": "ow_0144_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 544,
+        "y": 336,
+        "targetPng": "0329 - S.S. Aqua.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 26,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 1,
+      "orientation": "Right",
+      "spriteFile": "ow_0140_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 592,
+        "y": 256,
+        "targetPng": "0329 - S.S. Aqua.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 29,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 1,
+      "orientation": "Right",
+      "spriteFile": "ow_0144_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 288,
+        "y": 400,
+        "targetPng": "0329 - S.S. Aqua.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 10,
+        "yMap": 17,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 1,
+      "orientation": "Down",
+      "spriteFile": "ow_0067_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 624,
+        "y": 224,
+        "targetPng": "0329 - S.S. Aqua.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 31,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 1,
+      "orientation": "Right",
+      "spriteFile": "ow_0067_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 624,
+        "y": 288,
+        "targetPng": "0329 - S.S. Aqua.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 31,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 1,
+      "orientation": "Left",
+      "spriteFile": "ow_0127_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 688,
+        "y": 256,
+        "targetPng": "0329 - S.S. Aqua.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

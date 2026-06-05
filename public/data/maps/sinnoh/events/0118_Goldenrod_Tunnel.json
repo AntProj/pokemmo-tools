@@ -1,0 +1,127 @@
+{
+  "zoneId": 118,
+  "displayName": "Goldenrod Tunnel",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 96,
+      "pixelY": 152,
+      "worldX": 80,
+      "worldZ": 144,
+      "destinationZoneId": 76,
+      "destinationName": "Goldenrod City",
+      "destinationPixelX": 952,
+      "destinationPixelY": 260,
+      "anchor": 10
+    },
+    {
+      "id": "w1",
+      "pixelX": 96,
+      "pixelY": 488,
+      "worldX": 80,
+      "worldZ": 480,
+      "destinationZoneId": 76,
+      "destinationName": "Goldenrod City",
+      "destinationPixelX": 952,
+      "destinationPixelY": 900,
+      "anchor": 11
+    },
+    {
+      "id": "w2",
+      "pixelX": 144,
+      "pixelY": 56,
+      "worldX": 128,
+      "worldZ": 48,
+      "destinationZoneId": 199,
+      "destinationName": "Goldenrod Tunnel",
+      "destinationPixelX": 168,
+      "destinationPixelY": 144,
+      "anchor": 5
+    },
+    {
+      "id": "w3",
+      "pixelX": 144,
+      "pixelY": 392,
+      "worldX": 128,
+      "worldZ": 384,
+      "destinationZoneId": 199,
+      "destinationName": "Goldenrod Tunnel",
+      "destinationPixelX": 168,
+      "destinationPixelY": 656,
+      "anchor": 6
+    },
+    {
+      "id": "w4",
+      "pixelX": 416,
+      "pixelY": 152,
+      "worldX": 400,
+      "worldZ": 144,
+      "destinationZoneId": 199,
+      "destinationName": "Goldenrod Tunnel",
+      "destinationPixelX": 504,
+      "destinationPixelY": 560,
+      "anchor": 4
+    },
+    {
+      "id": "w5",
+      "pixelX": 416,
+      "pixelY": 56,
+      "worldX": 400,
+      "worldZ": 48,
+      "destinationZoneId": 201,
+      "destinationName": "Goldenrod City",
+      "destinationPixelX": 480,
+      "destinationPixelY": 80,
+      "anchor": 0
+    },
+    {
+      "id": "w6",
+      "pixelX": 144,
+      "pixelY": 72,
+      "worldX": 128,
+      "worldZ": 64,
+      "destinationZoneId": 199,
+      "destinationName": "Goldenrod Tunnel",
+      "destinationPixelX": 168,
+      "destinationPixelY": 144,
+      "anchor": 5
+    },
+    {
+      "id": "w7",
+      "pixelX": 144,
+      "pixelY": 88,
+      "worldX": 128,
+      "worldZ": 80,
+      "destinationZoneId": 199,
+      "destinationName": "Goldenrod Tunnel",
+      "destinationPixelX": 168,
+      "destinationPixelY": 144,
+      "anchor": 5
+    },
+    {
+      "id": "w8",
+      "pixelX": 144,
+      "pixelY": 408,
+      "worldX": 128,
+      "worldZ": 400,
+      "destinationZoneId": 199,
+      "destinationName": "Goldenrod Tunnel",
+      "destinationPixelX": 168,
+      "destinationPixelY": 656,
+      "anchor": 6
+    },
+    {
+      "id": "w9",
+      "pixelX": 144,
+      "pixelY": 424,
+      "worldX": 128,
+      "worldZ": 416,
+      "destinationZoneId": 199,
+      "destinationName": "Goldenrod Tunnel",
+      "destinationPixelX": 168,
+      "destinationPixelY": 656,
+      "anchor": 6
+    }
+  ],
+  "trainers": []
+}

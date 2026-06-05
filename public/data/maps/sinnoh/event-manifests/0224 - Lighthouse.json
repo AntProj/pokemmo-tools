@@ -1,0 +1,86 @@
+{
+  "header": {
+    "id": 224,
+    "name": "Lighthouse",
+    "mapName": "0224 - Lighthouse",
+    "matrixId": 52
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 1,
+      "orientation": "Left",
+      "spriteFile": "ow_0144_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 151,
+        "y": 175,
+        "targetPng": "0224 - Lighthouse.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 1,
+      "orientation": "Down",
+      "spriteFile": "ow_0144_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 263,
+        "y": 143,
+        "targetPng": "0224 - Lighthouse.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 13,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 231,
+        "y": 79,
+        "targetPng": "0224 - Lighthouse.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 11,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0126_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 87,
+        "y": 255,
+        "targetPng": "0224 - Lighthouse.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 2,
+        "yMap": 14,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "zoneId": 139,
+  "displayName": "Cianwood City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 312,
+      "pixelY": 340,
+      "worldX": 208,
+      "worldZ": 304,
+      "destinationZoneId": 75,
+      "destinationName": "Cianwood City",
+      "destinationPixelX": 296,
+      "destinationPixelY": 600,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t1",
+      "trainerInstanceId": 250,
+      "pixelX": 200,
+      "pixelY": 188,
+      "trainerId": 156,
+      "trainerName": "Yoshi",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3155,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 251,
+      "pixelX": 392,
+      "pixelY": 156,
+      "trainerId": 157,
+      "trainerName": "Lao",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3156,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 252,
+      "pixelX": 216,
+      "pixelY": 124,
+      "trainerId": 251,
+      "trainerName": "Nob",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3250,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 253,
+      "pixelX": 344,
+      "pixelY": 92,
+      "trainerId": 159,
+      "trainerName": "Lung",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3158,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

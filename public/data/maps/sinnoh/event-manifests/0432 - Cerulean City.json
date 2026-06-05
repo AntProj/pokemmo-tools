@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 432,
+    "name": "Cerulean City",
+    "mapName": "0432 - Cerulean City",
+    "matrixId": 274
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0126_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 48,
+        "y": 80,
+        "targetPng": "0432 - Cerulean City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 2,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

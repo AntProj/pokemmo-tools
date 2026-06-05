@@ -1,0 +1,31 @@
+{
+  "zoneId": 482,
+  "displayName": "Fuchsia City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 152,
+      "pixelY": 312,
+      "worldX": 128,
+      "worldZ": 304,
+      "destinationZoneId": 56,
+      "destinationName": "Fuchsia City",
+      "destinationPixelX": 424,
+      "destinationPixelY": 904,
+      "anchor": 9
+    },
+    {
+      "id": "w1",
+      "pixelX": 248,
+      "pixelY": 280,
+      "worldX": 224,
+      "worldZ": 272,
+      "destinationZoneId": 485,
+      "destinationName": "Fuchsia City",
+      "destinationPixelX": 248,
+      "destinationPixelY": 168,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,91 @@
+{
+  "zoneId": 463,
+  "displayName": "Mt. Silver Cave",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 472,
+      "pixelY": 379,
+      "worldX": 320,
+      "worldZ": 352,
+      "destinationZoneId": 122,
+      "destinationName": "Mt. Silver Cave",
+      "destinationPixelX": 635,
+      "destinationPixelY": 152,
+      "anchor": 6
+    },
+    {
+      "id": "w1",
+      "pixelX": 472,
+      "pixelY": 43,
+      "worldX": 320,
+      "worldZ": 16,
+      "destinationZoneId": 459,
+      "destinationName": "Mt. Silver Cave",
+      "destinationPixelX": 408,
+      "destinationPixelY": 456,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 760,
+      "pixelY": 155,
+      "worldX": 608,
+      "worldZ": 128,
+      "destinationZoneId": 459,
+      "destinationName": "Mt. Silver Cave",
+      "destinationPixelX": 648,
+      "destinationPixelY": 568,
+      "anchor": 1
+    },
+    {
+      "id": "w3",
+      "pixelX": 760,
+      "pixelY": 347,
+      "worldX": 608,
+      "worldZ": 320,
+      "destinationZoneId": 459,
+      "destinationName": "Mt. Silver Cave",
+      "destinationPixelX": 648,
+      "destinationPixelY": 760,
+      "anchor": 2
+    },
+    {
+      "id": "w4",
+      "pixelX": 760,
+      "pixelY": 539,
+      "worldX": 608,
+      "worldZ": 512,
+      "destinationZoneId": 459,
+      "destinationName": "Mt. Silver Cave",
+      "destinationPixelX": 648,
+      "destinationPixelY": 952,
+      "anchor": 3
+    },
+    {
+      "id": "w5",
+      "pixelX": 696,
+      "pixelY": 635,
+      "worldX": 544,
+      "worldZ": 608,
+      "destinationZoneId": 459,
+      "destinationName": "Mt. Silver Cave",
+      "destinationPixelX": 536,
+      "destinationPixelY": 1080,
+      "anchor": 4
+    },
+    {
+      "id": "w6",
+      "pixelX": 472,
+      "pixelY": 635,
+      "worldX": 320,
+      "worldZ": 608,
+      "destinationZoneId": 459,
+      "destinationName": "Mt. Silver Cave",
+      "destinationPixelX": 312,
+      "destinationPixelY": 1080,
+      "anchor": 5
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,19 @@
+{
+  "zoneId": 362,
+  "displayName": "Vermilion City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 240,
+      "pixelY": 312,
+      "worldX": 112,
+      "worldZ": 192,
+      "destinationZoneId": 54,
+      "destinationName": "Vermilion City",
+      "destinationPixelX": 216,
+      "destinationPixelY": 360,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

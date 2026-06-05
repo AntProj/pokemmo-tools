@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 477,
+    "name": "Pewter City",
+    "mapName": "0477 - Pewter City",
+    "matrixId": 66
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0128_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 168,
+        "y": 96,
+        "targetPng": "0477 - Pewter City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 8,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

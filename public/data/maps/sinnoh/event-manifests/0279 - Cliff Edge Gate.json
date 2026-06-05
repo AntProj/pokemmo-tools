@@ -1,0 +1,86 @@
+{
+  "header": {
+    "id": 279,
+    "name": "Cliff Edge Gate",
+    "mapName": "0279 - Cliff Edge Gate",
+    "matrixId": 152
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0041_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 488,
+        "y": 352,
+        "targetPng": "0279 - Cliff Edge Gate.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 30,
+        "yMap": 21,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0041_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 488,
+        "y": 368,
+        "targetPng": "0279 - Cliff Edge Gate.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 30,
+        "yMap": 22,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0127_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 552,
+        "y": 320,
+        "targetPng": "0279 - Cliff Edge Gate.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 2,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0150_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 568,
+        "y": 352,
+        "targetPng": "0279 - Cliff Edge Gate.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 21,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

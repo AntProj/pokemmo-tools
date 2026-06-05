@@ -1,0 +1,84 @@
+{
+  "zoneId": 311,
+  "displayName": "S.S. Aqua",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 272,
+      "pixelY": 280,
+      "worldX": 144,
+      "worldZ": 176,
+      "destinationZoneId": 307,
+      "destinationName": "S.S. Aqua",
+      "destinationPixelX": 608,
+      "destinationPixelY": 232,
+      "anchor": 7
+    },
+    {
+      "id": "w1",
+      "pixelX": 496,
+      "pixelY": 280,
+      "worldX": 368,
+      "worldZ": 176,
+      "destinationZoneId": 307,
+      "destinationName": "S.S. Aqua",
+      "destinationPixelX": 704,
+      "destinationPixelY": 232,
+      "anchor": 8
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 349,
+      "pixelX": 512,
+      "pixelY": 208,
+      "trainerId": 399,
+      "trainerName": "Lyle",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3398,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 350,
+      "pixelX": 272,
+      "pixelY": 208,
+      "trainerId": 209,
+      "trainerName": "Cassie",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3208,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 351,
+      "pixelX": 240,
+      "pixelY": 208,
+      "trainerId": 41,
+      "trainerName": "Clyde",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3040,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 352,
+      "pixelX": 432,
+      "pixelY": 224,
+      "trainerId": 79,
+      "trainerName": "Ken",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3078,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

@@ -1,0 +1,371 @@
+{
+  "header": {
+    "id": 282,
+    "name": "Pok\u00E9athlon Dome",
+    "mapName": "0282 - Pok\u00E9athlon Dome",
+    "matrixId": 155
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0188_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 616,
+        "y": 344,
+        "targetPng": "0282 - Pok\u00E9athlon Dome.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0360_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 632,
+        "y": 344,
+        "targetPng": "0282 - Pok\u00E9athlon Dome.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 7,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0189_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 424,
+        "y": 344,
+        "targetPng": "0282 - Pok\u00E9athlon Dome.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 26,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0120_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 232,
+        "y": 376,
+        "targetPng": "0282 - Pok\u00E9athlon Dome.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 14,
+        "yMap": 14,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0115_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 232,
+        "y": 328,
+        "targetPng": "0282 - Pok\u00E9athlon Dome.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 14,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0114_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 360,
+        "y": 328,
+        "targetPng": "0282 - Pok\u00E9athlon Dome.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 22,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0117_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 264,
+        "y": 328,
+        "targetPng": "0282 - Pok\u00E9athlon Dome.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 16,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0124_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 312,
+        "y": 328,
+        "targetPng": "0282 - Pok\u00E9athlon Dome.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 19,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0127_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 328,
+        "y": 360,
+        "targetPng": "0282 - Pok\u00E9athlon Dome.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 20,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0114_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 376,
+        "y": 328,
+        "targetPng": "0282 - Pok\u00E9athlon Dome.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 23,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0129_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 472,
+        "y": 344,
+        "targetPng": "0282 - Pok\u00E9athlon Dome.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 29,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0128_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 488,
+        "y": 344,
+        "targetPng": "0282 - Pok\u00E9athlon Dome.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 30,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 12,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0067_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 520,
+        "y": 328,
+        "targetPng": "0282 - Pok\u00E9athlon Dome.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 0,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 13,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0126_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 168,
+        "y": 344,
+        "targetPng": "0282 - Pok\u00E9athlon Dome.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 10,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 14,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0113_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 184,
+        "y": 344,
+        "targetPng": "0282 - Pok\u00E9athlon Dome.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 11,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 15,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0316_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 216,
+        "y": 328,
+        "targetPng": "0282 - Pok\u00E9athlon Dome.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 13,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 16,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0309_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 280,
+        "y": 328,
+        "targetPng": "0282 - Pok\u00E9athlon Dome.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 17,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 17,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0364_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 312,
+        "y": 360,
+        "targetPng": "0282 - Pok\u00E9athlon Dome.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 19,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 18,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0122_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 440,
+        "y": 376,
+        "targetPng": "0282 - Pok\u00E9athlon Dome.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 27,
+        "yMap": 14,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

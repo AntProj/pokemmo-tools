@@ -1,0 +1,31 @@
+{
+  "zoneId": 464,
+  "displayName": "Mt. Silver Cave",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 696,
+      "pixelY": 376,
+      "worldX": 544,
+      "worldZ": 288,
+      "destinationZoneId": 459,
+      "destinationName": "Mt. Silver Cave",
+      "destinationPixelX": 248,
+      "destinationPixelY": 888,
+      "anchor": 6
+    },
+    {
+      "id": "w1",
+      "pixelX": 360,
+      "pixelY": 104,
+      "worldX": 208,
+      "worldZ": 16,
+      "destinationZoneId": 465,
+      "destinationName": "Mt. Silver Cave",
+      "destinationPixelX": 488,
+      "destinationPixelY": 1044,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

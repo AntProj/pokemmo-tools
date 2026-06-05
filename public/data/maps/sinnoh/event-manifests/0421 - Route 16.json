@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 421,
+    "name": "Route 16",
+    "mapName": "0421 - Route 16",
+    "matrixId": 70
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0193_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 96,
+        "y": 80,
+        "targetPng": "0421 - Route 16.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "zoneId": 216,
+  "displayName": "Ecruteak City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 72,
+      "pixelY": 312,
+      "worldX": 48,
+      "worldZ": 304,
+      "destinationZoneId": 83,
+      "destinationName": "Ecruteak City",
+      "destinationPixelX": 266,
+      "destinationPixelY": 56,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 120,
+      "pixelY": 56,
+      "worldX": 96,
+      "worldZ": 48,
+      "destinationZoneId": 6,
+      "destinationName": "Bellchime Trail",
+      "destinationPixelX": 162,
+      "destinationPixelY": 408,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

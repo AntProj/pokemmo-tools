@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 122,
+    "name": "Mt. Silver Cave",
+    "mapName": "0122 - Mt. Silver Cave",
+    "matrixId": 265
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 987,
+        "y": 256,
+        "targetPng": "0122 - Mt. Silver Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 22,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0126_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 315,
+        "y": 656,
+        "targetPng": "0122 - Mt. Silver Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 12,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "zoneId": 49,
+  "displayName": "Pallet Town",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 152,
+      "pixelY": 200,
+      "worldX": 16528,
+      "worldZ": 5808,
+      "destinationZoneId": 503,
+      "destinationName": "Pallet Town",
+      "destinationPixelX": 120,
+      "destinationPixelY": 168,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 328,
+      "pixelY": 200,
+      "worldX": 16704,
+      "worldZ": 5808,
+      "destinationZoneId": 504,
+      "destinationName": "Pallet Town",
+      "destinationPixelX": 120,
+      "destinationPixelY": 168,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 344,
+      "pixelY": 360,
+      "worldX": 16720,
+      "worldZ": 5968,
+      "destinationZoneId": 505,
+      "destinationName": "Pallet Town",
+      "destinationPixelX": 168,
+      "destinationPixelY": 216,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,19 @@
+{
+  "zoneId": 440,
+  "displayName": "Route 25",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 232,
+      "pixelY": 280,
+      "worldX": 112,
+      "worldZ": 176,
+      "destinationZoneId": 29,
+      "destinationName": "Route 25",
+      "destinationPixelX": 1528,
+      "destinationPixelY": 104,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

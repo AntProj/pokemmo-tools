@@ -1,0 +1,105 @@
+{
+  "header": {
+    "id": 374,
+    "name": "Celadon City",
+    "mapName": "0374 - Celadon City",
+    "matrixId": 219
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0132_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 360,
+        "y": 176,
+        "targetPng": "0374 - Celadon City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 19,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0132_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 328,
+        "y": 176,
+        "targetPng": "0374 - Celadon City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 17,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0137_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 280,
+        "y": 96,
+        "targetPng": "0374 - Celadon City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 14,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0144_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 200,
+        "y": 192,
+        "targetPng": "0374 - Celadon City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 9,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0123_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 72,
+        "y": 128,
+        "targetPng": "0374 - Celadon City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 1,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

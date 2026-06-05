@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 436,
+    "name": "Lavender Town",
+    "mapName": "0436 - Lavender Town",
+    "matrixId": 96
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0127_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 96,
+        "targetPng": "0436 - Lavender Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

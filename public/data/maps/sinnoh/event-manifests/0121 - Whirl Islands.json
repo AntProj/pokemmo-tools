@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 121,
+    "name": "Whirl Islands",
+    "mapName": "0121 - Whirl Islands",
+    "matrixId": 141
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 392,
+        "y": 768,
+        "targetPng": "0121 - Whirl Islands.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 22,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 808,
+        "y": 352,
+        "targetPng": "0121 - Whirl Islands.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 16,
+        "yMap": 21,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

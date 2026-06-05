@@ -1,0 +1,31 @@
+{
+  "zoneId": 528,
+  "displayName": "Frontier Access",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 152,
+      "pixelY": 312,
+      "worldX": 128,
+      "worldZ": 304,
+      "destinationZoneId": 411,
+      "destinationName": "Frontier Access",
+      "destinationPixelX": 392,
+      "destinationPixelY": 271,
+      "anchor": 4
+    },
+    {
+      "id": "w1",
+      "pixelX": 248,
+      "pixelY": 280,
+      "worldX": 224,
+      "worldZ": 272,
+      "destinationZoneId": 529,
+      "destinationName": "Frontier Access",
+      "destinationPixelX": 248,
+      "destinationPixelY": 168,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

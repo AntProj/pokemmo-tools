@@ -1,0 +1,111 @@
+{
+  "zoneId": 22,
+  "displayName": "Route 14",
+  "warps": [],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 65,
+      "pixelX": 296,
+      "pixelY": 272,
+      "trainerId": 351,
+      "trainerName": "Trevor",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3350,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 66,
+      "pixelX": 120,
+      "pixelY": 368,
+      "trainerId": 564,
+      "trainerName": "Clarice",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3563,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 67,
+      "pixelX": 168,
+      "pixelY": 784,
+      "trainerId": 300,
+      "trainerName": "Roy",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3299,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 68,
+      "pixelX": 264,
+      "pixelY": 624,
+      "trainerId": 350,
+      "trainerName": "Carter",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3349,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 69,
+      "pixelX": 184,
+      "pixelY": 208,
+      "trainerId": 565,
+      "trainerName": "Josh",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3564,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 70,
+      "pixelX": 40,
+      "pixelY": 368,
+      "trainerId": 567,
+      "trainerName": "Torin",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3566,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t6",
+      "trainerInstanceId": 71,
+      "pixelX": 40,
+      "pixelY": 416,
+      "trainerId": 566,
+      "trainerName": "Connor",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3565,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t7",
+      "trainerInstanceId": 72,
+      "pixelX": 40,
+      "pixelY": 320,
+      "trainerId": 568,
+      "trainerName": "Travis",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3567,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

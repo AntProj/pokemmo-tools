@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 115,
+    "name": "Lighthouse",
+    "mapName": "0115 - Lighthouse",
+    "matrixId": 47
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0127_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 168,
+        "y": 208,
+        "targetPng": "0115 - Lighthouse.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 9,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0144_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 88,
+        "y": 96,
+        "targetPng": "0115 - Lighthouse.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 4,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

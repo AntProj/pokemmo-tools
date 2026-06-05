@@ -1,0 +1,19 @@
+{
+  "zoneId": 536,
+  "displayName": "Goldenrod City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 232,
+      "pixelY": 288,
+      "worldX": 112,
+      "worldZ": 192,
+      "destinationZoneId": 76,
+      "destinationName": "Goldenrod City",
+      "destinationPixelX": 1016,
+      "destinationPixelY": 676,
+      "anchor": 6
+    }
+  ],
+  "trainers": []
+}

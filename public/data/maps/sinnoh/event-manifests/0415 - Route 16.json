@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 415,
+    "name": "Route 16",
+    "mapName": "0415 - Route 16",
+    "matrixId": 66
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0120_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 96,
+        "targetPng": "0415 - Route 16.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0128_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 168,
+        "y": 96,
+        "targetPng": "0415 - Route 16.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 8,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

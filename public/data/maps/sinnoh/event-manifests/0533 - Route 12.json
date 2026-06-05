@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 533,
+    "name": "Route 12",
+    "mapName": "0533 - Route 12",
+    "matrixId": 66
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0143_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 96,
+        "targetPng": "0533 - Route 12.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

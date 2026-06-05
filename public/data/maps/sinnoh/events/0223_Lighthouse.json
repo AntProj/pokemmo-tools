@@ -1,0 +1,82 @@
+{
+  "zoneId": 223,
+  "displayName": "Lighthouse",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 215,
+      "pixelY": 135,
+      "worldX": 160,
+      "worldZ": 112,
+      "destinationZoneId": 222,
+      "destinationName": "Lighthouse",
+      "destinationPixelX": 215,
+      "destinationPixelY": 135,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 151,
+      "pixelY": 135,
+      "worldX": 96,
+      "worldZ": 112,
+      "destinationZoneId": 222,
+      "destinationName": "Lighthouse",
+      "destinationPixelX": 151,
+      "destinationPixelY": 135,
+      "anchor": 3
+    },
+    {
+      "id": "w2",
+      "pixelX": 103,
+      "pixelY": 103,
+      "worldX": 48,
+      "worldZ": 80,
+      "destinationZoneId": 224,
+      "destinationName": "Lighthouse",
+      "destinationPixelX": 119,
+      "destinationPixelY": 103,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 103,
+      "pixelY": 87,
+      "worldX": 48,
+      "worldZ": 64,
+      "destinationZoneId": 224,
+      "destinationName": "Lighthouse",
+      "destinationPixelX": 119,
+      "destinationPixelY": 103,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 323,
+      "pixelX": 199,
+      "pixelY": 239,
+      "trainerId": 215,
+      "trainerName": "Connie",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3214,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 324,
+      "pixelX": 279,
+      "pixelY": 127,
+      "trainerId": 37,
+      "trainerName": "Preston",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3036,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

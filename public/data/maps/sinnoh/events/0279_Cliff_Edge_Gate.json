@@ -1,0 +1,31 @@
+{
+  "zoneId": 279,
+  "displayName": "Cliff Edge Gate",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 648,
+      "pixelY": 360,
+      "worldX": 640,
+      "worldZ": 352,
+      "destinationZoneId": 75,
+      "destinationName": "Cianwood City",
+      "destinationPixelX": 280,
+      "destinationPixelY": 440,
+      "anchor": 6
+    },
+    {
+      "id": "w1",
+      "pixelX": 296,
+      "pixelY": 744,
+      "worldX": 288,
+      "worldZ": 736,
+      "destinationZoneId": 151,
+      "destinationName": "Route 47",
+      "destinationPixelX": 1368,
+      "destinationPixelY": 536,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

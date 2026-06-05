@@ -1,0 +1,43 @@
+{
+  "zoneId": 275,
+  "displayName": "Battle Factory",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 24,
+      "pixelY": 120,
+      "worldX": 16,
+      "worldZ": 112,
+      "destinationZoneId": 272,
+      "destinationName": "Battle Frontier",
+      "destinationPixelX": 1176,
+      "destinationPixelY": 560,
+      "anchor": 12
+    },
+    {
+      "id": "w1",
+      "pixelX": 24,
+      "pixelY": 104,
+      "worldX": 16,
+      "worldZ": 96,
+      "destinationZoneId": 272,
+      "destinationName": "Battle Frontier",
+      "destinationPixelX": 1176,
+      "destinationPixelY": 560,
+      "anchor": 12
+    },
+    {
+      "id": "w2",
+      "pixelX": 24,
+      "pixelY": 136,
+      "worldX": 16,
+      "worldZ": 128,
+      "destinationZoneId": 272,
+      "destinationName": "Battle Frontier",
+      "destinationPixelX": 1176,
+      "destinationPixelY": 560,
+      "anchor": 12
+    }
+  ],
+  "trainers": []
+}

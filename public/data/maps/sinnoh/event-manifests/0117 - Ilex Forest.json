@@ -1,0 +1,352 @@
+{
+  "header": {
+    "id": 117,
+    "name": "Ilex Forest",
+    "mapName": "0117 - Ilex Forest",
+    "matrixId": 56
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0381_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 408,
+        "y": 1024,
+        "targetPng": "0117 - Ilex Forest.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 25,
+        "yMap": 30,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0130_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 584,
+        "y": 624,
+        "targetPng": "0117 - Ilex Forest.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 4,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0381_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 664,
+        "y": 896,
+        "targetPng": "0117 - Ilex Forest.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 9,
+        "yMap": 22,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0067_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 248,
+        "y": 1056,
+        "targetPng": "0117 - Ilex Forest.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 2,
+        "xMap": 15,
+        "yMap": 0,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0140_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 184,
+        "y": 1232,
+        "targetPng": "0117 - Ilex Forest.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 2,
+        "xMap": 11,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0093_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 264,
+        "y": 1024,
+        "targetPng": "0117 - Ilex Forest.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 16,
+        "yMap": 30,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 680,
+        "y": 1200,
+        "targetPng": "0117 - Ilex Forest.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 2,
+        "xMap": 10,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 440,
+        "y": 704,
+        "targetPng": "0117 - Ilex Forest.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 27,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 328,
+        "y": 512,
+        "targetPng": "0117 - Ilex Forest.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 20,
+        "yMap": 30,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 760,
+        "y": 288,
+        "targetPng": "0117 - Ilex Forest.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 15,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0381_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 232,
+        "y": 1056,
+        "targetPng": "0117 - Ilex Forest.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 2,
+        "xMap": 14,
+        "yMap": 0,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0381_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 216,
+        "y": 1056,
+        "targetPng": "0117 - Ilex Forest.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 2,
+        "xMap": 13,
+        "yMap": 0,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 12,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0180_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 616,
+        "y": 288,
+        "targetPng": "0117 - Ilex Forest.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 13,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0126_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 184,
+        "y": 416,
+        "targetPng": "0117 - Ilex Forest.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 11,
+        "yMap": 24,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 14,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0472_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 264,
+        "y": 864,
+        "targetPng": "0117 - Ilex Forest.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 16,
+        "yMap": 20,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 15,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0128_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 184,
+        "y": 800,
+        "targetPng": "0117 - Ilex Forest.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 11,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 16,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_3d_dawn_platinum.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 168,
+        "y": 768,
+        "targetPng": "0117 - Ilex Forest.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 10,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 17,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0483_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 168,
+        "y": 768,
+        "targetPng": "0117 - Ilex Forest.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 10,
+        "yMap": 14,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "header": {
+    "id": 499,
+    "name": "Viridian City",
+    "mapName": "0499 - Viridian City",
+    "matrixId": 245
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0212_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 208,
+        "y": 176,
+        "targetPng": "0499 - Viridian City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0122_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 256,
+        "y": 288,
+        "targetPng": "0499 - Viridian City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 8,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_3d_overworld.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 192,
+        "y": 256,
+        "targetPng": "0499 - Viridian City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 4,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_3d_overworld.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 320,
+        "y": 240,
+        "targetPng": "0499 - Viridian City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 12,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_overworld.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 192,
+        "y": 336,
+        "targetPng": "0499 - Viridian City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 4,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_overworld.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 304,
+        "y": 304,
+        "targetPng": "0499 - Viridian City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 11,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_3d_overworld.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 272,
+        "y": 224,
+        "targetPng": "0499 - Viridian City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 9,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_3d_overworld.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 160,
+        "y": 304,
+        "targetPng": "0499 - Viridian City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 2,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_overworld.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 272,
+        "y": 336,
+        "targetPng": "0499 - Viridian City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 9,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_3d_overworld.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 176,
+        "y": 208,
+        "targetPng": "0499 - Viridian City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_3d_overworld.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 224,
+        "y": 304,
+        "targetPng": "0499 - Viridian City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_3d_overworld.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 224,
+        "y": 240,
+        "targetPng": "0499 - Viridian City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

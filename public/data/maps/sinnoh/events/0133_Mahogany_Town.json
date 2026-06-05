@@ -1,0 +1,19 @@
+{
+  "zoneId": 133,
+  "displayName": "Mahogany Town",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 104,
+      "pixelY": 136,
+      "worldX": 64,
+      "worldZ": 128,
+      "destinationZoneId": 87,
+      "destinationName": "Mahogany Town",
+      "destinationPixelX": 504,
+      "destinationPixelY": 252,
+      "anchor": 4
+    }
+  ],
+  "trainers": []
+}

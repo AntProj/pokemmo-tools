@@ -1,0 +1,57 @@
+{
+  "zoneId": 35,
+  "displayName": "Route 31",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 116,
+      "pixelY": 232,
+      "worldX": 8288,
+      "worldZ": 4304,
+      "destinationZoneId": 97,
+      "destinationName": "Route 31",
+      "destinationPixelX": 176,
+      "destinationPixelY": 120,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 116,
+      "pixelY": 248,
+      "worldX": 8288,
+      "worldZ": 4320,
+      "destinationZoneId": 97,
+      "destinationName": "Route 31",
+      "destinationPixelX": 176,
+      "destinationPixelY": 120,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 868,
+      "pixelY": 232,
+      "worldX": 9040,
+      "worldZ": 4304,
+      "destinationZoneId": 176,
+      "destinationName": "Dark Cave",
+      "destinationPixelX": 104,
+      "destinationPixelY": 440,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t5",
+      "trainerInstanceId": 118,
+      "pixelX": 468,
+      "pixelY": 400,
+      "trainerId": 4,
+      "trainerName": "Wade",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3003,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

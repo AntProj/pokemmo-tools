@@ -1,0 +1,67 @@
+{
+  "header": {
+    "id": 28,
+    "name": "Route 24",
+    "mapName": "0028 - Route 24",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0120_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 216,
+        "y": 276,
+        "targetPng": "0028 - Route 24.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 41,
+        "yMatrix": 2,
+        "xMap": 13,
+        "yMap": 16,
+        "zPositionRaw": 196608
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0124_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 216,
+        "y": 292,
+        "targetPng": "0028 - Route 24.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 41,
+        "yMatrix": 2,
+        "xMap": 13,
+        "yMap": 17,
+        "zPositionRaw": 196608
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0174_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 264,
+        "y": 292,
+        "targetPng": "0028 - Route 24.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 41,
+        "yMatrix": 2,
+        "xMap": 16,
+        "yMap": 17,
+        "zPositionRaw": 196608
+      }
+    }
+  ]
+}

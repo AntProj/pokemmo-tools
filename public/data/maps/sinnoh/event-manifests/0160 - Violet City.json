@@ -1,0 +1,67 @@
+{
+  "header": {
+    "id": 160,
+    "name": "Violet City",
+    "mapName": "0160 - Violet City",
+    "matrixId": 95
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0123_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 96,
+        "targetPng": "0160 - Violet City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0117_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 152,
+        "y": 64,
+        "targetPng": "0160 - Violet City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 7,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0313_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 64,
+        "targetPng": "0160 - Violet City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

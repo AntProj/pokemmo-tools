@@ -1,0 +1,162 @@
+{
+  "header": {
+    "id": 50,
+    "name": "Viridian City",
+    "mapName": "0050 - Viridian City",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0128_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 856,
+        "y": 288,
+        "targetPng": "0050 - Viridian City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 32,
+        "yMatrix": 7,
+        "xMap": 21,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0128_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 584,
+        "y": 208,
+        "targetPng": "0050 - Viridian City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 32,
+        "yMatrix": 7,
+        "xMap": 4,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0130_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 264,
+        "y": 672,
+        "targetPng": "0050 - Viridian City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 31,
+        "yMatrix": 8,
+        "xMap": 16,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0067_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 568,
+        "y": 528,
+        "targetPng": "0050 - Viridian City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 32,
+        "yMatrix": 7,
+        "xMap": 3,
+        "yMap": 31,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0093_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 440,
+        "y": 208,
+        "targetPng": "0050 - Viridian City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 31,
+        "yMatrix": 7,
+        "xMap": 27,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0093_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 360,
+        "y": 624,
+        "targetPng": "0050 - Viridian City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 31,
+        "yMatrix": 8,
+        "xMap": 22,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0126_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 728,
+        "y": 608,
+        "targetPng": "0050 - Viridian City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 32,
+        "yMatrix": 8,
+        "xMap": 13,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0128_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 888,
+        "y": 288,
+        "targetPng": "0050 - Viridian City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 32,
+        "yMatrix": 7,
+        "xMap": 23,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

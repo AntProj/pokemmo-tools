@@ -1,0 +1,105 @@
+{
+  "header": {
+    "id": 288,
+    "name": "Dragon\u2019s Den",
+    "mapName": "0288 - Dragon\u2019s Den",
+    "matrixId": 149
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0227_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 104,
+        "y": 160,
+        "targetPng": "0288 - Dragon\u2019s Den.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0128_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 56,
+        "y": 224,
+        "targetPng": "0288 - Dragon\u2019s Den.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0128_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 152,
+        "y": 224,
+        "targetPng": "0288 - Dragon\u2019s Den.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 9,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0153_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 24,
+        "y": 32,
+        "targetPng": "0288 - Dragon\u2019s Den.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 1,
+        "yMap": 1,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0126_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 88,
+        "y": 240,
+        "targetPng": "0288 - Dragon\u2019s Den.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 14,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

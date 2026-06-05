@@ -1,0 +1,134 @@
+{
+  "zoneId": 30,
+  "displayName": "Route 26",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 440,
+      "pixelY": 920,
+      "worldX": 14768,
+      "worldZ": 5520,
+      "destinationZoneId": 296,
+      "destinationName": "Route 26",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 184,
+      "pixelY": 1240,
+      "worldX": 14512,
+      "worldZ": 5840,
+      "destinationZoneId": 297,
+      "destinationName": "Route 26",
+      "destinationPixelX": 152,
+      "destinationPixelY": 232,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 216,
+      "pixelY": 136,
+      "worldX": 14544,
+      "worldZ": 4736,
+      "destinationZoneId": 299,
+      "destinationName": "Route 26",
+      "destinationPixelX": 184,
+      "destinationPixelY": 376,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 232,
+      "pixelY": 136,
+      "worldX": 14560,
+      "worldZ": 4736,
+      "destinationZoneId": 299,
+      "destinationName": "Route 26",
+      "destinationPixelX": 184,
+      "destinationPixelY": 376,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 103,
+      "pixelX": 280,
+      "pixelY": 1856,
+      "trainerId": 413,
+      "trainerName": "Scott",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3412,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 104,
+      "pixelX": 440,
+      "pixelY": 1392,
+      "trainerId": 411,
+      "trainerName": "Vernon",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3410,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 105,
+      "pixelX": 344,
+      "pixelY": 912,
+      "trainerId": 36,
+      "trainerName": "Joyce",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3035,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 106,
+      "pixelX": 488,
+      "pixelY": 688,
+      "trainerId": 102,
+      "trainerName": "Gaven",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3101,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 107,
+      "pixelX": 408,
+      "pixelY": 560,
+      "trainerId": 28,
+      "trainerName": "Jake",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3027,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 108,
+      "pixelX": 280,
+      "pixelY": 240,
+      "trainerId": 113,
+      "trainerName": "Jamie",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3112,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

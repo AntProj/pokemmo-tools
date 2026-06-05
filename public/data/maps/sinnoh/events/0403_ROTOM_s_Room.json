@@ -1,0 +1,19 @@
+{
+  "zoneId": 403,
+  "displayName": "ROTOM’s Room",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 136,
+      "pixelY": 56,
+      "worldX": 112,
+      "worldZ": 32,
+      "destinationZoneId": 445,
+      "destinationName": "Saffron City",
+      "destinationPixelX": 88,
+      "destinationPixelY": 104,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

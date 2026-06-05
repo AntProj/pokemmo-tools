@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 107,
+    "name": "Mt. Moon",
+    "mapName": "0107 - Mt. Moon",
+    "matrixId": 3
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0058_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 184,
+        "y": 96,
+        "targetPng": "0107 - Mt. Moon.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 10,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 70,
+    "name": "Cherrygrove City",
+    "mapName": "0070 - Cherrygrove City",
+    "matrixId": 97
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0126_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 96,
+        "targetPng": "0070 - Cherrygrove City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0113_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 72,
+        "y": 80,
+        "targetPng": "0070 - Cherrygrove City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 2,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

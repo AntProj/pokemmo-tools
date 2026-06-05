@@ -1,0 +1,59 @@
+{
+  "zoneId": 365,
+  "displayName": "Vermilion City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 216,
+      "pixelY": 360,
+      "worldX": 96,
+      "worldZ": 352,
+      "destinationZoneId": 54,
+      "destinationName": "Vermilion City",
+      "destinationPixelX": 248,
+      "destinationPixelY": 520,
+      "anchor": 6
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t6",
+      "trainerInstanceId": 370,
+      "pixelX": 200,
+      "pixelY": 224,
+      "trainerId": 232,
+      "trainerName": "Vincent",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3231,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t7",
+      "trainerInstanceId": 371,
+      "pixelX": 168,
+      "pixelY": 272,
+      "trainerId": 396,
+      "trainerName": "Horton",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3395,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t8",
+      "trainerInstanceId": 372,
+      "pixelX": 280,
+      "pixelY": 240,
+      "trainerId": 337,
+      "trainerName": "Gregory",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3336,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

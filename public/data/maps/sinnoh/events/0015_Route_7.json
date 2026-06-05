@@ -1,0 +1,31 @@
+{
+  "zoneId": 15,
+  "displayName": "Route 7",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 424,
+      "pixelY": 280,
+      "worldX": 20368,
+      "worldZ": 3840,
+      "destinationZoneId": 493,
+      "destinationName": "Route 7",
+      "destinationPixelX": 32,
+      "destinationPixelY": 120,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 424,
+      "pixelY": 296,
+      "worldX": 20368,
+      "worldZ": 3856,
+      "destinationZoneId": 493,
+      "destinationName": "Route 7",
+      "destinationPixelX": 32,
+      "destinationPixelY": 120,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

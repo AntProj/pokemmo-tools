@@ -1,0 +1,95 @@
+{
+  "zoneId": 26,
+  "displayName": "Route 18",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 568,
+      "pixelY": 184,
+      "worldX": 18480,
+      "worldZ": 6816,
+      "destinationZoneId": 423,
+      "destinationName": "Route 18",
+      "destinationPixelX": 32,
+      "destinationPixelY": 120,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 568,
+      "pixelY": 200,
+      "worldX": 18480,
+      "worldZ": 6832,
+      "destinationZoneId": 423,
+      "destinationName": "Route 18",
+      "destinationPixelX": 32,
+      "destinationPixelY": 120,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 680,
+      "pixelY": 184,
+      "worldX": 18592,
+      "worldZ": 6816,
+      "destinationZoneId": 423,
+      "destinationName": "Route 18",
+      "destinationPixelX": 176,
+      "destinationPixelY": 120,
+      "anchor": 1
+    },
+    {
+      "id": "w3",
+      "pixelX": 680,
+      "pixelY": 200,
+      "worldX": 18592,
+      "worldZ": 6832,
+      "destinationZoneId": 423,
+      "destinationName": "Route 18",
+      "destinationPixelX": 176,
+      "destinationPixelY": 120,
+      "anchor": 1
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 93,
+      "pixelX": 760,
+      "pixelY": 320,
+      "trainerId": 302,
+      "trainerName": "Bob",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3301,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 94,
+      "pixelX": 680,
+      "pixelY": 336,
+      "trainerId": 301,
+      "trainerName": "Boris",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3300,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 95,
+      "pixelX": 248,
+      "pixelY": 160,
+      "trainerId": 312,
+      "trainerName": "Charles",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3311,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

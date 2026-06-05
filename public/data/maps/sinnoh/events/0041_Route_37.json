@@ -1,0 +1,72 @@
+{
+  "zoneId": 41,
+  "displayName": "Route 37",
+  "warps": [],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 145,
+      "pixelX": 120,
+      "pixelY": 336,
+      "trainerId": 81,
+      "trainerName": "Tori & Til",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3080,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 146,
+      "pixelX": 136,
+      "pixelY": 336,
+      "trainerId": 81,
+      "trainerName": "Tori & Til",
+      "orientation": "Down",
+      "isDoubleBattlePartner": true,
+      "scriptNumber": 5080,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 147,
+      "pixelX": 312,
+      "pixelY": 320,
+      "trainerId": 386,
+      "trainerName": "Greg",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3385,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t7",
+      "trainerInstanceId": 148,
+      "pixelX": 56,
+      "pixelY": 224,
+      "trainerId": 679,
+      "trainerName": "Callie",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3678,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t8",
+      "trainerInstanceId": 149,
+      "pixelX": 200,
+      "pixelY": 224,
+      "trainerId": 680,
+      "trainerName": "Kassandra",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3679,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

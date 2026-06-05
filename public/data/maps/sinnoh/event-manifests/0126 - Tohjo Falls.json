@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 126,
+    "name": "Tohjo Falls",
+    "mapName": "0126 - Tohjo Falls",
+    "matrixId": 151
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0243_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 440,
+        "y": 192,
+        "targetPng": "0126 - Tohjo Falls.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 27,
+        "yMap": 11,
+        "zPositionRaw": 589824
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 376,
+        "y": 208,
+        "targetPng": "0126 - Tohjo Falls.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 23,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

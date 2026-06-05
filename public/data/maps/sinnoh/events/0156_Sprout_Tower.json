@@ -1,0 +1,59 @@
+{
+  "zoneId": 156,
+  "displayName": "Sprout Tower",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 248,
+      "pixelY": 440,
+      "worldX": 240,
+      "worldZ": 432,
+      "destinationZoneId": 155,
+      "destinationName": "Sprout Tower",
+      "destinationPixelX": 248,
+      "destinationPixelY": 440,
+      "anchor": 3
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 282,
+      "pixelX": 296,
+      "pixelY": 416,
+      "trainerId": 53,
+      "trainerName": "Jin",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3052,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 283,
+      "pixelX": 216,
+      "pixelY": 368,
+      "trainerId": 55,
+      "trainerName": "Neal",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3054,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 284,
+      "pixelX": 280,
+      "pixelY": 320,
+      "trainerId": 54,
+      "trainerName": "Troy",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3053,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

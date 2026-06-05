@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 6,
+    "name": "Bellchime Trail",
+    "mapName": "0006 - Bellchime Trail",
+    "matrixId": 67
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0149_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 498,
+        "y": 448,
+        "targetPng": "0006 - Bellchime Trail.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 30,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "zoneId": 389,
+  "displayName": "Route 6",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 120,
+      "pixelY": 256,
+      "worldX": 80,
+      "worldZ": 192,
+      "destinationZoneId": 14,
+      "destinationName": "Route 6",
+      "destinationPixelX": 344,
+      "destinationPixelY": 108,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 120,
+      "pixelY": 96,
+      "worldX": 80,
+      "worldZ": 32,
+      "destinationZoneId": 59,
+      "destinationName": "Saffron City",
+      "destinationPixelX": 344,
+      "destinationPixelY": 1004,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

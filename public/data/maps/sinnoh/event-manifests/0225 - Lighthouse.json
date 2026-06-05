@@ -1,0 +1,105 @@
+{
+  "header": {
+    "id": 225,
+    "name": "Lighthouse",
+    "mapName": "0225 - Lighthouse",
+    "matrixId": 131
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0000_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 307,
+        "y": 330,
+        "targetPng": "0225 - Lighthouse.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 8,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0151_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 291,
+        "y": 250,
+        "targetPng": "0225 - Lighthouse.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 7,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0481_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 307,
+        "y": 250,
+        "targetPng": "0225 - Lighthouse.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 8,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 419,
+        "y": 250,
+        "targetPng": "0225 - Lighthouse.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 15,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0243_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 307,
+        "y": 314,
+        "targetPng": "0225 - Lighthouse.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 8,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

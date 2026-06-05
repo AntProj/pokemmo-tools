@@ -1,0 +1,31 @@
+{
+  "zoneId": 511,
+  "displayName": "Route 3",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 152,
+      "pixelY": 312,
+      "worldX": 128,
+      "worldZ": 304,
+      "destinationZoneId": 11,
+      "destinationName": "Route 3",
+      "destinationPixelX": 1352,
+      "destinationPixelY": 168,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 248,
+      "pixelY": 280,
+      "worldX": 224,
+      "worldZ": 272,
+      "destinationZoneId": 512,
+      "destinationName": "Route 3",
+      "destinationPixelX": 248,
+      "destinationPixelY": 168,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

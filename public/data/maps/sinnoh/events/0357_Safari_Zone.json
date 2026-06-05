@@ -1,0 +1,31 @@
+{
+  "zoneId": 357,
+  "displayName": "Safari Zone",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 1288,
+      "pixelY": 1624,
+      "worldX": 1264,
+      "worldZ": 1600,
+      "destinationZoneId": 4095,
+      "destinationName": "Mt. Coronet",
+      "destinationPixelX": null,
+      "destinationPixelY": null,
+      "anchor": 256
+    },
+    {
+      "id": "w1",
+      "pixelX": 1304,
+      "pixelY": 1624,
+      "worldX": 1280,
+      "worldZ": 1600,
+      "destinationZoneId": 4095,
+      "destinationName": "Mt. Coronet",
+      "destinationPixelX": null,
+      "destinationPixelY": null,
+      "anchor": 256
+    }
+  ],
+  "trainers": []
+}

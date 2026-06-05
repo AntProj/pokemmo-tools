@@ -1,0 +1,31 @@
+{
+  "zoneId": 514,
+  "displayName": "Mt. Silver",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 152,
+      "pixelY": 312,
+      "worldX": 128,
+      "worldZ": 304,
+      "destinationZoneId": 90,
+      "destinationName": "Mt. Silver",
+      "destinationPixelX": 328,
+      "destinationPixelY": 152,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 248,
+      "pixelY": 280,
+      "worldX": 224,
+      "worldZ": 272,
+      "destinationZoneId": 515,
+      "destinationName": "Mt. Silver",
+      "destinationPixelX": 248,
+      "destinationPixelY": 168,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

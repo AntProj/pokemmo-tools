@@ -1,0 +1,79 @@
+{
+  "zoneId": 179,
+  "displayName": "Victory Road",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 616,
+      "pixelY": 232,
+      "worldX": 608,
+      "worldZ": 224,
+      "destinationZoneId": 58,
+      "destinationName": "Indigo Plateau",
+      "destinationPixelX": 264,
+      "destinationPixelY": 434,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 408,
+      "pixelY": 728,
+      "worldX": 400,
+      "worldZ": 720,
+      "destinationZoneId": 178,
+      "destinationName": "Victory Road",
+      "destinationPixelX": 456,
+      "destinationPixelY": 728,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 792,
+      "pixelY": 632,
+      "worldX": 784,
+      "worldZ": 624,
+      "destinationZoneId": 178,
+      "destinationName": "Victory Road",
+      "destinationPixelX": 840,
+      "destinationPixelY": 632,
+      "anchor": 3
+    },
+    {
+      "id": "w3",
+      "pixelX": 872,
+      "pixelY": 360,
+      "worldX": 864,
+      "worldZ": 352,
+      "destinationZoneId": 178,
+      "destinationName": "Victory Road",
+      "destinationPixelX": 920,
+      "destinationPixelY": 360,
+      "anchor": 5
+    },
+    {
+      "id": "w4",
+      "pixelX": 88,
+      "pixelY": 312,
+      "worldX": 80,
+      "worldZ": 304,
+      "destinationZoneId": 178,
+      "destinationName": "Victory Road",
+      "destinationPixelX": 136,
+      "destinationPixelY": 296,
+      "anchor": 7
+    },
+    {
+      "id": "w5",
+      "pixelX": 616,
+      "pixelY": 216,
+      "worldX": 608,
+      "worldZ": 208,
+      "destinationZoneId": 58,
+      "destinationName": "Indigo Plateau",
+      "destinationPixelX": 264,
+      "destinationPixelY": 434,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

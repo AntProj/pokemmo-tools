@@ -1,0 +1,151 @@
+{
+  "zoneId": 78,
+  "displayName": "Ecruteak City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 408,
+      "pixelY": 360,
+      "worldX": 6016,
+      "worldZ": 2384,
+      "destinationZoneId": 7,
+      "destinationName": "Burned Tower",
+      "destinationPixelX": 248,
+      "destinationPixelY": 424,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 392,
+      "pixelY": 744,
+      "worldX": 6000,
+      "worldZ": 2768,
+      "destinationZoneId": 85,
+      "destinationName": "Ecruteak City",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 664,
+      "pixelY": 424,
+      "worldX": 6272,
+      "worldZ": 2448,
+      "destinationZoneId": 83,
+      "destinationName": "Ecruteak City",
+      "destinationPixelX": 170,
+      "destinationPixelY": 184,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 568,
+      "pixelY": 904,
+      "worldX": 6176,
+      "worldZ": 2928,
+      "destinationZoneId": 84,
+      "destinationName": "Ecruteak City",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 744,
+      "pixelY": 744,
+      "worldX": 6352,
+      "worldZ": 2768,
+      "destinationZoneId": 86,
+      "destinationName": "Ecruteak City",
+      "destinationPixelX": 168,
+      "destinationPixelY": 280,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 744,
+      "pixelY": 904,
+      "worldX": 6352,
+      "worldZ": 2928,
+      "destinationZoneId": 81,
+      "destinationName": "Ecruteak City",
+      "destinationPixelX": 152,
+      "destinationPixelY": 312,
+      "anchor": 0
+    },
+    {
+      "id": "w6",
+      "pixelX": 888,
+      "pixelY": 744,
+      "worldX": 6496,
+      "worldZ": 2768,
+      "destinationZoneId": 79,
+      "destinationName": "Ecruteak City",
+      "destinationPixelX": 88,
+      "destinationPixelY": 184,
+      "anchor": 0
+    },
+    {
+      "id": "w7",
+      "pixelX": 408,
+      "pixelY": 904,
+      "worldX": 6016,
+      "worldZ": 2928,
+      "destinationZoneId": 80,
+      "destinationName": "Ecruteak City",
+      "destinationPixelX": 392,
+      "destinationPixelY": 952,
+      "anchor": 0
+    },
+    {
+      "id": "w8",
+      "pixelX": 120,
+      "pixelY": 632,
+      "worldX": 5728,
+      "worldZ": 2656,
+      "destinationZoneId": 172,
+      "destinationName": "Route 38",
+      "destinationPixelX": 176,
+      "destinationPixelY": 120,
+      "anchor": 0
+    },
+    {
+      "id": "w9",
+      "pixelX": 120,
+      "pixelY": 648,
+      "worldX": 5728,
+      "worldZ": 2672,
+      "destinationZoneId": 172,
+      "destinationName": "Route 38",
+      "destinationPixelX": 176,
+      "destinationPixelY": 120,
+      "anchor": 0
+    },
+    {
+      "id": "w10",
+      "pixelX": 1032,
+      "pixelY": 776,
+      "worldX": 6640,
+      "worldZ": 2800,
+      "destinationZoneId": 132,
+      "destinationName": "Route 42",
+      "destinationPixelX": 32,
+      "destinationPixelY": 120,
+      "anchor": 0
+    },
+    {
+      "id": "w11",
+      "pixelX": 1032,
+      "pixelY": 792,
+      "worldX": 6640,
+      "worldZ": 2816,
+      "destinationZoneId": 132,
+      "destinationName": "Route 42",
+      "destinationPixelX": 32,
+      "destinationPixelY": 120,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

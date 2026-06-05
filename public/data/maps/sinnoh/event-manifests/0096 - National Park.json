@@ -1,0 +1,561 @@
+{
+  "header": {
+    "id": 96,
+    "name": "National Park",
+    "mapName": "0096 - National Park",
+    "matrixId": 27
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 392,
+        "y": 960,
+        "targetPng": "0096 - National Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 24,
+        "yMap": 26,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1240,
+        "y": 560,
+        "targetPng": "0096 - National Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 2,
+        "yMatrix": 1,
+        "xMap": 13,
+        "yMap": 1,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0117_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 792,
+        "y": 800,
+        "targetPng": "0096 - National Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 17,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0127_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 728,
+        "y": 288,
+        "targetPng": "0096 - National Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 13,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0067_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 648,
+        "y": 1264,
+        "targetPng": "0096 - National Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 2,
+        "xMap": 8,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0067_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 664,
+        "y": 1264,
+        "targetPng": "0096 - National Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 2,
+        "xMap": 9,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0161_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1032,
+        "y": 336,
+        "targetPng": "0096 - National Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 2,
+        "yMatrix": 0,
+        "xMap": 0,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0123_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1000,
+        "y": 1248,
+        "targetPng": "0096 - National Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 2,
+        "xMap": 30,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0351_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 984,
+        "y": 1248,
+        "targetPng": "0096 - National Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 2,
+        "xMap": 29,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0124_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 824,
+        "y": 1152,
+        "targetPng": "0096 - National Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 2,
+        "xMap": 19,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0116_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 24,
+        "y": 80,
+        "targetPng": "0096 - National Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 1,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0116_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 24,
+        "y": 112,
+        "targetPng": "0096 - National Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 1,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 12,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0125_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 24,
+        "y": 144,
+        "targetPng": "0096 - National Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 1,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 13,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0126_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 24,
+        "y": 176,
+        "targetPng": "0096 - National Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 1,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 14,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0116_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 24,
+        "y": 208,
+        "targetPng": "0096 - National Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 1,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 15,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0141_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 24,
+        "y": 240,
+        "targetPng": "0096 - National Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 1,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 16,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0142_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 24,
+        "y": 272,
+        "targetPng": "0096 - National Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 1,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 17,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0116_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 24,
+        "y": 304,
+        "targetPng": "0096 - National Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 1,
+        "yMap": 17,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 18,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0115_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 24,
+        "y": 336,
+        "targetPng": "0096 - National Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 1,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 19,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0067_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 24,
+        "y": 368,
+        "targetPng": "0096 - National Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 1,
+        "yMap": 21,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 20,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0193_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 72,
+        "y": 208,
+        "targetPng": "0096 - National Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 4,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 21,
+      "type": 1,
+      "orientation": "Right",
+      "spriteFile": "ow_0127_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 840,
+        "y": 912,
+        "targetPng": "0096 - National Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 20,
+        "yMap": 23,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 22,
+      "type": 1,
+      "orientation": "Down",
+      "spriteFile": "ow_0117_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 600,
+        "y": 528,
+        "targetPng": "0096 - National Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 31,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 23,
+      "type": 1,
+      "orientation": "Up",
+      "spriteFile": "ow_0126_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 808,
+        "y": 416,
+        "targetPng": "0096 - National Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 18,
+        "yMap": 24,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 24,
+      "type": 1,
+      "orientation": "Left",
+      "spriteFile": "ow_0067_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1064,
+        "y": 768,
+        "targetPng": "0096 - National Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 2,
+        "yMatrix": 1,
+        "xMap": 2,
+        "yMap": 14,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 25,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1304,
+        "y": 288,
+        "targetPng": "0096 - National Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 2,
+        "yMatrix": 0,
+        "xMap": 17,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 26,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0126_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 872,
+        "y": 864,
+        "targetPng": "0096 - National Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 22,
+        "yMap": 20,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 27,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0126_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 840,
+        "y": 1344,
+        "targetPng": "0096 - National Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 2,
+        "xMap": 20,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 28,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0147_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 936,
+        "y": 656,
+        "targetPng": "0096 - National Park.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 26,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

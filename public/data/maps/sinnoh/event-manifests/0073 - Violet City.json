@@ -1,0 +1,257 @@
+{
+  "header": {
+    "id": 73,
+    "name": "Violet City",
+    "mapName": "0073 - Violet City",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0119_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 724,
+        "y": 1103,
+        "targetPng": "0073 - Violet City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 8,
+        "xMap": 12,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0120_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 676,
+        "y": 768,
+        "targetPng": "0073 - Violet City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 7,
+        "xMap": 9,
+        "yMap": 30,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0130_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 436,
+        "y": 736,
+        "targetPng": "0073 - Violet City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 7,
+        "xMap": 26,
+        "yMap": 28,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0129_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 516,
+        "y": 911,
+        "targetPng": "0073 - Violet City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 8,
+        "xMap": 31,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0115_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 244,
+        "y": 847,
+        "targetPng": "0073 - Violet City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 8,
+        "xMap": 14,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 916,
+        "y": 496,
+        "targetPng": "0073 - Violet City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 7,
+        "xMap": 24,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 196,
+        "y": 368,
+        "targetPng": "0073 - Violet City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 7,
+        "xMap": 11,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0180_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 436,
+        "y": 879,
+        "targetPng": "0073 - Violet City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 8,
+        "xMap": 26,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0251_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 404,
+        "y": 1103,
+        "targetPng": "0073 - Violet City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 14,
+        "yMatrix": 8,
+        "xMap": 24,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 900,
+        "y": 879,
+        "targetPng": "0073 - Violet City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 8,
+        "xMap": 23,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0185_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 852,
+        "y": 1055,
+        "targetPng": "0073 - Violet City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 8,
+        "xMap": 20,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0125_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 948,
+        "y": 991,
+        "targetPng": "0073 - Violet City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 8,
+        "xMap": 26,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 12,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0113_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 564,
+        "y": 560,
+        "targetPng": "0073 - Violet City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 15,
+        "yMatrix": 7,
+        "xMap": 2,
+        "yMap": 17,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

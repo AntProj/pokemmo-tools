@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 32,
+    "name": "Route 28",
+    "mapName": "0032 - Route 28",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 536,
+        "y": 144,
+        "targetPng": "0032 - Route 28.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 27,
+        "yMatrix": 8,
+        "xMap": 1,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0093_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 136,
+        "y": 192,
+        "targetPng": "0032 - Route 28.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 26,
+        "yMatrix": 8,
+        "xMap": 8,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

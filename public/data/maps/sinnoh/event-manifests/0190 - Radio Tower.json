@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 190,
+    "name": "Radio Tower",
+    "mapName": "0190 - Radio Tower",
+    "matrixId": 110
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0176_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 325,
+        "y": 171,
+        "targetPng": "0190 - Radio Tower.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 8,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0137_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 597,
+        "y": 139,
+        "targetPng": "0190 - Radio Tower.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 25,
+        "yMap": 1,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

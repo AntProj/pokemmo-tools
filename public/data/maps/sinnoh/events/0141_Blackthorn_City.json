@@ -1,0 +1,85 @@
+{
+  "zoneId": 141,
+  "displayName": "Blackthorn City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 216,
+      "pixelY": 1400,
+      "worldX": 208,
+      "worldZ": 1392,
+      "destinationZoneId": 89,
+      "destinationName": "Blackthorn City",
+      "destinationPixelX": 456,
+      "destinationPixelY": 384,
+      "anchor": 1
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t1",
+      "trainerInstanceId": 257,
+      "pixelX": 184,
+      "pixelY": 1072,
+      "trainerId": 110,
+      "trainerName": "Paulo",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3109,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 258,
+      "pixelX": 136,
+      "pixelY": 992,
+      "trainerId": 117,
+      "trainerName": "Lola",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3116,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 259,
+      "pixelX": 328,
+      "pixelY": 880,
+      "trainerId": 112,
+      "trainerName": "Cody",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3111,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 260,
+      "pixelX": 344,
+      "pixelY": 736,
+      "trainerId": 119,
+      "trainerName": "Fran",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3118,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 261,
+      "pixelX": 216,
+      "pixelY": 656,
+      "trainerId": 111,
+      "trainerName": "Mike",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3110,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

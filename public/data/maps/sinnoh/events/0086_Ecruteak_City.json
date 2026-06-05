@@ -1,0 +1,19 @@
+{
+  "zoneId": 86,
+  "displayName": "Ecruteak City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 168,
+      "pixelY": 280,
+      "worldX": 112,
+      "worldZ": 272,
+      "destinationZoneId": 78,
+      "destinationName": "Ecruteak City",
+      "destinationPixelX": 744,
+      "destinationPixelY": 744,
+      "anchor": 4
+    }
+  ],
+  "trainers": []
+}

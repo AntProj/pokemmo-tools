@@ -1,0 +1,19 @@
+{
+  "zoneId": 378,
+  "displayName": "Celadon City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 168,
+      "pixelY": 136,
+      "worldX": 48,
+      "worldZ": 32,
+      "destinationZoneId": 443,
+      "destinationName": "Celadon City",
+      "destinationPixelX": 88,
+      "destinationPixelY": 104,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

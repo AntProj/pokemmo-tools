@@ -1,0 +1,119 @@
+{
+  "zoneId": 44,
+  "displayName": "Route 42",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 116,
+      "pixelY": 264,
+      "worldX": 6752,
+      "worldZ": 2800,
+      "destinationZoneId": 132,
+      "destinationName": "Route 42",
+      "destinationPixelX": 176,
+      "destinationPixelY": 120,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 116,
+      "pixelY": 280,
+      "worldX": 6752,
+      "worldZ": 2816,
+      "destinationZoneId": 132,
+      "destinationName": "Route 42",
+      "destinationPixelX": 176,
+      "destinationPixelY": 120,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 340,
+      "pixelY": 200,
+      "worldX": 6976,
+      "worldZ": 2736,
+      "destinationZoneId": 119,
+      "destinationName": "Mt. Mortar",
+      "destinationPixelX": 328,
+      "destinationPixelY": 760,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 788,
+      "pixelY": 264,
+      "worldX": 7424,
+      "worldZ": 2800,
+      "destinationZoneId": 119,
+      "destinationName": "Mt. Mortar",
+      "destinationPixelX": 728,
+      "destinationPixelY": 824,
+      "anchor": 1
+    },
+    {
+      "id": "w4",
+      "pixelX": 820,
+      "pixelY": 88,
+      "worldX": 7456,
+      "worldZ": 2624,
+      "destinationZoneId": 119,
+      "destinationName": "Mt. Mortar",
+      "destinationPixelX": 952,
+      "destinationPixelY": 872,
+      "anchor": 2
+    },
+    {
+      "id": "w5",
+      "pixelX": 1252,
+      "pixelY": 200,
+      "worldX": 7888,
+      "worldZ": 2736,
+      "destinationZoneId": 119,
+      "destinationName": "Mt. Mortar",
+      "destinationPixelX": 1128,
+      "destinationPixelY": 760,
+      "anchor": 3
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 159,
+      "pixelX": 1092,
+      "pixelY": 272,
+      "trainerId": 123,
+      "trainerName": "Tully",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3122,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 160,
+      "pixelX": 1284,
+      "pixelY": 224,
+      "trainerId": 129,
+      "trainerName": "Shane",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3128,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 161,
+      "pixelX": 1380,
+      "pixelY": 304,
+      "trainerId": 134,
+      "trainerName": "Benjamin",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3133,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

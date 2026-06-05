@@ -1,0 +1,43 @@
+{
+  "zoneId": 373,
+  "displayName": "Celadon City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 232,
+      "pixelY": 136,
+      "worldX": 176,
+      "worldZ": 128,
+      "destinationZoneId": 372,
+      "destinationName": "Celadon City",
+      "destinationPixelX": 152,
+      "destinationPixelY": 136,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 152,
+      "pixelY": 136,
+      "worldX": 96,
+      "worldZ": 128,
+      "destinationZoneId": 374,
+      "destinationName": "Celadon City",
+      "destinationPixelX": 232,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 136,
+      "pixelY": 40,
+      "worldX": 80,
+      "worldZ": 32,
+      "destinationZoneId": 442,
+      "destinationName": "Celadon City",
+      "destinationPixelX": 88,
+      "destinationPixelY": 104,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

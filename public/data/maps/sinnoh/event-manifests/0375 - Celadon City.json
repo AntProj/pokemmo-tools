@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 375,
+    "name": "Celadon City",
+    "mapName": "0375 - Celadon City",
+    "matrixId": 220
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0120_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 312,
+        "y": 80,
+        "targetPng": "0375 - Celadon City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 16,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0067_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 344,
+        "y": 192,
+        "targetPng": "0375 - Celadon City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 18,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

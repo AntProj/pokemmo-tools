@@ -1,0 +1,31 @@
+{
+  "zoneId": 404,
+  "displayName": "Saffron City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 168,
+      "pixelY": 184,
+      "worldX": 128,
+      "worldZ": 176,
+      "destinationZoneId": 59,
+      "destinationName": "Saffron City",
+      "destinationPixelX": 296,
+      "destinationPixelY": 444,
+      "anchor": 7
+    },
+    {
+      "id": "w1",
+      "pixelX": 168,
+      "pixelY": 56,
+      "worldX": 128,
+      "worldZ": 48,
+      "destinationZoneId": 405,
+      "destinationName": "Saffron City",
+      "destinationPixelX": 120,
+      "destinationPixelY": 56,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

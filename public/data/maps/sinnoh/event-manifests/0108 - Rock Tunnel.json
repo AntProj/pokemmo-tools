@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 108,
+    "name": "Rock Tunnel",
+    "mapName": "0108 - Rock Tunnel",
+    "matrixId": 6
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 448,
+        "targetPng": "0108 - Rock Tunnel.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 7,
+        "yMap": 27,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 392,
+        "y": 336,
+        "targetPng": "0108 - Rock Tunnel.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 24,
+        "yMap": 20,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

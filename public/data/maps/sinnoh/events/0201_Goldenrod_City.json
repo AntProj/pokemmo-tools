@@ -1,0 +1,110 @@
+{
+  "zoneId": 201,
+  "displayName": "Goldenrod City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 480,
+      "pixelY": 80,
+      "worldX": 432,
+      "worldZ": 64,
+      "destinationZoneId": 118,
+      "destinationName": "Goldenrod Tunnel",
+      "destinationPixelX": 416,
+      "destinationPixelY": 56,
+      "anchor": 5
+    },
+    {
+      "id": "w1",
+      "pixelX": 464,
+      "pixelY": 240,
+      "worldX": 416,
+      "worldZ": 224,
+      "destinationZoneId": 202,
+      "destinationName": "Goldenrod City",
+      "destinationPixelX": 96,
+      "destinationPixelY": 328,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 309,
+      "pixelX": 320,
+      "pixelY": 88,
+      "trainerId": 193,
+      "trainerName": "Grunt",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3192,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 310,
+      "pixelX": 96,
+      "pixelY": 88,
+      "trainerId": 228,
+      "trainerName": "Grunt",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3227,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 311,
+      "pixelX": 352,
+      "pixelY": 168,
+      "trainerId": 195,
+      "trainerName": "Grunt",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3194,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 312,
+      "pixelX": 432,
+      "pixelY": 264,
+      "trainerId": 199,
+      "trainerName": "Grunt",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3198,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 313,
+      "pixelX": 128,
+      "pixelY": 168,
+      "trainerId": 283,
+      "trainerName": "Orson",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3282,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 314,
+      "pixelX": 160,
+      "pixelY": 264,
+      "trainerId": 14,
+      "trainerName": "Duncan",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3013,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

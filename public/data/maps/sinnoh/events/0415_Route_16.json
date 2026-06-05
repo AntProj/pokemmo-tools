@@ -1,0 +1,19 @@
+{
+  "zoneId": 415,
+  "displayName": "Route 16",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 104,
+      "pixelY": 136,
+      "worldX": 64,
+      "worldZ": 128,
+      "destinationZoneId": 422,
+      "destinationName": "Route 16",
+      "destinationPixelX": 36,
+      "destinationPixelY": 56,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

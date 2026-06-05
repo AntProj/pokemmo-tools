@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 90,
+    "name": "Mt. Silver",
+    "mapName": "0090 - Mt. Silver",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 136,
+        "y": 352,
+        "targetPng": "0090 - Mt. Silver.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 25,
+        "yMatrix": 8,
+        "xMap": 8,
+        "yMap": 21,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0126_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 328,
+        "y": 256,
+        "targetPng": "0090 - Mt. Silver.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 25,
+        "yMatrix": 8,
+        "xMap": 20,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

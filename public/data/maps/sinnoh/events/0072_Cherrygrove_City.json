@@ -1,0 +1,19 @@
+{
+  "zoneId": 72,
+  "displayName": "Cherrygrove City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 104,
+      "pixelY": 136,
+      "worldX": 64,
+      "worldZ": 128,
+      "destinationZoneId": 67,
+      "destinationName": "Cherrygrove City",
+      "destinationPixelX": 904,
+      "destinationPixelY": 448,
+      "anchor": 4
+    }
+  ],
+  "trainers": []
+}

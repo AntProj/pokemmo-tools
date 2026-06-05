@@ -1,0 +1,31 @@
+{
+  "zoneId": 475,
+  "displayName": "Pewter City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 152,
+      "pixelY": 312,
+      "worldX": 128,
+      "worldZ": 304,
+      "destinationZoneId": 51,
+      "destinationName": "Pewter City",
+      "destinationPixelX": 488,
+      "destinationPixelY": 696,
+      "anchor": 4
+    },
+    {
+      "id": "w1",
+      "pixelX": 248,
+      "pixelY": 280,
+      "worldX": 224,
+      "worldZ": 272,
+      "destinationZoneId": 476,
+      "destinationName": "Pewter City",
+      "destinationPixelX": 248,
+      "destinationPixelY": 168,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

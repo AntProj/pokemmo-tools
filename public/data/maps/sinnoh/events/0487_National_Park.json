@@ -1,0 +1,91 @@
+{
+  "zoneId": 487,
+  "displayName": "National Park",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 648,
+      "pixelY": 1400,
+      "worldX": 640,
+      "worldZ": 1376,
+      "destinationZoneId": 102,
+      "destinationName": "Route 35",
+      "destinationPixelX": 440,
+      "destinationPixelY": 48,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 664,
+      "pixelY": 1400,
+      "worldX": 656,
+      "worldZ": 1376,
+      "destinationZoneId": 102,
+      "destinationName": "Route 35",
+      "destinationPixelX": 440,
+      "destinationPixelY": 48,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 1208,
+      "pixelY": 648,
+      "worldX": 1200,
+      "worldZ": 624,
+      "destinationZoneId": 104,
+      "destinationName": "Route 36",
+      "destinationPixelX": 32,
+      "destinationPixelY": 120,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 1208,
+      "pixelY": 664,
+      "worldX": 1200,
+      "worldZ": 640,
+      "destinationZoneId": 104,
+      "destinationName": "Route 36",
+      "destinationPixelX": 32,
+      "destinationPixelY": 120,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 536,
+      "pixelY": 264,
+      "worldX": 528,
+      "worldZ": 240,
+      "destinationZoneId": 150,
+      "destinationName": "Pokéathlon Dome",
+      "destinationPixelX": 120,
+      "destinationPixelY": 256,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 552,
+      "pixelY": 264,
+      "worldX": 544,
+      "worldZ": 240,
+      "destinationZoneId": 150,
+      "destinationName": "Pokéathlon Dome",
+      "destinationPixelX": 120,
+      "destinationPixelY": 256,
+      "anchor": 0
+    },
+    {
+      "id": "w6",
+      "pixelX": 568,
+      "pixelY": 264,
+      "worldX": 560,
+      "worldZ": 240,
+      "destinationZoneId": 150,
+      "destinationName": "Pokéathlon Dome",
+      "destinationPixelX": 120,
+      "destinationPixelY": 256,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,143 @@
+{
+  "header": {
+    "id": 467,
+    "name": "Power Plant",
+    "mapName": "0467 - Power Plant",
+    "matrixId": 251
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0037_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 320,
+        "y": 400,
+        "targetPng": "0467 - Power Plant.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 12,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0136_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 432,
+        "y": 320,
+        "targetPng": "0467 - Power Plant.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 19,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0136_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 160,
+        "y": 256,
+        "targetPng": "0467 - Power Plant.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 2,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0037_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 368,
+        "y": 160,
+        "targetPng": "0467 - Power Plant.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 15,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0136_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 224,
+        "y": 176,
+        "targetPng": "0467 - Power Plant.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0136_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 432,
+        "y": 240,
+        "targetPng": "0467 - Power Plant.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 19,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0130_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 336,
+        "y": 240,
+        "targetPng": "0467 - Power Plant.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 13,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 5,
+    "name": "Mystery Zone",
+    "mapName": "0005 - Mystery Zone",
+    "matrixId": 76
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0135_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 200,
+        "y": 80,
+        "targetPng": "0005 - Mystery Zone.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 12,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}
