@@ -35,7 +35,21 @@ function initialTheme() {
 const INITIAL_POKEDEX = { search: '', region: 'All', types: [], sort: 'dex' };
 const INITIAL_LOCATIONS = { search: '', region: 'All', sort: 'region' };
 const INITIAL_TRACKER_VIEW = { view: 'plan', planRegion: 'All', planMethods: [], planRarities: [], hideSingles: true,
-  markSearch: '', markRegion: 'All', markTypes: [], markStates: [], markSort: 'dex' };
+  // Mark-tab filters:
+  //   markBaby           'any' | 'only' | 'exclude'  — gate by pokemon.is_baby
+  //   markRarities       [] | string[]               — selected encounter rarities
+  //                                                    (e.g. "Special", "Rare").
+  //   markRaritiesMode   'only' | 'any'              — 'only': mon's encounters
+  //                                                    must all fall within the
+  //                                                    selected rarities (i.e. the
+  //                                                    mon is found EXCLUSIVELY at
+  //                                                    those rarities). 'any': mon
+  //                                                    has at least one matching
+  //                                                    location. Default 'only' so
+  //                                                    selecting "Special" finds
+  //                                                    event-only mons.
+  markSearch: '', markRegion: 'All', markTypes: [], markStates: [], markSort: 'dex',
+  markBaby: 'any', markRarities: [], markRaritiesMode: 'only' };
 
 // Read once from localStorage; default to {} so unlisted ids are 'uncaught'.
 function loadTrackerState() {

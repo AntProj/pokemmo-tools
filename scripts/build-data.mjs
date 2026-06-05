@@ -181,6 +181,20 @@ function bucketForMethod(method) {
   return 'other';
 }
 
+// Strip leading non-alphanumeric junk from game-extracted names. The raw
+// PokeMMO dump prefixes a lot of strings with Yi Syllables glyphs (U+A000+
+// codepoints) that the in-game UI uses as category icons — e.g.
+// `ꀀEverstone`, `ꀀSuper Rod`. The web app has no font for these and
+// renders them as a black-square tofu, so we strip the leading run of
+// non-letter/digit/bracket characters and keep the readable part.
+//
+// Safe to call on anything: pass-through for nulls, regular ASCII names,
+// and names that already start with `(` or `[`.
+function cleanGameName(s) {
+  if (typeof s !== 'string') return s;
+  return s.replace(/^[^A-Za-z0-9(\[]+/, '').trim();
+}
+
 // ============================================================================
 // MAIN BUILD
 // ============================================================================
@@ -279,16 +293,34 @@ function build() {
 
   // ---- Parent-by-child map for pre_evolution ----
   // Walk every monster's evolutions[] array and record { childId → parent info }.
+  // Carries the SAME enrichments format.js needs (move_name / item_name) so
+  // the pre-evo display path matches the forward-evolution display path:
+  // PokemonModal renders pre_evolution.method through formatEvolutionMethod
+  // just like forward evolutions, so without these fields a Lickitung that
+  // evolved from Lickilicky would show "Level up w/ move" instead of
+  // "Level up w/ Rollout".
+  const ITEM_VAL_TYPES = new Set([
+    'ITEM', 'TRADE_WITH_ITEM', 'LEVEL_ITEM_DAY', 'LEVEL_ITEM_NIGHT',
+    'ITEM_MALE', 'ITEM_FEMALE',
+  ]);
   const parentByChild = new Map();
   for (const m of monsters) {
     for (const evo of (m.evolutions || [])) {
       if (!evo || evo.id == null) continue;
-      parentByChild.set(evo.id, {
+      const parent = {
         id: m.id,
         name: m.name,
         type: evo.type || null,
         val: evo.val ?? null,
-      });
+      };
+      if (evo.type === 'LEVEL_WITH_SKILL' && evo.val != null) {
+        const mv = movesById[evo.val];
+        if (mv) parent.move_name = mv.name;
+      } else if (ITEM_VAL_TYPES.has(evo.type) && evo.val != null) {
+        const it = itemsById[evo.val];
+        if (it) parent.item_name = cleanGameName(it.name);
+      }
+      parentByChild.set(evo.id, parent);
     }
   }
 
@@ -310,7 +342,10 @@ function build() {
       const region = loc.region_name || 'Unknown';
       const locationName = normalizeLocation(loc.location || 'Unknown');
       const rarity = loc.rarity || 'Unknown';
-      const method = loc.type || 'Unknown';
+      // cleanGameName strips the U+A000 glyph prefix the raw dump puts on
+      // some method strings (`ꀀSuper Rod` → `Super Rod`). Without this the
+      // UI shows tofu boxes.
+      const method = cleanGameName(loc.type || 'Unknown');
       const entry = {
         method,
         region,
@@ -362,11 +397,34 @@ function build() {
     }
 
     // ---- Held items ----
+    // cleanGameName strips the U+A000-range category-icon glyphs the raw
+    // dump prepends to item names (e.g. `ꀀEverstone`, `ꀅLife Orb (ATK)`).
+    // 182 of monsters.json's held-item names carry one; without this the UI
+    // shows tofu boxes since we don't ship the Yi Syllables font.
     const heldItems = (m.held_items || []).map(it => ({
       id: it.id,
-      name: it.item_name || it.name || null,
+      name: cleanGameName(it.item_name || it.name) || null,
       chance: it.chance || null,
     }));
+
+    // ---- Evolutions ----
+    // Enrich each evolution with resolved name fields the format.js display
+    // helpers expect (LEVEL_WITH_SKILL → move_name; item-using types →
+    // item_name). Raw monsters.json carries only the numeric val; without
+    // these resolutions format.js falls back to generic strings. Same
+    // ITEM_VAL_TYPES set as the parentByChild builder above.
+    const enrichedEvolutions = (m.evolutions || []).map(ev => {
+      if (!ev) return ev;
+      const out = { ...ev };
+      if (ev.type === 'LEVEL_WITH_SKILL' && ev.val != null) {
+        const mv = movesById[ev.val];
+        if (mv) out.move_name = mv.name;
+      } else if (ITEM_VAL_TYPES.has(ev.type) && ev.val != null) {
+        const it = itemsById[ev.val];
+        if (it) out.item_name = cleanGameName(it.name);
+      }
+      return out;
+    });
 
     // ---- PVP tier: first non-Untiered entry of monsters.json's tiers[] ----
     const tiers = m.tiers || [];
@@ -403,7 +461,7 @@ function build() {
       exp_type: m.exp_type ?? null,
       abilities: dedupedAbilities,
       forms: m.forms || [],
-      evolutions: m.evolutions || [],
+      evolutions: enrichedEvolutions,
       pre_evolution: parentByChild.get(id) || null,
       moves: movesByMethod,
       tiers,

@@ -133,7 +133,11 @@ export function formatEvolutionMethod(evo) {
     case 'LEVEL_LOCATION_1':     return v ? `Lv ${v} in Moss Rock area` : 'Moss Rock area';
     case 'LEVEL_LOCATION_2':     return v ? `Lv ${v} near Moss Rock` : 'Near Moss Rock';
     case 'LEVEL_LOCATION_3':     return v ? `Lv ${v} near Ice Rock` : 'Near Ice Rock';
-    case 'LEVEL_WITH_SKILL':     return v ? `Lv ${v} w/ move learned` : 'Level up w/ move';
+    // val is the skill (move) id the mon must know when it levels up. The
+    // build pipeline resolves the id → name into evo.move_name for us; if
+    // resolution failed (unknown id), fall back to the literal id rather
+    // than misleading "Lv {id}" — `val` here is NOT a level.
+    case 'LEVEL_WITH_SKILL':     return evo.move_name ? `Level up knowing ${evo.move_name}` : (v ? `Level up knowing move #${v}` : 'Level up knowing move');
     case 'LEVEL_ITEM_DAY':       return evo.item_name ? `Hold ${evo.item_name} (Day)` : 'Hold item (Day)';
     case 'LEVEL_ITEM_NIGHT':     return evo.item_name ? `Hold ${evo.item_name} (Night)` : 'Hold item (Night)';
     case 'ATK_LESS_THAN_DEF':    return v ? `Lv ${v} (Atk < Def)` : 'Atk < Def';

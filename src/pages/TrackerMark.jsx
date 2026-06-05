@@ -18,6 +18,21 @@ const STATE_FILTERS = [
   { key: 'priority', label: 'Priority' },
   { key: 'skipped',  label: 'Skipped'  },
 ];
+// Baby filter — three states. Stored as a string so it serializes cleanly
+// alongside the other view fields.
+const BABY_FILTERS = [
+  { key: 'any',     label: 'Any'            },
+  { key: 'only',    label: 'Babies only'    },
+  { key: 'exclude', label: 'Hide babies'    },
+];
+// Rarity filter — ordered roughly from most to least common, with the
+// encounter-flavor rarities (Horde / Lure / Special) trailing. Matches the
+// strings build-data.mjs emits as `loc.rarity`. See:
+//   node -e 'r = new Set(); require("./src/data/pokemmo.json").pokemon
+//     .forEach(p=>p.locations?.forEach(l=>r.add(l.rarity))); console.log([...r])'
+const RARITY_FILTERS = [
+  'Very Common', 'Common', 'Uncommon', 'Rare', 'Very Rare', 'Horde', 'Lure', 'Special',
+];
 
 export default function TrackerMark({
   data,
@@ -25,12 +40,19 @@ export default function TrackerMark({
   view, updateView,
   openPanel,
 }) {
-  const { markSearch, markRegion, markTypes, markStates, markSort } = view;
+  const {
+    markSearch, markRegion, markTypes, markStates, markSort,
+    markBaby = 'any',
+    markRarities = [],
+    markRaritiesMode = 'only',
+  } = view;
   const deferredSearch = useDeferredValue(markSearch);
 
   const setSearch = useCallback((v) => updateView({ markSearch: v }),  [updateView]);
   const setRegion = useCallback((v) => updateView({ markRegion: v }),  [updateView]);
   const setSort   = useCallback((v) => updateView({ markSort:   v }),  [updateView]);
+  const setBaby   = useCallback((v) => updateView({ markBaby:   v }),  [updateView]);
+  const setRaritiesMode = useCallback((v) => updateView({ markRaritiesMode: v }), [updateView]);
   const toggleType = useCallback((t) => {
     const next = markTypes.includes(t)
       ? markTypes.filter((x) => x !== t)
@@ -40,6 +62,9 @@ export default function TrackerMark({
   const toggleStateFilter = useCallback((s) => {
     updateView({ markStates: markStates.includes(s) ? markStates.filter((x) => x !== s) : [...markStates, s] });
   }, [markStates, updateView]);
+  const toggleRarityFilter = useCallback((r) => {
+    updateView({ markRarities: markRarities.includes(r) ? markRarities.filter((x) => x !== r) : [...markRarities, r] });
+  }, [markRarities, updateView]);
 
   // ─────── Evolution-family index ───────
   // Map<pokemonId, Set<pokemonId>> — for every Pokémon, the set of every
@@ -117,6 +142,10 @@ export default function TrackerMark({
       }
     }
 
+    // Pre-bake the rarity filter set so we don't realloc it per mon. Empty
+    // selection = filter is off.
+    const raritySet = markRarities.length > 0 ? new Set(markRarities) : null;
+
     const out = data.pokemon.filter((p) => {
       if (rkey) {
         if (!p.dex || !(p.dex[rkey] > 0)) return false;
@@ -131,6 +160,33 @@ export default function TrackerMark({
         const s = stateOf(trackerState, p.id);
         if (!stateSet.has(s)) return false;
       }
+      // Baby gate. `markBaby === 'any'` is the no-op default.
+      if (markBaby === 'only'    && !p.is_baby) return false;
+      if (markBaby === 'exclude' &&  p.is_baby) return false;
+      // Rarity gate. Two semantics:
+      //   'only' — every one of this mon's encounter rarities must be in
+      //            raritySet (i.e. the mon is found EXCLUSIVELY at selected
+      //            rarities). Useful for finding event-only mons by picking
+      //            "Special" alone. Empty locations → fails (no encounters
+      //            to satisfy).
+      //   'any'  — at least one location matches. Catches mons that ALSO
+      //            appear elsewhere.
+      if (raritySet) {
+        const locs = p.locations || [];
+        if (locs.length === 0) return false;
+        if (markRaritiesMode === 'only') {
+          // Every location must be in raritySet, AND at least one must
+          // match (which is implied by the subset check + locs.length > 0
+          // since locs is non-empty and all locs are in raritySet means
+          // every entry is a selected rarity).
+          for (const l of locs) if (!raritySet.has(l.rarity)) return false;
+        } else {
+          // 'any' — short-circuit on first match.
+          let matched = false;
+          for (const l of locs) if (raritySet.has(l.rarity)) { matched = true; break; }
+          if (!matched) return false;
+        }
+      }
       return true;
     });
 
@@ -139,7 +195,7 @@ export default function TrackerMark({
     else if (rkey)              out.sort((a, b) => (a.dex[rkey] || 0) - (b.dex[rkey] || 0));
     else                        out.sort((a, b) => a.id - b.id);
     return out;
-  }, [data.pokemon, deferredSearch, markRegion, markTypes, markStates, markSort, trackerState, familyMap]);
+  }, [data.pokemon, deferredSearch, markRegion, markTypes, markStates, markSort, markBaby, markRarities, markRaritiesMode, trackerState, familyMap]);
 
   // ─────── Selection (for bulk actions) ───────
   // Set<pokemonId>. Lives locally — selection is ephemeral and tab-scoped.
@@ -277,6 +333,100 @@ export default function TrackerMark({
               Clear
             </button>
           )}
+        </div>
+
+        {/* Baby filter — a three-way toggle. Babies are the unevolved
+            breed-only forms (Pichu, Cleffa, etc.) that the user often
+            wants to surface or hide as a group. */}
+        <div className="flex items-center gap-2 flex-wrap">
+          <span className="text-xs text-stone-500 dark:text-stone-400 mr-1">Babies</span>
+          {BABY_FILTERS.map(({ key, label }) => {
+            const sel = markBaby === key;
+            return (
+              <button
+                key={key}
+                type="button"
+                onClick={() => setBaby(key)}
+                aria-pressed={sel}
+                className={`px-2 py-0.5 rounded text-xs border transition-colors ${
+                  sel
+                    ? 'bg-pink-100 text-pink-800 border-pink-300 dark:bg-pink-950/50 dark:text-pink-300 dark:border-pink-900'
+                    : 'bg-[#fdf8e9] dark:bg-stone-900 text-stone-700 dark:text-stone-300 border-[#d6c8a3] dark:border-stone-700 hover:bg-[#ece2c4] dark:hover:bg-stone-800'
+                }`}
+              >
+                {label}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Encounter-rarity filter. "Only" mode (default) shows mons whose
+            encounters fall EXCLUSIVELY within the selected rarities — pick
+            "Special" alone to see event-only mons; pick "Special" + "Rare"
+            to see mons found only at one of those two. "Any" mode loosens
+            this: shows any mon that has at least one encounter at a
+            selected rarity (so picking "Special" surfaces every mon with
+            *any* Special encounter, even if they also appear commonly
+            elsewhere). */}
+        <div className="flex items-start gap-2 flex-wrap">
+          <span className="text-xs text-stone-500 dark:text-stone-400 mr-1 mt-1">Encounter</span>
+          <div className="flex flex-wrap gap-1.5 items-center">
+            {RARITY_FILTERS.map((r) => {
+              const sel = markRarities.includes(r);
+              return (
+                <button
+                  key={r}
+                  type="button"
+                  onClick={() => toggleRarityFilter(r)}
+                  aria-pressed={sel}
+                  className={`px-2 py-0.5 rounded text-xs border transition-colors ${
+                    sel
+                      ? 'bg-violet-100 text-violet-800 border-violet-300 dark:bg-violet-950/50 dark:text-violet-300 dark:border-violet-900'
+                      : 'bg-[#fdf8e9] dark:bg-stone-900 text-stone-700 dark:text-stone-300 border-[#d6c8a3] dark:border-stone-700 hover:bg-[#ece2c4] dark:hover:bg-stone-800'
+                  }`}
+                >
+                  {r}
+                </button>
+              );
+            })}
+            {markRarities.length > 0 && (
+              <>
+                <span className="text-xs text-stone-400 dark:text-stone-600 mx-1">·</span>
+                {/* Mode toggle — only relevant when rarities are selected. */}
+                {[
+                  { key: 'only', label: 'Only' },
+                  { key: 'any',  label: 'Any'  },
+                ].map(({ key, label }) => {
+                  const sel = markRaritiesMode === key;
+                  return (
+                    <button
+                      key={key}
+                      type="button"
+                      onClick={() => setRaritiesMode(key)}
+                      aria-pressed={sel}
+                      title={key === 'only'
+                        ? "Mon's encounters must ALL be in the selected rarities"
+                        : "Mon has at least one encounter in the selected rarities"}
+                      className={`px-2 py-0.5 rounded text-xs border transition-colors ${
+                        sel
+                          ? 'bg-stone-900 text-white border-stone-900 dark:bg-stone-100 dark:text-stone-900 dark:border-stone-100'
+                          : 'bg-[#fdf8e9] dark:bg-stone-900 text-stone-700 dark:text-stone-300 border-[#d6c8a3] dark:border-stone-700 hover:bg-[#ece2c4] dark:hover:bg-stone-800'
+                      }`}
+                    >
+                      {label}
+                    </button>
+                  );
+                })}
+                <button
+                  type="button"
+                  onClick={() => updateView({ markRarities: [] })}
+                  className="ml-1 text-xs text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 underline underline-offset-2"
+                >
+                  Clear
+                </button>
+              </>
+            )}
+          </div>
         </div>
       </section>
 
