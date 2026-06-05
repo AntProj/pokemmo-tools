@@ -4370,7 +4370,7 @@ the Hoenn region.`},9535:{id:9535,name:"Blue Orb",description:`A shiny blue orb 
 a legend and has a deep connection with
 the Hoenn region.`},9536:{id:9536,name:"Enigma Stone",description:`A crystal ball that was excavated from
 the ground. A very beautiful stone that
-is covered with bits of rock and earth.`}},Rf={regions:["Kanto","Johto","Hoenn","Sinnoh","Unova"],total_pokemon:622,total_locations:1224,total_moves:559,total_abilities:170,total_items:2956,built_at:"2026-06-05T03:02:23.852Z"},Kl={pokemon:Af,locations:kf,moves:bf,abilities:xf,items:Sf,meta:Rf};/**
+is covered with bits of rock and earth.`}},Rf={regions:["Kanto","Johto","Hoenn","Sinnoh","Unova"],total_pokemon:622,total_locations:1224,total_moves:559,total_abilities:170,total_items:2956,built_at:"2026-06-05T03:08:25.231Z"},Kl={pokemon:Af,locations:kf,moves:bf,abilities:xf,items:Sf,meta:Rf};/**
  * @license lucide-react v0.383.0 - ISC
  *
  * This source code is licensed under the ISC license.
