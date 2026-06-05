@@ -1,0 +1,31 @@
+{
+  "zoneId": 142,
+  "displayName": "Route 43",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 120,
+      "pixelY": 256,
+      "worldX": 80,
+      "worldZ": 192,
+      "destinationZoneId": 87,
+      "destinationName": "Mahogany Town",
+      "destinationPixelX": 296,
+      "destinationPixelY": 108,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 120,
+      "pixelY": 96,
+      "worldX": 80,
+      "worldZ": 32,
+      "destinationZoneId": 45,
+      "destinationName": "Route 43",
+      "destinationPixelX": 216,
+      "destinationPixelY": 984,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

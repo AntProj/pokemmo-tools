@@ -1,0 +1,238 @@
+{
+  "header": {
+    "id": 75,
+    "name": "Cianwood City",
+    "mapName": "0075 - Cianwood City",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0127_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 312,
+        "y": 656,
+        "targetPng": "0075 - Cianwood City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 11,
+        "xMap": 13,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0067_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 392,
+        "y": 528,
+        "targetPng": "0075 - Cianwood City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 11,
+        "xMap": 18,
+        "yMap": 0,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0126_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 376,
+        "y": 432,
+        "targetPng": "0075 - Cianwood City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 10,
+        "xMap": 17,
+        "yMap": 26,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0117_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 312,
+        "y": 832,
+        "targetPng": "0075 - Cianwood City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 11,
+        "xMap": 13,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0127_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 440,
+        "y": 864,
+        "targetPng": "0075 - Cianwood City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 11,
+        "xMap": 21,
+        "yMap": 21,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0575_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 328,
+        "y": 176,
+        "targetPng": "0075 - Cianwood City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 10,
+        "xMap": 14,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0187_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 360,
+        "y": 384,
+        "targetPng": "0075 - Cianwood City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 10,
+        "xMap": 16,
+        "yMap": 23,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 264,
+        "y": 224,
+        "targetPng": "0075 - Cianwood City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 10,
+        "xMap": 10,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 248,
+        "y": 352,
+        "targetPng": "0075 - Cianwood City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 10,
+        "xMap": 9,
+        "yMap": 21,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 280,
+        "y": 256,
+        "targetPng": "0075 - Cianwood City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 10,
+        "xMap": 11,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 200,
+        "y": 304,
+        "targetPng": "0075 - Cianwood City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 10,
+        "xMap": 6,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 264,
+        "y": 368,
+        "targetPng": "0075 - Cianwood City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 5,
+        "yMatrix": 10,
+        "xMap": 10,
+        "yMap": 22,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

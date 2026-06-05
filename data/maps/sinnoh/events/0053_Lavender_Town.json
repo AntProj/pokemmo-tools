@@ -1,0 +1,91 @@
+{
+  "zoneId": 53,
+  "displayName": "Lavender Town",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 168,
+      "pixelY": 168,
+      "worldX": 22688,
+      "worldZ": 3744,
+      "destinationZoneId": 434,
+      "destinationName": "Lavender Town",
+      "destinationPixelX": 152,
+      "destinationPixelY": 312,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 184,
+      "pixelY": 296,
+      "worldX": 22704,
+      "worldZ": 3872,
+      "destinationZoneId": 435,
+      "destinationName": "Lavender Town",
+      "destinationPixelX": 100,
+      "destinationPixelY": 200,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 104,
+      "pixelY": 408,
+      "worldX": 22624,
+      "worldZ": 3984,
+      "destinationZoneId": 436,
+      "destinationName": "Lavender Town",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 184,
+      "pixelY": 408,
+      "worldX": 22704,
+      "worldZ": 3984,
+      "destinationZoneId": 437,
+      "destinationName": "Lavender Town",
+      "destinationPixelX": 120,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 72,
+      "pixelY": 168,
+      "worldX": 22592,
+      "worldZ": 3744,
+      "destinationZoneId": 433,
+      "destinationName": "Lavender Town",
+      "destinationPixelX": 88,
+      "destinationPixelY": 184,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 376,
+      "pixelY": 360,
+      "worldX": 22896,
+      "worldZ": 3936,
+      "destinationZoneId": 438,
+      "destinationName": "Lavender Town",
+      "destinationPixelX": 104,
+      "destinationPixelY": 280,
+      "anchor": 0
+    },
+    {
+      "id": "w6",
+      "pixelX": 344,
+      "pixelY": 168,
+      "worldX": 22864,
+      "worldZ": 3744,
+      "destinationZoneId": 439,
+      "destinationName": "Lavender Town",
+      "destinationPixelX": 88,
+      "destinationPixelY": 200,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

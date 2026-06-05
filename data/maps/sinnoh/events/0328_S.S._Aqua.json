@@ -1,0 +1,123 @@
+{
+  "zoneId": 328,
+  "displayName": "S.S. Aqua",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 272,
+      "pixelY": 280,
+      "worldX": 144,
+      "worldZ": 176,
+      "destinationZoneId": 307,
+      "destinationName": "S.S. Aqua",
+      "destinationPixelX": 336,
+      "destinationPixelY": 232,
+      "anchor": 5
+    },
+    {
+      "id": "w1",
+      "pixelX": 496,
+      "pixelY": 280,
+      "worldX": 368,
+      "worldZ": 176,
+      "destinationZoneId": 307,
+      "destinationName": "S.S. Aqua",
+      "destinationPixelX": 432,
+      "destinationPixelY": 232,
+      "anchor": 6
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t1",
+      "trainerInstanceId": 353,
+      "pixelX": 400,
+      "pixelY": 272,
+      "trainerId": 424,
+      "trainerName": "Colin",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3423,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 354,
+      "pixelX": 512,
+      "pixelY": 224,
+      "trainerId": 425,
+      "trainerName": "Meg & Peg",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3424,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 355,
+      "pixelX": 528,
+      "pixelY": 224,
+      "trainerId": 425,
+      "trainerName": "Meg & Peg",
+      "orientation": "Down",
+      "isDoubleBattlePartner": true,
+      "scriptNumber": 5424,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 356,
+      "pixelX": 288,
+      "pixelY": 208,
+      "trainerId": 367,
+      "trainerName": "Shawn",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3366,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t6",
+      "trainerInstanceId": 357,
+      "pixelX": 400,
+      "pixelY": 256,
+      "trainerId": 422,
+      "trainerName": "Rodney",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3421,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t7",
+      "trainerInstanceId": 358,
+      "pixelX": 400,
+      "pixelY": 240,
+      "trainerId": 352,
+      "trainerName": "Georgia",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3351,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t8",
+      "trainerInstanceId": 359,
+      "pixelX": 480,
+      "pixelY": 208,
+      "trainerId": 423,
+      "trainerName": "Jeremy",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3422,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

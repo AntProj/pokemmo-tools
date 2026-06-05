@@ -1,0 +1,86 @@
+{
+  "header": {
+    "id": 330,
+    "name": "Olivine City",
+    "mapName": "0330 - Olivine City",
+    "matrixId": 178
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0144_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 552,
+        "y": 576,
+        "targetPng": "0330 - Olivine City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 27,
+        "yMap": 22,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0144_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 280,
+        "y": 464,
+        "targetPng": "0330 - Olivine City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 10,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0124_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 280,
+        "y": 480,
+        "targetPng": "0330 - Olivine City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 10,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0163_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 408,
+        "y": 576,
+        "targetPng": "0330 - Olivine City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 18,
+        "yMap": 22,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

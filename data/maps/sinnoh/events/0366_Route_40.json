@@ -1,0 +1,31 @@
+{
+  "zoneId": 366,
+  "displayName": "Route 40",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 120,
+      "pixelY": 256,
+      "worldX": 80,
+      "worldZ": 192,
+      "destinationZoneId": 94,
+      "destinationName": "Route 40",
+      "destinationPixelX": 216,
+      "destinationPixelY": 180,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 120,
+      "pixelY": 96,
+      "worldX": 80,
+      "worldZ": 32,
+      "destinationZoneId": 411,
+      "destinationName": "Frontier Access",
+      "destinationPixelX": 488,
+      "destinationPixelY": 591,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

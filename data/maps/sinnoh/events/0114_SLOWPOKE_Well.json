@@ -1,0 +1,31 @@
+{
+  "zoneId": 114,
+  "displayName": "SLOWPOKE Well",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 280,
+      "pixelY": 88,
+      "worldX": 272,
+      "worldZ": 80,
+      "destinationZoneId": 74,
+      "destinationName": "Azalea Town",
+      "destinationPixelX": 808,
+      "destinationPixelY": 120,
+      "anchor": 7
+    },
+    {
+      "id": "w1",
+      "pixelX": 184,
+      "pixelY": 104,
+      "worldX": 176,
+      "worldZ": 96,
+      "destinationZoneId": 177,
+      "destinationName": "SLOWPOKE Well",
+      "destinationPixelX": 680,
+      "destinationPixelY": 456,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

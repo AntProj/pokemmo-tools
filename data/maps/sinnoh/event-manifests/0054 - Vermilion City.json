@@ -1,0 +1,371 @@
+{
+  "header": {
+    "id": 54,
+    "name": "Vermilion City",
+    "mapName": "0054 - Vermilion City",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0128_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 584,
+        "y": 160,
+        "targetPng": "0054 - Vermilion City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 41,
+        "yMatrix": 9,
+        "xMap": 4,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0126_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 744,
+        "y": 368,
+        "targetPng": "0054 - Vermilion City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 41,
+        "yMatrix": 9,
+        "xMap": 14,
+        "yMap": 21,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0123_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 440,
+        "y": 320,
+        "targetPng": "0054 - Vermilion City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 40,
+        "yMatrix": 9,
+        "xMap": 27,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0120_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 344,
+        "y": 464,
+        "targetPng": "0054 - Vermilion City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 40,
+        "yMatrix": 9,
+        "xMap": 21,
+        "yMap": 27,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0364_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 616,
+        "y": 192,
+        "targetPng": "0054 - Vermilion City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 41,
+        "yMatrix": 9,
+        "xMap": 6,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 648,
+        "y": 320,
+        "targetPng": "0054 - Vermilion City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 41,
+        "yMatrix": 9,
+        "xMap": 8,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 728,
+        "y": 224,
+        "targetPng": "0054 - Vermilion City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 41,
+        "yMatrix": 9,
+        "xMap": 13,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 744,
+        "y": 240,
+        "targetPng": "0054 - Vermilion City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 41,
+        "yMatrix": 9,
+        "xMap": 14,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 632,
+        "y": 320,
+        "targetPng": "0054 - Vermilion City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 41,
+        "yMatrix": 9,
+        "xMap": 7,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 712,
+        "y": 304,
+        "targetPng": "0054 - Vermilion City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 41,
+        "yMatrix": 9,
+        "xMap": 12,
+        "yMap": 17,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 744,
+        "y": 176,
+        "targetPng": "0054 - Vermilion City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 41,
+        "yMatrix": 9,
+        "xMap": 14,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0093_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 328,
+        "y": 528,
+        "targetPng": "0054 - Vermilion City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 40,
+        "yMatrix": 9,
+        "xMap": 20,
+        "yMap": 31,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 12,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 664,
+        "y": 672,
+        "targetPng": "0054 - Vermilion City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 41,
+        "yMatrix": 10,
+        "xMap": 9,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 13,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 904,
+        "y": 656,
+        "targetPng": "0054 - Vermilion City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 41,
+        "yMatrix": 10,
+        "xMap": 24,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 14,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0126_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 696,
+        "y": 304,
+        "targetPng": "0054 - Vermilion City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 41,
+        "yMatrix": 9,
+        "xMap": 11,
+        "yMap": 17,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 15,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0575_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 808,
+        "y": 672,
+        "targetPng": "0054 - Vermilion City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 41,
+        "yMatrix": 10,
+        "xMap": 18,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 16,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0187_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 728,
+        "y": 560,
+        "targetPng": "0054 - Vermilion City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 41,
+        "yMatrix": 10,
+        "xMap": 13,
+        "yMap": 1,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 17,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0187_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 616,
+        "y": 736,
+        "targetPng": "0054 - Vermilion City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 41,
+        "yMatrix": 10,
+        "xMap": 6,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 18,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0059_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 296,
+        "y": 400,
+        "targetPng": "0054 - Vermilion City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 40,
+        "yMatrix": 9,
+        "xMap": 18,
+        "yMap": 23,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

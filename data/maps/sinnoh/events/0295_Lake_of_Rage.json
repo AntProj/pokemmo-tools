@@ -1,0 +1,19 @@
+{
+  "zoneId": 295,
+  "displayName": "Lake of Rage",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 104,
+      "pixelY": 136,
+      "worldX": 64,
+      "worldZ": 128,
+      "destinationZoneId": 88,
+      "destinationName": "Lake of Rage",
+      "destinationPixelX": 920,
+      "destinationPixelY": 936,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

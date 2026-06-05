@@ -1,0 +1,200 @@
+{
+  "header": {
+    "id": 285,
+    "name": "Pok\u00E9athlon Dome",
+    "mapName": "0285 - Pok\u00E9athlon Dome",
+    "matrixId": 158
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0134_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 39,
+        "y": 208,
+        "targetPng": "0285 - Pok\u00E9athlon Dome.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 1,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0134_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 71,
+        "y": 64,
+        "targetPng": "0285 - Pok\u00E9athlon Dome.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0140_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 247,
+        "y": 160,
+        "targetPng": "0285 - Pok\u00E9athlon Dome.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 14,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0122_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 247,
+        "y": 80,
+        "targetPng": "0285 - Pok\u00E9athlon Dome.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 14,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0125_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 199,
+        "y": 208,
+        "targetPng": "0285 - Pok\u00E9athlon Dome.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 11,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0361_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 183,
+        "y": 208,
+        "targetPng": "0285 - Pok\u00E9athlon Dome.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 10,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0445_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 263,
+        "y": 80,
+        "targetPng": "0285 - Pok\u00E9athlon Dome.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 15,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0237_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 231,
+        "y": 64,
+        "targetPng": "0285 - Pok\u00E9athlon Dome.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 13,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0234_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 167,
+        "y": 64,
+        "targetPng": "0285 - Pok\u00E9athlon Dome.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 9,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0235_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 119,
+        "y": 64,
+        "targetPng": "0285 - Pok\u00E9athlon Dome.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

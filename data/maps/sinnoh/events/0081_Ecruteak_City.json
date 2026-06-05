@@ -1,0 +1,43 @@
+{
+  "zoneId": 81,
+  "displayName": "Ecruteak City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 152,
+      "pixelY": 312,
+      "worldX": 128,
+      "worldZ": 304,
+      "destinationZoneId": 78,
+      "destinationName": "Ecruteak City",
+      "destinationPixelX": 744,
+      "destinationPixelY": 904,
+      "anchor": 5
+    },
+    {
+      "id": "w1",
+      "pixelX": 136,
+      "pixelY": 40,
+      "worldX": 112,
+      "worldZ": 32,
+      "destinationZoneId": 2,
+      "destinationName": "Mystery Zone",
+      "destinationPixelX": 136,
+      "destinationPixelY": 232,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 248,
+      "pixelY": 280,
+      "worldX": 224,
+      "worldZ": 272,
+      "destinationZoneId": 131,
+      "destinationName": "Ecruteak City",
+      "destinationPixelX": 248,
+      "destinationPixelY": 168,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

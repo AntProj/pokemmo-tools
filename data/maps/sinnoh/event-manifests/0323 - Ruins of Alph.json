@@ -1,0 +1,67 @@
+{
+  "header": {
+    "id": 323,
+    "name": "Ruins of Alph",
+    "mapName": "0323 - Ruins of Alph",
+    "matrixId": 181
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0136_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 24,
+        "y": 496,
+        "targetPng": "0323 - Ruins of Alph.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 1,
+        "yMap": 30,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0126_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 72,
+        "y": 160,
+        "targetPng": "0323 - Ruins of Alph.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 4,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0126_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 376,
+        "y": 432,
+        "targetPng": "0323 - Ruins of Alph.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 23,
+        "yMap": 26,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

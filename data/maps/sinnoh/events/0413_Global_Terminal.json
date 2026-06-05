@@ -1,0 +1,31 @@
+{
+  "zoneId": 413,
+  "displayName": "Global Terminal",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 216,
+      "pixelY": 72,
+      "worldX": 208,
+      "worldZ": 64,
+      "destinationZoneId": 207,
+      "destinationName": "Global Terminal",
+      "destinationPixelX": 336,
+      "destinationPixelY": 72,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 216,
+      "pixelY": 232,
+      "worldX": 208,
+      "worldZ": 224,
+      "destinationZoneId": 412,
+      "destinationName": "Global Terminal",
+      "destinationPixelX": 264,
+      "destinationPixelY": 248,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

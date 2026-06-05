@@ -1,0 +1,162 @@
+{
+  "header": {
+    "id": 52,
+    "name": "Cerulean City",
+    "mapName": "0052 - Cerulean City",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0120_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 456,
+        "y": 420,
+        "targetPng": "0052 - Cerulean City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 40,
+        "yMatrix": 3,
+        "xMap": 27,
+        "yMap": 23,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0123_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 296,
+        "y": 548,
+        "targetPng": "0052 - Cerulean City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 40,
+        "yMatrix": 3,
+        "xMap": 17,
+        "yMap": 31,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0378_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 280,
+        "y": 548,
+        "targetPng": "0052 - Cerulean City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 40,
+        "yMatrix": 3,
+        "xMap": 16,
+        "yMap": 31,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0130_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 568,
+        "y": 692,
+        "targetPng": "0052 - Cerulean City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 41,
+        "yMatrix": 4,
+        "xMap": 2,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0121_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 760,
+        "y": 372,
+        "targetPng": "0052 - Cerulean City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 41,
+        "yMatrix": 3,
+        "xMap": 14,
+        "yMap": 20,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0067_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 344,
+        "y": 276,
+        "targetPng": "0052 - Cerulean City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 40,
+        "yMatrix": 3,
+        "xMap": 20,
+        "yMap": 14,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0126_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 744,
+        "y": 244,
+        "targetPng": "0052 - Cerulean City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 41,
+        "yMatrix": 3,
+        "xMap": 13,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0120_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 184,
+        "y": 244,
+        "targetPng": "0052 - Cerulean City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 40,
+        "yMatrix": 3,
+        "xMap": 10,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

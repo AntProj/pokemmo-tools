@@ -1,0 +1,124 @@
+{
+  "header": {
+    "id": 403,
+    "name": "ROTOM\u2019s Room",
+    "mapName": "0403 - ROTOM\u2019s Room",
+    "matrixId": 241
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0200_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 88,
+        "y": 128,
+        "targetPng": "0403 - ROTOM\u2019s Room.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 4,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0198_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 128,
+        "targetPng": "0403 - ROTOM\u2019s Room.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0197_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 152,
+        "y": 128,
+        "targetPng": "0403 - ROTOM\u2019s Room.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 8,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0199_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 184,
+        "y": 128,
+        "targetPng": "0403 - ROTOM\u2019s Room.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 10,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0196_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 216,
+        "y": 128,
+        "targetPng": "0403 - ROTOM\u2019s Room.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 12,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0000_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 200,
+        "y": 176,
+        "targetPng": "0403 - ROTOM\u2019s Room.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 11,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

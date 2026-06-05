@@ -1,0 +1,31 @@
+{
+  "zoneId": 172,
+  "displayName": "Route 38",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 176,
+      "pixelY": 120,
+      "worldX": 160,
+      "worldZ": 112,
+      "destinationZoneId": 78,
+      "destinationName": "Ecruteak City",
+      "destinationPixelX": 120,
+      "destinationPixelY": 632,
+      "anchor": 8
+    },
+    {
+      "id": "w1",
+      "pixelX": 32,
+      "pixelY": 120,
+      "worldX": 16,
+      "worldZ": 112,
+      "destinationZoneId": 42,
+      "destinationName": "Route 38",
+      "destinationPixelX": 1032,
+      "destinationPixelY": 120,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

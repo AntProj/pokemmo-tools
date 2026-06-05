@@ -1,0 +1,67 @@
+{
+  "header": {
+    "id": 98,
+    "name": "Route 32",
+    "mapName": "0098 - Route 32",
+    "matrixId": 70
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0193_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 112,
+        "y": 80,
+        "targetPng": "0098 - Route 32.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0067_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 64,
+        "y": 144,
+        "targetPng": "0098 - Route 32.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0126_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 160,
+        "y": 96,
+        "targetPng": "0098 - Route 32.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 9,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

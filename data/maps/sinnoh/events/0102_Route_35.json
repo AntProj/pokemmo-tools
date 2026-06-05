@@ -1,0 +1,43 @@
+{
+  "zoneId": 102,
+  "displayName": "Route 35",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 440,
+      "pixelY": 192,
+      "worldX": 400,
+      "worldZ": 176,
+      "destinationZoneId": 39,
+      "destinationName": "Route 35",
+      "destinationPixelX": 440,
+      "destinationPixelY": 184,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 440,
+      "pixelY": 48,
+      "worldX": 400,
+      "worldZ": 32,
+      "destinationZoneId": 96,
+      "destinationName": "National Park",
+      "destinationPixelX": 648,
+      "destinationPixelY": 1400,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 104,
+      "pixelY": 48,
+      "worldX": 64,
+      "worldZ": 32,
+      "destinationZoneId": 280,
+      "destinationName": "Pokéathlon Dome",
+      "destinationPixelX": 680,
+      "destinationPixelY": 888,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

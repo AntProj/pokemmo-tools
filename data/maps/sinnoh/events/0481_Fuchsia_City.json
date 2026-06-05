@@ -1,0 +1,19 @@
+{
+  "zoneId": 481,
+  "displayName": "Fuchsia City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 104,
+      "pixelY": 136,
+      "worldX": 64,
+      "worldZ": 128,
+      "destinationZoneId": 56,
+      "destinationName": "Fuchsia City",
+      "destinationPixelX": 280,
+      "destinationPixelY": 904,
+      "anchor": 8
+    }
+  ],
+  "trainers": []
+}

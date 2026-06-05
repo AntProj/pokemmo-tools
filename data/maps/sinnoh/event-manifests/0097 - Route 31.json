@@ -1,0 +1,67 @@
+{
+  "header": {
+    "id": 97,
+    "name": "Route 31",
+    "mapName": "0097 - Route 31",
+    "matrixId": 70
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0193_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 112,
+        "y": 80,
+        "targetPng": "0097 - Route 31.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_dawn_platinum.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 240,
+        "y": 448,
+        "targetPng": "0097 - Route 31.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 14,
+        "yMap": 28,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0483_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 224,
+        "y": 464,
+        "targetPng": "0097 - Route 31.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 13,
+        "yMap": 28,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

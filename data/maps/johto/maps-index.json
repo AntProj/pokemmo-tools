@@ -9328,6 +9328,9 @@
     "imageUrl": "https://pub-5fa7446d73c34538ae0c670b480e58a2.r2.dev/johto/images/overworld.6622961ad6.webp",
     "imageWidth": 16000,
     "imageHeight": 5798,
-    "type": "overview"
+    "type": "overview",
+    "tileUrlTemplate": "https://pub-5fa7446d73c34538ae0c670b480e58a2.r2.dev/johto/tiles/overworld.6622961ad6/{z}/{x}/{y}.webp",
+    "tileSize": 256,
+    "tilePyramidDepth": 6
   }
 }

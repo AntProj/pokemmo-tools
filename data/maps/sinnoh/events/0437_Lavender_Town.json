@@ -1,0 +1,19 @@
+{
+  "zoneId": 437,
+  "displayName": "Lavender Town",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 120,
+      "pixelY": 136,
+      "worldX": 80,
+      "worldZ": 128,
+      "destinationZoneId": 53,
+      "destinationName": "Lavender Town",
+      "destinationPixelX": 184,
+      "destinationPixelY": 408,
+      "anchor": 3
+    }
+  ],
+  "trainers": []
+}

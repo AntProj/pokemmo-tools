@@ -1,0 +1,85 @@
+{
+  "zoneId": 496,
+  "displayName": "Viridian City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 104,
+      "pixelY": 760,
+      "worldX": 80,
+      "worldZ": 752,
+      "destinationZoneId": 50,
+      "destinationName": "Viridian City",
+      "destinationPixelX": 856,
+      "destinationPixelY": 264,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 396,
+      "pixelX": 104,
+      "pixelY": 624,
+      "trainerId": 681,
+      "trainerName": "Arabella",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3680,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 397,
+      "pixelX": 56,
+      "pixelY": 384,
+      "trainerId": 682,
+      "trainerName": "Bonita",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3681,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 398,
+      "pixelX": 56,
+      "pixelY": 608,
+      "trainerId": 683,
+      "trainerName": "Salma",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3682,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 399,
+      "pixelX": 104,
+      "pixelY": 192,
+      "trainerId": 684,
+      "trainerName": "Elan & Ida",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3683,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t6",
+      "trainerInstanceId": 400,
+      "pixelX": 88,
+      "pixelY": 192,
+      "trainerId": 684,
+      "trainerName": "Elan & Ida",
+      "orientation": "Down",
+      "isDoubleBattlePartner": true,
+      "scriptNumber": 5683,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

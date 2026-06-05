@@ -1,0 +1,91 @@
+{
+  "zoneId": 55,
+  "displayName": "Celadon City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 296,
+      "pixelY": 232,
+      "worldX": 19216,
+      "worldZ": 3792,
+      "destinationZoneId": 370,
+      "destinationName": "Celadon City",
+      "destinationPixelX": 248,
+      "destinationPixelY": 200,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 568,
+      "pixelY": 232,
+      "worldX": 19488,
+      "worldZ": 3792,
+      "destinationZoneId": 376,
+      "destinationName": "Celadon City",
+      "destinationPixelX": 232,
+      "destinationPixelY": 312,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 776,
+      "pixelY": 232,
+      "worldX": 19696,
+      "worldZ": 3792,
+      "destinationZoneId": 393,
+      "destinationName": "Celadon City",
+      "destinationPixelX": 152,
+      "destinationPixelY": 312,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 568,
+      "pixelY": 424,
+      "worldX": 19488,
+      "worldZ": 3984,
+      "destinationZoneId": 537,
+      "destinationName": "Celadon City",
+      "destinationPixelX": 232,
+      "destinationPixelY": 288,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 648,
+      "pixelY": 424,
+      "worldX": 19568,
+      "worldZ": 3984,
+      "destinationZoneId": 382,
+      "destinationName": "Celadon City",
+      "destinationPixelX": 184,
+      "destinationPixelY": 224,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 296,
+      "pixelY": 696,
+      "worldX": 19216,
+      "worldZ": 4256,
+      "destinationZoneId": 395,
+      "destinationName": "Celadon City",
+      "destinationPixelX": 160,
+      "destinationPixelY": 744,
+      "anchor": 0
+    },
+    {
+      "id": "w6",
+      "pixelX": 680,
+      "pixelY": 616,
+      "worldX": 19600,
+      "worldZ": 4176,
+      "destinationZoneId": 383,
+      "destinationName": "Celadon City",
+      "destinationPixelX": 136,
+      "destinationPixelY": 184,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

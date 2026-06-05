@@ -1,0 +1,43 @@
+{
+  "zoneId": 6,
+  "displayName": "Bellchime Trail",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 162,
+      "pixelY": 408,
+      "worldX": 144,
+      "worldZ": 144,
+      "destinationZoneId": 216,
+      "destinationName": "Ecruteak City",
+      "destinationPixelX": 120,
+      "destinationPixelY": 56,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 162,
+      "pixelY": 424,
+      "worldX": 144,
+      "worldZ": 160,
+      "destinationZoneId": 216,
+      "destinationName": "Ecruteak City",
+      "destinationPixelX": 120,
+      "destinationPixelY": 56,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 610,
+      "pixelY": 520,
+      "worldX": 592,
+      "worldZ": 256,
+      "destinationZoneId": 111,
+      "destinationName": "Bell Tower",
+      "destinationPixelX": 248,
+      "destinationPixelY": 424,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

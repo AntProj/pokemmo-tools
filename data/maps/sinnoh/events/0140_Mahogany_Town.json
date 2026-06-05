@@ -1,0 +1,59 @@
+{
+  "zoneId": 140,
+  "displayName": "Mahogany Town",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 116,
+      "pixelY": 336,
+      "worldX": 80,
+      "worldZ": 304,
+      "destinationZoneId": 396,
+      "destinationName": "Mahogany Town",
+      "destinationPixelX": 760,
+      "destinationPixelY": 72,
+      "anchor": 1
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t3",
+      "trainerInstanceId": 254,
+      "pixelX": 68,
+      "pixelY": 296,
+      "trainerId": 482,
+      "trainerName": "Deandre",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3481,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 255,
+      "pixelX": 180,
+      "pixelY": 232,
+      "trainerId": 484,
+      "trainerName": "Gerardo",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3483,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t6",
+      "trainerInstanceId": 256,
+      "pixelX": 84,
+      "pixelY": 184,
+      "trainerId": 481,
+      "trainerName": "Jill",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3480,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 18,
+    "name": "Route 10",
+    "mapName": "0018 - Route 10",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0162_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 360,
+        "y": 384,
+        "targetPng": "0018 - Route 10.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 44,
+        "yMatrix": 5,
+        "xMap": 22,
+        "yMap": 23,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0443_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 184,
+        "y": 400,
+        "targetPng": "0018 - Route 10.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 44,
+        "yMatrix": 5,
+        "xMap": 11,
+        "yMap": 24,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

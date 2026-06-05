@@ -1,0 +1,108 @@
+{
+  "zoneId": 249,
+  "displayName": "Team Rocket HQ",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 824,
+      "pixelY": 480,
+      "worldX": 816,
+      "worldZ": 464,
+      "destinationZoneId": 248,
+      "destinationName": "Team Rocket HQ",
+      "destinationPixelX": 824,
+      "destinationPixelY": 472,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 168,
+      "pixelY": 176,
+      "worldX": 160,
+      "worldZ": 160,
+      "destinationZoneId": 248,
+      "destinationName": "Team Rocket HQ",
+      "destinationPixelX": 168,
+      "destinationPixelY": 168,
+      "anchor": 2
+    },
+    {
+      "id": "w2",
+      "pixelX": 168,
+      "pixelY": 80,
+      "worldX": 160,
+      "worldZ": 64,
+      "destinationZoneId": 248,
+      "destinationName": "Team Rocket HQ",
+      "destinationPixelX": 168,
+      "destinationPixelY": 72,
+      "anchor": 3
+    },
+    {
+      "id": "w3",
+      "pixelX": 824,
+      "pixelY": 80,
+      "worldX": 816,
+      "worldZ": 64,
+      "destinationZoneId": 248,
+      "destinationName": "Team Rocket HQ",
+      "destinationPixelX": 824,
+      "destinationPixelY": 72,
+      "anchor": 4
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t1",
+      "trainerInstanceId": 332,
+      "pixelX": 680,
+      "pixelY": 312,
+      "trainerId": 468,
+      "trainerName": "Ross",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3467,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 333,
+      "pixelX": 360,
+      "pixelY": 472,
+      "trainerId": 469,
+      "trainerName": "Mitch",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3468,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 334,
+      "pixelX": 248,
+      "pixelY": 424,
+      "trainerId": 222,
+      "trainerName": "Grunt",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3221,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 335,
+      "pixelX": 616,
+      "pixelY": 264,
+      "trainerId": 404,
+      "trainerName": "Grunt",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3403,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

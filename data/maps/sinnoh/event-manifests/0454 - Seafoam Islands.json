@@ -1,0 +1,86 @@
+{
+  "header": {
+    "id": 454,
+    "name": "Seafoam Islands",
+    "mapName": "0454 - Seafoam Islands",
+    "matrixId": 83
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 1,
+      "orientation": "Up",
+      "spriteFile": "ow_0177_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 616,
+        "y": 272,
+        "targetPng": "0454 - Seafoam Islands.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 1,
+        "yMap": 14,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 1,
+      "orientation": "Left",
+      "spriteFile": "ow_0177_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 488,
+        "y": 176,
+        "targetPng": "0454 - Seafoam Islands.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 25,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 1,
+      "orientation": "Left",
+      "spriteFile": "ow_0022_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 360,
+        "y": 160,
+        "targetPng": "0454 - Seafoam Islands.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 17,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 392,
+        "y": 448,
+        "targetPng": "0454 - Seafoam Islands.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 19,
+        "yMap": 25,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

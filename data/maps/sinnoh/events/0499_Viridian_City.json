@@ -1,0 +1,19 @@
+{
+  "zoneId": 499,
+  "displayName": "Viridian City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 304,
+      "pixelY": 152,
+      "worldX": 176,
+      "worldZ": 48,
+      "destinationZoneId": 498,
+      "destinationName": "Viridian City",
+      "destinationPixelX": 336,
+      "destinationPixelY": 152,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

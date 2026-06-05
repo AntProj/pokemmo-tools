@@ -1,0 +1,238 @@
+{
+  "header": {
+    "id": 450,
+    "name": "Cerulean Cave",
+    "mapName": "0450 - Cerulean Cave",
+    "matrixId": 79
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 136,
+        "y": 416,
+        "targetPng": "0450 - Cerulean Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 8,
+        "yMap": 25,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 904,
+        "y": 288,
+        "targetPng": "0450 - Cerulean Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 24,
+        "yMap": 17,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 200,
+        "y": 528,
+        "targetPng": "0450 - Cerulean Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 12,
+        "yMap": 0,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 632,
+        "y": 544,
+        "targetPng": "0450 - Cerulean Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 7,
+        "yMap": 1,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 856,
+        "y": 288,
+        "targetPng": "0450 - Cerulean Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 21,
+        "yMap": 17,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 872,
+        "y": 288,
+        "targetPng": "0450 - Cerulean Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 22,
+        "yMap": 17,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 424,
+        "y": 320,
+        "targetPng": "0450 - Cerulean Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 26,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 248,
+        "y": 528,
+        "targetPng": "0450 - Cerulean Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 15,
+        "yMap": 0,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 88,
+        "y": 368,
+        "targetPng": "0450 - Cerulean Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 22,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 328,
+        "y": 672,
+        "targetPng": "0450 - Cerulean Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 20,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 456,
+        "y": 736,
+        "targetPng": "0450 - Cerulean Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 28,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 504,
+        "y": 736,
+        "targetPng": "0450 - Cerulean Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 31,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

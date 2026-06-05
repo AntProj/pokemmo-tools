@@ -1,0 +1,181 @@
+{
+  "header": {
+    "id": 177,
+    "name": "SLOWPOKE Well",
+    "mapName": "0177 - SLOWPOKE Well",
+    "matrixId": 46
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0091_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 376,
+        "y": 80,
+        "targetPng": "0177 - SLOWPOKE Well.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 23,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 1,
+      "orientation": "Down",
+      "spriteFile": "ow_0174_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 680,
+        "y": 208,
+        "targetPng": "0177 - SLOWPOKE Well.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 10,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 1,
+      "orientation": "Right",
+      "spriteFile": "ow_0174_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 440,
+        "y": 176,
+        "targetPng": "0177 - SLOWPOKE Well.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 27,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 1,
+      "orientation": "Left",
+      "spriteFile": "ow_0173_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 600,
+        "y": 144,
+        "targetPng": "0177 - SLOWPOKE Well.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0245_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 440,
+        "y": 80,
+        "targetPng": "0177 - SLOWPOKE Well.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 27,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0209_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 504,
+        "y": 128,
+        "targetPng": "0177 - SLOWPOKE Well.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 31,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0209_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 472,
+        "y": 80,
+        "targetPng": "0177 - SLOWPOKE Well.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 29,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0223_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 344,
+        "y": 448,
+        "targetPng": "0177 - SLOWPOKE Well.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 21,
+        "yMap": 26,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 552,
+        "y": 112,
+        "targetPng": "0177 - SLOWPOKE Well.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 2,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

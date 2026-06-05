@@ -1,0 +1,31 @@
+{
+  "zoneId": 101,
+  "displayName": "Route 35",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 120,
+      "pixelY": 256,
+      "worldX": 80,
+      "worldZ": 192,
+      "destinationZoneId": 76,
+      "destinationName": "Goldenrod City",
+      "destinationPixelX": 1128,
+      "destinationPixelY": 116,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 120,
+      "pixelY": 96,
+      "worldX": 80,
+      "worldZ": 32,
+      "destinationZoneId": 39,
+      "destinationName": "Route 35",
+      "destinationPixelX": 376,
+      "destinationPixelY": 984,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

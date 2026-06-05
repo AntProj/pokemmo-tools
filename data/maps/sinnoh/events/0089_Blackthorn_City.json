@@ -1,0 +1,103 @@
+{
+  "zoneId": 89,
+  "displayName": "Blackthorn City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 920,
+      "pixelY": 272,
+      "worldX": 11152,
+      "worldZ": 2304,
+      "destinationZoneId": 120,
+      "destinationName": "Ice Path",
+      "destinationPixelX": 888,
+      "destinationPixelY": 680,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 456,
+      "pixelY": 384,
+      "worldX": 10688,
+      "worldZ": 2416,
+      "destinationZoneId": 141,
+      "destinationName": "Blackthorn City",
+      "destinationPixelX": 216,
+      "destinationPixelY": 1400,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 520,
+      "pixelY": 80,
+      "worldX": 10752,
+      "worldZ": 2112,
+      "destinationZoneId": 125,
+      "destinationName": "Dragon’s Den",
+      "destinationPixelX": 104,
+      "destinationPixelY": 152,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 328,
+      "pixelY": 608,
+      "worldX": 10560,
+      "worldZ": 2640,
+      "destinationZoneId": 289,
+      "destinationName": "Blackthorn City",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 712,
+      "pixelY": 656,
+      "worldX": 10944,
+      "worldZ": 2688,
+      "destinationZoneId": 290,
+      "destinationName": "Blackthorn City",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 440,
+      "pixelY": 784,
+      "worldX": 10672,
+      "worldZ": 2816,
+      "destinationZoneId": 292,
+      "destinationName": "Blackthorn City",
+      "destinationPixelX": 88,
+      "destinationPixelY": 184,
+      "anchor": 0
+    },
+    {
+      "id": "w6",
+      "pixelX": 552,
+      "pixelY": 784,
+      "worldX": 10784,
+      "worldZ": 2816,
+      "destinationZoneId": 293,
+      "destinationName": "Blackthorn City",
+      "destinationPixelX": 152,
+      "destinationPixelY": 312,
+      "anchor": 0
+    },
+    {
+      "id": "w7",
+      "pixelX": 296,
+      "pixelY": 784,
+      "worldX": 10528,
+      "worldZ": 2816,
+      "destinationZoneId": 291,
+      "destinationName": "Blackthorn City",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 418,
+    "name": "Route 2",
+    "mapName": "0418 - Route 2",
+    "matrixId": 69
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0025_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 136,
+        "y": 184,
+        "targetPng": "0418 - Route 2.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0193_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 56,
+        "y": 200,
+        "targetPng": "0418 - Route 2.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 1,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

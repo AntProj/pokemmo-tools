@@ -1,0 +1,111 @@
+{
+  "zoneId": 29,
+  "displayName": "Route 25",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 1528,
+      "pixelY": 104,
+      "worldX": 22512,
+      "worldZ": 608,
+      "destinationZoneId": 440,
+      "destinationName": "Route 25",
+      "destinationPixelX": 232,
+      "destinationPixelY": 280,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 96,
+      "pixelX": 376,
+      "pixelY": 240,
+      "trainerId": 329,
+      "trainerName": "Dudley",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3328,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 97,
+      "pixelX": 552,
+      "pixelY": 288,
+      "trainerId": 419,
+      "trainerName": "Ellen",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3418,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 98,
+      "pixelX": 840,
+      "pixelY": 240,
+      "trainerId": 330,
+      "trainerName": "Joe",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3329,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 99,
+      "pixelX": 968,
+      "pixelY": 240,
+      "trainerId": 354,
+      "trainerName": "Laura",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3353,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 100,
+      "pixelX": 1032,
+      "pixelY": 288,
+      "trainerId": 355,
+      "trainerName": "Shannon",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3354,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 101,
+      "pixelX": 888,
+      "pixelY": 112,
+      "trainerId": 148,
+      "trainerName": "Lloyd",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3147,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t6",
+      "trainerInstanceId": 102,
+      "pixelX": 1160,
+      "pixelY": 192,
+      "trainerId": 366,
+      "trainerName": "Pat",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3365,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

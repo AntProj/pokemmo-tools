@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 389,
+    "name": "Route 6",
+    "mapName": "0389 - Route 6",
+    "matrixId": 69
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0193_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 56,
+        "y": 200,
+        "targetPng": "0389 - Route 6.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 1,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "zoneId": 42,
+  "displayName": "Route 38",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 1032,
+      "pixelY": 120,
+      "worldX": 5616,
+      "worldZ": 2656,
+      "destinationZoneId": 172,
+      "destinationName": "Route 38",
+      "destinationPixelX": 32,
+      "destinationPixelY": 120,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 1032,
+      "pixelY": 136,
+      "worldX": 5616,
+      "worldZ": 2672,
+      "destinationZoneId": 172,
+      "destinationName": "Route 38",
+      "destinationPixelX": 32,
+      "destinationPixelY": 120,
+      "anchor": 1
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 150,
+      "pixelX": 200,
+      "pixelY": 48,
+      "trainerId": 397,
+      "trainerName": "Chad",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3396,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 151,
+      "pixelX": 536,
+      "pixelY": 240,
+      "trainerId": 82,
+      "trainerName": "Toby",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3081,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 152,
+      "pixelX": 552,
+      "pixelY": 64,
+      "trainerId": 400,
+      "trainerName": "Dana",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3399,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 153,
+      "pixelX": 376,
+      "pixelY": 160,
+      "trainerId": 398,
+      "trainerName": "Valerie",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3397,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 154,
+      "pixelX": 792,
+      "pixelY": 128,
+      "trainerId": 410,
+      "trainerName": "Harry",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3409,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

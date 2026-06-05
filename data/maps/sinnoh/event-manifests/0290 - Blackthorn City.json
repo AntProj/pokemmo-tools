@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 290,
+    "name": "Blackthorn City",
+    "mapName": "0290 - Blackthorn City",
+    "matrixId": 95
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0117_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 96,
+        "targetPng": "0290 - Blackthorn City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0123_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 168,
+        "y": 96,
+        "targetPng": "0290 - Blackthorn City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 8,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

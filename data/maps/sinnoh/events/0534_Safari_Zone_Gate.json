@@ -1,0 +1,31 @@
+{
+  "zoneId": 534,
+  "displayName": "Safari Zone Gate",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 152,
+      "pixelY": 312,
+      "worldX": 128,
+      "worldZ": 304,
+      "destinationZoneId": 174,
+      "destinationName": "Safari Zone Gate",
+      "destinationPixelX": 296,
+      "destinationPixelY": 744,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 248,
+      "pixelY": 280,
+      "worldX": 224,
+      "worldZ": 272,
+      "destinationZoneId": 535,
+      "destinationName": "Safari Zone Gate",
+      "destinationPixelX": 248,
+      "destinationPixelY": 168,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

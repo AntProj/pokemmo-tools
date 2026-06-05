@@ -1,0 +1,409 @@
+{
+  "header": {
+    "id": 76,
+    "name": "Goldenrod City",
+    "mapName": "0076 - Goldenrod City",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0124_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1208,
+        "y": 876,
+        "targetPng": "0076 - Goldenrod City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 11,
+        "yMatrix": 11,
+        "xMap": 11,
+        "yMap": 20,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0128_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 904,
+        "y": 844,
+        "targetPng": "0076 - Goldenrod City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 10,
+        "yMatrix": 11,
+        "xMap": 24,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0067_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1320,
+        "y": 556,
+        "targetPng": "0076 - Goldenrod City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 11,
+        "yMatrix": 11,
+        "xMap": 18,
+        "yMap": 0,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0067_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1096,
+        "y": 588,
+        "targetPng": "0076 - Goldenrod City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 11,
+        "yMatrix": 11,
+        "xMap": 4,
+        "yMap": 2,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0174_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 856,
+        "y": 540,
+        "targetPng": "0076 - Goldenrod City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 10,
+        "yMatrix": 10,
+        "xMap": 21,
+        "yMap": 31,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0126_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 920,
+        "y": 572,
+        "targetPng": "0076 - Goldenrod City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 10,
+        "yMatrix": 11,
+        "xMap": 25,
+        "yMap": 1,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0124_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1032,
+        "y": 540,
+        "targetPng": "0076 - Goldenrod City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 11,
+        "yMatrix": 10,
+        "xMap": 0,
+        "yMap": 31,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0117_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1096,
+        "y": 300,
+        "targetPng": "0076 - Goldenrod City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 11,
+        "yMatrix": 10,
+        "xMap": 4,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0174_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1128,
+        "y": 140,
+        "targetPng": "0076 - Goldenrod City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 11,
+        "yMatrix": 10,
+        "xMap": 6,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0174_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1144,
+        "y": 140,
+        "targetPng": "0076 - Goldenrod City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 11,
+        "yMatrix": 10,
+        "xMap": 7,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0174_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1336,
+        "y": 252,
+        "targetPng": "0076 - Goldenrod City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 11,
+        "yMatrix": 10,
+        "xMap": 19,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0174_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1416,
+        "y": 300,
+        "targetPng": "0076 - Goldenrod City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 11,
+        "yMatrix": 10,
+        "xMap": 24,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 12,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0174_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1288,
+        "y": 652,
+        "targetPng": "0076 - Goldenrod City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 11,
+        "yMatrix": 11,
+        "xMap": 16,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 13,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0174_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1304,
+        "y": 652,
+        "targetPng": "0076 - Goldenrod City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 11,
+        "yMatrix": 11,
+        "xMap": 17,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 14,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0174_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1064,
+        "y": 700,
+        "targetPng": "0076 - Goldenrod City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 11,
+        "yMatrix": 11,
+        "xMap": 2,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 15,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0174_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1144,
+        "y": 956,
+        "targetPng": "0076 - Goldenrod City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 11,
+        "yMatrix": 11,
+        "xMap": 7,
+        "yMap": 25,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 16,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0174_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 456,
+        "y": 508,
+        "targetPng": "0076 - Goldenrod City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 9,
+        "yMatrix": 10,
+        "xMap": 28,
+        "yMap": 29,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 17,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0174_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 936,
+        "y": 524,
+        "targetPng": "0076 - Goldenrod City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 10,
+        "yMatrix": 10,
+        "xMap": 26,
+        "yMap": 30,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 18,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0174_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1256,
+        "y": 300,
+        "targetPng": "0076 - Goldenrod City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 11,
+        "yMatrix": 10,
+        "xMap": 14,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 19,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0124_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1256,
+        "y": 284,
+        "targetPng": "0076 - Goldenrod City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 11,
+        "yMatrix": 10,
+        "xMap": 14,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 20,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0124_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1256,
+        "y": 284,
+        "targetPng": "0076 - Goldenrod City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 11,
+        "yMatrix": 10,
+        "xMap": 14,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

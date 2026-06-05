@@ -1,0 +1,43 @@
+{
+  "zoneId": 330,
+  "displayName": "Olivine City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 376,
+      "pixelY": 456,
+      "worldX": 256,
+      "worldZ": 240,
+      "destinationZoneId": 240,
+      "destinationName": "Olivine City",
+      "destinationPixelX": 136,
+      "destinationPixelY": 184,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 552,
+      "pixelY": 536,
+      "worldX": 432,
+      "worldZ": 320,
+      "destinationZoneId": 307,
+      "destinationName": "S.S. Aqua",
+      "destinationPixelX": 512,
+      "destinationPixelY": 408,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 296,
+      "pixelY": 424,
+      "worldX": 176,
+      "worldZ": 208,
+      "destinationZoneId": 240,
+      "destinationName": "Olivine City",
+      "destinationPixelX": 40,
+      "destinationPixelY": 120,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

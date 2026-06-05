@@ -1,0 +1,91 @@
+{
+  "zoneId": 411,
+  "displayName": "Frontier Access",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 488,
+      "pixelY": 591,
+      "worldX": 224,
+      "worldZ": 544,
+      "destinationZoneId": 366,
+      "destinationName": "Route 40",
+      "destinationPixelX": 120,
+      "destinationPixelY": 96,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 504,
+      "pixelY": 591,
+      "worldX": 240,
+      "worldZ": 544,
+      "destinationZoneId": 366,
+      "destinationName": "Route 40",
+      "destinationPixelX": 120,
+      "destinationPixelY": 96,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 488,
+      "pixelY": 159,
+      "worldX": 224,
+      "worldZ": 112,
+      "destinationZoneId": 273,
+      "destinationName": "Battle Frontier",
+      "destinationPixelX": 152,
+      "destinationPixelY": 328,
+      "anchor": 4
+    },
+    {
+      "id": "w3",
+      "pixelX": 504,
+      "pixelY": 159,
+      "worldX": 240,
+      "worldZ": 112,
+      "destinationZoneId": 273,
+      "destinationName": "Battle Frontier",
+      "destinationPixelX": 152,
+      "destinationPixelY": 328,
+      "anchor": 4
+    },
+    {
+      "id": "w4",
+      "pixelX": 392,
+      "pixelY": 271,
+      "worldX": 128,
+      "worldZ": 224,
+      "destinationZoneId": 528,
+      "destinationName": "Frontier Access",
+      "destinationPixelX": 152,
+      "destinationPixelY": 312,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 568,
+      "pixelY": 271,
+      "worldX": 304,
+      "worldZ": 224,
+      "destinationZoneId": 530,
+      "destinationName": "Frontier Access",
+      "destinationPixelX": 88,
+      "destinationPixelY": 184,
+      "anchor": 0
+    },
+    {
+      "id": "w6",
+      "pixelX": 328,
+      "pixelY": 415,
+      "worldX": 64,
+      "worldZ": 368,
+      "destinationZoneId": 531,
+      "destinationName": "Frontier Access",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

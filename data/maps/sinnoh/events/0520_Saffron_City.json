@@ -1,0 +1,19 @@
+{
+  "zoneId": 520,
+  "displayName": "Saffron City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 1048,
+      "pixelY": 232,
+      "worldX": 336,
+      "worldZ": 224,
+      "destinationZoneId": 400,
+      "destinationName": "Saffron City",
+      "destinationPixelX": 99,
+      "destinationPixelY": 56,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

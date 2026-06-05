@@ -1,0 +1,19 @@
+{
+  "zoneId": 288,
+  "displayName": "Dragon’s Den",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 104,
+      "pixelY": 312,
+      "worldX": 96,
+      "worldZ": 304,
+      "destinationZoneId": 253,
+      "destinationName": "Dragon’s Den",
+      "destinationPixelX": 456,
+      "destinationPixelY": 808,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

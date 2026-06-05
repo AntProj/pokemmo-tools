@@ -1,0 +1,219 @@
+{
+  "header": {
+    "id": 244,
+    "name": "Whirl Islands",
+    "mapName": "0244 - Whirl Islands",
+    "matrixId": 144
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0180_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 296,
+        "y": 603,
+        "targetPng": "0244 - Whirl Islands.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 17,
+        "yMap": 1,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0180_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 312,
+        "y": 603,
+        "targetPng": "0244 - Whirl Islands.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 18,
+        "yMap": 1,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0180_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 264,
+        "y": 603,
+        "targetPng": "0244 - Whirl Islands.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 15,
+        "yMap": 1,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0180_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 248,
+        "y": 603,
+        "targetPng": "0244 - Whirl Islands.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 14,
+        "yMap": 1,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0180_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 280,
+        "y": 603,
+        "targetPng": "0244 - Whirl Islands.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 16,
+        "yMap": 1,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0211_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 280,
+        "y": 347,
+        "targetPng": "0244 - Whirl Islands.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 16,
+        "yMap": 17,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0243_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 264,
+        "y": 347,
+        "targetPng": "0244 - Whirl Islands.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 15,
+        "yMap": 17,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0243_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 296,
+        "y": 347,
+        "targetPng": "0244 - Whirl Islands.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 17,
+        "yMap": 17,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0243_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 264,
+        "y": 331,
+        "targetPng": "0244 - Whirl Islands.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 15,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0243_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 280,
+        "y": 331,
+        "targetPng": "0244 - Whirl Islands.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 16,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0243_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 296,
+        "y": 331,
+        "targetPng": "0244 - Whirl Islands.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 17,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

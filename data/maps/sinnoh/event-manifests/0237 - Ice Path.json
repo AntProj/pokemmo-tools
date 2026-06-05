@@ -1,0 +1,124 @@
+{
+  "header": {
+    "id": 237,
+    "name": "Ice Path",
+    "mapName": "0237 - Ice Path",
+    "matrixId": 133
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0091_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 200,
+        "y": 240,
+        "targetPng": "0237 - Ice Path.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 10,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0091_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 248,
+        "y": 256,
+        "targetPng": "0237 - Ice Path.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 13,
+        "yMap": 14,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0091_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 328,
+        "y": 224,
+        "targetPng": "0237 - Ice Path.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 18,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0091_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 440,
+        "y": 224,
+        "targetPng": "0237 - Ice Path.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 25,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0091_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 232,
+        "y": 736,
+        "targetPng": "0237 - Ice Path.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 12,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 248,
+        "y": 800,
+        "targetPng": "0237 - Ice Path.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 13,
+        "yMap": 16,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

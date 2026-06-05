@@ -1,0 +1,124 @@
+{
+  "header": {
+    "id": 154,
+    "name": "Union Cave",
+    "mapName": "0154 - Union Cave",
+    "matrixId": 44
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 1,
+      "orientation": "Left",
+      "spriteFile": "ow_0122_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 408,
+        "y": 1264,
+        "targetPng": "0154 - Union Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 2,
+        "xMap": 24,
+        "yMap": 13,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 1,
+      "orientation": "Down",
+      "spriteFile": "ow_0125_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 1024,
+        "targetPng": "0154 - Union Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 6,
+        "yMap": 30,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 1,
+      "orientation": "Down",
+      "spriteFile": "ow_0125_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 88,
+        "y": 1360,
+        "targetPng": "0154 - Union Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 2,
+        "xMap": 4,
+        "yMap": 19,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0228_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 312,
+        "y": 1440,
+        "targetPng": "0154 - Union Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 2,
+        "xMap": 18,
+        "yMap": 24,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 424,
+        "y": 720,
+        "targetPng": "0154 - Union Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 25,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 296,
+        "y": 1200,
+        "targetPng": "0154 - Union Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 2,
+        "xMap": 17,
+        "yMap": 9,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

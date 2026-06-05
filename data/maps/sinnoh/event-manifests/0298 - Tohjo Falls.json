@@ -1,0 +1,124 @@
+{
+  "header": {
+    "id": 298,
+    "name": "Tohjo Falls",
+    "mapName": "0298 - Tohjo Falls",
+    "matrixId": 164
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 88,
+        "y": 64,
+        "targetPng": "0298 - Tohjo Falls.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 136,
+        "y": 80,
+        "targetPng": "0298 - Tohjo Falls.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 8,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 72,
+        "y": 144,
+        "targetPng": "0298 - Tohjo Falls.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 4,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0092_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 56,
+        "y": 128,
+        "targetPng": "0298 - Tohjo Falls.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0225_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 200,
+        "y": 64,
+        "targetPng": "0298 - Tohjo Falls.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 12,
+        "yMap": 3,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_3d_dawn_platinum.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 200,
+        "y": 80,
+        "targetPng": "0298 - Tohjo Falls.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 12,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

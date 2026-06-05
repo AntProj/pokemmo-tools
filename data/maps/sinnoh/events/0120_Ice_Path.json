@@ -1,0 +1,55 @@
+{
+  "zoneId": 120,
+  "displayName": "Ice Path",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 184,
+      "pixelY": 968,
+      "worldX": 176,
+      "worldZ": 928,
+      "destinationZoneId": 46,
+      "destinationName": "Route 44",
+      "destinationPixelX": 1448,
+      "destinationPixelY": 195,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 888,
+      "pixelY": 680,
+      "worldX": 880,
+      "worldZ": 640,
+      "destinationZoneId": 89,
+      "destinationName": "Blackthorn City",
+      "destinationPixelX": 920,
+      "destinationPixelY": 272,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 888,
+      "pixelY": 152,
+      "worldX": 880,
+      "worldZ": 112,
+      "destinationZoneId": 237,
+      "destinationName": "Ice Path",
+      "destinationPixelX": 136,
+      "destinationPixelY": 360,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 888,
+      "pixelY": 360,
+      "worldX": 880,
+      "worldZ": 320,
+      "destinationZoneId": 237,
+      "destinationName": "Ice Path",
+      "destinationPixelX": 136,
+      "destinationPixelY": 696,
+      "anchor": 4
+    }
+  ],
+  "trainers": []
+}

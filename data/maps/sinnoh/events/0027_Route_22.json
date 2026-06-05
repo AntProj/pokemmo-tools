@@ -1,0 +1,31 @@
+{
+  "zoneId": 27,
+  "displayName": "Route 22",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 142,
+      "pixelY": 168,
+      "worldX": 14976,
+      "worldZ": 4256,
+      "destinationZoneId": 299,
+      "destinationName": "Route 26",
+      "destinationPixelX": 344,
+      "destinationPixelY": 136,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 142,
+      "pixelY": 184,
+      "worldX": 14976,
+      "worldZ": 4272,
+      "destinationZoneId": 299,
+      "destinationName": "Route 26",
+      "destinationPixelX": 344,
+      "destinationPixelY": 136,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,58 @@
+{
+  "zoneId": 396,
+  "displayName": "Mahogany Town",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 760,
+      "pixelY": 280,
+      "worldX": 96,
+      "worldZ": 240,
+      "destinationZoneId": 397,
+      "destinationName": "Mahogany Town",
+      "destinationPixelX": 384,
+      "destinationPixelY": 60,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 760,
+      "pixelY": 72,
+      "worldX": 96,
+      "worldZ": 32,
+      "destinationZoneId": 140,
+      "destinationName": "Mahogany Town",
+      "destinationPixelX": 116,
+      "destinationPixelY": 336,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t2",
+      "trainerInstanceId": 380,
+      "pixelX": 696,
+      "pixelY": 240,
+      "trainerId": 480,
+      "trainerName": "Diana",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3479,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 381,
+      "pixelX": 840,
+      "pixelY": 240,
+      "trainerId": 483,
+      "trainerName": "Patton",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3482,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

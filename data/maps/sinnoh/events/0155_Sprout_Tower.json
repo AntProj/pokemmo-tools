@@ -1,0 +1,82 @@
+{
+  "zoneId": 155,
+  "displayName": "Sprout Tower",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 184,
+      "pixelY": 232,
+      "worldX": 176,
+      "worldZ": 224,
+      "destinationZoneId": 110,
+      "destinationName": "Sprout Tower",
+      "destinationPixelX": 168,
+      "destinationPixelY": 248,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 392,
+      "pixelY": 152,
+      "worldX": 384,
+      "worldZ": 144,
+      "destinationZoneId": 110,
+      "destinationName": "Sprout Tower",
+      "destinationPixelX": 392,
+      "destinationPixelY": 152,
+      "anchor": 2
+    },
+    {
+      "id": "w2",
+      "pixelX": 104,
+      "pixelY": 264,
+      "worldX": 96,
+      "worldZ": 256,
+      "destinationZoneId": 110,
+      "destinationName": "Sprout Tower",
+      "destinationPixelX": 104,
+      "destinationPixelY": 264,
+      "anchor": 3
+    },
+    {
+      "id": "w3",
+      "pixelX": 248,
+      "pixelY": 440,
+      "worldX": 240,
+      "worldZ": 432,
+      "destinationZoneId": 156,
+      "destinationName": "Sprout Tower",
+      "destinationPixelX": 248,
+      "destinationPixelY": 440,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 280,
+      "pixelX": 328,
+      "pixelY": 224,
+      "trainerId": 51,
+      "trainerName": "Nico",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3050,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 281,
+      "pixelX": 216,
+      "pixelY": 448,
+      "trainerId": 52,
+      "trainerName": "Edmond",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3051,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

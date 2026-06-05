@@ -1,0 +1,46 @@
+{
+  "zoneId": 473,
+  "displayName": "Pewter City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 219,
+      "pixelY": 440,
+      "worldX": 112,
+      "worldZ": 432,
+      "destinationZoneId": 51,
+      "destinationName": "Pewter City",
+      "destinationPixelX": 472,
+      "destinationPixelY": 472,
+      "anchor": 2
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t2",
+      "trainerInstanceId": 394,
+      "pixelX": 203,
+      "pixelY": 336,
+      "trainerId": 308,
+      "trainerName": "Jerry",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3307,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 395,
+      "pixelX": 235,
+      "pixelY": 240,
+      "trainerId": 685,
+      "trainerName": "Edwin",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3684,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

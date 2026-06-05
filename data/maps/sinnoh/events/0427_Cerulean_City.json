@@ -1,0 +1,72 @@
+{
+  "zoneId": 427,
+  "displayName": "Cerulean City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 169,
+      "pixelY": 408,
+      "worldX": 160,
+      "worldZ": 400,
+      "destinationZoneId": 52,
+      "destinationName": "Cerulean City",
+      "destinationPixelX": 632,
+      "destinationPixelY": 652,
+      "anchor": 4
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t1",
+      "trainerInstanceId": 387,
+      "pixelX": 121,
+      "pixelY": 272,
+      "trainerId": 297,
+      "trainerName": "Diana",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3296,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 388,
+      "pixelX": 233,
+      "pixelY": 176,
+      "trainerId": 298,
+      "trainerName": "Briana",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3297,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 389,
+      "pixelX": 313,
+      "pixelY": 144,
+      "trainerId": 677,
+      "trainerName": "Eddie",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3676,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 390,
+      "pixelX": 297,
+      "pixelY": 304,
+      "trainerId": 676,
+      "trainerName": "Parker",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3675,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "zoneId": 498,
+  "displayName": "Viridian City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 208,
+      "pixelY": 344,
+      "worldX": 80,
+      "worldZ": 240,
+      "destinationZoneId": 50,
+      "destinationName": "Viridian City",
+      "destinationPixelX": 712,
+      "destinationPixelY": 488,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 336,
+      "pixelY": 152,
+      "worldX": 208,
+      "worldZ": 48,
+      "destinationZoneId": 499,
+      "destinationName": "Viridian City",
+      "destinationPixelX": 304,
+      "destinationPixelY": 152,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

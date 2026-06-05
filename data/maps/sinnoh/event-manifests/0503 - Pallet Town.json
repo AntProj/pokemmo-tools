@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 503,
+    "name": "Pallet Town",
+    "mapName": "0503 - Pallet Town",
+    "matrixId": 246
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0192_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 136,
+        "y": 112,
+        "targetPng": "0503 - Pallet Town.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 6,
+        "yMap": 6,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

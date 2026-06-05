@@ -1,0 +1,43 @@
+{
+  "zoneId": 115,
+  "displayName": "Lighthouse",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 152,
+      "pixelY": 280,
+      "worldX": 128,
+      "worldZ": 272,
+      "destinationZoneId": 77,
+      "destinationName": "Olivine City",
+      "destinationPixelX": 744,
+      "destinationPixelY": 648,
+      "anchor": 3
+    },
+    {
+      "id": "w1",
+      "pixelX": 152,
+      "pixelY": 72,
+      "worldX": 128,
+      "worldZ": 64,
+      "destinationZoneId": 446,
+      "destinationName": "Lighthouse",
+      "destinationPixelX": 88,
+      "destinationPixelY": 104,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 56,
+      "pixelY": 56,
+      "worldX": 32,
+      "worldZ": 48,
+      "destinationZoneId": 220,
+      "destinationName": "Lighthouse",
+      "destinationPixelX": 104,
+      "destinationPixelY": 56,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,79 @@
+{
+  "zoneId": 51,
+  "displayName": "Pewter City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 488,
+      "pixelY": 248,
+      "worldX": 16768,
+      "worldZ": 1248,
+      "destinationZoneId": 471,
+      "destinationName": "Pewter City",
+      "destinationPixelX": 280,
+      "destinationPixelY": 408,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 808,
+      "pixelY": 392,
+      "worldX": 17088,
+      "worldZ": 1392,
+      "destinationZoneId": 472,
+      "destinationName": "Pewter City",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 472,
+      "pixelY": 472,
+      "worldX": 16752,
+      "worldZ": 1472,
+      "destinationZoneId": 473,
+      "destinationName": "Pewter City",
+      "destinationPixelX": 219,
+      "destinationPixelY": 440,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 680,
+      "pixelY": 552,
+      "worldX": 16960,
+      "worldZ": 1552,
+      "destinationZoneId": 474,
+      "destinationName": "Pewter City",
+      "destinationPixelX": 88,
+      "destinationPixelY": 184,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 488,
+      "pixelY": 696,
+      "worldX": 16768,
+      "worldZ": 1696,
+      "destinationZoneId": 475,
+      "destinationName": "Pewter City",
+      "destinationPixelX": 152,
+      "destinationPixelY": 312,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 312,
+      "pixelY": 776,
+      "worldX": 16592,
+      "worldZ": 1776,
+      "destinationZoneId": 477,
+      "destinationName": "Pewter City",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,43 @@
+{
+  "zoneId": 111,
+  "displayName": "Bell Tower",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 248,
+      "pixelY": 424,
+      "worldX": 240,
+      "worldZ": 416,
+      "destinationZoneId": 6,
+      "destinationName": "Bellchime Trail",
+      "destinationPixelX": 610,
+      "destinationPixelY": 520,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 152,
+      "pixelY": 136,
+      "worldX": 144,
+      "worldZ": 128,
+      "destinationZoneId": 332,
+      "destinationName": "Bell Tower",
+      "destinationPixelX": 152,
+      "destinationPixelY": 152,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 152,
+      "pixelY": 120,
+      "worldX": 144,
+      "worldZ": 112,
+      "destinationZoneId": 332,
+      "destinationName": "Bell Tower",
+      "destinationPixelX": 152,
+      "destinationPixelY": 152,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

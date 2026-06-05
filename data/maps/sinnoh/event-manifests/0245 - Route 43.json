@@ -1,0 +1,67 @@
+{
+  "header": {
+    "id": 245,
+    "name": "Route 43",
+    "mapName": "0245 - Route 43",
+    "matrixId": 69
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0174_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 88,
+        "y": 200,
+        "targetPng": "0245 - Route 43.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0174_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 152,
+        "y": 200,
+        "targetPng": "0245 - Route 43.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 7,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0193_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 56,
+        "y": 200,
+        "targetPng": "0245 - Route 43.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 1,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

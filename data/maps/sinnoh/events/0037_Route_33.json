@@ -1,0 +1,33 @@
+{
+  "zoneId": 37,
+  "displayName": "Route 33",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 328,
+      "pixelY": 232,
+      "worldX": 7472,
+      "worldZ": 7376,
+      "destinationZoneId": 99,
+      "destinationName": "Union Cave",
+      "destinationPixelX": 456,
+      "destinationPixelY": 1512,
+      "anchor": 2
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 127,
+      "pixelX": 184,
+      "pixelY": 336,
+      "trainerId": 61,
+      "trainerName": "Anthony",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3060,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

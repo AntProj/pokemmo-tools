@@ -1,0 +1,276 @@
+{
+  "header": {
+    "id": 55,
+    "name": "Celadon City",
+    "mapName": "0055 - Celadon City",
+    "matrixId": 0
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0130_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 728,
+        "y": 272,
+        "targetPng": "0055 - Celadon City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 38,
+        "yMatrix": 7,
+        "xMap": 12,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0360_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 744,
+        "y": 272,
+        "targetPng": "0055 - Celadon City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 38,
+        "yMatrix": 7,
+        "xMap": 13,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0067_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 584,
+        "y": 304,
+        "targetPng": "0055 - Celadon City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 38,
+        "yMatrix": 7,
+        "xMap": 3,
+        "yMap": 17,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0124_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 248,
+        "y": 320,
+        "targetPng": "0055 - Celadon City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 37,
+        "yMatrix": 7,
+        "xMap": 14,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0117_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 392,
+        "y": 512,
+        "targetPng": "0055 - Celadon City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 37,
+        "yMatrix": 7,
+        "xMap": 23,
+        "yMap": 30,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0123_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 568,
+        "y": 512,
+        "targetPng": "0055 - Celadon City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 38,
+        "yMatrix": 7,
+        "xMap": 2,
+        "yMap": 30,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0115_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 648,
+        "y": 704,
+        "targetPng": "0055 - Celadon City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 38,
+        "yMatrix": 8,
+        "xMap": 7,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0128_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 264,
+        "y": 736,
+        "targetPng": "0055 - Celadon City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 37,
+        "yMatrix": 8,
+        "xMap": 15,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0128_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 456,
+        "y": 448,
+        "targetPng": "0055 - Celadon City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 37,
+        "yMatrix": 7,
+        "xMap": 27,
+        "yMap": 26,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0165_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 280,
+        "y": 464,
+        "targetPng": "0055 - Celadon City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 37,
+        "yMatrix": 7,
+        "xMap": 16,
+        "yMap": 27,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0151_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 296,
+        "y": 464,
+        "targetPng": "0055 - Celadon City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 37,
+        "yMatrix": 7,
+        "xMap": 17,
+        "yMap": 27,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0093_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 712,
+        "y": 720,
+        "targetPng": "0055 - Celadon City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 38,
+        "yMatrix": 8,
+        "xMap": 11,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 12,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 200,
+        "y": 64,
+        "targetPng": "0055 - Celadon City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 37,
+        "yMatrix": 7,
+        "xMap": 11,
+        "yMap": 2,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 13,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0126_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 280,
+        "y": 544,
+        "targetPng": "0055 - Celadon City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 37,
+        "yMatrix": 8,
+        "xMap": 16,
+        "yMap": 0,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

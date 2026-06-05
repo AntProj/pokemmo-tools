@@ -1,0 +1,31 @@
+{
+  "zoneId": 181,
+  "displayName": "SLOWPOKE Well",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 232,
+      "pixelY": 344,
+      "worldX": 208,
+      "worldZ": 320,
+      "destinationZoneId": 177,
+      "destinationName": "SLOWPOKE Well",
+      "destinationPixelX": 440,
+      "destinationPixelY": 344,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 232,
+      "pixelY": 328,
+      "worldX": 208,
+      "worldZ": 304,
+      "destinationZoneId": 177,
+      "destinationName": "SLOWPOKE Well",
+      "destinationPixelX": 440,
+      "destinationPixelY": 344,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

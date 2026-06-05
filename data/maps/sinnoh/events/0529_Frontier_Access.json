@@ -1,0 +1,19 @@
+{
+  "zoneId": 529,
+  "displayName": "Frontier Access",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 248,
+      "pixelY": 168,
+      "worldX": 224,
+      "worldZ": 160,
+      "destinationZoneId": 528,
+      "destinationName": "Frontier Access",
+      "destinationPixelX": 248,
+      "destinationPixelY": 280,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

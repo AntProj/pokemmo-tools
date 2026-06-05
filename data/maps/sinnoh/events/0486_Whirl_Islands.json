@@ -1,0 +1,19 @@
+{
+  "zoneId": 486,
+  "displayName": "Whirl Islands",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 312,
+      "pixelY": 611,
+      "worldX": 256,
+      "worldZ": 464,
+      "destinationZoneId": 243,
+      "destinationName": "Whirl Islands",
+      "destinationPixelX": 536,
+      "destinationPixelY": 584,
+      "anchor": 4
+    }
+  ],
+  "trainers": []
+}

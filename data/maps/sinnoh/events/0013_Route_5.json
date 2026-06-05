@@ -1,0 +1,55 @@
+{
+  "zoneId": 13,
+  "displayName": "Route 5",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 344,
+      "pixelY": 503,
+      "worldX": 20800,
+      "worldZ": 3024,
+      "destinationZoneId": 391,
+      "destinationName": "Route 5",
+      "destinationPixelX": 120,
+      "destinationPixelY": 96,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 360,
+      "pixelY": 503,
+      "worldX": 20816,
+      "worldZ": 3024,
+      "destinationZoneId": 391,
+      "destinationName": "Route 5",
+      "destinationPixelX": 120,
+      "destinationPixelY": 96,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 440,
+      "pixelY": 439,
+      "worldX": 20896,
+      "worldZ": 2960,
+      "destinationZoneId": 469,
+      "destinationName": "Route 5",
+      "destinationPixelX": 120,
+      "destinationPixelY": 152,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 296,
+      "pixelY": 215,
+      "worldX": 20752,
+      "worldZ": 2736,
+      "destinationZoneId": 517,
+      "destinationName": "Route 5",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

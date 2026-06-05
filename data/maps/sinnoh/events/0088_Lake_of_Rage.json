@@ -1,0 +1,84 @@
+{
+  "zoneId": 88,
+  "displayName": "Lake of Rage",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 296,
+      "pixelY": 184,
+      "worldX": 7952,
+      "worldZ": 672,
+      "destinationZoneId": 294,
+      "destinationName": "Lake of Rage",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 920,
+      "pixelY": 936,
+      "worldX": 8576,
+      "worldZ": 1424,
+      "destinationZoneId": 295,
+      "destinationName": "Lake of Rage",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t4",
+      "trainerInstanceId": 189,
+      "pixelX": 904,
+      "pixelY": 800,
+      "trainerId": 126,
+      "trainerName": "Andre",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3125,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 190,
+      "pixelX": 1032,
+      "pixelY": 720,
+      "trainerId": 127,
+      "trainerName": "Raymond",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3126,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t6",
+      "trainerInstanceId": 191,
+      "pixelX": 280,
+      "pixelY": 640,
+      "trainerId": 109,
+      "trainerName": "Alton",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3108,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t7",
+      "trainerInstanceId": 192,
+      "pixelX": 1144,
+      "pixelY": 400,
+      "trainerId": 116,
+      "trainerName": "Lois",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3115,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "zoneId": 180,
+  "displayName": "Azalea Town",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 192,
+      "pixelY": 624,
+      "worldX": 144,
+      "worldZ": 592,
+      "destinationZoneId": 136,
+      "destinationName": "Azalea Town",
+      "destinationPixelX": 136,
+      "destinationPixelY": 56,
+      "anchor": 1
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 288,
+      "pixelX": 288,
+      "pixelY": 392,
+      "trainerId": 68,
+      "trainerName": "Al",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3067,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 289,
+      "pixelX": 160,
+      "pixelY": 360,
+      "trainerId": 67,
+      "trainerName": "Benny",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3066,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 290,
+      "pixelX": 96,
+      "pixelY": 152,
+      "trainerId": 10,
+      "trainerName": "Amy & Mimi",
+      "orientation": "Down",
+      "isDoubleBattlePartner": true,
+      "scriptNumber": 5009,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 291,
+      "pixelX": 80,
+      "pixelY": 152,
+      "trainerId": 10,
+      "trainerName": "Amy & Mimi",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3009,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 292,
+      "pixelX": 288,
+      "pixelY": 152,
+      "trainerId": 69,
+      "trainerName": "Josh",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3068,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

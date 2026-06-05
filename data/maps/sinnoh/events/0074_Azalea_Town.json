@@ -1,0 +1,103 @@
+{
+  "zoneId": 74,
+  "displayName": "Azalea Town",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 152,
+      "pixelY": 248,
+      "worldX": 6272,
+      "worldZ": 7392,
+      "destinationZoneId": 100,
+      "destinationName": "Azalea Town",
+      "destinationPixelX": 176,
+      "destinationPixelY": 120,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 152,
+      "pixelY": 264,
+      "worldX": 6272,
+      "worldZ": 7408,
+      "destinationZoneId": 100,
+      "destinationName": "Azalea Town",
+      "destinationPixelX": 176,
+      "destinationPixelY": 120,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 360,
+      "pixelY": 392,
+      "worldX": 6480,
+      "worldZ": 7536,
+      "destinationZoneId": 136,
+      "destinationName": "Azalea Town",
+      "destinationPixelX": 136,
+      "destinationPixelY": 184,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 440,
+      "pixelY": 216,
+      "worldX": 6560,
+      "worldZ": 7360,
+      "destinationZoneId": 166,
+      "destinationName": "Azalea Town",
+      "destinationPixelX": 152,
+      "destinationPixelY": 312,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 584,
+      "pixelY": 344,
+      "worldX": 6704,
+      "worldZ": 7488,
+      "destinationZoneId": 163,
+      "destinationName": "Azalea Town",
+      "destinationPixelX": 101,
+      "destinationPixelY": 152,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 584,
+      "pixelY": 168,
+      "worldX": 6704,
+      "worldZ": 7312,
+      "destinationZoneId": 165,
+      "destinationName": "Azalea Town",
+      "destinationPixelX": 88,
+      "destinationPixelY": 184,
+      "anchor": 0
+    },
+    {
+      "id": "w6",
+      "pixelX": 264,
+      "pixelY": 120,
+      "worldX": 6384,
+      "worldZ": 7264,
+      "destinationZoneId": 164,
+      "destinationName": "Azalea Town",
+      "destinationPixelX": 88,
+      "destinationPixelY": 152,
+      "anchor": 0
+    },
+    {
+      "id": "w7",
+      "pixelX": 808,
+      "pixelY": 120,
+      "worldX": 6928,
+      "worldZ": 7264,
+      "destinationZoneId": 114,
+      "destinationName": "SLOWPOKE Well",
+      "destinationPixelX": 280,
+      "destinationPixelY": 88,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

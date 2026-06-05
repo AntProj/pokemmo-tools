@@ -1,0 +1,19 @@
+{
+  "zoneId": 163,
+  "displayName": "Azalea Town",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 101,
+      "pixelY": 152,
+      "worldX": 64,
+      "worldZ": 144,
+      "destinationZoneId": 74,
+      "destinationName": "Azalea Town",
+      "destinationPixelX": 584,
+      "destinationPixelY": 344,
+      "anchor": 4
+    }
+  ],
+  "trainers": []
+}

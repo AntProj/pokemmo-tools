@@ -1,0 +1,84 @@
+{
+  "zoneId": 186,
+  "displayName": "Radio Tower",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 416,
+      "pixelY": 120,
+      "worldX": 368,
+      "worldZ": 80,
+      "destinationZoneId": 112,
+      "destinationName": "Radio Tower",
+      "destinationPixelX": 420,
+      "destinationPixelY": 104,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 96,
+      "pixelY": 120,
+      "worldX": 48,
+      "worldZ": 80,
+      "destinationZoneId": 187,
+      "destinationName": "Radio Tower",
+      "destinationPixelX": 96,
+      "destinationPixelY": 104,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t4",
+      "trainerInstanceId": 293,
+      "pixelX": 256,
+      "pixelY": 128,
+      "trainerId": 187,
+      "trainerName": "Grunt",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3186,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 294,
+      "pixelX": 272,
+      "pixelY": 240,
+      "trainerId": 198,
+      "trainerName": "Grunt",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3197,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t6",
+      "trainerInstanceId": 295,
+      "pixelX": 160,
+      "pixelY": 208,
+      "trainerId": 188,
+      "trainerName": "Grunt",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3187,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t7",
+      "trainerInstanceId": 296,
+      "pixelX": 96,
+      "pixelY": 272,
+      "trainerId": 186,
+      "trainerName": "Grunt",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3185,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

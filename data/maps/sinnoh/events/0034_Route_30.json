@@ -1,0 +1,71 @@
+{
+  "zoneId": 34,
+  "displayName": "Route 30",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 408,
+      "pixelY": 104,
+      "worldX": 9088,
+      "worldZ": 4704,
+      "destinationZoneId": 143,
+      "destinationName": "Route 30",
+      "destinationPixelX": 104,
+      "destinationPixelY": 152,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 200,
+      "pixelY": 1080,
+      "worldX": 8880,
+      "worldZ": 5680,
+      "destinationZoneId": 127,
+      "destinationName": "Route 30",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t3",
+      "trainerInstanceId": 115,
+      "pixelX": 120,
+      "pixelY": 176,
+      "trainerId": 249,
+      "trainerName": "Don",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3248,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 116,
+      "pixelX": 168,
+      "pixelY": 720,
+      "trainerId": 8,
+      "trainerName": "Joey",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3007,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 117,
+      "pixelX": 152,
+      "pixelY": 608,
+      "trainerId": 47,
+      "trainerName": "Mikey",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3046,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

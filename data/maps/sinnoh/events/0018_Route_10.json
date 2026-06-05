@@ -1,0 +1,43 @@
+{
+  "zoneId": 18,
+  "displayName": "Route 10",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 184,
+      "pixelY": 56,
+      "worldX": 22704,
+      "worldZ": 2608,
+      "destinationZoneId": 108,
+      "destinationName": "Rock Tunnel",
+      "destinationPixelX": 744,
+      "destinationPixelY": 168,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 248,
+      "pixelY": 392,
+      "worldX": 22768,
+      "worldZ": 2944,
+      "destinationZoneId": 467,
+      "destinationName": "Power Plant",
+      "destinationPixelX": 240,
+      "destinationPixelY": 424,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 296,
+      "pixelY": 56,
+      "worldX": 22816,
+      "worldZ": 2608,
+      "destinationZoneId": 466,
+      "destinationName": "Route 10",
+      "destinationPixelX": 152,
+      "destinationPixelY": 312,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

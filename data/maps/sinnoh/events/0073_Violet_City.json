@@ -1,0 +1,139 @@
+{
+  "zoneId": 73,
+  "displayName": "Violet City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 1028,
+      "pixelY": 999,
+      "worldX": 8176,
+      "worldZ": 4304,
+      "destinationZoneId": 97,
+      "destinationName": "Route 31",
+      "destinationPixelX": 32,
+      "destinationPixelY": 120,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 1028,
+      "pixelY": 1015,
+      "worldX": 8176,
+      "worldZ": 4320,
+      "destinationZoneId": 97,
+      "destinationName": "Route 31",
+      "destinationPixelX": 32,
+      "destinationPixelY": 120,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 516,
+      "pixelY": 807,
+      "worldX": 7664,
+      "worldZ": 4112,
+      "destinationZoneId": 135,
+      "destinationName": "Violet City",
+      "destinationPixelX": 288,
+      "destinationPixelY": 490,
+      "anchor": 0
+    },
+    {
+      "id": "w3",
+      "pixelX": 116,
+      "pixelY": 632,
+      "worldX": 7264,
+      "worldZ": 3936,
+      "destinationZoneId": 149,
+      "destinationName": "Route 36",
+      "destinationPixelX": 176,
+      "destinationPixelY": 120,
+      "anchor": 0
+    },
+    {
+      "id": "w4",
+      "pixelX": 116,
+      "pixelY": 648,
+      "worldX": 7264,
+      "worldZ": 3952,
+      "destinationZoneId": 149,
+      "destinationName": "Route 36",
+      "destinationPixelX": 176,
+      "destinationPixelY": 120,
+      "anchor": 0
+    },
+    {
+      "id": "w5",
+      "pixelX": 644,
+      "pixelY": 344,
+      "worldX": 7792,
+      "worldZ": 3648,
+      "destinationZoneId": 110,
+      "destinationName": "Sprout Tower",
+      "destinationPixelX": 248,
+      "destinationPixelY": 456,
+      "anchor": 0
+    },
+    {
+      "id": "w6",
+      "pixelX": 772,
+      "pixelY": 807,
+      "worldX": 7920,
+      "worldZ": 4112,
+      "destinationZoneId": 159,
+      "destinationName": "Violet City",
+      "destinationPixelX": 120,
+      "destinationPixelY": 184,
+      "anchor": 0
+    },
+    {
+      "id": "w7",
+      "pixelX": 804,
+      "pixelY": 1031,
+      "worldX": 7952,
+      "worldZ": 4336,
+      "destinationZoneId": 158,
+      "destinationName": "Violet City",
+      "destinationPixelX": 152,
+      "destinationPixelY": 312,
+      "anchor": 0
+    },
+    {
+      "id": "w8",
+      "pixelX": 196,
+      "pixelY": 760,
+      "worldX": 7344,
+      "worldZ": 4064,
+      "destinationZoneId": 160,
+      "destinationName": "Violet City",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w9",
+      "pixelX": 596,
+      "pixelY": 1127,
+      "worldX": 7744,
+      "worldZ": 4432,
+      "destinationZoneId": 162,
+      "destinationName": "Violet City",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    },
+    {
+      "id": "w10",
+      "pixelX": 356,
+      "pixelY": 807,
+      "worldX": 7504,
+      "worldZ": 4112,
+      "destinationZoneId": 157,
+      "destinationName": "Violet City",
+      "destinationPixelX": 88,
+      "destinationPixelY": 184,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

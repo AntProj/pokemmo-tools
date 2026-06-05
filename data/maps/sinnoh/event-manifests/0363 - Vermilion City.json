@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 363,
+    "name": "Vermilion City",
+    "mapName": "0363 - Vermilion City",
+    "matrixId": 95
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0127_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 72,
+        "y": 80,
+        "targetPng": "0363 - Vermilion City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 2,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0067_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 88,
+        "y": 80,
+        "targetPng": "0363 - Vermilion City.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

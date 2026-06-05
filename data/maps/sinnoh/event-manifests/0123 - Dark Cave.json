@@ -1,0 +1,67 @@
+{
+  "header": {
+    "id": 123,
+    "name": "Dark Cave",
+    "mapName": "0123 - Dark Cave",
+    "matrixId": 98
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0057_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 288,
+        "y": 232,
+        "targetPng": "0123 - Dark Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 16,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 256,
+        "y": 824,
+        "targetPng": "0123 - Dark Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 14,
+        "yMap": 17,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 704,
+        "y": 744,
+        "targetPng": "0123 - Dark Cave.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 10,
+        "yMap": 12,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

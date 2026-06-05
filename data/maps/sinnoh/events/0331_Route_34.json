@@ -1,0 +1,19 @@
+{
+  "zoneId": 331,
+  "displayName": "Route 34",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 92,
+      "pixelY": 216,
+      "worldX": 48,
+      "worldZ": 192,
+      "destinationZoneId": 38,
+      "destinationName": "Route 34",
+      "destinationPixelX": 360,
+      "destinationPixelY": 439,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,67 @@
+{
+  "header": {
+    "id": 331,
+    "name": "Route 34",
+    "mapName": "0331 - Route 34",
+    "matrixId": 179
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0129_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 92,
+        "y": 112,
+        "targetPng": "0331 - Route 34.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_3d_dawn_platinum.png",
+      "anchor": "center",
+      "pixelCoord": {
+        "x": 92,
+        "y": 176,
+        "targetPng": "0331 - Route 34.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0483_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 108,
+        "y": 192,
+        "targetPng": "0331 - Route 34.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 4,
+        "yMap": 10,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

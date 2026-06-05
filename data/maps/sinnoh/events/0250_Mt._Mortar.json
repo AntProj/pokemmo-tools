@@ -1,0 +1,154 @@
+{
+  "zoneId": 250,
+  "displayName": "Mt. Mortar",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 568,
+      "pixelY": 1304,
+      "worldX": 560,
+      "worldZ": 1296,
+      "destinationZoneId": 119,
+      "destinationName": "Mt. Mortar",
+      "destinationPixelX": 552,
+      "destinationPixelY": 520,
+      "anchor": 4
+    },
+    {
+      "id": "w1",
+      "pixelX": 920,
+      "pixelY": 1304,
+      "worldX": 912,
+      "worldZ": 1296,
+      "destinationZoneId": 119,
+      "destinationName": "Mt. Mortar",
+      "destinationPixelX": 904,
+      "destinationPixelY": 520,
+      "anchor": 5
+    },
+    {
+      "id": "w2",
+      "pixelX": 1320,
+      "pixelY": 1304,
+      "worldX": 1312,
+      "worldZ": 1296,
+      "destinationZoneId": 119,
+      "destinationName": "Mt. Mortar",
+      "destinationPixelX": 1304,
+      "destinationPixelY": 520,
+      "anchor": 6
+    },
+    {
+      "id": "w3",
+      "pixelX": 440,
+      "pixelY": 1048,
+      "worldX": 432,
+      "worldZ": 1040,
+      "destinationZoneId": 119,
+      "destinationName": "Mt. Mortar",
+      "destinationPixelX": 424,
+      "destinationPixelY": 248,
+      "anchor": 7
+    },
+    {
+      "id": "w4",
+      "pixelX": 440,
+      "pixelY": 1032,
+      "worldX": 432,
+      "worldZ": 1024,
+      "destinationZoneId": 119,
+      "destinationName": "Mt. Mortar",
+      "destinationPixelX": 424,
+      "destinationPixelY": 248,
+      "anchor": 7
+    },
+    {
+      "id": "w5",
+      "pixelX": 1128,
+      "pixelY": 1064,
+      "worldX": 1120,
+      "worldZ": 1056,
+      "destinationZoneId": 119,
+      "destinationName": "Mt. Mortar",
+      "destinationPixelX": 1112,
+      "destinationPixelY": 264,
+      "anchor": 8
+    },
+    {
+      "id": "w6",
+      "pixelX": 1128,
+      "pixelY": 1048,
+      "worldX": 1120,
+      "worldZ": 1040,
+      "destinationZoneId": 119,
+      "destinationName": "Mt. Mortar",
+      "destinationPixelX": 1112,
+      "destinationPixelY": 264,
+      "anchor": 8
+    },
+    {
+      "id": "w7",
+      "pixelX": 568,
+      "pixelY": 616,
+      "worldX": 560,
+      "worldZ": 608,
+      "destinationZoneId": 252,
+      "destinationName": "Mt. Mortar",
+      "destinationPixelX": 408,
+      "destinationPixelY": 232,
+      "anchor": 1
+    },
+    {
+      "id": "w8",
+      "pixelX": 456,
+      "pixelY": 216,
+      "worldX": 448,
+      "worldZ": 208,
+      "destinationZoneId": 251,
+      "destinationName": "Mt. Mortar",
+      "destinationPixelX": 152,
+      "destinationPixelY": 264,
+      "anchor": 1
+    },
+    {
+      "id": "w9",
+      "pixelX": 456,
+      "pixelY": 200,
+      "worldX": 448,
+      "worldZ": 192,
+      "destinationZoneId": 251,
+      "destinationName": "Mt. Mortar",
+      "destinationPixelX": 152,
+      "destinationPixelY": 264,
+      "anchor": 1
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t8",
+      "trainerInstanceId": 336,
+      "pixelX": 1000,
+      "pixelY": 1280,
+      "trainerId": 537,
+      "trainerName": "Harrison",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3536,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t9",
+      "trainerInstanceId": 337,
+      "pixelX": 840,
+      "pixelY": 816,
+      "trainerId": 539,
+      "trainerName": "Markus",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3538,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

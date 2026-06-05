@@ -1,0 +1,19 @@
+{
+  "zoneId": 233,
+  "displayName": "Cianwood City",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 99,
+      "pixelY": 152,
+      "worldX": 80,
+      "worldZ": 144,
+      "destinationZoneId": 75,
+      "destinationName": "Cianwood City",
+      "destinationPixelX": 408,
+      "destinationPixelY": 808,
+      "anchor": 2
+    }
+  ],
+  "trainers": []
+}

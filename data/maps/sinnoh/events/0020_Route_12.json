@@ -1,0 +1,161 @@
+{
+  "zoneId": 20,
+  "displayName": "Route 12",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 24,
+      "pixelY": 792,
+      "worldX": 22528,
+      "worldZ": 4880,
+      "destinationZoneId": 425,
+      "destinationName": "Route 11",
+      "destinationPixelX": 176,
+      "destinationPixelY": 120,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 24,
+      "pixelY": 808,
+      "worldX": 22528,
+      "worldZ": 4896,
+      "destinationZoneId": 425,
+      "destinationName": "Route 11",
+      "destinationPixelX": 176,
+      "destinationPixelY": 120,
+      "anchor": 1
+    },
+    {
+      "id": "w2",
+      "pixelX": 360,
+      "pixelY": 1000,
+      "worldX": 22864,
+      "worldZ": 5088,
+      "destinationZoneId": 533,
+      "destinationName": "Route 12",
+      "destinationPixelX": 104,
+      "destinationPixelY": 136,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 45,
+      "pixelX": 216,
+      "pixelY": 304,
+      "trainerId": 59,
+      "trainerName": "Kyle",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3058,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 46,
+      "pixelX": 344,
+      "pixelY": 512,
+      "trainerId": 320,
+      "trainerName": "Martin",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3319,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t2",
+      "trainerInstanceId": 47,
+      "pixelX": 264,
+      "pixelY": 480,
+      "trainerId": 555,
+      "trainerName": "Justin",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3554,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t3",
+      "trainerInstanceId": 48,
+      "pixelX": 312,
+      "pixelY": 720,
+      "trainerId": 557,
+      "trainerName": "Vic & Tara",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3556,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t4",
+      "trainerInstanceId": 49,
+      "pixelX": 312,
+      "pixelY": 704,
+      "trainerId": 557,
+      "trainerName": "Vic & Tara",
+      "orientation": "Right",
+      "isDoubleBattlePartner": true,
+      "scriptNumber": 5556,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t5",
+      "trainerInstanceId": 50,
+      "pixelX": 424,
+      "pixelY": 720,
+      "trainerId": 321,
+      "trainerName": "Stephen",
+      "orientation": "Up",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3320,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t6",
+      "trainerInstanceId": 51,
+      "pixelX": 440,
+      "pixelY": 1152,
+      "trainerId": 322,
+      "trainerName": "Barney",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3321,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t7",
+      "trainerInstanceId": 52,
+      "pixelX": 280,
+      "pixelY": 1008,
+      "trainerId": 556,
+      "trainerName": "Gail",
+      "orientation": "Down",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3555,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t8",
+      "trainerInstanceId": 53,
+      "pixelX": 328,
+      "pixelY": 1360,
+      "trainerId": 558,
+      "trainerName": "Kyler",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3557,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

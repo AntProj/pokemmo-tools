@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 469,
+    "name": "Route 5",
+    "mapName": "0469 - Route 5",
+    "matrixId": 253
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Down",
+      "spriteFile": "ow_0123_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 88,
+        "y": 96,
+        "targetPng": "0469 - Route 5.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

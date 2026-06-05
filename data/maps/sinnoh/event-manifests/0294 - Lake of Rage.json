@@ -1,0 +1,29 @@
+{
+  "header": {
+    "id": 294,
+    "name": "Lake of Rage",
+    "mapName": "0294 - Lake of Rage",
+    "matrixId": 66
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0130_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 120,
+        "y": 96,
+        "targetPng": "0294 - Lake of Rage.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 5,
+        "yMap": 5,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

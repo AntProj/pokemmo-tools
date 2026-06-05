@@ -1,0 +1,43 @@
+{
+  "zoneId": 332,
+  "displayName": "Bell Tower",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 152,
+      "pixelY": 152,
+      "worldX": 144,
+      "worldZ": 128,
+      "destinationZoneId": 111,
+      "destinationName": "Bell Tower",
+      "destinationPixelX": 152,
+      "destinationPixelY": 136,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 248,
+      "pixelY": 424,
+      "worldX": 240,
+      "worldZ": 400,
+      "destinationZoneId": 333,
+      "destinationName": "Bell Tower",
+      "destinationPixelX": 248,
+      "destinationPixelY": 408,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 248,
+      "pixelY": 408,
+      "worldX": 240,
+      "worldZ": 384,
+      "destinationZoneId": 333,
+      "destinationName": "Bell Tower",
+      "destinationPixelX": 248,
+      "destinationPixelY": 408,
+      "anchor": 0
+    }
+  ],
+  "trainers": []
+}

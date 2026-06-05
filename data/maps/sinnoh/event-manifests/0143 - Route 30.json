@@ -1,0 +1,48 @@
+{
+  "header": {
+    "id": 143,
+    "name": "Route 30",
+    "mapName": "0143 - Route 30",
+    "matrixId": 103
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Left",
+      "spriteFile": "ow_0137_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 184,
+        "y": 128,
+        "targetPng": "0143 - Route 30.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 9,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Right",
+      "spriteFile": "ow_0160_Right.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 168,
+        "y": 128,
+        "targetPng": "0143 - Route 30.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 8,
+        "yMap": 7,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}

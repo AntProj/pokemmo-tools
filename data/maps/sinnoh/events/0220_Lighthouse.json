@@ -1,0 +1,70 @@
+{
+  "zoneId": 220,
+  "displayName": "Lighthouse",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 104,
+      "pixelY": 56,
+      "worldX": 80,
+      "worldZ": 48,
+      "destinationZoneId": 115,
+      "destinationName": "Lighthouse",
+      "destinationPixelX": 56,
+      "destinationPixelY": 56,
+      "anchor": 2
+    },
+    {
+      "id": "w1",
+      "pixelX": 232,
+      "pixelY": 104,
+      "worldX": 208,
+      "worldZ": 96,
+      "destinationZoneId": 222,
+      "destinationName": "Lighthouse",
+      "destinationPixelX": 263,
+      "destinationPixelY": 135,
+      "anchor": 0
+    },
+    {
+      "id": "w2",
+      "pixelX": 232,
+      "pixelY": 88,
+      "worldX": 208,
+      "worldZ": 80,
+      "destinationZoneId": 222,
+      "destinationName": "Lighthouse",
+      "destinationPixelX": 263,
+      "destinationPixelY": 135,
+      "anchor": 0
+    }
+  ],
+  "trainers": [
+    {
+      "id": "t0",
+      "trainerInstanceId": 318,
+      "pixelX": 40,
+      "pixelY": 144,
+      "trainerId": 401,
+      "trainerName": "Alfred",
+      "orientation": "Right",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3400,
+      "rewardAmount": null,
+      "team": []
+    },
+    {
+      "id": "t1",
+      "trainerInstanceId": 319,
+      "pixelX": 264,
+      "pixelY": 224,
+      "trainerId": 211,
+      "trainerName": "Huey",
+      "orientation": "Left",
+      "isDoubleBattlePartner": false,
+      "scriptNumber": 3210,
+      "rewardAmount": null,
+      "team": []
+    }
+  ]
+}

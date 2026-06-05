@@ -1,0 +1,31 @@
+{
+  "zoneId": 24,
+  "displayName": "Route 16",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 504,
+      "pixelY": 328,
+      "worldX": 18416,
+      "worldZ": 4416,
+      "destinationZoneId": 421,
+      "destinationName": "Route 16",
+      "destinationPixelX": 32,
+      "destinationPixelY": 120,
+      "anchor": 1
+    },
+    {
+      "id": "w1",
+      "pixelX": 504,
+      "pixelY": 344,
+      "worldX": 18416,
+      "worldZ": 4432,
+      "destinationZoneId": 421,
+      "destinationName": "Route 16",
+      "destinationPixelX": 32,
+      "destinationPixelY": 120,
+      "anchor": 1
+    }
+  ],
+  "trainers": []
+}

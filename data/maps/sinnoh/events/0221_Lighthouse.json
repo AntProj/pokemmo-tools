@@ -1,0 +1,19 @@
+{
+  "zoneId": 221,
+  "displayName": "Lighthouse",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 156,
+      "pixelY": 264,
+      "worldX": 128,
+      "worldZ": 192,
+      "destinationZoneId": 222,
+      "destinationName": "Lighthouse",
+      "destinationPixelX": 183,
+      "destinationPixelY": 311,
+      "anchor": 5
+    }
+  ],
+  "trainers": []
+}

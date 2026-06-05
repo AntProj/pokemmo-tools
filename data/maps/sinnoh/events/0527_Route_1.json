@@ -1,0 +1,31 @@
+{
+  "zoneId": 527,
+  "displayName": "Route 1",
+  "warps": [
+    {
+      "id": "w0",
+      "pixelX": 120,
+      "pixelY": 256,
+      "worldX": 80,
+      "worldZ": 192,
+      "destinationZoneId": 9,
+      "destinationName": "Route 1",
+      "destinationPixelX": 216,
+      "destinationPixelY": 24,
+      "anchor": 0
+    },
+    {
+      "id": "w1",
+      "pixelX": 120,
+      "pixelY": 96,
+      "worldX": 80,
+      "worldZ": 32,
+      "destinationZoneId": 50,
+      "destinationName": "Viridian City",
+      "destinationPixelX": 712,
+      "destinationPixelY": 920,
+      "anchor": 5
+    }
+  ],
+  "trainers": []
+}

@@ -1,0 +1,238 @@
+{
+  "header": {
+    "id": 250,
+    "name": "Mt. Mortar",
+    "mapName": "0250 - Mt. Mortar",
+    "matrixId": 63
+  },
+  "events": [
+    {
+      "npcIndex": 0,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0091_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 824,
+        "y": 1168,
+        "targetPng": "0250 - Mt. Mortar.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 2,
+        "xMap": 19,
+        "yMap": 8,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 1,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1080,
+        "y": 880,
+        "targetPng": "0250 - Mt. Mortar.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 2,
+        "yMatrix": 1,
+        "xMap": 3,
+        "yMap": 22,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 2,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1080,
+        "y": 464,
+        "targetPng": "0250 - Mt. Mortar.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 2,
+        "yMatrix": 0,
+        "xMap": 3,
+        "yMap": 28,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 3,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 824,
+        "y": 512,
+        "targetPng": "0250 - Mt. Mortar.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 0,
+        "xMap": 19,
+        "yMap": 31,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 4,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 824,
+        "y": 704,
+        "targetPng": "0250 - Mt. Mortar.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 19,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 5,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 472,
+        "y": 336,
+        "targetPng": "0250 - Mt. Mortar.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 0,
+        "xMap": 29,
+        "yMap": 20,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 6,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 376,
+        "y": 592,
+        "targetPng": "0250 - Mt. Mortar.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 0,
+        "yMatrix": 1,
+        "xMap": 23,
+        "yMap": 4,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 7,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 600,
+        "y": 848,
+        "targetPng": "0250 - Mt. Mortar.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 5,
+        "yMap": 20,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 8,
+      "type": 1,
+      "orientation": "Down",
+      "spriteFile": "ow_0184_Down.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1000,
+        "y": 1280,
+        "targetPng": "0250 - Mt. Mortar.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 2,
+        "xMap": 30,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 9,
+      "type": 1,
+      "orientation": "Left",
+      "spriteFile": "ow_0136_Left.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 840,
+        "y": 816,
+        "targetPng": "0250 - Mt. Mortar.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 1,
+        "xMap": 20,
+        "yMap": 18,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 10,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 1176,
+        "y": 768,
+        "targetPng": "0250 - Mt. Mortar.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 2,
+        "yMatrix": 1,
+        "xMap": 9,
+        "yMap": 15,
+        "zPositionRaw": 0
+      }
+    },
+    {
+      "npcIndex": 11,
+      "type": 0,
+      "orientation": "Up",
+      "spriteFile": "ow_0094_Up.png",
+      "anchor": "foot",
+      "pixelCoord": {
+        "x": 616,
+        "y": 1216,
+        "targetPng": "0250 - Mt. Mortar.png"
+      },
+      "matrixCoord": {
+        "xMatrix": 1,
+        "yMatrix": 2,
+        "xMap": 6,
+        "yMap": 11,
+        "zPositionRaw": 0
+      }
+    }
+  ]
+}
