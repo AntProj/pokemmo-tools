@@ -11,7 +11,21 @@ const SORTS = [
   { value: 'dex',  label: 'Dex #' },
   { value: 'name', label: 'Name A→Z' },
   { value: 'bst',  label: 'BST high→low' },
+  // Hunt priority — tier 0 first, then 1, 2, (4=default), 5. Tier-tagged
+  // mons cluster at the top with tier 4 (everything unassigned) trailing.
+  { value: 'tier', label: 'Hunt priority' },
 ];
+
+// Per-tier visual styling. Keys match `data.hunt_tiers.tiers[].color`.
+// Kept here rather than in pokemmo.json so Tailwind's purge can statically
+// see every class string at build time.
+const TIER_STYLE = {
+  rose:    { active: 'bg-rose-100 text-rose-800 border-rose-300 dark:bg-rose-950/50 dark:text-rose-300 dark:border-rose-900',          badge: 'bg-rose-500 text-white'       },
+  amber:   { active: 'bg-amber-100 text-amber-800 border-amber-300 dark:bg-amber-950/50 dark:text-amber-300 dark:border-amber-900',    badge: 'bg-amber-500 text-white'     },
+  violet:  { active: 'bg-violet-100 text-violet-800 border-violet-300 dark:bg-violet-950/50 dark:text-violet-300 dark:border-violet-900', badge: 'bg-violet-500 text-white' },
+  emerald: { active: 'bg-emerald-100 text-emerald-800 border-emerald-300 dark:bg-emerald-950/50 dark:text-emerald-300 dark:border-emerald-900', badge: 'bg-emerald-500 text-white' },
+  stone:   { active: 'bg-stone-200 text-stone-800 border-stone-400 dark:bg-stone-800 dark:text-stone-300 dark:border-stone-600',       badge: 'bg-stone-500 text-white'     },
+};
 const STATE_FILTERS = [
   { key: 'uncaught', label: 'Uncaught' },
   { key: 'caught',   label: 'Caught'   },
@@ -84,7 +98,17 @@ export default function TrackerMark({
     markRarities = [],
     markRaritiesMode = 'only',
     markEvolutions = [],
+    markTiers = [],
   } = view;
+  // Hunt-tier catalog ships in pokemmo.json. Tracker UI degrades gracefully
+  // to no tier filter if the field is absent (older builds, or a future rev
+  // that drops the file).
+  const huntTierCatalog = data.hunt_tiers?.tiers || [];
+  const huntTierByNum = useMemo(() => {
+    const m = new Map();
+    for (const t of huntTierCatalog) m.set(t.tier, t);
+    return m;
+  }, [huntTierCatalog]);
   const deferredSearch = useDeferredValue(markSearch);
 
   const setSearch = useCallback((v) => updateView({ markSearch: v }),  [updateView]);
@@ -107,6 +131,9 @@ export default function TrackerMark({
   const toggleEvolutionFilter = useCallback((c) => {
     updateView({ markEvolutions: markEvolutions.includes(c) ? markEvolutions.filter((x) => x !== c) : [...markEvolutions, c] });
   }, [markEvolutions, updateView]);
+  const toggleTierFilter = useCallback((t) => {
+    updateView({ markTiers: markTiers.includes(t) ? markTiers.filter((x) => x !== t) : [...markTiers, t] });
+  }, [markTiers, updateView]);
 
   // ─────── Evolution-family index ───────
   // Map<pokemonId, Set<pokemonId>> — for every Pokémon, the set of every
@@ -188,6 +215,9 @@ export default function TrackerMark({
     // selection = filter is off.
     const raritySet = markRarities.length > 0 ? new Set(markRarities) : null;
     const evoCategorySet = markEvolutions.length > 0 ? new Set(markEvolutions) : null;
+    // Hunt-tier filter set. The "null" hunt_tier (unassigned) maps to tier 4
+    // (the default bucket), so picking tier 4 in the UI matches both.
+    const tierSet = markTiers.length > 0 ? new Set(markTiers) : null;
 
     const out = data.pokemon.filter((p) => {
       if (rkey) {
@@ -247,15 +277,34 @@ export default function TrackerMark({
         }
         if (!matched) return false;
       }
+      // Hunt-tier gate. `p.hunt_tier === null` means the mon was not
+      // assigned a tier in hunt-tiers.json — treat as tier 4 (the default
+      // "normal horde" bucket). So picking tier 4 in the UI surfaces both
+      // explicitly-tagged tier-4 mons (if any) AND every unassigned mon.
+      if (tierSet) {
+        const effectiveTier = p.hunt_tier ?? 4;
+        if (!tierSet.has(effectiveTier)) return false;
+      }
       return true;
     });
 
     if (markSort === 'name')    out.sort((a, b) => a.name.localeCompare(b.name));
     else if (markSort === 'bst') out.sort((a, b) => statTotal(b.stats) - statTotal(a.stats));
+    else if (markSort === 'tier') {
+      // Lower tier number = higher hunt priority → sort ascending. Unassigned
+      // (null) treated as 4 (the default bucket). Ties broken by dex number
+      // so the order within a tier stays predictable.
+      out.sort((a, b) => {
+        const ta = a.hunt_tier ?? 4;
+        const tb = b.hunt_tier ?? 4;
+        if (ta !== tb) return ta - tb;
+        return a.id - b.id;
+      });
+    }
     else if (rkey)              out.sort((a, b) => (a.dex[rkey] || 0) - (b.dex[rkey] || 0));
     else                        out.sort((a, b) => a.id - b.id);
     return out;
-  }, [data.pokemon, deferredSearch, markRegion, markTypes, markStates, markSort, markBaby, markRarities, markRaritiesMode, markEvolutions, trackerState, familyMap]);
+  }, [data.pokemon, deferredSearch, markRegion, markTypes, markStates, markSort, markBaby, markRarities, markRaritiesMode, markEvolutions, markTiers, trackerState, familyMap]);
 
   // ─────── Selection (for bulk actions) ───────
   // Set<pokemonId>. Lives locally — selection is ephemeral and tab-scoped.
@@ -528,6 +577,47 @@ export default function TrackerMark({
             )}
           </div>
         </div>
+
+        {/* Hunt-tier filter — only renders if the data carries the catalog
+            (older builds without hunt_tiers field just don't show this row).
+            Tier numbers follow the forum guide's odd "0/1/2/4/5" numbering
+            so users who came here from the post recognize the labels. */}
+        {huntTierCatalog.length > 0 && (
+          <div className="flex items-start gap-2 flex-wrap">
+            <span className="text-xs text-stone-500 dark:text-stone-400 mr-1 mt-1" title="Source: forums.pokemmo.com OT-dex completion guide">Hunt tier</span>
+            <div className="flex flex-wrap gap-1.5 items-center">
+              {huntTierCatalog.map((t) => {
+                const sel = markTiers.includes(t.tier);
+                const style = TIER_STYLE[t.color] || TIER_STYLE.stone;
+                return (
+                  <button
+                    key={t.tier}
+                    type="button"
+                    onClick={() => toggleTierFilter(t.tier)}
+                    aria-pressed={sel}
+                    title={t.blurb}
+                    className={`px-2 py-0.5 rounded text-xs border transition-colors ${
+                      sel
+                        ? style.active
+                        : 'bg-[#fdf8e9] dark:bg-stone-900 text-stone-700 dark:text-stone-300 border-[#d6c8a3] dark:border-stone-700 hover:bg-[#ece2c4] dark:hover:bg-stone-800'
+                    }`}
+                  >
+                    T{t.tier} {t.label}
+                  </button>
+                );
+              })}
+              {markTiers.length > 0 && (
+                <button
+                  type="button"
+                  onClick={() => updateView({ markTiers: [] })}
+                  className="ml-1 text-xs text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 underline underline-offset-2"
+                >
+                  Clear
+                </button>
+              )}
+            </div>
+          </div>
+        )}
       </section>
 
       {/* Bulk action bar */}
@@ -549,6 +639,7 @@ export default function TrackerMark({
               isSelected={selected.has(p.id)}
               onClick={handleClick}
               openPanel={openPanel}
+              tierMeta={p.hunt_tier != null ? huntTierByNum.get(p.hunt_tier) : null}
             />
           ))}
         </div>
@@ -593,7 +684,7 @@ function BulkBtn({ onClick, children }) {
 
 /* ─────────────── Tracker card ─────────────── */
 
-const TrackerCard = memo(function TrackerCard({ pokemon: p, region, state, isSelected, onClick, openPanel }) {
+const TrackerCard = memo(function TrackerCard({ pokemon: p, region, state, isSelected, onClick, openPanel, tierMeta }) {
   const primary = typeColor(p.types[0]).bg;
   const longPress = useLongPress(useCallback(() => openPanel(p.id), [openPanel, p.id]));
 
@@ -635,6 +726,18 @@ const TrackerCard = memo(function TrackerCard({ pokemon: p, region, state, isSel
           loading="lazy"
           className={`w-20 h-20 object-contain relative transition ${dimmed ? 'grayscale opacity-40' : ''}`}
         />
+        {/* Hunt-tier badge — top-LEFT, opposite the state badge. Tooltip
+            carries the per-mon `hunt_tier_note` (e.g. "Honey Tree exclusive
+            — catch one of each gender") so users can hover for the why
+            without leaving the grid. */}
+        {tierMeta && (
+          <span
+            className={`absolute top-1 left-1 inline-flex items-center justify-center min-w-[20px] h-5 px-1 rounded-full text-[10px] font-bold shadow ${TIER_STYLE[tierMeta.color]?.badge || TIER_STYLE.stone.badge}`}
+            title={`${tierMeta.label} (T${tierMeta.tier})${p.hunt_tier_note ? ' — ' + p.hunt_tier_note : ''}`}
+          >
+            T{tierMeta.tier}
+          </span>
+        )}
         {/* State badge overlays */}
         {caught && (
           <span className="absolute top-1 right-1 inline-flex items-center justify-center w-5 h-5 rounded-full bg-emerald-500 text-white shadow">

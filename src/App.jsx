@@ -57,8 +57,15 @@ const INITIAL_TRACKER_VIEW = { view: 'plan', planRegion: 'All', planMethods: [],
   //                                                    either incoming
   //                                                    pre_evolution or any
   //                                                    outgoing evolution.
+  //   markTiers          [] | number[]                — selected hunt tiers
+  //                                                    (e.g. [0, 1] for "show
+  //                                                    only top-priority").
+  //                                                    Multi-select OR semantics.
+  //                                                    Source: forums OT-dex
+  //                                                    guide (see data/raw/
+  //                                                    hunt-tiers.json).
   markSearch: '', markRegion: 'All', markTypes: [], markStates: [], markSort: 'dex',
-  markBaby: 'any', markRarities: [], markRaritiesMode: 'only', markEvolutions: [] };
+  markBaby: 'any', markRarities: [], markRaritiesMode: 'only', markEvolutions: [], markTiers: [] };
 
 // Read once from localStorage; default to {} so unlisted ids are 'uncaught'.
 function loadTrackerState() {

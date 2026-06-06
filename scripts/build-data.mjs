@@ -216,6 +216,25 @@ function build() {
   const dexData = loadJson('dex.json', false) || [];
   const dexById = Object.fromEntries(dexData.map(d => [d.id, d]));
 
+  // Hunt-priority tiers — hand-curated from the forums OT-dex guide. Optional;
+  // if missing or malformed, every mon defaults to tier 4 (normal hordes) and
+  // the tracker's tier filter shows only the default bucket. Keeps the file
+  // out of the critical path so future regens don't break if the asset
+  // disappears or the tiers file is being edited mid-build.
+  const huntTiersRaw = loadJson('hunt-tiers.json', false) || { tiers: [], assignments: [] };
+  const huntTierMetaByNum = new Map((huntTiersRaw.tiers || []).map(t => [t.tier, t]));
+  const huntTierByMonId = new Map(
+    (huntTiersRaw.assignments || []).map(a => [a.id, { tier: a.tier, note: a.note || null }])
+  );
+  // Sanity log: warn if assignments reference tier numbers not declared in
+  // tiers[]. Catches the easy mistake where someone tags a mon "tier 3"
+  // (which doesn't exist in the guide's numbering).
+  for (const a of (huntTiersRaw.assignments || [])) {
+    if (!huntTierMetaByNum.has(a.tier)) {
+      console.warn(`  ⚠ hunt-tiers.json: assignment for mon id ${a.id} references undefined tier ${a.tier}`);
+    }
+  }
+
   console.log('► Building lookup tables...');
 
   // ---- Sprites: name (lowercase) → { default, shiny } ----
@@ -484,6 +503,12 @@ function build() {
       locations: normalizedLocs,
       best_rarity: normalizedLocs[0]?.rarity || null,
       best_weight: normalizedLocs[0]?.weight || 0,
+      // Hunt-priority annotations from data/raw/hunt-tiers.json. `hunt_tier`
+      // is the integer tier number (0 = highest priority, 5 = Game Corner);
+      // null means "no assignment → tier 4 (normal horde)". `hunt_tier_note`
+      // is the one-line reason string surfaced in the tracker tooltip.
+      hunt_tier: huntTierByMonId.get(id)?.tier ?? null,
+      hunt_tier_note: huntTierByMonId.get(id)?.note ?? null,
     });
   }
 
@@ -508,12 +533,31 @@ function build() {
   // Pass-through catalog fields removed: nothing in src/** reads
   // data.egg_moves / data.gender_rates / data.natures / data.egg_groups / data.pvp.
   // Breeding planner constants live in src/lib/breeding/data.js.
+  // Hunt-tier catalog: surface the per-tier metadata (label, blurb, color)
+  // as a separate top-level field so the tracker UI can render filter labels
+  // and tooltips without re-bundling the raw hunt-tiers.json. Per-mon
+  // assignments are already baked into each pokemonList entry's hunt_tier /
+  // hunt_tier_note fields.
+  const huntTierCatalog = {
+    source_url: huntTiersRaw._source_url || null,
+    source_author: huntTiersRaw._source_author || null,
+    tiers: (huntTiersRaw.tiers || []).map(t => ({
+      tier: t.tier,
+      label: t.label,
+      blurb: t.blurb,
+      color: t.color || 'stone',
+    })),
+  };
+  let assignedCount = 0;
+  for (const p of pokemonList) if (p.hunt_tier != null) assignedCount++;
+
   const out = {
     pokemon: pokemonList,
     locations: dedupedLocationIndex,
     moves: movesById,
     abilities: abilitiesById,
     items: itemsById,
+    hunt_tiers: huntTierCatalog,
     meta: {
       regions: ['Kanto', 'Johto', 'Hoenn', 'Sinnoh', 'Unova'],
       total_pokemon: pokemonList.length,
@@ -521,6 +565,7 @@ function build() {
       total_moves: Object.keys(movesById).length,
       total_abilities: Object.keys(abilitiesById).length,
       total_items: Object.keys(itemsById).length,
+      hunt_tier_assignments: assignedCount,
       built_at: new Date().toISOString(),
     },
   };

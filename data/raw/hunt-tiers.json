@@ -1,0 +1,230 @@
+{
+  "_source_url": "https://forums.pokemmo.com/index.php?/topic/191077-ot-pokedex-completion-for-end-game-content/",
+  "_source_author": "RogueMaster (forums.pokemmo.com, 2025-08-19)",
+  "_note": [
+    "Hand-curated hunt-priority tiers transcribed from RogueMaster's OT-dex",
+    "completion guide. The guide's own tier numbering skips 3 (goes 0 → 1 → 2 →",
+    "4 → 5 → 6); we preserve that as-is rather than renumber, since users who",
+    "read the guide will look for tier numbers that match.",
+    "",
+    "Lower number = higher hunt priority. Mons NOT listed here default to",
+    "tier 4 (normal common-horde encounter — use Horde guide + Pokedex Helper).",
+    "Tier 6 (breeding/leveling cleanup) is a *strategy* rather than a specific",
+    "list; it's not assigned here, but the existing tracker filters (Babies +",
+    "Evolution method) cover that ground.",
+    "",
+    "When a mon appears in multiple tiers in the guide (e.g. Scyther in T2",
+    "AND T5), it's assigned to the tier the guide RECOMMENDS as the primary",
+    "approach. Scyther → T2 because catching is the canonical method; the",
+    "Game Corner alternative is only mentioned as a fallback.",
+    "",
+    "Evolution-line scoping: when the guide names ONE mon (e.g. 'Audino') we",
+    "also tag its evolution line in the same tier. The reason: the in-game",
+    "Pokédex counts the family together, and tracker users want to see",
+    "Drilbur next to Excadrill so they know which to hunt and which to breed",
+    "down to / evolve up to."
+  ],
+  "tiers": [
+    {
+      "tier": 0,
+      "label": "Pheno / Honey Tree",
+      "blurb": "Phenomena or Honey Tree exclusives. ALWAYS PRIORITY — these spawns rotate constantly so missed opportunities pile up if you don't hunt them first.",
+      "color": "rose"
+    },
+    {
+      "tier": 1,
+      "label": "Time / Location locked",
+      "blurb": "Locked to a specific time of day, season, or single location. Hunt during the active window or be locked out.",
+      "color": "amber"
+    },
+    {
+      "tier": 2,
+      "label": "Very Rare",
+      "blurb": "Very low encounter rate with no shortcut (or the shortcut takes longer). Plan multi-hour sessions.",
+      "color": "violet"
+    },
+    {
+      "tier": 4,
+      "label": "Normal Horde",
+      "blurb": "Default — common horde or wild encounter. No assigned mons; everything unlisted lands here. Use the Horde Guide + PokedexHelper.com for routes.",
+      "color": "stone"
+    },
+    {
+      "tier": 5,
+      "label": "Game Corner",
+      "blurb": "Purchasable at the Celadon Game Corner if you're tired of hunting / waiting for swarms. Easier to coin-grind than to find in the wild.",
+      "color": "emerald"
+    }
+  ],
+  "assignments": [
+    { "id": 594, "tier": 0, "note": "Water Phenomena exclusive" },
+
+    { "id": 587, "tier": 0, "note": "Grass Phenomena exclusive" },
+    { "id": 531, "tier": 0, "note": "Grass Phenomena exclusive (Audino)" },
+
+    { "id": 529, "tier": 0, "note": "Dust Phenomena exclusive (Drilbur)" },
+    { "id": 530, "tier": 0, "note": "Dust Phenomena exclusive (Drilbur → Excadrill)" },
+
+    { "id": 580, "tier": 0, "note": "Shadow Phenomena exclusive (Ducklett)" },
+    { "id": 581, "tier": 0, "note": "Shadow Phenomena exclusive (Ducklett → Swanna)" },
+
+    { "id": 420, "tier": 0, "note": "Honey Tree exclusive" },
+    { "id": 421, "tier": 0, "note": "Honey Tree exclusive (Cherubi → Cherrim)" },
+    { "id": 412, "tier": 0, "note": "Honey Tree exclusive — catch one of each gender (male → Mothim, female → Wormadam)" },
+    { "id": 413, "tier": 0, "note": "Honey Tree exclusive (female Burmy → Wormadam)" },
+    { "id": 414, "tier": 0, "note": "Honey Tree exclusive (male Burmy → Mothim)" },
+    { "id": 415, "tier": 0, "note": "Honey Tree exclusive — need female Combee to evolve" },
+    { "id": 416, "tier": 0, "note": "Honey Tree exclusive (female Combee → Vespiquen)" },
+
+    { "id": 190, "tier": 0, "note": "Honey Tree — honorable mention (Aipom)" },
+    { "id": 424, "tier": 0, "note": "Honey Tree — honorable mention (Aipom → Ambipom)" },
+    { "id": 214, "tier": 0, "note": "Honey Tree — honorable mention (Heracross)" },
+    { "id": 446, "tier": 0, "note": "Honey Tree — honorable mention (Munchlax)" },
+    { "id": 143, "tier": 0, "note": "Honey Tree — honorable mention (Munchlax → Snorlax)" },
+    { "id": 265, "tier": 0, "note": "Honey Tree — honorable mention (Wurmple)" },
+    { "id": 266, "tier": 0, "note": "Honey Tree — honorable mention (Wurmple → Silcoon)" },
+    { "id": 267, "tier": 0, "note": "Honey Tree — honorable mention (Silcoon → Beautifly)" },
+    { "id": 268, "tier": 0, "note": "Honey Tree — honorable mention (Wurmple → Cascoon)" },
+    { "id": 269, "tier": 0, "note": "Honey Tree — honorable mention (Cascoon → Dustox)" },
+
+    { "id": 83,  "tier": 1, "note": "Day/Morning only — Johto/Kanto Rare" },
+
+    { "id": 209, "tier": 1, "note": "Day/Morning only — Rt 34 Johto" },
+    { "id": 210, "tier": 1, "note": "Day/Morning only — Rt 34 Johto (Snubbull → Granbull)" },
+
+    { "id": 165, "tier": 1, "note": "Morning only — National Park Johto" },
+    { "id": 166, "tier": 1, "note": "Morning only — National Park (Ledyba → Ledian)" },
+
+    { "id": 191, "tier": 1, "note": "Day only — National Park Johto" },
+    { "id": 192, "tier": 1, "note": "Day only — National Park (Sunkern → Sunflora w/ Sun Stone)" },
+
+    { "id": 313, "tier": 1, "note": "Night only — Rt 117 Hoenn" },
+    { "id": 314, "tier": 1, "note": "Night only — Rt 117 Hoenn (Volbeat's female counterpart)" },
+
+    { "id": 361, "tier": 1, "note": "Night only — Shoal Cave low tide / Lake Acuity. Need at least one female for Froslass." },
+    { "id": 362, "tier": 1, "note": "Night only — Shoal Cave / Lake Acuity (Snorunt → Glalie)" },
+    { "id": 478, "tier": 1, "note": "Female Snorunt + Dawn Stone (Snorunt → Froslass)" },
+
+    { "id": 401, "tier": 1, "note": "Night only — Rt 204 Sinnoh" },
+    { "id": 402, "tier": 1, "note": "Night only — Rt 204 Sinnoh (Kricketot → Kricketune)" },
+
+    { "id": 200, "tier": 1, "note": "Night only — Rt 209 Sinnoh / Lost Cave Kanto" },
+    { "id": 429, "tier": 1, "note": "Night only — Dusk Stone on Misdreavus (→ Mismagius)" },
+
+    { "id": 615, "tier": 1, "note": "WINTER only — Twist Mountain Unova. Becomes Tier 2 off-season (very rare)." },
+
+    { "id": 582, "tier": 1, "note": "WINTER only — Dragonspiral Tower dark grass" },
+    { "id": 583, "tier": 1, "note": "WINTER only — Dragonspiral Tower (Vanillite → Vanillish)" },
+    { "id": 584, "tier": 1, "note": "WINTER only — Dragonspiral Tower (Vanillish → Vanilluxe)" },
+
+    { "id": 613, "tier": 1, "note": "WINTER only — Dragonspiral Tower dark grass (pre-evo of Beartic)" },
+    { "id": 614, "tier": 1, "note": "WINTER only — Dragonspiral Tower dark grass" },
+
+    { "id": 451, "tier": 2, "note": "Sinnoh Safari Zone — very rare" },
+    { "id": 452, "tier": 2, "note": "Sinnoh Safari Zone (Skorupi → Drapion)" },
+    { "id": 453, "tier": 2, "note": "Sinnoh Safari Zone (also rare in Sinnoh lakes)" },
+    { "id": 454, "tier": 2, "note": "Sinnoh Safari Zone (Croagunk → Toxicroak)" },
+    { "id": 455, "tier": 2, "note": "Sinnoh Safari Zone exclusive" },
+
+    { "id": 115, "tier": 2, "note": "Cliff Cave Johto — very rare" },
+
+    { "id": 193, "tier": 2, "note": "Ruin Valley Kanto — very rare" },
+    { "id": 469, "tier": 2, "note": "Yanma + AncientPower level-up (→ Yanmega)" },
+
+    { "id": 211, "tier": 2, "note": "Fishing in various places, uncommon/rare" },
+
+    { "id": 227, "tier": 2, "note": "Very rare wild encounter" },
+
+    { "id": 122, "tier": 2, "note": "Very rare wild encounter" },
+    { "id": 439, "tier": 2, "note": "Breed Mr.Mime → Mime Jr." },
+
+    { "id": 349, "tier": 2, "note": "Special tile on Rt 119 Hoenn or Mt. Coronet Sinnoh. Discord servers track tiles." },
+    { "id": 350, "tier": 2, "note": "Max-Beauty evolution from Feebas" },
+
+    { "id": 246, "tier": 2, "note": "Larvitar line — pre-evo of Pupitar/Tyranitar" },
+    { "id": 247, "tier": 2, "note": "Rt 15 Unova or Desert Resort Unova" },
+    { "id": 248, "tier": 2, "note": "Pupitar → Tyranitar (Lv 55)" },
+
+    { "id": 588, "tier": 2, "note": "Karrablast — pre-evo of Escavalier; trade-for-opposite with Shelmet" },
+    { "id": 589, "tier": 2, "note": "Karrablast → Escavalier via trade (with Shelmet)" },
+    { "id": 616, "tier": 2, "note": "NOT WINTER — Rt 8 Unova" },
+    { "id": 617, "tier": 2, "note": "Shelmet → Accelgor via trade (with Karrablast)" },
+
+    { "id": 369, "tier": 2, "note": "Underwater Hoenn" },
+
+    { "id": 371, "tier": 2, "note": "Meteor Falls — Steven room or square lake room" },
+    { "id": 372, "tier": 2, "note": "Bagon → Shelgon" },
+    { "id": 373, "tier": 2, "note": "Bagon line → Salamence" },
+
+    { "id": 374, "tier": 2, "note": "Meteor Falls — Steven room or square lake room" },
+    { "id": 375, "tier": 2, "note": "Beldum → Metang" },
+    { "id": 376, "tier": 2, "note": "Beldum line → Metagross" },
+
+    { "id": 359, "tier": 2, "note": "Uncommon — Rt 120 Hoenn" },
+
+    { "id": 123, "tier": 2, "note": "Very rare; alternative: Celadon Game Corner purchase" },
+    { "id": 212, "tier": 2, "note": "Scyther + Metal Coat trade (→ Scizor)" },
+
+    { "id": 222, "tier": 2, "note": "Very rare wild encounter" },
+
+    { "id": 479, "tier": 2, "note": "Very rare; specific dungeon (Old Chateau)" },
+
+    { "id": 1,   "tier": 2, "note": "Starter — Bulbasaur (Kanto)" },
+    { "id": 2,   "tier": 2, "note": "Starter line — Ivysaur" },
+    { "id": 3,   "tier": 2, "note": "Starter line — Venusaur" },
+    { "id": 4,   "tier": 2, "note": "Starter — Charmander (Kanto)" },
+    { "id": 5,   "tier": 2, "note": "Starter line — Charmeleon" },
+    { "id": 6,   "tier": 2, "note": "Starter line — Charizard" },
+    { "id": 7,   "tier": 2, "note": "Starter — Squirtle (Kanto)" },
+    { "id": 8,   "tier": 2, "note": "Starter line — Wartortle" },
+    { "id": 9,   "tier": 2, "note": "Starter line — Blastoise" },
+    { "id": 152, "tier": 2, "note": "Starter — Chikorita (Johto)" },
+    { "id": 153, "tier": 2, "note": "Starter line — Bayleef" },
+    { "id": 154, "tier": 2, "note": "Starter line — Meganium" },
+    { "id": 155, "tier": 2, "note": "Starter — Cyndaquil (Johto)" },
+    { "id": 156, "tier": 2, "note": "Starter line — Quilava" },
+    { "id": 157, "tier": 2, "note": "Starter line — Typhlosion" },
+    { "id": 158, "tier": 2, "note": "Starter — Totodile (Johto)" },
+    { "id": 159, "tier": 2, "note": "Starter line — Croconaw" },
+    { "id": 160, "tier": 2, "note": "Starter line — Feraligatr" },
+    { "id": 252, "tier": 2, "note": "Starter — Treecko (Hoenn)" },
+    { "id": 253, "tier": 2, "note": "Starter line — Grovyle" },
+    { "id": 254, "tier": 2, "note": "Starter line — Sceptile" },
+    { "id": 255, "tier": 2, "note": "Starter — Torchic (Hoenn)" },
+    { "id": 256, "tier": 2, "note": "Starter line — Combusken" },
+    { "id": 257, "tier": 2, "note": "Starter line — Blaziken" },
+    { "id": 258, "tier": 2, "note": "Starter — Mudkip (Hoenn)" },
+    { "id": 259, "tier": 2, "note": "Starter line — Marshtomp" },
+    { "id": 260, "tier": 2, "note": "Starter line — Swampert" },
+    { "id": 387, "tier": 2, "note": "Starter — Turtwig (Sinnoh)" },
+    { "id": 388, "tier": 2, "note": "Starter line — Grotle" },
+    { "id": 389, "tier": 2, "note": "Starter line — Torterra" },
+    { "id": 390, "tier": 2, "note": "Starter — Chimchar (Sinnoh)" },
+    { "id": 391, "tier": 2, "note": "Starter line — Monferno" },
+    { "id": 392, "tier": 2, "note": "Starter line — Infernape" },
+    { "id": 393, "tier": 2, "note": "Starter — Piplup (Sinnoh)" },
+    { "id": 394, "tier": 2, "note": "Starter line — Prinplup" },
+    { "id": 395, "tier": 2, "note": "Starter line — Empoleon" },
+    { "id": 495, "tier": 2, "note": "Starter — Snivy (Unova)" },
+    { "id": 496, "tier": 2, "note": "Starter line — Servine" },
+    { "id": 497, "tier": 2, "note": "Starter line — Serperior" },
+    { "id": 498, "tier": 2, "note": "Starter — Tepig (Unova)" },
+    { "id": 499, "tier": 2, "note": "Starter line — Pignite" },
+    { "id": 500, "tier": 2, "note": "Starter line — Emboar" },
+    { "id": 501, "tier": 2, "note": "Starter — Oshawott (Unova)" },
+    { "id": 502, "tier": 2, "note": "Starter line — Dewott" },
+    { "id": 503, "tier": 2, "note": "Starter line — Samurott" },
+
+    { "id": 624, "tier": 2, "note": "Lure on Rt 11 Unova (Pawniard)" },
+    { "id": 625, "tier": 2, "note": "Lure on Rt 11 Unova (Pawniard → Bisharp)" },
+    { "id": 627, "tier": 2, "note": "Lure on Rt 11 Unova (Rufflet)" },
+    { "id": 628, "tier": 2, "note": "Lure on Rt 11 Unova (Rufflet → Braviary)" },
+    { "id": 629, "tier": 2, "note": "Lure on Rt 11 Unova (Vullaby)" },
+    { "id": 630, "tier": 2, "note": "Lure on Rt 11 Unova (Vullaby → Mandibuzz)" },
+
+    { "id": 127, "tier": 5, "note": "Celadon Game Corner purchase" },
+    { "id": 137, "tier": 5, "note": "Celadon Game Corner purchase" },
+    { "id": 233, "tier": 5, "note": "Porygon + Upgrade (→ Porygon2)" },
+    { "id": 474, "tier": 5, "note": "Porygon2 + Dubious Disc (→ Porygon-Z)" }
+  ]
+}
