@@ -215,8 +215,9 @@ export default function TrackerMark({
     // selection = filter is off.
     const raritySet = markRarities.length > 0 ? new Set(markRarities) : null;
     const evoCategorySet = markEvolutions.length > 0 ? new Set(markEvolutions) : null;
-    // Hunt-tier filter set. The "null" hunt_tier (unassigned) maps to tier 4
-    // (the default bucket), so picking tier 4 in the UI matches both.
+    // Hunt-tier filter set. The "null" hunt_tier (unassigned) maps to tier 3
+    // (the default "Normal Horde" bucket), so picking tier 3 in the UI
+    // matches both explicit T3 assignments and every unlisted mon.
     const tierSet = markTiers.length > 0 ? new Set(markTiers) : null;
 
     const out = data.pokemon.filter((p) => {
@@ -278,11 +279,11 @@ export default function TrackerMark({
         if (!matched) return false;
       }
       // Hunt-tier gate. `p.hunt_tier === null` means the mon was not
-      // assigned a tier in hunt-tiers.json — treat as tier 4 (the default
-      // "normal horde" bucket). So picking tier 4 in the UI surfaces both
-      // explicitly-tagged tier-4 mons (if any) AND every unassigned mon.
+      // assigned a tier in hunt-tiers.json — treat as tier 3 (the default
+      // "Normal Horde" bucket). So picking T3 in the UI surfaces both
+      // explicitly-tagged T3 mons (if any) AND every unassigned mon.
       if (tierSet) {
-        const effectiveTier = p.hunt_tier ?? 4;
+        const effectiveTier = p.hunt_tier ?? 3;
         if (!tierSet.has(effectiveTier)) return false;
       }
       return true;
@@ -292,11 +293,11 @@ export default function TrackerMark({
     else if (markSort === 'bst') out.sort((a, b) => statTotal(b.stats) - statTotal(a.stats));
     else if (markSort === 'tier') {
       // Lower tier number = higher hunt priority → sort ascending. Unassigned
-      // (null) treated as 4 (the default bucket). Ties broken by dex number
-      // so the order within a tier stays predictable.
+      // (null) treated as 3 (the default "Normal Horde" bucket). Ties broken
+      // by dex number so the order within a tier stays predictable.
       out.sort((a, b) => {
-        const ta = a.hunt_tier ?? 4;
-        const tb = b.hunt_tier ?? 4;
+        const ta = a.hunt_tier ?? 3;
+        const tb = b.hunt_tier ?? 3;
         if (ta !== tb) return ta - tb;
         return a.id - b.id;
       });

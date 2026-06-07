@@ -3,20 +3,23 @@
   "_source_author": "RogueMaster (forums.pokemmo.com, 2025-08-19)",
   "_note": [
     "Hand-curated hunt-priority tiers transcribed from RogueMaster's OT-dex",
-    "completion guide. The guide's own tier numbering skips 3 (goes 0 → 1 → 2 →",
-    "4 → 5 → 6); we preserve that as-is rather than renumber, since users who",
-    "read the guide will look for tier numbers that match.",
+    "completion guide. The forum guide itself uses a quirky 0,1,2,4,5,6",
+    "numbering (skips T3); we renumber to consecutive 0..4 so the tracker UI",
+    "reads cleanly. Mapping:",
+    "  guide T0..T2 → ours T0..T2 (unchanged)",
+    "  guide T4    → ours T3  (Normal Horde, default for unlisted mons)",
+    "  guide T5    → ours T4  (Game Corner)",
     "",
     "Lower number = higher hunt priority. Mons NOT listed here default to",
-    "tier 4 (normal common-horde encounter — use Horde guide + Pokedex Helper).",
-    "Tier 6 (breeding/leveling cleanup) is a *strategy* rather than a specific",
-    "list; it's not assigned here, but the existing tracker filters (Babies +",
-    "Evolution method) cover that ground.",
+    "tier 3 (normal common-horde encounter — use Horde guide + Pokedex Helper).",
+    "Tier 6 in the guide (breeding/leveling cleanup) is a *strategy* rather",
+    "than a specific list; not assigned here, since the existing tracker",
+    "filters (Babies + Evolution method) cover that ground.",
     "",
-    "When a mon appears in multiple tiers in the guide (e.g. Scyther in T2",
-    "AND T5), it's assigned to the tier the guide RECOMMENDS as the primary",
-    "approach. Scyther → T2 because catching is the canonical method; the",
-    "Game Corner alternative is only mentioned as a fallback.",
+    "Game Corner (T4) roster includes Eevee, Dratini line, Porygon line,",
+    "Pinsir, and Scyther line per Celadon GC's actual prize list. When the",
+    "GC head (Eevee, Dratini, Scyther) gets picked up here, we tag the full",
+    "evo line in the same tier so the tracker surfaces the family together.",
     "",
     "Evolution-line scoping: when the guide names ONE mon (e.g. 'Audino') we",
     "also tag its evolution line in the same tier. The reason: the in-game",
@@ -44,15 +47,15 @@
       "color": "violet"
     },
     {
-      "tier": 4,
+      "tier": 3,
       "label": "Normal Horde",
       "blurb": "Default — common horde or wild encounter. No assigned mons; everything unlisted lands here. Use the Horde Guide + PokedexHelper.com for routes.",
       "color": "stone"
     },
     {
-      "tier": 5,
+      "tier": 4,
       "label": "Game Corner",
-      "blurb": "Purchasable at the Celadon Game Corner if you're tired of hunting / waiting for swarms. Easier to coin-grind than to find in the wild.",
+      "blurb": "Purchasable at the Celadon Game Corner if you're tired of hunting / waiting for swarms. Easier to coin-grind than to find in the wild. Roster: Eevee, Dratini, Porygon, Pinsir, Scyther (and their evolution lines).",
       "color": "emerald"
     }
   ],
@@ -162,9 +165,6 @@
 
     { "id": 359, "tier": 2, "note": "Uncommon — Rt 120 Hoenn" },
 
-    { "id": 123, "tier": 2, "note": "Very rare; alternative: Celadon Game Corner purchase" },
-    { "id": 212, "tier": 2, "note": "Scyther + Metal Coat trade (→ Scizor)" },
-
     { "id": 222, "tier": 2, "note": "Very rare wild encounter" },
 
     { "id": 479, "tier": 2, "note": "Very rare; specific dungeon (Old Chateau)" },
@@ -222,9 +222,26 @@
     { "id": 629, "tier": 2, "note": "Lure on Rt 11 Unova (Vullaby)" },
     { "id": 630, "tier": 2, "note": "Lure on Rt 11 Unova (Vullaby → Mandibuzz)" },
 
-    { "id": 127, "tier": 5, "note": "Celadon Game Corner purchase" },
-    { "id": 137, "tier": 5, "note": "Celadon Game Corner purchase" },
-    { "id": 233, "tier": 5, "note": "Porygon + Upgrade (→ Porygon2)" },
-    { "id": 474, "tier": 5, "note": "Porygon2 + Dubious Disc (→ Porygon-Z)" }
+    { "id": 123, "tier": 4, "note": "Celadon Game Corner purchase" },
+    { "id": 212, "tier": 4, "note": "Game Corner Scyther + Metal Coat trade (→ Scizor)" },
+
+    { "id": 127, "tier": 4, "note": "Celadon Game Corner purchase" },
+
+    { "id": 137, "tier": 4, "note": "Celadon Game Corner purchase" },
+    { "id": 233, "tier": 4, "note": "Game Corner Porygon + Upgrade (→ Porygon2)" },
+    { "id": 474, "tier": 4, "note": "Game Corner Porygon line → Porygon-Z (Dubious Disc)" },
+
+    { "id": 133, "tier": 4, "note": "Celadon Game Corner purchase — base form of the Eeveelutions" },
+    { "id": 134, "tier": 4, "note": "GC Eevee + Water Stone (→ Vaporeon)" },
+    { "id": 135, "tier": 4, "note": "GC Eevee + Thunder Stone (→ Jolteon)" },
+    { "id": 136, "tier": 4, "note": "GC Eevee + Fire Stone (→ Flareon)" },
+    { "id": 196, "tier": 4, "note": "GC Eevee → Espeon (friendship, Day)" },
+    { "id": 197, "tier": 4, "note": "GC Eevee → Umbreon (friendship, Night)" },
+    { "id": 470, "tier": 4, "note": "GC Eevee → Leafeon (level near Moss Rock)" },
+    { "id": 471, "tier": 4, "note": "GC Eevee → Glaceon (level near Ice Rock)" },
+
+    { "id": 147, "tier": 4, "note": "Celadon Game Corner purchase" },
+    { "id": 148, "tier": 4, "note": "GC Dratini → Dragonair (Lv 30)" },
+    { "id": 149, "tier": 4, "note": "GC Dratini line → Dragonite (Lv 55)" }
   ]
 }
