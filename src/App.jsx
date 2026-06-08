@@ -54,6 +54,10 @@ const INITIAL_POKEDEX = {
 };
 const INITIAL_LOCATIONS = { search: '', region: 'All', sort: 'region' };
 const INITIAL_TRACKER_VIEW = { view: 'plan', planRegion: 'All', planMethods: [], planRarities: [], hideSingles: true,
+  // Plan mon-attribute filters — shared predicates with the Mark view
+  // (src/lib/monFilters.js). planTypes (≤2), planBaby (any|only|exclude),
+  // planEvolutions (category keys), planTiers (hunt-tier numbers).
+  planTypes: [], planBaby: 'any', planEvolutions: [], planTiers: [],
   // Mark-tab filters:
   //   markBaby           'any' | 'only' | 'exclude'  — gate by pokemon.is_baby
   //   markRarities       [] | string[]               — selected encounter rarities

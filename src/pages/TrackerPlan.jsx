@@ -5,16 +5,25 @@ import RarityBadge from '../components/RarityBadge.jsx';
 import PokemonSprite from '../components/PokemonSprite.jsx';
 import FilterRow from '../components/FilterRow.jsx';
 import RegionPills from '../components/RegionPills.jsx';
+import TypePills from '../components/TypePills.jsx';
 import { useEscapeAndScrollLock } from '../hooks/useEscapeAndScrollLock.js';
 import { typeColor } from '../lib/types.js';
 import { dexNum } from '../lib/format.js';
 import { methodIcon, parseLocation, regionRank } from '../lib/locations.js';
 import { stateOf, scorePoints, cycleClick, trackerRarityRank, METHOD_OPTIONS, isExcludedFromTracker } from '../lib/tracker.js';
+import {
+  BABY_FILTERS, EVOLUTION_CATEGORIES,
+  matchesTypes, matchesBaby, matchesEvolution, matchesTier,
+} from '../lib/monFilters.js';
 
 // Tracker-specific rarity order — same as TRACKER_RARITY_ORDER in tracker.js,
 // duplicated here so the filter chips render in the right order without an
 // extra export.
 const RARITY_OPTIONS = ['Very Common', 'Common', 'Uncommon', 'Rare', 'Very Rare', 'Special', 'Horde', 'Lure'];
+
+// Stable empty array (see TrackerMark) so an absent hunt-tier catalog doesn't
+// bust the catalog memo each render.
+const EMPTY = [];
 
 export default function TrackerPlan({
   data, pokemonById,
@@ -22,10 +31,17 @@ export default function TrackerPlan({
   view, updateView,
   openPanel,
 }) {
-  const { planRegion, planMethods, planRarities = [], hideSingles } = view;
+  const {
+    planRegion, planMethods, planRarities = [], hideSingles,
+    // Mon-attribute filters, shared with the Mark view (see monFilters.js).
+    planTypes = [], planBaby = 'any', planEvolutions = [], planTiers = [],
+  } = view;
   // Track the open modal by key so it stays bound to the *current* state of
   // the location (eligible mons / score update live as you click in the modal).
   const [openKey, setOpenKey] = useState(null);
+
+  // Hunt-tier catalog (from pokemmo.json) drives the Hunt-tier filter row.
+  const huntTierCatalog = data.hunt_tiers?.tiers || EMPTY;
 
   // ─────── Build per-location plan data ───────
   // For each (region, baseLocation) collect every encounter entry the
@@ -92,6 +108,11 @@ export default function TrackerPlan({
   // index so changing tracker state doesn't rebuild the index.
   const ranked = useMemo(() => {
     const out = [];
+    // Mon-attribute filter sets — built once, applied per mon below. These are
+    // the same gates the Mark grid uses (src/lib/monFilters.js), so the two
+    // views stay consistent. null = filter off.
+    const evoSet  = planEvolutions.length > 0 ? new Set(planEvolutions) : null;
+    const tierSet = planTiers.length > 0 ? new Set(planTiers) : null;
     for (const loc of locationPlan) {
       if (planRegion !== 'All' && loc.region !== planRegion) continue;
       const methodAllowed = planMethods.length === 0
@@ -108,6 +129,12 @@ export default function TrackerPlan({
       for (const me of loc.monEntries) {
         const state = stateOf(trackerState, me.pokemon.id);
         if (state === 'caught' || state === 'skipped') continue;
+        // Mon-attribute gates (types / baby / evolution / hunt tier). A mon
+        // that fails any active gate drops out of this location entirely.
+        if (!matchesTypes(me.pokemon, planTypes)) continue;
+        if (!matchesBaby(me.pokemon, planBaby)) continue;
+        if (!matchesEvolution(me.pokemon, evoSet)) continue;
+        if (!matchesTier(me.pokemon, tierSet)) continue;
         // Method + rarity filters: drop entries that don't match. A mon stays
         // eligible if at least one of its entries passes both filters.
         let visibleEntries = me.entries;
@@ -168,24 +195,38 @@ export default function TrackerPlan({
         || a.name.localeCompare(b.name, undefined, { numeric: true });
     });
     return out;
-  }, [locationPlan, trackerState, planRegion, planMethods, planRarities, hideSingles]);
+  }, [locationPlan, trackerState, planRegion, planMethods, planRarities, hideSingles,
+      planTypes, planBaby, planEvolutions, planTiers]);
 
   // ─────── Filter row handlers ───────
   const setRegion = useCallback((r) => updateView({ planRegion: r }), [updateView]);
+  const setTypes  = useCallback((v) => updateView({ planTypes: v }), [updateView]);
+  const setBaby   = useCallback((v) => updateView({ planBaby: v }), [updateView]);
   const toggleMethod = useCallback((m) => {
     updateView({ planMethods: planMethods.includes(m) ? planMethods.filter((x) => x !== m) : [...planMethods, m] });
   }, [planMethods, updateView]);
   const toggleRarity = useCallback((r) => {
     updateView({ planRarities: planRarities.includes(r) ? planRarities.filter((x) => x !== r) : [...planRarities, r] });
   }, [planRarities, updateView]);
+  const toggleEvolution = useCallback((c) => {
+    updateView({ planEvolutions: planEvolutions.includes(c) ? planEvolutions.filter((x) => x !== c) : [...planEvolutions, c] });
+  }, [planEvolutions, updateView]);
+  const toggleTier = useCallback((t) => {
+    updateView({ planTiers: planTiers.includes(t) ? planTiers.filter((x) => x !== t) : [...planTiers, t] });
+  }, [planTiers, updateView]);
   const toggleHideSingles = useCallback(() => updateView({ hideSingles: !hideSingles }), [hideSingles, updateView]);
-  const resetFilters = useCallback(() => updateView({ planRegion: 'All', planMethods: [], planRarities: [], hideSingles: true }), [updateView]);
+  const resetFilters = useCallback(() => updateView({
+    planRegion: 'All', planMethods: [], planRarities: [], hideSingles: true,
+    planTypes: [], planBaby: 'any', planEvolutions: [], planTiers: [],
+  }), [updateView]);
 
   return (
     <main className="max-w-7xl mx-auto px-4 py-4 space-y-4">
       {/* Filter row */}
       <section className="rounded-md border border-[#e6dabf] dark:border-stone-800 bg-[#fdf8e9] dark:bg-stone-900 p-3 space-y-2">
         <RegionPills value={planRegion} onChange={setRegion} />
+
+        <TypePills value={planTypes} onChange={setTypes} />
 
         <FilterRow
           label="Method"
@@ -202,6 +243,39 @@ export default function TrackerPlan({
           onToggle={toggleRarity}
           color="blue"
         />
+
+        {/* Babies — three-way single-select, shared with the Mark view. */}
+        <FilterRow
+          label="Babies"
+          mode="single"
+          options={BABY_FILTERS}
+          selected={planBaby}
+          onToggle={setBaby}
+          color="pink"
+        />
+
+        {/* Evolution method — 8 buckets, OR semantics, family-aware. */}
+        <FilterRow
+          label="Evolution"
+          options={EVOLUTION_CATEGORIES}
+          selected={planEvolutions}
+          onToggle={toggleEvolution}
+          color="emerald"
+          onClear={() => updateView({ planEvolutions: [] })}
+        />
+
+        {/* Hunt tier — only when the catalog is present (pokemmo.json). */}
+        {huntTierCatalog.length > 0 && (
+          <FilterRow
+            label="Hunt tier"
+            options={huntTierCatalog.map((t) => ({
+              key: t.tier, label: `T${t.tier} ${t.label}`, title: t.blurb, color: t.color,
+            }))}
+            selected={planTiers}
+            onToggle={toggleTier}
+            onClear={() => updateView({ planTiers: [] })}
+          />
+        )}
 
         <div className="flex items-center gap-3 flex-wrap text-xs">
           <label className="inline-flex items-center gap-1.5 text-stone-700 dark:text-stone-300 cursor-pointer">
