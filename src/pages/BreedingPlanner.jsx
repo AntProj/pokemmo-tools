@@ -18,19 +18,22 @@ import { ChevronRight, ChevronDown, GitFork } from 'lucide-react';
 const SUB_TABS = [
   { key: 'plan',    label: 'IV Plan' },
   { key: 'costs',   label: 'Costs'   },
-  { key: 'have',    label: 'I Have'  },
+  { key: 'have',    label: 'Owned'   },
   { key: 'profit',  label: 'Profit'  },
   { key: 'saved',   label: 'Saved'   },
 ];
 
-// A blank owned-breeder row for the "I Have" tab.
+// A blank owned-breeder row for the "Owned" tab. The species (monId) drives
+// role + gender; `gender` here is only used for mixed-gender species.
 function blankBreeder() {
   return {
     id: 'b_' + Math.random().toString(36).slice(2, 9),
+    monId: null,
     ivs: { hp: false, atk: false, def: false, spa: false, spd: false, spe: false },
-    gender: 'M',
-    role: 'group',   // target | group | ditto
+    gender: 'F',     // only consulted for mixed-gender species
     nature: false,
+    shiny: false,
+    alpha: false,
   };
 }
 
@@ -46,7 +49,11 @@ const DEFAULT_FORM = {
   // the IV tree's cost, but they impose a carrier requirement on the lineage.
   eggMoves: [],
   hiddenAbility: false,
-  // Owned breeders for the "I Have" tab — matched against the plan tree.
+  // Shiny / Alpha targets impose tree-wide constraints (see the IV Plan note):
+  // shiny only breeds shiny; Alpha needs both parents Alpha at every step.
+  shiny: false,
+  alpha: false,
+  // Owned breeders for the "Owned" tab — matched against the plan tree.
   inventory: [],
   guaranteeGender: true,
   targetGender: 'F',
@@ -99,6 +106,11 @@ export default function BreedingPlanner({ data, theme, onTheme }) {
   const reset    = useCallback(() => setForm(DEFAULT_FORM), []);
 
   const breedablePokemon = useMemo(() => data.pokemon.filter(canBreed), [data.pokemon]);
+  // Owned breeders can also be Ditto (a valid parent though not a valid target).
+  const breederPokemon = useMemo(
+    () => data.pokemon.filter((p) => p.id === 132 || canBreed(p)),
+    [data.pokemon]
+  );
   const target = useMemo(
     () => (form.monId != null ? data.pokemon.find((p) => p.id === form.monId) : null),
     [form.monId, data.pokemon]
@@ -169,8 +181,8 @@ export default function BreedingPlanner({ data, theme, onTheme }) {
       else if (cat === 'male-only') g = 'M';
       else if (cat === 'genderless') g = 'N';
       else if (g !== 'F' && g !== 'M') g = 'F';
-      // Egg moves + hidden-ability are species-specific — clear on target change.
-      return { ...f, overrides: { byInstance: {}, byRecipe: {} }, targetGender: g, eggMoves: [], hiddenAbility: false };
+      // Egg moves + hidden-ability + shiny/alpha are species-specific — clear on target change.
+      return { ...f, overrides: { byInstance: {}, byRecipe: {} }, targetGender: g, eggMoves: [], hiddenAbility: false, shiny: false, alpha: false };
     });
   }, [target?.id]);
 
@@ -244,7 +256,8 @@ export default function BreedingPlanner({ data, theme, onTheme }) {
       inputs: {
         ivs: { ...form.ivs },
         nature: form.nature, ability: form.hiddenAbility, moves: [...form.eggMoves],
-        targetGender: form.targetGender, guaranteeGender: form.guaranteeGender, shiny: false,
+        targetGender: form.targetGender, guaranteeGender: form.guaranteeGender,
+        shiny: form.shiny, alpha: form.alpha,
       },
       prices: clonePrices(form.prices),
       basePrices: { ...form.basePrices },
@@ -279,6 +292,8 @@ export default function BreedingPlanner({ data, theme, onTheme }) {
       nature: p.inputs?.nature || '',
       eggMoves: Array.isArray(p.inputs?.moves) ? p.inputs.moves : [],
       hiddenAbility: !!p.inputs?.ability,
+      shiny: !!p.inputs?.shiny,
+      alpha: !!p.inputs?.alpha,
       inventory: Array.isArray(p.inventory) ? p.inventory : [],
       guaranteeGender: p.inputs?.guaranteeGender !== false,
       targetGender: p.inputs?.targetGender || 'F',
@@ -390,6 +405,16 @@ export default function BreedingPlanner({ data, theme, onTheme }) {
                 Egg fees waived. You'll need to retry breeds where the wrong gender appears.
               </div>
             )}
+            <div className="pt-1.5 mt-1.5 border-t border-[#ece2c4] dark:border-stone-800/60 space-y-1">
+              <CheckRow label="Shiny" checked={form.shiny} onChange={(v) => setField('shiny', v)} />
+              <CheckRow label="Alpha" checked={form.alpha} onChange={(v) => setField('alpha', v)} />
+              {(form.shiny || form.alpha) && (
+                <div className="text-[11px] text-violet-700 dark:text-violet-300">
+                  {form.shiny && 'Shinies only breed with shinies — every parent must be shiny. '}
+                  {form.alpha && 'Alpha needs both parents Alpha at every step.'}
+                </div>
+              )}
+            </div>
           </FormCard>
 
           {target && (hiddenAbility || eggMoveOptions.length > 0) && (
@@ -455,9 +480,9 @@ export default function BreedingPlanner({ data, theme, onTheme }) {
         </aside>
 
         <section className="min-w-0">
-          {tab === 'plan'   && <IVPlanTab target={target} plan={planResult} form={form} setOverride={setOverride} onSave={saveProject} eggMoveNames={selectedEggMoveNames} hiddenAbility={form.hiddenAbility ? hiddenAbility : null} />}
+          {tab === 'plan'   && <IVPlanTab target={target} plan={planResult} form={form} setOverride={setOverride} onSave={saveProject} eggMoveNames={selectedEggMoveNames} hiddenAbility={form.hiddenAbility ? hiddenAbility : null} shiny={form.shiny} alpha={form.alpha} />}
           {tab === 'costs'  && <CostsTab plan={planResult} target={target} form={form} />}
-          {tab === 'have'   && <HaveTab plan={planResult} target={target} speciesCat={speciesCat} inventory={form.inventory || []} onAdd={addBreeder} onRemove={removeBreeder} onUpdate={updateBreeder} />}
+          {tab === 'have'   && <HaveTab data={data} plan={planResult} target={target} breederPokemon={breederPokemon} inventory={form.inventory || []} shiny={form.shiny} alpha={form.alpha} onAdd={addBreeder} onRemove={removeBreeder} onUpdate={updateBreeder} />}
           {tab === 'profit' && <ProfitTab plan={planResult} salePrice={salePrice} setSalePrice={setSalePrice} />}
           {tab === 'saved'  && <SavedProjectsTab data={data} projects={projects} onOpen={openProject} onDuplicate={duplicateProject} onDelete={deleteProject} />}
         </section>
@@ -531,36 +556,40 @@ const PerStatPriceTable = memo(function PerStatPriceTable({ stats, tiers, prices
         </button>
       }
     >
-      <table className="w-full text-xs table-fixed">
-        <thead className="text-stone-500 dark:text-stone-400 align-bottom">
-          <tr>
-            <th className="px-0.5 py-1 text-left font-normal w-7">Stat</th>
-            {tiers.map((t) => (
-              <th key={t} className="px-0.5 py-1 text-right font-normal leading-tight">{TIER_LABELS[t]}</th>
+      {/* Horizontal scroll so each price box stays comfortably wide instead of
+          being crushed to fit 5–6 tier columns into the sidebar. */}
+      <div className="overflow-x-auto -mx-1 px-1">
+        <table className="text-xs border-separate" style={{ borderSpacing: '4px 4px' }}>
+          <thead className="text-stone-500 dark:text-stone-400 align-bottom">
+            <tr>
+              <th className="px-1 py-1 text-left font-normal sticky left-0 bg-[#fdf8e9] dark:bg-stone-900 z-10">Stat</th>
+              {tiers.map((t) => (
+                <th key={t} className="px-1 py-1 text-center font-normal leading-tight whitespace-nowrap">{TIER_LABELS[t]}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {stats.map((stat) => (
+              <tr key={stat}>
+                <td className="px-1 text-stone-700 dark:text-stone-300 font-semibold sticky left-0 bg-[#fdf8e9] dark:bg-stone-900 z-10">{IV_LABELS[stat]}</td>
+                {tiers.map((tier) => (
+                  <td key={tier}>
+                    <PriceInput value={prices[stat][tier]} defaultValue={DEFAULT_PER_STAT_PRICES[stat][tier]} onChange={(v) => onChange(stat, tier, v)} />
+                  </td>
+                ))}
+              </tr>
             ))}
-          </tr>
-        </thead>
-        <tbody>
-          {stats.map((stat) => (
-            <tr key={stat}>
-              <td className="px-0.5 py-0.5 text-stone-700 dark:text-stone-300 font-semibold">{IV_LABELS[stat]}</td>
+            <tr>
+              <td className="px-1 pt-1 text-stone-700 dark:text-stone-300 font-semibold whitespace-nowrap sticky left-0 bg-[#fdf8e9] dark:bg-stone-900 z-10">0×31</td>
               {tiers.map((tier) => (
-                <td key={tier} className="px-0.5 py-0.5">
-                  <PriceInput value={prices[stat][tier]} defaultValue={DEFAULT_PER_STAT_PRICES[stat][tier]} onChange={(v) => onChange(stat, tier, v)} />
+                <td key={tier} className="pt-1">
+                  <PriceInput value={basePrices?.[tier]} defaultValue={DEFAULT_BASE_PRICES[tier]} onChange={(v) => onChangeBase(tier, v)} />
                 </td>
               ))}
             </tr>
-          ))}
-          <tr className="border-t border-[#ece2c4] dark:border-stone-800/60">
-            <td className="px-0.5 py-0.5 text-stone-700 dark:text-stone-300 font-semibold whitespace-nowrap">0×31</td>
-            {tiers.map((tier) => (
-              <td key={tier} className="px-0.5 py-0.5">
-                <PriceInput value={basePrices?.[tier]} defaultValue={DEFAULT_BASE_PRICES[tier]} onChange={(v) => onChangeBase(tier, v)} />
-              </td>
-            ))}
-          </tr>
-        </tbody>
-      </table>
+          </tbody>
+        </table>
+      </div>
       <div className="text-[10px] text-stone-500 dark:text-stone-400 leading-snug space-y-1">
         <div>2×31+ carriers are bred from these 1×31 components — no buy option at higher tiers.</div>
         <div>1×31 carriers can also be bred from a 0×31 mom of the same role + a 1×31 dad of any role + Power Item — the optimizer picks the cheaper of buy vs breed-up.</div>
@@ -583,7 +612,7 @@ function PriceInput({ value, defaultValue, onChange }) {
       value={value ?? ''}
       onChange={(e) => onChange(e.target.value)}
       placeholder={defaultValue?.toLocaleString()}
-      className={`w-full min-w-0 px-1 py-1 rounded border border-[#d6c8a3] dark:border-stone-700 bg-[#fdf8e9] dark:bg-stone-900 text-stone-900 dark:text-stone-100 text-[13px] tabular-nums text-right ${isDefault ? '' : 'font-bold'}`}
+      className={`w-24 px-2 py-1.5 rounded border border-[#d6c8a3] dark:border-stone-700 bg-[#fdf8e9] dark:bg-stone-900 text-stone-900 dark:text-stone-100 text-sm tabular-nums text-right focus:outline-none focus:ring-2 focus:ring-blue-500 ${isDefault ? '' : 'font-bold'}`}
     />
   );
 }
@@ -622,7 +651,7 @@ function DeferredFeaturesNotice() {
 
 /* ─────────────── IV Plan tab ─────────────── */
 
-function IVPlanTab({ target, plan, form, setOverride, onSave, eggMoveNames = [], hiddenAbility = null }) {
+function IVPlanTab({ target, plan, form, setOverride, onSave, eggMoveNames = [], hiddenAbility = null, shiny = false, alpha = false }) {
   if (!target) return <Empty msg="Pick a target species to start." />;
   if (!plan) return <Empty msg="No IVs targeted yet — flip at least one stat to 31 in the form." />;
 
@@ -656,9 +685,19 @@ function IVPlanTab({ target, plan, form, setOverride, onSave, eggMoveNames = [],
         <SaveButton onSave={onSave} />
       </div>
 
-      {(eggMoveNames.length > 0 || hiddenAbility) && (
+      {(eggMoveNames.length > 0 || hiddenAbility || shiny || alpha) && (
         <div className="rounded-md border border-violet-300 dark:border-violet-900 bg-violet-50/60 dark:bg-violet-950/30 p-3 text-sm space-y-1.5">
           <div className="text-[11px] font-semibold uppercase tracking-wider text-violet-700 dark:text-violet-300">Carrier requirements</div>
+          {shiny && (
+            <div className="text-stone-700 dark:text-stone-300">
+              <span className="font-semibold">Shiny:</span> shinies only breed with other shinies — <em>every</em> breeder in the tree must be shiny. The prices below are for normal carriers; shiny carriers cost far more, so treat the total as a floor (use per-node overrides for real shiny prices).
+            </div>
+          )}
+          {alpha && (
+            <div className="text-stone-700 dark:text-stone-300">
+              <span className="font-semibold">Alpha:</span> a child is Alpha only when <em>both</em> parents are Alpha — so every carrier in the tree must be Alpha too.
+            </div>
+          )}
           {hiddenAbility && (
             <div className="text-stone-700 dark:text-stone-300">
               <span className="font-semibold">Hidden ability ({hiddenAbility.name}):</span> passes by species — make sure the
@@ -1410,38 +1449,92 @@ function ProfitTab({ plan, salePrice, setSalePrice }) {
 
 /* ─────────────── "I Have" (owned breeders) tab ─────────────── */
 
-// Normalize an editor row into a matcher breeder. Gender is derived from role
-// + species: Ditto → 'D', genderless target → 'N', otherwise the chosen ♀/♂.
-function toBreeder(b, speciesCat) {
-  const ivs = IV_KEYS.filter((k) => b.ivs[k]);
-  let gender = b.gender;
-  if (b.role === 'ditto') gender = 'D';
-  else if (speciesCat === 'genderless') gender = 'N';
-  return { id: b.id, ivs, gender, role: b.role, nature: !!b.nature };
+// Work out how an owned breeder of a specific SPECIES can be used against the
+// current target: its role (target / egg-group filler / ditto), the gender it
+// breeds as, and whether it's usable at all (with a human reason if not).
+//
+// The key gotchas this surfaces:
+//   - female-only species (Kangaskhan, Miltank, …) only ever produce more of
+//     themselves, so they can't be an egg-group filler for another species;
+//   - genderless species only breed within their own line or with Ditto;
+//   - a species in a different egg group simply can't breed with the target.
+function breederCompat(species, target) {
+  if (!species) return { usable: false, error: 'Pick the species' };
+  if (species.id === 132) return { role: 'ditto', gender: 'D', usable: true }; // Ditto
+  if (!target) return { usable: false, error: 'Pick a target species first' };
+
+  const cat = genderRatioCategory(species);
+  const sameSpecies = species.id === target.id;
+  let role = 'target';
+  if (!sameSpecies) {
+    const sg = (species.egg_groups || []).map((g) => String(g).toLowerCase());
+    const tg = (target.egg_groups || []).map((g) => String(g).toLowerCase());
+    if (!sg.some((g) => tg.includes(g))) {
+      return { usable: false, role: 'group', error: `Different egg group from ${target.name} — they can't breed together.` };
+    }
+    role = 'group';
+  }
+
+  if (cat === 'genderless') {
+    if (!sameSpecies) return { usable: false, role, gender: 'N', error: `${species.name} is genderless — it only breeds within its own line or with Ditto.` };
+    return { role, gender: 'N', usable: true };
+  }
+  if (cat === 'female-only') {
+    if (!sameSpecies) return { usable: false, role, gender: 'F', error: `${species.name} is female-only — it only ever produces more ${species.name}, so it can't be a parent for ${target.name}.` };
+    return { role, gender: 'F', usable: true, warn: `${species.name} is female-only.` };
+  }
+  if (cat === 'male-only') {
+    return { role, gender: 'M', usable: true, warn: sameSpecies ? null : `${species.name} is male-only — usable only as a ♂ parent.` };
+  }
+  // Mixed-gender species: caller supplies the chosen ♀/♂ (gender === null here).
+  return { role, gender: null, usable: true };
 }
 
-function HaveTab({ plan, target, speciesCat, inventory, onAdd, onRemove, onUpdate }) {
+function HaveTab({ data, plan, target, breederPokemon, inventory, shiny, alpha, onAdd, onRemove, onUpdate }) {
   if (!target) return <Empty msg="Pick a target species on the IV Plan tab first." />;
   if (!plan)   return <Empty msg="Target at least one IV first — there's nothing to match against yet." />;
 
+  const byId = useMemo(() => new Map(data.pokemon.map((p) => [p.id, p])), [data.pokemon]);
+
+  // Evaluate each owned breeder against the target: species compatibility, then
+  // the shiny/alpha gate. Only usable ones go to the matcher.
+  const evals = useMemo(() => inventory.map((b) => {
+    const species = b.monId != null ? byId.get(b.monId) : null;
+    const compat = breederCompat(species, target);
+    let usable = compat.usable;
+    let reason = compat.error || null;
+    if (usable) {
+      if (shiny && !b.shiny)        { usable = false; reason = 'Target is shiny — only shiny breeders qualify (shinies only breed with shinies).'; }
+      else if (!shiny && b.shiny)   { usable = false; reason = 'This is shiny but the target isn’t — shinies only breed with shinies.'; }
+      else if (alpha && !b.alpha)   { usable = false; reason = 'Target is Alpha — both parents of every breed must be Alpha.'; }
+    }
+    const gender = compat.gender ?? b.gender; // mixed species use the chosen ♀/♂
+    const matcher = usable ? { id: b.id, ivs: IV_KEYS.filter((k) => b.ivs[k]), gender, role: compat.role, nature: !!b.nature } : null;
+    return { b, species, compat, usable, reason, warn: compat.warn, matcher };
+  }), [inventory, byId, target, shiny, alpha]);
+
   const matched = useMemo(
-    () => matchInventory(plan.node, inventory.map((b) => toBreeder(b, speciesCat))),
-    [plan.node, inventory, speciesCat]
+    () => matchInventory(plan.node, evals.filter((e) => e.usable).map((e) => e.matcher)),
+    [plan.node, evals]
   );
+  const matchedIds = useMemo(() => new Set(matched.matches.map((m) => m.breeder.id)), [matched]);
   const remaining = useMemo(
     () => [...aggregateLeaves(matched.node).values()].sort((a, b) => (b.count * b.cost) - (a.count * a.cost)),
     [matched.node]
   );
   const remainingTotal = remaining.reduce((s, g) => s + g.count * g.cost, 0);
-  const roleOptions = speciesCat === 'genderless'
-    ? [{ v: 'target', l: 'Target' }, { v: 'ditto', l: 'Ditto' }]
-    : [{ v: 'target', l: 'Target' }, { v: 'group', l: 'Egg-group' }, { v: 'ditto', l: 'Ditto' }];
+
+  // Breeders that contributed nothing — either unusable, or usable but no node
+  // fit — each with a human reason.
+  const notUsed = evals
+    .filter((e) => !matchedIds.has(e.b.id))
+    .map((e) => ({ e, reason: e.usable ? "didn't fit any node in this plan" : (e.reason || 'unusable') }));
 
   return (
     <div className="space-y-3">
       <div className="text-xs text-stone-500 dark:text-stone-400">
-        List breeders you already own — the planner claims each against the most expensive matching node and prunes that branch.
-        A breeder fills a node when its role/gender match and it has <em>at least</em> the node's perfect IVs.
+        List breeders you already own — pick each one's species so the planner knows its egg group, gender, and quirks.
+        It then claims each against the most expensive matching node and prunes that branch.
       </div>
 
       <FormCard
@@ -1457,8 +1550,8 @@ function HaveTab({ plan, target, speciesCat, inventory, onAdd, onRemove, onUpdat
           <div className="text-sm text-stone-500 dark:text-stone-400 py-2">No breeders yet. Add the ones in your box to see what they save.</div>
         ) : (
           <div className="space-y-2">
-            {inventory.map((b) => (
-              <BreederRow key={b.id} b={b} speciesCat={speciesCat} roleOptions={roleOptions} onRemove={onRemove} onUpdate={onUpdate} />
+            {evals.map((e) => (
+              <BreederRow key={e.b.id} b={e.b} breederPokemon={breederPokemon} info={e} onRemove={onRemove} onUpdate={onUpdate} />
             ))}
           </div>
         )}
@@ -1475,23 +1568,33 @@ function HaveTab({ plan, target, speciesCat, inventory, onAdd, onRemove, onUpdat
           {matched.matches.length > 0 && (
             <FormCard title={`Matched (${matched.matches.length})`}>
               <ul className="text-sm divide-y divide-[#ece2c4] dark:divide-stone-800/60">
-                {matched.matches.map((m, i) => (
-                  <li key={i} className="flex items-baseline gap-2 py-1">
-                    <span className="flex-1 min-w-0">
-                      {m.ivs.length}×31 {m.gender === 'F' ? '♀' : m.gender === 'M' ? '♂' : m.gender === 'D' ? 'Ditto' : ''} {SPECIES_TXT(m.species)}
-                      {m.ivs.length > 0 && <span className="text-stone-500 dark:text-stone-400"> ({formatIVList(m.ivs)})</span>}
-                    </span>
-                    <span className="font-mono tabular-nums text-emerald-600 dark:text-emerald-400">−${formatMoney(m.saved)}</span>
-                  </li>
-                ))}
+                {matched.matches.map((m, i) => {
+                  const sp = byId.get(m.breeder.id ? (inventory.find((x) => x.id === m.breeder.id)?.monId) : null);
+                  return (
+                    <li key={i} className="flex items-baseline gap-2 py-1">
+                      <span className="flex-1 min-w-0">
+                        {sp ? sp.name : SPECIES_TXT(m.species)} · {m.ivs.length}×31 {m.gender === 'F' ? '♀' : m.gender === 'M' ? '♂' : m.gender === 'D' ? '' : ''}
+                        {m.ivs.length > 0 && <span className="text-stone-500 dark:text-stone-400"> ({formatIVList(m.ivs)})</span>}
+                      </span>
+                      <span className="font-mono tabular-nums text-emerald-600 dark:text-emerald-400">−${formatMoney(m.saved)}</span>
+                    </li>
+                  );
+                })}
               </ul>
             </FormCard>
           )}
 
-          {matched.unused.length > 0 && (
-            <div className="text-xs text-amber-700 dark:text-amber-400">
-              {matched.unused.length} breeder{matched.unused.length === 1 ? '' : 's'} didn't fit any node in this plan (wrong role/gender/IVs).
-            </div>
+          {notUsed.length > 0 && (
+            <FormCard title={`Not used (${notUsed.length})`}>
+              <ul className="text-xs space-y-1">
+                {notUsed.map(({ e, reason }, i) => (
+                  <li key={i} className="flex items-baseline gap-2">
+                    <span className="text-stone-700 dark:text-stone-300 shrink-0">{e.species ? e.species.name : 'Breeder'}</span>
+                    <span className="text-amber-700 dark:text-amber-400">{reason}</span>
+                  </li>
+                ))}
+              </ul>
+            </FormCard>
           )}
 
           <FormCard title="Still to acquire">
@@ -1537,32 +1640,46 @@ function Stat({ label, value, accent, good }) {
   );
 }
 
-function BreederRow({ b, speciesCat, roleOptions, onRemove, onUpdate }) {
-  const showGender = b.role !== 'ditto' && speciesCat !== 'genderless';
+function BreederRow({ b, breederPokemon, info, onRemove, onUpdate }) {
+  const compat = info.compat;
+  const isMixed = compat.gender == null && info.species && info.species.id !== 132; // show ♀/♂ toggle
+  const fixedGenderLabel = !info.species ? null
+    : compat.gender === 'D' ? 'Ditto'
+    : compat.gender === 'N' ? 'Genderless'
+    : compat.gender === 'F' ? '♀ (female-only)'
+    : compat.gender === 'M' ? '♂ (male-only)'
+    : null;
+
   return (
-    <div className="rounded-md border border-[#e6dabf] dark:border-stone-800 bg-[#f1e9d2] dark:bg-stone-950/40 p-2 space-y-2">
-      <div className="flex flex-wrap items-center gap-1.5">
-        <div className="flex flex-wrap gap-1">
-          {IV_KEYS.map((k) => (
-            <button key={k} type="button"
-              onClick={() => onUpdate(b.id, { ivs: { ...b.ivs, [k]: !b.ivs[k] } })}
-              aria-pressed={b.ivs[k]}
-              className={`px-1.5 py-0.5 rounded text-[10px] font-semibold uppercase border transition-colors ${
-                b.ivs[k] ? 'bg-emerald-500 text-white border-emerald-600' : 'bg-[#fdf8e9] dark:bg-stone-900 text-stone-500 dark:text-stone-400 border-[#d6c8a3] dark:border-stone-700'
-              }`}>{IV_LABELS[k]}</button>
-          ))}
+    <div className={`rounded-md border p-2 space-y-2 ${info.usable ? 'border-[#e6dabf] dark:border-stone-800 bg-[#f1e9d2] dark:bg-stone-950/40' : 'border-amber-300 dark:border-amber-900/60 bg-amber-50/50 dark:bg-amber-950/20'}`}>
+      <div className="flex items-start gap-2">
+        <div className="flex-1 min-w-0">
+          <PokemonPicker
+            pokemon={breederPokemon}
+            value={b.monId}
+            onChange={(id) => onUpdate(b.id, { monId: id })}
+            placeholder="Pick this breeder's species"
+          />
         </div>
         <button type="button" onClick={() => onRemove(b.id)}
-          className="ml-auto p-1 rounded text-stone-400 hover:text-red-600 dark:hover:text-red-400" title="Remove">
-          <Trash2 size={13} />
+          className="p-1 rounded text-stone-400 hover:text-red-600 dark:hover:text-red-400 shrink-0" title="Remove">
+          <Trash2 size={14} />
         </button>
       </div>
+
+      <div className="flex flex-wrap gap-1">
+        {IV_KEYS.map((k) => (
+          <button key={k} type="button"
+            onClick={() => onUpdate(b.id, { ivs: { ...b.ivs, [k]: !b.ivs[k] } })}
+            aria-pressed={b.ivs[k]}
+            className={`px-1.5 py-0.5 rounded text-[10px] font-semibold uppercase border transition-colors ${
+              b.ivs[k] ? 'bg-emerald-500 text-white border-emerald-600' : 'bg-[#fdf8e9] dark:bg-stone-900 text-stone-500 dark:text-stone-400 border-[#d6c8a3] dark:border-stone-700'
+            }`}>{IV_LABELS[k]}</button>
+        ))}
+      </div>
+
       <div className="flex flex-wrap items-center gap-2 text-xs">
-        <select value={b.role} onChange={(e) => onUpdate(b.id, { role: e.target.value })}
-          className="px-1.5 py-0.5 rounded border border-[#d6c8a3] dark:border-stone-700 bg-[#fdf8e9] dark:bg-stone-900 text-stone-900 dark:text-stone-100">
-          {roleOptions.map((o) => <option key={o.v} value={o.v}>{o.l}</option>)}
-        </select>
-        {showGender && (
+        {isMixed ? (
           <div className="inline-flex rounded border border-[#d6c8a3] dark:border-stone-700 overflow-hidden">
             {['F', 'M'].map((g) => (
               <button key={g} type="button" onClick={() => onUpdate(b.id, { gender: g })}
@@ -1571,12 +1688,28 @@ function BreederRow({ b, speciesCat, roleOptions, onRemove, onUpdate }) {
               </button>
             ))}
           </div>
-        )}
+        ) : fixedGenderLabel ? (
+          <span className="text-stone-500 dark:text-stone-400">{fixedGenderLabel}</span>
+        ) : null}
         <label className="inline-flex items-center gap-1 text-stone-700 dark:text-stone-300 cursor-pointer">
           <input type="checkbox" checked={b.nature} onChange={(e) => onUpdate(b.id, { nature: e.target.checked })} className="accent-blue-500" />
-          has nature
+          nature
+        </label>
+        <label className="inline-flex items-center gap-1 text-stone-700 dark:text-stone-300 cursor-pointer">
+          <input type="checkbox" checked={b.shiny} onChange={(e) => onUpdate(b.id, { shiny: e.target.checked })} className="accent-yellow-500" />
+          shiny
+        </label>
+        <label className="inline-flex items-center gap-1 text-stone-700 dark:text-stone-300 cursor-pointer">
+          <input type="checkbox" checked={b.alpha} onChange={(e) => onUpdate(b.id, { alpha: e.target.checked })} className="accent-red-500" />
+          alpha
         </label>
       </div>
+
+      {(info.reason || info.warn) && (
+        <div className={`text-[11px] ${info.usable ? 'text-amber-700 dark:text-amber-400' : 'text-red-600 dark:text-red-400'}`}>
+          {info.reason || info.warn}
+        </div>
+      )}
     </div>
   );
 }
