@@ -804,15 +804,21 @@ function RecipeBreakdown({ node, target, consumables, recipeLabels }) {
       </p>
       <ul className="mt-2 text-sm divide-y divide-[#ece2c4] dark:divide-stone-800/60">
         {recipes.map((r) => {
-          const role = ROLE_LABELS[r.role] || (r.species === 'group' ? 'Egg-group filler' : r.species === 'ditto' ? 'Ditto' : 'Carrier');
+          // ROLE_LABELS already encodes ♀/♂ for the gendered tiers (Target ♂,
+          // Egg-group ♀, …); only append a symbol in the generic fallback so we
+          // never render a doubled "Target ♂ ♂".
           const genderSym = r.gender === 'F' ? ' ♀' : r.gender === 'M' ? ' ♂' : '';
+          const role = ROLE_LABELS[r.role]
+            || (r.species === 'group' ? `Egg-group filler${genderSym}`
+              : r.species === 'ditto' ? 'Ditto'
+              : `Carrier${genderSym}`);
           const isBuild = r.kind === 'breed';
           const label = recipeLabels?.get(r.recipeId);
           return (
             <li key={r.recipeId} className="flex items-baseline gap-2 py-1.5">
               <span className="font-mono tabular-nums font-bold text-stone-900 dark:text-stone-100 w-9 shrink-0">{r.count}×</span>
               <span className="flex-1 min-w-0">
-                <span className="font-medium text-stone-800 dark:text-stone-200">{r.ivs.length}×31 {role}{genderSym}</span>
+                <span className="font-medium text-stone-800 dark:text-stone-200">{r.ivs.length}×31 {role}</span>
                 {r.ivs.length > 0 && <span className="text-stone-500 dark:text-stone-400"> ({formatIVList(r.ivs)})</span>}
                 <span className={`ml-1.5 px-1 py-px rounded text-[9px] uppercase tracking-wider ${isBuild ? 'bg-blue-100 text-blue-700 dark:bg-blue-950/40 dark:text-blue-300' : 'bg-stone-200 text-stone-600 dark:bg-stone-800 dark:text-stone-400'}`}>
                   {isBuild ? 'Build' : 'Buy'}
