@@ -1,0 +1,26 @@
+[package]
+name = "pokemmo-tools-desktop"
+version = "0.1.0"
+description = "PokeMMO Tools — Windows desktop shell"
+authors = ["PokeMMO Tools"]
+edition = "2021"
+rust-version = "1.77"
+
+# Phase 2 is a thin shell: it loads the exact same React build the website
+# ships (../dist) and changes no features. The capture/OCR module (Phase 3)
+# adds Windows-only dependencies and Tauri commands on top of this.
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "s"
+panic = "abort"
+strip = true
