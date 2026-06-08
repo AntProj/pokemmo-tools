@@ -40,6 +40,12 @@ function blankBreeder() {
 const LS_PROJECTS_V2 = 'breeding_projects:v2';
 const LS_PROJECTS_V1 = 'breeding_projects:v1';
 
+// GTL carrier prices are volatile, so the form leaves them BLANK — no baked-in
+// defaults. Empty cells are treated as $0 by the optimizer (see priceVal) so
+// the tree/shopping list still build; the user fills in their own market
+// prices. Declared before DEFAULT_FORM because that runs clonePrices() at load.
+const EMPTY_TIERS = { targetM: null, targetF: null, target: null, groupM: null, groupF: null, ditto: null };
+
 const DEFAULT_FORM = {
   monId: null,
   ivs: { hp: false, atk: false, def: false, spa: false, spd: false, spe: false },
@@ -78,11 +84,6 @@ function normalizeOverrides(raw) {
   }
   return { byInstance: {}, byRecipe: { ...(raw || {}) } };
 }
-
-// GTL carrier prices are volatile, so the form leaves them BLANK — no baked-in
-// defaults. Empty cells are treated as $0 by the optimizer (see priceVal) so
-// the tree/shopping list still build; the user fills in their own market prices.
-const EMPTY_TIERS = { targetM: null, targetF: null, target: null, groupM: null, groupF: null, ditto: null };
 
 function clonePrices(src) {
   // Null template + saved overrides — a fresh form is all-blank; a loaded
