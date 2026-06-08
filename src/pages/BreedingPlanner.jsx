@@ -57,9 +57,9 @@ const DEFAULT_FORM = {
   inventory: [],
   guaranteeGender: true,
   targetGender: 'F',
-  prices: clonePrices(DEFAULT_PER_STAT_PRICES),
-  basePrices: { ...DEFAULT_BASE_PRICES },
-  consumables: { ...DEFAULT_CONSUMABLE_PRICES },
+  prices: clonePrices(),       // blank — user enters volatile GTL prices
+  basePrices: cloneBasePrices(),
+  consumables: { ...DEFAULT_CONSUMABLE_PRICES }, // power item/everstone are fixed daycare prices
   // Two-layer overrides:
   //   byInstance — applies to a specific occurrence (instanceId key)
   //   byRecipe   — applies to every occurrence of a recipe (recipeId key)
@@ -79,18 +79,23 @@ function normalizeOverrides(raw) {
   return { byInstance: {}, byRecipe: { ...(raw || {}) } };
 }
 
+// GTL carrier prices are volatile, so the form leaves them BLANK — no baked-in
+// defaults. Empty cells are treated as $0 by the optimizer (see priceVal) so
+// the tree/shopping list still build; the user fills in their own market prices.
+const EMPTY_TIERS = { targetM: null, targetF: null, target: null, groupM: null, groupF: null, ditto: null };
+
 function clonePrices(src) {
-  // Hydrate against defaults so projects saved before a new role tier (e.g.
-  // groupF) was added still get a price for it.
+  // Null template + saved overrides — a fresh form is all-blank; a loaded
+  // project keeps whatever it had (and gains any newer tier key as blank).
   const out = {};
   for (const stat of IV_KEYS) {
-    out[stat] = { ...DEFAULT_PER_STAT_PRICES[stat], ...(src?.[stat] || {}) };
+    out[stat] = { ...EMPTY_TIERS, ...(src?.[stat] || {}) };
   }
   return out;
 }
 
 function cloneBasePrices(src) {
-  return { ...DEFAULT_BASE_PRICES, ...(src || {}) };
+  return { ...EMPTY_TIERS, ...(src || {}) };
 }
 
 export default function BreedingPlanner({ data, theme, onTheme }) {
@@ -243,8 +248,8 @@ export default function BreedingPlanner({ data, theme, onTheme }) {
   }, []);
 
   const resetPrices = useCallback(() => {
-    setForm((f) => ({ ...f, prices: clonePrices(DEFAULT_PER_STAT_PRICES), basePrices: { ...DEFAULT_BASE_PRICES }, overrides: { byInstance: {}, byRecipe: {} } }));
-    showToast(setToast, 'Prices reset to defaults.');
+    setForm((f) => ({ ...f, prices: clonePrices(), basePrices: cloneBasePrices(), consumables: { ...DEFAULT_CONSUMABLE_PRICES }, overrides: { byInstance: {}, byRecipe: {} } }));
+    showToast(setToast, 'Carrier prices cleared.');
   }, []);
 
   const saveProject = useCallback((name) => {
@@ -297,7 +302,7 @@ export default function BreedingPlanner({ data, theme, onTheme }) {
       inventory: Array.isArray(p.inventory) ? p.inventory : [],
       guaranteeGender: p.inputs?.guaranteeGender !== false,
       targetGender: p.inputs?.targetGender || 'F',
-      prices: p.prices ? clonePrices(p.prices) : clonePrices(DEFAULT_PER_STAT_PRICES),
+      prices: p.prices ? clonePrices(p.prices) : clonePrices(),
       basePrices: cloneBasePrices(p.basePrices),
       consumables: p.consumables ? { ...p.consumables } : { ...DEFAULT_CONSUMABLE_PRICES },
       overrides: normalizeOverrides(p.overrides),
@@ -574,7 +579,7 @@ const PerStatPriceTable = memo(function PerStatPriceTable({ stats, tiers, prices
                 <td className="px-1 text-stone-700 dark:text-stone-300 font-semibold sticky left-0 bg-[#fdf8e9] dark:bg-stone-900 z-10">{IV_LABELS[stat]}</td>
                 {tiers.map((tier) => (
                   <td key={tier}>
-                    <PriceInput value={prices[stat][tier]} defaultValue={DEFAULT_PER_STAT_PRICES[stat][tier]} onChange={(v) => onChange(stat, tier, v)} />
+                    <PriceInput value={prices[stat][tier]} onChange={(v) => onChange(stat, tier, v)} />
                   </td>
                 ))}
               </tr>
@@ -583,7 +588,7 @@ const PerStatPriceTable = memo(function PerStatPriceTable({ stats, tiers, prices
               <td className="px-1 pt-1 text-stone-700 dark:text-stone-300 font-semibold whitespace-nowrap sticky left-0 bg-[#fdf8e9] dark:bg-stone-900 z-10">0×31</td>
               {tiers.map((tier) => (
                 <td key={tier} className="pt-1">
-                  <PriceInput value={basePrices?.[tier]} defaultValue={DEFAULT_BASE_PRICES[tier]} onChange={(v) => onChangeBase(tier, v)} />
+                  <PriceInput value={basePrices?.[tier]} onChange={(v) => onChangeBase(tier, v)} />
                 </td>
               ))}
             </tr>
@@ -604,15 +609,15 @@ const PerStatPriceTable = memo(function PerStatPriceTable({ stats, tiers, prices
   );
 });
 
-function PriceInput({ value, defaultValue, onChange }) {
-  const isDefault = Number(value) === Number(defaultValue);
+function PriceInput({ value, onChange, placeholder = '—' }) {
+  const hasValue = Number.isFinite(Number(value)) && value !== null && value !== '';
   return (
     <input
       type="number" min="0"
       value={value ?? ''}
       onChange={(e) => onChange(e.target.value)}
-      placeholder={defaultValue?.toLocaleString()}
-      className={`w-24 px-2 py-1.5 rounded border border-[#d6c8a3] dark:border-stone-700 bg-[#fdf8e9] dark:bg-stone-900 text-stone-900 dark:text-stone-100 text-sm tabular-nums text-right focus:outline-none focus:ring-2 focus:ring-blue-500 ${isDefault ? '' : 'font-bold'}`}
+      placeholder={placeholder}
+      className={`w-24 px-2 py-1.5 rounded border border-[#d6c8a3] dark:border-stone-700 bg-[#fdf8e9] dark:bg-stone-900 text-stone-900 dark:text-stone-100 text-sm tabular-nums text-right focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-stone-400 dark:placeholder:text-stone-600 ${hasValue ? 'font-semibold' : ''}`}
     />
   );
 }
@@ -645,6 +650,28 @@ function DeferredFeaturesNotice() {
       <span>
         Planner covers IV + nature optimization with per-stat 1×31 pricing, recursive intermediate breeding (no buy at 2×31+ tiers), accurate egg fees, per-node cost overrides, and now egg-move + hidden-ability carrier requirements. Volt Tackle / Incense babies and owned-parent reuse are still to come.
       </span>
+    </div>
+  );
+}
+
+// True once the user has entered at least one GTL carrier price. Until then,
+// totals reflect only fixed costs (power items + egg fees).
+function anyCarrierPriced(prices) {
+  if (!prices) return false;
+  for (const stat of IV_KEYS) {
+    const row = prices[stat];
+    if (!row) continue;
+    for (const v of Object.values(row)) {
+      if (v !== null && v !== '' && Number.isFinite(Number(v)) && Number(v) > 0) return true;
+    }
+  }
+  return false;
+}
+
+function PricesNotSetNote() {
+  return (
+    <div className="rounded-md border border-amber-300 dark:border-amber-900 bg-amber-50/60 dark:bg-amber-950/30 p-2.5 text-xs text-amber-800 dark:text-amber-300">
+      Carrier prices aren't set — totals count only fixed costs (power items + egg fees). GTL prices swing too much to ship defaults, so enter your current market prices in the sidebar's “Carrier prices” table to fold them in.
     </div>
   );
 }
@@ -684,6 +711,8 @@ function IVPlanTab({ target, plan, form, setOverride, onSave, eggMoveNames = [],
         </div>
         <SaveButton onSave={onSave} />
       </div>
+
+      {!anyCarrierPriced(form.prices) && <PricesNotSetNote />}
 
       {(eggMoveNames.length > 0 || hiddenAbility || shiny || alpha) && (
         <div className="rounded-md border border-violet-300 dark:border-violet-900 bg-violet-50/60 dark:bg-violet-950/30 p-3 text-sm space-y-1.5">
@@ -1303,6 +1332,7 @@ function CostsTab({ plan, target, form }) {
   const items  = plan.counts;
   return (
     <div className="space-y-3">
+      {!anyCarrierPriced(form.prices) && <PricesNotSetNote />}
       <FormCard title={`Shopping list — ${leafCount} parent${leafCount === 1 ? '' : 's'} to acquire`}>
         <ul className="text-sm divide-y divide-[#ece2c4] dark:divide-stone-800/60">
           {leafGroups.map((g, i) => {

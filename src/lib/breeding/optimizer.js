@@ -29,6 +29,15 @@ import {
   isGenderless, genderlessLineOf, genderRatioCategory,
 } from './data.js';
 
+// GTL carrier prices are user-supplied and volatile, so the form leaves them
+// blank by default. An unset (null / undefined / empty) price is treated as $0
+// here so the tree + shopping list still build — the displayed total then
+// reflects only the FIXED costs (power items, egg fees) until the user fills in
+// their own market prices.
+function priceVal(v) {
+  return Number.isFinite(v) && v >= 0 ? v : 0;
+}
+
 /* ─────────────── Public API ─────────────── */
 
 export function planBreeding(args) {
@@ -276,11 +285,9 @@ function solveCarrier(ctx, ivs, gender, speciesConstraint, isFinal = false, nat 
       result = makeLeaf(id, 'ditto', [], 'D', 0, false);
     } else if (N === 1) {
       const stat = sortedIVs[0];
-      const p = ctx.prices?.[stat]?.ditto;
-      if (Number.isFinite(p) && p >= 0) {
-        result = makeLeaf(id, 'ditto', sortedIVs, 'D', p, false);
-        if (nat) result.naturePassing = true;
-      }
+      const p = priceVal(ctx.prices?.[stat]?.ditto);
+      result = makeLeaf(id, 'ditto', sortedIVs, 'D', p, false);
+      if (nat) result.naturePassing = true;
     }
   } else if (N === 0) {
     result = makeLeaf(id, speciesConstraint, [], gender, 0, false);
@@ -292,13 +299,10 @@ function solveCarrier(ctx, ivs, gender, speciesConstraint, isFinal = false, nat 
     // on the 0×31 mother in addition to the Power Item on the 1×31 father.
     const stat = sortedIVs[0];
     const tier = roleForSpeciesGender(speciesConstraint, gender);
-    const buyPrice = ctx.prices?.[stat]?.[tier];
+    const buyPrice = priceVal(ctx.prices?.[stat]?.[tier]);
 
-    let best = null;
-    if (Number.isFinite(buyPrice) && buyPrice >= 0) {
-      best = makeLeaf(id, speciesConstraint, sortedIVs, gender, buyPrice, false);
-      if (nat) best.naturePassing = true;
-    }
+    let best = makeLeaf(id, speciesConstraint, sortedIVs, gender, buyPrice, false);
+    if (nat) best.naturePassing = true;
     const bred = solveBreedUp(ctx, stat, gender, speciesConstraint, isFinal, nat);
     if (bred && (!best || bred.cost < best.cost)) best = bred;
     result = best;
@@ -368,17 +372,13 @@ function buy1x31LeafOnly(ctx, stat, gender, species) {
     const id = nodeId('ditto', 'D', [stat], false);
     const ov = ctx.overrides[id];
     if (Number.isFinite(ov) && ov >= 0) return makeLeaf(id, 'ditto', [stat], 'D', ov, true);
-    const p = ctx.prices?.[stat]?.ditto;
-    if (!Number.isFinite(p) || p < 0) return null;
-    return makeLeaf(id, 'ditto', [stat], 'D', p, false);
+    return makeLeaf(id, 'ditto', [stat], 'D', priceVal(ctx.prices?.[stat]?.ditto), false);
   }
   const id = nodeId(species, gender, [stat], false);
   const ov = ctx.overrides[id];
   if (Number.isFinite(ov) && ov >= 0) return makeLeaf(id, species, [stat], gender, ov, true);
   const tier = roleForSpeciesGender(species, gender);
-  const p = ctx.prices?.[stat]?.[tier];
-  if (!Number.isFinite(p) || p < 0) return null;
-  return makeLeaf(id, species, [stat], gender, p, false);
+  return makeLeaf(id, species, [stat], gender, priceVal(ctx.prices?.[stat]?.[tier]), false);
 }
 
 // 0×31 leaf — species placeholder used as the mother in a breed-up. Priced
@@ -388,9 +388,7 @@ function buy0x31Leaf(ctx, species, gender) {
   const ov = ctx.overrides[id];
   if (Number.isFinite(ov) && ov >= 0) return makeLeaf(id, species, [], gender, ov, true);
   const tier = roleForSpeciesGender(species, gender);
-  const p = ctx.basePrices?.[tier];
-  if (!Number.isFinite(p) || p < 0) return null;
-  return makeLeaf(id, species, [], gender, p, false);
+  return makeLeaf(id, species, [], gender, priceVal(ctx.basePrices?.[tier]), false);
 }
 
 function solveBreed(ctx, ivs, gender, childSpec, isFinal) {
