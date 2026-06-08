@@ -29,6 +29,11 @@ const DEFAULT_FORM = {
   monId: null,
   ivs: { hp: false, atk: false, def: false, spa: false, spd: false, spe: false },
   nature: '',
+  // Egg moves (array of move ids) the target should hatch knowing, and whether
+  // to breed for the hidden ability. Both are informational — they don't change
+  // the IV tree's cost, but they impose a carrier requirement on the lineage.
+  eggMoves: [],
+  hiddenAbility: false,
   guaranteeGender: true,
   targetGender: 'F',
   prices: clonePrices(DEFAULT_PER_STAT_PRICES),
@@ -88,6 +93,26 @@ export default function BreedingPlanner({ data, theme, onTheme }) {
   const speciesCat = target ? genderRatioCategory(target) : 'mixed';
   const visibleTiers = ROLE_TIERS_FOR_SPECIES[speciesCat] || ROLE_TIERS_FOR_SPECIES.mixed;
 
+  // Egg-move + hidden-ability options for the selected target.
+  const hiddenAbility = useMemo(() => target?.abilities?.find((a) => a.hidden) || null, [target]);
+  const eggMoveOptions = useMemo(() => {
+    const ids = [...new Set((target?.moves?.egg || []).map((m) => m.id))];
+    return ids
+      .map((id) => ({ id, name: data.moves[id]?.name }))
+      .filter((o) => o.name)
+      .sort((a, b) => a.name.localeCompare(b.name));
+  }, [target, data.moves]);
+  const selectedEggMoveNames = useMemo(
+    () => form.eggMoves.map((id) => data.moves[id]?.name).filter(Boolean),
+    [form.eggMoves, data.moves]
+  );
+  const toggleEggMove = useCallback((id) => {
+    setForm((f) => ({
+      ...f,
+      eggMoves: f.eggMoves.includes(id) ? f.eggMoves.filter((x) => x !== id) : [...f.eggMoves, id],
+    }));
+  }, []);
+
   // Run optimizer.
   const planResult = useMemo(() => planBreeding({
     target,
@@ -123,7 +148,8 @@ export default function BreedingPlanner({ data, theme, onTheme }) {
       else if (cat === 'male-only') g = 'M';
       else if (cat === 'genderless') g = 'N';
       else if (g !== 'F' && g !== 'M') g = 'F';
-      return { ...f, overrides: { byInstance: {}, byRecipe: {} }, targetGender: g };
+      // Egg moves + hidden-ability are species-specific — clear on target change.
+      return { ...f, overrides: { byInstance: {}, byRecipe: {} }, targetGender: g, eggMoves: [], hiddenAbility: false };
     });
   }, [target?.id]);
 
@@ -196,7 +222,7 @@ export default function BreedingPlanner({ data, theme, onTheme }) {
       target: target ? { id: target.id, name: target.name } : null,
       inputs: {
         ivs: { ...form.ivs },
-        nature: form.nature, ability: null, moves: [],
+        nature: form.nature, ability: form.hiddenAbility, moves: [...form.eggMoves],
         targetGender: form.targetGender, guaranteeGender: form.guaranteeGender, shiny: false,
       },
       prices: clonePrices(form.prices),
@@ -229,6 +255,8 @@ export default function BreedingPlanner({ data, theme, onTheme }) {
       monId: p.target?.id ?? null,
       ivs: { ...DEFAULT_FORM.ivs, ...(p.inputs?.ivs || {}) },
       nature: p.inputs?.nature || '',
+      eggMoves: Array.isArray(p.inputs?.moves) ? p.inputs.moves : [],
+      hiddenAbility: !!p.inputs?.ability,
       guaranteeGender: p.inputs?.guaranteeGender !== false,
       targetGender: p.inputs?.targetGender || 'F',
       prices: p.prices ? clonePrices(p.prices) : clonePrices(DEFAULT_PER_STAT_PRICES),
@@ -341,6 +369,45 @@ export default function BreedingPlanner({ data, theme, onTheme }) {
             )}
           </FormCard>
 
+          {target && (hiddenAbility || eggMoveOptions.length > 0) && (
+            <FormCard title="Egg moves & ability">
+              {hiddenAbility && (
+                <CheckRow
+                  label={`Breed for hidden ability (${hiddenAbility.name})`}
+                  checked={form.hiddenAbility}
+                  onChange={(v) => setField('hiddenAbility', v)}
+                />
+              )}
+              {eggMoveOptions.length > 0 && (
+                <div className="space-y-1.5">
+                  <label className="text-xs text-stone-500 dark:text-stone-400">
+                    Egg moves to inherit {form.eggMoves.length > 0 && <span className="text-stone-400">({form.eggMoves.length})</span>}
+                  </label>
+                  <div className="flex flex-wrap gap-1.5">
+                    {eggMoveOptions.map((o) => {
+                      const sel = form.eggMoves.includes(o.id);
+                      return (
+                        <button
+                          key={o.id}
+                          type="button"
+                          onClick={() => toggleEggMove(o.id)}
+                          aria-pressed={sel}
+                          className={`px-2 py-0.5 rounded text-xs border transition-colors ${
+                            sel
+                              ? 'bg-blue-100 text-blue-800 border-blue-300 dark:bg-blue-950/50 dark:text-blue-300 dark:border-blue-900'
+                              : 'bg-[#fdf8e9] dark:bg-stone-900 text-stone-700 dark:text-stone-300 border-[#d6c8a3] dark:border-stone-700 hover:bg-[#ece2c4] dark:hover:bg-stone-800'
+                          }`}
+                        >
+                          {o.name}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+            </FormCard>
+          )}
+
           <PerStatPriceTable
             stats={targetIVs}
             tiers={visibleTiers}
@@ -365,7 +432,7 @@ export default function BreedingPlanner({ data, theme, onTheme }) {
         </aside>
 
         <section className="min-w-0">
-          {tab === 'plan'   && <IVPlanTab target={target} plan={planResult} form={form} setOverride={setOverride} onSave={saveProject} />}
+          {tab === 'plan'   && <IVPlanTab target={target} plan={planResult} form={form} setOverride={setOverride} onSave={saveProject} eggMoveNames={selectedEggMoveNames} hiddenAbility={form.hiddenAbility ? hiddenAbility : null} />}
           {tab === 'costs'  && <CostsTab plan={planResult} target={target} form={form} />}
           {tab === 'profit' && <ProfitTab plan={planResult} salePrice={salePrice} setSalePrice={setSalePrice} />}
           {tab === 'saved'  && <SavedProjectsTab data={data} projects={projects} onOpen={openProject} onDuplicate={duplicateProject} onDelete={deleteProject} />}
@@ -523,7 +590,7 @@ function DeferredFeaturesNotice() {
     <div className="rounded-md border border-blue-300 dark:border-blue-900 bg-blue-50 dark:bg-blue-950/40 p-2.5 text-xs text-blue-900 dark:text-blue-200 flex items-start gap-2">
       <Info size={14} className="shrink-0 mt-0.5" />
       <span>
-        Planner v2 covers IV + nature optimization with per-stat 1×31 pricing, recursive intermediate breeding (no buy at 2×31+ tiers), accurate egg fees, and per-node cost overrides. Hidden Ability tracing, egg-move chains, Volt Tackle, Incense babies, owned-parent reuse, and SVG tree visualization are deferred.
+        Planner covers IV + nature optimization with per-stat 1×31 pricing, recursive intermediate breeding (no buy at 2×31+ tiers), accurate egg fees, per-node cost overrides, and now egg-move + hidden-ability carrier requirements. Volt Tackle / Incense babies and owned-parent reuse are still to come.
       </span>
     </div>
   );
@@ -531,7 +598,7 @@ function DeferredFeaturesNotice() {
 
 /* ─────────────── IV Plan tab ─────────────── */
 
-function IVPlanTab({ target, plan, form, setOverride, onSave }) {
+function IVPlanTab({ target, plan, form, setOverride, onSave, eggMoveNames = [], hiddenAbility = null }) {
   if (!target) return <Empty msg="Pick a target species to start." />;
   if (!plan) return <Empty msg="No IVs targeted yet — flip at least one stat to 31 in the form." />;
 
@@ -564,6 +631,28 @@ function IVPlanTab({ target, plan, form, setOverride, onSave }) {
         </div>
         <SaveButton onSave={onSave} />
       </div>
+
+      {(eggMoveNames.length > 0 || hiddenAbility) && (
+        <div className="rounded-md border border-violet-300 dark:border-violet-900 bg-violet-50/60 dark:bg-violet-950/30 p-3 text-sm space-y-1.5">
+          <div className="text-[11px] font-semibold uppercase tracking-wider text-violet-700 dark:text-violet-300">Carrier requirements</div>
+          {hiddenAbility && (
+            <div className="text-stone-700 dark:text-stone-300">
+              <span className="font-semibold">Hidden ability ({hiddenAbility.name}):</span> passes by species — make sure the
+              {' '}{target.name}-species parent in the final breed (the ♀, or the ♂ paired with Ditto) already has it. It can't be added with an item.
+            </div>
+          )}
+          {eggMoveNames.length > 0 && (
+            <div className="text-stone-700 dark:text-stone-300">
+              <span className="font-semibold">Egg moves:</span> one parent in the final breed must already know{' '}
+              {eggMoveNames.map((n, i) => (
+                <span key={n}>
+                  <span className="font-medium text-stone-900 dark:text-stone-100">{n}</span>{i < eggMoveNames.length - 1 ? ', ' : ''}
+                </span>
+              ))}. In PokeMMO an egg move passes from <em>either</em> parent that knows it; chain it in via any same-egg-group carrier that can learn it.
+            </div>
+          )}
+        </div>
+      )}
 
       <BreedingPlanView plan={plan} target={target} nature={form.nature} setOverride={setOverride} recipeLabels={recipeLabels} />
     </div>

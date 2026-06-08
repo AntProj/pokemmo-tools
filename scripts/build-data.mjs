@@ -409,15 +409,21 @@ function build() {
     movesByMethod.level.sort((a, b) => (a.level || 0) - (b.level || 0));
 
     // ---- Abilities ----
-    const cleanAbilities = (m.abilities || [])
-      .filter(a => a && a.id && a.name && a.name !== '--')
-      .map(a => ({ id: a.id, name: a.name }));
+    // Raw monsters.json carries 3 ability slots in fixed order:
+    //   [slot0, slot1, slot2] where slot2 is the HIDDEN ability (slot1 often
+    //   duplicates slot0 when the mon has a single regular ability). We flag
+    //   the hidden one (`hidden: true`) when it's distinct from the regulars
+    //   so the UI can badge it and the breeding planner can plan for it.
+    const rawAb = (m.abilities || []).filter(a => a && a.id && a.name && a.name !== '--');
+    const hiddenId = rawAb.length >= 3 ? rawAb[2].id : null;
+    const regularIds = new Set(rawAb.slice(0, 2).map(a => a.id));
     const seenAbility = new Set();
     const dedupedAbilities = [];
-    for (const a of cleanAbilities) {
+    for (const a of rawAb) {
       if (seenAbility.has(a.id)) continue;
       seenAbility.add(a.id);
-      dedupedAbilities.push(a);
+      const isHidden = a.id === hiddenId && !regularIds.has(a.id);
+      dedupedAbilities.push(isHidden ? { id: a.id, name: a.name, hidden: true } : { id: a.id, name: a.name });
     }
 
     // ---- Held items ----

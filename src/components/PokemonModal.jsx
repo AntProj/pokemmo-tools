@@ -259,7 +259,14 @@ function Abilities({ abilities, catalog }) {
           const detail = catalog[a.id];
           return (
             <div key={`${a.id}-${idx}`} className="p-3 rounded border border-[#e6dabf] dark:border-stone-800 bg-[#f1e9d2] dark:bg-stone-950/40">
-              <div className="font-semibold text-stone-900 dark:text-stone-100">{a.name}</div>
+              <div className="flex items-center gap-2">
+                <span className="font-semibold text-stone-900 dark:text-stone-100">{a.name}</span>
+                {a.hidden && (
+                  <span className="px-1.5 py-px rounded text-[9px] font-semibold uppercase tracking-wider bg-violet-500 text-white">
+                    Hidden
+                  </span>
+                )}
+              </div>
               {detail?.effect && (
                 <div className="mt-1 text-sm text-stone-600 dark:text-stone-400 italic">
                   {detail.effect}
