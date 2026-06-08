@@ -179,33 +179,35 @@ fn detect_mark(img: &image::RgbaImage) -> (bool, bool) {
 fn detect_gender(img: &image::RgbaImage, words: &[ocr::WordBox]) -> Option<String> {
     let (cy, gh) = name_row(words)?;
     let (iw, ih) = (img.width() as i32, img.height() as i32);
-    let y0 = ((cy - gh * 0.9) as i32).clamp(0, ih - 1);
-    let y1 = ((cy + gh * 0.9) as i32).clamp(y0 + 1, ih);
+    let y0 = ((cy - gh) as i32).clamp(0, ih - 1);
+    let y1 = ((cy + gh) as i32).clamp(y0 + 1, ih);
+    // Central band only: the name is centered and the glyph sits just right of
+    // it, so this contains the glyph while excluding the panel edges where the
+    // habitat background can bleed red/pink.
+    let x0 = ((iw as f32) * 0.25) as i32;
+    let x1 = (((iw as f32) * 0.92) as i32).max(x0 + 1).min(iw);
 
-    let (mut male, mut female, mut total) = (0u32, 0u32, 0u32);
+    // Classify by channel dominance, NOT HSV saturation — the ♂ glyph is often a
+    // pale/light blue whose saturation is too low to pass a saturation gate, but
+    // blue is still clearly its strongest channel.
+    let (mut male, mut female) = (0u32, 0u32);
     for yy in y0..y1 {
-        for xx in 0..iw {
+        for xx in x0..x1 {
             let p = img.get_pixel(xx as u32, yy as u32).0;
-            let (hue, s, v) = rgb_to_hsv(p[0], p[1], p[2]);
-            if s < 0.30 || v < 0.35 {
-                continue;
+            let (r, g, b) = (p[0] as i32, p[1] as i32, p[2] as i32);
+            if r.max(g).max(b) < 90 {
+                continue; // too dark (panel background)
             }
-            total += 1;
-            if (185.0..=255.0).contains(&hue) {
-                male += 1; // blue ♂
-            } else if (290.0..=360.0).contains(&hue) || hue <= 12.0 {
-                female += 1; // pink/red ♀
+            if b > r + 22 && b + 6 >= g && b > 105 {
+                male += 1; // blue-dominant ♂
+            } else if r > b + 22 && r > g + 8 && r > 105 {
+                female += 1; // red/pink-dominant ♀
             }
         }
     }
-    if total < 4 {
-        return None;
-    }
-    let mf = male as f32 / total as f32;
-    let ff = female as f32 / total as f32;
-    if mf >= 0.25 && male >= female {
+    if male >= 3 && male >= female {
         Some("M".into())
-    } else if ff >= 0.25 {
+    } else if female >= 3 && female > male {
         Some("F".into())
     } else {
         None
