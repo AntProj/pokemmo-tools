@@ -2,6 +2,7 @@ import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Sun, Moon, RotateCcw, Save, Trash2, Copy, FolderOpen, Info, X, Check, ShoppingCart } from 'lucide-react';
 import PokemonPicker from '../components/PokemonPicker.jsx';
 import PokemonSprite from '../components/PokemonSprite.jsx';
+import CapturePanel from '../components/CapturePanel.jsx';
 import {
   IV_KEYS, IV_LABELS, NATURE_NAMES, POWER_ITEM_FOR,
   DEFAULT_PER_STAT_PRICES, DEFAULT_CONSUMABLE_PRICES, DEFAULT_BASE_PRICES,
@@ -1732,6 +1733,10 @@ function BoxTab({ data, plan, target, breederPokemon, box, targetNature, shiny, 
 
   return (
     <div className="space-y-3">
+      {/* Desktop-only: capture a summary screenshot → OCR → new Box row.
+          Renders nothing on the website. */}
+      <CapturePanel data={data} onImport={onImport} />
+
       <div className="text-xs text-stone-500 dark:text-stone-400">
         Your Box is a saved collection of the mons you own — it persists across plans and is independent of any target.
         {hasTarget
