@@ -31,6 +31,7 @@ struct CapturePayload {
     words: Vec<WordOut>,
     shiny: bool,
     alpha: bool,
+    gender: Option<String>,
     #[serde(rename = "pngBase64")]
     png_base64: String,
 }
@@ -76,7 +77,8 @@ fn capture_and_ocr(hwnd: isize, rect: Option<NormRect>) -> Result<CapturePayload
         .map_err(|e| e.to_string())?
         .to_rgba8();
 
-    let (shiny, alpha) = detect_mark(&img, &words);
+    let (shiny, alpha) = detect_mark(&img);
+    let gender = detect_gender(&img, &words);
 
     let words_out = words
         .into_iter()
@@ -87,7 +89,7 @@ fn capture_and_ocr(hwnd: isize, rect: Option<NormRect>) -> Result<CapturePayload
         .collect();
 
     let png_base64 = base64::engine::general_purpose::STANDARD.encode(&png);
-    Ok(CapturePayload { text, width, height, words: words_out, shiny, alpha, png_base64 })
+    Ok(CapturePayload { text, width, height, words: words_out, shiny, alpha, gender, png_base64 })
 }
 
 /// Mean color inside a word box → is it green? (G clearly dominates R and B.)
@@ -114,39 +116,49 @@ fn sample_green(img: &image::RgbaImage, x: f32, y: f32, w: f32, h: f32) -> bool 
     g > 90 && g - r > 30 && g - b > 30
 }
 
-/// Detect the summary-panel corner mark: a yellow star = shiny, a red beast mark
-/// = alpha (a normal mon has neither). The mark sits at the panel's top-left, so
-/// we anchor to the bounding box of the OCR'd text and scan a small box there.
-/// Thresholds are deliberately lenient; the user confirms via the Box checkbox.
-fn detect_mark(img: &image::RgbaImage, words: &[ocr::WordBox]) -> (bool, bool) {
-    if words.is_empty() {
+/// RGB (0..=255) → HSV with hue in degrees [0,360), s/v in [0,1].
+fn rgb_to_hsv(r: u8, g: u8, b: u8) -> (f32, f32, f32) {
+    let (rf, gf, bf) = (r as f32 / 255.0, g as f32 / 255.0, b as f32 / 255.0);
+    let max = rf.max(gf).max(bf);
+    let min = rf.min(gf).min(bf);
+    let d = max - min;
+    let mut h = if d == 0.0 {
+        0.0
+    } else if max == rf {
+        60.0 * (((gf - bf) / d) % 6.0)
+    } else if max == gf {
+        60.0 * (((bf - rf) / d) + 2.0)
+    } else {
+        60.0 * (((rf - gf) / d) + 4.0)
+    };
+    if h < 0.0 {
+        h += 360.0;
+    }
+    let s = if max == 0.0 { 0.0 } else { d / max };
+    (h, s, max)
+}
+
+/// Detect the summary-panel corner mark by hue: a gold/yellow star = shiny, a
+/// saturated red beast mark = alpha (normal = neither). Scans the top-left
+/// corner of the captured image — reliable once calibrated to the panel.
+/// Hue gating separates the marks from orange/brown habitat backgrounds.
+fn detect_mark(img: &image::RgbaImage) -> (bool, bool) {
+    let (w, h) = (img.width(), img.height());
+    if w == 0 || h == 0 {
         return (false, false);
     }
-    let min_x = words.iter().map(|w| w.x).fold(f32::MAX, f32::min);
-    let min_y = words.iter().map(|w| w.y).fold(f32::MAX, f32::min);
-    let mut heights: Vec<f32> = words.iter().map(|w| w.h).filter(|h| *h > 0.0).collect();
-    heights.sort_by(|a, b| a.partial_cmp(b).unwrap());
-    let med_h = if heights.is_empty() { 14.0 } else { heights[heights.len() / 2] };
-
-    let (iw, ih) = (img.width() as i32, img.height() as i32);
-    let x0 = ((min_x - 2.0 * med_h) as i32).clamp(0, iw - 1);
-    let y0 = ((min_y - 0.5 * med_h) as i32).clamp(0, ih - 1);
-    let x1 = ((min_x + 3.0 * med_h) as i32).clamp(x0 + 1, iw);
-    let y1 = ((min_y + 3.0 * med_h) as i32).clamp(y0 + 1, ih);
-
+    let x1 = ((w as f32 * 0.22) as u32).max(6).min(w);
+    let y1 = ((h as f32 * 0.16) as u32).max(6).min(h);
     let (mut yellow, mut red, mut total) = (0u32, 0u32, 0u32);
-    for yy in y0..y1 {
-        for xx in x0..x1 {
-            let p = img.get_pixel(xx as u32, yy as u32).0;
-            let (r, g, b) = (p[0] as i32, p[1] as i32, p[2] as i32);
+    for yy in 0..y1 {
+        for xx in 0..x1 {
+            let p = img.get_pixel(xx, yy).0;
+            let (hue, s, v) = rgb_to_hsv(p[0], p[1], p[2]);
             total += 1;
-            // Bright yellow star: high R+G, low B.
-            if r > 170 && g > 150 && b < 120 && (r - b) > 70 && (g - b) > 55 {
-                yellow += 1;
-            }
-            // Saturated red beast mark: high R, low G/B.
-            else if r > 150 && g < 100 && b < 100 && (r - g) > 60 && (r - b) > 60 {
-                red += 1;
+            if s > 0.45 && v > 0.55 && (42.0..=66.0).contains(&hue) {
+                yellow += 1; // gold star
+            } else if s > 0.50 && v > 0.40 && (hue >= 348.0 || hue <= 13.0) {
+                red += 1; // red beast mark
             }
         }
     }
@@ -155,7 +167,60 @@ fn detect_mark(img: &image::RgbaImage, words: &[ocr::WordBox]) -> (bool, bool) {
     }
     let yf = yellow as f32 / total as f32;
     let rf = red as f32 / total as f32;
-    (yf > 0.02, rf > 0.03)
+    (yf > 0.012, rf > 0.012)
+}
+
+/// Detect gender from the colored ♂/♀ glyph that follows the species name. We
+/// anchor to the "Lv." word's line, then sample just to the right of the name
+/// for a blue (male) vs pink/magenta (female) hue. Returns None if unclear.
+fn detect_gender(img: &image::RgbaImage, words: &[ocr::WordBox]) -> Option<String> {
+    let lv = words.iter().find(|w| {
+        let t = w.text.to_lowercase();
+        t == "lv" || t == "lv." || t.starts_with("lv.") || t.starts_with("lv ")
+    })?;
+    let cy = lv.y + lv.h * 0.5;
+    let gh = lv.h.max(10.0);
+    // Rightmost edge of any word on the name line = end of the name.
+    let line_right = words
+        .iter()
+        .filter(|w| ((w.y + w.h * 0.5) - cy).abs() < gh * 0.8)
+        .map(|w| w.x + w.w)
+        .fold(0.0f32, f32::max);
+
+    let (iw, ih) = (img.width() as i32, img.height() as i32);
+    let x0 = ((line_right + 0.1 * gh) as i32).clamp(0, iw - 1);
+    let x1 = ((line_right + 2.6 * gh) as i32).clamp(x0 + 1, iw);
+    let y0 = ((cy - 0.9 * gh) as i32).clamp(0, ih - 1);
+    let y1 = ((cy + 0.9 * gh) as i32).clamp(y0 + 1, ih);
+
+    let (mut male, mut female, mut total) = (0u32, 0u32, 0u32);
+    for yy in y0..y1 {
+        for xx in x0..x1 {
+            let p = img.get_pixel(xx as u32, yy as u32).0;
+            let (hue, s, v) = rgb_to_hsv(p[0], p[1], p[2]);
+            if s < 0.35 || v < 0.35 {
+                continue;
+            }
+            total += 1;
+            if (198.0..=246.0).contains(&hue) {
+                male += 1; // blue ♂
+            } else if (300.0..=345.0).contains(&hue) || hue >= 345.0 || hue <= 8.0 {
+                female += 1; // pink/red ♀
+            }
+        }
+    }
+    if total == 0 {
+        return None;
+    }
+    let mf = male as f32 / total as f32;
+    let ff = female as f32 / total as f32;
+    if mf > 0.12 && male >= female {
+        Some("M".into())
+    } else if ff > 0.12 {
+        Some("F".into())
+    } else {
+        None
+    }
 }
 
 /// Show the always-on-top toast overlay near the top of the screen with a short
