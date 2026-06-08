@@ -11,16 +11,28 @@ import {
   canBreed, isGenderless, genderRatioCategory,
 } from '../lib/breeding/data.js';
 import {
-  planBreeding, ROLE_LABELS, ROLE_TIERS_FOR_SPECIES, TIER_LABELS,
+  planBreeding, matchInventory, ROLE_LABELS, ROLE_TIERS_FOR_SPECIES, TIER_LABELS,
 } from '../lib/breeding/optimizer.js';
 import { ChevronRight, ChevronDown, GitFork } from 'lucide-react';
 
 const SUB_TABS = [
   { key: 'plan',    label: 'IV Plan' },
   { key: 'costs',   label: 'Costs'   },
+  { key: 'have',    label: 'I Have'  },
   { key: 'profit',  label: 'Profit'  },
   { key: 'saved',   label: 'Saved'   },
 ];
+
+// A blank owned-breeder row for the "I Have" tab.
+function blankBreeder() {
+  return {
+    id: 'b_' + Math.random().toString(36).slice(2, 9),
+    ivs: { hp: false, atk: false, def: false, spa: false, spd: false, spe: false },
+    gender: 'M',
+    role: 'group',   // target | group | ditto
+    nature: false,
+  };
+}
 
 const LS_PROJECTS_V2 = 'breeding_projects:v2';
 const LS_PROJECTS_V1 = 'breeding_projects:v1';
@@ -34,6 +46,8 @@ const DEFAULT_FORM = {
   // the IV tree's cost, but they impose a carrier requirement on the lineage.
   eggMoves: [],
   hiddenAbility: false,
+  // Owned breeders for the "I Have" tab — matched against the plan tree.
+  inventory: [],
   guaranteeGender: true,
   targetGender: 'F',
   prices: clonePrices(DEFAULT_PER_STAT_PRICES),
@@ -112,6 +126,13 @@ export default function BreedingPlanner({ data, theme, onTheme }) {
       eggMoves: f.eggMoves.includes(id) ? f.eggMoves.filter((x) => x !== id) : [...f.eggMoves, id],
     }));
   }, []);
+
+  // Owned-breeder inventory handlers ("I Have" tab).
+  const addBreeder    = useCallback(() => setForm((f) => ({ ...f, inventory: [...(f.inventory || []), blankBreeder()] })), []);
+  const removeBreeder = useCallback((id) => setForm((f) => ({ ...f, inventory: (f.inventory || []).filter((b) => b.id !== id) })), []);
+  const updateBreeder = useCallback((id, patch) => setForm((f) => ({
+    ...f, inventory: (f.inventory || []).map((b) => (b.id === id ? { ...b, ...patch } : b)),
+  })), []);
 
   // Run optimizer.
   const planResult = useMemo(() => planBreeding({
@@ -229,6 +250,7 @@ export default function BreedingPlanner({ data, theme, onTheme }) {
       basePrices: { ...form.basePrices },
       consumables: { ...form.consumables },
       overrides: normalizeOverrides(form.overrides),
+      inventory: (form.inventory || []).map((b) => ({ ...b, ivs: { ...b.ivs } })),
       computedTotalCost: planResult?.totalCost ?? null,
       salePrice: salePrice ? Number(salePrice) : null,
     };
@@ -257,6 +279,7 @@ export default function BreedingPlanner({ data, theme, onTheme }) {
       nature: p.inputs?.nature || '',
       eggMoves: Array.isArray(p.inputs?.moves) ? p.inputs.moves : [],
       hiddenAbility: !!p.inputs?.ability,
+      inventory: Array.isArray(p.inventory) ? p.inventory : [],
       guaranteeGender: p.inputs?.guaranteeGender !== false,
       targetGender: p.inputs?.targetGender || 'F',
       prices: p.prices ? clonePrices(p.prices) : clonePrices(DEFAULT_PER_STAT_PRICES),
@@ -434,6 +457,7 @@ export default function BreedingPlanner({ data, theme, onTheme }) {
         <section className="min-w-0">
           {tab === 'plan'   && <IVPlanTab target={target} plan={planResult} form={form} setOverride={setOverride} onSave={saveProject} eggMoveNames={selectedEggMoveNames} hiddenAbility={form.hiddenAbility ? hiddenAbility : null} />}
           {tab === 'costs'  && <CostsTab plan={planResult} target={target} form={form} />}
+          {tab === 'have'   && <HaveTab plan={planResult} target={target} speciesCat={speciesCat} inventory={form.inventory || []} onAdd={addBreeder} onRemove={removeBreeder} onUpdate={updateBreeder} />}
           {tab === 'profit' && <ProfitTab plan={planResult} salePrice={salePrice} setSalePrice={setSalePrice} />}
           {tab === 'saved'  && <SavedProjectsTab data={data} projects={projects} onOpen={openProject} onDuplicate={duplicateProject} onDelete={deleteProject} />}
         </section>
@@ -1383,6 +1407,179 @@ function ProfitTab({ plan, salePrice, setSalePrice }) {
 }
 
 /* ─────────────── Saved Projects tab ─────────────── */
+
+/* ─────────────── "I Have" (owned breeders) tab ─────────────── */
+
+// Normalize an editor row into a matcher breeder. Gender is derived from role
+// + species: Ditto → 'D', genderless target → 'N', otherwise the chosen ♀/♂.
+function toBreeder(b, speciesCat) {
+  const ivs = IV_KEYS.filter((k) => b.ivs[k]);
+  let gender = b.gender;
+  if (b.role === 'ditto') gender = 'D';
+  else if (speciesCat === 'genderless') gender = 'N';
+  return { id: b.id, ivs, gender, role: b.role, nature: !!b.nature };
+}
+
+function HaveTab({ plan, target, speciesCat, inventory, onAdd, onRemove, onUpdate }) {
+  if (!target) return <Empty msg="Pick a target species on the IV Plan tab first." />;
+  if (!plan)   return <Empty msg="Target at least one IV first — there's nothing to match against yet." />;
+
+  const matched = useMemo(
+    () => matchInventory(plan.node, inventory.map((b) => toBreeder(b, speciesCat))),
+    [plan.node, inventory, speciesCat]
+  );
+  const remaining = useMemo(
+    () => [...aggregateLeaves(matched.node).values()].sort((a, b) => (b.count * b.cost) - (a.count * a.cost)),
+    [matched.node]
+  );
+  const remainingTotal = remaining.reduce((s, g) => s + g.count * g.cost, 0);
+  const roleOptions = speciesCat === 'genderless'
+    ? [{ v: 'target', l: 'Target' }, { v: 'ditto', l: 'Ditto' }]
+    : [{ v: 'target', l: 'Target' }, { v: 'group', l: 'Egg-group' }, { v: 'ditto', l: 'Ditto' }];
+
+  return (
+    <div className="space-y-3">
+      <div className="text-xs text-stone-500 dark:text-stone-400">
+        List breeders you already own — the planner claims each against the most expensive matching node and prunes that branch.
+        A breeder fills a node when its role/gender match and it has <em>at least</em> the node's perfect IVs.
+      </div>
+
+      <FormCard
+        title={`Your breeders (${inventory.length})`}
+        action={
+          <button type="button" onClick={onAdd}
+            className="inline-flex items-center gap-1 px-2 py-0.5 rounded border border-[#d6c8a3] dark:border-stone-700 bg-[#fdf8e9] dark:bg-stone-900 hover:bg-[#ece2c4] dark:hover:bg-stone-800 text-xs">
+            + Add breeder
+          </button>
+        }
+      >
+        {inventory.length === 0 ? (
+          <div className="text-sm text-stone-500 dark:text-stone-400 py-2">No breeders yet. Add the ones in your box to see what they save.</div>
+        ) : (
+          <div className="space-y-2">
+            {inventory.map((b) => (
+              <BreederRow key={b.id} b={b} speciesCat={speciesCat} roleOptions={roleOptions} onRemove={onRemove} onUpdate={onUpdate} />
+            ))}
+          </div>
+        )}
+      </FormCard>
+
+      {inventory.length > 0 && (
+        <>
+          <div className="grid grid-cols-3 gap-2">
+            <Stat label="Base cost" value={plan.totalCost} />
+            <Stat label="With your breeders" value={matched.node.cost} accent />
+            <Stat label="Saved" value={matched.savings} good />
+          </div>
+
+          {matched.matches.length > 0 && (
+            <FormCard title={`Matched (${matched.matches.length})`}>
+              <ul className="text-sm divide-y divide-[#ece2c4] dark:divide-stone-800/60">
+                {matched.matches.map((m, i) => (
+                  <li key={i} className="flex items-baseline gap-2 py-1">
+                    <span className="flex-1 min-w-0">
+                      {m.ivs.length}×31 {m.gender === 'F' ? '♀' : m.gender === 'M' ? '♂' : m.gender === 'D' ? 'Ditto' : ''} {SPECIES_TXT(m.species)}
+                      {m.ivs.length > 0 && <span className="text-stone-500 dark:text-stone-400"> ({formatIVList(m.ivs)})</span>}
+                    </span>
+                    <span className="font-mono tabular-nums text-emerald-600 dark:text-emerald-400">−${formatMoney(m.saved)}</span>
+                  </li>
+                ))}
+              </ul>
+            </FormCard>
+          )}
+
+          {matched.unused.length > 0 && (
+            <div className="text-xs text-amber-700 dark:text-amber-400">
+              {matched.unused.length} breeder{matched.unused.length === 1 ? '' : 's'} didn't fit any node in this plan (wrong role/gender/IVs).
+            </div>
+          )}
+
+          <FormCard title="Still to acquire">
+            {remaining.length === 0 ? (
+              <div className="text-sm text-emerald-700 dark:text-emerald-400 py-1">Nothing — your breeders cover the whole tree! 🎉</div>
+            ) : (
+              <>
+                <ul className="text-sm divide-y divide-[#ece2c4] dark:divide-stone-800/60">
+                  {remaining.map((g, i) => (
+                    <li key={i} className="flex items-baseline gap-2 py-1">
+                      <span className="font-mono tabular-nums font-semibold w-8 shrink-0">{g.count}×</span>
+                      <span className="flex-1 min-w-0">
+                        {ROLE_LABELS[g.role] || 'Carrier'} · {g.ivs.length}×31{g.gender === 'F' ? ' ♀' : g.gender === 'M' ? ' ♂' : ''}
+                        {g.ivs.length > 0 && <span className="text-stone-500 dark:text-stone-400"> ({formatIVList(g.ivs)})</span>}
+                      </span>
+                      <span className="font-mono tabular-nums text-stone-700 dark:text-stone-300 w-20 text-right">${formatMoney(g.count * g.cost)}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-2 pt-2 border-t border-[#ece2c4] dark:border-stone-800/60 flex items-baseline justify-between text-sm">
+                  <span className="text-stone-500 dark:text-stone-400">Remaining parents subtotal</span>
+                  <span className="font-mono tabular-nums font-semibold">${formatMoney(remainingTotal)}</span>
+                </div>
+              </>
+            )}
+          </FormCard>
+        </>
+      )}
+    </div>
+  );
+}
+
+function SPECIES_TXT(s) {
+  return s === 'target' ? 'target' : s === 'group' ? 'egg-group' : s === 'ditto' ? '' : s;
+}
+
+function Stat({ label, value, accent, good }) {
+  return (
+    <div className={`rounded-md border p-2.5 ${good ? 'border-emerald-300 dark:border-emerald-900 bg-emerald-50/50 dark:bg-emerald-950/20' : 'border-[#e6dabf] dark:border-stone-800 bg-[#fdf8e9] dark:bg-stone-900'}`}>
+      <div className="text-[10px] uppercase tracking-wider text-stone-500 dark:text-stone-400">{label}</div>
+      <div className={`font-mono tabular-nums font-bold ${good ? 'text-emerald-700 dark:text-emerald-300' : accent ? 'text-stone-900 dark:text-stone-100' : 'text-stone-700 dark:text-stone-300'} text-lg`}>${formatMoney(value)}</div>
+    </div>
+  );
+}
+
+function BreederRow({ b, speciesCat, roleOptions, onRemove, onUpdate }) {
+  const showGender = b.role !== 'ditto' && speciesCat !== 'genderless';
+  return (
+    <div className="rounded-md border border-[#e6dabf] dark:border-stone-800 bg-[#f1e9d2] dark:bg-stone-950/40 p-2 space-y-2">
+      <div className="flex flex-wrap items-center gap-1.5">
+        <div className="flex flex-wrap gap-1">
+          {IV_KEYS.map((k) => (
+            <button key={k} type="button"
+              onClick={() => onUpdate(b.id, { ivs: { ...b.ivs, [k]: !b.ivs[k] } })}
+              aria-pressed={b.ivs[k]}
+              className={`px-1.5 py-0.5 rounded text-[10px] font-semibold uppercase border transition-colors ${
+                b.ivs[k] ? 'bg-emerald-500 text-white border-emerald-600' : 'bg-[#fdf8e9] dark:bg-stone-900 text-stone-500 dark:text-stone-400 border-[#d6c8a3] dark:border-stone-700'
+              }`}>{IV_LABELS[k]}</button>
+          ))}
+        </div>
+        <button type="button" onClick={() => onRemove(b.id)}
+          className="ml-auto p-1 rounded text-stone-400 hover:text-red-600 dark:hover:text-red-400" title="Remove">
+          <Trash2 size={13} />
+        </button>
+      </div>
+      <div className="flex flex-wrap items-center gap-2 text-xs">
+        <select value={b.role} onChange={(e) => onUpdate(b.id, { role: e.target.value })}
+          className="px-1.5 py-0.5 rounded border border-[#d6c8a3] dark:border-stone-700 bg-[#fdf8e9] dark:bg-stone-900 text-stone-900 dark:text-stone-100">
+          {roleOptions.map((o) => <option key={o.v} value={o.v}>{o.l}</option>)}
+        </select>
+        {showGender && (
+          <div className="inline-flex rounded border border-[#d6c8a3] dark:border-stone-700 overflow-hidden">
+            {['F', 'M'].map((g) => (
+              <button key={g} type="button" onClick={() => onUpdate(b.id, { gender: g })}
+                className={`px-2 py-0.5 ${b.gender === g ? 'bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900' : 'text-stone-600 dark:text-stone-400'}`}>
+                {g === 'F' ? '♀' : '♂'}
+              </button>
+            ))}
+          </div>
+        )}
+        <label className="inline-flex items-center gap-1 text-stone-700 dark:text-stone-300 cursor-pointer">
+          <input type="checkbox" checked={b.nature} onChange={(e) => onUpdate(b.id, { nature: e.target.checked })} className="accent-blue-500" />
+          has nature
+        </label>
+      </div>
+    </div>
+  );
+}
 
 function SavedProjectsTab({ data, projects, onOpen, onDuplicate, onDelete }) {
   if (projects.length === 0) return <Empty msg="No saved projects yet. Save one from the IV Plan tab." />;

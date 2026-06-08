@@ -139,6 +139,89 @@ function applyInstanceOverrides(root, byInstance, ctx) {
   return walk(root);
 }
 
+/* ─────────────── Owned-breeders matching ─────────────── */
+
+// Match a list of breeders the user ALREADY OWNS against an instantiated plan
+// tree. Greedy: each owned breeder (largest IV-set first) claims the
+// highest-cost node it can satisfy, and that node's whole subtree is pruned
+// (you already have that carrier, so you don't breed/buy anything beneath it).
+// Returns a new tree with claimed nodes marked { owned:true, cost:0 }, costs
+// refolded, plus total savings, which breeders were used/unused, and a
+// per-match summary.
+//
+// breeder shape: { id, ivs: string[], gender: 'M'|'F'|'N'|'D',
+//                  role: 'target'|'group'|'ditto', nature: boolean }
+export function matchInventory(root, breeders) {
+  const list = (breeders || []).filter(Boolean);
+  if (!root) return { node: root, savings: 0, used: [], unused: list, matches: [] };
+
+  const clone = cloneTree(root);
+  const nodes = [];
+  (function collect(n) { if (!n) return; nodes.push(n); if (n.kind === 'breed') { collect(n.left); collect(n.right); } })(clone);
+
+  // Largest IV-set first so a 4×31 you own claims a big subtree before a 1×31
+  // grabs a leaf inside it.
+  const sorted = list
+    .map((b, i) => ({ ...b, _i: i, ivset: new Set(b.ivs || []) }))
+    .sort((a, b) => (b.ivs?.length || 0) - (a.ivs?.length || 0));
+
+  const covered = new Set();        // instanceIds inside a claimed subtree
+  const claimed = new Set();        // instanceIds of the claimed nodes themselves
+  const used = [];
+  const matches = [];
+
+  function satisfies(b, n) {
+    if (n.species === 'ditto')       { if (b.role !== 'ditto') return false; }
+    else if (n.species === 'target') { if (b.role !== 'target') return false; }
+    else if (n.species === 'group')  { if (b.role !== 'target' && b.role !== 'group') return false; }
+    if (n.gender !== b.gender) return false;          // M/F/N/D must match the slot
+    for (const iv of (n.ivs || [])) if (!b.ivset.has(iv)) return false; // breeder ⊇ node IVs
+    if (n.naturePassing && !b.nature) return false;
+    return true;
+  }
+
+  for (const b of sorted) {
+    let best = null;
+    for (const n of nodes) {
+      if (covered.has(n.instanceId) || claimed.has(n.instanceId)) continue;
+      if (!satisfies(b, n)) continue;
+      if (!best || (n.cost || 0) > (best.cost || 0)) best = n;
+    }
+    if (!best) continue; // this owned breeder doesn't fit anything left
+    claimed.add(best.instanceId);
+    (function cover(n) { if (!n) return; covered.add(n.instanceId); if (n.kind === 'breed') { cover(n.left); cover(n.right); } })(best);
+    used.push(b);
+    matches.push({ breeder: b, nodeId: best.instanceId, saved: best.cost || 0, ivs: best.ivs || [], gender: best.gender, species: best.species });
+  }
+
+  // Apply: claimed nodes become free owned leaves; refold costs. We derive each
+  // breed step's own cost (items + egg fee) as cost - childrenCost so we don't
+  // need the price tables here.
+  function apply(n) {
+    if (!n) return n;
+    if (claimed.has(n.instanceId)) {
+      return { ...n, kind: 'leaf', owned: true, cost: 0, left: undefined, right: undefined, powerItems: 0, everstones: 0, eggFee: 0, breedUp: false };
+    }
+    if (n.kind !== 'breed') return n;
+    const stepOwn = (n.cost || 0) - ((n.left?.cost || 0) + (n.right?.cost || 0));
+    const left = apply(n.left);
+    const right = apply(n.right);
+    return { ...n, left, right, cost: (left?.cost || 0) + (right?.cost || 0) + stepOwn };
+  }
+  const node = apply(clone);
+  const savings = (root.cost || 0) - (node.cost || 0);
+  const usedIds = new Set(used.map((b) => b._i));
+  const unused = sorted.filter((b) => !usedIds.has(b._i)).map((b) => list[b._i]);
+  return { node, savings, used, unused, matches };
+}
+
+function cloneTree(n) {
+  if (!n) return n;
+  const c = { ...n };
+  if (n.kind === 'breed') { c.left = cloneTree(n.left); c.right = cloneTree(n.right); }
+  return c;
+}
+
 /* ─────────────── Recursive solver ─────────────── */
 
 // Node id encodes (speciesConstraint, gender, ivs, naturePassing).
