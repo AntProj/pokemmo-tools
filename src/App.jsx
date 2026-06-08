@@ -3,6 +3,7 @@ import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import NavBar from './components/NavBar.jsx';
 import PokemonModal from './components/PokemonModal.jsx';
 import Pokedex from './pages/Pokedex.jsx';
+import { loadStore as loadBoxStore, saveStore as saveBoxStore } from './lib/box.js';
 
 // Heavy / non-landing pages are code-split so the initial load (the Pokédex)
 // doesn't pay for Leaflet (RegionMap ≈ 150 KB+), the breeding optimizer, etc.
@@ -10,6 +11,7 @@ import Pokedex from './pages/Pokedex.jsx';
 // since it's the default route and lazy-loading it would just add a flash.
 const Locations       = lazy(() => import('./pages/Locations.jsx'));
 const Tracker         = lazy(() => import('./pages/Tracker.jsx'));
+const BoxPage         = lazy(() => import('./pages/Box.jsx'));
 const CatchCalc       = lazy(() => import('./pages/CatchCalc.jsx'));
 const BreedingPlanner = lazy(() => import('./pages/BreedingPlanner.jsx'));
 const RegionMap       = lazy(() => import('./pages/RegionMap.jsx'));
@@ -95,6 +97,10 @@ export default function App() {
   const [locationsState, setLocationsState]   = useState(INITIAL_LOCATIONS);
   const [trackerView, setTrackerView]         = useState(INITIAL_TRACKER_VIEW);
   const [trackerState, setTrackerStateRaw]    = useState(loadTrackerState);
+
+  // The Box — shared across the Box page and the breeding planner.
+  const [boxStore, setBoxStore]               = useState(loadBoxStore);
+  useEffect(() => { saveBoxStore(boxStore); }, [boxStore]);
 
   // Pokémon detail modal — shared so both pages can open it.
   const [selectedId, setSelectedId] = useState(null);
@@ -238,6 +244,17 @@ export default function App() {
               }
             />
             <Route
+              path="/box"
+              element={
+                <BoxPage
+                  data={data}
+                  store={boxStore}
+                  setStore={setBoxStore}
+                  theme={theme} onTheme={setTheme}
+                />
+              }
+            />
+            <Route
               path="/catch"
               element={
                 <CatchCalc
@@ -253,6 +270,7 @@ export default function App() {
                   data={data}
                   theme={theme} onTheme={setTheme}
                   onSelect={handleSelect}
+                  box={boxStore}
                 />
               }
             />

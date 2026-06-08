@@ -5,7 +5,7 @@ import {
   flashToast, beep, primeAudio,
 } from '../lib/desktop.js';
 import { parseSummary, resolveSpecies } from '../lib/breeding/parseSummary.js';
-import { blankBoxMon } from '../lib/breeding/box.js';
+import { blankBoxMon } from '../lib/box.js';
 
 const LS_RECT = 'pokemmo:capture:rect';
 function loadRect() {

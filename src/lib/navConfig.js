@@ -10,6 +10,7 @@ export const NAV_DESTINATIONS = [
   { id: 'locations', label: 'Locations',  to: '/locations',             defaultBar: true },
   { id: 'tracker',   label: 'Tracker',    to: '/tracker',               defaultBar: true },
   { id: 'maps',      label: 'Maps',       to: '/map',                   defaultBar: true },
+  { id: 'box',       label: 'Box',        to: '/box',                   defaultBar: true },
   { id: 'catch',     label: 'Catch Calc', to: '/catch',                 defaultBar: false },
   { id: 'breeding',  label: 'Breeding',   to: '/breeding',              defaultBar: false },
 ];
