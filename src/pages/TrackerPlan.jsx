@@ -1,4 +1,4 @@
-import { memo, useCallback, useMemo, useRef, useState } from 'react';
+import { memo, useCallback, useMemo, useRef } from 'react';
 import { ChevronRight, Star, Check, X } from 'lucide-react';
 import TypeBadge from '../components/TypeBadge.jsx';
 import RarityBadge from '../components/RarityBadge.jsx';
@@ -6,7 +6,7 @@ import PokemonSprite from '../components/PokemonSprite.jsx';
 import FilterRow from '../components/FilterRow.jsx';
 import RegionPills from '../components/RegionPills.jsx';
 import TypePills from '../components/TypePills.jsx';
-import { useEscapeAndScrollLock } from '../hooks/useEscapeAndScrollLock.js';
+import Modal from '../components/Modal.jsx';
 import { typeColor } from '../lib/types.js';
 import { dexNum } from '../lib/format.js';
 import { methodIcon, parseLocation, regionRank } from '../lib/locations.js';
@@ -30,15 +30,15 @@ export default function TrackerPlan({
   trackerState, setMonState,
   view, updateView,
   openPanel,
+  // Location-modal open-key is lifted to Tracker so the "Full Pokédex entry"
+  // flow can close it (avoids stacking the Plan modal under the detail modal).
+  openKey, setOpenKey,
 }) {
   const {
     planRegion, planMethods, planRarities = [], hideSingles,
     // Mon-attribute filters, shared with the Mark view (see monFilters.js).
     planTypes = [], planBaby = 'any', planEvolutions = [], planTiers = [],
   } = view;
-  // Track the open modal by key so it stays bound to the *current* state of
-  // the location (eligible mons / score update live as you click in the modal).
-  const [openKey, setOpenKey] = useState(null);
 
   // Hunt-tier catalog (from pokemmo.json) drives the Hunt-tier filter row.
   const huntTierCatalog = data.hunt_tiers?.tiers || EMPTY;
@@ -383,22 +383,16 @@ const PlanLocationCard = memo(function PlanLocationCard({ loc, onOpen }) {
 /* ─────────────── Plan location modal ─────────────── */
 
 function PlanLocationModal({ loc, trackerState, setMonState, openPanel, onClose }) {
-  useEscapeAndScrollLock(onClose);
-
   return (
-    <div className="fixed inset-0 z-40 overflow-y-auto bg-black/70" onClick={onClose}>
-      <div className="min-h-full flex items-start sm:items-center justify-center p-3 sm:p-6">
-        <div
-          className="w-full max-w-2xl bg-[#fdf8e9] dark:bg-stone-900
-                     rounded-lg shadow-2xl border border-[#e6dabf] dark:border-stone-800
-                     flex flex-col h-[min(720px,calc(100vh-3rem))]"
-          onClick={(e) => e.stopPropagation()}
-          role="dialog"
-          aria-modal="true"
-          aria-label={`${loc.name} catch plan`}
-        >
-          {/* Header */}
-          <div className="p-4 border-b border-[#e6dabf] dark:border-stone-800 flex items-center gap-3">
+    <Modal
+      onClose={onClose}
+      z="z-40"
+      maxWidth="max-w-2xl"
+      maxHeight="min(720px, calc(100vh - 3rem))"
+      showClose={false}
+      ariaLabel={`${loc.name} catch plan`}
+      header={
+        <div className="p-4 border-b border-[#e6dabf] dark:border-stone-800 flex items-center gap-3">
             <div className="flex-1 min-w-0">
               <div className="text-[11px] font-semibold uppercase tracking-wider text-stone-500 dark:text-stone-400">{loc.region}</div>
               <h2 className="text-lg font-bold text-stone-900 dark:text-stone-100 truncate">{loc.name}</h2>
@@ -419,31 +413,29 @@ function PlanLocationModal({ loc, trackerState, setMonState, openPanel, onClose 
               <X size={18} />
             </button>
           </div>
-
-          {/* Mon list — scrolls inside the modal */}
-          <div className="flex-1 overflow-y-auto p-3 space-y-1.5">
-            {loc.eligible.length === 0 ? (
-              <div className="py-8 text-center text-sm text-stone-500 dark:text-stone-400">
-                Everything here is caught. Close to find the next location.
-              </div>
-            ) : (
-              loc.eligible.map((m) => (
-                <PlanMonRow
-                  key={m.pokemon.id}
-                  pokemon={m.pokemon}
-                  entries={m.entries}
-                  state={m.state}
-                  setMonState={setMonState}
-                  openPanel={openPanel}
-                  currentRegion={loc.region}
-                  currentLocation={loc.name}
-                />
-              ))
-            )}
+      }
+    >
+      <div className="p-3 space-y-1.5">
+        {loc.eligible.length === 0 ? (
+          <div className="py-8 text-center text-sm text-stone-500 dark:text-stone-400">
+            Everything here is caught. Close to find the next location.
           </div>
-        </div>
+        ) : (
+          loc.eligible.map((m) => (
+            <PlanMonRow
+              key={m.pokemon.id}
+              pokemon={m.pokemon}
+              entries={m.entries}
+              state={m.state}
+              setMonState={setMonState}
+              openPanel={openPanel}
+              currentRegion={loc.region}
+              currentLocation={loc.name}
+            />
+          ))
+        )}
       </div>
-    </div>
+    </Modal>
   );
 }
 

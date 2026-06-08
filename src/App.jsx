@@ -9,7 +9,6 @@ import Pokedex from './pages/Pokedex.jsx';
 // Each becomes its own chunk fetched on first navigation. Pokedex stays eager
 // since it's the default route and lazy-loading it would just add a flash.
 const Locations       = lazy(() => import('./pages/Locations.jsx'));
-const LocationDetail  = lazy(() => import('./pages/LocationDetail.jsx'));
 const Tracker         = lazy(() => import('./pages/Tracker.jsx'));
 const CatchCalc       = lazy(() => import('./pages/CatchCalc.jsx'));
 const BreedingPlanner = lazy(() => import('./pages/BreedingPlanner.jsx'));
@@ -206,20 +205,21 @@ export default function App() {
                 />
               }
             />
+            {/* One route covers the grid and the deep-linked detail. The
+                optional :region/:location params open a location as a modal
+                over the grid (see Locations.jsx) — same component stays
+                mounted, so the grid scroll survives open/close. */}
             <Route
-              path="/locations"
+              path="/locations/:region?/:location?"
               element={
                 <Locations
                   data={data}
                   state={locationsState}
                   setState={setLocationsState}
                   theme={theme} onTheme={setTheme}
+                  onSelect={handleSelect}
                 />
               }
-            />
-            <Route
-              path="/locations/:region/:location"
-              element={<LocationDetail data={data} onSelect={handleSelect} />}
             />
             <Route
               path="/tracker"

@@ -14,6 +14,11 @@ export default function Tracker({
 }) {
   // Catch info panel — opened on right-click / long-press from either view.
   const [panelMonId, setPanelMonId] = useState(null);
+  // Plan's location modal open-key is lifted here so "Full Pokédex entry"
+  // (fired from the catch panel) can close BOTH the panel and the Plan modal
+  // before the App-level detail modal opens — otherwise the Plan modal would
+  // sit orphaned underneath it (#1).
+  const [planOpenKey, setPlanOpenKey] = useState(null);
   const panelMon = useMemo(
     () => (panelMonId != null ? data.pokemon.find((p) => p.id === panelMonId) : null),
     [panelMonId, data.pokemon]
@@ -139,6 +144,8 @@ export default function Tracker({
           view={view}
           updateView={updateView}
           openPanel={openPanel}
+          openKey={planOpenKey}
+          setOpenKey={setPlanOpenKey}
         />
       ) : (
         <TrackerMark
@@ -157,7 +164,7 @@ export default function Tracker({
           pokemon={panelMon}
           trackerState={trackerState}
           onSetState={setMonState}
-          onOpenFullEntry={(id) => { closePanel(); onSelect(id); }}
+          onOpenFullEntry={(id) => { closePanel(); setPlanOpenKey(null); onSelect(id); }}
           onClose={closePanel}
         />
       )}

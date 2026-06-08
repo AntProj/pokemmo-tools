@@ -1,6 +1,7 @@
-import { memo, useEffect } from 'react';
+import { memo } from 'react';
 import { X, Star, Check, Slash, Circle, MapPin, Calculator } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Modal from './Modal.jsx';
 import TypeBadge from './TypeBadge.jsx';
 import RarityBadge from './RarityBadge.jsx';
 import PokemonSprite from './PokemonSprite.jsx';
@@ -17,14 +18,6 @@ const STATE_BUTTONS = [
 ];
 
 function CatchInfoPanel({ pokemon, trackerState, onSetState, onOpenFullEntry, onClose }) {
-  // Esc closes. No body scroll-lock — this is a focused popover, not a modal,
-  // so the page beneath should still scroll if needed.
-  useEffect(() => {
-    function onKey(e) { if (e.key === 'Escape') onClose(); }
-    document.addEventListener('keydown', onKey);
-    return () => document.removeEventListener('keydown', onKey);
-  }, [onClose]);
-
   if (!pokemon) return null;
 
   const state    = stateOf(trackerState, pokemon.id);
@@ -34,48 +27,45 @@ function CatchInfoPanel({ pokemon, trackerState, onSetState, onOpenFullEntry, on
   const primary  = typeColor(pokemon.types[0]).bg;
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-black/40" onClick={onClose}>
-      <div className="min-h-full flex items-start sm:items-center justify-center p-3 sm:p-6">
+    <Modal
+      onClose={onClose}
+      maxWidth="max-w-md"
+      scroll="page"
+      showClose={false}
+      ariaLabel={`Catch info for ${pokemon.name}`}
+    >
+      {/* Header */}
+      <div
+        className="p-3 rounded-t-lg flex items-center gap-3"
+        style={{ background: `linear-gradient(135deg, ${primary}33, ${primary}11)` }}
+      >
         <div
-          className="w-full max-w-md bg-[#fdf8e9] dark:bg-stone-900
-                     rounded-lg shadow-xl border border-[#e6dabf] dark:border-stone-800"
-          onClick={(e) => e.stopPropagation()}
-          role="dialog"
-          aria-modal="true"
-          aria-label={`Catch info for ${pokemon.name}`}
+          className="relative shrink-0 w-14 h-14 rounded-md overflow-hidden flex items-center justify-center bg-white/40 dark:bg-stone-950/50"
+          style={{ background: `radial-gradient(circle at 50% 50%, ${primary}33 0%, ${primary}14 70%, ${primary}0a 100%)` }}
         >
-          {/* Header */}
-          <div
-            className="p-3 rounded-t-lg flex items-center gap-3"
-            style={{ background: `linear-gradient(135deg, ${primary}33, ${primary}11)` }}
-          >
-            <div
-              className="relative shrink-0 w-14 h-14 rounded-md overflow-hidden flex items-center justify-center bg-white/40 dark:bg-stone-950/50"
-              style={{ background: `radial-gradient(circle at 50% 50%, ${primary}33 0%, ${primary}14 70%, ${primary}0a 100%)` }}
-            >
-              <PokemonSprite pokemon={pokemon} variant="animated" className="w-12 h-12 object-contain" />
-            </div>
-            <div className="flex-1 min-w-0">
-              <div className="flex items-baseline gap-2 flex-wrap">
-                <span className="font-mono text-xs text-stone-600 dark:text-stone-400">{dexNum(pokemon.id)}</span>
-                <h2 className="text-lg font-bold text-stone-900 dark:text-stone-100 truncate">{pokemon.name}</h2>
-              </div>
-              <div className="mt-1 flex flex-wrap gap-1">
-                {[...new Set(pokemon.types)].map((t) => <TypeBadge key={t} type={t} />)}
-              </div>
-            </div>
-            <button
-              type="button"
-              onClick={onClose}
-              className="p-1.5 rounded-md hover:bg-white/40 dark:hover:bg-stone-700/40 text-stone-700 dark:text-stone-200"
-              title="Close (Esc)"
-            >
-              <X size={16} />
-            </button>
+          <PokemonSprite pokemon={pokemon} className="w-12 h-12 object-contain" />
+        </div>
+        <div className="flex-1 min-w-0">
+          <div className="flex items-baseline gap-2 flex-wrap">
+            <span className="font-mono text-xs text-stone-600 dark:text-stone-400">{dexNum(pokemon.id)}</span>
+            <h2 className="text-lg font-bold text-stone-900 dark:text-stone-100 truncate">{pokemon.name}</h2>
           </div>
+          <div className="mt-1 flex flex-wrap gap-1">
+            {[...new Set(pokemon.types)].map((t) => <TypeBadge key={t} type={t} />)}
+          </div>
+        </div>
+        <button
+          type="button"
+          onClick={onClose}
+          className="p-1.5 rounded-md hover:bg-white/40 dark:hover:bg-stone-700/40 text-stone-700 dark:text-stone-200"
+          title="Close (Esc)"
+        >
+          <X size={16} />
+        </button>
+      </div>
 
-          {/* State buttons */}
-          <div className="p-3 border-t border-[#e6dabf] dark:border-stone-800 space-y-3">
+      {/* State buttons */}
+      <div className="p-3 border-t border-[#e6dabf] dark:border-stone-800 space-y-3">
             <div>
               <div className="text-[11px] font-semibold uppercase tracking-wider text-stone-500 dark:text-stone-400 mb-1.5">State</div>
               <div className="grid grid-cols-4 gap-1.5">
@@ -156,9 +146,7 @@ function CatchInfoPanel({ pokemon, trackerState, onSetState, onOpenFullEntry, on
               </button>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+    </Modal>
   );
 }
 

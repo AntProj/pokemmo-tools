@@ -1,6 +1,7 @@
-import { memo, useMemo, useState } from 'react';
-import { Link, Navigate, useParams } from 'react-router-dom';
-import { ArrowLeft, Sun, Moon, MapPin } from 'lucide-react';
+import { useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Sun, Moon, MapPin } from 'lucide-react';
+import Modal from '../components/Modal.jsx';
 import TypeBadge from '../components/TypeBadge.jsx';
 import RarityBadge from '../components/RarityBadge.jsx';
 import PokemonSprite from '../components/PokemonSprite.jsx';
@@ -15,22 +16,21 @@ const SORT_OPTIONS = [
   { value: 'dex',         label: 'Dex #' },
 ];
 
-export default function LocationDetail({ data, onSelect }) {
-  const { region: regionRaw, location: locRaw } = useParams();
-  const region   = decodeURIComponent(regionRaw || '');
-  const locName  = decodeURIComponent(locRaw || '');
+/**
+ * A location's encounter list, shown as a MODAL popped from the Locations grid
+ * (matching the Tracker Plan interaction — you stay on the list, the mons pop
+ * over it). Replaces the old full-page LocationDetail. Clicking a mon opens the
+ * shared Pokémon detail modal on top via `onSelect`.
+ */
+export function LocationModal({ data, region, locName, onSelect, onClose }) {
   // Only Sinnoh + Johto have interactive maps. When this location is in one of
-  // them, offer a jump to that region's map overworld. We don't try to resolve
-  // the exact zone — location names don't map 1:1 to map zone ids — so this
-  // lands on the overworld where the user can click through.
+  // them, offer a jump to that region's map overworld (lands on the overworld;
+  // location names don't map 1:1 to map zone ids).
   const mapRegion = ['sinnoh', 'johto'].includes(region.toLowerCase())
     ? region.toLowerCase()
     : null;
 
   // Cross-reference each pokemon's own locations array to get level ranges.
-  // data.locations only carries method/rarity/time, not levels. The URL holds
-  // the *base* location name; per-pokemon entries may include a parenthesised
-  // suffix encoding day/night/season — parse and attach to each row.
   const encounters = useMemo(() => {
     const out = [];
     const lcLoc = locName.toLowerCase();
@@ -38,7 +38,6 @@ export default function LocationDetail({ data, onSelect }) {
       for (const loc of (p.locations || [])) {
         if (loc.region !== region) continue;
         const parsed = parseLocation(loc.location);
-        // Case-insensitive match: dataset has e.g. "Route 1" and "ROUTE 1 (Night)".
         if (parsed.base.toLowerCase() !== lcLoc) continue;
         out.push({ ...loc, pokemon: p, times: parsed.times, seasons: parsed.seasons });
       }
@@ -46,7 +45,6 @@ export default function LocationDetail({ data, onSelect }) {
     return out;
   }, [data.pokemon, region, locName]);
 
-  // Methods + rarities present at this location, used to render the chip filters.
   const { allMethods, allRarities } = useMemo(() => {
     const ms = new Set(), rs = new Set();
     for (const e of encounters) { ms.add(e.method); rs.add(e.rarity); }
@@ -56,36 +54,24 @@ export default function LocationDetail({ data, onSelect }) {
     };
   }, [encounters]);
 
-  // Multi-select filters. null = show all (= no filter).
   const [methodFilter, setMethodFilter] = useState(null);
   const [rarityFilter, setRarityFilter] = useState(null);
-  // Time filter is single-select (or null = all). "always" rows (no times) are
-  // always included so you don't lose 24/7 spawns when filtering by time.
   const [timeFilter, setTimeFilter] = useState(null);
   const [sort, setSort] = useState('rarity-asc');
 
-  // Which time options to show as chips: only times actually present in this
-  // location's encounters.
   const allTimes = useMemo(() => {
     const s = new Set();
     for (const e of encounters) for (const t of e.times) s.add(t);
     return ['Day', 'Night', 'Morning'].filter((t) => s.has(t));
   }, [encounters]);
 
-  // Filter at the encounter level (per-method/rarity/time), then group by
-  // pokémon so the user sees one card per Pokémon with its various encounter
-  // entries listed inside.
   const groupedCards = useMemo(() => {
     let pool = encounters;
     if (methodFilter && methodFilter.length > 0) pool = pool.filter((e) => methodFilter.includes(e.method));
     if (rarityFilter && rarityFilter.length > 0) pool = pool.filter((e) => rarityFilter.includes(e.rarity));
     if (timeFilter)  pool = pool.filter((e) => e.times.length === 0 || e.times.includes(timeFilter));
 
-    // Group by pokémon, deduping entries that are identical on every visible
-    // axis (method, rarity, level range, times, seasons). The dataset can
-    // legitimately record the same encounter once per seasonal variant key
-    // even when the parsed details collapse to the same row.
-    const byId = new Map(); // pokemonId → { pokemon, entries: [], _seen: Set }
+    const byId = new Map();
     for (const e of pool) {
       let card = byId.get(e.pokemon.id);
       if (!card) {
@@ -103,13 +89,10 @@ export default function LocationDetail({ data, onSelect }) {
     }
     const cards = [...byId.values()].map(({ _seen, ...rest }) => rest);
 
-    // Sort each card's inner entries by rarity-asc so the easiest method shows first.
     for (const c of cards) {
       c.entries.sort((a, b) => rarityRank(a.rarity) - rarityRank(b.rarity)
                            || a.method.localeCompare(b.method));
     }
-
-    // Rank used for card-level rarity sort: best (lowest rank) entry the card has.
     function bestRarity(c) { return Math.min(...c.entries.map((e) => rarityRank(e.rarity))); }
     function worstRarity(c) { return Math.max(...c.entries.map((e) => rarityRank(e.rarity))); }
 
@@ -120,115 +103,99 @@ export default function LocationDetail({ data, onSelect }) {
     return cards;
   }, [encounters, methodFilter, rarityFilter, timeFilter, sort]);
 
-  // For the "X of Y" header — count distinct mons rather than encounter rows.
   const totalDistinctMons = useMemo(() => new Set(encounters.map((e) => e.pokemon.id)).size, [encounters]);
 
-  // Empty location → bounce back. Could also render a "Location not found" state.
-  if (encounters.length === 0) {
-    return <Navigate to="/locations" replace />;
-  }
+  const title = (
+    <span className="flex items-baseline gap-2 min-w-0">
+      <span className="text-[11px] font-semibold uppercase tracking-wider text-stone-500 dark:text-stone-400 shrink-0">{region}</span>
+      <span className="truncate">{locName}</span>
+    </span>
+  );
 
-  return (
+  const headerExtra = (
     <>
-      {/* Header */}
-      <div className="sticky top-0 z-20 bg-[#f6efdc]/95 dark:bg-stone-950/95 backdrop-blur border-b border-[#e6dabf] dark:border-stone-800">
-        <div className="max-w-7xl mx-auto px-4 py-3 space-y-2">
-          <div>
-            <Link
-              to="/locations"
-              className="inline-flex items-center gap-1.5 text-xs text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100"
-            >
-              <ArrowLeft size={14} /> Back to locations
-            </Link>
-          </div>
-          <div className="flex items-end justify-between gap-3 flex-wrap">
-            <div>
-              <div className="text-[11px] font-semibold uppercase tracking-wider text-stone-500 dark:text-stone-400">{region}</div>
-              <h1 className="text-xl sm:text-2xl font-bold text-stone-900 dark:text-stone-100">{locName}</h1>
-              {mapRegion && (
-                <Link
-                  to={`/map/${mapRegion}`}
-                  className="mt-1 inline-flex items-center gap-1 text-xs text-blue-600 dark:text-blue-400 hover:underline"
-                  title={`Open the ${region} interactive map`}
-                >
-                  <MapPin size={12} /> View on map
-                </Link>
-              )}
-            </div>
-            <div className="flex items-center gap-2">
-              <label className="text-xs text-stone-500 dark:text-stone-400">Sort</label>
-              <select
-                value={sort}
-                onChange={(e) => setSort(e.target.value)}
-                className="px-2 py-1.5 rounded-md border border-[#d6c8a3] dark:border-stone-700
-                           bg-[#fdf8e9] dark:bg-stone-900 text-stone-900 dark:text-stone-100 text-sm
-                           focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                {SORT_OPTIONS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
-              </select>
-              <span className="text-xs text-stone-500 dark:text-stone-400 tabular-nums">
-                {groupedCards.length} of {totalDistinctMons}
-              </span>
-            </div>
-          </div>
-        </div>
+      <div className="flex items-center gap-2 flex-wrap">
+        {mapRegion && (
+          <Link
+            to={`/map/${mapRegion}`}
+            className="inline-flex items-center gap-1 text-xs text-blue-600 dark:text-blue-400 hover:underline"
+            title={`Open the ${region} interactive map`}
+          >
+            <MapPin size={12} /> View on map
+          </Link>
+        )}
+        <label className="text-xs text-stone-500 dark:text-stone-400 ml-auto">Sort</label>
+        <select
+          value={sort}
+          onChange={(e) => setSort(e.target.value)}
+          className="px-2 py-1 rounded-md border border-[#d6c8a3] dark:border-stone-700
+                     bg-[#fdf8e9] dark:bg-stone-900 text-stone-900 dark:text-stone-100 text-xs
+                     focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          {SORT_OPTIONS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
+        </select>
+        <span className="text-xs text-stone-500 dark:text-stone-400 tabular-nums">
+          {groupedCards.length} of {totalDistinctMons}
+        </span>
       </div>
 
-      <main className="max-w-7xl mx-auto px-4 py-4 space-y-4">
-        {/* Method chips */}
-        <ChipRow
-          label="Method"
-          options={allMethods}
-          value={methodFilter}
-          onChange={setMethodFilter}
-          renderLabel={(m) => <><span aria-hidden className="mr-1">{methodIcon(m)}</span>{m}</>}
+      <ChipRow
+        label="Method"
+        options={allMethods}
+        value={methodFilter}
+        onChange={setMethodFilter}
+        renderLabel={(m) => <><span aria-hidden className="mr-1">{methodIcon(m)}</span>{m}</>}
+      />
+      {allTimes.length > 0 && (
+        <SingleChipRow
+          label="Time"
+          options={allTimes}
+          value={timeFilter}
+          onChange={setTimeFilter}
+          renderLabel={(t) => (
+            <span className="inline-flex items-center gap-1">
+              {t === 'Day' ? <Sun size={12} /> : t === 'Night' ? <Moon size={12} /> : null}
+              {t}
+            </span>
+          )}
         />
+      )}
+      <ChipRow
+        label="Rarity"
+        options={allRarities}
+        value={rarityFilter}
+        onChange={setRarityFilter}
+        renderChip={(r) => <RarityBadge rarity={r} size="chip" />}
+      />
+    </>
+  );
 
-        {/* Time chips — only render when this location has time-tagged variants */}
-        {allTimes.length > 0 && (
-          <SingleChipRow
-            label="Time"
-            options={allTimes}
-            value={timeFilter}
-            onChange={setTimeFilter}
-            renderLabel={(t) => (
-              <span className="inline-flex items-center gap-1">
-                {t === 'Day' ? <Sun size={12} /> : t === 'Night' ? <Moon size={12} /> : null}
-                {t}
-              </span>
-            )}
-          />
-        )}
-
-        {/* Rarity chips */}
-        <ChipRow
-          label="Rarity"
-          options={allRarities}
-          value={rarityFilter}
-          onChange={setRarityFilter}
-          renderChip={(r) => <RarityBadge rarity={r} size="chip" />}
-        />
-
-        {/* Encounter cards — one per Pokémon, with each method/rarity/time
-            combination listed inside as its own strip. */}
+  return (
+    <Modal
+      title={title}
+      headerExtra={headerExtra}
+      onClose={onClose}
+      maxWidth="max-w-3xl"
+      maxHeight="min(820px, calc(100vh - 3rem))"
+      ariaLabel={`${locName} encounters`}
+    >
+      <div className="p-3 space-y-2">
         {groupedCards.length === 0 ? (
           <div className="py-12 text-center text-stone-500 dark:text-stone-400 text-sm">
             No encounters match these filters.
           </div>
         ) : (
-          <div className="space-y-2">
-            {groupedCards.map((card) => (
-              <PokemonEncounterCard
-                key={card.pokemon.id}
-                pokemon={card.pokemon}
-                entries={card.entries}
-                onSelect={onSelect}
-              />
-            ))}
-          </div>
+          groupedCards.map((card) => (
+            <PokemonEncounterCard
+              key={card.pokemon.id}
+              pokemon={card.pokemon}
+              entries={card.entries}
+              onSelect={onSelect}
+            />
+          ))
         )}
-      </main>
-    </>
+      </div>
+    </Modal>
   );
 }
 
@@ -258,10 +225,6 @@ function ChipRow({ label, options, value, onChange, renderChip, renderLabel }) {
       {options.map((o) => {
         const isSel = selected.includes(o);
         if (renderChip) {
-          // The selected indicator lives on the rendered chip itself (e.g. an
-          // inset ring on RarityBadge) so the bounding box stays the same in
-          // both states. The wrapper only handles the dim-when-off feel and
-          // keyboard focus ring.
           return (
             <button
               key={o}
@@ -339,10 +302,7 @@ function SingleChipRow({ label, options, value, onChange, renderLabel }) {
 
 /* ─────────────── Encounter row ─────────────── */
 
-// One card per Pokémon. Multiple encounter entries (different methods, rarities,
-// or time variants for the same mon at this location) render as stacked strips
-// inside a single card so the same sprite never appears twice.
-const PokemonEncounterCard = memo(function PokemonEncounterCard({ pokemon: p, entries, onSelect }) {
+const PokemonEncounterCard = ({ pokemon: p, entries, onSelect }) => {
   const primaryColor = typeColor(p.types[0]).bg;
   return (
     <button
@@ -362,12 +322,7 @@ const PokemonEncounterCard = memo(function PokemonEncounterCard({ pokemon: p, en
           className="absolute inset-0 hidden dark:block pointer-events-none"
           style={{ background: `radial-gradient(circle at 50% 50%, ${primaryColor}3d 0%, ${primaryColor}1f 70%, ${primaryColor}0f 100%)` }}
         />
-        <PokemonSprite
-          pokemon={p}
-          variant="animated"
-          loading="lazy"
-          className="w-12 h-12 object-contain relative"
-        />
+        <PokemonSprite pokemon={p} loading="lazy" className="w-12 h-12 object-contain relative" />
       </div>
 
       <div className="flex-1 min-w-0">
@@ -384,7 +339,7 @@ const PokemonEncounterCard = memo(function PokemonEncounterCard({ pokemon: p, en
       </div>
     </button>
   );
-});
+};
 
 function EncounterStrip({ entry }) {
   const { method, rarity, min_level, max_level, times = [], seasons = [] } = entry;

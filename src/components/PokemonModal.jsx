@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
-import { X, Sparkles, ChevronRight, Calculator } from 'lucide-react';
+import { Sparkles, ChevronRight, Calculator } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import Modal from './Modal.jsx';
 import TypeBadge from './TypeBadge.jsx';
 import RarityBadge from './RarityBadge.jsx';
 import PokemonSprite from './PokemonSprite.jsx';
@@ -31,19 +32,6 @@ export default function PokemonModal({ pokemon, data, onClose, onSelect }) {
     setExpandedMove(null);
   }, [pokemon?.id]);
 
-  // Escape key dismissal + body scroll lock.
-  useEffect(() => {
-    if (!pokemon) return;
-    function onKey(e) { if (e.key === 'Escape') onClose(); }
-    document.addEventListener('keydown', onKey);
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
-    return () => {
-      document.removeEventListener('keydown', onKey);
-      document.body.style.overflow = prev;
-    };
-  }, [pokemon, onClose]);
-
   if (!pokemon) return null;
 
   const total = statTotal(pokemon.stats);
@@ -54,55 +42,28 @@ export default function PokemonModal({ pokemon, data, onClose, onSelect }) {
   const hasShinyVariant = !!(pokemon.sprite_3d_shiny || pokemon.sprite_shiny);
 
   return (
-    <div
-      className="fixed inset-0 z-50 overflow-y-auto bg-black/70"
-      onClick={onClose}
-    >
-      {/* min-h-full + flex centers vertically only when content fits, otherwise scrolls from the top */}
-      <div className="min-h-full flex items-start sm:items-center justify-center p-3 sm:p-6">
-        <div
-          className="w-full max-w-3xl bg-[#fdf8e9] dark:bg-stone-900
-                     rounded-lg shadow-2xl border border-[#e6dabf] dark:border-stone-800
-                     relative"
-          onClick={(e) => e.stopPropagation()}
-          role="dialog"
-          aria-modal="true"
-          aria-label={`${pokemon.name} details`}
-        >
-        <button
-          type="button"
-          onClick={onClose}
-          className="absolute top-3 right-3 p-1.5 rounded-md
-                     bg-[#fdf8e9]/80 dark:bg-stone-800/80 hover:bg-[#ece2c4] dark:hover:bg-stone-700
-                     text-stone-700 dark:text-stone-200 z-10"
-          title="Close (Esc)"
-        >
-          <X size={18} />
-        </button>
+    <Modal onClose={onClose} maxWidth="max-w-3xl" scroll="page" ariaLabel={`${pokemon.name} details`}>
+      <Header pokemon={pokemon} shiny={shiny} setShiny={setShiny} hasShinyVariant={hasShinyVariant} onClose={onClose} />
 
-        <Header pokemon={pokemon} shiny={shiny} setShiny={setShiny} hasShinyVariant={hasShinyVariant} onClose={onClose} />
+      <div className="p-5 sm:p-6 space-y-6 border-t border-[#e6dabf] dark:border-stone-800">
+        <Stats stats={pokemon.stats} total={total} />
+        <Profile pokemon={pokemon} />
+        <Abilities abilities={pokemon.abilities} catalog={data.abilities} />
+        <Evolutions pokemon={pokemon} data={data} onSelect={onSelect} />
 
-        <div className="p-5 sm:p-6 space-y-6 border-t border-[#e6dabf] dark:border-stone-800">
-          <Stats stats={pokemon.stats} total={total} />
-          <Profile pokemon={pokemon} />
-          <Abilities abilities={pokemon.abilities} catalog={data.abilities} />
-          <Evolutions pokemon={pokemon} data={data} onSelect={onSelect} />
+        <Moves
+          pokemon={pokemon}
+          data={data}
+          tab={moveTab}
+          setTab={setMoveTab}
+          expandedMove={expandedMove}
+          setExpandedMove={setExpandedMove}
+        />
 
-          <Moves
-            pokemon={pokemon}
-            data={data}
-            tab={moveTab}
-            setTab={setMoveTab}
-            expandedMove={expandedMove}
-            setExpandedMove={setExpandedMove}
-          />
-
-          <HeldItems items={pokemon.held_items} catalog={data.items} />
-          <Locations locations={pokemon.locations} />
-        </div>
-        </div>
+        <HeldItems items={pokemon.held_items} catalog={data.items} />
+        <Locations locations={pokemon.locations} />
       </div>
-    </div>
+    </Modal>
   );
 }
 

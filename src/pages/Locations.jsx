@@ -1,6 +1,7 @@
 import { memo, useDeferredValue, useMemo } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import Toolbar from '../components/Toolbar.jsx';
+import { LocationModal } from './LocationDetail.jsx';
 import { useFieldSetters } from '../hooks/useFieldSetters.js';
 import { methodIcon, regionRank, parseLocation } from '../lib/locations.js';
 
@@ -15,9 +16,18 @@ function isAllUpper(s) { return s.length > 0 && s === s.toUpperCase() && s !== s
 const NAME_RANK = { upper: 0, mixed: 1, unsuffixed: 2 };
 function rank(source) { return NAME_RANK[source] ?? 0; }
 
-export default function Locations({ data, state, setState, theme, onTheme }) {
+export default function Locations({ data, state, setState, theme, onTheme, onSelect }) {
   const { search, region, sort } = state;
   const deferredSearch = useDeferredValue(search);
+
+  // Optional route params open a location as a modal over the grid (the
+  // Tracker-style interaction). Driving it from the URL keeps deep-links
+  // shareable; closing navigates back to /locations. Same component stays
+  // mounted across open/close, so the grid scroll position is preserved.
+  const navigate = useNavigate();
+  const { region: openRegionRaw, location: openLocRaw } = useParams();
+  const openRegion = openRegionRaw ? decodeURIComponent(openRegionRaw) : null;
+  const openLoc    = openLocRaw ? decodeURIComponent(openLocRaw) : null;
 
   const { search: setSearch, region: setRegion, sort: setSort } =
     useFieldSetters(setState, ['search', 'region', 'sort']);
@@ -102,6 +112,16 @@ export default function Locations({ data, state, setState, theme, onTheme }) {
           </div>
         )}
       </main>
+
+      {openRegion && openLoc && (
+        <LocationModal
+          data={data}
+          region={openRegion}
+          locName={openLoc}
+          onSelect={onSelect}
+          onClose={() => navigate('/locations')}
+        />
+      )}
     </>
   );
 }
