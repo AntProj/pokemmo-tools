@@ -22,7 +22,8 @@
  *     - pokemon-sprites.json — sprite URLs (default + shiny)
  *     - dex.json            — regional dex numbers
  *
- * Output: src/data/pokemmo.json (everything the React app needs in one file)
+ * Output: public/data/pokemmo.json (everything the React app needs in one
+ *         file; fetched at runtime, not bundled — see src/App.jsx)
  *
  * Run with:  npm run build:data
  */
@@ -34,7 +35,11 @@ import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const RAW = path.join(ROOT, 'data', 'raw');
-const OUT_DIR = path.join(ROOT, 'src', 'data');
+// Output to public/ (not src/) so the ~6.7 MB JSON is served as a static
+// asset and fetched at runtime, NOT bundled into the JS by Vite. Vite copies
+// public/ verbatim into dist/, so this lands at dist/data/pokemmo.json and is
+// served at <base>/data/pokemmo.json. See the fetch in src/App.jsx.
+const OUT_DIR = path.join(ROOT, 'public', 'data');
 const OUT_FILE = path.join(OUT_DIR, 'pokemmo.json');
 
 // ---------- Rarity weights for "easiest to find" ranking ----------
@@ -580,7 +585,7 @@ function build() {
   console.log(`  Moves:      ${out.meta.total_moves}`);
   console.log(`  Abilities:  ${out.meta.total_abilities}`);
   console.log(`  Items:      ${out.meta.total_items}`);
-  console.log(`  Output:     src/data/pokemmo.json (${sizeKb} KB)`);
+  console.log(`  Output:     public/data/pokemmo.json (${sizeKb} KB)`);
 }
 
 build();

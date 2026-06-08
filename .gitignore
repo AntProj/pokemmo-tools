@@ -5,8 +5,9 @@ node_modules/
 dist/
 dist-ssr/
 
-# Generated data (rebuild with: npm run build:data)
-src/data/pokemmo.json
+# Generated data (rebuild with: npm run build:data). Lives in public/ so it's
+# served as a static asset and fetched at runtime instead of bundled into JS.
+public/data/pokemmo.json
 
 # Map image WebPs — hosted on Cloudflare R2 instead of committed to the repo
 # (the full image set is hundreds of MB per region; sprites are baked into the

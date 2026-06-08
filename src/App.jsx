@@ -1,15 +1,25 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { lazy, Suspense, useCallback, useEffect, useMemo, useState } from 'react';
 import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
-import data from './data/pokemmo.json';
 import NavBar from './components/NavBar.jsx';
 import PokemonModal from './components/PokemonModal.jsx';
 import Pokedex from './pages/Pokedex.jsx';
-import Locations from './pages/Locations.jsx';
-import LocationDetail from './pages/LocationDetail.jsx';
-import Tracker from './pages/Tracker.jsx';
-import CatchCalc from './pages/CatchCalc.jsx';
-import BreedingPlanner from './pages/BreedingPlanner.jsx';
-import RegionMap from './pages/RegionMap.jsx';
+
+// Heavy / non-landing pages are code-split so the initial load (the Pokédex)
+// doesn't pay for Leaflet (RegionMap ≈ 150 KB+), the breeding optimizer, etc.
+// Each becomes its own chunk fetched on first navigation. Pokedex stays eager
+// since it's the default route and lazy-loading it would just add a flash.
+const Locations       = lazy(() => import('./pages/Locations.jsx'));
+const LocationDetail  = lazy(() => import('./pages/LocationDetail.jsx'));
+const Tracker         = lazy(() => import('./pages/Tracker.jsx'));
+const CatchCalc       = lazy(() => import('./pages/CatchCalc.jsx'));
+const BreedingPlanner = lazy(() => import('./pages/BreedingPlanner.jsx'));
+const RegionMap       = lazy(() => import('./pages/RegionMap.jsx'));
+
+// The dataset (~6.7 MB) is served as a static asset from public/ and fetched
+// at runtime rather than bundled into the JS — that single change drops the
+// initial JS payload by ~500 KB gzipped. BASE_URL makes it resolve in dev (/)
+// and prod (/pokemmo-tools/) alike.
+const DATA_URL = `${import.meta.env.BASE_URL}data/pokemmo.json`;
 
 const LS = {
   view:    'pokemmo:view',
@@ -47,32 +57,13 @@ const INITIAL_TRACKER_VIEW = { view: 'plan', planRegion: 'All', planMethods: [],
   // Mark-tab filters:
   //   markBaby           'any' | 'only' | 'exclude'  — gate by pokemon.is_baby
   //   markRarities       [] | string[]               — selected encounter rarities
-  //                                                    (e.g. "Special", "Rare").
-  //   markRaritiesMode   'only' | 'any'              — 'only': mon's encounters
-  //                                                    must all fall within the
-  //                                                    selected rarities (i.e. the
-  //                                                    mon is found EXCLUSIVELY at
-  //                                                    those rarities). 'any': mon
-  //                                                    has at least one matching
-  //                                                    location. Default 'only' so
-  //                                                    selecting "Special" finds
-  //                                                    event-only mons.
-  //   markEvolutions    [] | string[]                — selected evolution-method
-  //                                                    categories ("stone",
-  //                                                    "trade", etc.; see
-  //                                                    EVOLUTION_CATEGORIES in
-  //                                                    TrackerMark.jsx). OR
-  //                                                    semantics, matches on
-  //                                                    either incoming
-  //                                                    pre_evolution or any
-  //                                                    outgoing evolution.
-  //   markTiers          [] | number[]                — selected hunt tiers
-  //                                                    (e.g. [0, 1] for "show
-  //                                                    only top-priority").
-  //                                                    Multi-select OR semantics.
-  //                                                    Source: forums OT-dex
-  //                                                    guide (see data/raw/
-  //                                                    hunt-tiers.json).
+  //   markRaritiesMode   'only' | 'any'              — 'only' = found EXCLUSIVELY
+  //                                                    at the selected rarities
+  //   markEvolutions     [] | string[]               — evolution-method buckets
+  //                                                    (see EVOLUTION_CATEGORIES
+  //                                                    in TrackerMark.jsx)
+  //   markTiers          [] | number[]               — hunt tiers (data/raw/
+  //                                                    hunt-tiers.json)
   markSearch: '', markRegion: 'All', markTypes: [], markStates: [], markSort: 'dex',
   markBaby: 'any', markRarities: [], markRaritiesMode: 'only', markEvolutions: [], markTiers: [] };
 
@@ -86,10 +77,15 @@ function loadTrackerState() {
     return obj && typeof obj === 'object' ? obj : {};
   } catch { return {}; }
 }
+
 export default function App() {
   // Persisted across tabs
   const [view, setView]   = useState(initialView);
   const [theme, setTheme] = useState(initialTheme);
+
+  // Dataset — fetched once at runtime (see DATA_URL).
+  const [data, setData]         = useState(null);
+  const [dataError, setDataError] = useState(null);
 
   // Page-specific state lifted here so it survives tab switches.
   const [pokedexState, setPokedexState]       = useState(INITIAL_POKEDEX);
@@ -99,6 +95,15 @@ export default function App() {
 
   // Pokémon detail modal — shared so both pages can open it.
   const [selectedId, setSelectedId] = useState(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch(DATA_URL)
+      .then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+      .then((d) => { if (!cancelled) setData(d); })
+      .catch((e) => { if (!cancelled) setDataError(e.message || String(e)); });
+    return () => { cancelled = true; };
+  }, []);
 
   useEffect(() => { localStorage.setItem(LS.view, view); }, [view]);
   useEffect(() => {
@@ -145,105 +150,129 @@ export default function App() {
   }, []);
 
   const selected = useMemo(
-    () => (selectedId != null ? data.pokemon.find((p) => p.id === selectedId) : null),
-    [selectedId]
+    () => (data && selectedId != null ? data.pokemon.find((p) => p.id === selectedId) : null),
+    [data, selectedId]
   );
   const handleSelect = useCallback((id) => setSelectedId(id), []);
   const handleClose  = useCallback(() => setSelectedId(null), []);
+
+  // ── Boot states (all hooks above run unconditionally) ──
+  if (dataError) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-[#f6efdc] dark:bg-stone-950 px-4 text-center text-stone-700 dark:text-stone-300">
+        <div>
+          <p className="font-semibold text-red-600 dark:text-red-400">Couldn’t load Pokédex data.</p>
+          <p className="mt-1 text-sm">{dataError}</p>
+          <p className="mt-2 text-xs text-stone-500 dark:text-stone-500">
+            If you’re running locally, generate it with <code>npm run build:data</code>.
+          </p>
+        </div>
+      </div>
+    );
+  }
+  if (!data) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-[#f6efdc] dark:bg-stone-950 text-stone-500 dark:text-stone-400">
+        <div className="animate-pulse text-sm">Loading Pokédex…</div>
+      </div>
+    );
+  }
 
   return (
     <HashRouter>
       <div className="min-h-screen bg-[#f6efdc] dark:bg-stone-950 text-stone-900 dark:text-stone-100">
         <NavBar />
 
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Pokedex
-                data={data}
-                state={pokedexState}
-                setState={setPokedexState}
-                view={view} onView={setView}
-                theme={theme} onTheme={setTheme}
-                onSelect={handleSelect}
-              />
-            }
-          />
-          <Route
-            path="/locations"
-            element={
-              <Locations
-                data={data}
-                state={locationsState}
-                setState={setLocationsState}
-                theme={theme} onTheme={setTheme}
-              />
-            }
-          />
-          <Route
-            path="/locations/:region/:location"
-            element={<LocationDetail data={data} onSelect={handleSelect} />}
-          />
-          <Route
-            path="/tracker"
-            element={
-              <Tracker
-                data={data}
-                trackerState={trackerState}
-                setMonState={setMonState}
-                setManyMonStates={setManyMonStates}
-                mergeTrackerState={mergeTrackerState}
-                view={trackerView}
-                setView={setTrackerView}
-                theme={theme} onTheme={setTheme}
-                onSelect={handleSelect}
-              />
-            }
-          />
-          <Route
-            path="/catch"
-            element={
-              <CatchCalc
-                data={data}
-                theme={theme} onTheme={setTheme}
-              />
-            }
-          />
-          <Route
-            path="/breeding"
-            element={
-              <BreedingPlanner
-                data={data}
-                theme={theme} onTheme={setTheme}
-                onSelect={handleSelect}
-              />
-            }
-          />
-          {/* Region interactive maps. One <RegionMap> component drives both
-              regions — the `region` prop selects which data folder it reads
-              and how it builds internal links. Each region gets two routes:
-              the overworld view and a zone-detail view. */}
-          <Route path="/map/sinnoh"           element={<RegionMap region="sinnoh" theme={theme} onTheme={setTheme} />} />
-          <Route path="/map/sinnoh/:zoneId"   element={<RegionMap region="sinnoh" theme={theme} onTheme={setTheme} />} />
-          <Route path="/map/johto"            element={<RegionMap region="johto"  theme={theme} onTheme={setTheme} />} />
-          <Route path="/map/johto/:zoneId"    element={<RegionMap region="johto"  theme={theme} onTheme={setTheme} />} />
-          {/* Backwards compatibility for old single-region bookmarks. The
-              literal /map/sinnoh and /map/johto routes are matched first
-              (Router 7 ranks literals above dynamic params), so /map/:zoneId
-              here only catches numeric zone ids from the pre-Johto URL scheme.
-              We render Sinnoh directly (component reads zoneId from useParams,
-              not from any region-aware path) — the user's URL stays /map/XXXX
-              until they click a zone, at which point internal links push them
-              onto the new /map/sinnoh/XXXX scheme. */}
-          <Route path="/map"             element={<Navigate to="/map/sinnoh" replace />} />
-          <Route path="/map/:zoneId"     element={<RegionMap region="sinnoh" theme={theme} onTheme={setTheme} />} />
-          {/* Old URLs kept working for bookmarks. Search merged into Pokédex,
-              so /search and /moves both land on the Pokédex now. */}
-          <Route path="/search" element={<Navigate to="/" replace />} />
-          <Route path="/moves"  element={<Navigate to="/" replace />} />
-          <Route path="*"       element={<Navigate to="/" replace />} />
-        </Routes>
+        <Suspense fallback={
+          <div className="max-w-7xl mx-auto px-4 py-16 text-center text-sm text-stone-500 dark:text-stone-400">
+            Loading…
+          </div>
+        }>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Pokedex
+                  data={data}
+                  state={pokedexState}
+                  setState={setPokedexState}
+                  view={view} onView={setView}
+                  theme={theme} onTheme={setTheme}
+                  onSelect={handleSelect}
+                />
+              }
+            />
+            <Route
+              path="/locations"
+              element={
+                <Locations
+                  data={data}
+                  state={locationsState}
+                  setState={setLocationsState}
+                  theme={theme} onTheme={setTheme}
+                />
+              }
+            />
+            <Route
+              path="/locations/:region/:location"
+              element={<LocationDetail data={data} onSelect={handleSelect} />}
+            />
+            <Route
+              path="/tracker"
+              element={
+                <Tracker
+                  data={data}
+                  trackerState={trackerState}
+                  setMonState={setMonState}
+                  setManyMonStates={setManyMonStates}
+                  mergeTrackerState={mergeTrackerState}
+                  view={trackerView}
+                  setView={setTrackerView}
+                  theme={theme} onTheme={setTheme}
+                  onSelect={handleSelect}
+                />
+              }
+            />
+            <Route
+              path="/catch"
+              element={
+                <CatchCalc
+                  data={data}
+                  theme={theme} onTheme={setTheme}
+                />
+              }
+            />
+            <Route
+              path="/breeding"
+              element={
+                <BreedingPlanner
+                  data={data}
+                  theme={theme} onTheme={setTheme}
+                  onSelect={handleSelect}
+                />
+              }
+            />
+            {/* Region interactive maps. One <RegionMap> component drives both
+                regions — the `region` prop selects which data folder it reads
+                and how it builds internal links. Each region gets two routes:
+                the overworld view and a zone-detail view. */}
+            <Route path="/map/sinnoh"           element={<RegionMap region="sinnoh" theme={theme} onTheme={setTheme} />} />
+            <Route path="/map/sinnoh/:zoneId"   element={<RegionMap region="sinnoh" theme={theme} onTheme={setTheme} />} />
+            <Route path="/map/johto"            element={<RegionMap region="johto"  theme={theme} onTheme={setTheme} />} />
+            <Route path="/map/johto/:zoneId"    element={<RegionMap region="johto"  theme={theme} onTheme={setTheme} />} />
+            {/* Backwards compatibility for old single-region bookmarks. The
+                literal /map/sinnoh and /map/johto routes are matched first
+                (Router 7 ranks literals above dynamic params), so /map/:zoneId
+                here only catches numeric zone ids from the pre-Johto URL scheme. */}
+            <Route path="/map"             element={<Navigate to="/map/sinnoh" replace />} />
+            <Route path="/map/:zoneId"     element={<RegionMap region="sinnoh" theme={theme} onTheme={setTheme} />} />
+            {/* Old URLs kept working for bookmarks. Search merged into Pokédex,
+                so /search and /moves both land on the Pokédex now. */}
+            <Route path="/search" element={<Navigate to="/" replace />} />
+            <Route path="/moves"  element={<Navigate to="/" replace />} />
+            <Route path="*"       element={<Navigate to="/" replace />} />
+          </Routes>
+        </Suspense>
 
         <PokemonModal
           pokemon={selected}
