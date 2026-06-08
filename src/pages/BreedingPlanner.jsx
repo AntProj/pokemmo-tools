@@ -10,29 +10,18 @@ import {
 import {
   planBreeding, matchInventory, ROLE_LABELS, ROLE_TIERS_FOR_SPECIES, TIER_LABELS,
 } from '../lib/breeding/optimizer.js';
-import { ChevronRight, ChevronDown, GitFork } from 'lucide-react';
+import {
+  loadBox, saveBox, blankBoxMon, boxToJSON, boxFromJSON, mergeMons, perfectCount,
+} from '../lib/breeding/box.js';
+import { ChevronRight, ChevronDown, GitFork, Download, Upload } from 'lucide-react';
 
 const SUB_TABS = [
   { key: 'plan',    label: 'IV Plan' },
   { key: 'costs',   label: 'Costs'   },
-  { key: 'have',    label: 'Owned'   },
+  { key: 'box',     label: 'Box'     },
   { key: 'profit',  label: 'Profit'  },
   { key: 'saved',   label: 'Saved'   },
 ];
-
-// A blank owned-breeder row for the "Owned" tab. The species (monId) drives
-// role + gender; `gender` here is only used for mixed-gender species.
-function blankBreeder() {
-  return {
-    id: 'b_' + Math.random().toString(36).slice(2, 9),
-    monId: null,
-    ivs: { hp: false, atk: false, def: false, spa: false, spd: false, spe: false },
-    gender: 'F',     // only consulted for mixed-gender species
-    nature: false,
-    shiny: false,
-    alpha: false,
-  };
-}
 
 const LS_PROJECTS_V2 = 'breeding_projects:v2';
 const LS_PROJECTS_V1 = 'breeding_projects:v1';
@@ -142,12 +131,15 @@ export default function BreedingPlanner({ data, theme, onTheme }) {
     }));
   }, []);
 
-  // Owned-breeder inventory handlers ("I Have" tab).
-  const addBreeder    = useCallback(() => setForm((f) => ({ ...f, inventory: [...(f.inventory || []), blankBreeder()] })), []);
-  const removeBreeder = useCallback((id) => setForm((f) => ({ ...f, inventory: (f.inventory || []).filter((b) => b.id !== id) })), []);
-  const updateBreeder = useCallback((id, patch) => setForm((f) => ({
-    ...f, inventory: (f.inventory || []).map((b) => (b.id === id ? { ...b, ...patch } : b)),
-  })), []);
+  // The Box — a persistent, target-independent collection (its own localStorage
+  // store, not tied to a project). The matcher pulls compatible mons from here.
+  const [box, setBox] = useState(loadBox);
+  useEffect(() => { saveBox(box); }, [box]);
+  const addBoxMon    = useCallback(() => setBox((b) => ({ ...b, mons: [...b.mons, { ...blankBoxMon(), addedAt: new Date().toISOString() }] })), []);
+  const removeBoxMon = useCallback((id) => setBox((b) => ({ ...b, mons: b.mons.filter((m) => m.id !== id) })), []);
+  const updateBoxMon = useCallback((id, patch) => setBox((b) => ({ ...b, mons: b.mons.map((m) => (m.id === id ? { ...m, ...patch } : m)) })), []);
+  const importBoxMons = useCallback((incoming) => setBox((b) => ({ ...b, mons: mergeMons(b.mons, incoming.map((m) => ({ ...m, source: 'import' }))) })), []);
+  const clearBox      = useCallback(() => setBox((b) => ({ ...b, mons: [] })), []);
 
   // Run optimizer.
   const planResult = useMemo(() => planBreeding({
@@ -485,7 +477,7 @@ export default function BreedingPlanner({ data, theme, onTheme }) {
         <section className="min-w-0">
           {tab === 'plan'   && <IVPlanTab target={target} plan={planResult} form={form} setOverride={setOverride} onSave={saveProject} eggMoveNames={selectedEggMoveNames} hiddenAbility={form.hiddenAbility ? hiddenAbility : null} shiny={form.shiny} alpha={form.alpha} />}
           {tab === 'costs'  && <CostsTab plan={planResult} target={target} form={form} />}
-          {tab === 'have'   && <HaveTab data={data} plan={planResult} target={target} breederPokemon={breederPokemon} inventory={form.inventory || []} shiny={form.shiny} alpha={form.alpha} onAdd={addBreeder} onRemove={removeBreeder} onUpdate={updateBreeder} />}
+          {tab === 'box'    && <BoxTab data={data} plan={planResult} target={target} breederPokemon={breederPokemon} box={box} targetNature={form.nature} shiny={form.shiny} alpha={form.alpha} onAdd={addBoxMon} onRemove={removeBoxMon} onUpdate={updateBoxMon} onImport={importBoxMons} onClear={clearBox} />}
           {tab === 'profit' && <ProfitTab plan={planResult} salePrice={salePrice} setSalePrice={setSalePrice} />}
           {tab === 'saved'  && <SavedProjectsTab data={data} projects={projects} onOpen={openProject} onDuplicate={duplicateProject} onDelete={deleteProject} />}
         </section>
@@ -1678,90 +1670,129 @@ function breederCompat(species, target) {
   return { role, gender: null, usable: true };
 }
 
-function HaveTab({ data, plan, target, breederPokemon, inventory, shiny, alpha, onAdd, onRemove, onUpdate }) {
-  if (!target) return <Empty msg="Pick a target species on the IV Plan tab first." />;
-  if (!plan)   return <Empty msg="Target at least one IV first — there's nothing to match against yet." />;
-
+function BoxTab({ data, plan, target, breederPokemon, box, targetNature, shiny, alpha, onAdd, onRemove, onUpdate, onImport, onClear }) {
+  const mons = box.mons;
   const byId = useMemo(() => new Map(data.pokemon.map((p) => [p.id, p])), [data.pokemon]);
+  const fileRef = useRef(null);
+  const hasTarget = !!(target && plan);
 
-  // Evaluate each owned breeder against the target: species compatibility, then
-  // the shiny/alpha gate. Only usable ones go to the matcher.
-  const evals = useMemo(() => inventory.map((b) => {
-    const species = b.monId != null ? byId.get(b.monId) : null;
+  // Evaluate each Box mon against the current target: species compatibility, the
+  // shiny/alpha gate, and which of its IVs are a perfect 31. Usable mons with at
+  // least one 31 become matcher breeders. With no target the Box stays fully
+  // manageable — we just skip the matching pass.
+  const evals = useMemo(() => mons.map((m) => {
+    const species = m.species != null ? byId.get(m.species) : null;
+    if (!hasTarget) return { m, species, usable: false, matcher: null, reason: null };
     const compat = breederCompat(species, target);
     let usable = compat.usable;
     let reason = compat.error || null;
     if (usable) {
-      if (shiny && !b.shiny)        { usable = false; reason = 'Target is shiny — only shiny breeders qualify (shinies only breed with shinies).'; }
-      else if (!shiny && b.shiny)   { usable = false; reason = 'This is shiny but the target isn’t — shinies only breed with shinies.'; }
-      else if (alpha && !b.alpha)   { usable = false; reason = 'Target is Alpha — both parents of every breed must be Alpha.'; }
+      if (shiny && !m.shiny)        { usable = false; reason = 'Target is shiny — only shiny breeders qualify (shinies only breed with shinies).'; }
+      else if (!shiny && m.shiny)   { usable = false; reason = 'This is shiny but the target isn’t — shinies only breed with shinies.'; }
+      else if (alpha && !m.alpha)   { usable = false; reason = 'Target is Alpha — both parents of every breed must be Alpha.'; }
     }
-    const gender = compat.gender ?? b.gender; // mixed species use the chosen ♀/♂
-    const matcher = usable ? { id: b.id, ivs: IV_KEYS.filter((k) => b.ivs[k]), gender, role: compat.role, nature: !!b.nature } : null;
-    return { b, species, compat, usable, reason, warn: compat.warn, matcher };
-  }), [inventory, byId, target, shiny, alpha]);
+    const ivs = IV_KEYS.filter((k) => m.ivs[k] === 31);
+    const gender = compat.gender ?? m.gender; // mixed species use the chosen ♀/♂
+    // A 0×31 mon can't reduce cost (every node it could claim is already free),
+    // so only mons with at least one perfect IV go to the matcher.
+    const matcher = usable && ivs.length > 0
+      ? { id: m.id, ivs, gender, role: compat.role, nature: !!(targetNature && m.nature && m.nature === targetNature) }
+      : null;
+    return { m, species, compat, usable, reason, warn: compat.warn, matcher };
+  }), [mons, byId, hasTarget, target, shiny, alpha, targetNature]);
 
   const matched = useMemo(
-    () => matchInventory(plan.node, evals.filter((e) => e.usable).map((e) => e.matcher)),
-    [plan.node, evals]
+    () => (hasTarget ? matchInventory(plan.node, evals.filter((e) => e.matcher).map((e) => e.matcher)) : null),
+    [hasTarget, plan, evals]
   );
-  const matchedIds = useMemo(() => new Set(matched.matches.map((m) => m.breeder.id)), [matched]);
+  const matchedIds = useMemo(() => new Set(matched ? matched.matches.map((mm) => mm.breeder.id) : []), [matched]);
   const remaining = useMemo(
-    () => [...aggregateLeaves(matched.node).values()].sort((a, b) => (b.count * b.cost) - (a.count * a.cost)),
-    [matched.node]
+    () => (matched ? [...aggregateLeaves(matched.node).values()].sort((a, b) => (b.count * b.cost) - (a.count * a.cost)) : []),
+    [matched]
   );
   const remainingTotal = remaining.reduce((s, g) => s + g.count * g.cost, 0);
+  const notUsed = hasTarget
+    ? evals.filter((e) => !matchedIds.has(e.m.id))
+        .map((e) => ({ e, reason: e.usable ? (e.matcher ? "didn't fit any node in this plan" : 'has no perfect (31) IV to pass') : (e.reason || 'unusable') }))
+    : [];
 
-  // Breeders that contributed nothing — either unusable, or usable but no node
-  // fit — each with a human reason.
-  const notUsed = evals
-    .filter((e) => !matchedIds.has(e.b.id))
-    .map((e) => ({ e, reason: e.usable ? "didn't fit any node in this plan" : (e.reason || 'unusable') }));
+  const doExport = () => downloadText(boxToJSON(box), 'pokemmo-box.json');
+  const doImportFile = (file) => {
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      const { mons: parsed, error } = boxFromJSON(String(reader.result || ''));
+      if (error || !parsed) { window.alert(error || 'Import failed.'); return; }
+      onImport(parsed);
+    };
+    reader.readAsText(file);
+  };
+
+  const btn = 'inline-flex items-center gap-1 px-2 py-0.5 rounded border border-[#d6c8a3] dark:border-stone-700 bg-[#fdf8e9] dark:bg-stone-900 hover:bg-[#ece2c4] dark:hover:bg-stone-800 text-xs disabled:opacity-40 disabled:cursor-not-allowed';
 
   return (
     <div className="space-y-3">
       <div className="text-xs text-stone-500 dark:text-stone-400">
-        List breeders you already own — pick each one's species so the planner knows its egg group, gender, and quirks.
-        It then claims each against the most expensive matching node and prunes that branch.
+        Your Box is a saved collection of the mons you own — it persists across plans and is independent of any target.
+        {hasTarget
+          ? ' Below, the planner claims each compatible mon against the most expensive matching node and prunes that branch.'
+          : ' Pick a target on the IV Plan tab to see how your Box cuts that plan’s cost.'}
       </div>
 
       <FormCard
-        title={`Your breeders (${inventory.length})`}
+        title={`Box (${mons.length})`}
         action={
-          <button type="button" onClick={onAdd}
-            className="inline-flex items-center gap-1 px-2 py-0.5 rounded border border-[#d6c8a3] dark:border-stone-700 bg-[#fdf8e9] dark:bg-stone-900 hover:bg-[#ece2c4] dark:hover:bg-stone-800 text-xs">
-            + Add breeder
-          </button>
+          <div className="flex items-center gap-1">
+            <button type="button" onClick={() => fileRef.current?.click()} className={btn} title="Import a Box JSON export (merges; skips duplicates)">
+              <Upload size={12} /> Import
+            </button>
+            <button type="button" onClick={doExport} disabled={mons.length === 0} className={btn} title="Download your Box as JSON">
+              <Download size={12} /> Export
+            </button>
+            <button type="button" onClick={onAdd} className={btn} title="Add a mon">+ Add</button>
+            <input ref={fileRef} type="file" accept="application/json,.json" className="hidden"
+              onChange={(e) => { doImportFile(e.target.files?.[0]); e.target.value = ''; }} />
+          </div>
         }
       >
-        {inventory.length === 0 ? (
-          <div className="text-sm text-stone-500 dark:text-stone-400 py-2">No breeders yet. Add the ones in your box to see what they save.</div>
+        {mons.length === 0 ? (
+          <div className="text-sm text-stone-500 dark:text-stone-400 py-2">
+            Your Box is empty. Add the mons you own — or import a Box JSON — to see what they save on a plan.
+          </div>
         ) : (
           <div className="space-y-2">
             {evals.map((e) => (
-              <BreederRow key={e.b.id} b={e.b} breederPokemon={breederPokemon} info={e} onRemove={onRemove} onUpdate={onUpdate} />
+              <BoxMonRow key={e.m.id} m={e.m} species={e.species} breederPokemon={breederPokemon}
+                info={hasTarget ? e : null} onRemove={onRemove} onUpdate={onUpdate} />
             ))}
+            {mons.length > 1 && (
+              <div className="pt-1">
+                <button type="button" onClick={onClear} className="text-[11px] text-stone-400 hover:text-red-600 dark:hover:text-red-400">
+                  Clear Box
+                </button>
+              </div>
+            )}
           </div>
         )}
       </FormCard>
 
-      {inventory.length > 0 && (
+      {hasTarget && mons.length > 0 && (
         <>
           <div className="grid grid-cols-3 gap-2">
             <Stat label="Base cost" value={plan.totalCost} />
-            <Stat label="With your breeders" value={matched.node.cost} accent />
+            <Stat label="With your Box" value={matched.node.cost} accent />
             <Stat label="Saved" value={matched.savings} good />
           </div>
 
           {matched.matches.length > 0 && (
-            <FormCard title={`Matched (${matched.matches.length})`}>
+            <FormCard title={`Used from your Box (${matched.matches.length})`}>
               <ul className="text-sm divide-y divide-[#ece2c4] dark:divide-stone-800/60">
                 {matched.matches.map((m, i) => {
-                  const sp = byId.get(m.breeder.id ? (inventory.find((x) => x.id === m.breeder.id)?.monId) : null);
+                  const sp = byId.get(m.breeder.id ? (mons.find((x) => x.id === m.breeder.id)?.species) : null);
                   return (
                     <li key={i} className="flex items-baseline gap-2 py-1">
                       <span className="flex-1 min-w-0">
-                        {sp ? sp.name : SPECIES_TXT(m.species)} · {m.ivs.length}×31 {m.gender === 'F' ? '♀' : m.gender === 'M' ? '♂' : m.gender === 'D' ? '' : ''}
+                        {sp ? sp.name : SPECIES_TXT(m.species)} · {m.ivs.length}×31 {m.gender === 'F' ? '♀' : m.gender === 'M' ? '♂' : ''}
                         {m.ivs.length > 0 && <span className="text-stone-500 dark:text-stone-400"> ({formatIVList(m.ivs)})</span>}
                       </span>
                       <span className="font-mono tabular-nums text-emerald-600 dark:text-emerald-400">−${formatMoney(m.saved)}</span>
@@ -1777,7 +1808,7 @@ function HaveTab({ data, plan, target, breederPokemon, inventory, shiny, alpha, 
               <ul className="text-xs space-y-1">
                 {notUsed.map(({ e, reason }, i) => (
                   <li key={i} className="flex items-baseline gap-2">
-                    <span className="text-stone-700 dark:text-stone-300 shrink-0">{e.species ? e.species.name : 'Breeder'}</span>
+                    <span className="text-stone-700 dark:text-stone-300 shrink-0">{e.species ? e.species.name : 'Mon'}</span>
                     <span className="text-amber-700 dark:text-amber-400">{reason}</span>
                   </li>
                 ))}
@@ -1787,7 +1818,7 @@ function HaveTab({ data, plan, target, breederPokemon, inventory, shiny, alpha, 
 
           <FormCard title="Still to acquire">
             {remaining.length === 0 ? (
-              <div className="text-sm text-emerald-700 dark:text-emerald-400 py-1">Nothing — your breeders cover the whole tree! 🎉</div>
+              <div className="text-sm text-emerald-700 dark:text-emerald-400 py-1">Nothing — your Box covers the whole tree! 🎉</div>
             ) : (
               <>
                 <ul className="text-sm divide-y divide-[#ece2c4] dark:divide-stone-800/60">
@@ -1815,6 +1846,44 @@ function HaveTab({ data, plan, target, breederPokemon, inventory, shiny, alpha, 
   );
 }
 
+// Download a string as a file (Box JSON export). Browser-only.
+function downloadText(text, filename) {
+  const blob = new Blob([text], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// A single 0–31 IV input. Perfect 31s are tinted green — both the in-game cue
+// and the signal the capture/OCR flow keys on.
+function IVValueInput({ label, value, onChange }) {
+  const perfect = value === 31;
+  return (
+    <label className="flex flex-col items-center gap-0.5 min-w-0">
+      <span className="text-[9px] uppercase tracking-wide text-stone-500 dark:text-stone-400">{label}</span>
+      <input
+        type="number" min="0" max="31" inputMode="numeric"
+        value={value}
+        onChange={(e) => {
+          let n = Math.round(Number(e.target.value));
+          if (!Number.isFinite(n)) n = 0;
+          onChange(Math.min(31, Math.max(0, n)));
+        }}
+        className={`w-full px-1 py-1 rounded border text-center text-sm tabular-nums focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+          perfect
+            ? 'bg-emerald-500 text-white border-emerald-600 font-bold'
+            : 'bg-[#fdf8e9] dark:bg-stone-900 text-stone-800 dark:text-stone-200 border-[#d6c8a3] dark:border-stone-700'
+        }`}
+      />
+    </label>
+  );
+}
+
 function SPECIES_TXT(s) {
   return s === 'target' ? 'target' : s === 'group' ? 'egg-group' : s === 'ditto' ? '' : s;
 }
@@ -1828,50 +1897,53 @@ function Stat({ label, value, accent, good }) {
   );
 }
 
-function BreederRow({ b, breederPokemon, info, onRemove, onUpdate }) {
-  const compat = info.compat;
-  const isMixed = compat.gender == null && info.species && info.species.id !== 132; // show ♀/♂ toggle
-  const fixedGenderLabel = !info.species ? null
-    : compat.gender === 'D' ? 'Ditto'
-    : compat.gender === 'N' ? 'Genderless'
-    : compat.gender === 'F' ? '♀ (female-only)'
-    : compat.gender === 'M' ? '♂ (male-only)'
-    : null;
+function BoxMonRow({ m, species, breederPokemon, info, onRemove, onUpdate }) {
+  // Gender UI is derived from the species itself, so the row works with or
+  // without a target selected.
+  const cat = species ? (species.id === 132 ? 'ditto' : genderRatioCategory(species)) : null;
+  const isMixed = cat === 'mixed';
+  const fixedGenderLabel =
+    cat === 'ditto'        ? 'Ditto' :
+    cat === 'genderless'   ? 'Genderless' :
+    cat === 'female-only'  ? '♀ female-only' :
+    cat === 'male-only'    ? '♂ male-only' : null;
+  const unusable = info && !info.usable;
+  const nPerfect = perfectCount(m);
 
   return (
-    <div className={`rounded-md border p-2 space-y-2 ${info.usable ? 'border-[#e6dabf] dark:border-stone-800 bg-[#f1e9d2] dark:bg-stone-950/40' : 'border-amber-300 dark:border-amber-900/60 bg-amber-50/50 dark:bg-amber-950/20'}`}>
+    <div className={`rounded-md border p-2 space-y-2 ${unusable ? 'border-amber-300 dark:border-amber-900/60 bg-amber-50/50 dark:bg-amber-950/20' : 'border-[#e6dabf] dark:border-stone-800 bg-[#f1e9d2] dark:bg-stone-950/40'}`}>
       <div className="flex items-start gap-2">
         <div className="flex-1 min-w-0">
           <PokemonPicker
             pokemon={breederPokemon}
-            value={b.monId}
-            onChange={(id) => onUpdate(b.id, { monId: id })}
-            placeholder="Pick this breeder's species"
+            value={m.species}
+            onChange={(id) => onUpdate(m.id, { species: id })}
+            placeholder="Pick this mon's species"
           />
         </div>
-        <button type="button" onClick={() => onRemove(b.id)}
+        <button type="button" onClick={() => onRemove(m.id)}
           className="p-1 rounded text-stone-400 hover:text-red-600 dark:hover:text-red-400 shrink-0" title="Remove">
           <Trash2 size={14} />
         </button>
       </div>
 
-      <div className="flex flex-wrap gap-1">
+      {/* Real 0–31 IV values (perfect 31s tint green) */}
+      <div className="grid grid-cols-6 gap-1">
         {IV_KEYS.map((k) => (
-          <button key={k} type="button"
-            onClick={() => onUpdate(b.id, { ivs: { ...b.ivs, [k]: !b.ivs[k] } })}
-            aria-pressed={b.ivs[k]}
-            className={`px-1.5 py-0.5 rounded text-[10px] font-semibold uppercase border transition-colors ${
-              b.ivs[k] ? 'bg-emerald-500 text-white border-emerald-600' : 'bg-[#fdf8e9] dark:bg-stone-900 text-stone-500 dark:text-stone-400 border-[#d6c8a3] dark:border-stone-700'
-            }`}>{IV_LABELS[k]}</button>
+          <IVValueInput key={k} label={IV_LABELS[k]} value={m.ivs[k]}
+            onChange={(v) => onUpdate(m.id, { ivs: { ...m.ivs, [k]: v } })} />
         ))}
+      </div>
+      <div className="text-[10px] text-stone-500 dark:text-stone-400">
+        {nPerfect}×31{m.source === 'capture' ? ' · captured' : m.source === 'import' ? ' · imported' : ''}
       </div>
 
       <div className="flex flex-wrap items-center gap-2 text-xs">
         {isMixed ? (
           <div className="inline-flex rounded border border-[#d6c8a3] dark:border-stone-700 overflow-hidden">
             {['F', 'M'].map((g) => (
-              <button key={g} type="button" onClick={() => onUpdate(b.id, { gender: g })}
-                className={`px-2 py-0.5 ${b.gender === g ? 'bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900' : 'text-stone-600 dark:text-stone-400'}`}>
+              <button key={g} type="button" onClick={() => onUpdate(m.id, { gender: g })}
+                className={`px-2 py-0.5 ${m.gender === g ? 'bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900' : 'text-stone-600 dark:text-stone-400'}`}>
                 {g === 'F' ? '♀' : '♂'}
               </button>
             ))}
@@ -1879,21 +1951,26 @@ function BreederRow({ b, breederPokemon, info, onRemove, onUpdate }) {
         ) : fixedGenderLabel ? (
           <span className="text-stone-500 dark:text-stone-400">{fixedGenderLabel}</span>
         ) : null}
+        <select
+          value={m.nature}
+          onChange={(e) => onUpdate(m.id, { nature: e.target.value })}
+          className="px-1.5 py-0.5 rounded border border-[#d6c8a3] dark:border-stone-700 bg-[#fdf8e9] dark:bg-stone-900 text-stone-700 dark:text-stone-300 text-xs focus:outline-none focus:ring-2 focus:ring-blue-500"
+          title="Nature"
+        >
+          <option value="">Nature —</option>
+          {NATURE_NAMES.map((n) => <option key={n} value={n}>{n}</option>)}
+        </select>
         <label className="inline-flex items-center gap-1 text-stone-700 dark:text-stone-300 cursor-pointer">
-          <input type="checkbox" checked={b.nature} onChange={(e) => onUpdate(b.id, { nature: e.target.checked })} className="accent-blue-500" />
-          nature
-        </label>
-        <label className="inline-flex items-center gap-1 text-stone-700 dark:text-stone-300 cursor-pointer">
-          <input type="checkbox" checked={b.shiny} onChange={(e) => onUpdate(b.id, { shiny: e.target.checked })} className="accent-yellow-500" />
+          <input type="checkbox" checked={m.shiny} onChange={(e) => onUpdate(m.id, { shiny: e.target.checked })} className="accent-yellow-500" />
           shiny
         </label>
         <label className="inline-flex items-center gap-1 text-stone-700 dark:text-stone-300 cursor-pointer">
-          <input type="checkbox" checked={b.alpha} onChange={(e) => onUpdate(b.id, { alpha: e.target.checked })} className="accent-red-500" />
+          <input type="checkbox" checked={m.alpha} onChange={(e) => onUpdate(m.id, { alpha: e.target.checked })} className="accent-red-500" />
           alpha
         </label>
       </div>
 
-      {(info.reason || info.warn) && (
+      {info && (info.reason || info.warn) && (
         <div className={`text-[11px] ${info.usable ? 'text-amber-700 dark:text-amber-400' : 'text-red-600 dark:text-red-400'}`}>
           {info.reason || info.warn}
         </div>
