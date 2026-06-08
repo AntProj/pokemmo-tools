@@ -18,9 +18,10 @@ use windows::Win32::Graphics::Gdi::{
     GetWindowDC, ReleaseDC, SelectObject, BITMAPINFO, BITMAPINFOHEADER, BI_RGB, DIB_RGB_COLORS,
     SRCCOPY,
 };
-// PrintWindow + its flags live in the Xps module in windows-rs (not
-// WindowsAndMessaging), behind the Win32_Storage_Xps feature.
-use windows::Win32::Storage::Xps::{PrintWindow, PW_RENDERFULLCONTENT};
+// PrintWindow + its flags type live in the Xps module in windows-rs (not
+// WindowsAndMessaging), behind the Win32_Storage_Xps feature. The named
+// PW_* constants aren't always generated, so we build the flag value directly.
+use windows::Win32::Storage::Xps::{PrintWindow, PRINT_WINDOW_FLAGS};
 use windows::Win32::UI::WindowsAndMessaging::{
     EnumWindows, GetWindowRect, GetWindowTextLengthW, GetWindowTextW, IsWindowVisible,
 };
@@ -84,8 +85,9 @@ pub fn capture_window_png(hwnd_raw: isize) -> WinResult<(Vec<u8>, u32, u32)> {
         let hbm = CreateCompatibleBitmap(hdc_window, width, height);
         let old = SelectObject(hdc_mem, hbm);
 
-        // PW_RENDERFULLCONTENT — captures DWM/DirectComposition content.
-        let printed = PrintWindow(hwnd, hdc_mem, PW_RENDERFULLCONTENT);
+        // PRINT_WINDOW_FLAGS(2) == PW_RENDERFULLCONTENT — captures
+        // DWM/DirectComposition content.
+        let printed = PrintWindow(hwnd, hdc_mem, PRINT_WINDOW_FLAGS(2));
         if !printed.as_bool() {
             // Fallback: straight blit of the window DC.
             let _ = BitBlt(hdc_mem, 0, 0, width, height, hdc_window, 0, 0, SRCCOPY);
