@@ -1144,28 +1144,36 @@ function flattenSteps(root, includeBreedUps = false) {
 function CostsTab({ plan, target, form }) {
   if (!plan) return <Empty msg="Build a plan first on the IV Plan tab." />;
   const steps = flattenSteps(plan.node, /*includeBreedUps=*/true);
-  const leaves = collectLeaves(plan.node);
+  const leafGroups = [...aggregateLeaves(plan.node).values()]
+    .sort((a, b) => (b.count * b.cost) - (a.count * a.cost) || a.ivs.length - b.ivs.length);
+  const leafTotal = leafGroups.reduce((s, g) => s + g.count * g.cost, 0);
+  const leafCount = leafGroups.reduce((s, g) => s + g.count, 0);
   const items  = plan.counts;
   return (
     <div className="space-y-3">
-      <FormCard title="Shopping list — 1×31 parents to acquire">
+      <FormCard title={`Shopping list — ${leafCount} parent${leafCount === 1 ? '' : 's'} to acquire`}>
         <ul className="text-sm divide-y divide-[#ece2c4] dark:divide-stone-800/60">
-          {leaves.map((l, i) => {
-            const ivs = l.ivs || [];
-            const ivCount = ivs.length;
-            const role = ROLE_LABELS[l.role] || 'Carrier';
+          {leafGroups.map((g, i) => {
+            const ivCount = g.ivs.length;
+            const role = ROLE_LABELS[g.role] || 'Carrier';
             return (
-              <li key={l.id + ':' + i} className="flex items-baseline gap-3 py-1">
-                <span className="flex-1">
-                  {role} · {ivCount}×31{l.gender === 'F' ? ' ♀' : l.gender === 'M' ? ' ♂' : ''}
-                  {ivCount > 0 && <span className="text-stone-500 dark:text-stone-400"> ({formatIVList(ivs)})</span>}
-                  {l.overridden && <span className="ml-1 px-1 py-px rounded bg-amber-100 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 text-[9px] uppercase tracking-wider">Overridden</span>}
+              <li key={i} className="flex items-baseline gap-2 py-1">
+                <span className="font-mono tabular-nums font-semibold text-stone-900 dark:text-stone-100 w-8 shrink-0">{g.count}×</span>
+                <span className="flex-1 min-w-0">
+                  {role} · {ivCount}×31{g.gender === 'F' ? ' ♀' : g.gender === 'M' ? ' ♂' : ''}
+                  {ivCount > 0 && <span className="text-stone-500 dark:text-stone-400"> ({formatIVList(g.ivs)})</span>}
+                  {g.overridden && <span className="ml-1 px-1 py-px rounded bg-amber-100 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 text-[9px] uppercase tracking-wider">Overridden</span>}
                 </span>
-                <span className="font-mono tabular-nums text-stone-700 dark:text-stone-300">${formatMoney(l.cost)}</span>
+                <span className="text-xs text-stone-400 dark:text-stone-500 tabular-nums hidden sm:inline">${formatMoney(g.cost)} ea</span>
+                <span className="font-mono tabular-nums text-stone-700 dark:text-stone-300 w-20 text-right">${formatMoney(g.count * g.cost)}</span>
               </li>
             );
           })}
         </ul>
+        <div className="mt-2 pt-2 border-t border-[#ece2c4] dark:border-stone-800/60 flex items-baseline justify-between text-sm">
+          <span className="text-stone-500 dark:text-stone-400">Parents subtotal</span>
+          <span className="font-mono tabular-nums font-semibold text-stone-900 dark:text-stone-100">${formatMoney(leafTotal)}</span>
+        </div>
       </FormCard>
 
       <FormCard title="Consumables">
@@ -1226,15 +1234,24 @@ function Row({ label, value }) {
   );
 }
 
-function collectLeaves(node, out = [], seen = new Set()) {
-  if (!node) return out;
+// Aggregate the leaf carriers you must ACQUIRE (cost > 0) into a shopping
+// list — identical buys (same role / IV set / gender / price) collapse into
+// one row with a count, instead of one row per breed-tree occurrence.
+function aggregateLeaves(node, map = new Map()) {
+  if (!node) return map;
   if (node.kind === 'leaf') {
-    if (node.cost > 0 && !seen.has(node.id)) { seen.add(node.id); out.push(node); }
-    return out;
+    if (node.cost > 0) {
+      const ivs = node.ivs || [];
+      const key = `${node.role}|${ivs.join(',')}|${node.gender}|${node.cost}|${node.overridden ? 1 : 0}`;
+      const e = map.get(key);
+      if (e) e.count += 1;
+      else map.set(key, { count: 1, role: node.role, ivs, gender: node.gender, cost: node.cost, overridden: node.overridden });
+    }
+    return map;
   }
-  collectLeaves(node.left,  out, seen);
-  collectLeaves(node.right, out, seen);
-  return out;
+  aggregateLeaves(node.left, map);
+  aggregateLeaves(node.right, map);
+  return map;
 }
 
 /* ─────────────── Profit tab ─────────────── */

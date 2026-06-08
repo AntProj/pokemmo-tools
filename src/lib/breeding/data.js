@@ -144,11 +144,14 @@ export const DEFAULT_BASE_PRICES = {
 // Egg fee — uses the species gender ratio bracket and the requested child gender.
 //
 // Brackets:
-//   r=31  → 1F:7M (female rare)  → male $5k, female $21k
+//   r=31  → 1F:7M (female rare)  → male $5k, female $25k
 //   r=63  → 1F:3M (female rare)  → male $5k, female $9k
 //   r=127 → 1F:1M (balanced)     → either $5k
 //   r=191 → 3F:1M (male rare)    → male $9k,  female $5k
-//   r=223 → 7F:1M (male rare)    → male $21k, female $5k
+//   r=223 → 7F:1M (male rare)    → male $25k, female $5k
+//
+// Source: PokeMMO wiki — gender-selection fee "ranges from $5,000 (1:1) to
+// $25,000 for the minority gender in a 7:1 ratio." (Power Items $10k each.)
 //
 // Genderless species have no fee. 100%-male/female species can't produce the
 // opposite gender at any price (Infinity).
@@ -171,7 +174,7 @@ export function eggFee(speciesGenderRatio, childGender) {
   else if (speciesGenderRatio === 63 || speciesGenderRatio === 191) bucket = '1:3';
   else bucket = '1:1';
 
-  if (bucket === '1:7') return requestingRare ? 21000 : 5000;
+  if (bucket === '1:7') return requestingRare ? 25000 : 5000;
   if (bucket === '1:3') return requestingRare ? 9000  : 5000;
   return 5000;
 }
