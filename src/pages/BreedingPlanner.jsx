@@ -2,9 +2,6 @@ import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Sun, Moon, RotateCcw, Save, Trash2, Copy, FolderOpen, Info, X, Check, ShoppingCart } from 'lucide-react';
 import PokemonPicker from '../components/PokemonPicker.jsx';
 import PokemonSprite from '../components/PokemonSprite.jsx';
-import TypeBadge from '../components/TypeBadge.jsx';
-import { typeColor } from '../lib/types.js';
-import { dexNum } from '../lib/format.js';
 import {
   IV_KEYS, IV_LABELS, NATURE_NAMES, POWER_ITEM_FOR,
   DEFAULT_PER_STAT_PRICES, DEFAULT_CONSUMABLE_PRICES, DEFAULT_BASE_PRICES,
@@ -522,26 +519,41 @@ function CheckRow({ label, checked, onChange }) {
   );
 }
 
+// Breeding-relevant context for the selected target. The sprite / name / types
+// are already shown in the PokemonPicker trigger above, so this only adds what
+// the picker doesn't: egg group(s) and any gender-ratio caveat that changes how
+// the breed tree is built.
 function SpeciesSummary({ pokemon }) {
-  const primary = typeColor(pokemon.types[0]).bg;
   const cat = genderRatioCategory(pokemon);
-  const note = cat === 'female-only' ? 'Female-only — male slot uses egg-group ♂'
-             : cat === 'male-only'   ? 'Male-only — female slot uses Ditto'
-             : cat === 'genderless'  ? 'Genderless — slots are line members or Ditto'
+  const note = cat === 'female-only' ? 'Female-only — every breed uses an egg-group ♂ as the other parent.'
+             : cat === 'male-only'   ? 'Male-only — the other parent is always Ditto.'
+             : cat === 'genderless'  ? 'Genderless — parents are same-line members or Ditto.'
              : null;
+  const groups = [...new Set(pokemon.egg_groups || [])];
+  if (groups.length === 0 && !note) return null;
   return (
-    <div className="flex items-start gap-2">
-      <div className="relative shrink-0 w-12 h-12 rounded-md overflow-hidden flex items-center justify-center"
-           style={{ background: `radial-gradient(circle at 50% 50%, ${primary}26 0%, ${primary}14 70%, ${primary}0a 100%)` }}>
-        <PokemonSprite pokemon={pokemon} variant="animated" loading="lazy" className="w-11 h-11 object-contain" />
-      </div>
-      <div className="flex-1 min-w-0">
-        <div className="flex items-baseline gap-1.5"><span className="font-mono text-[11px] text-stone-500">{dexNum(pokemon.id)}</span><span className="font-semibold text-stone-900 dark:text-stone-100">{pokemon.name}</span></div>
-        <div className="mt-0.5 flex flex-wrap gap-1">{[...new Set(pokemon.types)].map((t) => <TypeBadge key={t} type={t} />)}</div>
-        {note && <div className="mt-1 text-[11px] text-amber-700 dark:text-amber-400">⚠ {note}</div>}
-      </div>
+    <div className="mt-2 pt-2 border-t border-[#ece2c4] dark:border-stone-800/60 space-y-1.5 text-[11px]">
+      {groups.length > 0 && (
+        <div className="flex items-center gap-1.5 flex-wrap">
+          <span className="uppercase tracking-wider text-[10px] text-stone-500 dark:text-stone-500">Egg group</span>
+          {groups.map((g) => (
+            <span key={g} className="px-1.5 py-px rounded bg-[#ece2c4] dark:bg-stone-800 text-stone-700 dark:text-stone-300">{eggGroupLabel(g)}</span>
+          ))}
+        </div>
+      )}
+      {note && <div className="text-amber-700 dark:text-amber-400">⚠ {note}</div>}
     </div>
   );
+}
+
+// "water1" → "Water 1", "human-like" → "Human Like".
+function eggGroupLabel(g) {
+  return String(g)
+    .replace(/(\d+)/, ' $1')
+    .split(/[-_ ]+/)
+    .filter(Boolean)
+    .map((w) => w[0].toUpperCase() + w.slice(1))
+    .join(' ');
 }
 
 const PerStatPriceTable = memo(function PerStatPriceTable({ stats, tiers, prices, basePrices, onChange, onChangeBase, onReset }) {
@@ -562,39 +574,25 @@ const PerStatPriceTable = memo(function PerStatPriceTable({ stats, tiers, prices
         </button>
       }
     >
-      {/* Horizontal scroll so each price box stays comfortably wide instead of
-          being crushed to fit 5–6 tier columns into the sidebar. */}
-      <div className="overflow-x-auto -mx-1 px-1">
-        <table className="text-xs border-separate" style={{ borderSpacing: '4px 4px' }}>
-          <thead className="text-stone-500 dark:text-stone-400 align-bottom">
-            <tr>
-              <th className="px-1 py-1 text-left font-normal sticky left-0 bg-[#fdf8e9] dark:bg-stone-900 z-10">Stat</th>
-              {tiers.map((t) => (
-                <th key={t} className="px-1 py-1 text-center font-normal leading-tight whitespace-nowrap">{TIER_LABELS[t]}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {stats.map((stat) => (
-              <tr key={stat}>
-                <td className="px-1 text-stone-700 dark:text-stone-300 font-semibold sticky left-0 bg-[#fdf8e9] dark:bg-stone-900 z-10">{IV_LABELS[stat]}</td>
-                {tiers.map((tier) => (
-                  <td key={tier}>
-                    <PriceInput value={prices[stat][tier]} onChange={(v) => onChange(stat, tier, v)} />
-                  </td>
-                ))}
-              </tr>
-            ))}
-            <tr>
-              <td className="px-1 pt-1 text-stone-700 dark:text-stone-300 font-semibold whitespace-nowrap sticky left-0 bg-[#fdf8e9] dark:bg-stone-900 z-10">0×31</td>
-              {tiers.map((tier) => (
-                <td key={tier} className="pt-1">
-                  <PriceInput value={basePrices?.[tier]} onChange={(v) => onChangeBase(tier, v)} />
-                </td>
-              ))}
-            </tr>
-          </tbody>
-        </table>
+      {/* Vertical, wrapping layout: one block per stat (+ a 0×31 block), each
+          with its tier inputs in a 2-column grid. Fits the sidebar with no
+          horizontal scroll and keeps each price box comfortably wide. */}
+      <div className="space-y-2">
+        {stats.map((stat) => (
+          <PriceStatBlock
+            key={stat}
+            heading={`${IV_LABELS[stat]} · 1×31`}
+            tiers={tiers}
+            get={(tier) => prices[stat][tier]}
+            set={(tier, v) => onChange(stat, tier, v)}
+          />
+        ))}
+        <PriceStatBlock
+          heading="0×31 · any stat (breed-up placeholder)"
+          tiers={tiers}
+          get={(tier) => basePrices?.[tier]}
+          set={(tier, v) => onChangeBase(tier, v)}
+        />
       </div>
       <div className="text-[10px] text-stone-500 dark:text-stone-400 leading-snug space-y-1">
         <div>2×31+ carriers are bred from these 1×31 components — no buy option at higher tiers.</div>
@@ -610,6 +608,24 @@ const PerStatPriceTable = memo(function PerStatPriceTable({ stats, tiers, prices
   );
 });
 
+// One stat's price row: a labeled heading and the per-tier inputs in a wrapping
+// 2-column grid (each input fills its cell, so no horizontal scroll).
+function PriceStatBlock({ heading, tiers, get, set }) {
+  return (
+    <div className="rounded border border-[#e6dabf] dark:border-stone-800 bg-[#f7f0db]/70 dark:bg-stone-900/50 p-2">
+      <div className="text-[11px] font-semibold text-stone-700 dark:text-stone-300 mb-1.5">{heading}</div>
+      <div className="grid grid-cols-2 gap-x-2 gap-y-1.5">
+        {tiers.map((tier) => (
+          <label key={tier} className="flex flex-col gap-0.5 min-w-0">
+            <span className="text-[10px] text-stone-500 dark:text-stone-400 truncate" title={TIER_LABELS[tier]}>{TIER_LABELS[tier]}</span>
+            <PriceInput value={get(tier)} onChange={(v) => set(tier, v)} />
+          </label>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function PriceInput({ value, onChange, placeholder = '—' }) {
   const hasValue = Number.isFinite(Number(value)) && value !== null && value !== '';
   return (
@@ -618,7 +634,7 @@ function PriceInput({ value, onChange, placeholder = '—' }) {
       value={value ?? ''}
       onChange={(e) => onChange(e.target.value)}
       placeholder={placeholder}
-      className={`w-24 px-2 py-1.5 rounded border border-[#d6c8a3] dark:border-stone-700 bg-[#fdf8e9] dark:bg-stone-900 text-stone-900 dark:text-stone-100 text-sm tabular-nums text-right focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-stone-400 dark:placeholder:text-stone-600 ${hasValue ? 'font-semibold' : ''}`}
+      className={`w-full px-2 py-1.5 rounded border border-[#d6c8a3] dark:border-stone-700 bg-[#fdf8e9] dark:bg-stone-900 text-stone-900 dark:text-stone-100 text-sm tabular-nums text-right focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-stone-400 dark:placeholder:text-stone-600 ${hasValue ? 'font-semibold' : ''}`}
     />
   );
 }
@@ -747,9 +763,108 @@ function IVPlanTab({ target, plan, form, setOverride, onSave, eggMoveNames = [],
         </div>
       )}
 
+      <RecipeBreakdown node={plan.node} target={target} consumables={form.consumables} recipeLabels={recipeLabels} />
+
       <BreedingPlanView plan={plan} target={target} nature={form.nature} setOverride={setOverride} recipeLabels={recipeLabels} />
     </div>
   );
+}
+
+// "Recipes" = the distinct breeder builds the plan reuses. A recipe is one
+// (species role + IV set + gender + nature) combo; the same one usually recurs
+// across the tree (e.g. a 2×31 Atk+SpA ♂ used at several branches). This card
+// aggregates every node by its recipe so the user can see, at a glance, how
+// many of each build they must make or buy — and what each costs.
+//
+// Cost shown per recipe is its OWN cost (a Buy's purchase price, or a Build's
+// power-items + everstone + egg fee for that one breed event), NOT the subtree
+// total — so the column reconciles to the plan total without double-counting.
+function RecipeBreakdown({ node, target, consumables, recipeLabels }) {
+  const recipes = useMemo(() => {
+    const arr = [...aggregateRecipes(node, consumables).values()]
+      // Drop free 0×31 placeholders — they cost nothing and add noise.
+      .filter((r) => !(r.kind === 'leaf' && r.ivs.length === 0 && r.total === 0));
+    arr.sort((a, b) =>
+      b.count - a.count ||
+      b.ivs.length - a.ivs.length ||
+      (b.count * b.unit) - (a.count * a.unit)
+    );
+    return arr;
+  }, [node, consumables]);
+
+  if (recipes.length === 0) return null;
+  const repeated = recipes.filter((r) => r.count > 1).length;
+  const grandTotal = recipes.reduce((s, r) => s + r.total, 0);
+
+  return (
+    <FormCard title={`Recipe breakdown — ${recipes.length} distinct build${recipes.length === 1 ? '' : 's'}`}>
+      <p className="-mt-1 text-[11px] text-stone-500 dark:text-stone-400 leading-snug">
+        A <span className="font-semibold text-stone-700 dark:text-stone-300">recipe</span> is a reusable breeder build — a set species role + IV set (and nature/gender). The same build recurs across the tree, so here's each distinct one and how many you need.
+        {repeated > 0 && <> Builds used 2+ times carry a colored letter that matches the outline and tree.</>}
+      </p>
+      <ul className="mt-2 text-sm divide-y divide-[#ece2c4] dark:divide-stone-800/60">
+        {recipes.map((r) => {
+          const role = ROLE_LABELS[r.role] || (r.species === 'group' ? 'Egg-group filler' : r.species === 'ditto' ? 'Ditto' : 'Carrier');
+          const genderSym = r.gender === 'F' ? ' ♀' : r.gender === 'M' ? ' ♂' : '';
+          const isBuild = r.kind === 'breed';
+          const label = recipeLabels?.get(r.recipeId);
+          return (
+            <li key={r.recipeId} className="flex items-baseline gap-2 py-1.5">
+              <span className="font-mono tabular-nums font-bold text-stone-900 dark:text-stone-100 w-9 shrink-0">{r.count}×</span>
+              <span className="flex-1 min-w-0">
+                <span className="font-medium text-stone-800 dark:text-stone-200">{r.ivs.length}×31 {role}{genderSym}</span>
+                {r.ivs.length > 0 && <span className="text-stone-500 dark:text-stone-400"> ({formatIVList(r.ivs)})</span>}
+                <span className={`ml-1.5 px-1 py-px rounded text-[9px] uppercase tracking-wider ${isBuild ? 'bg-blue-100 text-blue-700 dark:bg-blue-950/40 dark:text-blue-300' : 'bg-stone-200 text-stone-600 dark:bg-stone-800 dark:text-stone-400'}`}>
+                  {isBuild ? 'Build' : 'Buy'}
+                </span>
+                {label && <span className="ml-1.5 align-middle"><RecipePill recipeLabels={recipeLabels} recipeId={r.recipeId} /></span>}
+              </span>
+              <span className="hidden sm:inline text-xs text-stone-400 dark:text-stone-500 tabular-nums">
+                {r.varies ? 'varies' : `$${formatMoney(r.unit)} ea`}
+              </span>
+              <span className="font-mono tabular-nums text-stone-700 dark:text-stone-300 w-20 text-right">${formatMoney(r.total)}</span>
+            </li>
+          );
+        })}
+      </ul>
+      <div className="mt-2 pt-2 border-t border-[#ece2c4] dark:border-stone-800/60 flex items-baseline justify-between text-sm">
+        <span className="text-stone-500 dark:text-stone-400">Builds + buys subtotal</span>
+        <span className="font-mono tabular-nums font-semibold text-stone-900 dark:text-stone-100">${formatMoney(grandTotal)}</span>
+      </div>
+    </FormCard>
+  );
+}
+
+// Group every node in the instantiated tree by recipeId. Each recipe records
+// how many times it occurs (count) and its OWN per-occurrence cost — for a leaf
+// that's the buy price; for a breed it's that one event's power items +
+// everstone + egg fee (NOT the subtree, so totals don't double-count nested
+// recipes). `varies` flags recipes whose instances differ (per-instance cost
+// overrides).
+function aggregateRecipes(node, consumables, map = new Map()) {
+  if (!node) return map;
+  const own = node.kind === 'breed'
+    ? (node.powerItems || 0) * (consumables?.powerItem || 0)
+      + (node.everstones || 0) * (consumables?.everstone || 0)
+      + (node.eggFee || 0)
+    : (node.cost || 0);
+  const e = map.get(node.recipeId);
+  if (e) {
+    e.count += 1;
+    e.total += own;
+    if (own !== e.unit) e.varies = true;
+  } else {
+    map.set(node.recipeId, {
+      recipeId: node.recipeId, count: 1, total: own, unit: own, varies: false,
+      species: node.species, role: node.role, gender: node.gender,
+      ivs: node.ivs || [], kind: node.kind, breedUp: !!node.breedUp,
+    });
+  }
+  if (node.kind === 'breed') {
+    aggregateRecipes(node.left, consumables, map);
+    aggregateRecipes(node.right, consumables, map);
+  }
+  return map;
 }
 
 function BreedingPlanView({ plan, target, nature, setOverride, recipeLabels }) {
@@ -809,44 +924,80 @@ function BreedingOutline({ node, target, nature, setOverride, recipeLabels }) {
   if (!node) return null;
   const steps = flattenSteps(node);
   return (
-    <ol className="space-y-2 text-sm">
+    <ol className="space-y-2.5 text-sm">
       {steps.map((s, i) => {
         const isFiller = s.species === 'group';
-        const fillerGender = s.gender === 'F' ? '♀' : s.gender === 'M' ? '♂' : '';
-        const producesLabel = isFiller
-          ? `→ produces an egg-group ${fillerGender} filler at ${s.ivs.length}×31`
-          : `→ produces ${target.name} at ${s.ivs.length}×31${s.gender === 'F' ? ' ♀' : s.gender === 'M' ? ' ♂' : ''}`;
+        const isFinal = i === steps.length - 1;
+        const genderSym = s.gender === 'F' ? ' ♀' : s.gender === 'M' ? ' ♂' : '';
+        const outName = isFiller ? `Egg-group filler${genderSym}` : `${target.name}${genderSym}`;
+        const sharedSet = new Set(s.sharedIVs || []);
+        const tone = isFiller
+          ? 'border-amber-300 dark:border-amber-900/60 bg-amber-50/50 dark:bg-amber-950/20'
+          : isFinal
+            ? 'border-emerald-300 dark:border-emerald-900/60 bg-emerald-50/40 dark:bg-emerald-950/15'
+            : 'border-[#e6dabf] dark:border-stone-800 bg-[#fdf8e9] dark:bg-stone-900';
         return (
-        <li key={s.instanceId} className={`rounded border p-2 ${isFiller ? 'border-amber-300 dark:border-amber-900/60 bg-amber-50/60 dark:bg-amber-950/20' : 'border-[#e6dabf] dark:border-stone-800 bg-[#fdf8e9] dark:bg-stone-900'}`}>
-          <div className="flex items-baseline gap-2 flex-wrap">
-            <span className="text-[11px] font-semibold uppercase tracking-wider text-stone-500 dark:text-stone-400">Step {i + 1}{isFiller ? ' · filler' : ''}</span>
-            <span className="text-stone-700 dark:text-stone-300 text-xs">
-              {producesLabel}
-              {s.ivs.length > 0 && <span className="text-stone-500 dark:text-stone-400"> ({formatIVList(s.ivs)})</span>}
-            </span>
-            <RecipePill recipeLabels={recipeLabels} recipeId={s.recipeId} />
+        <li key={s.instanceId} className={`rounded-md border overflow-hidden ${tone}`}>
+          {/* Header: step number + what this breed produces + cost */}
+          <div className="flex items-center gap-2 px-2.5 py-1.5 border-b border-[#ece2c4]/70 dark:border-stone-800/60">
+            <span className="shrink-0 w-6 h-6 rounded-full bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900 text-xs font-bold flex items-center justify-center tabular-nums">{i + 1}</span>
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-1.5 flex-wrap leading-none">
+                <span className="text-[10px] uppercase tracking-wider text-stone-500 dark:text-stone-400">
+                  {isFinal ? 'Final breed' : isFiller ? 'Filler breed' : 'Breed'}
+                </span>
+                <RecipePill recipeLabels={recipeLabels} recipeId={s.recipeId} />
+              </div>
+              <div className="mt-0.5 font-semibold text-stone-900 dark:text-stone-100 leading-tight truncate">
+                {outName} <span className="font-normal text-stone-500 dark:text-stone-400">· {s.ivs.length}×31</span>
+              </div>
+            </div>
             <NodeCostBadge node={s} setOverride={setOverride} recipeLabels={recipeLabels} compact />
           </div>
-          <div className="mt-1 grid sm:grid-cols-2 gap-2">
+
+          {/* The IVs this step locks in (shared ones are inherited free) */}
+          {s.ivs.length > 0 && (
+            <div className="px-2.5 pt-2 flex flex-wrap gap-1">
+              {s.ivs.map((iv) => <IVChip key={iv} iv={iv} shared={sharedSet.has(iv)} />)}
+            </div>
+          )}
+
+          {/* Parents */}
+          <div className="px-2.5 py-2 grid sm:grid-cols-2 gap-2">
             <ParentSlot side="Mother" parent={s.left}  item={s.leftItem}  powerItem={s.leftPowerItem}  nature={nature} setOverride={setOverride} recipeLabels={recipeLabels} />
             <ParentSlot side="Father" parent={s.right} item={s.rightItem} powerItem={s.rightPowerItem} nature={nature} setOverride={setOverride} recipeLabels={recipeLabels} />
           </div>
-          {s.sharedIVs?.length > 0 && (
-            <div className="mt-1 text-[11px] text-stone-600 dark:text-stone-400">
-              Shared IVs (free via matching): <span className="font-semibold">{formatIVList(s.sharedIVs)}</span>
-            </div>
-          )}
-          <div className="mt-1.5 flex flex-wrap gap-x-3 gap-y-0.5 text-[11px] text-stone-600 dark:text-stone-400">
-            <span>Power Items: <span className="font-mono tabular-nums">{s.powerItems}</span></span>
-            {s.everstones > 0 && (
-              <span>Everstone: <span className="font-mono tabular-nums">{s.everstones}</span> {nature && `(passes ${nature})`}</span>
+
+          {/* Footer: this breed's own consumables + fee, plus the free-IV note */}
+          <div className="px-2.5 pb-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-stone-600 dark:text-stone-400">
+            {s.powerItems > 0 && <span>Power Items: <span className="font-mono tabular-nums font-semibold">{s.powerItems}</span></span>}
+            {s.everstones > 0 && <span>Everstone: <span className="font-mono tabular-nums font-semibold">{s.everstones}</span>{nature && <span className="text-stone-500"> → {nature}</span>}</span>}
+            <span>Egg fee: <span className="font-mono tabular-nums font-semibold">${formatMoney(s.eggFee)}</span></span>
+            {sharedSet.size > 0 && (
+              <span className="text-emerald-700 dark:text-emerald-400">✓ {formatIVList(s.sharedIVs)} inherited free (both parents carry it)</span>
             )}
-            <span>Egg fee: <span className="font-mono tabular-nums">${formatMoney(s.eggFee)}</span></span>
           </div>
         </li>
         );
       })}
     </ol>
+  );
+}
+
+// A single IV pill. Shared IVs (carried by both parents, so inherited free)
+// are tinted green to set them apart from IVs locked in by a Power Item.
+function IVChip({ iv, shared }) {
+  return (
+    <span
+      title={shared ? 'Inherited free — both parents already carry this IV' : 'Locked in this step (via a Power Item)'}
+      className={`px-1.5 py-px rounded text-[10px] font-semibold uppercase tracking-wide border ${
+        shared
+          ? 'bg-emerald-100 text-emerald-700 border-emerald-300 dark:bg-emerald-950/40 dark:text-emerald-300 dark:border-emerald-800/60'
+          : 'bg-[#f1e9d2] text-stone-700 border-[#e6dabf] dark:bg-stone-800 dark:text-stone-300 dark:border-stone-700'
+      }`}
+    >
+      {IV_LABELS[iv] || iv}
+    </span>
   );
 }
 
