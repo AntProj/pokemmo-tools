@@ -2,15 +2,12 @@ import { memo } from 'react';
 import TypeBadge from './TypeBadge.jsx';
 import PokemonSprite from './PokemonSprite.jsx';
 import { displayDex, statTotal } from '../lib/format.js';
+import { useSpritePreload } from '../hooks/useSpritePreload.js';
 
 function PokemonRow({ pokemon, region, onSelect }) {
   const total = statTotal(pokemon.stats);
   const encounters = pokemon.locations?.length || 0;
-  const preload = () => {
-    for (const url of [pokemon.sprite_3d, pokemon.sprite]) {
-      if (url) { const img = new Image(); img.src = url; }
-    }
-  };
+  const preload = useSpritePreload(pokemon);
   return (
     <button
       type="button"
@@ -24,7 +21,6 @@ function PokemonRow({ pokemon, region, onSelect }) {
     >
       <PokemonSprite
         pokemon={pokemon}
-        variant="animated"
         loading="lazy"
         className="w-10 h-10 object-contain"
       />

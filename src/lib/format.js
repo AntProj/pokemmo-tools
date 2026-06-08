@@ -2,6 +2,11 @@ export function dexNum(id) {
   return '#' + String(id).padStart(3, '0');
 }
 
+// Canonical region filter list. 'All' + the five playable regions, in dex
+// order. Shared by every region selector (RegionPills, tracker filters) so a
+// future region only gets added in one place.
+export const REGIONS = ['All', 'Kanto', 'Johto', 'Hoenn', 'Sinnoh', 'Unova'];
+
 // Region keys used in pokemon.dex and as filter values.
 const REGION_PREFIX = { kanto: 'K', johto: 'J', hoenn: 'H', sinnoh: 'S', unova: 'U' };
 

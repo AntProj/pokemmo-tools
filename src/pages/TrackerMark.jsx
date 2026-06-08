@@ -1,12 +1,17 @@
 import { memo, useCallback, useDeferredValue, useMemo, useRef, useState } from 'react';
-import { Search, Check, Slash, Star, X } from 'lucide-react';
-import TypeBadge from '../components/TypeBadge.jsx';
-import PokemonSprite from '../components/PokemonSprite.jsx';
+import { Check, Slash, Star, X } from 'lucide-react';
+import FilterRow from '../components/FilterRow.jsx';
+import RegionPills from '../components/RegionPills.jsx';
+import DexSearchInput from '../components/DexSearchInput.jsx';
+import { PokemonCardBody } from '../components/PokemonCard.jsx';
 import { ALL_POKEMON_TYPES, typeColor } from '../lib/types.js';
-import { displayDex, regionKey, statTotal } from '../lib/format.js';
-import { stateOf, cycleClick, STATES } from '../lib/tracker.js';
+import { regionKey, statTotal } from '../lib/format.js';
+import { stateOf, cycleClick } from '../lib/tracker.js';
 
-const REGIONS = ['All', 'Kanto', 'Johto', 'Hoenn', 'Sinnoh', 'Unova'];
+// Stable empty array so `data.hunt_tiers?.tiers || EMPTY` returns the same
+// reference when the catalog is absent — a fresh `[]` each render would bust
+// the huntTierByNum useMemo below.
+const EMPTY = [];
 const SORTS = [
   { value: 'dex',  label: 'Dex #' },
   { value: 'name', label: 'Name A→Z' },
@@ -103,7 +108,7 @@ export default function TrackerMark({
   // Hunt-tier catalog ships in pokemmo.json. Tracker UI degrades gracefully
   // to no tier filter if the field is absent (older builds, or a future rev
   // that drops the file).
-  const huntTierCatalog = data.hunt_tiers?.tiers || [];
+  const huntTierCatalog = data.hunt_tiers?.tiers || EMPTY;
   const huntTierByNum = useMemo(() => {
     const m = new Map();
     for (const t of huntTierCatalog) m.set(t.tier, t);
@@ -339,19 +344,12 @@ export default function TrackerMark({
       {/* Filters */}
       <section className="rounded-md border border-[#e6dabf] dark:border-stone-800 bg-[#fdf8e9] dark:bg-stone-900 p-3 space-y-2">
         <div className="flex items-center gap-3 flex-wrap">
-          <div className="relative flex-1 min-w-[200px]">
-            <Search size={16} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-stone-400 dark:text-stone-500" />
-            <input
-              type="search"
-              value={markSearch}
-              onChange={(e) => setSearch(e.target.value)}
-              placeholder="Search by name or dex number"
-              className="w-full pl-8 pr-3 py-1.5 rounded-md border border-[#d6c8a3] dark:border-stone-700
-                         bg-[#fdf8e9] dark:bg-stone-900 text-stone-900 dark:text-stone-100
-                         placeholder:text-stone-400 dark:placeholder:text-stone-500
-                         focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            />
-          </div>
+          <DexSearchInput
+            className="flex-1 min-w-[200px]"
+            value={markSearch}
+            onChange={setSearch}
+            placeholder="Search by name or dex number"
+          />
           <div className="flex items-center gap-2">
             <label className="text-xs text-stone-500 dark:text-stone-400">Sort</label>
             <select
@@ -369,24 +367,7 @@ export default function TrackerMark({
           </span>
         </div>
 
-        <div className="flex items-center gap-2 flex-wrap">
-          <span className="text-xs text-stone-500 dark:text-stone-400 mr-1">Region</span>
-          {REGIONS.map((r) => (
-            <button
-              key={r}
-              type="button"
-              onClick={() => setRegion(r)}
-              aria-pressed={markRegion === r}
-              className={`px-2.5 py-1 rounded-md text-sm border transition-colors ${
-                markRegion === r
-                  ? 'bg-stone-900 text-white border-stone-900 dark:bg-stone-100 dark:text-stone-900 dark:border-stone-100'
-                  : 'bg-[#fdf8e9] text-stone-700 border-[#d6c8a3] hover:bg-[#ece2c4] dark:bg-stone-900 dark:text-stone-300 dark:border-stone-700 dark:hover:bg-stone-800'
-              }`}
-            >
-              {r}
-            </button>
-          ))}
-        </div>
+        <RegionPills value={markRegion} onChange={setRegion} />
 
         <div className="flex items-start gap-2 flex-wrap">
           <span className="text-xs text-stone-500 dark:text-stone-400 mr-1 mt-1">Types</span>
@@ -414,210 +395,93 @@ export default function TrackerMark({
           </div>
         </div>
 
-        <div className="flex items-center gap-2 flex-wrap">
-          <span className="text-xs text-stone-500 dark:text-stone-400 mr-1">State</span>
-          {STATE_FILTERS.map(({ key, label }) => {
-            const sel = markStates.includes(key);
-            return (
-              <button
-                key={key}
-                type="button"
-                onClick={() => toggleStateFilter(key)}
-                aria-pressed={sel}
-                className={`px-2 py-0.5 rounded text-xs border transition-colors ${
-                  sel
-                    ? 'bg-blue-100 text-blue-800 border-blue-300 dark:bg-blue-950/50 dark:text-blue-300 dark:border-blue-900'
-                    : 'bg-[#fdf8e9] dark:bg-stone-900 text-stone-700 dark:text-stone-300 border-[#d6c8a3] dark:border-stone-700 hover:bg-[#ece2c4] dark:hover:bg-stone-800'
-                }`}
-              >
-                {label}
-              </button>
-            );
-          })}
-          {markStates.length > 0 && (
-            <button
-              type="button"
-              onClick={() => updateView({ markStates: [] })}
-              className="text-xs text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 underline underline-offset-2"
-            >
-              Clear
-            </button>
-          )}
-        </div>
+        <FilterRow
+          label="State"
+          options={STATE_FILTERS}
+          selected={markStates}
+          onToggle={toggleStateFilter}
+          color="blue"
+          onClear={() => updateView({ markStates: [] })}
+        />
 
-        {/* Baby filter — a three-way toggle. Babies are the unevolved
-            breed-only forms (Pichu, Cleffa, etc.) that the user often
-            wants to surface or hide as a group. */}
-        <div className="flex items-center gap-2 flex-wrap">
-          <span className="text-xs text-stone-500 dark:text-stone-400 mr-1">Babies</span>
-          {BABY_FILTERS.map(({ key, label }) => {
-            const sel = markBaby === key;
-            return (
-              <button
-                key={key}
-                type="button"
-                onClick={() => setBaby(key)}
-                aria-pressed={sel}
-                className={`px-2 py-0.5 rounded text-xs border transition-colors ${
-                  sel
-                    ? 'bg-pink-100 text-pink-800 border-pink-300 dark:bg-pink-950/50 dark:text-pink-300 dark:border-pink-900'
-                    : 'bg-[#fdf8e9] dark:bg-stone-900 text-stone-700 dark:text-stone-300 border-[#d6c8a3] dark:border-stone-700 hover:bg-[#ece2c4] dark:hover:bg-stone-800'
-                }`}
-              >
-                {label}
-              </button>
-            );
-          })}
-        </div>
+        {/* Babies — three-way single-select (Any / Babies only / Hide babies).
+            The breed-only forms (Pichu, Cleffa, …) as a togglable group. */}
+        <FilterRow
+          label="Babies"
+          mode="single"
+          options={BABY_FILTERS}
+          selected={markBaby}
+          onToggle={setBaby}
+          color="pink"
+        />
 
         {/* Encounter-rarity filter. "Only" mode (default) shows mons whose
             encounters fall EXCLUSIVELY within the selected rarities — pick
-            "Special" alone to see event-only mons; pick "Special" + "Rare"
-            to see mons found only at one of those two. "Any" mode loosens
-            this: shows any mon that has at least one encounter at a
-            selected rarity (so picking "Special" surfaces every mon with
-            *any* Special encounter, even if they also appear commonly
-            elsewhere). */}
-        <div className="flex items-start gap-2 flex-wrap">
-          <span className="text-xs text-stone-500 dark:text-stone-400 mr-1 mt-1">Encounter</span>
-          <div className="flex flex-wrap gap-1.5 items-center">
-            {RARITY_FILTERS.map((r) => {
-              const sel = markRarities.includes(r);
-              return (
-                <button
-                  key={r}
-                  type="button"
-                  onClick={() => toggleRarityFilter(r)}
-                  aria-pressed={sel}
-                  className={`px-2 py-0.5 rounded text-xs border transition-colors ${
-                    sel
-                      ? 'bg-violet-100 text-violet-800 border-violet-300 dark:bg-violet-950/50 dark:text-violet-300 dark:border-violet-900'
-                      : 'bg-[#fdf8e9] dark:bg-stone-900 text-stone-700 dark:text-stone-300 border-[#d6c8a3] dark:border-stone-700 hover:bg-[#ece2c4] dark:hover:bg-stone-800'
-                  }`}
-                >
-                  {r}
-                </button>
-              );
-            })}
-            {markRarities.length > 0 && (
-              <>
-                <span className="text-xs text-stone-400 dark:text-stone-600 mx-1">·</span>
-                {/* Mode toggle — only relevant when rarities are selected. */}
-                {[
-                  { key: 'only', label: 'Only' },
-                  { key: 'any',  label: 'Any'  },
-                ].map(({ key, label }) => {
-                  const sel = markRaritiesMode === key;
-                  return (
-                    <button
-                      key={key}
-                      type="button"
-                      onClick={() => setRaritiesMode(key)}
-                      aria-pressed={sel}
-                      title={key === 'only'
-                        ? "Mon's encounters must ALL be in the selected rarities"
-                        : "Mon has at least one encounter in the selected rarities"}
-                      className={`px-2 py-0.5 rounded text-xs border transition-colors ${
-                        sel
-                          ? 'bg-stone-900 text-white border-stone-900 dark:bg-stone-100 dark:text-stone-900 dark:border-stone-100'
-                          : 'bg-[#fdf8e9] dark:bg-stone-900 text-stone-700 dark:text-stone-300 border-[#d6c8a3] dark:border-stone-700 hover:bg-[#ece2c4] dark:hover:bg-stone-800'
-                      }`}
-                    >
-                      {label}
-                    </button>
-                  );
-                })}
-                <button
-                  type="button"
-                  onClick={() => updateView({ markRarities: [] })}
-                  className="ml-1 text-xs text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 underline underline-offset-2"
-                >
-                  Clear
-                </button>
-              </>
-            )}
-          </div>
-        </div>
-
-        {/* Evolution-method filter — group the 27 raw evolution `type`
-            strings into 8 user-friendly buckets (Stone, Level, Friendship,
-            Trade, Held item, Knows move, Location, Special). Multi-select
-            with OR semantics: pick Stone alone to surface mons that need
-            (or came from) an evolution stone; pick Stone + Trade to widen
-            to both. Match is two-way (outgoing evolutions + incoming
-            pre_evolution) so the whole family shows up for any pick. */}
-        <div className="flex items-start gap-2 flex-wrap">
-          <span className="text-xs text-stone-500 dark:text-stone-400 mr-1 mt-1">Evolution</span>
-          <div className="flex flex-wrap gap-1.5 items-center">
-            {EVOLUTION_CATEGORIES.map(({ key, label }) => {
-              const sel = markEvolutions.includes(key);
-              return (
-                <button
-                  key={key}
-                  type="button"
-                  onClick={() => toggleEvolutionFilter(key)}
-                  aria-pressed={sel}
-                  className={`px-2 py-0.5 rounded text-xs border transition-colors ${
-                    sel
-                      ? 'bg-emerald-100 text-emerald-800 border-emerald-300 dark:bg-emerald-950/50 dark:text-emerald-300 dark:border-emerald-900'
-                      : 'bg-[#fdf8e9] dark:bg-stone-900 text-stone-700 dark:text-stone-300 border-[#d6c8a3] dark:border-stone-700 hover:bg-[#ece2c4] dark:hover:bg-stone-800'
-                  }`}
-                >
-                  {label}
-                </button>
-              );
-            })}
-            {markEvolutions.length > 0 && (
-              <button
-                type="button"
-                onClick={() => updateView({ markEvolutions: [] })}
-                className="ml-1 text-xs text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 underline underline-offset-2"
-              >
-                Clear
-              </button>
-            )}
-          </div>
-        </div>
-
-        {/* Hunt-tier filter — only renders if the data carries the catalog
-            (older builds without hunt_tiers field just don't show this row).
-            Tier numbers follow the forum guide's odd "0/1/2/4/5" numbering
-            so users who came here from the post recognize the labels. */}
-        {huntTierCatalog.length > 0 && (
-          <div className="flex items-start gap-2 flex-wrap">
-            <span className="text-xs text-stone-500 dark:text-stone-400 mr-1 mt-1" title="Source: forums.pokemmo.com OT-dex completion guide">Hunt tier</span>
-            <div className="flex flex-wrap gap-1.5 items-center">
-              {huntTierCatalog.map((t) => {
-                const sel = markTiers.includes(t.tier);
-                const style = TIER_STYLE[t.color] || TIER_STYLE.stone;
+            "Special" alone to see event-only mons. "Any" mode loosens this to
+            mons with at least one matching encounter. The Only/Any switch is
+            passed as FilterRow children so it sits inline before Clear. */}
+        <FilterRow
+          label="Encounter"
+          options={RARITY_FILTERS.map((r) => ({ key: r, label: r }))}
+          selected={markRarities}
+          onToggle={toggleRarityFilter}
+          color="violet"
+          onClear={() => updateView({ markRarities: [] })}
+        >
+          {markRarities.length > 0 && (
+            <>
+              <span className="text-xs text-stone-400 dark:text-stone-600 mx-1">·</span>
+              {[{ key: 'only', label: 'Only' }, { key: 'any', label: 'Any' }].map(({ key, label }) => {
+                const sel = markRaritiesMode === key;
                 return (
                   <button
-                    key={t.tier}
+                    key={key}
                     type="button"
-                    onClick={() => toggleTierFilter(t.tier)}
+                    onClick={() => setRaritiesMode(key)}
                     aria-pressed={sel}
-                    title={t.blurb}
+                    title={key === 'only'
+                      ? "Mon's encounters must ALL be in the selected rarities"
+                      : "Mon has at least one encounter in the selected rarities"}
                     className={`px-2 py-0.5 rounded text-xs border transition-colors ${
                       sel
-                        ? style.active
+                        ? 'bg-stone-900 text-white border-stone-900 dark:bg-stone-100 dark:text-stone-900 dark:border-stone-100'
                         : 'bg-[#fdf8e9] dark:bg-stone-900 text-stone-700 dark:text-stone-300 border-[#d6c8a3] dark:border-stone-700 hover:bg-[#ece2c4] dark:hover:bg-stone-800'
                     }`}
                   >
-                    T{t.tier} {t.label}
+                    {label}
                   </button>
                 );
               })}
-              {markTiers.length > 0 && (
-                <button
-                  type="button"
-                  onClick={() => updateView({ markTiers: [] })}
-                  className="ml-1 text-xs text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 underline underline-offset-2"
-                >
-                  Clear
-                </button>
-              )}
-            </div>
-          </div>
+            </>
+          )}
+        </FilterRow>
+
+        {/* Evolution-method filter — 8 user-friendly buckets over the 27 raw
+            evolution `type` strings. Multi-select OR; matches two-way
+            (outgoing evolutions + incoming pre_evolution) so the whole family
+            surfaces for any pick. */}
+        <FilterRow
+          label="Evolution"
+          options={EVOLUTION_CATEGORIES}
+          selected={markEvolutions}
+          onToggle={toggleEvolutionFilter}
+          color="emerald"
+          onClear={() => updateView({ markEvolutions: [] })}
+        />
+
+        {/* Hunt-tier filter — only renders if the data carries the catalog.
+            Per-option color comes from the catalog entry so each tier keeps
+            its signature hue. */}
+        {huntTierCatalog.length > 0 && (
+          <FilterRow
+            label="Hunt tier"
+            options={huntTierCatalog.map((t) => ({
+              key: t.tier, label: `T${t.tier} ${t.label}`, title: t.blurb, color: t.color,
+            }))}
+            selected={markTiers}
+            onToggle={toggleTierFilter}
+            onClear={() => updateView({ markTiers: [] })}
+          />
         )}
       </section>
 
@@ -686,7 +550,6 @@ function BulkBtn({ onClick, children }) {
 /* ─────────────── Tracker card ─────────────── */
 
 const TrackerCard = memo(function TrackerCard({ pokemon: p, region, state, isSelected, onClick, openPanel, tierMeta }) {
-  const primary = typeColor(p.types[0]).bg;
   const longPress = useLongPress(useCallback(() => openPanel(p.id), [openPanel, p.id]));
 
   const onCardClick   = useCallback((e) => onClick(p.id, e), [onClick, p.id]);
@@ -713,58 +576,41 @@ const TrackerCard = memo(function TrackerCard({ pokemon: p, region, state, isSel
                       : 'border-[#e6dabf] dark:border-stone-800 hover:border-[#c4b486] dark:hover:border-stone-600'}
                   transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500`}
     >
-      <div
-        className="relative w-full aspect-square flex items-center justify-center rounded-lg overflow-hidden"
-        style={{ background: `radial-gradient(circle at 50% 50%, ${primary}26 0%, ${primary}14 70%, ${primary}0a 100%)` }}
-      >
-        <div
-          className="absolute inset-0 hidden dark:block pointer-events-none"
-          style={{ background: `radial-gradient(circle at 50% 50%, ${primary}3d 0%, ${primary}1f 70%, ${primary}0f 100%)` }}
-        />
-        <PokemonSprite
-          pokemon={p}
-          variant="animated"
-          loading="lazy"
-          className={`w-20 h-20 object-contain relative transition ${dimmed ? 'grayscale opacity-40' : ''}`}
-        />
-        {/* Hunt-tier badge — top-LEFT, opposite the state badge. Tooltip
-            carries the per-mon `hunt_tier_note` (e.g. "Honey Tree exclusive
-            — catch one of each gender") so users can hover for the why
-            without leaving the grid. */}
-        {tierMeta && (
-          <span
-            className={`absolute top-1 left-1 inline-flex items-center justify-center min-w-[20px] h-5 px-1 rounded-full text-[10px] font-bold shadow ${TIER_STYLE[tierMeta.color]?.badge || TIER_STYLE.stone.badge}`}
-            title={`${tierMeta.label} (T${tierMeta.tier})${p.hunt_tier_note ? ' — ' + p.hunt_tier_note : ''}`}
-          >
-            T{tierMeta.tier}
-          </span>
-        )}
-        {/* State badge overlays */}
-        {caught && (
-          <span className="absolute top-1 right-1 inline-flex items-center justify-center w-5 h-5 rounded-full bg-emerald-500 text-white shadow">
-            <Check size={12} strokeWidth={3} />
-          </span>
-        )}
-        {priority && (
-          <span className="absolute top-1 right-1 inline-flex items-center justify-center w-5 h-5 rounded-full bg-amber-400 text-stone-900 shadow">
-            <Star size={12} fill="currentColor" />
-          </span>
-        )}
-        {skipped && (
-          <span className="absolute top-1 right-1 inline-flex items-center justify-center w-5 h-5 rounded-full bg-stone-500 text-white shadow">
-            <Slash size={12} strokeWidth={3} />
-          </span>
-        )}
-      </div>
-      <div className={`mt-2 font-mono text-xs text-stone-500 dark:text-stone-500 ${dimmed ? 'opacity-60' : ''}`}>
-        {displayDex(p, region)}
-      </div>
-      <div className={`font-semibold text-sm text-stone-900 dark:text-stone-100 truncate w-full ${dimmed ? 'opacity-60' : ''}`}>
-        {p.name}
-      </div>
-      <div className="mt-1 flex flex-wrap gap-1 justify-center">
-        {[...new Set(p.types)].map((t) => <TypeBadge key={t} type={t} />)}
-      </div>
+      <PokemonCardBody
+        pokemon={p}
+        region={region}
+        dimmed={dimmed}
+        overlays={
+          <>
+            {/* Hunt-tier badge — top-LEFT, opposite the state badge. Tooltip
+                carries the per-mon hunt_tier_note so users get the "why"
+                without leaving the grid. */}
+            {tierMeta && (
+              <span
+                className={`absolute top-1 left-1 inline-flex items-center justify-center min-w-[20px] h-5 px-1 rounded-full text-[10px] font-bold shadow ${TIER_STYLE[tierMeta.color]?.badge || TIER_STYLE.stone.badge}`}
+                title={`${tierMeta.label} (T${tierMeta.tier})${p.hunt_tier_note ? ' — ' + p.hunt_tier_note : ''}`}
+              >
+                T{tierMeta.tier}
+              </span>
+            )}
+            {caught && (
+              <span className="absolute top-1 right-1 inline-flex items-center justify-center w-5 h-5 rounded-full bg-emerald-500 text-white shadow">
+                <Check size={12} strokeWidth={3} />
+              </span>
+            )}
+            {priority && (
+              <span className="absolute top-1 right-1 inline-flex items-center justify-center w-5 h-5 rounded-full bg-amber-400 text-stone-900 shadow">
+                <Star size={12} fill="currentColor" />
+              </span>
+            )}
+            {skipped && (
+              <span className="absolute top-1 right-1 inline-flex items-center justify-center w-5 h-5 rounded-full bg-stone-500 text-white shadow">
+                <Slash size={12} strokeWidth={3} />
+              </span>
+            )}
+          </>
+        }
+      />
     </button>
   );
 });

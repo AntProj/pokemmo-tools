@@ -44,6 +44,18 @@ const TRAINER_HIT = { w: 16, h: 32 };
 // sprite) and should remain readable at every zoom level.
 const WARP_HIT = { w: 16, h: 16 };
 
+// Shared style for the ~577 clickable overworld-region rectangles. Hoisted to
+// module scope so every <Rectangle> gets the SAME object reference — an inline
+// literal here would hand Leaflet a fresh pathOptions per zone per render and
+// force needless SVG attribute rewrites on every pan/zoom.
+const OVERWORLD_REGION_STYLE = {
+  color: '#10b981',
+  weight: 2,
+  fillColor: '#10b981',
+  fillOpacity: 0.18,
+  className: 'overworld-region',
+};
+
 const MARKER_KINDS = [
   { key: 'warps',    label: 'Warps',    Icon: ExternalLink },
   { key: 'trainers', label: 'Trainers', Icon: Users },
@@ -1193,13 +1205,7 @@ function MapView({
             <Rectangle
               key={loc.zoneId}
               bounds={toLeafletBounds(loc.pixelBounds)}
-              pathOptions={{
-                color: '#10b981',
-                weight: 2,
-                fillColor: '#10b981',
-                fillOpacity: 0.18,
-                className: 'overworld-region',
-              }}
+              pathOptions={OVERWORLD_REGION_STYLE}
               eventHandlers={{ click: () => onNavigateToZone(loc.zoneId) }}
             >
               <Tooltip direction="top" offset={[0, -4]} opacity={0.95} sticky>

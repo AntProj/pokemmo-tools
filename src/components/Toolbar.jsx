@@ -1,7 +1,8 @@
-import { Search, LayoutGrid, List, Sun, Moon, X } from 'lucide-react';
+import { LayoutGrid, List, Sun, Moon } from 'lucide-react';
 import { ALL_POKEMON_TYPES, typeColor } from '../lib/types.js';
+import RegionPills from './RegionPills.jsx';
+import DexSearchInput from './DexSearchInput.jsx';
 
-const REGIONS = ['All', 'Kanto', 'Johto', 'Hoenn', 'Sinnoh', 'Unova'];
 const SORT_OPTIONS = [
   { value: 'dex',  label: 'Dex #' },
   { value: 'name', label: 'Name A→Z' },
@@ -82,29 +83,12 @@ export default function Toolbar({
 
         {/* Row 2: search + sort */}
         <div className="flex items-center gap-3 flex-wrap">
-          <div className="relative flex-1 min-w-[200px]">
-            <Search size={16} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-stone-400 dark:text-stone-500" />
-            <input
-              type="search"
-              value={search}
-              onChange={(e) => onSearch(e.target.value)}
-              placeholder={searchPlaceholder || 'Search by name or dex number (e.g. char, #150, 25)'}
-              className="w-full pl-8 pr-8 py-1.5 rounded-md border border-[#d6c8a3] dark:border-stone-700
-                         bg-[#fdf8e9] dark:bg-stone-900 text-stone-900 dark:text-stone-100
-                         placeholder:text-stone-400 dark:placeholder:text-stone-500
-                         focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            />
-            {search && (
-              <button
-                type="button"
-                onClick={() => onSearch('')}
-                className="absolute right-2 top-1/2 -translate-y-1/2 text-stone-400 hover:text-stone-700 dark:hover:text-stone-200"
-                title="Clear search"
-              >
-                <X size={14} />
-              </button>
-            )}
-          </div>
+          <DexSearchInput
+            className="flex-1 min-w-[200px]"
+            value={search}
+            onChange={onSearch}
+            placeholder={searchPlaceholder || 'Search by name or dex number (e.g. char, #150, 25)'}
+          />
 
           <div className="flex items-center gap-2">
             <label className="text-xs text-stone-500 dark:text-stone-400">Sort</label>
@@ -122,24 +106,7 @@ export default function Toolbar({
 
         {/* Row 3: region toggles (only when caller provides region/onRegion) */}
         {region !== undefined && onRegion && (
-          <div className="flex items-center gap-2 flex-wrap">
-            <span className="text-xs text-stone-500 dark:text-stone-400 mr-1">Region</span>
-            {REGIONS.map((r) => (
-              <button
-                key={r}
-                type="button"
-                onClick={() => onRegion(r)}
-                aria-pressed={region === r}
-                className={`px-2.5 py-1 rounded-md text-sm border transition-colors ${
-                  region === r
-                    ? 'bg-stone-900 text-white border-stone-900 dark:bg-stone-100 dark:text-stone-900 dark:border-stone-100'
-                    : 'bg-[#fdf8e9] text-stone-700 border-[#d6c8a3] hover:bg-[#ece2c4] dark:bg-stone-900 dark:text-stone-300 dark:border-stone-700 dark:hover:bg-stone-800'
-                }`}
-              >
-                {r}
-              </button>
-            ))}
-          </div>
+          <RegionPills value={region} onChange={onRegion} />
         )}
 
         {/* Row 4: simple type chips (only when caller provides types/onTypes) */}

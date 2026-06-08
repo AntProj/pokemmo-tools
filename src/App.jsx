@@ -32,7 +32,17 @@ function initialTheme() {
   return 'light';
 }
 
-const INITIAL_POKEDEX = { search: '', region: 'All', types: [], sort: 'dex' };
+// Unified Pokédex state (post Search-merge). Carries every field the merged
+// Pokedex page reads — the simple toolbar uses search/region/types/sort, the
+// advanced sidebar uses the rest. See src/pages/Pokedex.jsx.
+const INITIAL_POKEDEX = {
+  search: '', region: 'All', sort: 'dex',
+  types: [], typesMode: 'all',
+  selectedMoveIds: [null, null, null, null], movesMode: 'all',
+  abilityId: null, heldItemId: null,
+  eggGroups: [], eggGroupsMode: 'any',
+  stats: { hp: null, attack: null, defense: null, sp_attack: null, sp_defense: null, speed: null, bst: null },
+};
 const INITIAL_LOCATIONS = { search: '', region: 'All', sort: 'region' };
 const INITIAL_TRACKER_VIEW = { view: 'plan', planRegion: 'All', planMethods: [], planRarities: [], hideSingles: true,
   // Mark-tab filters:

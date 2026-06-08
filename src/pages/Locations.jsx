@@ -1,6 +1,7 @@
-import { memo, useCallback, useDeferredValue, useMemo } from 'react';
+import { memo, useDeferredValue, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import Toolbar from '../components/Toolbar.jsx';
+import { useFieldSetters } from '../hooks/useFieldSetters.js';
 import { methodIcon, regionRank, parseLocation } from '../lib/locations.js';
 
 const SORT_OPTIONS = [
@@ -18,10 +19,8 @@ export default function Locations({ data, state, setState, theme, onTheme }) {
   const { search, region, sort } = state;
   const deferredSearch = useDeferredValue(search);
 
-  const setField = useCallback((field) => (val) => setState((s) => ({ ...s, [field]: val })), [setState]);
-  const setSearch = useMemo(() => setField('search'), [setField]);
-  const setRegion = useMemo(() => setField('region'), [setField]);
-  const setSort   = useMemo(() => setField('sort'),   [setField]);
+  const { search: setSearch, region: setRegion, sort: setSort } =
+    useFieldSetters(setState, ['search', 'region', 'sort']);
 
   // Build the location summary array once per dataset. Multiple raw keys may
   // share a base name (e.g. "Route 30", "Route 30 (Night)", "ROUTE 30 (Day/

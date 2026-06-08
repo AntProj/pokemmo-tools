@@ -1,14 +1,16 @@
-import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { memo, useCallback, useMemo, useRef, useState } from 'react';
 import { ChevronRight, Star, Check, X } from 'lucide-react';
 import TypeBadge from '../components/TypeBadge.jsx';
 import RarityBadge from '../components/RarityBadge.jsx';
 import PokemonSprite from '../components/PokemonSprite.jsx';
+import FilterRow from '../components/FilterRow.jsx';
+import RegionPills from '../components/RegionPills.jsx';
+import { useEscapeAndScrollLock } from '../hooks/useEscapeAndScrollLock.js';
 import { typeColor } from '../lib/types.js';
 import { dexNum } from '../lib/format.js';
 import { methodIcon, parseLocation, regionRank } from '../lib/locations.js';
 import { stateOf, scorePoints, cycleClick, trackerRarityRank, METHOD_OPTIONS, isExcludedFromTracker } from '../lib/tracker.js';
 
-const REGIONS = ['All', 'Kanto', 'Johto', 'Hoenn', 'Sinnoh', 'Unova'];
 // Tracker-specific rarity order — same as TRACKER_RARITY_ORDER in tracker.js,
 // duplicated here so the filter chips render in the right order without an
 // extra export.
@@ -183,73 +185,23 @@ export default function TrackerPlan({
     <main className="max-w-7xl mx-auto px-4 py-4 space-y-4">
       {/* Filter row */}
       <section className="rounded-md border border-[#e6dabf] dark:border-stone-800 bg-[#fdf8e9] dark:bg-stone-900 p-3 space-y-2">
-        <div className="flex items-center gap-2 flex-wrap">
-          <span className="text-xs text-stone-500 dark:text-stone-400 mr-1">Region</span>
-          {REGIONS.map((r) => (
-            <button
-              key={r}
-              type="button"
-              onClick={() => setRegion(r)}
-              aria-pressed={planRegion === r}
-              className={`px-2.5 py-1 rounded-md text-sm border transition-colors ${
-                planRegion === r
-                  ? 'bg-stone-900 text-white border-stone-900 dark:bg-stone-100 dark:text-stone-900 dark:border-stone-100'
-                  : 'bg-[#fdf8e9] text-stone-700 border-[#d6c8a3] hover:bg-[#ece2c4] dark:bg-stone-900 dark:text-stone-300 dark:border-stone-700 dark:hover:bg-stone-800'
-              }`}
-            >
-              {r}
-            </button>
-          ))}
-        </div>
+        <RegionPills value={planRegion} onChange={setRegion} />
 
-        <div className="flex items-start gap-2 flex-wrap">
-          <span className="text-xs text-stone-500 dark:text-stone-400 mr-1 mt-1">Method</span>
-          <div className="flex flex-wrap gap-1.5">
-            {METHOD_OPTIONS.map((m) => {
-              const sel = planMethods.includes(m);
-              return (
-                <button
-                  key={m}
-                  type="button"
-                  onClick={() => toggleMethod(m)}
-                  aria-pressed={sel}
-                  className={`px-2 py-0.5 rounded text-xs border transition-colors inline-flex items-center gap-1 ${
-                    sel
-                      ? 'bg-blue-100 text-blue-800 border-blue-300 dark:bg-blue-950/50 dark:text-blue-300 dark:border-blue-900'
-                      : 'bg-[#fdf8e9] dark:bg-stone-900 text-stone-700 dark:text-stone-300 border-[#d6c8a3] dark:border-stone-700 hover:bg-[#ece2c4] dark:hover:bg-stone-800'
-                  }`}
-                >
-                  <span aria-hidden>{methodIcon(m)}</span>{m}
-                </button>
-              );
-            })}
-          </div>
-        </div>
+        <FilterRow
+          label="Method"
+          options={METHOD_OPTIONS.map((m) => ({ key: m, label: m, icon: methodIcon(m) }))}
+          selected={planMethods}
+          onToggle={toggleMethod}
+          color="blue"
+        />
 
-        <div className="flex items-start gap-2 flex-wrap">
-          <span className="text-xs text-stone-500 dark:text-stone-400 mr-1 mt-1">Rarity</span>
-          <div className="flex flex-wrap gap-1.5">
-            {RARITY_OPTIONS.map((r) => {
-              const sel = planRarities.includes(r);
-              return (
-                <button
-                  key={r}
-                  type="button"
-                  onClick={() => toggleRarity(r)}
-                  aria-pressed={sel}
-                  title={sel ? `Hide ${r} encounters` : `Show only ${r} (toggle others to combine)`}
-                  className={`px-2 py-0.5 rounded text-xs border transition-colors inline-flex items-center ${
-                    sel
-                      ? 'bg-blue-100 text-blue-800 border-blue-300 dark:bg-blue-950/50 dark:text-blue-300 dark:border-blue-900'
-                      : 'bg-[#fdf8e9] dark:bg-stone-900 text-stone-700 dark:text-stone-300 border-[#d6c8a3] dark:border-stone-700 hover:bg-[#ece2c4] dark:hover:bg-stone-800'
-                  }`}
-                >
-                  {r}
-                </button>
-              );
-            })}
-          </div>
-        </div>
+        <FilterRow
+          label="Rarity"
+          options={RARITY_OPTIONS.map((r) => ({ key: r, label: r }))}
+          selected={planRarities}
+          onToggle={toggleRarity}
+          color="blue"
+        />
 
         <div className="flex items-center gap-3 flex-wrap text-xs">
           <label className="inline-flex items-center gap-1.5 text-stone-700 dark:text-stone-300 cursor-pointer">
@@ -357,17 +309,7 @@ const PlanLocationCard = memo(function PlanLocationCard({ loc, onOpen }) {
 /* ─────────────── Plan location modal ─────────────── */
 
 function PlanLocationModal({ loc, trackerState, setMonState, openPanel, onClose }) {
-  // Esc + body scroll lock — same pattern as PokemonModal.
-  useEffect(() => {
-    function onKey(e) { if (e.key === 'Escape') onClose(); }
-    document.addEventListener('keydown', onKey);
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
-    return () => {
-      document.removeEventListener('keydown', onKey);
-      document.body.style.overflow = prev;
-    };
-  }, [onClose]);
+  useEscapeAndScrollLock(onClose);
 
   return (
     <div className="fixed inset-0 z-40 overflow-y-auto bg-black/70" onClick={onClose}>
