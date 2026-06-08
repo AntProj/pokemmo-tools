@@ -27,6 +27,9 @@ const REGION_DISPLAY = {
   sinnoh: 'Sinnoh',
   johto:  'Johto',
 };
+// Regions that have an interactive map built. Drives the in-page region
+// switcher (Maps is a single nav tab). Order = switcher button order.
+const MAP_REGIONS = ['sinnoh', 'johto'];
 function regionDataUrls(region) {
   return {
     mapsIndex: asset(`data/maps/${region}/maps-index.json`),
@@ -209,10 +212,29 @@ export default function RegionMap({ region = 'sinnoh', theme, onTheme }) {
         <h1 className="text-base font-semibold text-stone-900 dark:text-stone-100">
           {mapsIndex?.[zoneId]?.displayName || (zoneId === 'world' ? `${regionDisplay} Overworld` : `Zone ${zoneId}`)}
         </h1>
+
+        {/* Region switcher. Maps is a single nav tab now, so the Sinnoh/Johto
+            choice lives here. Each link targets the region's overworld — a
+            zone id is region-specific, so we don't try to carry it across. */}
+        <div className="ml-auto inline-flex rounded-md border border-[#d6c8a3] dark:border-stone-700 overflow-hidden">
+          {MAP_REGIONS.map((r) => (
+            <Link
+              key={r}
+              to={`/map/${r}`}
+              aria-current={region === r ? 'page' : undefined}
+              className={`px-2.5 py-1 text-sm ${region === r
+                ? 'bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900'
+                : 'bg-[#fdf8e9] text-stone-700 hover:bg-[#ece2c4] dark:bg-stone-900 dark:text-stone-300 dark:hover:bg-stone-800'}`}
+            >
+              {REGION_DISPLAY[r] || r}
+            </Link>
+          ))}
+        </div>
+
         <button
           type="button"
           onClick={() => onTheme(theme === 'dark' ? 'light' : 'dark')}
-          className="ml-auto p-1.5 rounded-md border border-[#d6c8a3] dark:border-stone-700
+          className="p-1.5 rounded-md border border-[#d6c8a3] dark:border-stone-700
                      bg-[#fdf8e9] dark:bg-stone-900 hover:bg-[#ece2c4] dark:hover:bg-stone-800
                      text-stone-700 dark:text-stone-300"
           title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}

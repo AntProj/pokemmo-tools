@@ -1,6 +1,6 @@
 import { memo, useMemo, useState } from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
-import { ArrowLeft, Sun, Moon } from 'lucide-react';
+import { ArrowLeft, Sun, Moon, MapPin } from 'lucide-react';
 import TypeBadge from '../components/TypeBadge.jsx';
 import RarityBadge from '../components/RarityBadge.jsx';
 import PokemonSprite from '../components/PokemonSprite.jsx';
@@ -19,6 +19,13 @@ export default function LocationDetail({ data, onSelect }) {
   const { region: regionRaw, location: locRaw } = useParams();
   const region   = decodeURIComponent(regionRaw || '');
   const locName  = decodeURIComponent(locRaw || '');
+  // Only Sinnoh + Johto have interactive maps. When this location is in one of
+  // them, offer a jump to that region's map overworld. We don't try to resolve
+  // the exact zone — location names don't map 1:1 to map zone ids — so this
+  // lands on the overworld where the user can click through.
+  const mapRegion = ['sinnoh', 'johto'].includes(region.toLowerCase())
+    ? region.toLowerCase()
+    : null;
 
   // Cross-reference each pokemon's own locations array to get level ranges.
   // data.locations only carries method/rarity/time, not levels. The URL holds
@@ -138,6 +145,15 @@ export default function LocationDetail({ data, onSelect }) {
             <div>
               <div className="text-[11px] font-semibold uppercase tracking-wider text-stone-500 dark:text-stone-400">{region}</div>
               <h1 className="text-xl sm:text-2xl font-bold text-stone-900 dark:text-stone-100">{locName}</h1>
+              {mapRegion && (
+                <Link
+                  to={`/map/${mapRegion}`}
+                  className="mt-1 inline-flex items-center gap-1 text-xs text-blue-600 dark:text-blue-400 hover:underline"
+                  title={`Open the ${region} interactive map`}
+                >
+                  <MapPin size={12} /> View on map
+                </Link>
+              )}
             </div>
             <div className="flex items-center gap-2">
               <label className="text-xs text-stone-500 dark:text-stone-400">Sort</label>

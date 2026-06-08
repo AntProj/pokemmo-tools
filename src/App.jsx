@@ -4,7 +4,6 @@ import data from './data/pokemmo.json';
 import NavBar from './components/NavBar.jsx';
 import PokemonModal from './components/PokemonModal.jsx';
 import Pokedex from './pages/Pokedex.jsx';
-import Search from './pages/Search.jsx';
 import Locations from './pages/Locations.jsx';
 import LocationDetail from './pages/LocationDetail.jsx';
 import Tracker from './pages/Tracker.jsx';
@@ -87,26 +86,6 @@ function loadTrackerState() {
     return obj && typeof obj === 'object' ? obj : {};
   } catch { return {}; }
 }
-const INITIAL_SEARCH = {
-  search: '',
-  // Advanced type filter — up to 4 types with AND/OR.
-  types: [],
-  typesMode: 'all',
-  // Move filter — up to 4 slots with AND/OR.
-  selectedMoveIds: [null, null, null, null],
-  movesMode: 'all',
-  // Single-select ability id (null = no filter).
-  abilityId: null,
-  // Single-select held-item id (null = no filter).
-  heldItemId: null,
-  // Egg group filter — up to 2 with AND/OR (default OR).
-  eggGroups: [],
-  eggGroupsMode: 'any',
-  // Stat ranges — null = unset; otherwise [min, max] inclusive.
-  stats: { hp: null, attack: null, defense: null, sp_attack: null, sp_defense: null, speed: null, bst: null },
-  sort: 'dex',
-};
-
 export default function App() {
   // Persisted across tabs
   const [view, setView]   = useState(initialView);
@@ -114,7 +93,6 @@ export default function App() {
 
   // Page-specific state lifted here so it survives tab switches.
   const [pokedexState, setPokedexState]       = useState(INITIAL_POKEDEX);
-  const [searchState, setSearchState]         = useState(INITIAL_SEARCH);
   const [locationsState, setLocationsState]   = useState(INITIAL_LOCATIONS);
   const [trackerView, setTrackerView]         = useState(INITIAL_TRACKER_VIEW);
   const [trackerState, setTrackerStateRaw]    = useState(loadTrackerState);
@@ -193,19 +171,6 @@ export default function App() {
             }
           />
           <Route
-            path="/search"
-            element={
-              <Search
-                data={data}
-                state={searchState}
-                setState={setSearchState}
-                view={view} onView={setView}
-                theme={theme} onTheme={setTheme}
-                onSelect={handleSelect}
-              />
-            }
-          />
-          <Route
             path="/locations"
             element={
               <Locations
@@ -273,8 +238,10 @@ export default function App() {
               onto the new /map/sinnoh/XXXX scheme. */}
           <Route path="/map"             element={<Navigate to="/map/sinnoh" replace />} />
           <Route path="/map/:zoneId"     element={<RegionMap region="sinnoh" theme={theme} onTheme={setTheme} />} />
-          {/* Old URL kept working for bookmarks. */}
-          <Route path="/moves"  element={<Navigate to="/search" replace />} />
+          {/* Old URLs kept working for bookmarks. Search merged into Pokédex,
+              so /search and /moves both land on the Pokédex now. */}
+          <Route path="/search" element={<Navigate to="/" replace />} />
+          <Route path="/moves"  element={<Navigate to="/" replace />} />
           <Route path="*"       element={<Navigate to="/" replace />} />
         </Routes>
 
