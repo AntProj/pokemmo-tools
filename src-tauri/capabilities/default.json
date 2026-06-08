@@ -1,0 +1,10 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Core capabilities for the main window. App commands (list_windows, capture_and_ocr, flash_toast) need no permission; this grants the core defaults so the frontend can listen for the capture-hotkey event.",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "core:event:default"
+  ]
+}

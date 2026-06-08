@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Camera, RefreshCw } from 'lucide-react';
-import { isDesktop, listWindows, captureAndOcr, listen, CAPTURE_HOTKEY_EVENT } from '../lib/desktop.js';
+import { isDesktop, listWindows, captureAndOcr, listen, CAPTURE_HOTKEY_EVENT, flashToast, beep, primeAudio } from '../lib/desktop.js';
 import { parseSummary, resolveSpecies } from '../lib/breeding/parseSummary.js';
 import { blankBoxMon } from '../lib/breeding/box.js';
 
@@ -48,17 +48,30 @@ function CapturePanelInner({ data, onImport }) {
         gender: parsed.gender || 'F',
         ivs: { ...blankBoxMon().ivs, ...parsed.ivs },
         nature: parsed.nature || '',
+        shiny: !!payload.shiny,
+        alpha: !!payload.alpha,
         source: 'capture',
         addedAt: new Date().toISOString(),
       };
       onImport([mon]);
+
+      // "Clean read" = species resolved AND the IV row parsed.
+      const clean = !!(parsed.confidence.species && species && parsed.confidence.ivs);
+      const name = species && parsed.speciesName ? parsed.speciesName : 'mon';
+      const marks = [payload.shiny && 'shiny', payload.alpha && 'alpha'].filter(Boolean).join(' ');
+      const toastMsg = `Added ${name}${marks ? ` (${marks})` : ''} ${clean ? '✓' : '— check it'}`;
+
+      beep(clean);
+      flashToast(toastMsg, clean);
+
       const bits = [];
-      if (parsed.confidence.species && species) bits.push(parsed.speciesName);
-      else bits.push('species?');
-      if (parsed.confidence.ivs) bits.push('IVs read');
+      bits.push(species ? parsed.speciesName : 'species?');
+      if (parsed.confidence.ivs) bits.push('IVs read'); else bits.push('IVs?');
       if (parsed.confidence.nature) bits.push(parsed.nature);
-      setStatus({ kind: 'ok', msg: `Added (${bits.join(' · ')}). Check the new row below and fix anything OCR missed.` });
+      if (marks) bits.push(marks);
+      setStatus({ kind: clean ? 'ok' : 'warn', msg: `Added (${bits.join(' · ')}). Review the new row below and fix anything OCR missed.` });
     } catch (e) {
+      beep(false);
       setStatus({ kind: 'err', msg: `Capture failed: ${String(e?.message || e)}` });
     } finally {
       setBusy(false);
@@ -90,7 +103,7 @@ function CapturePanelInner({ data, onImport }) {
       <div className="flex flex-wrap items-center gap-2">
         <select
           value={hwnd ?? ''}
-          onChange={(e) => setHwnd(e.target.value ? Number(e.target.value) : null)}
+          onChange={(e) => { primeAudio(); setHwnd(e.target.value ? Number(e.target.value) : null); }}
           className="flex-1 min-w-0 px-2 py-1 rounded border border-[#d6c8a3] dark:border-stone-700 bg-[#fdf8e9] dark:bg-stone-900 text-stone-800 dark:text-stone-200 text-xs focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <option value="">Select the PokéMMO window…</option>

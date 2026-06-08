@@ -40,3 +40,50 @@ export async function captureAndOcr({ hwnd, rect = null } = {}) {
 
 // Event name the global capture hotkey fires.
 export const CAPTURE_HOTKEY_EVENT = 'capture-hotkey';
+
+// Flash the always-on-top overlay toast (no-op off-desktop).
+export async function flashToast(text, ok) {
+  if (!isDesktop()) return;
+  try {
+    await invoke('flash_toast', { text, ok });
+  } catch {
+    /* ignore */
+  }
+}
+
+/* ── Audio cue ───────────────────────────────────────────────────────────── */
+// A short tone played from the (hidden) main window — audible over a fullscreen
+// game. High tone = clean read, low tone = check it. The AudioContext unlocks on
+// the first user gesture in the app and then plays even on the hotkey path.
+
+let _audioCtx = null;
+
+export function primeAudio() {
+  try {
+    _audioCtx = _audioCtx || new (window.AudioContext || window.webkitAudioContext)();
+    if (_audioCtx.state === 'suspended') _audioCtx.resume();
+  } catch {
+    /* ignore */
+  }
+}
+
+export function beep(ok) {
+  try {
+    primeAudio();
+    if (!_audioCtx) return;
+    const o = _audioCtx.createOscillator();
+    const g = _audioCtx.createGain();
+    o.type = 'sine';
+    o.frequency.value = ok ? 880 : 330;
+    o.connect(g);
+    g.connect(_audioCtx.destination);
+    const t = _audioCtx.currentTime;
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(0.22, t + 0.02);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + 0.2);
+    o.start(t);
+    o.stop(t + 0.22);
+  } catch {
+    /* ignore */
+  }
+}
