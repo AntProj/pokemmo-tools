@@ -170,57 +170,66 @@ fn detect_mark(img: &image::RgbaImage) -> (bool, bool) {
     (yf > 0.012, rf > 0.012)
 }
 
-/// Detect gender from the colored ♂/♀ glyph that follows the species name. We
-/// anchor to the "Lv." word's line, then sample just to the right of the name
-/// for a blue (male) vs pink/magenta (female) hue. Returns None if unclear.
+/// Detect gender from the colored ♂/♀ glyph on the species-name row. We anchor
+/// the row off the "Lv" word (or, if OCR garbled it, the text line just above
+/// "Stats"), then scan the FULL width of that row: the name text is light and
+/// desaturated, so the only saturated blob is the glyph — blue ♂ vs pink/red ♀.
+/// Scanning the whole row avoids depending on exactly where the name ends (OCR
+/// sometimes reads the glyph itself as a stray letter). Returns None if unclear.
 fn detect_gender(img: &image::RgbaImage, words: &[ocr::WordBox]) -> Option<String> {
-    let lv = words.iter().find(|w| {
-        let t = w.text.to_lowercase();
-        t == "lv" || t == "lv." || t.starts_with("lv.") || t.starts_with("lv ")
-    })?;
-    let cy = lv.y + lv.h * 0.5;
-    let gh = lv.h.max(10.0);
-    // Rightmost edge of any word on the name line = end of the name.
-    let line_right = words
-        .iter()
-        .filter(|w| ((w.y + w.h * 0.5) - cy).abs() < gh * 0.8)
-        .map(|w| w.x + w.w)
-        .fold(0.0f32, f32::max);
-
+    let (cy, gh) = name_row(words)?;
     let (iw, ih) = (img.width() as i32, img.height() as i32);
-    let x0 = ((line_right + 0.1 * gh) as i32).clamp(0, iw - 1);
-    let x1 = ((line_right + 2.6 * gh) as i32).clamp(x0 + 1, iw);
-    let y0 = ((cy - 0.9 * gh) as i32).clamp(0, ih - 1);
-    let y1 = ((cy + 0.9 * gh) as i32).clamp(y0 + 1, ih);
+    let y0 = ((cy - gh * 0.9) as i32).clamp(0, ih - 1);
+    let y1 = ((cy + gh * 0.9) as i32).clamp(y0 + 1, ih);
 
     let (mut male, mut female, mut total) = (0u32, 0u32, 0u32);
     for yy in y0..y1 {
-        for xx in x0..x1 {
+        for xx in 0..iw {
             let p = img.get_pixel(xx as u32, yy as u32).0;
             let (hue, s, v) = rgb_to_hsv(p[0], p[1], p[2]);
-            if s < 0.35 || v < 0.35 {
+            if s < 0.30 || v < 0.35 {
                 continue;
             }
             total += 1;
-            if (198.0..=246.0).contains(&hue) {
+            if (185.0..=255.0).contains(&hue) {
                 male += 1; // blue ♂
-            } else if (300.0..=345.0).contains(&hue) || hue >= 345.0 || hue <= 8.0 {
+            } else if (290.0..=360.0).contains(&hue) || hue <= 12.0 {
                 female += 1; // pink/red ♀
             }
         }
     }
-    if total == 0 {
+    if total < 4 {
         return None;
     }
     let mf = male as f32 / total as f32;
     let ff = female as f32 / total as f32;
-    if mf > 0.12 && male >= female {
+    if mf >= 0.25 && male >= female {
         Some("M".into())
-    } else if ff > 0.12 {
+    } else if ff >= 0.25 {
         Some("F".into())
     } else {
         None
     }
+}
+
+/// (center_y, height) of the species-name row. Prefers the "Lv" word; falls back
+/// to the OCR line directly above "Stats".
+fn name_row(words: &[ocr::WordBox]) -> Option<(f32, f32)> {
+    if let Some(w) = words
+        .iter()
+        .find(|w| w.text.trim().to_lowercase().starts_with("lv"))
+    {
+        return Some((w.y + w.h * 0.5, w.h.max(10.0)));
+    }
+    let stats = words
+        .iter()
+        .find(|w| w.text.trim().to_lowercase().starts_with("stat"))?;
+    let limit = stats.y - stats.h * 0.4;
+    let above = words
+        .iter()
+        .filter(|w| (w.y + w.h * 0.5) < limit)
+        .max_by(|a, b| a.y.partial_cmp(&b.y).unwrap())?;
+    Some((above.y + above.h * 0.5, above.h.max(10.0)))
 }
 
 /// Show the always-on-top toast overlay near the top of the screen with a short
