@@ -4,6 +4,7 @@ import NavBar from './components/NavBar.jsx';
 import PokemonModal from './components/PokemonModal.jsx';
 import Pokedex from './pages/Pokedex.jsx';
 import { loadStore as loadBoxStore, saveStore as saveBoxStore } from './lib/box.js';
+import { loadStore as loadTeamsStore, saveStore as saveTeamsStore } from './lib/teams.js';
 
 // Heavy / non-landing pages are code-split so the initial load (the Pokédex)
 // doesn't pay for Leaflet (RegionMap ≈ 150 KB+), the breeding optimizer, etc.
@@ -14,6 +15,7 @@ const Tracker         = lazy(() => import('./pages/Tracker.jsx'));
 const BoxPage         = lazy(() => import('./pages/Box.jsx'));
 const CatchCalc       = lazy(() => import('./pages/CatchCalc.jsx'));
 const DamageCalc      = lazy(() => import('./pages/DamageCalc.jsx'));
+const TeamBuilder     = lazy(() => import('./pages/TeamBuilder.jsx'));
 const BreedingPlanner = lazy(() => import('./pages/BreedingPlanner.jsx'));
 const RegionMap       = lazy(() => import('./pages/RegionMap.jsx'));
 const TrainerScribe   = lazy(() => import('./pages/TrainerScribe.jsx'));
@@ -103,6 +105,10 @@ export default function App() {
   // The Box — shared across the Box page and the breeding planner.
   const [boxStore, setBoxStore]               = useState(loadBoxStore);
   useEffect(() => { saveBoxStore(boxStore); }, [boxStore]);
+
+  // Teams — Team Builder store.
+  const [teamsStore, setTeamsStore]           = useState(loadTeamsStore);
+  useEffect(() => { saveTeamsStore(teamsStore); }, [teamsStore]);
 
   // Pokémon detail modal — shared so both pages can open it.
   const [selectedId, setSelectedId] = useState(null);
@@ -279,6 +285,18 @@ export default function App() {
               element={
                 <DamageCalc
                   data={data}
+                  theme={theme} onTheme={setTheme}
+                />
+              }
+            />
+            <Route
+              path="/teams"
+              element={
+                <TeamBuilder
+                  data={data}
+                  store={teamsStore}
+                  setStore={setTeamsStore}
+                  boxStore={boxStore}
                   theme={theme} onTheme={setTheme}
                 />
               }
