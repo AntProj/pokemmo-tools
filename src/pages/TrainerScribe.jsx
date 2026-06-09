@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { Sun, Moon, Crop, X, Download, Play, Square, Save, Trash2, RefreshCw } from 'lucide-react';
+import { Sun, Moon, Crop, X, Download, Upload, Play, Square, Save, Trash2, RefreshCw } from 'lucide-react';
 import PokemonSprite from '../components/PokemonSprite.jsx';
 import { isDesktop, listWindows, captureAndOcr } from '../lib/desktop.js';
 import {
@@ -19,6 +19,20 @@ function loadRegions() {
   return {};
 }
 function saveRegions(r) { try { localStorage.setItem(LS_REGIONS, JSON.stringify(r)); } catch { /* ignore */ } }
+
+const CONTRIB_URL_KEY = 'pokemmo:scribe:contributeUrl';
+function loadContribUrl() {
+  try { return localStorage.getItem(CONTRIB_URL_KEY) || (import.meta.env.VITE_CONTRIBUTE_URL || ''); }
+  catch { return import.meta.env.VITE_CONTRIBUTE_URL || ''; }
+}
+// Stable anonymous id so consensus can count distinct contributors.
+function contributorId() {
+  try {
+    let c = localStorage.getItem('pokemmo:scribe:cid');
+    if (!c) { c = 'c_' + Math.random().toString(36).slice(2, 10); localStorage.setItem('pokemmo:scribe:cid', c); }
+    return c;
+  } catch { return 'anon'; }
+}
 
 // Trainer Scribe — a dev-only authoring tool. Watches a PokéMMO battle and
 // records the opponent trainer's team / moves / levels / reward into an
@@ -58,6 +72,9 @@ export default function TrainerScribe({ data, theme, onTheme }) {
   const [autoSave, setAutoSave] = useState(() => { try { return localStorage.getItem('pokemmo:scribe:autosave') !== '0'; } catch { return true; } });
   useEffect(() => { try { localStorage.setItem('pokemmo:scribe:autosave', autoSave ? '1' : '0'); } catch { /* ignore */ } }, [autoSave]);
   const [completePrompt, setCompletePrompt] = useState(false);
+  const [contribUrl, setContribUrl] = useState(loadContribUrl);
+  const [contribStatus, setContribStatus] = useState(null);
+  useEffect(() => { try { localStorage.setItem(CONTRIB_URL_KEY, contribUrl); } catch { /* ignore */ } }, [contribUrl]);
   const obsRef = useRef(obs); obsRef.current = obs;
   const autoSaveRef = useRef(autoSave); autoSaveRef.current = autoSave;
   const seenAllRef = useRef(new Set()); // every log line ever seen — dedup + battle-boundary detection
@@ -166,6 +183,23 @@ export default function TrainerScribe({ data, theme, onTheme }) {
   };
   const exportJSON = () => downloadText(scribeToJSON(scribe), 'trainer-teams.json');
 
+  const contribute = async () => {
+    const n = Object.keys(scribe.trainers || {}).length;
+    if (!contribUrl) { setContribStatus({ kind: 'warn', msg: 'Set the contribution endpoint URL first.' }); return; }
+    if (!n) { setContribStatus({ kind: 'warn', msg: 'No profiles to contribute yet.' }); return; }
+    setContribStatus({ kind: 'ok', msg: 'Sending…' });
+    try {
+      const res = await fetch(contribUrl, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ contributor: contributorId(), trainers: scribe.trainers }),
+      });
+      const j = await res.json().catch(() => ({}));
+      setContribStatus(res.ok
+        ? { kind: 'ok', msg: `Contributed ${j.stored ?? n} trainer(s). Thanks!` }
+        : { kind: 'err', msg: `Failed: ${j.error || res.status}` });
+    } catch (e) { setContribStatus({ kind: 'err', msg: String(e?.message || e) }); }
+  };
+
   const profiles = Object.entries(scribe.trainers);
   const regionsSet = REGION_DEFS.filter((r) => regions[r.key]).length;
 
@@ -190,6 +224,23 @@ export default function TrainerScribe({ data, theme, onTheme }) {
         Battle a trainer with recording on; the foe's team, moves, levels, and reward accrue into a profile —
         battle them again another day to fill in the rest. Exports merge into the trainerInstances catalog by name + route.
       </p>
+
+      {/* Community contribution */}
+      <section className="rounded-md border border-violet-300 dark:border-violet-900 bg-violet-50/50 dark:bg-violet-950/20 p-3 space-y-1.5">
+        <div className="flex items-center gap-2 flex-wrap">
+          <span className="text-xs font-semibold uppercase tracking-wider text-violet-800 dark:text-violet-200">Community data</span>
+          <input value={contribUrl} onChange={(e) => setContribUrl(e.target.value)} placeholder="Contribution endpoint URL (Cloudflare Worker)"
+            className="flex-1 min-w-[200px] px-2 py-1 rounded border border-[#d6c8a3] dark:border-stone-700 bg-[#fdf8e9] dark:bg-stone-900 text-xs" />
+          <button type="button" onClick={contribute}
+            className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-md bg-violet-600 hover:bg-violet-700 text-white text-xs">
+            <Upload size={13} /> Contribute
+          </button>
+        </div>
+        <div className="text-[11px] text-violet-800/70 dark:text-violet-200/70">
+          Sends your trainer profiles only (no usernames or chat). They're consensus-merged with everyone else's daily.
+        </div>
+        {contribStatus && <div className={`text-[11px] ${contribStatus.kind === 'err' ? 'text-red-600 dark:text-red-400' : contribStatus.kind === 'warn' ? 'text-amber-700 dark:text-amber-400' : 'text-stone-600 dark:text-stone-300'}`}>{contribStatus.msg}</div>}
+      </section>
 
       {/* Capture controls (desktop only) */}
       {desktop ? (

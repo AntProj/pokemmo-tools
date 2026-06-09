@@ -9,8 +9,10 @@
 
     "build:data": "node scripts/build-data.mjs",
 
-    "_comment_merge_trainers": "Merge a Trainer Scribe export into a region's trainerInstances catalog. e.g. npm run merge:trainers -- ~/Downloads/trainer-teams.json --region=johto --dry-run",
+    "_comment_merge_trainers": "Trainer-team data tooling. merge:trainers folds ONE scribe export into a region's catalog; aggregate:trainers consensus-merges a whole data/contributions/ folder; fetch:contributions pulls community submissions from R2 (needs R2_* creds). The daily GitHub Action runs fetch → aggregate → deploy.",
     "merge:trainers": "node scripts/merge-trainer-teams.mjs",
+    "fetch:contributions": "node --env-file-if-exists=.env.local scripts/fetch-contributions.mjs",
+    "aggregate:trainers": "node scripts/aggregate-contributions.mjs",
 
 
     "build:map-data":        "node --env-file-if-exists=.env.local scripts/build-map-data.mjs sinnoh",
