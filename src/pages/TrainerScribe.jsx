@@ -53,6 +53,16 @@ export default function TrainerScribe({ data, theme, onTheme }) {
 
   const obs = useMemo(() => buildObservation({ logLines, bars, routeText }), [logLines, bars, routeText]);
 
+  // Auto-save when a battle completes (during live recording). Refs let the
+  // capture loop read the latest values without re-subscribing each tick.
+  const [autoSave, setAutoSave] = useState(() => { try { return localStorage.getItem('pokemmo:scribe:autosave') !== '0'; } catch { return true; } });
+  useEffect(() => { try { localStorage.setItem('pokemmo:scribe:autosave', autoSave ? '1' : '0'); } catch { /* ignore */ } }, [autoSave]);
+  const [completePrompt, setCompletePrompt] = useState(false);
+  const obsRef = useRef(obs); obsRef.current = obs;
+  const autoSaveRef = useRef(autoSave); autoSaveRef.current = autoSave;
+  const seenAllRef = useRef(new Set()); // every log line ever seen — dedup + battle-boundary detection
+  const savedRef = useRef(false);       // has the current battle been saved?
+
   /* ── capture wiring ── */
   const refresh = useCallback(async () => {
     try {
@@ -73,7 +83,24 @@ export default function TrainerScribe({ data, theme, onTheme }) {
       if (regions.log) {
         const p = await captureAndOcr({ hwnd, rect: regions.log });
         const ls = linesFromWords(p.words);
-        setLogLines((prev) => mergeUnique(prev, ls));
+        // Only lines we've never seen (timestamps make each battle's lines unique).
+        const fresh = ls.map((l) => l.trim()).filter((l) => l && !seenAllRef.current.has(l));
+        if (fresh.length) {
+          fresh.forEach((l) => seenAllRef.current.add(l));
+          if (fresh.some((l) => /You are challenged by/i.test(l))) {
+            // New battle started → auto-save the previous one (if enabled and
+            // unsaved), then reset the buffer to the new battle's lines.
+            const prev = obsRef.current;
+            if (autoSaveRef.current && prev.trainer && !savedRef.current) {
+              setScribe((s) => mergeObservation(s, prev, new Date().toISOString()));
+            }
+            savedRef.current = false;
+            setBars([]);
+            setLogLines(fresh);
+          } else {
+            setLogLines((prevLines) => [...prevLines, ...fresh]);
+          }
+        }
       }
       if (regions.opponent) {
         const p = await captureAndOcr({ hwnd, rect: regions.opponent });
@@ -99,6 +126,20 @@ export default function TrainerScribe({ data, theme, onTheme }) {
     return () => clearInterval(id);
   }, [recording]);
 
+  // Battle complete (a "defeated" line was parsed) → auto-save while recording,
+  // otherwise raise the save prompt. The savedRef guard fires this once.
+  useEffect(() => {
+    if (obs.defeated && obs.trainer && !savedRef.current) {
+      if (autoSave && recording) {
+        setScribe((s) => mergeObservation(s, obs, new Date().toISOString()));
+        savedRef.current = true;
+        setStatus({ kind: 'ok', msg: `Auto-saved ${obs.trainer} (${obs.team.length} mon) — battle complete.` });
+      } else {
+        setCompletePrompt(true);
+      }
+    }
+  }, [obs.defeated, obs.trainer, autoSave, recording]); // eslint-disable-line react-hooks/exhaustive-deps
+
   const startCalibrate = async (key) => {
     if (!hwnd) { setStatus({ kind: 'warn', msg: 'Pick the PokéMMO window first.' }); return; }
     try {
@@ -112,12 +153,16 @@ export default function TrainerScribe({ data, theme, onTheme }) {
     if (lines.length) setLogLines((prev) => mergeUnique(prev, lines));
   };
 
-  const clearBattle = () => { setLogLines([]); setBars([]); };
+  // Hard reset — discard the current battle and re-read from scratch.
+  const clearBattle = () => { setLogLines([]); setBars([]); seenAllRef.current = new Set(); savedRef.current = false; setCompletePrompt(false); };
   const saveBattle = () => {
     if (!obs.trainer) { setStatus({ kind: 'warn', msg: 'No trainer parsed yet.' }); return; }
     setScribe((s) => mergeObservation(s, obs, new Date().toISOString()));
+    savedRef.current = true;
+    setCompletePrompt(false);
     setStatus({ kind: 'ok', msg: `Saved ${obs.trainer} (${obs.team.length} mon).` });
-    clearBattle();
+    // Clear the visible buffer but keep `seenAll` so the finished log isn't re-added.
+    setLogLines([]); setBars([]);
   };
   const exportJSON = () => downloadText(scribeToJSON(scribe), 'trainer-teams.json');
 
@@ -160,6 +205,9 @@ export default function TrainerScribe({ data, theme, onTheme }) {
               className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm text-white disabled:opacity-50 ${recording ? 'bg-red-600 hover:bg-red-700' : 'bg-blue-600 hover:bg-blue-700'}`}>
               {recording ? <><Square size={14} /> Stop</> : <><Play size={14} /> Record</>}
             </button>
+            <label className="inline-flex items-center gap-1 text-xs text-stone-700 dark:text-stone-300" title="Save the trainer automatically when the battle ends">
+              <input type="checkbox" checked={autoSave} onChange={(e) => setAutoSave(e.target.checked)} className="accent-blue-500" /> Auto-save on win
+            </label>
           </div>
           <div className="flex flex-wrap gap-1.5">
             {REGION_DEFS.map((r) => (
@@ -209,6 +257,15 @@ export default function TrainerScribe({ data, theme, onTheme }) {
             </button>
           </div>
         </div>
+        {completePrompt && obs.trainer && (
+          <div className="rounded-md border border-emerald-300 dark:border-emerald-800 bg-emerald-50 dark:bg-emerald-950/30 p-2.5 flex items-center gap-2 text-sm">
+            <span className="text-emerald-800 dark:text-emerald-200">✓ Battle complete — <strong>{obs.trainer}</strong> ({obs.team.length} mon). Save to profile?</span>
+            <div className="ml-auto flex gap-1.5">
+              <button type="button" onClick={saveBattle} className="px-2 py-1 rounded bg-emerald-600 hover:bg-emerald-700 text-white text-xs">Save</button>
+              <button type="button" onClick={() => { setCompletePrompt(false); savedRef.current = true; }} className="px-2 py-1 rounded border border-stone-300 dark:border-stone-700 text-xs text-stone-600 dark:text-stone-300">Dismiss</button>
+            </div>
+          </div>
+        )}
         {obs.trainer ? (
           <ObservationView obs={obs} byNorm={byNorm} moveNames={moveNames} />
         ) : (
