@@ -3,7 +3,11 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { Box, Image, ChevronDown, SlidersHorizontal, ArrowUp, ArrowDown, Check } from 'lucide-react';
 import { useSpriteMode, setSpriteMode } from '../lib/spriteMode.js';
 import { NAV_DESTINATIONS, NAV_BY_ID, loadNav, saveNav, resolveNav } from '../lib/navConfig.js';
+import { isDesktop } from '../lib/desktop.js';
 import Modal from './Modal.jsx';
+
+// Dev-only destinations (Scribe) appear in the desktop app or a dev build.
+const SHOW_DEV = isDesktop() || import.meta.env.DEV;
 
 const tabClass = ({ isActive }) => `
   px-3 py-2.5 text-sm font-medium border-b-2 transition-colors whitespace-nowrap
@@ -25,7 +29,7 @@ export default function NavBar() {
   const [customizing, setCustomizing] = useState(false);
 
   const update = (next) => { setNav(next); saveNav(next); };
-  const { pinned, more } = useMemo(() => resolveNav(nav), [nav]);
+  const { pinned, more } = useMemo(() => resolveNav(nav, SHOW_DEV), [nav]);
 
   return (
     <nav className="bg-[#fdf8e9] dark:bg-stone-900 border-b border-[#e6dabf] dark:border-stone-800">
@@ -165,7 +169,7 @@ function CustomizeNavModal({ nav, onChange, onClose }) {
         <ul className="divide-y divide-[#ece2c4] dark:divide-stone-800/60">
           {nav.order.map((id, i) => {
             const dest = NAV_BY_ID[id];
-            if (!dest) return null;
+            if (!dest || (dest.devOnly && !SHOW_DEV)) return null;
             const onBar = barSet.has(id);
             return (
               <li key={id} className="flex items-center gap-2 py-2">

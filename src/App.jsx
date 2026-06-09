@@ -15,6 +15,7 @@ const BoxPage         = lazy(() => import('./pages/Box.jsx'));
 const CatchCalc       = lazy(() => import('./pages/CatchCalc.jsx'));
 const BreedingPlanner = lazy(() => import('./pages/BreedingPlanner.jsx'));
 const RegionMap       = lazy(() => import('./pages/RegionMap.jsx'));
+const TrainerScribe   = lazy(() => import('./pages/TrainerScribe.jsx'));
 
 // The dataset (~6.7 MB) is served as a static asset from public/ and fetched
 // at runtime rather than bundled into the JS — that single change drops the
@@ -250,6 +251,15 @@ export default function App() {
                   data={data}
                   store={boxStore}
                   setStore={setBoxStore}
+                  theme={theme} onTheme={setTheme}
+                />
+              }
+            />
+            <Route
+              path="/scribe"
+              element={
+                <TrainerScribe
+                  data={data}
                   theme={theme} onTheme={setTheme}
                 />
               }

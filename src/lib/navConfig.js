@@ -13,6 +13,8 @@ export const NAV_DESTINATIONS = [
   { id: 'box',       label: 'Box',        to: '/box',                   defaultBar: true },
   { id: 'catch',     label: 'Catch Calc', to: '/catch',                 defaultBar: false },
   { id: 'breeding',  label: 'Breeding',   to: '/breeding',              defaultBar: false },
+  // Dev-only authoring tool — only surfaced in the desktop app or a dev build.
+  { id: 'scribe',    label: 'Scribe',     to: '/scribe',                defaultBar: false, devOnly: true },
 ];
 
 export const NAV_BY_ID = Object.fromEntries(NAV_DESTINATIONS.map((d) => [d.id, d]));
@@ -59,10 +61,13 @@ export function saveNav(nav) {
   try { localStorage.setItem(LS_NAV, JSON.stringify(nav)); } catch { /* ignore */ }
 }
 
-// Resolve a layout into ordered destination objects for each slot.
-export function resolveNav(nav) {
+// Resolve a layout into ordered destination objects for each slot. `showDev`
+// gates devOnly destinations (the Scribe authoring tool) — hidden unless on
+// desktop or a dev build.
+export function resolveNav(nav, showDev = false) {
+  const ok = (d) => d && (!d.devOnly || showDev);
   const barSet = new Set(nav.bar);
-  const pinned = nav.order.filter((id) => barSet.has(id)).map((id) => NAV_BY_ID[id]).filter(Boolean);
-  const more   = nav.order.filter((id) => !barSet.has(id)).map((id) => NAV_BY_ID[id]).filter(Boolean);
+  const pinned = nav.order.filter((id) => barSet.has(id)).map((id) => NAV_BY_ID[id]).filter(ok);
+  const more   = nav.order.filter((id) => !barSet.has(id)).map((id) => NAV_BY_ID[id]).filter(ok);
   return { pinned, more };
 }
