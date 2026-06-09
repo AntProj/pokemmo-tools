@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Sun, Moon, Swords, ChevronRight } from 'lucide-react';
 import Modal from '../components/Modal.jsx';
 import TypeBadge from '../components/TypeBadge.jsx';
@@ -30,6 +30,7 @@ const dedupeTypes = (arr) => [...new Set((arr || []).map((t) => String(t).toLowe
 
 export default function TrainerPrep({ data, boxStore, theme, onTheme }) {
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
   const byId = useMemo(() => new Map(data.pokemon.map((p) => [p.id, p])), [data.pokemon]);
   const [trainers, setTrainers] = useState(null);
   const [error, setError] = useState(null);
@@ -46,6 +47,18 @@ export default function TrainerPrep({ data, boxStore, theme, onTheme }) {
       .catch((e) => { if (!cancelled) setError(e.message || String(e)); });
     return () => { cancelled = true; };
   }, []);
+
+  // Deep-link: ?open=<trainerId> (e.g. from the map's gym-city link) opens that
+  // trainer and selects its region. Consumed once so closing the modal sticks.
+  useEffect(() => {
+    if (!trainers) return;
+    const id = searchParams.get('open');
+    if (!id) return;
+    const t = trainers.find((x) => x.id === id);
+    if (t) { setRegion(t.region); setOpenId(id); }
+    searchParams.delete('open');
+    setSearchParams(searchParams, { replace: true });
+  }, [trainers]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const filtered = useMemo(() => {
     if (!trainers) return [];

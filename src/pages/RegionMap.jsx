@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate, useParams, Link } from 'react-router-dom';
-import { Sun, Moon, ArrowLeft, X, Users, ExternalLink, ArrowUp, ArrowDown, ArrowLeftIcon, ArrowRight, Coins, Search, ChevronDown, Route as RouteIcon, MapPin, Flag } from 'lucide-react';
+import { Sun, Moon, ArrowLeft, X, Users, ExternalLink, ArrowUp, ArrowDown, ArrowLeftIcon, ArrowRight, Coins, Search, ChevronDown, Route as RouteIcon, MapPin, Flag, Swords } from 'lucide-react';
 import { MapContainer, ImageOverlay, TileLayer, Marker, Rectangle, Polyline, CircleMarker, useMap, useMapEvents, Tooltip } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -149,6 +149,16 @@ export default function RegionMap({ region = 'sinnoh', theme, onTheme }) {
   const [overworldLocations, setOverworldLocations]     = useState(null);
   const [zoneGraph, setZoneGraph]                       = useState(null);
   const [indexError, setIndexError]                     = useState(null);
+  // Gym-city → Prep lookup (region → normalized location → { id, name }).
+  // Tiny static file so a gym city can deep-link to the Gym & E4 Prep tool.
+  const [gymCities, setGymCities]                       = useState(null);
+  useEffect(() => {
+    let cancelled = false;
+    fetch(`${BASE}/data/gym-cities.json`).then((r) => r.json())
+      .then((g) => { if (!cancelled) setGymCities(g); })
+      .catch(() => { /* non-critical — the link just won't show */ });
+    return () => { cancelled = true; };
+  }, []);
 
   // Cross-zone route state lives at this top level (not MapView) so it
   // SURVIVES MapView's remount when the user navigates from a zone's
@@ -193,6 +203,11 @@ export default function RegionMap({ region = 'sinnoh', theme, onTheme }) {
     return () => { cancelled = true; };
   }, [dataUrls, region]);
 
+  // If the current zone is a gym city, surface a link to that leader's rematch
+  // team in the Gym & E4 Prep tool (gym leaders aren't datamined map NPCs).
+  const zoneDisplay = mapsIndex?.[zoneId]?.displayName || '';
+  const gymHere = (zoneId !== 'world' && gymCities?.[region]?.[zoneDisplay.toLowerCase().replace(/[^a-z0-9]/g, '')]) || null;
+
   return (
     <main className="max-w-7xl mx-auto px-4 py-4 space-y-4">
       <div className="flex items-center gap-2 flex-wrap">
@@ -212,6 +227,20 @@ export default function RegionMap({ region = 'sinnoh', theme, onTheme }) {
         <h1 className="text-base font-semibold text-stone-900 dark:text-stone-100">
           {mapsIndex?.[zoneId]?.displayName || (zoneId === 'world' ? `${regionDisplay} Overworld` : `Zone ${zoneId}`)}
         </h1>
+
+        {gymHere && (
+          <Link
+            to={`/trainers?open=${gymHere.id}`}
+            title={`View ${gymHere.name}’s rematch team in Gym & E4 Prep`}
+            className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md
+                       border border-amber-400/70 dark:border-amber-700
+                       bg-amber-100/70 dark:bg-amber-900/30
+                       hover:bg-amber-200/70 dark:hover:bg-amber-900/50
+                       text-xs font-medium text-amber-900 dark:text-amber-200"
+          >
+            <Swords size={13} /> {gymHere.name}’s team
+          </Link>
+        )}
 
         {/* Region switcher. Maps is a single nav tab now, so the Sinnoh/Johto
             choice lives here. Each link targets the region's overworld — a

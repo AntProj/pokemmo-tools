@@ -100,6 +100,16 @@ fs.writeFileSync(outPath, JSON.stringify({
   trainers,
 }, null, 0));
 
+// Compact gym-city → trainer lookup so the map can deep-link to the Prep tool
+// without fetching the full trainers.json. Keyed region → normalized location.
+const locKey = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+const gymCities = {};
+for (const t of trainers) {
+  if (t.kind !== 'gym' || !t.location) continue;
+  (gymCities[t.region] ||= {})[locKey(t.location)] = { id: t.id, name: t.name, location: t.location };
+}
+fs.writeFileSync(path.join(ROOT, 'public/data/gym-cities.json'), JSON.stringify(gymCities));
+
 const summary = {};
 for (const t of trainers) { summary[t.region] = summary[t.region] || {}; summary[t.region][t.kind] = (summary[t.region][t.kind] || 0) + 1; }
 const totalVariants = trainers.reduce((a, t) => a + t.variants.length, 0);
