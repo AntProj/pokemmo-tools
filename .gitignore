@@ -20,13 +20,6 @@ public/data/pokemmo.json
 public/data/maps/*/images/
 public/data/maps/*/tiles/
 
-# Community Trainer Scribe contributions pulled from R2 by the daily Action
-# (scripts/fetch-contributions.mjs) — transient input to the consensus merge,
-# not committed. Cloudflare build artifacts too.
-data/contributions/
-cloudflare/**/node_modules/
-cloudflare/**/.wrangler/
-
 # Temporary worktree used by scripts/deploy-gh-pages.mjs. The deploy script
 # creates this dir, populates it with dist/ contents, pushes, then removes
 # it. If a deploy is interrupted, the dir may persist — gitignored so it
