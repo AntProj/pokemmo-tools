@@ -4,10 +4,17 @@
 
 import * as calcNS from 'pokemmo-calc';
 
-// The engine is CommonJS (with __esModule), so named exports aren't statically
-// resolvable by Rollup. Import the namespace and pick whichever interop shape
-// (dev/esbuild vs build/rollup) actually carries the API.
-const Calc = calcNS && calcNS.calculate ? calcNS : (calcNS.default || calcNS);
+// The engine is CommonJS (with __esModule); its named exports aren't statically
+// resolvable by Rollup. Resolve the API shape through a function so we don't
+// reference members on the namespace binding directly — that both keeps the
+// dev (esbuild) / build (rollup) interop working AND avoids Rollup's harmless
+// "X is not exported" warnings.
+function resolveCalc(ns) {
+  if (ns && typeof ns.calculate === 'function') return ns;
+  if (ns && ns.default) return ns.default;
+  return ns;
+}
+const Calc = resolveCalc(calcNS);
 const { Generations, Pokemon, Move, Field, calculate } = Calc;
 
 // PokéMMO is a Gen 5/6 blend; the engine patches the deltas (1.5x crit,
