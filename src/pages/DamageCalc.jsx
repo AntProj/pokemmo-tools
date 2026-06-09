@@ -28,6 +28,30 @@ export default function DamageCalc({ data, theme, onTheme }) {
   const [field, setField] = useState(EMPTY_FIELD);
   const [selected, setSelected] = useState({ side: 1, index: 0 });
 
+  // Prefill Pokémon 1 from a Team Builder "Test in Calc" handoff.
+  useEffect(() => {
+    let raw;
+    try { raw = sessionStorage.getItem('pokemmo:calc:prefill'); } catch { return; }
+    if (!raw) return;
+    try { sessionStorage.removeItem('pokemmo:calc:prefill'); } catch { /* ignore */ }
+    let set;
+    try { set = JSON.parse(raw); } catch { return; }
+    if (!set || set.monId == null) return;
+    const moves = [0, 1, 2, 3].map((i) => {
+      const name = (set.moves || [])[i] || '';
+      if (!name) return EMPTY_MOVE();
+      const d = moveDefaults(name);
+      return d ? { name, bp: d.bp, type: d.type, category: d.category, crit: false } : { ...EMPTY_MOVE(), name };
+    });
+    setMon1({
+      ...EMPTY_MON(),
+      monId: set.monId, level: set.level ?? 100, nature: set.nature || 'Hardy',
+      ability: set.ability || '', item: set.item || '', gender: ['M', 'F'].includes(set.gender) ? set.gender : '',
+      evs: { ...EMPTY_MON().evs, ...(set.evs || {}) }, ivs: { ...EMPTY_MON().ivs, ...(set.ivs || {}) },
+      moves,
+    });
+  }, []);
+
   const poke1 = mon1.monId != null ? byId.get(mon1.monId) : null;
   const poke2 = mon2.monId != null ? byId.get(mon2.monId) : null;
 
