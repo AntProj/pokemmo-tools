@@ -1,8 +1,11 @@
 {
   "$schema": "../gen/schemas/desktop-schema.json",
   "identifier": "default",
-  "description": "Core capabilities for the main window. App commands (list_windows, capture_and_ocr, flash_toast) need no permission; this grants the core defaults so the frontend can listen for the capture-hotkey event.",
+  "description": "Core capabilities for the main window, which loads the live site (https://antproj.github.io). `remote` grants IPC to that origin so the app commands (list_windows, capture_and_ocr, flash_toast) and the capture-hotkey event work even though the UI is served remotely.",
   "windows": ["main"],
+  "remote": {
+    "urls": ["https://antproj.github.io"]
+  },
   "permissions": [
     "core:default",
     "core:event:default"

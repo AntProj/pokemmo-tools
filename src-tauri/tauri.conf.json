@@ -14,6 +14,7 @@
     "windows": [
       {
         "label": "main",
+        "url": "https://antproj.github.io/pokemmo-tools/",
         "title": "PokeMMO Tools",
         "width": 1280,
         "height": 860,

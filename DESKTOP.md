@@ -6,6 +6,13 @@ and the desktop app load the identical `dist/`. The desktop build only *adds*
 capabilities (screen capture + on-device OCR to populate your **Box**); the
 website is unchanged and never depends on any of it.
 
+**The desktop app loads the live site** (`https://antproj.github.io/pokemmo-tools/`)
+rather than a bundled copy, so it auto-updates the moment you deploy the website
+— the desktop shell exists only to add native screen capture + OCR. The window's
+origin is granted IPC access in `src-tauri/capabilities/default.json` so the
+capture commands work even though the UI is remote. (Only changes to the native
+Rust side require a fresh `desktop:build`.)
+
 Capture/OCR features are gated on `window.__TAURI__`, so:
 
 - **Website (GitHub Pages):** full Pokédex / breeding / tracker, zero install,
