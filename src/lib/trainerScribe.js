@@ -25,7 +25,9 @@ const RE = {
   sentOut:   /^(.+?) sent out (.+?)\s*!?$/i,
   foeMove:   /^The foe['’`]s (.+?) used (.+?)\s*!.*$/i,
   foeFaint:  /^The foe['’`]s (.+?) fainted\s*!?$/i,
-  defeated:  /^(.+?) was defeated\s*!?$/i,
+  // Two win phrasings: "<Trainer> was defeated!" and "<Winner> defeated <Trainer>!".
+  wasDefeated: /^(.+?) was defeated\s*!?$/i,
+  defeatedBy:  /^.+? defeated (.+?)\s*!?$/i,
   reward:    /(?:got|received|won|earned)\s*\$\s*([\d,]+)/i,
 };
 
@@ -79,7 +81,12 @@ export function parseBattleLog(rawLines) {
       if (trainer && who === trainer) ensure(m[2]);
       continue;
     }
-    if ((m = ln.match(RE.defeated))) {
+    if ((m = ln.match(RE.wasDefeated))) {
+      if (trainer && m[1].trim() === trainer) defeated = true;
+      continue;
+    }
+    if ((m = ln.match(RE.defeatedBy))) {
+      // "<winner> defeated <Trainer>!" — only counts when the loser is the trainer.
       if (trainer && m[1].trim() === trainer) defeated = true;
       continue;
     }
