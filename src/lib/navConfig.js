@@ -12,6 +12,7 @@ export const NAV_DESTINATIONS = [
   { id: 'maps',      label: 'Maps',       to: '/map',                   defaultBar: true },
   { id: 'box',       label: 'Box',        to: '/box',                   defaultBar: true },
   { id: 'catch',     label: 'Catch Calc', to: '/catch',                 defaultBar: false },
+  { id: 'damage',    label: 'Damage Calc', to: '/damage',               defaultBar: false },
   { id: 'breeding',  label: 'Breeding',   to: '/breeding',              defaultBar: false },
   // Dev-only authoring tool — only surfaced in the desktop app or a dev build.
   { id: 'scribe',    label: 'Scribe',     to: '/scribe',                defaultBar: false, devOnly: true },

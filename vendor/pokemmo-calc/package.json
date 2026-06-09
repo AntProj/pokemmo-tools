@@ -1,0 +1,8 @@
+{
+  "name": "pokemmo-calc",
+  "version": "0.0.0-vendored",
+  "private": true,
+  "description": "Vendored PokeMMO damage engine (CommonJS @smogon/calc fork from github.com/c4vv/pokemmo-damage-calc).",
+  "main": "index.js",
+  "license": "MIT"
+}

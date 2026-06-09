@@ -12,6 +12,9 @@ const isTauri = !!process.env.TAURI_ENV_PLATFORM;
 export default defineConfig({
   plugins: [react()],
   base: isTauri ? './' : '/pokemmo-tools/',
+  // The vendored damage engine (vendor/pokemmo-calc) is CommonJS — let esbuild
+  // pre-bundle it so named imports work in the browser.
+  optimizeDeps: { include: ['pokemmo-calc'] },
   build: {
     outDir: 'dist',
     chunkSizeWarningLimit: 3000,

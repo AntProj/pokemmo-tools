@@ -13,6 +13,7 @@ const Locations       = lazy(() => import('./pages/Locations.jsx'));
 const Tracker         = lazy(() => import('./pages/Tracker.jsx'));
 const BoxPage         = lazy(() => import('./pages/Box.jsx'));
 const CatchCalc       = lazy(() => import('./pages/CatchCalc.jsx'));
+const DamageCalc      = lazy(() => import('./pages/DamageCalc.jsx'));
 const BreedingPlanner = lazy(() => import('./pages/BreedingPlanner.jsx'));
 const RegionMap       = lazy(() => import('./pages/RegionMap.jsx'));
 const TrainerScribe   = lazy(() => import('./pages/TrainerScribe.jsx'));
@@ -268,6 +269,15 @@ export default function App() {
               path="/catch"
               element={
                 <CatchCalc
+                  data={data}
+                  theme={theme} onTheme={setTheme}
+                />
+              }
+            />
+            <Route
+              path="/damage"
+              element={
+                <DamageCalc
                   data={data}
                   theme={theme} onTheme={setTheme}
                 />
