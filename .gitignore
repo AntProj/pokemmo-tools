@@ -26,6 +26,11 @@ public/data/maps/*/tiles/
 # doesn't pollute `git status` on main.
 .gh-pages-tmp/
 
+# Source spreadsheet for the gym-leader teams (~48 MB, mostly embedded sprites).
+# Only the parsed data/raw/gym-teams.json is committed; download the xlsx from
+# the forum thread (see data/raw/README.md) to regenerate it.
+data/raw/*.xlsx
+
 # Editor
 .vscode/
 .idea/

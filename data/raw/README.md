@@ -31,6 +31,32 @@ Used to enrich the raw PokeMMO data with English text — move effect descriptio
 
 Source: https://github.com/PokeMMOZone/PokeMMO-Data/tree/main/data
 
+## Source 3: Gym Leader Team Query Form (trainer teams)
+
+A community-maintained spreadsheet documenting **every gym leader's team across
+all five regions** (Kanto/Johto/Hoenn/Sinnoh/Unova) — level, item and four moves
+per Pokémon, with several rotating team variants per leader. Kept in sync with
+PokéMMO patches. Unlike the Fandom wiki it covers Sinnoh; it does **not** include
+the Elite Four / champions (those come from the wiki scrape, below).
+
+| File | Description |
+|---|---|
+| `gym-teams.xlsx` | The raw spreadsheet (~48 MB, embedded sprites). **Gitignored** — download it from the forum thread. |
+| `gym-teams.json` | Parsed + id-mapped output of `scripts/parse-gym-xlsx.mjs` (committed). |
+
+Source: https://forums.pokemmo.com/index.php?/topic/194839-gym-leader-team-query-form/
+(download the `.xlsx` from the MediaFire link in the first post).
+
+Refresh: download the latest `.xlsx` into `data/raw/gym-teams.xlsx`, then
+`node scripts/parse-gym-xlsx.mjs data/raw/gym-teams.xlsx`.
+
+### Elite Four / champions / rivals — Fandom wiki
+
+`scripts/scrape-trainers.mjs` scrapes `{{trainerentry}}` templates from
+https://pokemmo.fandom.com (CC-BY-SA) into `data/raw/trainers-wiki.json`. It
+covers the E4, champions, rivals and many route trainers for Kanto/Johto/Hoenn/
+Unova (the wiki has no Sinnoh trainer teams). Complementary to the gym sheet.
+
 ## Merge strategy
 
 Where the sources overlap (Pokémon stats, moves, abilities), the **PokeMMO Hub data wins**. The PokeMMOZone data only contributes fields the PokeMMO Hub data lacks — primarily English text for effects and descriptions.
