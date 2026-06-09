@@ -16,6 +16,7 @@ const BoxPage         = lazy(() => import('./pages/Box.jsx'));
 const CatchCalc       = lazy(() => import('./pages/CatchCalc.jsx'));
 const DamageCalc      = lazy(() => import('./pages/DamageCalc.jsx'));
 const TeamBuilder     = lazy(() => import('./pages/TeamBuilder.jsx'));
+const TrainerPrep     = lazy(() => import('./pages/TrainerPrep.jsx'));
 const BreedingPlanner = lazy(() => import('./pages/BreedingPlanner.jsx'));
 const RegionMap       = lazy(() => import('./pages/RegionMap.jsx'));
 const TrainerScribe   = lazy(() => import('./pages/TrainerScribe.jsx'));
@@ -296,6 +297,16 @@ export default function App() {
                   data={data}
                   store={teamsStore}
                   setStore={setTeamsStore}
+                  boxStore={boxStore}
+                  theme={theme} onTheme={setTheme}
+                />
+              }
+            />
+            <Route
+              path="/trainers"
+              element={
+                <TrainerPrep
+                  data={data}
                   boxStore={boxStore}
                   theme={theme} onTheme={setTheme}
                 />

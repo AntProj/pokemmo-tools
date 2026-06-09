@@ -9,6 +9,9 @@
 
     "build:data": "node scripts/build-data.mjs",
 
+    "_comment_trainers": "Build public/data/trainers.json (Gym & E4 Prep) from the gym-leader xlsx parse + wiki E4 scrape. Runs after build:data since it resolves names against public/data/pokemmo.json. Refresh sources: scripts/parse-gym-xlsx.mjs + scripts/scrape-trainers.mjs.",
+    "build:trainers": "node scripts/build-trainers.mjs",
+
     "_comment_merge_trainers": "Merge a Trainer Scribe export into a region's trainerInstances catalog. e.g. npm run merge:trainers -- ~/Downloads/trainer-teams.json --region=johto --dry-run",
     "merge:trainers": "node scripts/merge-trainer-teams.mjs",
 
@@ -37,7 +40,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "_comment_predeploy": "After vite build, prune dist/data/maps/<region>/{images,tiles}/ — both are hosted on R2 (absolute URLs in maps-index.json), so they're dead weight in the gh-pages branch.",
-    "predeploy": "npm run build:data && npm run build && node scripts/prune-dist-for-gh-pages.mjs",
+    "predeploy": "npm run build:data && npm run build:trainers && npm run build && node scripts/prune-dist-for-gh-pages.mjs",
     "_comment_deploy": "Custom deploy script instead of the gh-pages package. gh-pages' internal Git.rm spreads every tracked file as a separate argv to `git rm`, which on Windows blows past CreateProcess's ~32 KB command-line cap once the branch holds more than a few thousand files (we have ~600 zone WebPs + ~500 event manifests + ~500 walkable sidecars + ~5000 overworld tiles per region). Our script uses `git worktree` + a single `git rm -rf .` cleanup so the argv stays tiny regardless of file count.",
     "deploy": "node scripts/deploy-gh-pages.mjs",
 

@@ -14,6 +14,7 @@ export const NAV_DESTINATIONS = [
   { id: 'catch',     label: 'Catch Calc', to: '/catch',                 defaultBar: false },
   { id: 'damage',    label: 'Damage Calc', to: '/damage',               defaultBar: false },
   { id: 'teams',     label: 'Team Builder', to: '/teams',              defaultBar: false },
+  { id: 'trainers',  label: 'Gym & E4 Prep', to: '/trainers',           defaultBar: false },
   { id: 'breeding',  label: 'Breeding',   to: '/breeding',              defaultBar: false },
   // Dev-only authoring tool — only surfaced in the desktop app or a dev build.
   { id: 'scribe',    label: 'Scribe',     to: '/scribe',                defaultBar: false, devOnly: true },
