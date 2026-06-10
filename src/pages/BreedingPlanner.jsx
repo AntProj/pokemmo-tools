@@ -9,7 +9,7 @@ import {
   canBreed, isGenderless, genderRatioCategory,
 } from '../lib/breeding/data.js';
 import {
-  planBreeding, matchInventory, ROLE_LABELS, ROLE_TIERS_FOR_SPECIES, TIER_LABELS,
+  planBreeding, planWithInventory, ROLE_LABELS, ROLE_TIERS_FOR_SPECIES, TIER_LABELS,
 } from '../lib/breeding/optimizer.js';
 import { monsInBoxes } from '../lib/box.js';
 import { ChevronRight, ChevronDown, GitFork } from 'lucide-react';
@@ -1702,22 +1702,22 @@ function BreedersTab({ data, plan, planArgs, target, breederPokemon, store, targ
   }), [mons, byId, target, shiny, alpha, targetNature]);
 
   const matchers = useMemo(() => evals.filter((e) => e.matcher).map((e) => e.matcher), [evals]);
-  // Inventory-aware plan: re-solve with the owned breeders as free leaves so the
-  // tree is SHAPED around what the user has (not the cheapest-to-buy abstract
-  // tree). Falls back to the buy-optimal plan if there's nothing to match.
+  // Inventory-aware plan with consume-once semantics: each owned breeder is used
+  // at most once, the rest of the tree is buyable/breedable carriers, and the
+  // plan stays feasible. Falls back to the buy-optimal plan if nothing matches.
   const invPlan = useMemo(
-    () => (planArgs && matchers.length ? (planBreeding({ ...planArgs, inventory: matchers }) || plan) : plan),
+    () => (planArgs && matchers.length ? (planWithInventory(planArgs, matchers) || plan) : plan),
     [planArgs, matchers, plan]);
-  const matched = useMemo(() => matchInventory(invPlan.node, matchers), [invPlan, matchers]);
-  const matchedIds = useMemo(() => new Set(matched.matches.map((mm) => mm.breeder.id)), [matched]);
-  const planSteps = useMemo(() => flattenSteps(matched.node), [matched]);
-  const withBoxesCost = matched.node?.cost || 0;
+  const usedSet = useMemo(() => new Set((invPlan.usedKeys || []).map(String)), [invPlan]);
+  const usedMons = useMemo(() => evals.filter((e) => usedSet.has(String(e.m.id))), [evals, usedSet]);
+  const planSteps = useMemo(() => flattenSteps(invPlan.node), [invPlan]);
+  const withBoxesCost = invPlan.node?.cost || 0;
   const savedTotal = Math.max(0, (plan.totalCost || 0) - withBoxesCost);
-  const remaining = useMemo(() => [...aggregateLeaves(matched.node).values()].sort((a, b) => (b.count * b.cost) - (a.count * a.cost)), [matched]);
+  const remaining = useMemo(() => [...aggregateLeaves(invPlan.node).values()].sort((a, b) => (b.count * b.cost) - (a.count * a.cost)), [invPlan]);
   const remainingTotal = remaining.reduce((s, g) => s + g.count * g.cost, 0);
-  // A usable mon left unmatched here means it's redundant — its IVs are already
-  // covered by the breeders that did get claimed (e.g. two identical 4×31s).
-  const notUsed = evals.filter((e) => !matchedIds.has(e.m.id))
+  // A usable mon left unused is redundant — its IVs are already covered by the
+  // breeders that did get used (e.g. two identical 4×31s, only one is needed).
+  const notUsed = evals.filter((e) => !usedSet.has(String(e.m.id)))
     .map((e) => ({ e, reason: e.usable ? (e.matcher ? 'not needed — its IVs are already covered by your other breeders' : 'has no perfect (31) IV to pass') : (e.reason || 'unusable') }));
 
   const toggleBox = (id) => setSelectedBoxIds((ids) => (ids.includes(id) ? ids.filter((x) => x !== id) : [...ids, id]));
@@ -1772,25 +1772,25 @@ function BreedersTab({ data, plan, planArgs, target, breederPokemon, store, targ
             <Stat label="Saved" value={savedTotal} good />
           </div>
 
-          {matched.matches.length > 0 && (
+          {usedMons.length > 0 && (
             <FormCard title={`Your breeding plan · ${planSteps.length} step${planSteps.length === 1 ? '' : 's'}`}>
               <p className="text-[11px] text-stone-500 dark:text-stone-400 mb-2">
-                Shaped around the mons you own (marked <span className="text-emerald-700 dark:text-emerald-400 font-semibold">From your Box</span>). This is your actual breed — not the full from-scratch tree on the IV Plan tab.
+                Combines the mons you own (marked <span className="text-emerald-700 dark:text-emerald-400 font-semibold">From your Box</span>, each used once) with carriers you'd still buy/breed. This is your actual breed — not the full from-scratch tree on the IV Plan tab.
               </p>
-              <BreedingOutline node={matched.node} target={target} nature={targetNature} setOverride={NOOP} recipeLabels={EMPTY_RECIPE_LABELS} />
+              <BreedingOutline node={invPlan.node} target={target} nature={targetNature} setOverride={NOOP} recipeLabels={EMPTY_RECIPE_LABELS} />
             </FormCard>
           )}
 
-          {matched.matches.length > 0 && (
-            <FormCard title={`Used from your boxes (${matched.matches.length})`}>
+          {usedMons.length > 0 && (
+            <FormCard title={`Used from your boxes (${usedMons.length})`}>
               <ul className="text-sm divide-y divide-[#ece2c4] dark:divide-stone-800/60">
-                {matched.matches.map((m, i) => {
-                  const sp = byId.get(m.breeder.id ? (mons.find((x) => x.id === m.breeder.id)?.species) : null);
+                {usedMons.map(({ m, species }, i) => {
+                  const ivs = IV_KEYS.filter((k) => m.ivs[k] === 31);
                   return (
-                    <li key={i} className="flex items-baseline gap-2 py-1">
+                    <li key={m.id || i} className="flex items-baseline gap-2 py-1">
                       <span className="flex-1 min-w-0">
-                        {sp ? sp.name : SPECIES_TXT(m.species)} · {m.ivs.length}×31 {m.gender === 'F' ? '♀' : m.gender === 'M' ? '♂' : ''}
-                        {m.ivs.length > 0 && <span className="text-stone-500 dark:text-stone-400"> ({formatIVList(m.ivs)})</span>}
+                        {species ? species.name : 'Mon'} · {ivs.length}×31 {m.gender === 'F' ? '♀' : m.gender === 'M' ? '♂' : ''}
+                        {ivs.length > 0 && <span className="text-stone-500 dark:text-stone-400"> ({formatIVList(ivs)})</span>}
                       </span>
                       <span className="font-mono tabular-nums text-emerald-600 dark:text-emerald-400 inline-flex items-center gap-1"><Check size={12} /> in plan</span>
                     </li>
