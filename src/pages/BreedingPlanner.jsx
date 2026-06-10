@@ -15,9 +15,8 @@ import { monsInBoxes } from '../lib/box.js';
 import { ChevronRight, ChevronDown, GitFork } from 'lucide-react';
 
 const SUB_TABS = [
-  { key: 'plan',     label: 'IV Plan'  },
+  { key: 'plan',     label: 'Plan'     },
   { key: 'costs',    label: 'Costs'    },
-  { key: 'breeders', label: 'Breeders' },
   { key: 'profit',   label: 'Profit'   },
   { key: 'saved',    label: 'Saved'    },
 ];
@@ -147,8 +146,38 @@ export default function BreedingPlanner({ data, theme, onTheme, box }) {
     consumables: form.consumables,
     overrides: form.overrides,
   }), [target, targetIVs, form.targetGender, form.nature, form.guaranteeGender, form.prices, form.basePrices, form.consumables, form.overrides]);
-  // Buy-optimal plan (no inventory) — drives the IV Plan / Costs / Profit tabs.
+  // Buy-optimal plan (no inventory) — the from-scratch reference.
   const planResult = useMemo(() => planBreeding(planArgs), [planArgs]);
+
+  // Inventory-aware "effective" plan. Box selection lives in the form sidebar,
+  // so the whole planner is inventory-first: the outline, costs and profit all
+  // reflect the mons you own (consume-once) plus the carriers you'd still buy.
+  const byId = useMemo(() => new Map(data.pokemon.map((p) => [p.id, p])), [data.pokemon]);
+  const boxMons = useMemo(() => monsInBoxes(box, selectedBoxIds), [box, selectedBoxIds]);
+  const breederEvals = useMemo(() => boxMons.map((m) => {
+    const species = m.species != null ? byId.get(m.species) : null;
+    const compat = breederCompat(species, target);
+    let usable = compat.usable;
+    if (usable) {
+      if (form.shiny && !m.shiny) usable = false;
+      else if (!form.shiny && m.shiny) usable = false;
+      else if (form.alpha && !m.alpha) usable = false;
+    }
+    const ivs = IV_KEYS.filter((k) => m.ivs[k] === 31);
+    const gender = compat.gender ?? m.gender;
+    const matcher = usable && ivs.length > 0
+      ? { id: m.id, ivs, gender, role: compat.role, nature: !!(form.nature && m.nature && m.nature === form.nature) }
+      : null;
+    return { m, species, matcher };
+  }), [boxMons, byId, target, form.shiny, form.alpha, form.nature]);
+  const matchers = useMemo(() => breederEvals.filter((e) => e.matcher).map((e) => e.matcher), [breederEvals]);
+  const invPlan = useMemo(
+    () => (target && targetIVs.length && matchers.length ? (planWithInventory(planArgs, matchers) || planResult) : planResult),
+    [target, targetIVs, matchers, planArgs, planResult]);
+  const usedSet = useMemo(() => new Set((invPlan?.usedKeys || []).map(String)), [invPlan]);
+  const usedMons = useMemo(() => breederEvals.filter((e) => usedSet.has(String(e.m.id))), [breederEvals, usedSet]);
+  const inventoryActive = usedMons.length > 0;
+  const fromScratchCost = planResult?.totalCost ?? 0;
 
   // Migrate v1 saved projects on first mount.
   useEffect(() => {
@@ -462,6 +491,36 @@ export default function BreedingPlanner({ data, theme, onTheme, box }) {
             onChange={setConsumable}
           />
 
+          {(box?.boxes?.length > 0) && (
+            <FormCard
+              title={`Your breeders (${selectedBoxIds.length}/${box.boxes.length})`}
+              action={
+                <div className="flex items-center gap-2 text-[10px] uppercase tracking-wider">
+                  <button type="button" onClick={() => setSelectedBoxIds(box.boxes.map((b) => b.id))} className="text-stone-500 hover:text-stone-800 dark:hover:text-stone-200">All</button>
+                  <button type="button" onClick={() => setSelectedBoxIds([])} className="text-stone-500 hover:text-stone-800 dark:hover:text-stone-200">None</button>
+                </div>
+              }
+            >
+              <p className="text-[11px] text-stone-500 dark:text-stone-400 mb-1.5">Mons you own are used in the plan (each once) before buying carriers.</p>
+              <div className="flex flex-wrap gap-1.5">
+                {box.boxes.map((b) => {
+                  const on = selectedBoxIds.includes(b.id);
+                  return (
+                    <button key={b.id} type="button"
+                      onClick={() => setSelectedBoxIds((ids) => (ids.includes(b.id) ? ids.filter((x) => x !== b.id) : [...ids, b.id]))}
+                      className={`inline-flex items-center gap-1 px-2 py-1 rounded text-xs border transition-colors ${on ? 'bg-emerald-100 text-emerald-800 border-emerald-300 dark:bg-emerald-950/50 dark:text-emerald-300 dark:border-emerald-900' : 'bg-[#fdf8e9] dark:bg-stone-900 text-stone-500 dark:text-stone-400 border-[#d6c8a3] dark:border-stone-700'}`}>
+                      {on && <Check size={11} />}{b.name}<span className="text-[10px] opacity-60">{b.mons.length}</span>
+                    </button>
+                  );
+                })}
+              </div>
+              <div className="mt-2 flex items-center justify-between text-[11px]">
+                <span className="text-emerald-700 dark:text-emerald-400">{usedMons.length} used in this plan</span>
+                <Link to="/box" className="text-blue-600 dark:text-blue-400 hover:underline">Manage Box →</Link>
+              </div>
+            </FormCard>
+          )}
+
           <button
             type="button" onClick={reset}
             className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-[#d6c8a3] dark:border-stone-700 bg-[#fdf8e9] dark:bg-stone-900 hover:bg-[#ece2c4] dark:hover:bg-stone-800 text-sm text-stone-700 dark:text-stone-300"
@@ -471,10 +530,9 @@ export default function BreedingPlanner({ data, theme, onTheme, box }) {
         </aside>
 
         <section className="min-w-0">
-          {tab === 'plan'   && <IVPlanTab target={target} plan={planResult} form={form} setOverride={setOverride} onSave={saveProject} eggMoveNames={selectedEggMoveNames} hiddenAbility={form.hiddenAbility ? hiddenAbility : null} shiny={form.shiny} alpha={form.alpha} />}
-          {tab === 'costs'  && <CostsTab plan={planResult} target={target} form={form} />}
-          {tab === 'breeders' && <BreedersTab data={data} plan={planResult} planArgs={planArgs} target={target} breederPokemon={breederPokemon} store={box} targetNature={form.nature} shiny={form.shiny} alpha={form.alpha} selectedBoxIds={selectedBoxIds} setSelectedBoxIds={setSelectedBoxIds} />}
-          {tab === 'profit' && <ProfitTab plan={planResult} salePrice={salePrice} setSalePrice={setSalePrice} />}
+          {tab === 'plan'   && <IVPlanTab target={target} plan={invPlan} form={form} setOverride={setOverride} onSave={saveProject} eggMoveNames={selectedEggMoveNames} hiddenAbility={form.hiddenAbility ? hiddenAbility : null} shiny={form.shiny} alpha={form.alpha} inventoryActive={inventoryActive} fromScratchCost={fromScratchCost} usedCount={usedMons.length} />}
+          {tab === 'costs'  && <CostsTab plan={invPlan} target={target} form={form} />}
+          {tab === 'profit' && <ProfitTab plan={invPlan} salePrice={salePrice} setSalePrice={setSalePrice} />}
           {tab === 'saved'  && <SavedProjectsTab data={data} projects={projects} onOpen={openProject} onDuplicate={duplicateProject} onDelete={deleteProject} />}
         </section>
       </div>
@@ -653,7 +711,7 @@ function DeferredFeaturesNotice() {
     <div className="rounded-md border border-blue-300 dark:border-blue-900 bg-blue-50 dark:bg-blue-950/40 p-2.5 text-xs text-blue-900 dark:text-blue-200 flex items-start gap-2">
       <Info size={14} className="shrink-0 mt-0.5" />
       <span>
-        Planner covers IV + nature optimization with per-stat 1×31 pricing, recursive intermediate breeding (no buy at 2×31+ tiers), accurate egg fees, per-node cost overrides, egg-move + hidden-ability carrier requirements, and inventory-aware planning (the Breeders tab shapes the tree around mons you own). Volt Tackle / Incense babies are still to come.
+        Planner covers IV + nature optimization with per-stat 1×31 pricing, recursive intermediate breeding (no buy at 2×31+ tiers), accurate egg fees, per-node cost overrides, egg-move + hidden-ability carrier requirements, and inventory-first planning — pick your boxes in the sidebar and the plan combines the mons you own (each used once) with the carriers you'd still buy. Volt Tackle / Incense babies are still to come.
       </span>
     </div>
   );
@@ -683,7 +741,7 @@ function PricesNotSetNote() {
 
 /* ─────────────── IV Plan tab ─────────────── */
 
-function IVPlanTab({ target, plan, form, setOverride, onSave, eggMoveNames = [], hiddenAbility = null, shiny = false, alpha = false }) {
+function IVPlanTab({ target, plan, form, setOverride, onSave, eggMoveNames = [], hiddenAbility = null, shiny = false, alpha = false, inventoryActive = false, fromScratchCost = 0, usedCount = 0 }) {
   if (!target) return <Empty msg="Pick a target species to start." />;
   if (!plan) return <Empty msg="No IVs targeted yet — flip at least one stat to 31 in the form." />;
 
@@ -706,8 +764,15 @@ function IVPlanTab({ target, plan, form, setOverride, onSave, eggMoveNames = [],
     <div className="space-y-3">
       <div className="rounded-md border border-[#e6dabf] dark:border-stone-800 bg-[#fdf8e9] dark:bg-stone-900 p-3 flex items-center gap-3 flex-wrap">
         <div>
-          <div className="text-[11px] uppercase tracking-wider text-stone-500 dark:text-stone-400">Total cost</div>
+          <div className="text-[11px] uppercase tracking-wider text-stone-500 dark:text-stone-400">{inventoryActive ? 'Cost with your boxes' : 'Total cost'}</div>
           <div className="text-2xl font-bold text-stone-900 dark:text-stone-100 tabular-nums">${formatMoney(plan.totalCost)}</div>
+          {inventoryActive && (
+            <div className="text-[11px] text-stone-500 dark:text-stone-400">
+              from scratch <span className="line-through">${formatMoney(fromScratchCost)}</span>
+              {' · '}<span className="text-emerald-700 dark:text-emerald-400 font-semibold">saved ${formatMoney(Math.max(0, fromScratchCost - plan.totalCost))}</span>
+              {' · '}{usedCount} from your Box
+            </div>
+          )}
         </div>
         <div className="text-xs text-stone-500 dark:text-stone-400 ml-auto">
           {plan.counts.steps} step{plan.counts.steps === 1 ? '' : 's'}
@@ -1667,184 +1732,6 @@ function breederCompat(species, target) {
   }
   // Mixed-gender species: caller supplies the chosen ♀/♂ (gender === null here).
   return { role, gender: null, usable: true };
-}
-
-const NOOP = () => {};
-const EMPTY_RECIPE_LABELS = new Map();
-
-function BreedersTab({ data, plan, planArgs, target, breederPokemon, store, targetNature, shiny, alpha, selectedBoxIds, setSelectedBoxIds }) {
-  if (!target) return <Empty msg="Pick a target species on the IV Plan tab first." />;
-  if (!plan)   return <Empty msg="Target at least one IV first — there's nothing to match against yet." />;
-
-  const byId = useMemo(() => new Map(data.pokemon.map((p) => [p.id, p])), [data.pokemon]);
-  const boxes = store?.boxes || [];
-  const selSet = new Set(selectedBoxIds);
-
-  // Mons drawn from the selected boxes, evaluated against the current target.
-  const mons = useMemo(() => monsInBoxes(store, selectedBoxIds), [store, selectedBoxIds]);
-
-  const evals = useMemo(() => mons.map((m) => {
-    const species = m.species != null ? byId.get(m.species) : null;
-    const compat = breederCompat(species, target);
-    let usable = compat.usable;
-    let reason = compat.error || null;
-    if (usable) {
-      if (shiny && !m.shiny)        { usable = false; reason = 'Target is shiny — only shiny breeders qualify (shinies only breed with shinies).'; }
-      else if (!shiny && m.shiny)   { usable = false; reason = 'This is shiny but the target isn’t — shinies only breed with shinies.'; }
-      else if (alpha && !m.alpha)   { usable = false; reason = 'Target is Alpha — both parents of every breed must be Alpha.'; }
-    }
-    const ivs = IV_KEYS.filter((k) => m.ivs[k] === 31);
-    const gender = compat.gender ?? m.gender; // mixed species use the chosen ♀/♂
-    const matcher = usable && ivs.length > 0
-      ? { id: m.id, ivs, gender, role: compat.role, nature: !!(targetNature && m.nature && m.nature === targetNature) }
-      : null;
-    return { m, species, compat, usable, reason, warn: compat.warn, matcher };
-  }), [mons, byId, target, shiny, alpha, targetNature]);
-
-  const matchers = useMemo(() => evals.filter((e) => e.matcher).map((e) => e.matcher), [evals]);
-  // Inventory-aware plan with consume-once semantics: each owned breeder is used
-  // at most once, the rest of the tree is buyable/breedable carriers, and the
-  // plan stays feasible. Falls back to the buy-optimal plan if nothing matches.
-  const invPlan = useMemo(
-    () => (planArgs && matchers.length ? (planWithInventory(planArgs, matchers) || plan) : plan),
-    [planArgs, matchers, plan]);
-  const usedSet = useMemo(() => new Set((invPlan.usedKeys || []).map(String)), [invPlan]);
-  const usedMons = useMemo(() => evals.filter((e) => usedSet.has(String(e.m.id))), [evals, usedSet]);
-  const planSteps = useMemo(() => flattenSteps(invPlan.node), [invPlan]);
-  const withBoxesCost = invPlan.node?.cost || 0;
-  const savedTotal = Math.max(0, (plan.totalCost || 0) - withBoxesCost);
-  const remaining = useMemo(() => [...aggregateLeaves(invPlan.node).values()].sort((a, b) => (b.count * b.cost) - (a.count * a.cost)), [invPlan]);
-  const remainingTotal = remaining.reduce((s, g) => s + g.count * g.cost, 0);
-  // A usable mon left unused is redundant — its IVs are already covered by the
-  // breeders that did get used (e.g. two identical 4×31s, only one is needed).
-  const notUsed = evals.filter((e) => !usedSet.has(String(e.m.id)))
-    .map((e) => ({ e, reason: e.usable ? (e.matcher ? 'not needed — its IVs are already covered by your other breeders' : 'has no perfect (31) IV to pass') : (e.reason || 'unusable') }));
-
-  const toggleBox = (id) => setSelectedBoxIds((ids) => (ids.includes(id) ? ids.filter((x) => x !== id) : [...ids, id]));
-  const usableCount = evals.filter((e) => e.matcher).length;
-
-  return (
-    <div className="space-y-3">
-      <div className="text-xs text-stone-500 dark:text-stone-400">
-        Pick which boxes hold your breeders — the planner claims each compatible mon against the most expensive
-        matching node and prunes that branch.{' '}
-        <Link to="/box" className="text-blue-600 dark:text-blue-400 hover:underline">Manage your Box →</Link>
-      </div>
-
-      <FormCard
-        title={`Use boxes (${selectedBoxIds.length}/${boxes.length})`}
-        action={
-          <div className="flex items-center gap-2 text-[10px] uppercase tracking-wider">
-            <button type="button" onClick={() => setSelectedBoxIds(boxes.map((b) => b.id))} className="text-stone-500 hover:text-stone-800 dark:hover:text-stone-200">All</button>
-            <button type="button" onClick={() => setSelectedBoxIds([])} className="text-stone-500 hover:text-stone-800 dark:hover:text-stone-200">None</button>
-          </div>
-        }
-      >
-        {boxes.length === 0 ? (
-          <div className="text-sm text-stone-500 dark:text-stone-400">
-            No boxes yet. <Link to="/box" className="text-blue-600 dark:text-blue-400 hover:underline">Add mons in your Box →</Link>
-          </div>
-        ) : (
-          <div className="flex flex-wrap gap-1.5">
-            {boxes.map((b) => {
-              const on = selSet.has(b.id);
-              return (
-                <button key={b.id} type="button" onClick={() => toggleBox(b.id)}
-                  className={`inline-flex items-center gap-1 px-2 py-1 rounded text-xs border transition-colors ${on ? 'bg-blue-100 text-blue-800 border-blue-300 dark:bg-blue-950/50 dark:text-blue-300 dark:border-blue-900' : 'bg-[#fdf8e9] dark:bg-stone-900 text-stone-500 dark:text-stone-400 border-[#d6c8a3] dark:border-stone-700'}`}>
-                  {on && <Check size={11} />}{b.name}<span className="text-[10px] opacity-60">{b.mons.length}</span>
-                </button>
-              );
-            })}
-          </div>
-        )}
-        <div className="mt-2 text-[11px] text-stone-500 dark:text-stone-400">
-          {mons.length} mon{mons.length === 1 ? '' : 's'} selected · {usableCount} usable for this target.
-        </div>
-      </FormCard>
-
-      {mons.length === 0 ? (
-        <Empty msg="Select a box with mons (or add some in your Box) to see what they save." />
-      ) : (
-        <>
-          <div className="grid grid-cols-3 gap-2">
-            <Stat label="Base cost" value={plan.totalCost} />
-            <Stat label="With your boxes" value={withBoxesCost} accent />
-            <Stat label="Saved" value={savedTotal} good />
-          </div>
-
-          {usedMons.length > 0 && (
-            <FormCard title={`Your breeding plan · ${planSteps.length} step${planSteps.length === 1 ? '' : 's'}`}>
-              <p className="text-[11px] text-stone-500 dark:text-stone-400 mb-2">
-                Combines the mons you own (marked <span className="text-emerald-700 dark:text-emerald-400 font-semibold">From your Box</span>, each used once) with carriers you'd still buy/breed. This is your actual breed — not the full from-scratch tree on the IV Plan tab.
-              </p>
-              <BreedingOutline node={invPlan.node} target={target} nature={targetNature} setOverride={NOOP} recipeLabels={EMPTY_RECIPE_LABELS} />
-            </FormCard>
-          )}
-
-          {usedMons.length > 0 && (
-            <FormCard title={`Used from your boxes (${usedMons.length})`}>
-              <ul className="text-sm divide-y divide-[#ece2c4] dark:divide-stone-800/60">
-                {usedMons.map(({ m, species }, i) => {
-                  const ivs = IV_KEYS.filter((k) => m.ivs[k] === 31);
-                  return (
-                    <li key={m.id || i} className="flex items-baseline gap-2 py-1">
-                      <span className="flex-1 min-w-0">
-                        {species ? species.name : 'Mon'} · {ivs.length}×31 {m.gender === 'F' ? '♀' : m.gender === 'M' ? '♂' : ''}
-                        {ivs.length > 0 && <span className="text-stone-500 dark:text-stone-400"> ({formatIVList(ivs)})</span>}
-                      </span>
-                      <span className="font-mono tabular-nums text-emerald-600 dark:text-emerald-400 inline-flex items-center gap-1"><Check size={12} /> in plan</span>
-                    </li>
-                  );
-                })}
-              </ul>
-            </FormCard>
-          )}
-
-          {notUsed.length > 0 && (
-            <FormCard title={`Not used (${notUsed.length})`}>
-              <ul className="text-xs space-y-1">
-                {notUsed.map(({ e, reason }, i) => (
-                  <li key={i} className="flex items-baseline gap-2">
-                    <span className="text-stone-700 dark:text-stone-300 shrink-0">{e.species ? e.species.name : 'Mon'}</span>
-                    <span className="text-amber-700 dark:text-amber-400">{reason}</span>
-                  </li>
-                ))}
-              </ul>
-            </FormCard>
-          )}
-
-          <FormCard title="Still to acquire">
-            {remaining.length === 0 ? (
-              <div className="text-sm text-emerald-700 dark:text-emerald-400 py-1">Nothing — your boxes cover the whole tree! 🎉</div>
-            ) : (
-              <>
-                <ul className="text-sm divide-y divide-[#ece2c4] dark:divide-stone-800/60">
-                  {remaining.map((g, i) => (
-                    <li key={i} className="flex items-baseline gap-2 py-1">
-                      <span className="font-mono tabular-nums font-semibold w-8 shrink-0">{g.count}×</span>
-                      <span className="flex-1 min-w-0">
-                        {ROLE_LABELS[g.role] || 'Carrier'} · {g.ivs.length}×31{g.gender === 'F' ? ' ♀' : g.gender === 'M' ? ' ♂' : ''}
-                        {g.ivs.length > 0 && <span className="text-stone-500 dark:text-stone-400"> ({formatIVList(g.ivs)})</span>}
-                      </span>
-                      <span className="font-mono tabular-nums text-stone-700 dark:text-stone-300 w-20 text-right">${formatMoney(g.count * g.cost)}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-2 pt-2 border-t border-[#ece2c4] dark:border-stone-800/60 flex items-baseline justify-between text-sm">
-                  <span className="text-stone-500 dark:text-stone-400">Remaining parents subtotal</span>
-                  <span className="font-mono tabular-nums font-semibold">${formatMoney(remainingTotal)}</span>
-                </div>
-              </>
-            )}
-          </FormCard>
-        </>
-      )}
-    </div>
-  );
-}
-
-function SPECIES_TXT(s) {
-  return s === 'target' ? 'target' : s === 'group' ? 'egg-group' : s === 'ditto' ? '' : s;
 }
 
 function Stat({ label, value, accent, good }) {

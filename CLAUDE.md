@@ -183,17 +183,20 @@ per-mon "Send to Damage Calc" (as the opponent). Deep-linkable via `?open=<id>`
   - Abilities are **null** (not in the sheet); no EV/IV/nature per mon.
   - No type-specialty label per gym; no "is your team ready?" check.
 
-### Breeding — `/breeding` · `pages/BreedingPlanner.jsx`
+### Breeding — `/breeding` · `pages/BreedingPlanner.jsx` · `lib/breeding/optimizer.js`
 Breeding optimizer: target IV/nature → breeding-step tree, recipe/cost breakdown,
-carrier prices, egg moves + hidden ability. "Owned-breeders" mode is
-**inventory-aware** — it re-solves with your selected-box mons as free leaves so
-the tree is shaped around what you own (`optimizer.js` `ownedMatch`), not the
-cheapest-to-buy abstract tree.
+carrier prices, egg moves + hidden ability. **Inventory-first**: pick your boxes
+in the form sidebar and the single Plan outline combines the mons you own with
+the carriers you'd still buy/breed, and shows from-scratch → with-boxes savings.
+Each owned mon is used **exactly once** — `planWithInventory` does iterative
+pin-and-resolve (pin the most valuable owned leaf as a $0 override, drop that
+mon, re-solve) so plans never over-use a single mon (e.g. one Ditto as three)
+and stay feasible. The buy-optimal solve (`planBreeding`, no inventory) is the
+from-scratch reference; `ownedMatch` shapes the tree, `matchInventory` is the
+older single-tree overlay (now unused by the page).
 - **TODO:**
-  - Per-mon "Saved $" attribution is shown as "in plan" (the shaped tree zeroes
-    owned nodes, so the headline "Saved" total carries the number). A rare
-    edge case: if the optimal shaped tree needs two carriers an owned mon could
-    fill but you own one, cost can be slightly optimistic.
+  - The consume-once assignment is greedy (most-valuable owned leaf first); in
+    rare cases the result can cost marginally more than the true optimum.
   - Volt Tackle / Incense babies not modelled.
 
 ### Trainer Scribe — `/scribe` · `pages/TrainerScribe.jsx` · `lib/trainerScribe.js`  *(dev-only)*
