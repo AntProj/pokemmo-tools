@@ -136,7 +136,7 @@ export default function BreedingPlanner({ data, theme, onTheme, box }) {
   const [selectedBoxIds, setSelectedBoxIds] = useState(() => (box?.boxes || []).map((b) => b.id));
 
   // Run optimizer.
-  const planResult = useMemo(() => planBreeding({
+  const planArgs = useMemo(() => ({
     target,
     ivs: targetIVs,
     targetGender: form.targetGender,
@@ -147,6 +147,8 @@ export default function BreedingPlanner({ data, theme, onTheme, box }) {
     consumables: form.consumables,
     overrides: form.overrides,
   }), [target, targetIVs, form.targetGender, form.nature, form.guaranteeGender, form.prices, form.basePrices, form.consumables, form.overrides]);
+  // Buy-optimal plan (no inventory) — drives the IV Plan / Costs / Profit tabs.
+  const planResult = useMemo(() => planBreeding(planArgs), [planArgs]);
 
   // Migrate v1 saved projects on first mount.
   useEffect(() => {
@@ -471,7 +473,7 @@ export default function BreedingPlanner({ data, theme, onTheme, box }) {
         <section className="min-w-0">
           {tab === 'plan'   && <IVPlanTab target={target} plan={planResult} form={form} setOverride={setOverride} onSave={saveProject} eggMoveNames={selectedEggMoveNames} hiddenAbility={form.hiddenAbility ? hiddenAbility : null} shiny={form.shiny} alpha={form.alpha} />}
           {tab === 'costs'  && <CostsTab plan={planResult} target={target} form={form} />}
-          {tab === 'breeders' && <BreedersTab data={data} plan={planResult} target={target} breederPokemon={breederPokemon} store={box} targetNature={form.nature} shiny={form.shiny} alpha={form.alpha} selectedBoxIds={selectedBoxIds} setSelectedBoxIds={setSelectedBoxIds} />}
+          {tab === 'breeders' && <BreedersTab data={data} plan={planResult} planArgs={planArgs} target={target} breederPokemon={breederPokemon} store={box} targetNature={form.nature} shiny={form.shiny} alpha={form.alpha} selectedBoxIds={selectedBoxIds} setSelectedBoxIds={setSelectedBoxIds} />}
           {tab === 'profit' && <ProfitTab plan={planResult} salePrice={salePrice} setSalePrice={setSalePrice} />}
           {tab === 'saved'  && <SavedProjectsTab data={data} projects={projects} onOpen={openProject} onDuplicate={duplicateProject} onDelete={deleteProject} />}
         </section>
@@ -1664,7 +1666,7 @@ function breederCompat(species, target) {
   return { role, gender: null, usable: true };
 }
 
-function BreedersTab({ data, plan, target, breederPokemon, store, targetNature, shiny, alpha, selectedBoxIds, setSelectedBoxIds }) {
+function BreedersTab({ data, plan, planArgs, target, breederPokemon, store, targetNature, shiny, alpha, selectedBoxIds, setSelectedBoxIds }) {
   if (!target) return <Empty msg="Pick a target species on the IV Plan tab first." />;
   if (!plan)   return <Empty msg="Target at least one IV first — there's nothing to match against yet." />;
 
@@ -1693,12 +1695,23 @@ function BreedersTab({ data, plan, target, breederPokemon, store, targetNature, 
     return { m, species, compat, usable, reason, warn: compat.warn, matcher };
   }), [mons, byId, target, shiny, alpha, targetNature]);
 
-  const matched = useMemo(() => matchInventory(plan.node, evals.filter((e) => e.matcher).map((e) => e.matcher)), [plan, evals]);
+  const matchers = useMemo(() => evals.filter((e) => e.matcher).map((e) => e.matcher), [evals]);
+  // Inventory-aware plan: re-solve with the owned breeders as free leaves so the
+  // tree is SHAPED around what the user has (not the cheapest-to-buy abstract
+  // tree). Falls back to the buy-optimal plan if there's nothing to match.
+  const invPlan = useMemo(
+    () => (planArgs && matchers.length ? (planBreeding({ ...planArgs, inventory: matchers }) || plan) : plan),
+    [planArgs, matchers, plan]);
+  const matched = useMemo(() => matchInventory(invPlan.node, matchers), [invPlan, matchers]);
   const matchedIds = useMemo(() => new Set(matched.matches.map((mm) => mm.breeder.id)), [matched]);
+  const withBoxesCost = matched.node?.cost || 0;
+  const savedTotal = Math.max(0, (plan.totalCost || 0) - withBoxesCost);
   const remaining = useMemo(() => [...aggregateLeaves(matched.node).values()].sort((a, b) => (b.count * b.cost) - (a.count * a.cost)), [matched]);
   const remainingTotal = remaining.reduce((s, g) => s + g.count * g.cost, 0);
+  // A usable mon left unmatched here means it's redundant — its IVs are already
+  // covered by the breeders that did get claimed (e.g. two identical 4×31s).
   const notUsed = evals.filter((e) => !matchedIds.has(e.m.id))
-    .map((e) => ({ e, reason: e.usable ? (e.matcher ? "didn't fit any node in this plan" : 'has no perfect (31) IV to pass') : (e.reason || 'unusable') }));
+    .map((e) => ({ e, reason: e.usable ? (e.matcher ? 'not needed — its IVs are already covered by your other breeders' : 'has no perfect (31) IV to pass') : (e.reason || 'unusable') }));
 
   const toggleBox = (id) => setSelectedBoxIds((ids) => (ids.includes(id) ? ids.filter((x) => x !== id) : [...ids, id]));
   const usableCount = evals.filter((e) => e.matcher).length;
@@ -1748,8 +1761,8 @@ function BreedersTab({ data, plan, target, breederPokemon, store, targetNature, 
         <>
           <div className="grid grid-cols-3 gap-2">
             <Stat label="Base cost" value={plan.totalCost} />
-            <Stat label="With your boxes" value={matched.node.cost} accent />
-            <Stat label="Saved" value={matched.savings} good />
+            <Stat label="With your boxes" value={withBoxesCost} accent />
+            <Stat label="Saved" value={savedTotal} good />
           </div>
 
           {matched.matches.length > 0 && (
@@ -1763,7 +1776,7 @@ function BreedersTab({ data, plan, target, breederPokemon, store, targetNature, 
                         {sp ? sp.name : SPECIES_TXT(m.species)} · {m.ivs.length}×31 {m.gender === 'F' ? '♀' : m.gender === 'M' ? '♂' : ''}
                         {m.ivs.length > 0 && <span className="text-stone-500 dark:text-stone-400"> ({formatIVList(m.ivs)})</span>}
                       </span>
-                      <span className="font-mono tabular-nums text-emerald-600 dark:text-emerald-400">−${formatMoney(m.saved)}</span>
+                      <span className="font-mono tabular-nums text-emerald-600 dark:text-emerald-400 inline-flex items-center gap-1"><Check size={12} /> in plan</span>
                     </li>
                   );
                 })}

@@ -75,6 +75,11 @@ export function planBreeding(args) {
     overrides: byRecipe,
     memo: new Map(),
     speciesCat,
+    // Inventory-aware shaping: when the user owns carriers, any tree node a
+    // breeder can fill becomes a free leaf, so the solver shapes the tree around
+    // what they already have instead of the cheapest-to-BUY abstract tree.
+    // Default (no inventory) leaves the buy-optimal behaviour untouched.
+    ownedMatch: buildOwnedMatch(args.inventory),
   };
 
   // nature is treated as an extra "category" alongside IVs, but unlike IVs
@@ -149,6 +154,31 @@ function applyInstanceOverrides(root, byInstance, ctx) {
 }
 
 /* ─────────────── Owned-breeders matching ─────────────── */
+
+// Build a predicate the solver uses to recognise a node it can fill from the
+// user's owned breeders. Pure on (speciesConstraint, gender, ivs, nat) so it's
+// safe with the solver's memoization. Mirrors satisfies() below, minus the
+// consume-once bookkeeping (that's matchInventory's job on the shaped tree).
+// breeder shape: { ivs:string[], gender:'M'|'F'|'N'|'D', role:'target'|'group'|'ditto', nature:boolean }
+function buildOwnedMatch(inventory) {
+  const list = (inventory || []).filter(Boolean).map((b) => ({ ...b, ivset: new Set(b.ivs || []) }));
+  if (!list.length) return null;
+  return (species, gender, ivs, nat) => {
+    for (const b of list) {
+      if (species === 'ditto')        { if (b.role !== 'ditto') continue; }
+      else if (species === 'target')  { if (b.role !== 'target') continue; }
+      else if (species === 'group')   { if (b.role !== 'target' && b.role !== 'group') continue; }
+      else continue;
+      if (b.gender !== gender) continue;
+      let ok = true;
+      for (const iv of ivs) if (!b.ivset.has(iv)) { ok = false; break; }
+      if (!ok) continue;
+      if (nat && !b.nature) continue;
+      return true;
+    }
+    return false;
+  };
+}
 
 // Match a list of breeders the user ALREADY OWNS against an instantiated plan
 // tree. Greedy: each owned breeder (largest IV-set first) claims the
@@ -263,6 +293,18 @@ function solveCarrier(ctx, ivs, gender, speciesConstraint, isFinal = false, nat 
   }
 
   const id = nodeId(speciesConstraint, gender, sortedIVs, nat);
+
+  // Inventory-aware shaping: if the user owns a carrier that satisfies this node
+  // (role-compatible, same gender, IV-superset, nature if required), stop here
+  // with a free owned leaf. Pure on (species, gender, ivs, nat), so memoization
+  // and the buy-optimal default path are unaffected. matchInventory later does
+  // the honest consume-once accounting on the shaped tree.
+  if (ctx.ownedMatch && ctx.ownedMatch(speciesConstraint, gender, sortedIVs, nat)) {
+    const leaf = makeLeaf(id, speciesConstraint, sortedIVs, gender, 0, false);
+    leaf.owned = true;
+    if (nat) leaf.naturePassing = true;
+    return leaf;
+  }
 
   // User override → fixed-cost leaf.
   const ov = ctx.overrides[id];
