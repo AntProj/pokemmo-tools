@@ -1227,8 +1227,9 @@ function ParentSlot({ side, parent, item, powerItem, nature, setOverride, recipe
   }
 
   if (parent.kind === 'leaf') {
+    const owned = parent.owned;
     return (
-      <div className={`rounded px-2 py-1.5 border text-xs ${parent.overridden ? 'bg-amber-50 dark:bg-amber-950/20 border-amber-300 dark:border-amber-800/60' : 'bg-[#f1e9d2] dark:bg-stone-800/40 border-[#e6dabf] dark:border-stone-700/60'}`}>
+      <div className={`rounded px-2 py-1.5 border text-xs ${owned ? 'bg-emerald-50 dark:bg-emerald-950/25 border-emerald-300 dark:border-emerald-800/60' : parent.overridden ? 'bg-amber-50 dark:bg-amber-950/20 border-amber-300 dark:border-amber-800/60' : 'bg-[#f1e9d2] dark:bg-stone-800/40 border-[#e6dabf] dark:border-stone-700/60'}`}>
         <div className="flex items-center gap-1">
           <div className="text-[10px] uppercase tracking-wider text-stone-500 dark:text-stone-400 flex-1">{side}</div>
           <RecipePill recipeLabels={recipeLabels} recipeId={parent.recipeId} />
@@ -1238,7 +1239,9 @@ function ParentSlot({ side, parent, item, powerItem, nature, setOverride, recipe
         </div>
         <div className="text-[11px] text-stone-700 dark:text-stone-300">IVs: <span className="font-semibold">{ivLabel}</span></div>
         {heldLabel && <div className="text-[11px] text-amber-700 dark:text-amber-400">Hold: {heldLabel}</div>}
-        <NodeCostBadge node={parent} setOverride={setOverride} recipeLabels={recipeLabels} />
+        {owned
+          ? <div className="mt-0.5 inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-700 dark:text-emerald-400"><Check size={11} /> From your Box</div>
+          : <NodeCostBadge node={parent} setOverride={setOverride} recipeLabels={recipeLabels} />}
       </div>
     );
   }
@@ -1666,6 +1669,9 @@ function breederCompat(species, target) {
   return { role, gender: null, usable: true };
 }
 
+const NOOP = () => {};
+const EMPTY_RECIPE_LABELS = new Map();
+
 function BreedersTab({ data, plan, planArgs, target, breederPokemon, store, targetNature, shiny, alpha, selectedBoxIds, setSelectedBoxIds }) {
   if (!target) return <Empty msg="Pick a target species on the IV Plan tab first." />;
   if (!plan)   return <Empty msg="Target at least one IV first — there's nothing to match against yet." />;
@@ -1704,6 +1710,7 @@ function BreedersTab({ data, plan, planArgs, target, breederPokemon, store, targ
     [planArgs, matchers, plan]);
   const matched = useMemo(() => matchInventory(invPlan.node, matchers), [invPlan, matchers]);
   const matchedIds = useMemo(() => new Set(matched.matches.map((mm) => mm.breeder.id)), [matched]);
+  const planSteps = useMemo(() => flattenSteps(matched.node), [matched]);
   const withBoxesCost = matched.node?.cost || 0;
   const savedTotal = Math.max(0, (plan.totalCost || 0) - withBoxesCost);
   const remaining = useMemo(() => [...aggregateLeaves(matched.node).values()].sort((a, b) => (b.count * b.cost) - (a.count * a.cost)), [matched]);
@@ -1764,6 +1771,15 @@ function BreedersTab({ data, plan, planArgs, target, breederPokemon, store, targ
             <Stat label="With your boxes" value={withBoxesCost} accent />
             <Stat label="Saved" value={savedTotal} good />
           </div>
+
+          {matched.matches.length > 0 && (
+            <FormCard title={`Your breeding plan · ${planSteps.length} step${planSteps.length === 1 ? '' : 's'}`}>
+              <p className="text-[11px] text-stone-500 dark:text-stone-400 mb-2">
+                Shaped around the mons you own (marked <span className="text-emerald-700 dark:text-emerald-400 font-semibold">From your Box</span>). This is your actual breed — not the full from-scratch tree on the IV Plan tab.
+              </p>
+              <BreedingOutline node={matched.node} target={target} nature={targetNature} setOverride={NOOP} recipeLabels={EMPTY_RECIPE_LABELS} />
+            </FormCard>
+          )}
 
           {matched.matches.length > 0 && (
             <FormCard title={`Used from your boxes (${matched.matches.length})`}>
