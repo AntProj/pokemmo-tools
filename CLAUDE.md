@@ -185,9 +185,16 @@ per-mon "Send to Damage Calc" (as the opponent). Deep-linkable via `?open=<id>`
 
 ### Breeding — `/breeding` · `pages/BreedingPlanner.jsx`
 Breeding optimizer: target IV/nature → breeding-step tree, recipe/cost breakdown,
-carrier prices, egg moves + hidden ability. "Owned-breeders" mode consumes
-selected Boxes.
-- **TODO:** none tracked.
+carrier prices, egg moves + hidden ability. "Owned-breeders" mode is
+**inventory-aware** — it re-solves with your selected-box mons as free leaves so
+the tree is shaped around what you own (`optimizer.js` `ownedMatch`), not the
+cheapest-to-buy abstract tree.
+- **TODO:**
+  - Per-mon "Saved $" attribution is shown as "in plan" (the shaped tree zeroes
+    owned nodes, so the headline "Saved" total carries the number). A rare
+    edge case: if the optimal shaped tree needs two carriers an owned mon could
+    fill but you own one, cost can be slightly optimistic.
+  - Volt Tackle / Incense babies not modelled.
 
 ### Trainer Scribe — `/scribe` · `pages/TrainerScribe.jsx` · `lib/trainerScribe.js`  *(dev-only)*
 OCR authoring tool (desktop / dev builds only). Calibrate screen regions (battle

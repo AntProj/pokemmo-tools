@@ -653,7 +653,7 @@ function DeferredFeaturesNotice() {
     <div className="rounded-md border border-blue-300 dark:border-blue-900 bg-blue-50 dark:bg-blue-950/40 p-2.5 text-xs text-blue-900 dark:text-blue-200 flex items-start gap-2">
       <Info size={14} className="shrink-0 mt-0.5" />
       <span>
-        Planner covers IV + nature optimization with per-stat 1×31 pricing, recursive intermediate breeding (no buy at 2×31+ tiers), accurate egg fees, per-node cost overrides, and now egg-move + hidden-ability carrier requirements. Volt Tackle / Incense babies and owned-parent reuse are still to come.
+        Planner covers IV + nature optimization with per-stat 1×31 pricing, recursive intermediate breeding (no buy at 2×31+ tiers), accurate egg fees, per-node cost overrides, egg-move + hidden-ability carrier requirements, and inventory-aware planning (the Breeders tab shapes the tree around mons you own). Volt Tackle / Incense babies are still to come.
       </span>
     </div>
   );
