@@ -54,7 +54,14 @@ fn list_windows() -> Vec<capture::WindowInfo> {
 #[tauri::command]
 fn capture_and_ocr(hwnd: isize, rect: Option<NormRect>) -> Result<CapturePayload, String> {
     let (mut png, mut width, mut height) =
-        capture::capture_window_png(hwnd).map_err(|e| format!("capture failed: {e}"))?;
+        capture::capture_window_png(hwnd).map_err(|e| {
+            let s = e.to_string();
+            if s.to_lowercase().contains("denied") || s.contains("0x80070005") {
+                format!("capture failed: {e}. The window is access-protected — if PokéMMO is running as administrator, run this app as administrator too (or launch PokéMMO without admin).")
+            } else {
+                format!("capture failed: {e}")
+            }
+        })?;
 
     if let Some(rc) = rect {
         let img = image::load_from_memory(&png)
