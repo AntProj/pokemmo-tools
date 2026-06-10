@@ -210,6 +210,7 @@ export function planWithInventory(args, inventory) {
   };
 
   const pins = {};            // recipeId -> 0
+  const pinName = {};         // recipeId -> owned mon species name (for display)
   const usedKeys = [];        // mon keys actually pinned (consumed once each)
   let ownedLeft = inv;
   for (let guard = 0; guard <= inv.length && ownedLeft.length; guard++) {
@@ -229,6 +230,7 @@ export function planWithInventory(args, inventory) {
     if (!cands.length) break;
     cands.sort((a, b) => a.ivs.length - b.ivs.length);
     pins[leaf.recipeId] = 0;
+    pinName[leaf.recipeId] = cands[0].name || null;
     usedKeys.push(cands[0]._key);
     ownedLeft = ownedLeft.filter((m) => m._key !== cands[0]._key);
   }
@@ -236,7 +238,7 @@ export function planWithInventory(args, inventory) {
   const finalPlan = planBreeding({ ...args, inventory: [], overrides: { ...baseOv, byRecipe: { ...baseRecipe, ...pins } } });
   // Re-style pinned override leaves as owned ("From your Box", not "overridden").
   const pinnedSet = new Set(Object.keys(pins));
-  if (finalPlan?.node) (function mark(n) { if (!n) return; if (n.kind === 'breed') { mark(n.left); mark(n.right); } else if (pinnedSet.has(n.recipeId)) { n.owned = true; n.overridden = false; } })(finalPlan.node);
+  if (finalPlan?.node) (function mark(n) { if (!n) return; if (n.kind === 'breed') { mark(n.left); mark(n.right); } else if (pinnedSet.has(n.recipeId)) { n.owned = true; n.overridden = false; if (pinName[n.recipeId]) n.ownedName = pinName[n.recipeId]; } })(finalPlan.node);
   return { ...finalPlan, buyCost: buyPlan.totalCost, pinnedIds: [...pinnedSet], usedKeys };
 }
 

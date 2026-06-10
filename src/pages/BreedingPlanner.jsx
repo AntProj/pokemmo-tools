@@ -166,7 +166,7 @@ export default function BreedingPlanner({ data, theme, onTheme, box }) {
     const ivs = IV_KEYS.filter((k) => m.ivs[k] === 31);
     const gender = compat.gender ?? m.gender;
     const matcher = usable && ivs.length > 0
-      ? { id: m.id, ivs, gender, role: compat.role, nature: !!(form.nature && m.nature && m.nature === form.nature) }
+      ? { id: m.id, ivs, gender, role: compat.role, nature: !!(form.nature && m.nature && m.nature === form.nature), name: species?.name || null }
       : null;
     return { m, species, matcher };
   }), [boxMons, byId, target, form.shiny, form.alpha, form.nature]);
@@ -357,7 +357,7 @@ export default function BreedingPlanner({ data, theme, onTheme, box }) {
       <DeferredFeaturesNotice />
 
       <div className="grid lg:grid-cols-[380px_1fr] gap-4 items-start">
-        <aside className="lg:sticky lg:top-4 self-start space-y-3">
+        <aside className="lg:sticky lg:top-4 self-start space-y-3 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto lg:overflow-x-visible lg:pr-1">
           <FormCard title="Target">
             <PokemonPicker
               pokemon={breedablePokemon}
@@ -1300,7 +1300,8 @@ function ParentSlot({ side, parent, item, powerItem, nature, setOverride, recipe
           <RecipePill recipeLabels={recipeLabels} recipeId={parent.recipeId} />
         </div>
         <div className="font-semibold text-stone-900 dark:text-stone-100">
-          {roleLabel} · {ivCount}×31{parent.gender === 'F' ? ' ♀' : parent.gender === 'M' ? ' ♂' : ''}
+          {owned && parent.ownedName ? parent.ownedName : roleLabel} · {ivCount}×31{parent.gender === 'F' ? ' ♀' : parent.gender === 'M' ? ' ♂' : ''}
+          {owned && parent.ownedName && <span className="font-normal text-stone-500 dark:text-stone-400"> · {roleLabel}</span>}
         </div>
         <div className="text-[11px] text-stone-700 dark:text-stone-300">IVs: <span className="font-semibold">{ivLabel}</span></div>
         {heldLabel && <div className="text-[11px] text-amber-700 dark:text-amber-400">Hold: {heldLabel}</div>}
