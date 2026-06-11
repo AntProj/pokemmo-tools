@@ -104,7 +104,7 @@ export function parseBattleLog(rawLines) {
 
 // Fold the opponent HP-bar reads (species → level/gender) into the parsed team.
 // `bars` is an array of parseOpponentBar() results collected over the battle.
-export function buildObservation({ logLines, bars = [], routeText }) {
+export function buildObservation({ logLines, bars = [], routeText, region = null }) {
   const parsed = parseBattleLog(logLines);
   const barBySpecies = new Map();
   for (const b of bars) {
@@ -124,6 +124,7 @@ export function buildObservation({ logLines, bars = [], routeText }) {
   return {
     trainer: parsed.trainer,
     route: parseRoute(routeText),
+    region: region || null,
     reward: parsed.reward,
     defeated: parsed.defeated,
     team,
@@ -181,6 +182,7 @@ export function mergeObservation(store, obs, stampISO) {
   const merged = {
     name: obs.trainer,
     route: obs.route || prev.route,
+    region: obs.region || prev.region || null,
     reward: obs.reward ?? prev.reward,
     team: [...bySpecies.values()],
     battles: (prev.battles || 0) + 1,
