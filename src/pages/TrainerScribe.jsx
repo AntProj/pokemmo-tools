@@ -8,6 +8,9 @@ import {
 } from '../lib/trainerScribe.js';
 
 const LS_REGIONS = 'pokemmo:scribe:regions';
+const LS_GAMEREGION = 'pokemmo:scribe:gameregion';
+const GAME_REGIONS = ['kanto', 'johto', 'hoenn', 'sinnoh', 'unova'];
+const cap = (s) => (s ? s[0].toUpperCase() + s.slice(1) : s);
 const REGION_DEFS = [
   { key: 'log',      label: 'Battle log',   hint: 'the chat box where "The foe\'s X used Y!" appears' },
   { key: 'opponent', label: 'Opponent bar', hint: 'the foe HP bar (top-left): "Umbreon Lv. 43 ♂"' },
@@ -42,6 +45,12 @@ export default function TrainerScribe({ data, theme, onTheme }) {
   const [bars, setBars] = useState([]);
   const [routeText, setRouteText] = useState('');
   const [pasteText, setPasteText] = useState('');
+  // Which game region the captured trainers belong to — tags each profile so the
+  // export merges into the right region's trainer-instances catalog.
+  const [gameRegion, setGameRegion] = useState(() => {
+    try { const v = localStorage.getItem(LS_GAMEREGION); return GAME_REGIONS.includes(v) ? v : 'johto'; } catch { return 'johto'; }
+  });
+  useEffect(() => { try { localStorage.setItem(LS_GAMEREGION, gameRegion); } catch { /* ignore */ } }, [gameRegion]);
 
   // Capture state (desktop).
   const [windows, setWindows] = useState([]);
@@ -51,7 +60,7 @@ export default function TrainerScribe({ data, theme, onTheme }) {
   const [calib, setCalib] = useState(null); // { key, src }
   const [status, setStatus] = useState(null);
 
-  const obs = useMemo(() => buildObservation({ logLines, bars, routeText }), [logLines, bars, routeText]);
+  const obs = useMemo(() => buildObservation({ logLines, bars, routeText, region: gameRegion }), [logLines, bars, routeText, gameRegion]);
 
   // Auto-save when a battle completes (during live recording). Refs let the
   // capture loop read the latest values without re-subscribing each tick.
@@ -191,6 +200,23 @@ export default function TrainerScribe({ data, theme, onTheme }) {
         battle them again another day to fill in the rest. Exports merge into the trainerInstances catalog by name + route.
       </p>
 
+      {/* Game region — tags every captured trainer so the export lands in the
+          right region's catalog. */}
+      <div className="flex items-center gap-2 rounded-md border border-[#e6dabf] dark:border-stone-800 bg-[#fdf8e9] dark:bg-stone-900 px-3 py-2">
+        <span className="text-xs font-semibold text-stone-600 dark:text-stone-300">Game region</span>
+        <div className="flex flex-wrap gap-1">
+          {GAME_REGIONS.map((r) => (
+            <button key={r} type="button" onClick={() => setGameRegion(r)}
+              className={`px-2.5 py-1 rounded text-xs font-medium border transition-colors ${gameRegion === r
+                ? 'bg-amber-600 border-amber-600 text-white'
+                : 'border-[#d6c8a3] dark:border-stone-700 bg-[#fdf8e9] dark:bg-stone-900 text-stone-600 dark:text-stone-300 hover:bg-[#ece2c4] dark:hover:bg-stone-800'}`}>
+              {cap(r)}
+            </button>
+          ))}
+        </div>
+        <span className="ml-auto text-[11px] text-stone-400 dark:text-stone-500">tags new captures</span>
+      </div>
+
       {/* Capture controls (desktop only) */}
       {desktop ? (
         <section className="rounded-md border border-blue-300 dark:border-blue-900 bg-blue-50/60 dark:bg-blue-950/30 p-3 space-y-2">
@@ -282,6 +308,7 @@ export default function TrainerScribe({ data, theme, onTheme }) {
           <div key={key} className="rounded-md border border-[#e6dabf] dark:border-stone-800 bg-[#fdf8e9] dark:bg-stone-900 p-3">
             <div className="flex items-baseline gap-2">
               <span className="font-semibold text-stone-900 dark:text-stone-100">{p.name}</span>
+              {p.region && <span className="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-amber-100 text-amber-800 dark:bg-amber-950/50 dark:text-amber-300">{cap(p.region)}</span>}
               <span className="text-xs text-stone-500">{p.route}</span>
               {p.reward != null && <span className="text-xs text-emerald-600 dark:text-emerald-400">${p.reward.toLocaleString()}</span>}
               <span className="ml-auto text-[11px] text-stone-400">{p.battles} battle{p.battles === 1 ? '' : 's'} · {p.team.length} mon</span>

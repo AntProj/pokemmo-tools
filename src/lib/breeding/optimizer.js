@@ -75,6 +75,11 @@ export function planBreeding(args) {
     overrides: byRecipe,
     memo: new Map(),
     speciesCat,
+    // Inventory-aware shaping: when the user owns carriers, any tree node a
+    // breeder can fill becomes a free leaf, so the solver shapes the tree around
+    // what they already have instead of the cheapest-to-BUY abstract tree.
+    // Default (no inventory) leaves the buy-optimal behaviour untouched.
+    ownedMatch: buildOwnedMatch(args.inventory),
   };
 
   // nature is treated as an extra "category" alongside IVs, but unlike IVs
@@ -149,6 +154,93 @@ function applyInstanceOverrides(root, byInstance, ctx) {
 }
 
 /* ─────────────── Owned-breeders matching ─────────────── */
+
+// Build a predicate the solver uses to recognise a node it can fill from the
+// user's owned breeders. Pure on (speciesConstraint, gender, ivs, nat) so it's
+// safe with the solver's memoization. Mirrors satisfies() below, minus the
+// consume-once bookkeeping (that's matchInventory's job on the shaped tree).
+// breeder shape: { ivs:string[], gender:'M'|'F'|'N'|'D', role:'target'|'group'|'ditto', nature:boolean }
+function buildOwnedMatch(inventory) {
+  const list = (inventory || []).filter(Boolean).map((b) => ({ ...b, ivset: new Set(b.ivs || []) }));
+  if (!list.length) return null;
+  return (species, gender, ivs, nat) => {
+    for (const b of list) {
+      if (species === 'ditto')        { if (b.role !== 'ditto') continue; }
+      else if (species === 'target')  { if (b.role !== 'target') continue; }
+      else if (species === 'group')   { if (b.role !== 'target' && b.role !== 'group') continue; }
+      else continue;
+      if (b.gender !== gender) continue;
+      let ok = true;
+      for (const iv of ivs) if (!b.ivset.has(iv)) { ok = false; break; }
+      if (!ok) continue;
+      if (nat && !b.nature) continue;
+      return true;
+    }
+    return false;
+  };
+}
+
+// Inventory-aware plan with CONSUME-ONCE semantics. The plain solver (with
+// `inventory`) treats an owned mon as free at every node it could fill, which
+// over-uses a single mon (e.g. one Ditto routed through three ditto-mother
+// nodes — an impossible plan, since multi-IV Ditto isn't buyable).
+//
+// Fix: iterative "pin and re-solve". Each round we solve with the still-
+// available owned mons, take the single most valuable owned leaf, PIN it (a
+// $0 recipe override) and drop that mon from the pool. The next round re-solves
+// without it — so the rest of the tree is built from buyable/breedable carriers
+// instead of more copies of the same mon. Each owned mon ends up used once and
+// the plan stays feasible. Returns the final plan plus `buyCost` (the
+// from-scratch reference) and the set of pinned recipe ids (rendered as owned).
+export function planWithInventory(args, inventory) {
+  const inv = (inventory || []).filter(Boolean).map((b, i) => ({ ...b, _key: b.id != null ? `${b.id}` : `inv${i}`, ivset: new Set(b.ivs || []) }));
+  const buyPlan = planBreeding(args);
+  if (!inv.length || !buyPlan) return { ...(buyPlan || { node: null, totalCost: 0 }), buyCost: buyPlan ? buyPlan.totalCost : 0, pinnedIds: [] };
+
+  const baseOv = args.overrides || {};
+  const baseRecipe = baseOv.byRecipe || {};
+  const fills = (mon, species, gender, ivs) => {
+    if (species === 'ditto') { if (mon.role !== 'ditto') return false; }
+    else if (species === 'target') { if (mon.role !== 'target') return false; }
+    else if (species === 'group') { if (mon.role !== 'target' && mon.role !== 'group') return false; }
+    else return false;
+    if (mon.gender !== gender) return false;
+    for (const iv of ivs) if (!mon.ivset.has(iv)) return false;
+    return true;
+  };
+
+  const pins = {};            // recipeId -> 0
+  const pinName = {};         // recipeId -> owned mon species name (for display)
+  const usedKeys = [];        // mon keys actually pinned (consumed once each)
+  let ownedLeft = inv;
+  for (let guard = 0; guard <= inv.length && ownedLeft.length; guard++) {
+    const ov = { ...baseOv, byRecipe: { ...baseRecipe, ...pins } };
+    const plan = planBreeding({ ...args, inventory: ownedLeft, overrides: ov });
+    if (!plan || !plan.node) break;
+    // Collect owned leaves not already pinned.
+    const leaves = [];
+    (function w(n) { if (!n) return; if (n.kind === 'breed') { w(n.left); w(n.right); } else if (n.owned && !(n.recipeId in pins)) leaves.push(n); })(plan.node);
+    if (!leaves.length) break;
+    // Most valuable placement first = the leaf carrying the most IVs.
+    leaves.sort((a, b) => (b.ivs?.length || 0) - (a.ivs?.length || 0));
+    const leaf = leaves[0];
+    // Assign the tightest still-available mon that can fill it (preserve the
+    // more flexible mons for later rounds).
+    const cands = ownedLeft.filter((m) => fills(m, leaf.species, leaf.gender, leaf.ivs || []));
+    if (!cands.length) break;
+    cands.sort((a, b) => a.ivs.length - b.ivs.length);
+    pins[leaf.recipeId] = 0;
+    pinName[leaf.recipeId] = cands[0].name || null;
+    usedKeys.push(cands[0]._key);
+    ownedLeft = ownedLeft.filter((m) => m._key !== cands[0]._key);
+  }
+
+  const finalPlan = planBreeding({ ...args, inventory: [], overrides: { ...baseOv, byRecipe: { ...baseRecipe, ...pins } } });
+  // Re-style pinned override leaves as owned ("From your Box", not "overridden").
+  const pinnedSet = new Set(Object.keys(pins));
+  if (finalPlan?.node) (function mark(n) { if (!n) return; if (n.kind === 'breed') { mark(n.left); mark(n.right); } else if (pinnedSet.has(n.recipeId)) { n.owned = true; n.overridden = false; if (pinName[n.recipeId]) n.ownedName = pinName[n.recipeId]; } })(finalPlan.node);
+  return { ...finalPlan, buyCost: buyPlan.totalCost, pinnedIds: [...pinnedSet], usedKeys };
+}
 
 // Match a list of breeders the user ALREADY OWNS against an instantiated plan
 // tree. Greedy: each owned breeder (largest IV-set first) claims the
@@ -263,6 +355,18 @@ function solveCarrier(ctx, ivs, gender, speciesConstraint, isFinal = false, nat 
   }
 
   const id = nodeId(speciesConstraint, gender, sortedIVs, nat);
+
+  // Inventory-aware shaping: if the user owns a carrier that satisfies this node
+  // (role-compatible, same gender, IV-superset, nature if required), stop here
+  // with a free owned leaf. Pure on (species, gender, ivs, nat), so memoization
+  // and the buy-optimal default path are unaffected. matchInventory later does
+  // the honest consume-once accounting on the shaped tree.
+  if (ctx.ownedMatch && ctx.ownedMatch(speciesConstraint, gender, sortedIVs, nat)) {
+    const leaf = makeLeaf(id, speciesConstraint, sortedIVs, gender, 0, false);
+    leaf.owned = true;
+    if (nat) leaf.naturePassing = true;
+    return leaf;
+  }
 
   // User override → fixed-cost leaf.
   const ov = ctx.overrides[id];

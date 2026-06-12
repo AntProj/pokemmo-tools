@@ -28,28 +28,38 @@ export default function DamageCalc({ data, theme, onTheme }) {
   const [field, setField] = useState(EMPTY_FIELD);
   const [selected, setSelected] = useState({ side: 1, index: 0 });
 
-  // Prefill Pokémon 1 from a Team Builder "Test in Calc" handoff.
+  // Prefill from a "Test in Calc" handoff. Accepts a single flat set (→ Pokémon
+  // 1, from the Team Builder), `{ slot: 2, ...set }` to target a side, or
+  // `{ mon1, mon2 }` to fill both (Gym Prep sends the trainer's mon as slot 2).
   useEffect(() => {
     let raw;
     try { raw = sessionStorage.getItem('pokemmo:calc:prefill'); } catch { return; }
     if (!raw) return;
     try { sessionStorage.removeItem('pokemmo:calc:prefill'); } catch { /* ignore */ }
-    let set;
-    try { set = JSON.parse(raw); } catch { return; }
-    if (!set || set.monId == null) return;
-    const moves = [0, 1, 2, 3].map((i) => {
-      const name = (set.moves || [])[i] || '';
-      if (!name) return EMPTY_MOVE();
-      const d = moveDefaults(name);
-      return d ? { name, bp: d.bp, type: d.type, category: d.category, crit: false } : { ...EMPTY_MOVE(), name };
-    });
-    setMon1({
-      ...EMPTY_MON(),
-      monId: set.monId, level: set.level ?? 100, nature: set.nature || 'Hardy',
-      ability: set.ability || '', item: set.item || '', gender: ['M', 'F'].includes(set.gender) ? set.gender : '',
-      evs: { ...EMPTY_MON().evs, ...(set.evs || {}) }, ivs: { ...EMPTY_MON().ivs, ...(set.ivs || {}) },
-      moves,
-    });
+    let payload;
+    try { payload = JSON.parse(raw); } catch { return; }
+    if (!payload) return;
+    const build = (set) => {
+      const moves = [0, 1, 2, 3].map((i) => {
+        const name = (set.moves || [])[i] || '';
+        if (!name) return EMPTY_MOVE();
+        const d = moveDefaults(name);
+        return d ? { name, bp: d.bp, type: d.type, category: d.category, crit: false } : { ...EMPTY_MOVE(), name };
+      });
+      return {
+        ...EMPTY_MON(),
+        monId: set.monId, level: set.level ?? 100, nature: set.nature || 'Hardy',
+        ability: set.ability || '', item: set.item || '', gender: ['M', 'F'].includes(set.gender) ? set.gender : '',
+        evs: { ...EMPTY_MON().evs, ...(set.evs || {}) }, ivs: { ...EMPTY_MON().ivs, ...(set.ivs || {}) },
+        moves,
+      };
+    };
+    if (payload.mon1 || payload.mon2) {
+      if (payload.mon1?.monId != null) setMon1(build(payload.mon1));
+      if (payload.mon2?.monId != null) setMon2(build(payload.mon2));
+    } else if (payload.monId != null) {
+      (payload.slot === 2 ? setMon2 : setMon1)(build(payload));
+    }
   }, []);
 
   const poke1 = mon1.monId != null ? byId.get(mon1.monId) : null;

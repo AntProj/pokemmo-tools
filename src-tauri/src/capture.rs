@@ -14,7 +14,7 @@ use std::ffi::c_void;
 use windows::core::Result as WinResult;
 use windows::Win32::Foundation::{BOOL, HWND, LPARAM, RECT, TRUE};
 use windows::Win32::Graphics::Gdi::{
-    BitBlt, CreateCompatibleBitmap, CreateCompatibleDC, DeleteDC, DeleteObject, GetDIBits,
+    BitBlt, CreateCompatibleBitmap, CreateCompatibleDC, DeleteDC, DeleteObject, GetDC, GetDIBits,
     GetWindowDC, ReleaseDC, SelectObject, BITMAPINFO, BITMAPINFOHEADER, BI_RGB, DIB_RGB_COLORS,
     SRCCOPY,
 };
@@ -80,17 +80,33 @@ pub fn capture_window_png(hwnd_raw: isize) -> WinResult<(Vec<u8>, u32, u32)> {
         let width = (rect.right - rect.left).max(1);
         let height = (rect.bottom - rect.top).max(1);
 
-        let hdc_window = GetWindowDC(hwnd);
-        let hdc_mem = CreateCompatibleDC(hdc_window);
-        let hbm = CreateCompatibleBitmap(hdc_window, width, height);
+        // The desktop DC is always accessible. We use it as the compatibility DC
+        // AND as the capture source of last resort — copying the window's screen
+        // rectangle off the desktop is not subject to per-window ACL / UIPI,
+        // which is what blocks GetWindowDC/PrintWindow when the target window
+        // runs at a higher integrity level (e.g. PokéMMO launched as admin).
+        let hdc_screen = GetDC(HWND(std::ptr::null_mut()));
+        let hdc_window = GetWindowDC(hwnd); // may be null / denied for elevated windows
+        let hdc_mem = CreateCompatibleDC(hdc_screen);
+        let hbm = CreateCompatibleBitmap(hdc_screen, width, height);
         let old = SelectObject(hdc_mem, hbm);
 
-        // PRINT_WINDOW_FLAGS(2) == PW_RENDERFULLCONTENT — captures
-        // DWM/DirectComposition content.
-        let printed = PrintWindow(hwnd, hdc_mem, PRINT_WINDOW_FLAGS(2));
-        if !printed.as_bool() {
-            // Fallback: straight blit of the window DC.
-            let _ = BitBlt(hdc_mem, 0, 0, width, height, hdc_window, 0, 0, SRCCOPY);
+        // Preferred: PrintWindow against the window's own DC (captures even when
+        // occluded). PRINT_WINDOW_FLAGS(2) == PW_RENDERFULLCONTENT for
+        // DWM/DirectComposition content. Then a plain window-DC blit. If the
+        // window DC is denied, fall back to blitting the window's rectangle
+        // straight off the desktop DC.
+        let mut captured = false;
+        if !hdc_window.0.is_null() {
+            if PrintWindow(hwnd, hdc_mem, PRINT_WINDOW_FLAGS(2)).as_bool() {
+                captured = true;
+            } else if BitBlt(hdc_mem, 0, 0, width, height, hdc_window, 0, 0, SRCCOPY).is_ok() {
+                captured = true;
+            }
+        }
+        if !captured {
+            // Screen-region fallback (works for UIPI-protected / elevated windows).
+            let _ = BitBlt(hdc_mem, 0, 0, width, height, hdc_screen, rect.left, rect.top, SRCCOPY);
         }
 
         // Pull pixels as 32-bit, top-down (negative height) BGRA.
@@ -117,7 +133,10 @@ pub fn capture_window_png(hwnd_raw: isize) -> WinResult<(Vec<u8>, u32, u32)> {
         SelectObject(hdc_mem, old);
         let _ = DeleteObject(hbm);
         let _ = DeleteDC(hdc_mem);
-        ReleaseDC(hwnd, hdc_window);
+        if !hdc_window.0.is_null() {
+            ReleaseDC(hwnd, hdc_window);
+        }
+        ReleaseDC(HWND(std::ptr::null_mut()), hdc_screen);
 
         if scanlines == 0 {
             return Err(windows::core::Error::from_win32());

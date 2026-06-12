@@ -5,215 +5,317 @@ Guidance for Claude Code (and other coding agents) working in this repository.
 ## What this project is
 
 **PokéMMO Tools** — a single-page React app (Vite, deployed to GitHub Pages) that
-ships a curated, app-ready dataset for the PokéMMO fan community. The app is a
-Pokédex + advanced search built around one large generated JSON file.
+ships a curated, app-ready dataset for the PokéMMO fan community. It started as a
+Pokédex + search and has grown into a small **toolkit**: Pokédex, Locations,
+catch Tracker, interactive Maps, a persistent Box, Catch/Damage calculators, a
+Team Builder, a Gym & E4 Prep tool, and a Breeding planner — plus a Windows
+**desktop app** (Tauri) that adds OCR capture.
 
-The repo is essentially two things glued together:
-1. A **data pipeline** (`scripts/build-data.mjs`) that merges multiple raw JSON
-   sources into one `src/data/pokemmo.json` (~6 MB).
-2. A **React UI** (`src/`) that consumes that JSON for browse/search/filter.
+The repo is three things glued together:
+1. A **data pipeline** (`scripts/*.mjs`) that merges raw sources into generated
+   JSON served from `public/data/`.
+2. A **React UI** (`src/`) that fetches that JSON at runtime for browse / search
+   / filter / calc.
+3. A thin **Tauri desktop shell** (`src-tauri/`) that loads the live site and
+   adds screen-capture + OCR (the only reason the desktop build exists).
+
+> **Keeping this file honest:** every feature below has a **TODO** line. When you
+> finish something on a TODO list, delete it; when you ship a half-built feature,
+> add one. This is the map of what's real vs. half-done — don't let it rot.
 
 ## Tech stack
 
 - **React 18** + **react-router-dom v7** (`HashRouter` — required for GitHub Pages)
-- **Vite 5** as build tool/dev server
-- **Tailwind CSS 3** (with PostCSS + Autoprefixer)
-- **lucide-react** for icons
-- **gh-pages** for deploy
-- Pure ESM throughout (`"type": "module"` in `package.json`)
-- No TypeScript, no test framework currently
-- Node script (`scripts/build-data.mjs`) is the only build-time data step
+- **Vite 5** as build tool/dev server; pages are `React.lazy` code-split
+- **Tailwind CSS 3** (PostCSS + Autoprefixer); dark mode via `dark` class on `<html>`
+- **lucide-react** for icons (don't add a second icon library)
+- **Leaflet** (react-leaflet) for the interactive maps
+- **Tauri v2** (Rust + WebView2) for the Windows desktop shell (`src-tauri/`)
+- Vendored **`@smogon/calc` fork** at `vendor/pokemmo-calc` (CJS) for the damage engine
+- Pure ESM (`"type": "module"`). **No TypeScript, no test framework, no lint.**
 
 ## Repo layout
 
 ```
 pokemmo-tools/
-├── data/raw/                ← Raw JSON inputs to the pipeline (large; some are 16 MB+)
-│   └── README.md            ← Where each raw file comes from + how to refresh
+├── data/raw/                ← Raw JSON inputs to the pipeline (some 16 MB+). README documents each source.
+│   ├── gym-teams.json       ← Gym-leader teams (from gym-teams.xlsx; xlsx is gitignored)
+│   └── trainers-wiki.json   ← Wiki E4/champions scrape
 ├── scripts/
-│   └── build-data.mjs       ← Merges raw → src/data/pokemmo.json
+│   ├── build-data.mjs       ← Merges raw → public/data/pokemmo.json (the core dataset)
+│   ├── build-trainers.mjs   ← gym-teams.json + trainers-wiki.json → public/data/{trainers,gym-cities}.json
+│   ├── parse-gym-xlsx.mjs    ← Gym Leader Team Query Form .xlsx → data/raw/gym-teams.json
+│   ├── scrape-trainers.mjs   ← pokemmo.fandom.com {{trainerentry}} → data/raw/trainers-wiki.json
+│   ├── merge-trainer-teams.mjs ← Scribe export → public/data/maps/<region>/trainer-instances.json
+│   ├── build-map-data.mjs    ← (needs POKEMMO_MAPS_DIR) builds a region's map data
+│   ├── upload-maps-to-r2.mjs ← pushes map images/tiles to Cloudflare R2
+│   ├── deploy-gh-pages.mjs   ← worktree-based gh-pages publish (Windows-safe)
+│   └── prune-dist-for-gh-pages.mjs
 ├── src/
-│   ├── App.jsx              ← Routes, theme/view state, modal owner
-│   ├── main.jsx             ← React entrypoint
-│   ├── index.css            ← Tailwind base + a few custom rules
-│   ├── data/                ← Generated; gitignored
-│   │   └── pokemmo.json     ← Built by `npm run build:data`
-│   ├── pages/
-│   │   ├── Pokedex.jsx      ← Browse: regional dex, type filter, sort
-│   │   └── Search.jsx       ← Advanced filter: moves/abilities/items/eggs/stats
-│   ├── components/          ← Toolbar, filter pickers, cards, modal, etc.
-│   └── lib/
-│       ├── format.js        ← Display helpers (dex#, height, weight, evo strings…)
-│       └── types.js         ← Type colors / metadata
-├── public/                  ← Static assets served as-is (currently empty)
-├── index.html               ← Vite entrypoint
-├── vite.config.js           ← `base: '/pokemmo-tools/'` for GH Pages
-├── tailwind.config.js
-├── postcss.config.js
+│   ├── App.jsx              ← Routes, theme/view state, lifted page state, modal owner, data fetch
+│   ├── pages/               ← One file per tab (see Features below)
+│   ├── components/          ← NavBar, Modal, PokemonModal, pickers, cards, TypeBadge, …
+│   ├── hooks/               ← useEscapeAndScrollLock, …
+│   └── lib/                 ← format.js, types.js, box.js, teams.js, teamAnalysis.js, damage.js,
+│                              trainerScribe.js, navConfig.js, monFilters.js
+├── vendor/pokemmo-calc/     ← Vendored CJS @smogon/calc fork (PokéMMO mechanics). See NOTICE.md.
+├── src-tauri/               ← Tauri desktop shell: capture.rs, ocr.rs, main.rs, tauri.conf.json, capabilities/
+├── public/data/             ← Served as static assets, fetched at runtime (NOT bundled):
+│   ├── pokemmo.json         ← Built by build:data (gitignored, ~6.7 MB)
+│   ├── trainers.json        ← Built by build:trainers (committed)
+│   ├── gym-cities.json      ← Built by build:trainers (committed)
+│   └── maps/<region>/       ← maps-index, trainer-instances, zone graphs; images/tiles on R2 (gitignored)
+├── vite.config.js           ← base '/pokemmo-tools/' (web) or './' (Tauri); CJS interop for vendor/
 └── package.json
 ```
 
 ## Common commands
 
 ```bash
-npm install            # install deps
-npm run build:data     # rebuild src/data/pokemmo.json from data/raw/* — REQUIRED before first dev run
-npm run dev            # Vite dev server (default http://localhost:5173)
+npm install
+npm run build:data     # rebuild public/data/pokemmo.json from data/raw/* — REQUIRED before first dev run
+npm run build:trainers # rebuild public/data/trainers.json + gym-cities.json from the trainer raw files
+npm run dev            # Vite dev server (http://localhost:5173, base /pokemmo-tools/)
 npm run build          # vite build → dist/
 npm run preview        # preview the built dist/
-npm run deploy         # predeploy (build:data + build) → gh-pages -d dist
+npm run deploy         # predeploy (build:data + build:trainers + build + prune) → deploy-gh-pages.mjs
+npm run desktop:dev    # Tauri dev (Windows; needs Rust toolchain + WebView2 — see DESKTOP.md)
+npm run desktop:build  # Tauri release build
 ```
 
-There is **no lint, typecheck, or test command** wired up. If a coding agent is
-asked to "verify" changes it should:
-1. Run `npm run build:data` if any file under `data/raw/` or `scripts/` changed.
-2. Run `npm run build` to confirm the app still builds.
-3. (Optional) `npm run preview` to spot-check.
+There is **no lint/typecheck/test**. To "verify" changes:
+1. `npm run build:data` if anything under `data/raw/` or `scripts/build-data.mjs` changed.
+2. `npm run build:trainers` if the trainer raw files or `build-trainers.mjs` changed.
+3. `npm run build` to confirm the app still compiles.
+4. **Test production output, not just dev** — `vite preview` (or the Preview MCP).
+   Dev uses esbuild; prod uses Rollup. The vendored CJS damage engine behaves
+   differently between them (it once threw "exports is not defined" only in
+   prod). For anything touching `lib/damage.js` / `vendor/`, verify the preview.
+
+## Features & tabs
+
+Nav is **user-customizable** (`components/NavBar.jsx` + `lib/navConfig.js`):
+destinations can be pinned to the bar or tucked in a **More** dropdown, order is
+editable, and `devOnly` destinations (Scribe) only show in the desktop app or a
+dev build. Adding a destination to `NAV_DESTINATIONS` is all that's needed.
+
+Each tab owns its filter/UI state, lifted into `App.jsx` where it must survive
+tab switches. `theme`/`onTheme` are threaded to every page for the header toggle.
+
+### Pokédex — `/` · `pages/Pokedex.jsx`
+Browse + advanced search merged into one page. Regional dex, type filter
+(AND/OR), sort, plus an advanced sidebar (moves×4, abilities, held items, egg
+groups×2, stat ranges). State: `INITIAL_POKEDEX` in `App.jsx`. Opens the shared
+`<PokemonModal/>`. *(The old `Search.jsx` page was merged in and deleted; `/search`
+and `/moves` redirect here.)*
+- **TODO:** none tracked.
+
+### Locations — `/locations/:region?/:location?` · `pages/Locations.jsx`
+Reverse index `"Region::Location"` → mons. Location opens as a modal over the
+grid (deep-linkable). "View on map" links into the Maps tab.
+- **TODO:** none tracked.
+
+### Tracker — `/tracker` · `pages/Tracker.jsx`
+Catch tracking (caught/uncaught per mon) + a planning view. Mon-attribute
+filters shared with `lib/monFilters.js`. Persists to `localStorage` `tracker:state`
+(debounced). JSON import merges.
+- **TODO:** none tracked.
+
+### Maps — `/map/:region(/:zoneId)` · `pages/RegionMap.jsx`
+Leaflet interactive region maps: overworld + per-zone detail, zone jump picker,
+cross-zone pathfinding/walkability, trainer-NPC markers, gym-city → Prep links.
+Tiles/images are hosted on **Cloudflare R2** (absolute URLs in the maps index),
+built by `build-map-data.mjs` and pushed with `upload:maps`.
+- **TODO:**
+  - Only **Sinnoh** and **Johto** have map data. Kanto / Hoenn / Unova not built.
+  - Trainer-NPC `team`/`rewardAmount` are **empty** for route trainers (await OCR
+    via Scribe). Only Sinnoh/Johto have NPC catalogs at all.
+  - Gym leaders aren't datamined NPCs, so they're surfaced via the gym-city → Prep
+    link rather than as map markers. E4/champion locations aren't linked yet.
+
+### Box — `/box` · `pages/Box.jsx` · `lib/box.js`
+Persistent collection of owned mons. Named boxes (PokéMMO-style, store **v3**),
+grid view, Pokédex-style filters, JSON import/export. The **desktop app** can OCR
+a mon-summary screenshot to add a mon (gender via channel-dominance, shiny/alpha
+via hue + calibration). Consumed by Breeding (owned-breeders) and Team/Prep
+(counters). `localStorage` `pokemmo:box`.
+- **TODO:**
+  - OCR add is **desktop-only**; web users import JSON. Gender/shiny/alpha
+    detection still has calibration-dependent edge cases.
+
+### Catch Calc — `/catch` · `pages/CatchCalc.jsx`
+Catch-probability calculator over the dataset (`catch_rate`, ball/status/HP).
+- **TODO:** none tracked.
+
+### Damage Calc — `/damage` · `pages/DamageCalc.jsx` · `lib/damage.js` · `vendor/pokemmo-calc`
+Full-parity calc against the vendored PokéMMO `@smogon/calc` fork: bidirectional
+results, rolls/KO-chance/recoil, editable types/gender/nature/ability/item/status,
+EV-IV-boost grid, current-HP%, per-move BP/type/category/crit, full Field panel
+(Singles/Doubles, weather/terrain/rooms/gravity, per-side hazards). Accepts a
+`sessionStorage 'pokemmo:calc:prefill'` handoff — a flat set (→ slot 1, Team
+Builder) or `{ slot: 2 }` / `{ mon1, mon2 }` (Gym Prep sends the opponent).
+- **TODO:**
+  - Preset competitive sets + Showdown/import-to-calc (offered, not built).
+  - Trainer-mon prefills lack nature/ability/EVs/IVs (sheet doesn't have them) —
+    calc applies defaults; results are approximate.
+
+### Team Builder — `/teams` · `pages/TeamBuilder.jsx` · `lib/teams.js` · `lib/teamAnalysis.js`
+Up to 6 sets per team; create/rename/delete/duplicate team tabs. Seed by hand or
+"From Box". Three analyses computed purely off `pokemmo.json` (no engine import):
+defensive weakness chart, offensive coverage, speed tiers. Showdown/PokéPaste +
+JSON import/export (round-trip verified). "Test in Calc" hands a set to the
+Damage Calc. `localStorage` `pokemmo:teams`.
+- **TODO:**
+  - No EV/IV optimizer; no "what threatens this team" suggestions yet.
+
+### Gym & E4 Prep — `/trainers` · `pages/TrainerPrep.jsx`
+Browse gym leaders / Elite Four / champions by region (data: `public/data/trainers.json`).
+Per-trainer detail: team-variant tabs, "Hit them with" (types super-effective vs
+the most of their team), "They threaten" move-types, counters from your Box, and
+per-mon "Send to Damage Calc" (as the opponent). Deep-linkable via `?open=<id>`
+(the map's gym-city link uses this).
+- **TODO:**
+  - **Sinnoh & Unova Elite Four teams are missing** — neither the gym sheet nor
+    the wiki has them. Gym leaders are complete for all 5 regions; E4/champions
+    exist only for Kanto/Johto/Hoenn (+ Cynthia). Fill via OCR (Scribe) or a new
+    source, then they appear automatically.
+  - Gym data is the **post-E4 rematch** teams (high level), not story teams.
+  - Abilities are **null** (not in the sheet); no EV/IV/nature per mon.
+  - No type-specialty label per gym; no "is your team ready?" check.
+
+### Breeding — `/breeding` · `pages/BreedingPlanner.jsx` · `lib/breeding/optimizer.js`
+Breeding optimizer: target IV/nature → breeding-step tree, recipe/cost breakdown,
+carrier prices, egg moves + hidden ability. **Inventory-first**: pick your boxes
+in the form sidebar and the single Plan outline combines the mons you own with
+the carriers you'd still buy/breed, and shows from-scratch → with-boxes savings.
+Each owned mon is used **exactly once** — `planWithInventory` does iterative
+pin-and-resolve (pin the most valuable owned leaf as a $0 override, drop that
+mon, re-solve) so plans never over-use a single mon (e.g. one Ditto as three)
+and stay feasible. The buy-optimal solve (`planBreeding`, no inventory) is the
+from-scratch reference; `ownedMatch` shapes the tree, `matchInventory` is the
+older single-tree overlay (now unused by the page).
+- **TODO:**
+  - The consume-once assignment is greedy (most-valuable owned leaf first); in
+    rare cases the result can cost marginally more than the true optimum.
+  - Volt Tackle / Incense babies not modelled.
+
+### Trainer Scribe — `/scribe` · `pages/TrainerScribe.jsx` · `lib/trainerScribe.js`  *(dev-only)*
+OCR authoring tool (desktop / dev builds only). Calibrate screen regions (battle
+log, opponent HP-bar, route), record a battle, and it parses the log into a
+trainer-team observation that accretes across battles. Export merges into a
+region's `trainer-instances.json` via `merge-trainer-teams.mjs`. `localStorage`
+`pokemmo:trainerscribe` + `pokemmo:scribe:regions`.
+- **TODO:**
+  - Route-trainer story teams are uncollected (the catalogs ship empty). This is
+    the slow, manual path; only Sinnoh/Johto catalogs exist.
+  - Crowdsourced contribution (Worker + daily consensus) is **on hold** (reverted).
+  - The `parseBattleLog` parser is pure — could ingest a screen recording / a
+    folder of screenshots instead of live capture (not built).
+
+### Desktop app — `src-tauri/`  *(Windows)*
+Thin Tauri shell whose window points at the **live site**, so the web deploy and
+the desktop app stay in sync automatically. Adds `Windows.Graphics.Capture` /
+`PrintWindow` capture + `Windows.Media.OCR`, a global hotkey, and a toast. All
+capture features are gated on `window.__TAURI__`, so the same build is a plain
+website in a browser.
+- **TODO:**
+  - Windows-only. Remote-IPC capture path needs verification on a real local build.
 
 ## Data pipeline
 
-`scripts/build-data.mjs` is the heart of this project. It merges:
+Generated data lives in `public/data/` (served as static assets, **fetched at
+runtime** — `App.jsx` fetches `${import.meta.env.BASE_URL}data/pokemmo.json`).
 
-1. **PokeMMO Hub** (current game state — `monster.json`, `dex.json`)
-   - Authoritative for stats, moves, abilities, evolutions, encounter locations.
-2. **PokeMMOZone / PokeAPI-derived** files
-   - Contribute English text only (effect descriptions, item names, etc.)
-   - Files: `pokemon-data.json`, `moves-data.json`, `abilities-data.json`,
-     `item-data.json`, `types-data.json`, `natures-data.json`,
-     `egg-groups-data.json`, `egg-moves-data.json`, `gender-rates.json`,
-     `pvp-data.json`, `pokemon-sprites.json`.
+**Core dataset — `build-data.mjs` → `public/data/pokemmo.json`** merges:
+1. **PokeMMO Hub** (current game state: stats, moves, abilities, evolutions,
+   encounter locations) — authoritative; **Hub wins on overlap**.
+2. **PokeMMOZone / PokeAPI-derived** — English text only (effect/ability/item
+   descriptions, flags) — fills fields the Hub lacks.
 
-**Merge rule:** where the two sources overlap, **PokeMMO Hub wins** because it
-reflects current PokeMMO mechanics. The "old" set only fills in fields the new
-one lacks.
+`pokemmo.json` shape: `pokemon[]` (stats, types, abilities, evolutions, learnsets
+by source as IDs, held items, flags, PVP/shiny tiers, **`yields` incl. EV yields**,
+`catch_rate`, sprites, encounter `locations` easiest-first), `locations` reverse
+index, id-keyed `moves` / `abilities` / `items`, plus `natures` / `egg_groups` /
+`egg_moves` / `gender_rates` / `pvp`, and `meta`.
 
-**Output shape** (`src/data/pokemmo.json`):
+**Trainer data — `build-trainers.mjs` → `public/data/{trainers,gym-cities}.json`**
+merges two id-mapped raw sources:
+- `parse-gym-xlsx.mjs` → `data/raw/gym-teams.json` — gym leaders, all 5 regions
+  (incl. Sinnoh), from the community "Gym Leader Team Query Form" `.xlsx` (the
+  48 MB source is gitignored; download per `data/raw/README.md`).
+- `scrape-trainers.mjs` → `data/raw/trainers-wiki.json` — E4/champions/rivals from
+  pokemmo.fandom.com (CC-BY-SA; no Sinnoh).
 
-- `pokemon[]` — all 610 obtainable mons. Each entry has stats, types,
-  abilities (id + name), evolutions, learnsets bucketed by source
-  (level/TM/tutor/egg) as IDs only, held items (id + drop chance),
-  legendary/mythical/baby flags, PVP tier, shiny tier/points, sprite URLs,
-  and **encounter locations** sorted easiest-first (method, region, level
-  range, rarity, time of day).
-- `locations` — reverse index `"Region::Location"` → list of mons.
-- `moves` — id-keyed catalog (~559) with name, type, power, accuracy, PP,
-  effect description, effect_chance.
-- `abilities` — id-keyed catalog (~170) with name + effect description.
-- `items` — id-keyed catalog (~660 relevant items) — held, evo, berries,
-  balls, vitamins.
-- `natures`, `egg_groups`, `egg_moves`, `gender_rates`, `pvp` — reference
-  passthroughs used by future breeding / IV / team-builder tools.
-- `meta` — `total_pokemon`, `total_moves`, `built_at` ISO timestamp.
+**Maps** (`build-map-data.mjs`, `upload-maps-to-r2.mjs`) are gated behind
+`POKEMMO_MAPS_DIR` and R2 creds in `.env.local`. The upstream datamine that
+produces the map + trainer scaffolds is `build_world.py` (in the user's local
+"Pokemmo Maps" folder, **not** in this repo).
 
-**Rarity ranking** for "easiest to find" sort lives at the top of
-`build-data.mjs` in the `RARITY_WEIGHT` table. Hordes count as easier
-than their nominal rarity because they yield 5 mons per battle. Lures
-are highest because they're a guaranteed encounter.
+## Routing & top-level state (`App.jsx`)
 
-**Location name normalization** — PokeMMO data mixes SHOUTED CASE and
-Title Case names. `normalizeLocation()` Title-Cases the SHOUTED ones while
-preserving abbreviations (TM, HM, roman numerals).
+Routes: `/` (Pokédex), `/locations/:region?/:location?`, `/tracker`, `/box`,
+`/catch`, `/damage`, `/teams`, `/trainers`, `/breeding`, `/scribe` (dev-only),
+`/map/sinnoh(/:zoneId)`, `/map/johto(/:zoneId)`; `/map` → sinnoh; `/search` &
+`/moves` → `/`; `*` → `/`. **`HashRouter` is intentional** (GH Pages SPA support).
 
-## Routing & top-level state
+Lifted state in `App.jsx`: `view`, `theme`, `pokedexState`, `locationsState`,
+`trackerView`/`trackerState`, `boxStore`, `teamsStore`, `selectedId`. Stores load
+from / save to `localStorage` via their lib modules.
 
-`App.jsx` owns:
-- `view` ('grid' | 'list') and `theme` ('dark' | 'light') — both persisted to
-  `localStorage` under `pokemmo:view` and `pokemmo:theme`.
-- `pokedexState` and `searchState` — page-specific state lifted to App so it
-  survives tab switches without being lost on unmount.
-- `selectedId` — currently-open Pokémon for the shared `<PokemonModal />`.
-
-Routes:
-- `/` → `Pokedex` (regional dex, simple filters)
-- `/search` → `Search` (advanced filters: moves×4, abilities, held items,
-  egg groups×2, stat ranges, type filter with AND/OR mode toggles)
-- `/moves` → redirects to `/search` (kept for old bookmarks)
-- `*` → redirects to `/`
-
-`HashRouter` is intentional — GitHub Pages doesn't support SPA fallbacks
-without a 404.html hack, and HashRouter avoids that entirely.
+**localStorage keys** (namespace new ones `pokemmo:` and centralize): `pokemmo:view`,
+`pokemmo:theme`, `pokemmo:box` (v3), `pokemmo:teams`, `pokemmo:nav`,
+`pokemmo:trainerscribe`, `pokemmo:scribe:regions`, `tracker:state`. **sessionStorage:**
+`pokemmo:calc:prefill` (one-shot calc handoff).
 
 ## Conventions to follow
 
-- **No new files unless needed.** Prefer extending `lib/format.js` or an
-  existing component over creating new ones.
-- **Filter state shape** lives in `App.jsx` (`INITIAL_POKEDEX`, `INITIAL_SEARCH`).
-  When adding a filter, update the initial constant, the page's filter logic,
-  and the `Toolbar` / picker component as a set.
-- **Components are presentational + uncontrolled-ish.** Pages own filter state
-  and pass setters down. Don't introduce a state library; the lifted-state
-  pattern is deliberate.
-- **Stat keys** are always: `hp`, `attack`, `defense`, `sp_attack`,
-  `sp_defense`, `speed`. `STAT_ORDER` in `lib/format.js` is the canonical order.
-- **Region keys** are `kanto | johto | hoenn | sinnoh | unova` (lowercase).
-  `regionKey()` in `lib/format.js` normalizes UI labels.
-- **Move learn methods** are bucketed in `Search.jsx` via the `METHODS` table:
-  `level | move_learner_tools | move_tutor | special_moves | egg_moves |
-  special_egg | on_evolution | prevo_moves`. Lower priority number wins
-  when a Pokémon learns the same move multiple ways.
-- **Tailwind only.** No CSS modules, no styled-components. Dark mode uses
-  the `dark:` variant driven by a `dark` class on `<html>`.
-- **Icons:** lucide-react. Don't add a second icon library.
-- **No localStorage abuse** — currently only `pokemmo:view` and `pokemmo:theme`
-  are stored. If adding more, namespace with the `pokemmo:` prefix and
-  centralize the keys (see the `LS` object in `App.jsx`).
-- **Imports use explicit `.jsx` / `.js` extensions** (Vite + ESM).
+- **Prefer extending** an existing lib/component over new files.
+- **Stat keys** are always `hp | attack | defense | sp_attack | sp_defense | speed`
+  (`STAT_ORDER` in `lib/format.js`). **Region keys** are lowercase
+  `kanto | johto | hoenn | sinnoh | unova` (`regionKey()` normalizes UI labels).
+- **Components are presentational**; pages own state and pass setters down. **No
+  state-management library** — lifted state is deliberate.
+- **Tailwind only.** **lucide-react** only. **Explicit `.jsx`/`.js`** extensions.
+- **Data goes through the pipeline** — don't import `data/raw/*` into components;
+  everything is fetched from `public/data/`.
 
 ## Performance notes
 
-- `src/data/pokemmo.json` is ~6 MB and imported synchronously. Don't add more
-  whole-dataset imports; if a future tool needs another big blob, code-split it.
-- `vite.config.js` sets `chunkSizeWarningLimit: 3000` precisely because of the
-  data import. Don't lower it without a plan.
-- Filter functions in `Pokedex.jsx` and `Search.jsx` use `useMemo` keyed on
-  the filter inputs. Preserve this when editing — re-filtering 610 mons on
-  every keystroke is fine, but rebuilding indexes (see `buildIndex` in
-  `Search.jsx`) is not.
+- `pokemmo.json` (~6.7 MB) is **fetched once at runtime**, not bundled. Don't add
+  more whole-dataset imports; code-split a secondary blob (as Prep does with
+  `trainers.json`, Box with its store, etc.).
+- Heavy pages (RegionMap/Leaflet, BreedingPlanner, DamageCalc engine) are
+  `React.lazy`. `vite.config.js` sets `chunkSizeWarningLimit: 3000` for the
+  vendored calc chunk — don't lower without a plan.
+- Filter/index work uses `useMemo` keyed on inputs — preserve it.
 
 ## Deploy
 
-GitHub Pages from the `gh-pages` branch via `gh-pages -d dist`. The two
-deploy-sensitive values are:
+GitHub Pages from the `gh-pages` branch via the custom **`scripts/deploy-gh-pages.mjs`**
+(worktree + single `git rm -rf .`, to dodge Windows' argv length cap that the
+`gh-pages` npm package hits with thousands of map files). `predeploy` runs
+`build:data && build:trainers && build && prune-dist-for-gh-pages.mjs`.
 
-- `package.json` → `homepage` (currently a placeholder
-  `https://YOUR_GITHUB_USERNAME.github.io/pokemmo-tools/`)
-- `vite.config.js` → `base: '/pokemmo-tools/'`
+The desktop app loads the **live site**, so `npm run deploy` updates both the web
+app and the desktop app — no Tauri rebuild needed for non-capture changes.
 
-Both must match the repo name. If renaming the repo, update both.
-
-## When making changes
-
-- **UI tweak:** edit components/pages, `npm run dev`, eyeball it.
-- **New filter:** update `INITIAL_SEARCH` in `App.jsx`, add the picker
-  component, wire it in `Search.jsx` and the `Toolbar`. Make sure the
-  `FilterChips` component reflects the new filter for the "remove" UX.
-- **New data field on a Pokémon:** add it in `scripts/build-data.mjs`
-  (in the `assemblePokemon` / merge block), re-run `npm run build:data`,
-  consume it in components.
-- **New raw data source:** add the file under `data/raw/`, document it in
-  `data/raw/README.md`, load + merge it in `build-data.mjs`. Remember the
-  merge precedence rule (Hub wins on overlap).
-- **New page/route:** create `src/pages/Foo.jsx`, add a `<Route>` in
-  `App.jsx`, add a nav item in `components/NavBar.jsx`. Lift any
-  cross-tab state into `App.jsx` like the existing pages do.
+Deploy-sensitive values: `vite.config.js` `base: '/pokemmo-tools/'` (web) and the
+repo name. (`package.json` `homepage` is still the `YOUR_GITHUB_USERNAME`
+placeholder — harmless, the deploy uses the git remote; fix if you care.)
 
 ## Things to NOT do
 
-- Don't commit `src/data/pokemmo.json` — it's gitignored and regenerated.
-- Don't switch to `BrowserRouter` — it breaks GH Pages without a 404 hack.
-- Don't add TypeScript piecemeal — either a full migration in its own PR or
-  not at all.
-- Don't add a state-management library — lifted state is sufficient at this
-  scale.
-- Don't bypass the data pipeline by importing raw files directly into React
-  components. Everything goes through `src/data/pokemmo.json`.
+- Don't commit `public/data/pokemmo.json` or `data/raw/*.xlsx` — gitignored.
+- Don't switch to `BrowserRouter` (breaks GH Pages).
+- Don't add TypeScript piecemeal, a state library, or a second icon library.
+- Don't "verify" a `lib/damage.js` / `vendor/` change on the dev server alone —
+  test the production preview (dev esbuild ≠ prod Rollup for the CJS engine).
+- Don't bypass the data pipeline by importing raw files into components.
 
-## Useful entry points when reading the code
+## Useful entry points
 
-- Want to understand the data shape? → top of `scripts/build-data.mjs` (header
-  comment) and the output blocks at the bottom of that file.
-- Want to understand the search/filter logic? → `src/pages/Search.jsx`
-  (`buildIndex`, then the filter `useMemo`).
-- Want to understand display helpers? → `src/lib/format.js`.
-- Want to understand the Pokémon detail UI? → `src/components/PokemonModal.jsx`
-  (the largest component, ~25 KB).
+- Dataset shape → header + output blocks of `scripts/build-data.mjs`.
+- Trainer data shape → `scripts/build-trainers.mjs` and `data/raw/README.md`.
+- Pokémon detail UI → `components/PokemonModal.jsx`. Shared overlay → `components/Modal.jsx`.
+- Type math / analyses → `lib/teamAnalysis.js`. Damage engine wrapper → `lib/damage.js`.
+- Nav customization → `lib/navConfig.js` + `components/NavBar.jsx`.
