@@ -13,7 +13,6 @@ import { loadStore as loadTeamsStore, saveStore as saveTeamsStore } from './lib/
 const Locations       = lazy(() => import('./pages/Locations.jsx'));
 const Tracker         = lazy(() => import('./pages/Tracker.jsx'));
 const BoxPage         = lazy(() => import('./pages/Box.jsx'));
-const CatchCalc       = lazy(() => import('./pages/CatchCalc.jsx'));
 const DamageCalc      = lazy(() => import('./pages/DamageCalc.jsx'));
 const TeamBuilder     = lazy(() => import('./pages/TeamBuilder.jsx'));
 const TrainerPrep     = lazy(() => import('./pages/TrainerPrep.jsx'));
@@ -199,7 +198,7 @@ export default function App() {
   return (
     <HashRouter>
       <div className="min-h-screen bg-[#f6efdc] dark:bg-stone-950 text-stone-900 dark:text-stone-100">
-        <NavBar />
+        <NavBar theme={theme} onTheme={setTheme} />
 
         <Suspense fallback={
           <div className="max-w-7xl mx-auto px-4 py-16 text-center text-sm text-stone-500 dark:text-stone-400">
@@ -273,15 +272,6 @@ export default function App() {
               }
             />
             <Route
-              path="/catch"
-              element={
-                <CatchCalc
-                  data={data}
-                  theme={theme} onTheme={setTheme}
-                />
-              }
-            />
-            <Route
               path="/damage"
               element={
                 <DamageCalc
@@ -338,9 +328,12 @@ export default function App() {
             <Route path="/map"             element={<Navigate to="/map/sinnoh" replace />} />
             <Route path="/map/:zoneId"     element={<RegionMap region="sinnoh" theme={theme} onTheme={setTheme} />} />
             {/* Old URLs kept working for bookmarks. Search merged into Pokédex,
-                so /search and /moves both land on the Pokédex now. */}
+                so /search and /moves both land on the Pokédex now. The Catch
+                Calc is no longer a standalone tab — it lives inside each
+                Pokémon's detail popup — so /catch lands on the Pokédex too. */}
             <Route path="/search" element={<Navigate to="/" replace />} />
             <Route path="/moves"  element={<Navigate to="/" replace />} />
+            <Route path="/catch"  element={<Navigate to="/" replace />} />
             <Route path="*"       element={<Navigate to="/" replace />} />
           </Routes>
         </Suspense>

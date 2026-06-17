@@ -11,7 +11,6 @@ export const NAV_DESTINATIONS = [
   { id: 'tracker',   label: 'Tracker',    to: '/tracker',               defaultBar: true },
   { id: 'maps',      label: 'Maps',       to: '/map',                   defaultBar: true },
   { id: 'box',       label: 'Box',        to: '/box',                   defaultBar: true },
-  { id: 'catch',     label: 'Catch Calc', to: '/catch',                 defaultBar: false },
   { id: 'damage',    label: 'Damage Calc', to: '/damage',               defaultBar: false },
   { id: 'teams',     label: 'Team Builder', to: '/teams',              defaultBar: false },
   { id: 'trainers',  label: 'Gym & E4 Prep', to: '/trainers',           defaultBar: false },

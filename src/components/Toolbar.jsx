@@ -1,5 +1,4 @@
-import { LayoutGrid, List, Sun, Moon } from 'lucide-react';
-import { ALL_POKEMON_TYPES, typeColor } from '../lib/types.js';
+import { LayoutGrid, List } from 'lucide-react';
 import RegionPills from './RegionPills.jsx';
 import DexSearchInput from './DexSearchInput.jsx';
 
@@ -9,32 +8,23 @@ const SORT_OPTIONS = [
   { value: 'bst',  label: 'BST high→low' },
 ];
 
+// Page-scoped toolbar: search, region, sort, and the grid/list view toggle.
+// App-wide settings (theme, sprite style) deliberately live in the navbar's
+// global Settings menu, not here — a per-page copy of them was redundant.
 export default function Toolbar({
   search, onSearch,
   region, onRegion,
-  types, onTypes,
   sort, onSort, sortOptions,
   view, onView,
-  theme, onTheme,
   resultCount,
   searchPlaceholder,
 }) {
   const sortOpts = sortOptions || SORT_OPTIONS;
-  function toggleType(t) {
-    if (types.includes(t)) {
-      onTypes(types.filter((x) => x !== t));
-    } else if (types.length < 2) {
-      onTypes([...types, t]);
-    } else {
-      // Replace the oldest selection so picking a 3rd type swaps in.
-      onTypes([types[1], t]);
-    }
-  }
 
   return (
     <div className="sticky top-0 z-20 bg-[#f6efdc]/95 dark:bg-stone-950/95 backdrop-blur border-b border-[#e6dabf] dark:border-stone-800">
       <div className="max-w-7xl mx-auto px-4 py-3 space-y-3">
-        {/* Row 1: title, view toggle, theme toggle */}
+        {/* Row 1: result count + view toggle */}
         <div className="flex items-center gap-3 flex-wrap">
           <div className="text-xs text-stone-500 dark:text-stone-400 tabular-nums mr-auto">
             {resultCount} result{resultCount === 1 ? '' : 's'}
@@ -67,18 +57,6 @@ export default function Toolbar({
               </button>
             </div>
           )}
-
-          {/* Theme toggle */}
-          <button
-            type="button"
-            onClick={() => onTheme(theme === 'dark' ? 'light' : 'dark')}
-            className="p-1.5 rounded-md border border-[#d6c8a3] dark:border-stone-700
-                       bg-[#fdf8e9] dark:bg-stone-900 hover:bg-[#ece2c4] dark:hover:bg-stone-800
-                       text-stone-700 dark:text-stone-300"
-            title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-          >
-            {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
-          </button>
         </div>
 
         {/* Row 2: search + sort */}
@@ -108,51 +86,7 @@ export default function Toolbar({
         {region !== undefined && onRegion && (
           <RegionPills value={region} onChange={onRegion} />
         )}
-
-        {/* Row 4: simple type chips (only when caller provides types/onTypes) */}
-        {types !== undefined && onTypes && (
-        <div className="flex items-start gap-2 flex-wrap">
-          <span className="text-xs text-stone-500 dark:text-stone-400 mr-1 mt-1.5">
-            Types <span className="text-stone-400 dark:text-stone-500">(pick up to 2)</span>
-          </span>
-          <div className="flex flex-wrap gap-1.5">
-            {ALL_POKEMON_TYPES.map((t) => {
-              const selected = types.includes(t);
-              return (
-                <button
-                  key={t}
-                  type="button"
-                  onClick={() => toggleType(t)}
-                  aria-pressed={selected}
-                  className={`px-2 py-0.5 rounded text-xs font-semibold uppercase tracking-wide border transition-all ${
-                    selected
-                      ? 'border-stone-900 dark:border-stone-100 ring-2 ring-blue-500'
-                      : 'border-stone-300 dark:border-stone-700 opacity-70 hover:opacity-100'
-                  }`}
-                  style={selected ? typeStyle(t) : { color: 'inherit' }}
-                >
-                  {t}
-                </button>
-              );
-            })}
-            {types.length > 0 && (
-              <button
-                type="button"
-                onClick={() => onTypes([])}
-                className="px-2 py-0.5 rounded text-xs text-stone-500 hover:text-stone-900 dark:hover:text-stone-100 underline underline-offset-2"
-              >
-                Clear
-              </button>
-            )}
-          </div>
-        </div>
-        )}
       </div>
     </div>
   );
-}
-
-function typeStyle(t) {
-  const { bg, fg } = typeColor(t);
-  return { backgroundColor: bg, color: fg, borderColor: bg };
 }
