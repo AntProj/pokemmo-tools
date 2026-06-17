@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-flash-toast"
+description = "Enables the flash_toast command without any pre-configured scope."
+commands.allow = ["flash_toast"]
+
+[[permission]]
+identifier = "deny-flash-toast"
+description = "Denies the flash_toast command without any pre-configured scope."
+commands.deny = ["flash_toast"]

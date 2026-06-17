@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-capture-and-ocr"
+description = "Enables the capture_and_ocr command without any pre-configured scope."
+commands.allow = ["capture_and_ocr"]
+
+[[permission]]
+identifier = "deny-capture-and-ocr"
+description = "Denies the capture_and_ocr command without any pre-configured scope."
+commands.deny = ["capture_and_ocr"]
