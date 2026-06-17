@@ -60,7 +60,7 @@ export default function TrainerScribe({ data, theme, onTheme }) {
   const [calib, setCalib] = useState(null); // { key, src }
   const [status, setStatus] = useState(null);
 
-  const obs = useMemo(() => buildObservation({ logLines, bars, routeText, region: gameRegion }), [logLines, bars, routeText, gameRegion]);
+  const obs = useMemo(() => buildObservation({ logLines, bars, routeText, region: gameRegion, knownSpecies: byNorm }), [logLines, bars, routeText, gameRegion, byNorm]);
 
   // Auto-save when a battle completes (during live recording). Refs let the
   // capture loop read the latest values without re-subscribing each tick.

@@ -100,14 +100,20 @@ editable, and `devOnly` destinations (Scribe) only show in the desktop app or a
 dev build. Adding a destination to `NAV_DESTINATIONS` is all that's needed.
 
 Each tab owns its filter/UI state, lifted into `App.jsx` where it must survive
-tab switches. `theme`/`onTheme` are threaded to every page for the header toggle.
+tab switches. App-wide settings (theme + sprite style) live in a **global
+Settings dropdown in the NavBar** (`SettingsMenu`), not in each page's toolbar —
+`theme`/`onTheme` are passed to `<NavBar/>`. `theme`/`onTheme` are still threaded
+to every page for legacy per-page toggles, but the toolbar no longer renders one.
 
 ### Pokédex — `/` · `pages/Pokedex.jsx`
-Browse + advanced search merged into one page. Regional dex, type filter
-(AND/OR), sort, plus an advanced sidebar (moves×4, abilities, held items, egg
-groups×2, stat ranges). State: `INITIAL_POKEDEX` in `App.jsx`. Opens the shared
-`<PokemonModal/>`. *(The old `Search.jsx` page was merged in and deleted; `/search`
-and `/moves` redirect here.)*
+Browse + advanced search merged into one page. The toolbar keeps search, regional
+dex, sort, and grid/list view. **Type filter lives only in the advanced Filters
+sidebar** now (moves×4, abilities, held items, egg groups×2, stat ranges, types
+AND/OR) — it used to be duplicated in the toolbar. State: `INITIAL_POKEDEX` in
+`App.jsx`. Opens the shared `<PokemonModal/>`, whose detail popup now embeds the
+**catch calculator** (`components/CatchCalcPanel.jsx`) and puts moves / held
+items / encounters / catch calc in collapsible cards. *(The old `Search.jsx` page
+was merged in and deleted; `/search` and `/moves` redirect here.)*
 - **TODO:** none tracked.
 
 ### Locations — `/locations/:region?/:location?` · `pages/Locations.jsx`
@@ -143,8 +149,13 @@ via hue + calibration). Consumed by Breeding (owned-breeders) and Team/Prep
   - OCR add is **desktop-only**; web users import JSON. Gender/shiny/alpha
     detection still has calibration-dependent edge cases.
 
-### Catch Calc — `/catch` · `pages/CatchCalc.jsx`
-Catch-probability calculator over the dataset (`catch_rate`, ball/status/HP).
+### Catch Calc — in the Pokédex detail popup · `components/CatchCalcPanel.jsx`
+Catch-probability calculator over the dataset (`catch_rate`, ball/status/HP),
+ported from c4vv (`lib/catchCalc.js`). **No longer a standalone tab** — it's a
+collapsible section inside each Pokémon's detail popup (the mon is pre-selected,
+so there's no species picker; the ball list is height-capped to ~5 with scroll).
+The old `pages/CatchCalc.jsx` page + `/catch` route were removed; `/catch`
+redirects to `/`.
 - **TODO:** none tracked.
 
 ### Damage Calc — `/damage` · `pages/DamageCalc.jsx` · `lib/damage.js` · `vendor/pokemmo-calc`
@@ -254,17 +265,19 @@ produces the map + trainer scaffolds is `build_world.py` (in the user's local
 ## Routing & top-level state (`App.jsx`)
 
 Routes: `/` (Pokédex), `/locations/:region?/:location?`, `/tracker`, `/box`,
-`/catch`, `/damage`, `/teams`, `/trainers`, `/breeding`, `/scribe` (dev-only),
+`/damage`, `/teams`, `/trainers`, `/breeding`, `/scribe` (dev-only),
 `/map/sinnoh(/:zoneId)`, `/map/johto(/:zoneId)`; `/map` → sinnoh; `/search` &
-`/moves` → `/`; `*` → `/`. **`HashRouter` is intentional** (GH Pages SPA support).
+`/moves` & `/catch` → `/` (Catch Calc is now in the Pokédex popup); `*` → `/`.
+**`HashRouter` is intentional** (GH Pages SPA support).
 
 Lifted state in `App.jsx`: `view`, `theme`, `pokedexState`, `locationsState`,
 `trackerView`/`trackerState`, `boxStore`, `teamsStore`, `selectedId`. Stores load
 from / save to `localStorage` via their lib modules.
 
 **localStorage keys** (namespace new ones `pokemmo:` and centralize): `pokemmo:view`,
-`pokemmo:theme`, `pokemmo:box` (v3), `pokemmo:teams`, `pokemmo:nav`,
-`pokemmo:trainerscribe`, `pokemmo:scribe:regions`, `tracker:state`. **sessionStorage:**
+`pokemmo:theme`, `pokemmo:spriteMode` (`3d`|`still`, global Settings menu),
+`pokemmo:box` (v3), `pokemmo:teams`, `pokemmo:nav`, `pokemmo:trainerscribe`,
+`pokemmo:scribe:regions`, `tracker:state`. **sessionStorage:**
 `pokemmo:calc:prefill` (one-shot calc handoff).
 
 ## Conventions to follow

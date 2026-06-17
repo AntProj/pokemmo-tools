@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useState } from 'react';
-import { Sparkles, ChevronRight, Calculator } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { Sparkles, ChevronRight, ChevronDown } from 'lucide-react';
 import Modal from './Modal.jsx';
 import TypeBadge from './TypeBadge.jsx';
 import RarityBadge from './RarityBadge.jsx';
 import PokemonSprite from './PokemonSprite.jsx';
+import CatchCalcPanel from './CatchCalcPanel.jsx';
 import { typeColor } from '../lib/types.js';
 import {
   dexNum, formatHeight, formatWeight, formatGenderRatio, genderSplit,
@@ -43,13 +43,17 @@ export default function PokemonModal({ pokemon, data, onClose, onSelect }) {
 
   return (
     <Modal onClose={onClose} maxWidth="max-w-3xl" scroll="page" ariaLabel={`${pokemon.name} details`}>
-      <Header pokemon={pokemon} shiny={shiny} setShiny={setShiny} hasShinyVariant={hasShinyVariant} onClose={onClose} />
+      <Header pokemon={pokemon} shiny={shiny} setShiny={setShiny} hasShinyVariant={hasShinyVariant} />
 
-      <div className="p-5 sm:p-6 space-y-6 border-t border-[#e6dabf] dark:border-stone-800">
+      <div className="p-5 sm:p-6 space-y-5 border-t border-[#e6dabf] dark:border-stone-800">
         <Stats stats={pokemon.stats} total={total} />
-        <Profile pokemon={pokemon} />
         <Abilities abilities={pokemon.abilities} catalog={data.abilities} />
         <Evolutions pokemon={pokemon} data={data} onSelect={onSelect} />
+
+        {/* Collapsed by default to keep the popup short — expand for the calc. */}
+        <CollapsibleSection title="Catch calculator">
+          <CatchCalcPanel pokemon={pokemon} />
+        </CollapsibleSection>
 
         <Moves
           pokemon={pokemon}
@@ -69,12 +73,7 @@ export default function PokemonModal({ pokemon, data, onClose, onSelect }) {
 
 /* ─────────────── Header ─────────────── */
 
-function Header({ pokemon, shiny, setShiny, hasShinyVariant, onClose }) {
-  const navigate = useNavigate();
-  const goCatchCalc = () => {
-    onClose?.();
-    navigate(`/catch?mon=${encodeURIComponent(pokemon.name)}`);
-  };
+function Header({ pokemon, shiny, setShiny, hasShinyVariant }) {
   const primary = typeColor(pokemon.types[0]);
   return (
     <div
@@ -84,15 +83,15 @@ function Header({ pokemon, shiny, setShiny, hasShinyVariant, onClose }) {
       }}
     >
       <div className="flex flex-col sm:flex-row gap-4 sm:items-center">
-        <div className="flex items-center justify-center sm:justify-start">
-          <div className="w-32 h-32 sm:w-40 sm:h-40 flex items-center justify-center
+        <div className="flex items-center justify-center sm:justify-start shrink-0">
+          <div className="w-32 h-32 sm:w-36 sm:h-36 flex items-center justify-center
                           bg-[#fdf8e9]/60 dark:bg-stone-950/50 rounded-lg ring-1 ring-black/5 dark:ring-white/5">
             <PokemonSprite
               pokemon={pokemon}
               variant="3d"
               shiny={shiny}
               fetchPriority="high"
-              className="w-28 h-28 sm:w-36 sm:h-36 object-contain"
+              className="w-28 h-28 sm:w-32 sm:h-32 object-contain"
             />
           </div>
         </div>
@@ -131,8 +130,8 @@ function Header({ pokemon, shiny, setShiny, hasShinyVariant, onClose }) {
             )}
           </div>
 
-          <div className="mt-3 flex flex-wrap items-center gap-2">
-            {hasShinyVariant && (
+          {hasShinyVariant && (
+            <div className="mt-3">
               <button
                 type="button"
                 onClick={() => setShiny(!shiny)}
@@ -145,20 +144,12 @@ function Header({ pokemon, shiny, setShiny, hasShinyVariant, onClose }) {
                 <Sparkles size={14} />
                 {shiny ? 'Shiny' : 'Show shiny'}
               </button>
-            )}
-            <button
-              type="button"
-              onClick={goCatchCalc}
-              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium border transition-colors
-                         bg-[#fdf8e9] dark:bg-stone-800 text-stone-700 dark:text-stone-200
-                         border-[#d6c8a3] dark:border-stone-700
-                         hover:bg-[#ece2c4] dark:hover:bg-stone-700"
-              title="Open in Catch Calc"
-            >
-              <Calculator size={14} /> Catch Calc
-            </button>
-          </div>
+            </div>
+          )}
         </div>
+
+        {/* Compact profile lives in the banner now (used to be a body section). */}
+        <HeaderProfile pokemon={pokemon} />
       </div>
     </div>
   );
@@ -205,45 +196,42 @@ function Stats({ stats, total }) {
   );
 }
 
-/* ─────────────── Profile ─────────────── */
+/* ─────────────── Header profile (compact, in the banner) ─────────────── */
 
-function Profile({ pokemon }) {
+function HeaderProfile({ pokemon }) {
   const split = genderSplit(pokemon.gender_ratio);
+  const eggGroups = pokemon.egg_groups?.length
+    ? pokemon.egg_groups.map((g) => g.charAt(0).toUpperCase() + g.slice(1)).join(', ')
+    : '—';
   return (
-    <Section title="Profile">
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-2 text-sm">
-        <Field label="Height" value={formatHeight(pokemon.height)} />
-        <Field label="Weight" value={formatWeight(pokemon.weight)} />
-        <Field label="Catch Rate" value={formatCatchRate(pokemon.catch_rate)} />
-        <Field label="Growth Rate" value={formatGrowthRate(pokemon.growth_rate || pokemon.exp_type)} />
-        <Field
-          label="Egg Groups"
-          value={pokemon.egg_groups?.length
-            ? pokemon.egg_groups.map((g) => g.charAt(0).toUpperCase() + g.slice(1)).join(', ')
-            : '—'}
-        />
-        <div className="col-span-2 sm:col-span-3">
-          <div className="text-xs text-stone-500 dark:text-stone-400 mb-1">Gender</div>
-          <div className="text-sm text-stone-900 dark:text-stone-100">
-            {formatGenderRatio(pokemon.gender_ratio)}
-          </div>
-          {split && (
-            <div className="mt-1 h-2 rounded-full overflow-hidden flex bg-stone-200 dark:bg-stone-800">
-              <div className="bg-blue-400" style={{ width: `${split.male}%` }} />
-              <div className="bg-pink-400" style={{ width: `${split.female}%` }} />
-            </div>
-          )}
+    <div className="w-full sm:w-48 shrink-0 rounded-lg p-3 text-xs space-y-1
+                    bg-[#fdf8e9]/70 dark:bg-stone-950/40 ring-1 ring-black/5 dark:ring-white/5">
+      <ProfRow label="Height" value={formatHeight(pokemon.height)} />
+      <ProfRow label="Weight" value={formatWeight(pokemon.weight)} />
+      <ProfRow label="Catch rate" value={formatCatchRate(pokemon.catch_rate)} />
+      <ProfRow label="Growth" value={formatGrowthRate(pokemon.growth_rate || pokemon.exp_type)} />
+      <ProfRow label="Egg groups" value={eggGroups} />
+      <div className="pt-1">
+        <div className="flex justify-between gap-2">
+          <span className="text-stone-500 dark:text-stone-400">Gender</span>
+          <span className="text-stone-900 dark:text-stone-100 text-right">{formatGenderRatio(pokemon.gender_ratio)}</span>
         </div>
+        {split && (
+          <div className="mt-1 h-1.5 rounded-full overflow-hidden flex bg-stone-200 dark:bg-stone-800">
+            <div className="bg-blue-400" style={{ width: `${split.male}%` }} />
+            <div className="bg-pink-400" style={{ width: `${split.female}%` }} />
+          </div>
+        )}
       </div>
-    </Section>
+    </div>
   );
 }
 
-function Field({ label, value }) {
+function ProfRow({ label, value }) {
   return (
-    <div>
-      <div className="text-xs text-stone-500 dark:text-stone-400">{label}</div>
-      <div className="text-stone-900 dark:text-stone-100">{value}</div>
+    <div className="flex justify-between gap-2">
+      <span className="text-stone-500 dark:text-stone-400 shrink-0">{label}</span>
+      <span className="text-stone-900 dark:text-stone-100 text-right">{value}</span>
     </div>
   );
 }
@@ -306,7 +294,13 @@ function Evolutions({ pokemon, data, onSelect }) {
 
   return (
     <Section title="Evolutions">
-      <EvolutionNode node={tree} currentId={pokemon.id} onSelect={onSelect} />
+      {/* Center the family in the available width; scroll horizontally only if
+          a wide branching tree (e.g. Eevee) overflows. */}
+      <div className="overflow-x-auto">
+        <div className="flex justify-center min-w-min py-1">
+          <EvolutionNode node={tree} currentId={pokemon.id} onSelect={onSelect} />
+        </div>
+      </div>
     </Section>
   );
 }
@@ -339,7 +333,9 @@ function buildEvolutionTree(pokemon, data, visited = new Set()) {
 
 function EvolutionNode({ node, currentId, onSelect }) {
   return (
-    <div className="flex flex-wrap items-stretch gap-2">
+    // items-center keeps the parent stage vertically centered against its
+    // branch column instead of stretching into a tall box with the sprite on top.
+    <div className="flex flex-wrap items-center gap-2">
       <EvolutionStage poke={node.pokemon} isCurrent={node.pokemon.id === currentId} onSelect={onSelect} />
       {node.children.length > 0 && (
         <div className="flex flex-col gap-3 justify-center">
@@ -431,7 +427,7 @@ function Moves({ pokemon, data, tab, setTab, expandedMove, setExpandedMove }) {
   }, [pokemon, tab, data.moves]);
 
   return (
-    <Section title="Moves">
+    <CollapsibleSection title="Moves" count={counts.level + counts.tm + counts.tutor + counts.egg}>
       <div className="flex gap-1 mb-3 border-b border-[#e6dabf] dark:border-stone-800">
         {MOVE_TABS.map((t) => {
           const count = counts[t.key] ?? 0;
@@ -511,7 +507,7 @@ function Moves({ pokemon, data, tab, setTab, expandedMove, setExpandedMove }) {
       <p className="mt-2 text-[11px] text-stone-400 dark:text-stone-500">
         Click a row to see effect description.
       </p>
-    </Section>
+    </CollapsibleSection>
   );
 }
 
@@ -520,7 +516,7 @@ function Moves({ pokemon, data, tab, setTab, expandedMove, setExpandedMove }) {
 function HeldItems({ items, catalog }) {
   if (!items?.length) return null;
   return (
-    <Section title="Wild Held Items">
+    <CollapsibleSection title="Wild Held Items" count={items.length}>
       <div className="space-y-2">
         {items.map((entry, idx) => {
           // Names live directly on the entry; the catalog uses a different id
@@ -545,7 +541,7 @@ function HeldItems({ items, catalog }) {
           );
         })}
       </div>
-    </Section>
+    </CollapsibleSection>
   );
 }
 
@@ -555,14 +551,14 @@ function Locations({ locations }) {
   const grouped = useMemo(() => groupLocations(locations || []), [locations]);
   if (!locations?.length) {
     return (
-      <Section title="Encounter Locations">
+      <CollapsibleSection title="Encounter Locations" count={0}>
         <div className="text-sm text-stone-500 dark:text-stone-400">No wild encounters in PokéMMO data.</div>
-      </Section>
+      </CollapsibleSection>
     );
   }
 
   return (
-    <Section title="Encounter Locations">
+    <CollapsibleSection title="Encounter Locations" count={locations.length}>
       <div className="space-y-3">
         {grouped.map(([region, locs]) => (
           <div key={region}>
@@ -600,7 +596,7 @@ function Locations({ locations }) {
           </div>
         ))}
       </div>
-    </Section>
+    </CollapsibleSection>
   );
 }
 
@@ -637,5 +633,26 @@ function Section({ title, right, children }) {
       </div>
       {children}
     </section>
+  );
+}
+
+// Collapsible card used for the longer sections (catch calc, moves, held items,
+// encounters) so the popup stays short. Defaults closed; the count in the header
+// tells you what's inside without expanding.
+function CollapsibleSection({ title, count, defaultOpen = false, children }) {
+  return (
+    <details
+      open={defaultOpen}
+      className="group rounded-md border border-[#e6dabf] dark:border-stone-800 bg-[#fdf8e9]/40 dark:bg-stone-900/30"
+    >
+      <summary className="cursor-pointer select-none px-4 py-3 flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-stone-700 dark:text-stone-300">
+        <ChevronDown size={14} className="transition-transform group-open:rotate-0 -rotate-90 text-stone-400 shrink-0" />
+        <span>{title}</span>
+        {count != null && (
+          <span className="font-normal text-xs text-stone-400 dark:text-stone-500">({count})</span>
+        )}
+      </summary>
+      <div className="px-4 pb-4 pt-1">{children}</div>
+    </details>
   );
 }

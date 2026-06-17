@@ -300,8 +300,9 @@ export default function Pokedex({ data, state, setState, view, onView, theme, on
        stats, setStats, index.bounds]);
 
   // Count how many *advanced* filters are active so we can badge the toggle
-  // button. Type pills don't count — they live in the toolbar in simple mode.
+  // button. Types now live in the sidebar too, so they count.
   const advancedActiveCount =
+    (types.length > 0 ? 1 : 0) +
     (activeMoveIds.length > 0 ? 1 : 0) +
     (abilityId != null ? 1 : 0) +
     (heldItemId != null ? 1 : 0) +
@@ -312,18 +313,16 @@ export default function Pokedex({ data, state, setState, view, onView, theme, on
     <>
       <Toolbar
         search={search} onSearch={setSearch}
-        // When the advanced sidebar is open the simple types pills hide,
-        // because TypeFilter in the sidebar takes over and showing both
-        // would be confusing. region stays visible in both modes.
+        // Region stays in the toolbar. The type filter used to be duplicated
+        // here too; it now lives only in the advanced Filters sidebar so there
+        // is a single place to pick types (theme/sprite settings moved to the
+        // global Settings menu in the navbar).
         region={region} onRegion={setRegion}
-        types={advancedOpen ? undefined : types}
-        onTypes={advancedOpen ? undefined : setTypes}
         sort={sort}     onSort={setSort}
         // List view only makes sense when the sidebar is collapsed (a
         // 5-column grid + sidebar already eats the horizontal budget).
         view={advancedOpen ? undefined : view}
         onView={advancedOpen ? undefined : onView}
-        theme={theme}   onTheme={onTheme}
         resultCount={filtered.length}
       />
 

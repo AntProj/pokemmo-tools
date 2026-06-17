@@ -73,12 +73,17 @@ export function parseBattleLog(rawLines) {
   for (const ln of lines) {
     let m;
     if ((m = ln.match(RE.challenge))) { trainer = m[1].trim(); continue; }
+    // Only attribute team / moves / reward / result once the trainer is named.
+    // A line that appears BEFORE "You are challenged by <X>" (e.g. the tail of a
+    // previous battle bleeding into the OCR buffer — its reward, a foe mon) must
+    // not get tacked onto this trainer.
+    if (!trainer) continue;
     if ((m = ln.match(RE.foeMove)))   { ensure(m[1]).moves.add(cleanMove(m[2])); continue; }
     if ((m = ln.match(RE.foeFaint)))  { ensure(m[1]); continue; }
     if ((m = ln.match(RE.reward)))    { reward = Number(m[1].replace(/,/g, '')); continue; }
     if ((m = ln.match(RE.sentOut))) {
       const who = m[1].trim();
-      if (trainer && who === trainer) ensure(m[2]);
+      if (who === trainer) ensure(m[2]);
       continue;
     }
     if ((m = ln.match(RE.wasDefeated))) {
@@ -104,23 +109,26 @@ export function parseBattleLog(rawLines) {
 
 // Fold the opponent HP-bar reads (species → level/gender) into the parsed team.
 // `bars` is an array of parseOpponentBar() results collected over the battle.
-export function buildObservation({ logLines, bars = [], routeText, region = null }) {
+// `knownSpecies` (optional Map/Set keyed by normalized dex name) filters OCR
+// garbage out of the team.
+export function buildObservation({ logLines, bars = [], routeText, region = null, knownSpecies = null }) {
   const parsed = parseBattleLog(logLines);
   const barBySpecies = new Map();
   for (const b of bars) {
     if (!b || !b.species) continue;
     barBySpecies.set(norm(b.species), b);
   }
-  const team = parsed.team.map((t) => {
+  // Team comes ONLY from the log (mons the trainer sent out / whose moves were
+  // seen). The HP-bar enriches level/gender for those — it does NOT add new
+  // members, since a stale bar (last frame of a previous battle) would otherwise
+  // tack a phantom mon onto the next trainer.
+  let team = parsed.team.map((t) => {
     const bar = barBySpecies.get(norm(t.species));
     return { species: t.species, level: bar?.level ?? null, gender: bar?.gender ?? null, moves: t.moves };
   });
-  // A mon seen only on the HP bar (e.g. it never got a move off) still counts.
-  for (const b of bars) {
-    if (b && b.species && !team.some((t) => norm(t.species) === norm(b.species))) {
-      team.push({ species: b.species, level: b.level ?? null, gender: b.gender ?? null, moves: [] });
-    }
-  }
+  // Drop anything the dex doesn't recognise — OCR garbage like "Pidgeotto!"
+  // misread as "Pidgeottd" isn't a real team member.
+  if (knownSpecies) team = team.filter((t) => knownSpecies.has(norm(t.species)));
   return {
     trainer: parsed.trainer,
     route: parseRoute(routeText),

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import { Box, Image, ChevronDown, SlidersHorizontal, ArrowUp, ArrowDown, Check } from 'lucide-react';
+import { Box, Image, ChevronDown, SlidersHorizontal, ArrowUp, ArrowDown, Check, Settings, Sun, Moon } from 'lucide-react';
 import { useSpriteMode, setSpriteMode } from '../lib/spriteMode.js';
 import { NAV_DESTINATIONS, NAV_BY_ID, loadNav, saveNav, resolveNav } from '../lib/navConfig.js';
 import { isDesktop } from '../lib/desktop.js';
@@ -23,8 +23,7 @@ function isDestActive(dest, pathname) {
   return pathname === dest.to || pathname.startsWith(dest.to + '/') || pathname.startsWith(dest.to);
 }
 
-export default function NavBar() {
-  const mode = useSpriteMode();
+export default function NavBar({ theme, onTheme }) {
   const [nav, setNav] = useState(loadNav);
   const [customizing, setCustomizing] = useState(false);
 
@@ -46,21 +45,7 @@ export default function NavBar() {
 
         <MoreMenu more={more} onCustomize={() => setCustomizing(true)} />
 
-        <button
-          type="button"
-          onClick={() => setSpriteMode(mode === '3d' ? 'still' : '3d')}
-          className="ml-auto inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md
-                     border border-[#d6c8a3] dark:border-stone-700
-                     bg-[#fdf8e9] dark:bg-stone-900
-                     hover:bg-[#ece2c4] dark:hover:bg-stone-800
-                     text-xs font-medium text-stone-700 dark:text-stone-200"
-          title={mode === '3d'
-            ? 'Showing 3D renders — click to switch to classic still sprites'
-            : 'Showing still sprites — click to switch to 3D renders'}
-        >
-          {mode === '3d' ? <Box size={14} /> : <Image size={14} />}
-          <span className="hidden sm:inline">{mode === '3d' ? '3D' : 'Still'}</span>
-        </button>
+        <SettingsMenu theme={theme} onTheme={onTheme} />
       </div>
 
       {customizing && (
@@ -135,6 +120,99 @@ function MoreMenu({ more, onCustomize }) {
         </div>
       )}
     </div>
+  );
+}
+
+// Global app settings — theme + sprite style — in one dropdown. These affect
+// every page, so they live in the navbar (the only always-present chrome)
+// rather than being duplicated into each page's toolbar.
+function SettingsMenu({ theme, onTheme }) {
+  const mode = useSpriteMode();
+  const [open, setOpen] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    if (!open) return;
+    function onDoc(e) { if (ref.current && !ref.current.contains(e.target)) setOpen(false); }
+    document.addEventListener('mousedown', onDoc);
+    return () => document.removeEventListener('mousedown', onDoc);
+  }, [open]);
+
+  return (
+    <div className="relative ml-auto" ref={ref}>
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        aria-haspopup="menu"
+        aria-expanded={open}
+        className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md
+                   border border-[#d6c8a3] dark:border-stone-700
+                   bg-[#fdf8e9] dark:bg-stone-900
+                   hover:bg-[#ece2c4] dark:hover:bg-stone-800
+                   text-xs font-medium text-stone-700 dark:text-stone-200"
+        title="Settings"
+      >
+        <Settings size={14} />
+        <span className="hidden sm:inline">Settings</span>
+      </button>
+
+      {open && (
+        <div
+          role="menu"
+          className="absolute right-0 top-full z-50 mt-1 w-56 p-3 space-y-3 rounded-md
+                     border border-[#d6c8a3] dark:border-stone-700
+                     bg-[#fdf8e9] dark:bg-stone-900 shadow-xl"
+        >
+          <SettingGroup label="Theme">
+            <SegBtn active={theme !== 'dark'} onClick={() => onTheme('light')}>
+              <Sun size={13} /> Light
+            </SegBtn>
+            <SegBtn active={theme === 'dark'} onClick={() => onTheme('dark')}>
+              <Moon size={13} /> Dark
+            </SegBtn>
+          </SettingGroup>
+
+          <SettingGroup label="Sprites">
+            <SegBtn active={mode === '3d'} onClick={() => setSpriteMode('3d')}>
+              <Box size={13} /> 3D
+            </SegBtn>
+            <SegBtn active={mode === 'still'} onClick={() => setSpriteMode('still')}>
+              <Image size={13} /> Pixel
+            </SegBtn>
+          </SettingGroup>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function SettingGroup({ label, children }) {
+  return (
+    <div>
+      <div className="text-[11px] font-semibold uppercase tracking-wider text-stone-500 dark:text-stone-400 mb-1.5">
+        {label}
+      </div>
+      <div className="flex w-full rounded-md border border-[#d6c8a3] dark:border-stone-700 overflow-hidden divide-x divide-[#d6c8a3] dark:divide-stone-700">
+        {children}
+      </div>
+    </div>
+  );
+}
+
+function SegBtn({ active, onClick, children }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-pressed={active}
+      className={`flex-1 inline-flex items-center justify-center gap-1 px-2 py-1.5 text-xs font-medium transition-colors ${
+        active
+          ? 'bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900'
+          : 'bg-[#fdf8e9] dark:bg-stone-900 text-stone-600 dark:text-stone-300 hover:bg-[#ece2c4] dark:hover:bg-stone-800'
+      }`}
+    >
+      {children}
+    </button>
   );
 }
 

@@ -34,6 +34,11 @@ input[type="search"]::-webkit-search-decoration {
   image-rendering: pixelated;
   image-rendering: -moz-crisp-edges;
   image-rendering: crisp-edges;
+  /* Gen-5 "still" sprites are low-res with a lot of transparent margin, so they
+     read much smaller than the 3D renders in the same box. Scale them up a touch
+     (the margin absorbs it) so the creature is easier to see. Transform is
+     purely visual — it doesn't affect layout, so rows/cards don't reflow. */
+  transform: scale(1.3);
 }
 
 /* Map images on the Sinnoh map are pixel art baked at 1:1. Keep them crisp
