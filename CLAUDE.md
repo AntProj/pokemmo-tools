@@ -4,8 +4,9 @@ Guidance for Claude Code (and other coding agents) working in this repository.
 
 ## What this project is
 
-**PokéMMO Tools** — a single-page React app (Vite, deployed to GitHub Pages) that
-ships a curated, app-ready dataset for the PokéMMO fan community. It started as a
+**PokeKit** (full title "PokeKit by TyrAntitar") — a single-page React app (Vite,
+deployed to GitHub Pages) that ships a curated, app-ready dataset for the PokéMMO
+fan community. It started as a
 Pokédex + search and has grown into a small **toolkit**: Pokédex, Locations,
 catch Tracker, interactive Maps, a persistent Box, Catch/Damage calculators, a
 Team Builder, a Gym & E4 Prep tool, and a Breeding planner — plus a Windows

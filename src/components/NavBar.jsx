@@ -31,10 +31,11 @@ export default function NavBar({ theme, onTheme }) {
   const { pinned, more } = useMemo(() => resolveNav(nav, SHOW_DEV), [nav]);
 
   return (
-    <nav className="bg-[#fdf8e9] dark:bg-stone-900 border-b border-[#e6dabf] dark:border-stone-800">
+    <nav className="sticky top-0 z-30 bg-[#fdf8e9] dark:bg-stone-900 border-b border-[#e6dabf] dark:border-stone-800">
       <div className="max-w-7xl mx-auto px-4 flex items-center gap-1">
-        <span className="font-bold text-sm tracking-tight text-stone-900 dark:text-stone-100 mr-3 py-2.5">
-          PokéMMO Tools
+        <span className="mr-3 py-2.5 whitespace-nowrap">
+          <span className="font-bold text-sm tracking-tight text-stone-900 dark:text-stone-100">PokeKit</span>
+          <span className="ml-1 text-xs text-stone-500 dark:text-stone-400">by TyrAntitar</span>
         </span>
 
         {pinned.map((dest) => (

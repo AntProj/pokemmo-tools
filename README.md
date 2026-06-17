@@ -1,6 +1,6 @@
-# PokéMMO Tools
+# PokeKit
 
-A growing toolbox for PokéMMO players. Built with React + Vite, deployable to GitHub Pages.
+**PokeKit by TyrAntitar** — a growing toolbox for PokéMMO players. Built with React + Vite, deployable to GitHub Pages.
 
 ## Project Structure
 

@@ -1,6 +1,6 @@
 # Features
 
-This is a plain-language guide to what PokéMMO Tools actually does today, tab by
+This is a plain-language guide to what PokeKit actually does today, tab by
 tab. It is **not** a list of everything — it's a focused map of *what's already
 built* and *what we'd work on next*, so we can finish one thing at a time instead
 of spreading effort across a dozen half-done ideas.

@@ -21,8 +21,10 @@ export default function Toolbar({
 }) {
   const sortOpts = sortOptions || SORT_OPTIONS;
 
+  // The toolbar pins just below the sticky navbar (≈45px tall, z-30) so both
+  // stay visible while scrolling, without overlapping.
   return (
-    <div className="sticky top-0 z-20 bg-[#f6efdc]/95 dark:bg-stone-950/95 backdrop-blur border-b border-[#e6dabf] dark:border-stone-800">
+    <div className="sticky top-[45px] z-20 bg-[#f6efdc]/95 dark:bg-stone-950/95 backdrop-blur border-b border-[#e6dabf] dark:border-stone-800">
       <div className="max-w-7xl mx-auto px-4 py-3 space-y-3">
         {/* Row 1: result count + view toggle */}
         <div className="flex items-center gap-3 flex-wrap">
