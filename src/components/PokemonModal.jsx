@@ -77,7 +77,9 @@ function Header({ pokemon, shiny, setShiny, hasShinyVariant }) {
   const primary = typeColor(pokemon.types[0]);
   return (
     <div
-      className="p-5 sm:p-6 rounded-t-lg"
+      // Extra right padding on sm+ so the profile card clears the modal's
+      // absolute top-right close (X) button instead of sitting under it.
+      className="p-5 sm:p-6 sm:pr-14 rounded-t-lg"
       style={{
         background: `linear-gradient(135deg, ${primary.bg}33, ${primary.bg}11)`,
       }}
@@ -242,25 +244,36 @@ function Abilities({ abilities, catalog }) {
   if (!abilities?.length) return null;
   return (
     <Section title="Abilities">
-      <div className="space-y-2">
+      {/* Compact pills, side by side. Just the name shows; the effect appears
+          as a tooltip on hover so the section stays small. */}
+      <div className="flex flex-wrap gap-2">
         {abilities.map((a, idx) => {
-          const detail = catalog[a.id];
+          const effect = catalog[a.id]?.effect;
           return (
-            <div key={`${a.id}-${idx}`} className="p-3 rounded border border-[#e6dabf] dark:border-stone-800 bg-[#f1e9d2] dark:bg-stone-950/40">
-              <div className="flex items-center gap-2">
-                <span className="font-semibold text-stone-900 dark:text-stone-100">{a.name}</span>
-                {a.hidden && (
-                  <span className="px-1.5 py-px rounded text-[9px] font-semibold uppercase tracking-wider bg-violet-500 text-white">
-                    Hidden
-                  </span>
-                )}
-              </div>
-              {detail?.effect && (
-                <div className="mt-1 text-sm text-stone-600 dark:text-stone-400 italic">
-                  {detail.effect}
-                </div>
+            <span
+              key={`${a.id}-${idx}`}
+              className={`group relative inline-flex items-center gap-1.5 px-2.5 py-1 rounded border text-sm
+                          border-[#e6dabf] dark:border-stone-800 bg-[#f1e9d2] dark:bg-stone-950/40
+                          ${effect ? 'cursor-help' : ''}`}
+            >
+              <span className="font-semibold text-stone-900 dark:text-stone-100">{a.name}</span>
+              {a.hidden && (
+                <span className="px-1 py-px rounded text-[9px] font-semibold uppercase tracking-wider bg-violet-500 text-white">
+                  Hidden
+                </span>
               )}
-            </div>
+              {effect && (
+                <span
+                  role="tooltip"
+                  className="pointer-events-none absolute left-0 top-full mt-1 z-30 hidden group-hover:block
+                             w-64 max-w-[min(18rem,75vw)] p-2 rounded-md shadow-lg
+                             border border-[#d6c8a3] dark:border-stone-700
+                             bg-[#fdf8e9] dark:bg-stone-800 text-xs text-stone-700 dark:text-stone-300"
+                >
+                  {effect}
+                </span>
+              )}
+            </span>
           );
         })}
       </div>
