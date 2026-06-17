@@ -1,4 +1,4 @@
-# PokéMMO Tools — Desktop app (Windows)
+# PokeKit — Desktop app (Windows)
 
 The desktop app is a thin [Tauri v2](https://tauri.app) shell around the **exact
 same React build** the website ships. There is **one frontend** — the website

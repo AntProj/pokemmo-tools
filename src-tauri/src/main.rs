@@ -1,4 +1,4 @@
-// PokeMMO Tools — Windows desktop shell (Tauri v2).
+// PokeKit — Windows desktop shell (Tauri v2).
 //
 // Boots the same React build the website ships, and adds capture commands the
 // Box tab uses: `list_windows`, `capture_and_ocr`, and `flash_toast` (an
@@ -305,5 +305,5 @@ fn main() {
         })
         .invoke_handler(tauri::generate_handler![list_windows, capture_and_ocr, flash_toast])
         .run(tauri::generate_context!())
-        .expect("error while running the PokeMMO Tools desktop shell");
+        .expect("error while running the PokeKit desktop shell");
 }

@@ -9,7 +9,7 @@ export function isDesktop() {
 
 function bridge() {
   const t = typeof window !== 'undefined' ? window.__TAURI__ : null;
-  if (!t) throw new Error('Not running in the PokéMMO Tools desktop app.');
+  if (!t) throw new Error('Not running in the PokeKit desktop app.');
   return t;
 }
 
