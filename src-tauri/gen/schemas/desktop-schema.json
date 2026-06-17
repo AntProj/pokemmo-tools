@@ -177,6 +177,42 @@
       "description": "Permission identifier",
       "oneOf": [
         {
+          "description": "Enables the capture_and_ocr command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-capture-and-ocr",
+          "markdownDescription": "Enables the capture_and_ocr command without any pre-configured scope."
+        },
+        {
+          "description": "Enables the flash_toast command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-flash-toast",
+          "markdownDescription": "Enables the flash_toast command without any pre-configured scope."
+        },
+        {
+          "description": "Enables the list_windows command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-list-windows",
+          "markdownDescription": "Enables the list_windows command without any pre-configured scope."
+        },
+        {
+          "description": "Denies the capture_and_ocr command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-capture-and-ocr",
+          "markdownDescription": "Denies the capture_and_ocr command without any pre-configured scope."
+        },
+        {
+          "description": "Denies the flash_toast command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-flash-toast",
+          "markdownDescription": "Denies the flash_toast command without any pre-configured scope."
+        },
+        {
+          "description": "Denies the list_windows command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-list-windows",
+          "markdownDescription": "Denies the list_windows command without any pre-configured scope."
+        },
+        {
           "description": "Default core plugins set.\n#### This default permission set includes:\n\n- `core:path:default`\n- `core:event:default`\n- `core:window:default`\n- `core:webview:default`\n- `core:app:default`\n- `core:image:default`\n- `core:resources:default`\n- `core:menu:default`\n- `core:tray:default`",
           "type": "string",
           "const": "core:default",
