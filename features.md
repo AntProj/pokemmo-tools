@@ -87,8 +87,8 @@ expand only when you want them:
   to catch, how fast it levels up, its egg groups, and its male/female ratio shown
   as a split bar.
 - **Base stats** shown as bars, with the total.
-- Its **abilities**, each with a plain-English description, and hidden abilities
-  clearly marked.
+- Its **abilities** as small pills showing just the name (hidden abilities are
+  clearly marked); hover a pill to read what the ability does.
 - The full **evolution family** drawn as a centered tree, including how each
   evolution happens. You can click any relative to jump straight to it.
 - A built-in **catch calculator** *(collapsible)*: set the battle conditions (the
@@ -108,8 +108,8 @@ expand only when you want them:
 - **Side-by-side compare** — pick two or more Pokémon and view their stats, types,
   and movepools next to each other.
 - **Act on a Pokémon without leaving the Pokédex** — add it to your Box, a team,
-  or the catch Tracker right from the card or the detail popup (today the popup
-  only links out to the Catch Calculator).
+  or the catch Tracker right from the card or the detail popup (the popup already
+  has the catch calculator built in, but there's no one-tap "add to Box/team/Tracker" yet).
 - **Jump to the map** — a button in the detail popup's encounter list that opens
   the interactive Maps tab at that location.
 - **Show EV yield** — the detail popup lists most of a Pokémon's profile, but not
