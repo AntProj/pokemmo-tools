@@ -83,6 +83,19 @@ export function statTotal(stats) {
   return STAT_ORDER.reduce((sum, k) => sum + (stats[k] || 0), 0);
 }
 
+// EV yield earned for defeating this Pokémon. The dataset stores it on
+// `yields` as ev_<statkey> (ev_hp, ev_attack, … ev_speed). Returns a compact
+// string like "1 SpA" or "2 SpA, 1 SpD", or "—" when none.
+export function formatEvYield(yields) {
+  if (!yields) return '—';
+  const parts = [];
+  for (const k of STAT_ORDER) {
+    const v = yields['ev_' + k];
+    if (v > 0) parts.push(`${v} ${statLabel(k)}`);
+  }
+  return parts.length ? parts.join(', ') : '—';
+}
+
 // Bar fill clamps so 255 maxes out a bar; typical max base stat is ~180 but
 // using 255 keeps the visual scale intuitive.
 export function statBarPct(value) {

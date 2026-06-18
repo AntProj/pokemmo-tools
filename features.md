@@ -46,8 +46,9 @@ lives here, so there's just one place to look things up.)
 
 **Sorting**
 
-- Sort the list by dex number (the default), alphabetically by name, or by
-  overall strength (total base stats, strongest first).
+- Sort the list by dex number (the default), alphabetically by name, by overall
+  strength (total base stats), or by any single base stat — HP, Attack, Defense,
+  Sp. Atk, Sp. Def, or Speed — highest first.
 
 **Advanced filters**
 
@@ -74,6 +75,23 @@ You can combine as many of these as you like:
 Every filter you turn on appears as a little removable tag above the results, so
 you can always see what's being applied and clear any of them with one tap.
 
+**Compare & quick actions**
+
+- Hover any Pokémon card for a small toolbar: add it to **compare**, drop it into
+  your **Box** or active **team**, or **mark it caught** in the Tracker — without
+  opening anything. A small confirmation pops up each time.
+- The compare toggle gathers Pokémon into a tray at the bottom of the screen (up
+  to six). Hit **Compare** to see them side by side — every base stat, the total,
+  EV yield, and abilities in columns, with the best value in each stat row
+  highlighted.
+
+**Save & share**
+
+- A **Saved** menu stores the current filter combination under a name so you can
+  recall it later, and copies a **shareable link**. The web address always mirrors
+  your active filters, so a link drops whoever opens it into the exact same
+  filtered view.
+
 **The detail popup**
 
 Click any Pokémon and a detailed popup opens with everything about it. To keep it
@@ -83,9 +101,11 @@ expand only when you want them:
 - A large picture, its dex number, name, and types — plus badges for special
   status (Legendary, Mythical, Baby) and its competitive and shiny rarity tiers.
   A **Show shiny** button flips to the shiny look when one exists.
+- Quick buttons to **add it to your Box or active team, or mark it caught** in the
+  Tracker (the same actions as the card hover toolbar).
 - A compact **profile** right in the title banner: height, weight, how hard it is
-  to catch, how fast it levels up, its egg groups, and its male/female ratio shown
-  as a split bar.
+  to catch, its **EV yield** (the stats it trains when defeated), how fast it
+  levels up, its egg groups, and its male/female ratio shown as a split bar.
 - **Base stats** shown as bars, with the total.
 - Its **abilities** as small pills showing just the name (hidden abilities are
   clearly marked); hover a pill to read what the ability does.
@@ -105,18 +125,10 @@ expand only when you want them:
 
 ### TODO
 
-- **Side-by-side compare** — pick two or more Pokémon and view their stats, types,
-  and movepools next to each other.
-- **Act on a Pokémon without leaving the Pokédex** — add it to your Box, a team,
-  or the catch Tracker right from the card or the detail popup (the popup already
-  has the catch calculator built in, but there's no one-tap "add to Box/team/Tracker" yet).
 - **Jump to the map** — a button in the detail popup's encounter list that opens
   the interactive Maps tab at that location.
-- **Show EV yield** — the detail popup lists most of a Pokémon's profile, but not
-  what EVs it gives when defeated; add that for EV trainers.
 - **More ways to filter** — by special status (Legendary/Mythical), competitive or
   shiny tier, or growth rate.
-- **Sort by a single stat** — for example, list everything by Speed, not just by
-  the overall total.
-- **Save and share searches** — remember a favorite filter combination, or hand
-  someone a link that opens the same filtered view.
+- **Reach the quick actions on touch & in list view** — the card toolbar (compare
+  + add-to-Box/team/caught) appears on hover in the grid; add a touch-friendly way
+  to reach it and let list-view rows be added to compare too.

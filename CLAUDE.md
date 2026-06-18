@@ -115,7 +115,16 @@ AND/OR) — it used to be duplicated in the toolbar. State: `INITIAL_POKEDEX` in
 **catch calculator** (`components/CatchCalcPanel.jsx`) and puts moves / held
 items / encounters / catch calc in collapsible cards. *(The old `Search.jsx` page
 was merged in and deleted; `/search` and `/moves` redirect here.)*
-- **TODO:** none tracked.
+Also: per-stat sort options; a card hover toolbar + popup row to **act on a mon**
+(add to active Box/Team via `lib/box.js`/`lib/teams.js`, mark caught in Tracker —
+handlers live in `App.jsx`, feedback via `lib/toast.js` + `components/Toaster.jsx`,
+control in `components/MonActions.jsx`); **side-by-side compare**
+(`components/ComparePanel.jsx`, local compare tray, ≤6); and **save/share** —
+filter state ↔ URL query (`lib/pokedexParams.js`, live-synced via `useSearchParams`
+so the address bar is a shareable link) plus named presets
+(`lib/savedSearches.js` + `components/SavedSearches.jsx`). EV yield shows in the
+popup profile (`formatEvYield` in `lib/format.js`).
+- **TODO:** quick actions/compare are hover-only in the grid (not list view / touch).
 
 ### Locations — `/locations/:region?/:location?` · `pages/Locations.jsx`
 Reverse index `"Region::Location"` → mons. Location opens as a modal over the

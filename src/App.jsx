@@ -3,8 +3,10 @@ import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import NavBar from './components/NavBar.jsx';
 import PokemonModal from './components/PokemonModal.jsx';
 import Pokedex from './pages/Pokedex.jsx';
-import { loadStore as loadBoxStore, saveStore as saveBoxStore } from './lib/box.js';
-import { loadStore as loadTeamsStore, saveStore as saveTeamsStore } from './lib/teams.js';
+import { loadStore as loadBoxStore, saveStore as saveBoxStore, addMon as boxAddMon, blankBoxMon } from './lib/box.js';
+import { loadStore as loadTeamsStore, saveStore as saveTeamsStore, addMember as teamAddMember, blankSet, teamById, MAX_MEMBERS } from './lib/teams.js';
+import Toaster from './components/Toaster.jsx';
+import { showToast } from './lib/toast.js';
 
 // Heavy / non-landing pages are code-split so the initial load (the Pokédex)
 // doesn't pay for Leaflet (RegionMap ≈ 150 KB+), the breeding optimizer, etc.
@@ -173,6 +175,31 @@ export default function App() {
   const handleSelect = useCallback((id) => setSelectedId(id), []);
   const handleClose  = useCallback(() => setSelectedId(null), []);
 
+  // Quick "act on a mon" handlers — shared by the Pokédex cards and the detail
+  // popup so you can file a Pokémon into the Box / a Team / the Tracker without
+  // leaving the Pokédex. Each fires a toast for feedback.
+  const nameOf = useCallback((id) => data?.pokemon.find((p) => p.id === id)?.name || 'Pokémon', [data]);
+  const addMonToBox = useCallback((monId) => {
+    const box = boxStore.boxes.find((b) => b.id === boxStore.activeBoxId) || boxStore.boxes[0];
+    if (!box) return;
+    setBoxStore((s) => boxAddMon(s, box.id, { ...blankBoxMon(), species: monId, addedAt: new Date().toISOString() }));
+    showToast(`Added ${nameOf(monId)} to “${box.name}”`, { kind: 'success' });
+  }, [boxStore, nameOf]);
+  const addMonToTeam = useCallback((monId) => {
+    const team = teamById(teamsStore, teamsStore.activeTeamId) || teamsStore.teams[0];
+    if (!team) return;
+    if (team.members.length >= MAX_MEMBERS) {
+      showToast(`“${team.name}” is full (6 max) — start a new team in Team Builder`, { kind: 'warn' });
+      return;
+    }
+    setTeamsStore((s) => teamAddMember(s, team.id, { ...blankSet(), monId }));
+    showToast(`Added ${nameOf(monId)} to “${team.name}”`, { kind: 'success' });
+  }, [teamsStore, nameOf]);
+  const markCaught = useCallback((monId) => {
+    setMonState(monId, 'caught');
+    showToast(`Marked ${nameOf(monId)} as caught`, { kind: 'success' });
+  }, [setMonState, nameOf]);
+
   // ── Boot states (all hooks above run unconditionally) ──
   if (dataError) {
     return (
@@ -216,6 +243,9 @@ export default function App() {
                   view={view} onView={setView}
                   theme={theme} onTheme={setTheme}
                   onSelect={handleSelect}
+                  onAddToBox={addMonToBox}
+                  onAddToTeam={addMonToTeam}
+                  onMarkCaught={markCaught}
                 />
               }
             />
@@ -343,11 +373,16 @@ export default function App() {
           data={data}
           onClose={handleClose}
           onSelect={handleSelect}
+          onAddToBox={addMonToBox}
+          onAddToTeam={addMonToTeam}
+          onMarkCaught={markCaught}
         />
 
         <footer className="max-w-7xl mx-auto px-4 py-6 text-xs text-stone-400 dark:text-stone-600 text-center">
           {data.meta.total_pokemon} Pokémon · {data.meta.total_moves} moves · built {new Date(data.meta.built_at).toLocaleDateString()}
         </footer>
+
+        <Toaster />
       </div>
     </HashRouter>
   );

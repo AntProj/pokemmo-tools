@@ -1,6 +1,8 @@
 import { memo } from 'react';
+import { Scale } from 'lucide-react';
 import TypeBadge from './TypeBadge.jsx';
 import PokemonSprite from './PokemonSprite.jsx';
+import MonActions from './MonActions.jsx';
 import { displayDex } from '../lib/format.js';
 import { typeColor } from '../lib/types.js';
 import { useSpritePreload } from '../hooks/useSpritePreload.js';
@@ -61,28 +63,66 @@ export function PokemonCardBody({
   );
 }
 
-function PokemonCard({ pokemon, region, onSelect, footer }) {
+function PokemonCard({
+  pokemon, region, onSelect, footer,
+  onAddToBox, onAddToTeam, onMarkCaught,
+  inCompare, onToggleCompare,
+}) {
   // Warm the HTTP cache on hover so the modal's 3D render is ready by the time
   // the user clicks.
   const preload = useSpritePreload(pokemon);
+  const hasToolbar = onAddToBox || onAddToTeam || onMarkCaught || onToggleCompare;
   return (
-    <button
-      type="button"
-      onClick={() => onSelect(pokemon.id)}
-      onMouseEnter={preload}
-      onFocus={preload}
-      className="group flex flex-col items-center text-center p-3 rounded-lg
-                 bg-[#fdf8e9] border border-[#e6dabf] hover:border-[#c4b486] hover:shadow-md
-                 dark:bg-stone-900 dark:border-stone-800 dark:hover:border-stone-600
-                 transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-blue-500"
-    >
-      <PokemonCardBody
-        pokemon={pokemon}
-        region={region}
-        footer={footer}
-        spriteClass="w-20 h-20 group-hover:scale-110 transition-transform"
-      />
-    </button>
+    // The card itself is one button (opens the detail popup). The quick-action
+    // toolbar lives as an absolutely-positioned sibling — NOT a child — so it
+    // never nests a button inside a button and its clicks don't open the popup.
+    <div className="relative group">
+      <button
+        type="button"
+        onClick={() => onSelect(pokemon.id)}
+        onMouseEnter={preload}
+        onFocus={preload}
+        className={`w-full flex flex-col items-center text-center p-3 rounded-lg
+                   bg-[#fdf8e9] border hover:border-[#c4b486] hover:shadow-md
+                   dark:bg-stone-900 dark:hover:border-stone-600
+                   transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-blue-500
+                   ${inCompare ? 'border-blue-500 dark:border-blue-500 ring-1 ring-blue-500/40' : 'border-[#e6dabf] dark:border-stone-800'}`}
+      >
+        <PokemonCardBody
+          pokemon={pokemon}
+          region={region}
+          footer={footer}
+          spriteClass="w-20 h-20 group-hover:scale-110 transition-transform"
+        />
+      </button>
+
+      {hasToolbar && (
+        <div className="absolute top-1.5 right-1.5 flex gap-1 opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity">
+          {onToggleCompare && (
+            <button
+              type="button"
+              onClick={(e) => { e.preventDefault(); e.stopPropagation(); onToggleCompare(pokemon.id); }}
+              title={inCompare ? 'In compare — click to remove' : 'Add to compare'}
+              aria-label="Toggle compare"
+              aria-pressed={!!inCompare}
+              className={`inline-flex items-center justify-center p-1.5 rounded-md border shadow-sm ${
+                inCompare
+                  ? 'bg-blue-600 text-white border-blue-700'
+                  : 'bg-[#fdf8e9]/95 dark:bg-stone-800/95 text-stone-700 dark:text-stone-200 border-[#d6c8a3] dark:border-stone-600 hover:bg-[#ece2c4] dark:hover:bg-stone-700'
+              }`}
+            >
+              <Scale size={13} />
+            </button>
+          )}
+          <MonActions
+            monId={pokemon.id}
+            onAddToBox={onAddToBox}
+            onAddToTeam={onAddToTeam}
+            onMarkCaught={onMarkCaught}
+          />
+        </div>
+      )}
+    </div>
   );
 }
 

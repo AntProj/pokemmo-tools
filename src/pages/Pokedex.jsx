@@ -1,5 +1,6 @@
-import { useCallback, useMemo, useState } from 'react';
-import { Search as SearchIcon, ChevronDown, SlidersHorizontal, X, Plus } from 'lucide-react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import { Search as SearchIcon, ChevronDown, SlidersHorizontal, X, Plus, Scale } from 'lucide-react';
 import { useFieldSetters } from '../hooks/useFieldSetters.js';
 import Toolbar from '../components/Toolbar.jsx';
 import PokemonCard from '../components/PokemonCard.jsx';
@@ -13,6 +14,11 @@ import StatRangeSliders from '../components/StatRangeSliders.jsx';
 import FilterChips from '../components/FilterChips.jsx';
 import MatchModeToggle from '../components/MatchModeToggle.jsx';
 import TypeBadge from '../components/TypeBadge.jsx';
+import ComparePanel from '../components/ComparePanel.jsx';
+import PokemonSprite from '../components/PokemonSprite.jsx';
+import SavedSearches from '../components/SavedSearches.jsx';
+import { showToast } from '../lib/toast.js';
+import { stateToParams, paramsToState } from '../lib/pokedexParams.js';
 import { typeColor } from '../lib/types.js';
 import { statTotal, regionKey } from '../lib/format.js';
 
@@ -60,6 +66,21 @@ function classifyMethod(raw) {
 }
 
 const STAT_KEYS = ['hp', 'attack', 'defense', 'sp_attack', 'sp_defense', 'speed'];
+
+// Sort options for the toolbar dropdown. Beyond dex/name/BST, each base stat can
+// sort the list high→low (handled in the filter pipeline below). Passed
+// explicitly so the Locations page (which shares Toolbar) keeps its own list.
+const POKEDEX_SORT_OPTIONS = [
+  { value: 'dex',         label: 'Dex #' },
+  { value: 'name',        label: 'Name A→Z' },
+  { value: 'bst',         label: 'Total (BST) ↓' },
+  { value: 'hp',          label: 'HP ↓' },
+  { value: 'attack',      label: 'Attack ↓' },
+  { value: 'defense',     label: 'Defense ↓' },
+  { value: 'sp_attack',   label: 'Sp. Atk ↓' },
+  { value: 'sp_defense',  label: 'Sp. Def ↓' },
+  { value: 'speed',       label: 'Speed ↓' },
+];
 
 function buildIndex(pokemonList) {
   const byMove      = new Map();   // moveId      → Set<pokemonId>
@@ -157,7 +178,7 @@ function unionAll(sets) {
 
 /* ─────────────── Page ─────────────── */
 
-export default function Pokedex({ data, state, setState, view, onView, theme, onTheme, onSelect }) {
+export default function Pokedex({ data, state, setState, view, onView, theme, onTheme, onSelect, onAddToBox, onAddToTeam, onMarkCaught }) {
   const {
     search, region, types, typesMode,
     selectedMoveIds, movesMode,
@@ -199,6 +220,41 @@ export default function Pokedex({ data, state, setState, view, onView, theme, on
   const index = useMemo(() => buildIndex(data.pokemon), [data.pokemon]);
 
   const activeMoveIds = useMemo(() => selectedMoveIds.filter((x) => x != null), [selectedMoveIds]);
+
+  // ── Compare tray (local UI state; resets on tab switch, like advancedOpen) ──
+  const COMPARE_MAX = 6;
+  const byId = useMemo(() => new Map(data.pokemon.map((p) => [p.id, p])), [data.pokemon]);
+  const [compareIds, setCompareIds] = useState([]);
+  const [compareOpen, setCompareOpen] = useState(false);
+  const toggleCompare = useCallback((id) => {
+    setCompareIds((ids) => {
+      if (ids.includes(id)) return ids.filter((x) => x !== id);
+      if (ids.length >= COMPARE_MAX) { showToast(`Compare holds up to ${COMPARE_MAX} Pokémon`, { kind: 'warn' }); return ids; }
+      return [...ids, id];
+    });
+  }, []);
+  const compareMons = useMemo(() => compareIds.map((id) => byId.get(id)).filter(Boolean), [compareIds, byId]);
+
+  // ── Shareable URL ↔ filter state ──
+  // The address bar always mirrors the active filters (a copyable link), and a
+  // shared link / saved preset hydrates the filters on load.
+  const [searchParams, setSearchParams] = useSearchParams();
+  const didHydrate = useRef(false);
+  useEffect(() => {
+    if (didHydrate.current) return;
+    didHydrate.current = true;
+    if ([...searchParams.keys()].length > 0) setState((s) => paramsToState(searchParams, s));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  const currentParams = useMemo(() => stateToParams(state).toString(), [state]);
+  const hasFilters = currentParams.length > 0;
+  useEffect(() => {
+    if (currentParams !== searchParams.toString()) setSearchParams(currentParams, { replace: true });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentParams]);
+  const applyParams = useCallback((paramsString) => {
+    setState((s) => paramsToState(new URLSearchParams(paramsString), s));
+  }, [setState]);
 
   // The big filter pipeline. Unlike the old Search page, this always runs —
   // an empty filter set produces the full dex rather than an empty prompt,
@@ -276,6 +332,7 @@ export default function Pokedex({ data, state, setState, view, onView, theme, on
 
     if (sort === 'name') out.sort((a, b) => a.name.localeCompare(b.name));
     else if (sort === 'bst') out.sort((a, b) => statTotal(b.stats) - statTotal(a.stats));
+    else if (STAT_KEYS.includes(sort)) out.sort((a, b) => (b.stats?.[sort] || 0) - (a.stats?.[sort] || 0) || a.id - b.id);
     else if (rkey) out.sort((a, b) => (a.dex[rkey] || 0) - (b.dex[rkey] || 0));
     else out.sort((a, b) => a.id - b.id);
 
@@ -318,7 +375,7 @@ export default function Pokedex({ data, state, setState, view, onView, theme, on
         // is a single place to pick types (theme/sprite settings moved to the
         // global Settings menu in the navbar).
         region={region} onRegion={setRegion}
-        sort={sort}     onSort={setSort}
+        sort={sort}     onSort={setSort} sortOptions={POKEDEX_SORT_OPTIONS}
         // List view only makes sense when the sidebar is collapsed (a
         // 5-column grid + sidebar already eats the horizontal budget).
         view={advancedOpen ? undefined : view}
@@ -348,6 +405,13 @@ export default function Pokedex({ data, state, setState, view, onView, theme, on
               </span>
             )}
           </button>
+
+          <SavedSearches
+            currentParams={currentParams}
+            hasFilters={hasFilters}
+            onApply={applyParams}
+          />
+
           {chips.length > 0 && (
             <div className="flex-1 min-w-0 border border-[#e6dabf] dark:border-stone-800 bg-[#fdf8e9]/60 dark:bg-stone-900/40 rounded-md p-2">
               <FilterChips chips={chips} />
@@ -426,6 +490,11 @@ export default function Pokedex({ data, state, setState, view, onView, theme, on
                     pokemon={p}
                     region={region}
                     onSelect={onSelect}
+                    onAddToBox={onAddToBox}
+                    onAddToTeam={onAddToTeam}
+                    onMarkCaught={onMarkCaught}
+                    inCompare={compareIds.includes(p.id)}
+                    onToggleCompare={toggleCompare}
                     footer={activeMoveIds.length > 0 ? (
                       <MoveMethodBadges
                         pokemon={p}
@@ -448,6 +517,49 @@ export default function Pokedex({ data, state, setState, view, onView, theme, on
           currentMoveId={selectedMoveIds[pickerSlot]}
           onPick={(id) => { setMove(pickerSlot, id); setPickerSlot(null); }}
           onClose={() => setPickerSlot(null)}
+        />
+      )}
+
+      {/* Compare tray — floats while ≥1 mon is selected for side-by-side compare. */}
+      {compareIds.length > 0 && (
+        <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 flex items-center gap-3 pl-3 pr-2 py-2 rounded-full shadow-xl
+                        bg-[#fdf8e9] dark:bg-stone-900 border border-[#d6c8a3] dark:border-stone-700">
+          <div className="flex -space-x-2">
+            {compareMons.slice(0, COMPARE_MAX).map((p) => (
+              <button
+                key={p.id}
+                type="button"
+                onClick={() => toggleCompare(p.id)}
+                title={`Remove ${p.name}`}
+                className="w-8 h-8 rounded-full ring-2 ring-[#fdf8e9] dark:ring-stone-900 bg-[#f1e9d2] dark:bg-stone-800 overflow-hidden flex items-center justify-center hover:ring-red-400"
+              >
+                <PokemonSprite pokemon={p} className="w-7 h-7 object-contain" />
+              </button>
+            ))}
+          </div>
+          <button
+            type="button"
+            onClick={() => setCompareOpen(true)}
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium bg-blue-600 text-white hover:bg-blue-700"
+          >
+            <Scale size={15} /> Compare ({compareIds.length})
+          </button>
+          <button
+            type="button"
+            onClick={() => setCompareIds([])}
+            className="px-2 py-1.5 rounded-full text-xs text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200"
+          >
+            Clear
+          </button>
+        </div>
+      )}
+
+      {compareOpen && (
+        <ComparePanel
+          pokemon={compareMons}
+          onClose={() => setCompareOpen(false)}
+          onRemove={toggleCompare}
+          onSelect={(id) => { setCompareOpen(false); onSelect(id); }}
         />
       )}
     </>

@@ -5,10 +5,11 @@ import TypeBadge from './TypeBadge.jsx';
 import RarityBadge from './RarityBadge.jsx';
 import PokemonSprite from './PokemonSprite.jsx';
 import CatchCalcPanel from './CatchCalcPanel.jsx';
+import MonActions from './MonActions.jsx';
 import { typeColor } from '../lib/types.js';
 import {
   dexNum, formatHeight, formatWeight, formatGenderRatio, genderSplit,
-  formatGrowthRate, formatCatchRate,
+  formatGrowthRate, formatCatchRate, formatEvYield,
   formatEvolutionMethod, damageClassIcon, damageClassLabel,
   STAT_ORDER, statLabel, statTotal, statBarPct, statBarColor,
 } from '../lib/format.js';
@@ -20,7 +21,7 @@ const MOVE_TABS = [
   { key: 'egg',    label: 'Egg' },
 ];
 
-export default function PokemonModal({ pokemon, data, onClose, onSelect }) {
+export default function PokemonModal({ pokemon, data, onClose, onSelect, onAddToBox, onAddToTeam, onMarkCaught }) {
   const [shiny, setShiny] = useState(false);
   const [moveTab, setMoveTab] = useState('level');
   const [expandedMove, setExpandedMove] = useState(null);
@@ -43,7 +44,10 @@ export default function PokemonModal({ pokemon, data, onClose, onSelect }) {
 
   return (
     <Modal onClose={onClose} maxWidth="max-w-3xl" scroll="page" ariaLabel={`${pokemon.name} details`}>
-      <Header pokemon={pokemon} shiny={shiny} setShiny={setShiny} hasShinyVariant={hasShinyVariant} />
+      <Header
+        pokemon={pokemon} shiny={shiny} setShiny={setShiny} hasShinyVariant={hasShinyVariant}
+        onAddToBox={onAddToBox} onAddToTeam={onAddToTeam} onMarkCaught={onMarkCaught}
+      />
 
       <div className="p-5 sm:p-6 space-y-5 border-t border-[#e6dabf] dark:border-stone-800">
         <Stats stats={pokemon.stats} total={total} />
@@ -73,7 +77,7 @@ export default function PokemonModal({ pokemon, data, onClose, onSelect }) {
 
 /* ─────────────── Header ─────────────── */
 
-function Header({ pokemon, shiny, setShiny, hasShinyVariant }) {
+function Header({ pokemon, shiny, setShiny, hasShinyVariant, onAddToBox, onAddToTeam, onMarkCaught }) {
   const primary = typeColor(pokemon.types[0]);
   return (
     <div
@@ -148,6 +152,15 @@ function Header({ pokemon, shiny, setShiny, hasShinyVariant }) {
               </button>
             </div>
           )}
+
+          <MonActions
+            monId={pokemon.id}
+            onAddToBox={onAddToBox}
+            onAddToTeam={onAddToTeam}
+            onMarkCaught={onMarkCaught}
+            labeled
+            className="mt-3"
+          />
         </div>
 
         {/* Compact profile lives in the banner now (used to be a body section). */}
@@ -211,6 +224,7 @@ function HeaderProfile({ pokemon }) {
       <ProfRow label="Height" value={formatHeight(pokemon.height)} />
       <ProfRow label="Weight" value={formatWeight(pokemon.weight)} />
       <ProfRow label="Catch rate" value={formatCatchRate(pokemon.catch_rate)} />
+      <ProfRow label="EV yield" value={formatEvYield(pokemon.yields)} />
       <ProfRow label="Growth" value={formatGrowthRate(pokemon.growth_rate || pokemon.exp_type)} />
       <ProfRow label="Egg groups" value={eggGroups} />
       <div className="pt-1">
