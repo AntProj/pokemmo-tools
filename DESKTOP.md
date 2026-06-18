@@ -6,7 +6,7 @@ and the desktop app load the identical `dist/`. The desktop build only *adds*
 capabilities (screen capture + on-device OCR to populate your **Box**); the
 website is unchanged and never depends on any of it.
 
-**The desktop app loads the live site** (`https://antproj.github.io/pokekit/`)
+**The desktop app loads the live site** (`https://antproj.github.io/PokeKit/`)
 rather than a bundled copy, so it auto-updates the moment you deploy the website
 — the desktop shell exists only to add native screen capture + OCR. The window's
 origin is granted IPC access in `src-tauri/capabilities/default.json` so the

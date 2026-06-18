@@ -23,7 +23,7 @@ const TrainerScribe   = lazy(() => import('./pages/TrainerScribe.jsx'));
 // The dataset (~6.7 MB) is served as a static asset from public/ and fetched
 // at runtime rather than bundled into the JS — that single change drops the
 // initial JS payload by ~500 KB gzipped. BASE_URL makes it resolve in dev (/)
-// and prod (/pokekit/) alike.
+// and prod (/PokeKit/) alike.
 const DATA_URL = `${import.meta.env.BASE_URL}data/pokemmo.json`;
 
 const LS = {

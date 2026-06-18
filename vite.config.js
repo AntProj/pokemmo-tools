@@ -7,11 +7,11 @@ import react from '@vitejs/plugin-react';
 const isTauri = !!process.env.TAURI_ENV_PLATFORM;
 
 // IMPORTANT: for the GitHub Pages build, 'base' must match your repo name.
-// e.g. github.com/AntProj/pokekit  →  base = '/pokekit/'
+// e.g. github.com/AntProj/PokeKit  →  base = '/PokeKit/'  (case-sensitive!)
 // The desktop (Tauri) build overrides this to './'.
 export default defineConfig({
   plugins: [react()],
-  base: isTauri ? './' : '/pokekit/',
+  base: isTauri ? './' : '/PokeKit/',
   // The vendored damage engine (vendor/pokemmo-calc) is CommonJS — esbuild
   // pre-bundles it in dev (optimizeDeps), and in the production build Rollup's
   // commonjs transform must reach it. Because it's a `file:` dep that resolves

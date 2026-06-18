@@ -55,22 +55,22 @@ If you ever update files in `data/raw/`, re-run `npm run build:data` to regenera
 
 ### One-time GitHub setup
 
-1. Create a new repo on GitHub named `pokekit` (or whatever; just match the `base` in `vite.config.js`).
+1. Create a new repo on GitHub named `PokeKit` (or whatever; just match the `base` in `vite.config.js` — case-sensitive).
 2. From this folder:
    ```bash
    git init
    git add .
    git commit -m "initial commit"
    git branch -M main
-   git remote add origin https://github.com/AntProj/pokekit.git
+   git remote add origin https://github.com/AntProj/PokeKit.git
    git push -u origin main
    ```
 3. In your GitHub repo go to **Settings → Pages**. Under "Source" pick **Deploy from a branch**, and set branch to **`gh-pages`** (folder: `/ (root)`). Save.
 
 ### Update `homepage` and `base`
 
-- In `package.json`, change `homepage` to `https://antproj.github.io/pokekit/`
-- In `vite.config.js`, the `base` value must match `/your-repo-name/` (already set to `/pokekit/`)
+- In `package.json`, change `homepage` to `https://antproj.github.io/PokeKit/`
+- In `vite.config.js`, the `base` value must match `/your-repo-name/` (already set to `/PokeKit/`)
 
 ### Deploy
 
@@ -78,7 +78,7 @@ If you ever update files in `data/raw/`, re-run `npm run build:data` to regenera
 npm run deploy
 ```
 
-This runs `build:data` + `vite build`, then pushes the `dist/` folder to the `gh-pages` branch. After ~1 minute, your site is live at `https://antproj.github.io/pokekit/`.
+This runs `build:data` + `vite build`, then pushes the `dist/` folder to the `gh-pages` branch. After ~1 minute, your site is live at `https://antproj.github.io/PokeKit/`.
 
 Re-run `npm run deploy` anytime you want to publish updates.
 

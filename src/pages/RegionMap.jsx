@@ -14,7 +14,7 @@ import {
 } from '../lib/crossMapPathfinding.js';
 
 // Asset URL helper: absolute URLs pass through; relative URLs prepend Vite's
-// BASE_URL so they work in dev (`/`) and prod (`/pokekit/`). Map images
+// BASE_URL so they work in dev (`/`) and prod (`/PokeKit/`). Map images
 // are absolute R2 URLs; event JSONs are relative.
 const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');
 const asset = (p) => (/^https?:\/\//i.test(p) ? p : `${BASE}/${p}`);

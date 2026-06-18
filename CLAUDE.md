@@ -66,7 +66,7 @@ pokemmo-tools/
 │   ├── trainers.json        ← Built by build:trainers (committed)
 │   ├── gym-cities.json      ← Built by build:trainers (committed)
 │   └── maps/<region>/       ← maps-index, trainer-instances, zone graphs; images/tiles on R2 (gitignored)
-├── vite.config.js           ← base '/pokekit/' (web) or './' (Tauri); CJS interop for vendor/
+├── vite.config.js           ← base '/PokeKit/' (web) or './' (Tauri); CJS interop for vendor/
 └── package.json
 ```
 
@@ -76,7 +76,7 @@ pokemmo-tools/
 npm install
 npm run build:data     # rebuild public/data/pokemmo.json from data/raw/* — REQUIRED before first dev run
 npm run build:trainers # rebuild public/data/trainers.json + gym-cities.json from the trainer raw files
-npm run dev            # Vite dev server (http://localhost:5173, base /pokekit/)
+npm run dev            # Vite dev server (http://localhost:5173, base /PokeKit/)
 npm run build          # vite build → dist/
 npm run preview        # preview the built dist/
 npm run deploy         # predeploy (build:data + build:trainers + build + prune) → deploy-gh-pages.mjs
@@ -313,7 +313,7 @@ GitHub Pages from the `gh-pages` branch via the custom **`scripts/deploy-gh-page
 The desktop app loads the **live site**, so `npm run deploy` updates both the web
 app and the desktop app — no Tauri rebuild needed for non-capture changes.
 
-Deploy-sensitive values: `vite.config.js` `base: '/pokekit/'` (web) and the
+Deploy-sensitive values: `vite.config.js` `base: '/PokeKit/'` (web, case-sensitive) and the
 repo name. (`package.json` `homepage` is still the `YOUR_GITHUB_USERNAME`
 placeholder — harmless, the deploy uses the git remote; fix if you care.)
 
