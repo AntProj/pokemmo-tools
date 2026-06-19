@@ -350,12 +350,24 @@ function buildEvolutionTree(pokemon, data, visited = new Set()) {
   if (!pokemon || visited.has(pokemon.id)) return null;
   visited.add(pokemon.id);
   const children = (pokemon.evolutions || []).map((evo) => {
+    const method = enrichEvoMethod(evo, data);
     const next = data.pokemon.find((p) => p.id === evo.id);
-    if (!next) return { pokemon: { id: evo.id, name: evo.name, sprite: null, types: [] }, method: evo, children: [] };
+    if (!next) return { pokemon: { id: evo.id, name: evo.name, sprite: null, types: [] }, method, children: [] };
     const subtree = buildEvolutionTree(next, data, visited);
-    return { pokemon: next, method: evo, children: subtree?.children || [] };
+    return { pokemon: next, method, children: subtree?.children || [] };
   });
   return { pokemon, method: null, children };
+}
+
+// Resolve id-valued evolution params the data file leaves raw. For
+// LEVEL_WITH_MONSTER, `val` is the partner's national dex id (not a level —
+// levels cap at 100), e.g. Mantyke → Mantine needs Remoraid (#223) in the party.
+function enrichEvoMethod(evo, data) {
+  if (evo?.type === 'LEVEL_WITH_MONSTER' && evo.val != null && !evo.monster_name) {
+    const partner = data.pokemon.find((p) => p.id === evo.val);
+    if (partner) return { ...evo, monster_name: partner.name };
+  }
+  return evo;
 }
 
 function EvolutionNode({ node, currentId, onSelect }) {

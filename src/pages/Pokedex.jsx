@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { Search as SearchIcon, ChevronDown, SlidersHorizontal, X, Plus, Scale } from 'lucide-react';
+import { Search as SearchIcon, ChevronDown, X, Plus, Scale } from 'lucide-react';
 import { useFieldSetters } from '../hooks/useFieldSetters.js';
 import Toolbar from '../components/Toolbar.jsx';
 import PokemonCard from '../components/PokemonCard.jsx';
@@ -186,11 +186,8 @@ export default function Pokedex({ data, state, setState, view, onView, theme, on
     stats, sort,
   } = state;
 
-  // Advanced sidebar visibility is UI-only state — doesn't need to survive
-  // tab switches, so it lives locally rather than in the lifted view state.
-  // Default closed for the simple browsing UX; users who want the deep
-  // filters click "Filters" once and the panel stays open until they leave.
-  const [advancedOpen, setAdvancedOpen] = useState(false);
+  // The advanced Filters sidebar is always visible now; only the move-picker
+  // slot is transient UI state.
   const [pickerSlot, setPickerSlot] = useState(null);
 
   // Stable single-field setters so children get unchanging callback refs.
@@ -356,16 +353,6 @@ export default function Pokedex({ data, state, setState, view, onView, theme, on
        eggGroups, setEggGroups, eggGroupsMode, setEggGroupsMode,
        stats, setStats, index.bounds]);
 
-  // Count how many *advanced* filters are active so we can badge the toggle
-  // button. Types now live in the sidebar too, so they count.
-  const advancedActiveCount =
-    (types.length > 0 ? 1 : 0) +
-    (activeMoveIds.length > 0 ? 1 : 0) +
-    (abilityId != null ? 1 : 0) +
-    (heldItemId != null ? 1 : 0) +
-    (eggGroups.length > 0 ? 1 : 0) +
-    STAT_KEYS.concat('bst').filter((k) => stats[k] != null).length;
-
   return (
     <>
       <Toolbar
@@ -378,34 +365,15 @@ export default function Pokedex({ data, state, setState, view, onView, theme, on
         sort={sort}     onSort={setSort} sortOptions={POKEDEX_SORT_OPTIONS}
         // List view only makes sense when the sidebar is collapsed (a
         // 5-column grid + sidebar already eats the horizontal budget).
-        view={advancedOpen ? undefined : view}
-        onView={advancedOpen ? undefined : onView}
+        view={view}
+        onView={onView}
         resultCount={filtered.length}
       />
 
       <main className="max-w-7xl mx-auto px-4 py-4 space-y-4">
-        {/* Filters toggle + chip bar live above the grid so the user sees
-            their active filters at a glance regardless of sidebar state. */}
+        {/* Saved searches + active-filter chips sit above the always-visible
+            filters sidebar. */}
         <div className="flex items-center gap-2 flex-wrap">
-          <button
-            type="button"
-            onClick={() => setAdvancedOpen((o) => !o)}
-            aria-pressed={advancedOpen}
-            className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md border text-sm
-                       ${advancedOpen
-                         ? 'bg-blue-100 text-blue-800 border-blue-300 dark:bg-blue-950/50 dark:text-blue-300 dark:border-blue-900'
-                         : 'bg-[#fdf8e9] dark:bg-stone-900 border-[#d6c8a3] dark:border-stone-700 hover:bg-[#ece2c4] dark:hover:bg-stone-800 text-stone-700 dark:text-stone-200'}`}
-            title="Toggle advanced filters: moves, ability, held item, egg groups, stat ranges"
-          >
-            <SlidersHorizontal size={14} />
-            <span>{advancedOpen ? 'Hide filters' : 'Filters'}</span>
-            {advancedActiveCount > 0 && (
-              <span className="inline-flex items-center justify-center min-w-[18px] h-[18px] px-1 rounded-full text-[10px] font-bold bg-blue-500 text-white">
-                {advancedActiveCount}
-              </span>
-            )}
-          </button>
-
           <SavedSearches
             currentParams={currentParams}
             hasFilters={hasFilters}
@@ -419,9 +387,10 @@ export default function Pokedex({ data, state, setState, view, onView, theme, on
           )}
         </div>
 
-        <div className={advancedOpen ? 'grid lg:grid-cols-[320px_1fr] gap-4 items-start' : ''}>
-          {advancedOpen && (
-            <aside className="lg:sticky lg:top-4 self-start space-y-2">
+        <div className="grid lg:grid-cols-[300px_1fr] gap-4 items-start">
+          {/* Always-visible filters. On lg+ it sticks below the navbar+toolbar
+              and scrolls on its own, independently of the results column. */}
+          <aside className="lg:sticky lg:top-[200px] self-start space-y-2 lg:max-h-[calc(100vh-216px)] lg:overflow-y-auto lg:pr-1">
               <Section title="Types" defaultOpen>
                 <TypeFilter
                   value={types} mode={typesMode}
@@ -459,31 +428,21 @@ export default function Pokedex({ data, state, setState, view, onView, theme, on
               <Section title="Base Stats">
                 <StatRangeSliders bounds={index.bounds} applied={stats} onApply={setStats} />
               </Section>
-            </aside>
-          )}
+          </aside>
 
           {/* Results */}
           <div className="min-w-0">
             {filtered.length === 0 ? (
               <NoMatchesPrompt />
-            ) : view === 'list' && !advancedOpen ? (
-              // List view only renders in simple mode — the sidebar layout
-              // doesn't have room for a 100%-width list. When the sidebar
-              // opens we fall through to the (narrower) grid.
+            ) : view === 'list' ? (
+              // List view renders in the results column, right of the filters.
               <div className="rounded-md overflow-hidden border border-[#e6dabf] dark:border-stone-800 bg-[#fdf8e9] dark:bg-stone-900">
                 {filtered.map((p) => (
                   <PokemonRow key={p.id} pokemon={p} region={region} onSelect={onSelect} />
                 ))}
               </div>
             ) : (
-              <div className={
-                // Simple-mode grid: wider (up to 8 cols).
-                // Advanced-mode grid: narrower (up to 5 cols) to leave room
-                // for the sidebar.
-                advancedOpen
-                  ? 'grid gap-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5'
-                  : 'grid gap-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8'
-              }>
+              <div className="grid gap-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
                 {filtered.map((p) => (
                   <PokemonCard
                     key={p.id}
@@ -557,6 +516,7 @@ export default function Pokedex({ data, state, setState, view, onView, theme, on
       {compareOpen && (
         <ComparePanel
           pokemon={compareMons}
+          data={data}
           onClose={() => setCompareOpen(false)}
           onRemove={toggleCompare}
           onSelect={(id) => { setCompareOpen(false); onSelect(id); }}

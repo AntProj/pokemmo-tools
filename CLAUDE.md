@@ -108,9 +108,11 @@ to every page for legacy per-page toggles, but the toolbar no longer renders one
 
 ### Pokédex — `/` · `pages/Pokedex.jsx`
 Browse + advanced search merged into one page. The toolbar keeps search, regional
-dex, sort, and grid/list view. **Type filter lives only in the advanced Filters
-sidebar** now (moves×4, abilities, held items, egg groups×2, stat ranges, types
-AND/OR) — it used to be duplicated in the toolbar. State: `INITIAL_POKEDEX` in
+dex, sort, and grid/list view. The advanced **Filters sidebar is always visible**
+(no toggle; on lg+ it's `lg:sticky lg:top-[200px]` with its own `overflow-y-auto`
+so it scrolls independently of the results) and is the only home for the type
+filter (moves×4, abilities, held items, egg groups×2, stat ranges, types AND/OR).
+State: `INITIAL_POKEDEX` in
 `App.jsx`. Opens the shared `<PokemonModal/>`, whose detail popup now embeds the
 **catch calculator** (`components/CatchCalcPanel.jsx`) and puts moves / held
 items / encounters / catch calc in collapsible cards. *(The old `Search.jsx` page
@@ -123,7 +125,10 @@ control in `components/MonActions.jsx`); **side-by-side compare**
 filter state ↔ URL query (`lib/pokedexParams.js`, live-synced via `useSearchParams`
 so the address bar is a shareable link) plus named presets
 (`lib/savedSearches.js` + `components/SavedSearches.jsx`). EV yield shows in the
-popup profile (`formatEvYield` in `lib/format.js`).
+popup profile (`formatEvYield` in `lib/format.js`); compare includes movepools.
+Evolution labels resolve id-valued params: `LEVEL_WITH_MONSTER` `val` is the
+partner's dex id, NOT a level — `enrichEvoMethod` in `PokemonModal.jsx` resolves
+it (Mantyke → Mantine needs Remoraid).
 - **TODO:** quick actions/compare are hover-only in the grid (not list view / touch).
 
 ### Locations — `/locations/:region?/:location?` · `pages/Locations.jsx`
@@ -299,6 +304,11 @@ from / save to `localStorage` via their lib modules.
 - **Components are presentational**; pages own state and pass setters down. **No
   state-management library** — lifted state is deliberate.
 - **Tailwind only.** **lucide-react** only. **Explicit `.jsx`/`.js`** extensions.
+- **Global look is app-wide CSS** in `src/index.css`: `color-scheme` (light/dark)
+  + custom `::-webkit-scrollbar` and `scrollbar-color` theme native controls and
+  scrollbars to the parchment/stone palette everywhere. Transient feedback uses the
+  global toast (`lib/toast.js` + `components/Toaster.jsx`), not per-page banners.
+  See the **Global** section in `features.md` for cross-cutting standards.
 - **Data goes through the pipeline** — don't import `data/raw/*` into components;
   everything is fetched from `public/data/`.
 

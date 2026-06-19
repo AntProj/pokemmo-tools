@@ -52,9 +52,10 @@ lives here, so there's just one place to look things up.)
 
 **Advanced filters**
 
-There's a **Filters** button that opens a side panel with deeper search options.
-A little number on the button tells you how many advanced filters are switched on.
-You can combine as many of these as you like:
+A **filters panel** sits next to the list — always visible on wide screens (above
+the results on narrow ones), so the search options are never more than a glance
+away. On wide screens it scrolls on its own, independently of the results. You can
+combine as many of these as you like:
 
 - **Types** — narrow to one or more types (Fire, Water, Flying, and so on), with a
   toggle for "must have **all** the types I picked" (for example, Water *and*
@@ -82,8 +83,8 @@ you can always see what's being applied and clear any of them with one tap.
   opening anything. A small confirmation pops up each time.
 - The compare toggle gathers Pokémon into a tray at the bottom of the screen (up
   to six). Hit **Compare** to see them side by side — every base stat, the total,
-  EV yield, and abilities in columns, with the best value in each stat row
-  highlighted.
+  EV yield, abilities, and each one's full movepool in columns, with the best value
+  in each stat row highlighted.
 
 **Save & share**
 
@@ -132,3 +133,34 @@ expand only when you want them:
 - **Reach the quick actions on touch & in list view** — the card toolbar (compare
   + add-to-Box/team/caught) appears on hover in the grid; add a touch-friendly way
   to reach it and let list-view rows be added to compare too.
+
+---
+
+## Global
+
+Cross-cutting changes — things we decide once and want to apply to **every** tab,
+so the whole app feels consistent. This section is the home for "we did X on the
+Pokédex; now make sure X is true everywhere." When something here isn't applied
+across the board yet, it lives in the TODO.
+
+### Details
+
+- **App-wide look & feel.** The light/dark **theme** and the 3D-vs-pixel **sprite
+  style** are chosen once in the navbar **Settings** menu (the gear) and apply on
+  every tab.
+- **Sticky top bars.** The navigation bar stays pinned at the top as you scroll;
+  on pages with a search/sort toolbar (like the Pokédex) that bar stays pinned
+  just beneath it.
+- **Themed scrollbars & controls.** Scrollbars and native controls (dropdown
+  carets, option lists, etc.) match the warm parchment / dark-stone theme in both
+  modes, instead of the default grey operating-system styling. This is a single
+  app-wide style, so it applies everywhere automatically.
+
+### TODO
+
+- **Sweep the themed scrollbars/controls across every tab** — the styling is a
+  global rule so most areas pick it up for free; this is a pass to confirm each
+  page's scroll regions and dropdowns look right in both themes.
+- **Record future global standards here** — as we standardize more shared
+  behavior (empty states, confirmation toasts, keyboard shortcuts, spacing), note
+  the decision in this section and roll it out to every tab.

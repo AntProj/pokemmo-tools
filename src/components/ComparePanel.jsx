@@ -4,11 +4,23 @@ import TypeBadge from './TypeBadge.jsx';
 import PokemonSprite from './PokemonSprite.jsx';
 import { STAT_ORDER, statLabel, statTotal, dexNum, formatEvYield } from '../lib/format.js';
 
+// Unique, sorted move names a Pokémon can learn (across every learn bucket).
+function movesOf(p, moves) {
+  const names = new Set();
+  for (const bucket of Object.values(p.moves || {})) {
+    for (const e of (bucket || [])) {
+      const m = moves[e.id];
+      if (m?.name) names.add(m.name);
+    }
+  }
+  return [...names].sort((a, b) => a.localeCompare(b));
+}
+
 // Side-by-side comparison of a handful of Pokémon: sprites, types, each base
-// stat (best value per row highlighted), BST, EV yield, and abilities. Driven by
-// the Pokédex compare tray. `onRemove(id)` drops a column; `onSelect(id)` opens
-// that mon's full detail popup.
-export default function ComparePanel({ pokemon, onClose, onRemove, onSelect }) {
+// stat (best value per row highlighted), BST, EV yield, abilities, and the full
+// movepool. Driven by the Pokédex compare tray. `onRemove(id)` drops a column;
+// `onSelect(id)` opens that mon's full detail popup.
+export default function ComparePanel({ pokemon, data, onClose, onRemove, onSelect }) {
   if (!pokemon?.length) return null;
   const multi = pokemon.length > 1;
   const best = {};
@@ -95,6 +107,22 @@ export default function ComparePanel({ pokemon, onClose, onRemove, onSelect }) {
                     : '—'}
                 </td>
               ))}
+            </tr>
+            <tr className="border-t border-[#ece2c4] dark:border-stone-800/60">
+              <td className="px-3 py-2 text-xs font-semibold uppercase tracking-wide text-stone-500 dark:text-stone-400 align-top">Moves</td>
+              {pokemon.map((p) => {
+                const ms = movesOf(p, data?.moves || {});
+                return (
+                  <td key={p.id} className="px-3 py-2 align-top">
+                    <div className="text-[10px] text-stone-400 dark:text-stone-500 mb-1 text-center">{ms.length} total</div>
+                    <div className="max-h-52 overflow-y-auto rounded border border-[#e6dabf] dark:border-stone-800 bg-[#fdf8e9]/50 dark:bg-stone-950/30 p-1.5 text-left text-xs text-stone-700 dark:text-stone-300 space-y-0.5">
+                      {ms.length
+                        ? ms.map((n) => <div key={n} className="truncate" title={n}>{n}</div>)
+                        : <div className="text-stone-400">—</div>}
+                    </div>
+                  </td>
+                );
+              })}
             </tr>
           </tbody>
         </table>

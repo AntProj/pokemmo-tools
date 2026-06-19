@@ -8,8 +8,8 @@ function FilterChips({ chips }) {
   if (!chips.length) return null;
   return (
     <div className="flex flex-wrap gap-1.5 items-center">
-      {chips.map((c) => (
-        <Chip key={c.key} {...c} />
+      {chips.map(({ key, ...rest }) => (
+        <Chip key={key} {...rest} />
       ))}
     </div>
   );

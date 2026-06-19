@@ -10,15 +10,39 @@ html, body, #root {
 html {
   background: #f1e9d2;
   color: #1c1917;
+  /* Theme native controls — scrollbars, <select> carets and option lists,
+     date pickers, etc. — to the light scheme. */
+  color-scheme: light;
   /* Reserve scrollbar space so locking body overflow when the modal opens
      does not reflow the 610-card grid. */
   scrollbar-gutter: stable;
+  /* Firefox scrollbar — warm thumb to match the parchment theme. */
+  scrollbar-width: thin;
+  scrollbar-color: #c4b486 transparent;
 }
 
 html.dark {
   background: #0a0908;
   color: #e7e5e4;
+  color-scheme: dark;
+  scrollbar-color: #57534e transparent;
 }
+
+/* Themed scrollbars (WebKit/Chromium) so they match the parchment / stone
+   palette instead of default OS gray — app-wide, including the in-popup scroll
+   areas (filter sidebar, catch-ball list, compare moves, etc.). */
+::-webkit-scrollbar { width: 11px; height: 11px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background-color: #cbbd96;
+  border-radius: 8px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover { background-color: #b6a778; }
+::-webkit-scrollbar-corner { background: transparent; }
+html.dark ::-webkit-scrollbar-thumb { background-color: #44403c; }
+html.dark ::-webkit-scrollbar-thumb:hover { background-color: #57534e; }
 
 * { -webkit-tap-highlight-color: transparent; }
 

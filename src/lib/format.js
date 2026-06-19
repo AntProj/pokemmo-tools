@@ -167,7 +167,10 @@ export function formatEvolutionMethod(evo) {
     case 'ITEM_FEMALE':          return evo.item_name ? `Use ${evo.item_name} (♀)` : 'Use item (♀)';
     case 'LEVEL_FEMALE':         return v ? `Lv ${v} (♀)` : 'Level up (♀)';
     case 'LEVEL_MALE':           return v ? `Lv ${v} (♂)` : 'Level up (♂)';
-    case 'LEVEL_WITH_MONSTER':   return v ? `Lv ${v} w/ partner` : 'Level w/ partner';
+    // `val` here is the partner's national dex id (NOT a level — levels cap at
+    // 100). The modal resolves it to evo.monster_name (e.g. Mantyke → Mantine
+    // needs Remoraid in the party).
+    case 'LEVEL_WITH_MONSTER':   return evo.monster_name ? `Level up with ${evo.monster_name} in party` : 'Level up with a partner in party';
     case 'MAX_BEAUTY':           return 'Max Beauty';
     case 'TRADE_FOR_OPPOSITE':   return 'Trade for opposite';
     case 'ALLOW_MONSTER_CREATION': return 'Triggers split evolution';
