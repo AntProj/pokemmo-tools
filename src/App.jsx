@@ -59,7 +59,7 @@ const INITIAL_POKEDEX = {
   eggGroups: [], eggGroupsMode: 'any',
   stats: { hp: null, attack: null, defense: null, sp_attack: null, sp_defense: null, speed: null, bst: null },
 };
-const INITIAL_LOCATIONS = { search: '', region: 'All', sort: 'region', methods: [], rarities: [] };
+const INITIAL_LOCATIONS = { search: '', region: 'Kanto', sort: 'game', methods: [], rarities: [] };
 const INITIAL_TRACKER_VIEW = { view: 'plan', planRegion: 'All', planMethods: [], planRarities: [], hideSingles: true,
   // Plan mon-attribute filters — shared predicates with the Mark view
   // (src/lib/monFilters.js). planTypes (≤2), planBaby (any|only|exclude),

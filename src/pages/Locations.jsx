@@ -1,17 +1,22 @@
 import { useMemo, useDeferredValue } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { Search as SearchIcon, X, ChevronDown, ChevronRight } from 'lucide-react';
-import RegionPills from '../components/RegionPills.jsx';
+import { ChevronDown, ChevronRight } from 'lucide-react';
+import Toolbar from '../components/Toolbar.jsx';
 import RarityBadge from '../components/RarityBadge.jsx';
 import MethodIcon from '../components/MethodIcon.jsx';
 import { LocationDetailPane } from './LocationDetail.jsx';
 import { useFieldSetters } from '../hooks/useFieldSetters.js';
 import { regionRank, rarityRank, parseLocation } from '../lib/locations.js';
+import { locationOrderIndex } from '../lib/locationOrder.js';
+
+// Locations always show a single region (no "All"), so the region selector lists
+// just the five regions.
+const REGIONS_NO_ALL = ['Kanto', 'Johto', 'Hoenn', 'Sinnoh', 'Unova'];
 
 const SORT_OPTIONS = [
-  { value: 'region', label: 'Region' },
-  { value: 'name',   label: 'Name A→Z' },
-  { value: 'count',  label: 'Encounters (most)' },
+  { value: 'game',  label: 'In-game order' },
+  { value: 'name',  label: 'Name A→Z' },
+  { value: 'count', label: 'Encounters (most)' },
 ];
 
 // Canonical-name selection helpers used during grouping.
@@ -20,16 +25,21 @@ const NAME_RANK = { upper: 0, mixed: 1, unsuffixed: 2 };
 function rank(source) { return NAME_RANK[source] ?? 0; }
 
 /*
- * Locations — a Pokédex-style two-pane page:
- *   - left: always-visible filters (search, region, sort, methods, rarity)
- *   - right: the matching locations as a LIST, or (when a location is opened via
+ * Locations — a Pokédex-style page:
+ *   - top: shared Toolbar (search, region, sort) — matching the rest of the app.
+ *   - left: Methods + Rarity filters (always visible, own scroll on lg+).
+ *   - right: the region's locations as a LIST, or (when a location is opened via
  *     the route) that location's Pokémon inline as a detail PAGE — not a modal.
  * The method/rarity filters are global: they narrow the location list AND the
  * mons shown inside a location. Search matches a location's name OR any Pokémon
- * found there.
+ * found there. The default sort is in-game encounter order (lib/locationOrder).
  */
 export default function Locations({ data, state, setState, onSelect }) {
-  const { search, region, sort, methods = [], rarities = [] } = state;
+  const { search, methods = [], rarities = [] } = state;
+  // Guard against stale values (e.g. an old 'All' region or 'region' sort) so a
+  // pre-existing state object can't leave the list empty.
+  const region = REGIONS_NO_ALL.includes(state.region) ? state.region : 'Kanto';
+  const sort = SORT_OPTIONS.some((o) => o.value === state.sort) ? state.sort : 'game';
   const deferredSearch = useDeferredValue(search);
 
   const navigate = useNavigate();
@@ -75,120 +85,90 @@ export default function Locations({ data, state, setState, onSelect }) {
     }));
   }, [data.locations]);
 
-  // Options for the filter chips, across every location.
+  // Options for the filter chips, restricted to the current region's locations.
   const { allMethods, allRarities } = useMemo(() => {
     const ms = new Set(), rs = new Set();
-    for (const l of locations) { for (const m of l.methods) ms.add(m); for (const r of l.rarities) rs.add(r); }
+    for (const l of locations) {
+      if (l.region !== region) continue;
+      for (const m of l.methods) ms.add(m);
+      for (const r of l.rarities) rs.add(r);
+    }
     return {
       allMethods: [...ms].sort((a, b) => a.localeCompare(b)),
       allRarities: [...rs].sort((a, b) => rarityRank(a) - rarityRank(b)),
     };
-  }, [locations]);
+  }, [locations, region]);
 
   const filtered = useMemo(() => {
     const q = deferredSearch.trim().toLowerCase();
-    let out = locations;
-    if (region !== 'All') out = out.filter((l) => l.region === region);
+    let out = locations.filter((l) => l.region === region);
     if (q) out = out.filter((l) => l.searchBlob.includes(q));
     if (methods.length) out = out.filter((l) => methods.some((m) => l.methods.includes(m)));
     if (rarities.length) out = out.filter((l) => rarities.some((r) => l.rarities.includes(r)));
     out = out.slice();
     const cmpName = (a, b) => a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' });
     if (sort === 'name') out.sort(cmpName);
-    else if (sort === 'count') out.sort((a, b) => b.count - a.count);
-    else out.sort((a, b) => regionRank(a.region) - regionRank(b.region) || cmpName(a, b));
+    else if (sort === 'count') out.sort((a, b) => b.count - a.count || cmpName(a, b));
+    else out.sort((a, b) => (locationOrderIndex(a.region, a.name) - locationOrderIndex(b.region, b.name)) || cmpName(a, b));
     return out;
   }, [locations, region, deferredSearch, methods, rarities, sort]);
 
   return (
-    <main className="max-w-7xl mx-auto px-4 py-4">
-      <div className="grid lg:grid-cols-[280px_1fr] gap-4 items-start">
-        {/* Filters — always visible; on lg+ they stick below the navbar and
-            scroll on their own, independent of the right pane. */}
-        <aside className="lg:sticky lg:top-[56px] self-start space-y-2 lg:max-h-[calc(100vh-72px)] lg:overflow-y-auto lg:pr-1">
-          <div className="relative">
-            <SearchIcon size={15} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-stone-400 pointer-events-none" />
-            <input
-              type="search"
-              value={search}
-              onChange={(e) => set.search(e.target.value)}
-              placeholder="Search location or Pokémon…"
-              className="w-full pl-8 pr-8 py-2 rounded-md border border-[#d6c8a3] dark:border-stone-700
-                         bg-[#fdf8e9] dark:bg-stone-900 text-sm text-stone-900 dark:text-stone-100
-                         focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            {search && (
-              <button type="button" onClick={() => set.search('')} title="Clear"
-                className="absolute right-2 top-1/2 -translate-y-1/2 text-stone-400 hover:text-stone-700 dark:hover:text-stone-200">
-                <X size={14} />
-              </button>
+    <>
+      <Toolbar
+        search={search} onSearch={set.search}
+        region={region} onRegion={set.region} regions={REGIONS_NO_ALL}
+        sort={sort} onSort={set.sort} sortOptions={SORT_OPTIONS}
+        resultCount={filtered.length}
+        searchPlaceholder="Search location or Pokémon…"
+      />
+
+      <main className="max-w-7xl mx-auto px-4 py-4">
+        <div className="grid lg:grid-cols-[260px_1fr] gap-4 items-start">
+          {/* Methods + Rarity filters — always visible; on lg+ they stick below
+              the navbar/toolbar and scroll on their own. */}
+          <aside className="lg:sticky lg:top-[200px] self-start space-y-2 lg:max-h-[calc(100vh-216px)] lg:overflow-y-auto lg:pr-1">
+            <Section title="Methods" defaultOpen>
+              <ChipMulti
+                options={allMethods}
+                value={methods}
+                onChange={set.methods}
+                renderLabel={(m) => <span className="inline-flex items-center gap-1"><MethodIcon method={m} size={12} />{m}</span>}
+              />
+            </Section>
+            <Section title="Rarity" defaultOpen>
+              <ChipMulti
+                options={allRarities}
+                value={rarities}
+                onChange={set.rarities}
+                renderChip={(r) => <RarityBadge rarity={r} size="chip" />}
+              />
+            </Section>
+          </aside>
+
+          {/* Right pane: the location list, or a location's detail page. */}
+          <div className="min-w-0">
+            {detailOpen ? (
+              <LocationDetailPane
+                data={data}
+                region={openRegion}
+                locName={openLoc}
+                methods={methods}
+                rarities={rarities}
+                onSelect={onSelect}
+                onBack={() => navigate('/locations')}
+              />
+            ) : filtered.length === 0 ? (
+              <div className="py-16 text-center text-stone-500 dark:text-stone-400 text-sm">No locations match these filters.</div>
+            ) : (
+              <div className="rounded-md overflow-hidden border border-[#e6dabf] dark:border-stone-800 bg-[#fdf8e9] dark:bg-stone-900 divide-y divide-[#ece2c4] dark:divide-stone-800/60">
+                {filtered.map((loc) => <LocationRow key={loc.key} loc={loc} />)}
+              </div>
             )}
           </div>
-
-          <Section title="Region" defaultOpen>
-            <RegionPills value={region} onChange={set.region} />
-          </Section>
-
-          <Section title="Sort" defaultOpen>
-            <select
-              value={sort}
-              onChange={(e) => set.sort(e.target.value)}
-              className="w-full px-2 py-1.5 rounded-md border border-[#d6c8a3] dark:border-stone-700
-                         bg-[#fdf8e9] dark:bg-stone-900 text-stone-900 dark:text-stone-100 text-sm
-                         focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              {SORT_OPTIONS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
-            </select>
-          </Section>
-
-          <Section title="Methods" defaultOpen>
-            <ChipMulti
-              options={allMethods}
-              value={methods}
-              onChange={set.methods}
-              renderLabel={(m) => <span className="inline-flex items-center gap-1"><MethodIcon method={m} size={12} />{m}</span>}
-            />
-          </Section>
-
-          <Section title="Rarity" defaultOpen>
-            <ChipMulti
-              options={allRarities}
-              value={rarities}
-              onChange={set.rarities}
-              renderChip={(r) => <RarityBadge rarity={r} size="chip" />}
-            />
-          </Section>
-        </aside>
-
-        {/* Right pane: the location list, or a location's detail page. */}
-        <div className="min-w-0">
-          {detailOpen ? (
-            <LocationDetailPane
-              data={data}
-              region={openRegion}
-              locName={openLoc}
-              methods={methods}
-              rarities={rarities}
-              onSelect={onSelect}
-              onBack={() => navigate('/locations')}
-            />
-          ) : (
-            <>
-              <div className="mb-2 text-xs text-stone-500 dark:text-stone-400 tabular-nums">
-                {filtered.length} location{filtered.length === 1 ? '' : 's'}
-              </div>
-              {filtered.length === 0 ? (
-                <div className="py-16 text-center text-stone-500 dark:text-stone-400 text-sm">No locations match these filters.</div>
-              ) : (
-                <div className="rounded-md overflow-hidden border border-[#e6dabf] dark:border-stone-800 bg-[#fdf8e9] dark:bg-stone-900 divide-y divide-[#ece2c4] dark:divide-stone-800/60">
-                  {filtered.map((loc) => <LocationRow key={loc.key} loc={loc} />)}
-                </div>
-              )}
-            </>
-          )}
         </div>
-      </div>
-    </main>
+      </main>
+    </>
   );
 }
 

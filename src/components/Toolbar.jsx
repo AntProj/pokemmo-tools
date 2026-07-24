@@ -13,7 +13,7 @@ const SORT_OPTIONS = [
 // global Settings menu, not here — a per-page copy of them was redundant.
 export default function Toolbar({
   search, onSearch,
-  region, onRegion,
+  region, onRegion, regions,
   sort, onSort, sortOptions,
   view, onView,
   resultCount,
@@ -86,7 +86,7 @@ export default function Toolbar({
 
         {/* Row 3: region toggles (only when caller provides region/onRegion) */}
         {region !== undefined && onRegion && (
-          <RegionPills value={region} onChange={onRegion} />
+          <RegionPills value={region} onChange={onRegion} regions={regions} />
         )}
       </div>
     </div>

@@ -132,16 +132,20 @@ it (Mantyke → Mantine needs Remoraid).
 - **TODO:** quick actions/compare are hover-only in the grid (not list view / touch).
 
 ### Locations — `/locations/:region?/:location?` · `pages/Locations.jsx`
-Pokédex-style **two-pane** page. Left: always-visible filters (search — matches a
-location name OR any Pokémon found there — region, sort, methods, rarity; the
-method/rarity filters are global, narrowing both the list and a location's mons).
-Right: the matching locations as a **list**, or — when `:location` is set — that
-location's Pokémon **inline as a page (not a modal)** via `LocationDetailPane`
-(`pages/LocationDetail.jsx`): Pokédex-style cards (`PokemonCardBody`) showing
-method / level range / rarity / time, clicking one opens the shared `PokemonModal`.
-Deep-linkable; "View on map" links into the Maps tab. State adds `methods`/
-`rarities` to `INITIAL_LOCATIONS`.
-- **TODO:** none tracked.
+Pokédex-style page. Top: the shared **`Toolbar`** (search — matches a location
+name OR any Pokémon found there — region, sort). Region shows **one region at a
+time** (no "All"; `Toolbar` takes a `regions` prop → `RegionPills`; default
+Kanto). Left sidebar: **Methods + Rarity** filters (global — they narrow the list
+AND a location's mons). Right: the region's locations as a **list**, or — when
+`:location` is set — that location's Pokémon **inline as a page (not a modal)**
+via `LocationDetailPane` (`pages/LocationDetail.jsx`): Pokédex-style cards
+(`PokemonCardBody`) with method / level range / rarity / time; clicking one opens
+the shared `PokemonModal`. Default sort is **in-game encounter order**
+(`lib/locationOrder.js` — curated per-region progression; unlisted → end).
+`INITIAL_LOCATIONS` adds `methods`/`rarities`; encounter-method icons are emoji
+(`components/MethodIcon.jsx`). Deep-linkable; "View on map" links into Maps.
+- **TODO:** the in-game order in `lib/locationOrder.js` is best-effort; a few
+  side/post-game placements may need nudging.
 
 ### Tracker — `/tracker` · `pages/Tracker.jsx`
 Catch tracking (caught/uncaught per mon) + a planning view. Mon-attribute
