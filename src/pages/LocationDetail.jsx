@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { Sun, Moon, MapPin, ChevronLeft } from 'lucide-react';
+import { Sun, Moon, Sunrise, MapPin, ChevronLeft } from 'lucide-react';
 import RarityBadge from '../components/RarityBadge.jsx';
 import MethodIcon from '../components/MethodIcon.jsx';
 import { PokemonCardBody } from '../components/PokemonCard.jsx';
@@ -38,19 +38,31 @@ export function LocationDetailPane({ data, region, locName, methods = [], rariti
     if (methods.length) pool = pool.filter((e) => methods.includes(e.method));
     if (rarities.length) pool = pool.filter((e) => rarities.includes(e.rarity));
 
+    // Group by mon, then collapse encounters that are identical in
+    // method/rarity/level and differ only by season or time into a single
+    // entry (unioning the times/seasons) so a mon found in grass all year
+    // shows one line, not four near-identical ones.
     const byId = new Map();
     for (const e of pool) {
       let card = byId.get(e.pokemon.id);
-      if (!card) { card = { pokemon: e.pokemon, entries: [], _seen: new Set() }; byId.set(e.pokemon.id, card); }
-      const stripKey = [
-        e.method, e.rarity, e.min_level, e.max_level,
-        [...e.times].sort().join('|'), [...e.seasons].sort().join('|'),
-      ].join('::');
-      if (card._seen.has(stripKey)) continue;
-      card._seen.add(stripKey);
-      card.entries.push(e);
+      if (!card) { card = { pokemon: e.pokemon, _byKey: new Map() }; byId.set(e.pokemon.id, card); }
+      const key = [e.method, e.rarity, e.min_level, e.max_level].join('::');
+      let entry = card._byKey.get(key);
+      if (!entry) {
+        entry = { method: e.method, rarity: e.rarity, min_level: e.min_level, max_level: e.max_level, times: new Set(), seasons: new Set() };
+        card._byKey.set(key, entry);
+      }
+      for (const t of e.times) entry.times.add(t);
+      for (const s of e.seasons) entry.seasons.add(s);
     }
-    const cards = [...byId.values()].map(({ _seen, ...rest }) => rest);
+    const cards = [...byId.values()].map(({ pokemon, _byKey }) => ({
+      pokemon,
+      entries: [..._byKey.values()].map((en) => ({
+        ...en,
+        times: [...en.times].sort(),
+        seasons: [...en.seasons].sort((a, b) => a - b),
+      })),
+    }));
     for (const c of cards) {
       c.entries.sort((a, b) => rarityRank(a.rarity) - rarityRank(b.rarity) || a.method.localeCompare(b.method));
     }
@@ -133,31 +145,36 @@ function LocationMonCard({ pokemon, entries, region, onSelect }) {
   );
 }
 
+// One encounter shown as a compact, consistent block: method (+ time) on the
+// first line, and the rarity badge + level range always together on the second,
+// so nothing wraps onto a stray line the way a single flex-wrap row did.
 function EncounterStrip({ entry }) {
   const { method, rarity, min_level, max_level, times = [], seasons = [] } = entry;
   const lvl = min_level === max_level ? `Lv ${min_level}` : `Lv ${min_level}–${max_level}`;
-  const hasWhen = times.length > 0 || seasons.length > 0;
+  // All four seasons = always available, so the label carries no signal — hide it.
+  const seasonLabel = seasons.length > 0 && seasons.length < 4 ? `S${seasons.join(',')}` : null;
+  const hasWhen = times.length > 0 || !!seasonLabel;
+  const whenTitle = [times.join(' / '), seasons.length ? `Season ${seasons.join(', ')}` : null]
+    .filter(Boolean).join(' · ');
   return (
-    <div className="flex flex-wrap items-center justify-center gap-1.5 text-xs">
-      <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded border border-[#d6c8a3] dark:border-stone-700 bg-[#f1e9d2] dark:bg-stone-800/40 text-stone-700 dark:text-stone-300">
-        <MethodIcon method={method} size={12} />{method}
-      </span>
-      <RarityBadge rarity={rarity} />
-      <span className="font-mono tabular-nums text-stone-700 dark:text-stone-300">{lvl}</span>
-      {hasWhen && (
-        <span
-          className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded border border-[#d6c8a3] dark:border-stone-700 bg-[#f1e9d2] dark:bg-stone-800/40 text-stone-600 dark:text-stone-400"
-          title={[times.join('/'), seasons.length ? `Seasons ${seasons.join(', ')}` : null].filter(Boolean).join(' · ')}
-        >
-          {times.includes('Day') && <Sun size={12} />}
-          {times.includes('Night') && <Moon size={12} />}
-          <span>
-            {times.length > 0 && times.join(' · ')}
-            {times.length > 0 && seasons.length > 0 && ' · '}
-            {seasons.length > 0 && `S${seasons.join(',')}`}
+    <div className="rounded-md border border-[#e6dabf] dark:border-stone-800/70 bg-[#f1e9d2]/50 dark:bg-stone-800/25 px-1.5 py-1 text-xs">
+      <div className="flex items-center justify-center gap-1 leading-tight font-medium text-stone-700 dark:text-stone-300">
+        <MethodIcon method={method} size={12} />
+        <span className="truncate">{method}</span>
+        {hasWhen && (
+          <span className="inline-flex items-center gap-0.5 text-stone-500 dark:text-stone-400" title={whenTitle}>
+            <span aria-hidden className="text-stone-300 dark:text-stone-600">·</span>
+            {times.includes('Morning') && <Sunrise size={11} />}
+            {times.includes('Day') && <Sun size={11} />}
+            {times.includes('Night') && <Moon size={11} />}
+            {seasonLabel && <span>{seasonLabel}</span>}
           </span>
-        </span>
-      )}
+        )}
+      </div>
+      <div className="mt-1 flex items-center justify-center gap-2 leading-tight">
+        <RarityBadge rarity={rarity} />
+        <span className="font-mono tabular-nums text-stone-600 dark:text-stone-400">{lvl}</span>
+      </div>
     </div>
   );
 }
