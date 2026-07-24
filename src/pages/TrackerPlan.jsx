@@ -9,7 +9,8 @@ import TypePills from '../components/TypePills.jsx';
 import Modal from '../components/Modal.jsx';
 import { typeColor } from '../lib/types.js';
 import { dexNum } from '../lib/format.js';
-import { methodIcon, parseLocation, regionRank } from '../lib/locations.js';
+import MethodIcon from '../components/MethodIcon.jsx';
+import { parseLocation, regionRank } from '../lib/locations.js';
 import { stateOf, scorePoints, cycleClick, trackerRarityRank, METHOD_OPTIONS, isExcludedFromTracker } from '../lib/tracker.js';
 import {
   BABY_FILTERS, EVOLUTION_CATEGORIES,
@@ -230,7 +231,7 @@ export default function TrackerPlan({
 
         <FilterRow
           label="Method"
-          options={METHOD_OPTIONS.map((m) => ({ key: m, label: m, icon: methodIcon(m) }))}
+          options={METHOD_OPTIONS.map((m) => ({ key: m, label: m, icon: <MethodIcon method={m} size={12} /> }))}
           selected={planMethods}
           onToggle={toggleMethod}
           color="blue"
@@ -364,7 +365,7 @@ const PlanLocationCard = memo(function PlanLocationCard({ loc, onOpen }) {
       </div>
       <div className="hidden sm:flex flex-wrap gap-x-2 gap-y-0.5 text-[11px] text-stone-600 dark:text-stone-400 max-w-[260px] justify-end">
         {loc.methods.map((m) => (
-          <span key={m} className="inline-flex items-center gap-0.5"><span aria-hidden>{methodIcon(m)}</span>{m}</span>
+          <span key={m} className="inline-flex items-center gap-1"><MethodIcon method={m} size={12} />{m}</span>
         ))}
       </div>
       <div className="shrink-0 flex flex-col items-end ml-2">
@@ -545,7 +546,7 @@ function PlanEncounterStrip({ entry }) {
   return (
     <div className="flex flex-wrap items-center gap-1.5 text-xs">
       <span className="inline-flex items-center gap-1 text-stone-700 dark:text-stone-300">
-        <span aria-hidden>{methodIcon(entry.method)}</span>{entry.method}
+        <MethodIcon method={entry.method} size={12} />{entry.method}
       </span>
       <RarityBadge rarity={entry.rarity} />
       <span className="font-mono tabular-nums text-stone-700 dark:text-stone-300">{lvl}</span>

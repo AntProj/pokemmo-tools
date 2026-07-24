@@ -3,7 +3,8 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import Toolbar from '../components/Toolbar.jsx';
 import { LocationModal } from './LocationDetail.jsx';
 import { useFieldSetters } from '../hooks/useFieldSetters.js';
-import { methodIcon, regionRank, parseLocation } from '../lib/locations.js';
+import MethodIcon from '../components/MethodIcon.jsx';
+import { regionRank, parseLocation } from '../lib/locations.js';
 
 const SORT_OPTIONS = [
   { value: 'region', label: 'Region' },
@@ -145,7 +146,7 @@ const LocationCard = memo(function LocationCard({ loc }) {
       <div className="mt-2 flex flex-wrap gap-x-2 gap-y-0.5 text-[11px] text-stone-600 dark:text-stone-400">
         {loc.methods.map((m) => (
           <span key={m} className="inline-flex items-center gap-1">
-            <span aria-hidden>{methodIcon(m)}</span>{m}
+            <MethodIcon method={m} size={12} />{m}
           </span>
         ))}
       </div>

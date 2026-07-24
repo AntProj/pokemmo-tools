@@ -6,7 +6,7 @@ import RarityBadge from './RarityBadge.jsx';
 import PokemonSprite from './PokemonSprite.jsx';
 import { typeColor } from '../lib/types.js';
 import { dexNum } from '../lib/format.js';
-import { methodIcon } from '../lib/locations.js';
+import MethodIcon from './MethodIcon.jsx';
 import { stateOf, bestCatchEntry, recommendBalls, statusTip } from '../lib/tracker.js';
 
 const STATE_BUTTONS = [
@@ -97,7 +97,7 @@ function CatchInfoPanel({ pokemon, trackerState, onSetState, onOpenFullEntry, on
                     <div className="font-semibold text-stone-900 dark:text-stone-100 truncate">{baseLocationName(best.location)}</div>
                     <div className="mt-1 flex flex-wrap items-center gap-1.5 text-xs">
                       <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded border border-[#d6c8a3] dark:border-stone-700 bg-[#f1e9d2] dark:bg-stone-800/40 text-stone-700 dark:text-stone-300">
-                        <span aria-hidden>{methodIcon(best.method)}</span>{best.method}
+                        <MethodIcon method={best.method} size={12} />{best.method}
                       </span>
                       <RarityBadge rarity={best.rarity} />
                       <span className="font-mono tabular-nums text-stone-700 dark:text-stone-300">

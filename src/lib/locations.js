@@ -1,27 +1,6 @@
-// Method labels and short emoji icons. Methods seen in PokeMMO data:
-// Grass, Cave, Headbutt, Dark Grass, Inside, Shadow, Water, Super Rod,
-// Good Rod, Old Rod, Fishing, Rocks, Honey Tree, Dust Cloud.
-export const METHOD_ICONS = {
-  Grass:        '🌿',
-  'Dark Grass': '🌑',
-  Cave:         '🪨',
-  Inside:       '🏠',
-  Water:        '🌊',
-  Surf:         '🏄',
-  'Old Rod':    '🎣',
-  'Good Rod':   '🎣',
-  'Super Rod':  '🎣',
-  Fishing:      '🎣',
-  Headbutt:     '🌳',
-  'Honey Tree': '🍯',
-  Rocks:        '⛏',
-  'Dust Cloud': '💨',
-  Shadow:       '👤',
-};
-
-export function methodIcon(method) {
-  return METHOD_ICONS[method] || '·';
-}
+// Encounter-method icons live in `components/MethodIcon.jsx` now — lucide line
+// icons (replacing the old emoji) so the Locations / encounter UI matches the
+// rest of the app in both themes.
 
 // Display order for the regions, used by the Region sort and by region grouping.
 export const REGION_ORDER = ['Kanto', 'Johto', 'Hoenn', 'Sinnoh', 'Unova'];

@@ -7,7 +7,8 @@ import RarityBadge from '../components/RarityBadge.jsx';
 import PokemonSprite from '../components/PokemonSprite.jsx';
 import { typeColor } from '../lib/types.js';
 import { dexNum } from '../lib/format.js';
-import { methodIcon, rarityRank, parseLocation } from '../lib/locations.js';
+import MethodIcon from '../components/MethodIcon.jsx';
+import { rarityRank, parseLocation } from '../lib/locations.js';
 
 const SORT_OPTIONS = [
   { value: 'rarity-asc',  label: 'Rarity (easiest first)' },
@@ -144,7 +145,7 @@ export function LocationModal({ data, region, locName, onSelect, onClose }) {
         options={allMethods}
         value={methodFilter}
         onChange={setMethodFilter}
-        renderLabel={(m) => <><span aria-hidden className="mr-1">{methodIcon(m)}</span>{m}</>}
+        renderLabel={(m) => <span className="inline-flex items-center gap-1"><MethodIcon method={m} size={12} />{m}</span>}
       />
       {allTimes.length > 0 && (
         <SingleChipRow
@@ -348,7 +349,7 @@ function EncounterStrip({ entry }) {
   return (
     <div className="flex flex-wrap items-center gap-2 text-xs">
       <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded border border-[#d6c8a3] dark:border-stone-700 bg-[#f1e9d2] dark:bg-stone-800/40 text-stone-700 dark:text-stone-300">
-        <span aria-hidden>{methodIcon(method)}</span>{method}
+        <MethodIcon method={method} size={12} />{method}
       </span>
       <RarityBadge rarity={rarity} />
       <span className="font-mono tabular-nums text-stone-700 dark:text-stone-300">{lvl}</span>

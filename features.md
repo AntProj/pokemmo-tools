@@ -155,6 +155,10 @@ across the board yet, it lives in the TODO.
   carets, option lists, etc.) match the warm parchment / dark-stone theme in both
   modes, instead of the default grey operating-system styling. This is a single
   app-wide style, so it applies everywhere automatically.
+- **One icon language.** Every icon is a clean line-icon that follows the theme —
+  **no emoji**. The encounter-method markers on Locations and the Tracker (grass,
+  cave, fishing rod, etc.) were the last emoji holdouts; they're now matching
+  line-icons like the rest of the app.
 
 ### TODO
 
