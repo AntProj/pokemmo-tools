@@ -132,8 +132,15 @@ it (Mantyke → Mantine needs Remoraid).
 - **TODO:** quick actions/compare are hover-only in the grid (not list view / touch).
 
 ### Locations — `/locations/:region?/:location?` · `pages/Locations.jsx`
-Reverse index `"Region::Location"` → mons. Location opens as a modal over the
-grid (deep-linkable). "View on map" links into the Maps tab.
+Pokédex-style **two-pane** page. Left: always-visible filters (search — matches a
+location name OR any Pokémon found there — region, sort, methods, rarity; the
+method/rarity filters are global, narrowing both the list and a location's mons).
+Right: the matching locations as a **list**, or — when `:location` is set — that
+location's Pokémon **inline as a page (not a modal)** via `LocationDetailPane`
+(`pages/LocationDetail.jsx`): Pokédex-style cards (`PokemonCardBody`) showing
+method / level range / rarity / time, clicking one opens the shared `PokemonModal`.
+Deep-linkable; "View on map" links into the Maps tab. State adds `methods`/
+`rarities` to `INITIAL_LOCATIONS`.
 - **TODO:** none tracked.
 
 ### Tracker — `/tracker` · `pages/Tracker.jsx`
