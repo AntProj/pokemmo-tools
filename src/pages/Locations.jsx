@@ -50,40 +50,51 @@ export default function Locations({ data, state, setState, onSelect }) {
 
   const set = useFieldSetters(setState, ['search', 'region', 'sort', 'methods', 'rarities']);
 
-  // Group raw location keys (variants like "Route 30 (Night)") into one entry
-  // per base name, unioning their encounters. Track methods + rarities present
-  // and a search blob (location name + every Pokémon name found there).
+  // Build the location index from each Pokémon's own `locations` array — the
+  // SAME source the detail pane (LocationDetail) reads — so the list's
+  // method/rarity/combo filters always agree with what a location actually
+  // shows. (The `data.locations` reverse index is a separate build artifact and
+  // can disagree in edge cases, e.g. it drops a Grass Horde that the per-mon
+  // data keeps.) Group raw names (variants like "Route 30 (Night)") into one
+  // entry per base name; track the methods, rarities, and method×rarity pairs
+  // present, plus a search blob (location name + every Pokémon found there).
   const locations = useMemo(() => {
     const groups = new Map();
-    for (const [key, mons] of Object.entries(data.locations)) {
-      const [reg, rawName] = key.split('::');
-      const { base } = parseLocation(rawName);
-      const isUnsuffixed = base === rawName;
-      const groupKey = `${reg}::${base.toLowerCase()}`;
-      let entry = groups.get(groupKey);
-      if (!entry) {
-        entry = {
-          key: groupKey, region: reg, name: base,
-          _nameSource: isUnsuffixed ? 'unsuffixed' : (isAllUpper(base) ? 'upper' : 'mixed'),
-          count: 0, methods: [], rarities: [], _mons: [], _sm: new Set(), _sr: new Set(),
-        };
-        groups.set(groupKey, entry);
-      } else {
-        const candidate = isUnsuffixed ? 'unsuffixed' : (isAllUpper(base) ? 'upper' : 'mixed');
-        if (rank(candidate) > rank(entry._nameSource)) { entry.name = base; entry._nameSource = candidate; }
-      }
-      entry.count += mons.length;
-      for (const m of mons) {
-        entry._mons.push(m.name);
-        if (!entry._sm.has(m.method)) { entry._sm.add(m.method); entry.methods.push(m.method); }
-        if (!entry._sr.has(m.rarity)) { entry._sr.add(m.rarity); entry.rarities.push(m.rarity); }
+    for (const p of data.pokemon) {
+      for (const l of (p.locations || [])) {
+        if (!l.region || !l.location) continue;
+        const { base } = parseLocation(l.location);
+        const isUnsuffixed = base === l.location;
+        const groupKey = `${l.region}::${base.toLowerCase()}`;
+        let entry = groups.get(groupKey);
+        if (!entry) {
+          entry = {
+            key: groupKey, region: l.region, name: base,
+            _nameSource: isUnsuffixed ? 'unsuffixed' : (isAllUpper(base) ? 'upper' : 'mixed'),
+            methods: [], rarities: [],
+            _sm: new Set(), _sr: new Set(), _pairs: new Set(), _mons: new Set(), _enc: new Set(),
+          };
+          groups.set(groupKey, entry);
+        } else {
+          const candidate = isUnsuffixed ? 'unsuffixed' : (isAllUpper(base) ? 'upper' : 'mixed');
+          if (rank(candidate) > rank(entry._nameSource)) { entry.name = base; entry._nameSource = candidate; }
+        }
+        entry._mons.add(p.name);
+        // Count distinct encounter "blocks" — season/time variants collapse, so
+        // the count matches what the detail pane renders.
+        entry._enc.add(`${p.id}:${l.method}:${l.rarity}:${l.min_level}:${l.max_level}`);
+        if (!entry._sm.has(l.method)) { entry._sm.add(l.method); entry.methods.push(l.method); }
+        if (!entry._sr.has(l.rarity)) { entry._sr.add(l.rarity); entry.rarities.push(l.rarity); }
+        entry._pairs.add(l.method + '::' + l.rarity);
       }
     }
-    return [...groups.values()].map(({ _sm, _sr, _nameSource, _mons, ...rest }) => ({
+    return [...groups.values()].map(({ _sm, _sr, _nameSource, _mons, _enc, _pairs, ...rest }) => ({
       ...rest,
-      searchBlob: (rest.name + ' ' + _mons.join(' ')).toLowerCase(),
+      count: _enc.size,
+      pairs: _pairs,
+      searchBlob: (rest.name + ' ' + [..._mons].join(' ')).toLowerCase(),
     }));
-  }, [data.locations]);
+  }, [data.pokemon]);
 
   // Options for the filter chips, restricted to the current region's locations.
   const { allMethods, allRarities } = useMemo(() => {
@@ -103,8 +114,16 @@ export default function Locations({ data, state, setState, onSelect }) {
     const q = deferredSearch.trim().toLowerCase();
     let out = locations.filter((l) => l.region === region);
     if (q) out = out.filter((l) => l.searchBlob.includes(q));
-    if (methods.length) out = out.filter((l) => methods.some((m) => l.methods.includes(m)));
-    if (rarities.length) out = out.filter((l) => rarities.some((r) => l.rarities.includes(r)));
+    if (methods.length && rarities.length) {
+      // Combine the two filter groups: a location qualifies only if it has a
+      // single encounter matching a chosen method AND a chosen rarity together
+      // (e.g. a Grass Horde), not just each present in separate encounters.
+      out = out.filter((l) => methods.some((m) => rarities.some((r) => l.pairs.has(m + '::' + r))));
+    } else if (methods.length) {
+      out = out.filter((l) => methods.some((m) => l.methods.includes(m)));
+    } else if (rarities.length) {
+      out = out.filter((l) => rarities.some((r) => l.rarities.includes(r)));
+    }
     out = out.slice();
     const cmpName = (a, b) => a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' });
     if (sort === 'name') out.sort(cmpName);
