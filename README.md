@@ -11,7 +11,9 @@
 
 > **[▶ Open the live app](https://antproj.github.io/PokeKit/)**
 
-<!-- Tip: drop a hero screenshot or short GIF here — it's the single biggest upgrade to this README. -->
+<p align="center">
+  <a href="https://antproj.github.io/PokeKit/"><img src="docs/screenshots/pokedex.png" alt="PokeKit — the Pokédex" width="920"></a>
+</p>
 
 ---
 
@@ -34,6 +36,27 @@ Everything runs client-side and deploys as static files to GitHub Pages — ther
 | **Team Builder** | Up to six sets per team with defensive-weakness, offensive-coverage, and speed-tier analyses. Showdown / PokéPaste import & export, round-trip verified. |
 | **Gym & E4 Prep** | Browse gym leaders, Elite Four, and champions per region; see what's super-effective against their team, what they threaten you with, and counters pulled from your Box. |
 | **Breeding** | An IV/nature breeding **optimizer**: target spread → breeding-step tree, recipe & cost breakdown, egg moves, and hidden-ability tracking — inventory-aware, so it factors in the Pokémon you already own. |
+
+## Screenshots
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/pokedex-filters.png" alt="Pokédex advanced filtering"><br><sub><b>Pokédex</b> — filter by type, move, ability, held item, egg group, and stat ranges; cards show <i>how</i> each move is learned.</sub></td>
+    <td width="50%"><img src="docs/screenshots/locations.png" alt="Locations list"><br><sub><b>Locations</b> — every route by region, filterable by encounter method × rarity.</sub></td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/locations-detail.png" alt="Location detail"><br><sub><b>Locations</b> — a route's Pokémon with method, level range, and rarity.</sub></td>
+    <td><img src="docs/screenshots/maps-zone.png" alt="Interactive map"><br><sub><b>Maps</b> — interactive Leaflet zones with trainer markers and pathfinding.</sub></td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/damage-calc.png" alt="Damage calculator"><br><sub><b>Damage Calc</b> — full-parity PokéMMO engine with a complete field panel.</sub></td>
+    <td><img src="docs/screenshots/team-builder.png" alt="Team builder analysis"><br><sub><b>Team Builder</b> — defensive weakness, offensive coverage, and speed-tier analysis.</sub></td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/breeding.png" alt="Breeding planner"><br><sub><b>Breeding</b> — IV/nature optimizer with a full recipe &amp; cost breakdown.</sub></td>
+    <td><img src="docs/screenshots/gym-prep.png" alt="Gym &amp; E4 Prep"><br><sub><b>Gym &amp; E4 Prep</b> — leader / Elite Four / champion teams by region.</sub></td>
+  </tr>
+</table>
 
 ## Engineering highlights
 
